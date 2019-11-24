@@ -1,6 +1,6 @@
 # Web3 Grant Milestone Delivery
 
-**:loudspeaker: Important:** This repository is only for submitting finished milestone for the [Web3 Foundation Small Grants Program](https://github.com/w3f/Small-Grants-Program) focuses. 
+**:loudspeaker: Important:** This repository is only for submitting finished milestone for the [Web3 Foundation Small Grants Program](https://github.com/w3f/Small-Grants-Program). 
 
 ---
 
