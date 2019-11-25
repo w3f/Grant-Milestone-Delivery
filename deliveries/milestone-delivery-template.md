@@ -6,7 +6,7 @@ Please, provide a link to the initial accepted pull request of your application 
 
 **PR Link:** https://github.com/<initial_accepted_pull_request>
 
-Fill out the [invoice survey]() and integrate the survey id into the milestone delivery. 
+Fill out the [invoice survey]() based on the Web3 [invoice guidelines](https://drive.google.com/file/d/14fMb04NvkkI3EJddyNOb0UC6TPtsYcCc/view?ts=5dd29a1f) and integrate the survey id into the milestone delivery. 
 
 **Survey ID:** XYZ
 
