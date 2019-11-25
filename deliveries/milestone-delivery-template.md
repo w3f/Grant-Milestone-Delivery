@@ -2,7 +2,7 @@
 
 **:loudspeaker: Important:** Only the GitHub account, who is responsible for the initial pull request is allowed to submit milestones.
 
-Please, provide a link to the initial accepted pull request of your application to the Web3 Foundation Small Grants Program repository. 
+Please, provide a link to the initial accepted pull request of your application to the [Web3 Foundation Open Grants Program repository](https://github.com/w3f/Open-Grants-Program). 
 
 **PR Link:** https://github.com/<initial_accepted_pull_request>
 
