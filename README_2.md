@@ -1,6 +1,6 @@
 # Web3 Grant Milestone Delivery
 
-**:loudspeaker: Important:** This repository is only for submitting finished milestone for the [Web3 Foundation Small Grants Program](https://github.com/w3f/Small-Grants-Program). 
+**:loudspeaker: Important:** This repository is only for submitting finished milestone for the [Web3 Foundation Open Grants Program](https://github.com/w3f/Open-Grants-Program). 
 
 ---
 
@@ -16,7 +16,7 @@
 2. In the newly created fork, create a **copy** of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md)
 3. Label the file as "project_name_milestone_number.md".
 4. Fill out the invoice form.
-5. Fill out the template with the details of your project including the **invoice form id** and a **link to the intial PR**.
+5. Fill out the template with the details of your milestone including the **invoice form id** and a **link to the intial PR**.
 6. Once you have completed the application, click on "create new pull request".
 7. Grants Evaluators can accept the PR to accept the deliverable.
 
@@ -39,4 +39,4 @@ We have Riot channels for real-time discussions on Web3 and Polkadot. Join the c
 * [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)
 
 ## :information_source: License
-[Apache License 2.0](https://github.com/Noc2/Small-Grants-Program/blob/master/LICENSE) © Web3 Foundation 
+[Apache License 2.0](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/LICENSE) © Web3 Foundation 
