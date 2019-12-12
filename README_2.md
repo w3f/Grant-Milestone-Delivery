@@ -16,7 +16,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 1. **Milestone Delivery:**
     1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo with the **same Github account, which you used to submit the application!**
-    2. In the newly created fork, create a **copy** of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md)
+    2. In the newly created fork, create a **copy** of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md). In the GitHub web interface, you, therefore, need to create a new file and copy the content of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md) inside the new file. Don't change the template file directly!
     3. Label the file as "project_name_milestone_number.md".
     4. Fill out the [invoice form](https://forms.gle/QvsbeSA3ziuC9k9b9).
     5. Fill out the template with the details of your milestone including a **link to the intial PR**.
