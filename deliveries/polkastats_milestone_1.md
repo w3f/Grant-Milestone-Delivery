@@ -7,9 +7,9 @@
 * **PR Link:** [Polkastats grant application](https://github.com/w3f/Open-Grants-Program/pull/2). 
 * **Milestone Number:** Milestone 1
 
-Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. 
+List of all deliverables 
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. |Backend Release|[Milestone_1](https://github.com/Colm3na/polkastats-backend-v3/releases/tag/milestone1)|Tag| 
+| 1. |Backend Release|[milestone1](https://github.com/Colm3na/polkastats-backend-v3/releases/tag/milestone1)|Tag| 
 | 2. |Build instructions|[README](https://github.com/Colm3na/polkastats-backend-v3/blob/milestone1/README.md)|Dockers| 
