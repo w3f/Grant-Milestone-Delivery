@@ -11,5 +11,5 @@ List of all deliverables
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. |Backend Release|[milestone1](https://github.com/Colm3na/polkastats-backend-v3/releases/tag/milestone1)|Tag| 
+| 1. |Backend Release|[milestone1](https://github.com/Colm3na/polkastats-backend-v3/releases/tag/milestone1)|Repository Tag| 
 | 2. |Build instructions|[README](https://github.com/Colm3na/polkastats-backend-v3/blob/milestone1/README.md)|Dockers| 
