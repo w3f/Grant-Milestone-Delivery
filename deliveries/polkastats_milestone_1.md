@@ -11,5 +11,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| 1. |Backend Release|[Milestone_1](https://github.com/Colm3na/polkastats-backend-v3/releases/tag/milestone1)|Tag| 
+| 2. |Build instructions|[README](https://github.com/Colm3na/polkastats-backend-v3/blob/milestone1/README.md)|Dockers| 
