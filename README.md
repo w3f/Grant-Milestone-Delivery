@@ -4,7 +4,11 @@
 
 ---
 
-- [:mailbox: Milestone Delivery Process](#mailbox-Milestone-Delivery-Process)
+- [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
+- [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
+  - [Requirements](#requirements)
+  - [Process](#process)
+  - [Incentivization](#incentivization)
 - [:bulb: Help](#bulb-help)
   - [Additional information](#additional-information)
   - [Real-time conversation](#real-time-conversation)
@@ -29,6 +33,24 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
     2. Operations Team makes the payment to the Bitcoin address specified in the initial application.
 
 *Grant application can be amended at any time, necessitating a reevaluation by the Committee.*
+
+## :ballot_box_with_check: External Evaluation
+
+As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. In the future, we also plan to incentivize external evaluators.  
+
+### Requirements
+* [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama or Polkadot
+* GitHub account
+* At least one accepted previous milestone evaluation
+
+### Process
+1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
+2. In the newly created fork, create a **copy** of the [evaluation-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/evaluation-template.md).
+3. Label the file as "project_name_milestone_number_your-github-name.md".
+4. Fill out the template with the details of your evaluation.
+5. Once you have completed the evaluation, click on "create new pull request".
+
+### Incentivization
 
 ## :bulb: Help
 
