@@ -41,7 +41,7 @@ As part of the open grant program, we allow everyone to participate in the evalu
 ### Requirements
 * [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama or Polkadot
 * GitHub account
-* At least one accepted previous milestone evaluation
+* The evaluation has to be submitted within 10 days after the milestone was delivered. 
 
 ### Process
 1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
@@ -49,8 +49,18 @@ As part of the open grant program, we allow everyone to participate in the evalu
 3. Label the file as "project_name_milestone_number_your-github-name.md".
 4. Fill out the template with the details of your evaluation.
 5. Once you have completed the evaluation, click on "create new pull request".
+6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.  
+7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
 
 ### Incentivization
+
+*At this point it’s unclear if and how we incentivize external evaluations. Therefore the below is just an initial draft.*
+
+The reward for a successful milestone evaluation will only be paid out to the on-chain identity address. To get part of the rewards the evaluator needs to have done at least one previous successful milestone evaluation. The total prize pool will be shared between all successful evaluations.  
+
+``` 
+Total prize pool per milestone delivery = estimated duration of milestone x FTE x price multiplicator  
+```
 
 ## :bulb: Help
 
