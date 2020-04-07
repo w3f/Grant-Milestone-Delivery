@@ -5,7 +5,7 @@
 ---
 
 - [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
-- [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
+- [:ballot_box_with_check: External Evaluation WIP](#ballot_box_with_check-external-evaluation-wip)
   - [Requirements](#requirements)
   - [Process](#process)
   - [Incentivization](#incentivization)
@@ -34,7 +34,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 *Grant application can be amended at any time, necessitating a reevaluation by the Committee.*
 
-## :ballot_box_with_check: External Evaluation
+## :ballot_box_with_check: External Evaluation [WIP]
 
 As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. In the future, we also plan to incentivize external evaluators.  
 
