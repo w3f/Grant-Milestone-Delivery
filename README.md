@@ -56,7 +56,7 @@ As part of the open grant program, we allow everyone to participate in the evalu
 
 *At this point it’s unclear if and how we incentivize external evaluations. Therefore the below is just an initial draft.*
 
-The reward for a successful milestone evaluation will only be paid out to the on-chain identity address. To get part of the rewards the evaluator needs to have done at least one previous successful milestone evaluation. The total prize pool will be shared between all successful evaluations.  
+The reward for a successful milestone evaluation will only be paid out to the on-chain identity address. To get part of the rewards the evaluator needs to have done *at least one previous successful milestone evaluation*. The total prize pool will be shared between all successful evaluations.  
 
 ``` 
 Total prize pool per milestone delivery = estimated duration of milestone x FTE x price multiplicator  
