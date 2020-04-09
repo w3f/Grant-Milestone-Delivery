@@ -1,6 +1,5 @@
 # Milestone Delivery :mailbox:
 
-> Only the GitHub account, which is responsible for the pull request of the accepted application is allowed to submit milestones. Don't remove any of the mandatory parts presented in bold letters or as headlines!
 
 **The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone.**  
 
@@ -12,4 +11,4 @@ List of all deliverables.
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | UI for showcase | See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md> | Demo the whole workflow |
-| 2. | Function implementation | Download PolkaKey from <https://github.com/w3finance/PolkaKey/releases>| Generate a Polkadot/Kusama address, support: Language, Online/Offline Event Detection, Auto Update |
+| 2. | Function implementation | Download PolkaKey from <https://github.com/w3finance/PolkaKey/releases>| Generate a Polkadot/Kusama address, also support: Language/Online & Offline Event Detection/Auto Update |
