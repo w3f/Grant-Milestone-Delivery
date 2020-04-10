@@ -11,4 +11,4 @@ List of all deliverables.
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | UI for showcase | See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md> | Demo the whole workflow |
-| 2. | Function implementation | Download PolkaKey from <https://github.com/w3finance/PolkaKey/releases>| Generate a Polkadot/Kusama address, also support: Language/Online & Offline Event Detection/Auto Update |
+| 2. | Function implementation | Download PolkaKey from <https://github.com/w3finance/PolkaKey/releases>| Generate a Polkadot/Kusama/Edgeware address, also support: Language/Online & Offline Event Detection/Auto Update |
