@@ -50,7 +50,9 @@ As part of the open grant program, we allow everyone to participate in the evalu
 4. Fill out the template with the details of your evaluation.
 5. Once you have completed the evaluation, click on "create new pull request".
 6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.  
-7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
+7. Milestone evaluations are potentially double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
+
+*In the future we plan to integrate a reputation system: With each successful milestone evaluation the probability of being double-checked decreases. If you have done enough milestone evaluations, you become part of the Grants Evaluators yourself.*
 
 ### Incentivization
 
