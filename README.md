@@ -46,7 +46,7 @@ As part of the open grant program, we allow everyone to participate in the evalu
 ### Process
 1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
 2. In the newly created fork, create a **copy** of the [evaluation-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/evaluation-template.md).
-3. Label the file as "project_name_milestone_number_your-github-name.md".
+3. Label the file as "project-name_milestone-number_your-github-name.md".
 4. Fill out the template with the details of your evaluation.
 5. Once you have completed the evaluation, click on "create new pull request".
 6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.  
