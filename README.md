@@ -39,7 +39,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. In the future, we also plan to incentivize external evaluators.  
 
 ### Requirements
-* [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama or Polkadot
+* [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
 * GitHub account
 * The evaluation has to be submitted within 10 days after the milestone was delivered. 
 
