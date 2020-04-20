@@ -9,6 +9,6 @@ List of all deliverables
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Migrate frontend | [New frontend](https://github.com/Colm3na/polkastats-v3/) | Refactor and migrate frontend |  
-| 2. | Internationalization i18n | [i18n](https://github.com/Colm3na/polkastats-v3/) | Add multilanguage support |  
-| 3. | New UI features | [New Graph](https://github.com/Colm3na/polkastats-v3/) | Implement a new graph as potential future |
+| 1. | Migrate frontend | [New frontend](https://github.com/Colm3na/polkastats-v3/pull/12/files/) | Refactor and migrate frontend |  
+| 2. | Internationalization i18n | [i18n](https://github.com/Colm3na/polkastats-v3/pull/4/files) | Add multilanguage support |  
+| 3. | New UI features | [New Graph](https://github.com/Colm3na/polkastats-v3/pull/6/files) | Implement a new graph as potential future |
