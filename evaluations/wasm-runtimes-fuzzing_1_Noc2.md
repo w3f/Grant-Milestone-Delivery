@@ -12,7 +12,7 @@
 | 1. | Integration Plan	|<ul><li>[x] </li></ul>| [INTEGRATION.md](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/documentation/INTEGRATION.md) | List of projects sound reasonable | 
 | 2.  | Project development |<ul><li>[x] </li></ul>|[cli tool](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/warf/cli.rs) + [project code](https://github.com/pventuzelo/wasm_runtimes_fuzzing/tree/master/warf)| Basic cli tool works as intended. I had some issues with the setup of Honggfuzz and AFL, but Patrick helped me to resolve these very quickly. | 
 | 3.  | APIs |<ul><li>[x] </li></ul>|[APIs](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/warf/common/src/lib.rs) + [doc](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/documentation/how_to_add_new_fuzz_target.md)| Looks good | 
-| 4.  | Delivery report |<ul><li>[x] </li></ul>|[README.md](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/README.md#quick-start) + [cli usage](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/documentation/warf_cli_tutorial.md)| Looks good, only “sudo apt install build-essential binutils-dev libunwind-dev libblocksruntime-dev” shut be added to the readme | 
+| 4.  | Delivery report |<ul><li>[x] </li></ul>|[README.md](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/README.md#quick-start) + [cli usage](https://github.com/pventuzelo/wasm_runtimes_fuzzing/blob/master/documentation/warf_cli_tutorial.md)| Looks good, only “sudo apt install build-essential binutils-dev libunwind-dev libblocksruntime-dev” should be added to the readme | 
 
 ## General Notes
 
