@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In Progress/Accepted/Rejected
+* **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/8 
 * **Milestone:** 2
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
