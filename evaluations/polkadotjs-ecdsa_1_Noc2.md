@@ -1,7 +1,5 @@
 # Evaluation
 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines!
-
 * **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/6 
 * **Milestone:** 1
