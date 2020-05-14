@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In Progress
+* **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/12
 * **Milestone:** 1
 * **Kusama Identity:** [None yet](https://polkascan.io/pre/kusama/account/<ID>)
@@ -12,7 +12,7 @@
 | 1. | SS58 encoding |<ul><li>[x] </li></ul>|[SS58](https://github.com/emeraldpay/polkaj/tree/master/polkaj-ss58)| ...| 
 | 2. | SCALE codec |<ul><li>[x] </li></ul>|[SCALE](https://github.com/emeraldpay/polkaj/tree/master/polkaj-scale)| Proposed a PR: https://github.com/emeraldpay/polkaj/pull/2| 
 | 3. | Base types |<ul><li>[x] </li></ul>|[Base types](https://github.com/emeraldpay/polkaj/tree/master/polkaj-types)| ...| 
-| 4. | Unit Tests |<ul><li>[ ] </li></ul>|[Unit Tests](https://codecov.io/gh/emeraldpay/polkaj)| ...| 
+| 4. | Unit Tests |<ul><li>[x] </li></ul>|[Unit Tests](https://codecov.io/gh/emeraldpay/polkaj)| ...| 
 | 5. | Documentation |<ul><li>[x] </li></ul>|[Docs](https://github.com/emeraldpay/polkaj/tree/master/docs)| ...| 
 
 ## General Notes
