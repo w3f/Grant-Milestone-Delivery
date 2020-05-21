@@ -19,4 +19,4 @@
 
 ## General Notes
 
-The code is well tested and documented. Currently 7 bugs has been found, there are listed in the [trophies section](https://github.com/pventuzelo/wasm_runtimes_fuzzing/tree/master/trophies), including wasmtime issues.
+The code is well tested and documented. Currently 7 bugs have been found. They are listed in the [trophies section](https://github.com/pventuzelo/wasm_runtimes_fuzzing/tree/master/trophies), including wasmtime issues.
