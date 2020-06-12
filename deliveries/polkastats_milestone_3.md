@@ -19,10 +19,10 @@ List of all deliverables
 ------------------------------
 * **Extra Work:**  (compensation) 
 
-- First external app that uses PolkaStats graphQL API:
+- First external app that uses PolkaStats GraphQL API:
 
-https://polkapulse.polkastats.io/
-https://github.com/Colm3na/polkapulse
+    - https://polkapulse.polkastats.io/
+    - https://github.com/Colm3na/polkapulse
 
 - Polkadot CC1 support: https://polkadot.polkastats.io/
 
