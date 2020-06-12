@@ -19,10 +19,7 @@ List of all deliverables
 ------------------------------
 * **Extra Work:**  (compensation) 
 
-- First external app that uses PolkaStats GraphQL API:
-
-    - https://polkapulse.polkastats.io/
-    - https://github.com/Colm3na/polkapulse
+- We will add ledger support as soon as the ledger apps become published
 
 - Polkadot CC1 support: https://polkadot.polkastats.io/
 
@@ -31,5 +28,10 @@ Currently working on fixing some issues, but pretty operational:
 - New Dashboard: https://polkastats.io/
 
 - Blocks page / Extrinsic support: https://polkastats.io/block?blockNumber=2714523
+
+- First external App Demo that uses PolkaStats GraphQL API:
+
+    - https://polkapulse.polkastats.io/
+    - https://github.com/Colm3na/polkapulse
 
 - Probably a lot of other small things ^^
