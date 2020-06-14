@@ -12,7 +12,7 @@ List of all deliverables
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Browser extension stake | [code](https://github.com/Colm3na/polkastats-v3/blob/develop/pages/stake.vue) | Demo: https://v3dev2.polkastats.io/stake |  
-| 1.bis | Browser extension send | [code](https://github.com/Colm3na/polkastats-v3/blob/develop/pages/send.vue) | Demo: https://v3dev2.polkastats.io/send | 
+| - | Browser extension send | [code](https://github.com/Colm3na/polkastats-v3/blob/develop/pages/send.vue) | Demo: https://v3dev2.polkastats.io/send | 
 | 2. | Ledger | [code](https://github.com/Colm3na/ledger-polkadot-js/blob/master/tests/sign_custom_tx_test.ispec.js) | without success |  
 
 
