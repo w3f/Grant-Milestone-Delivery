@@ -22,4 +22,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 Additional Information:
 - 8 new bugs has been found with 2 of them discovered because of differential fuzzing.
 - Those 2 bugs are logic bugs and they are impossible to catch with classical fuzzing since they will not make the program to crash.
-- Some other bugs should be reported next month.
+- All bugs are listed in the [trophies](https://github.com/pventuzelo/wasm_runtimes_fuzzing#trophies) section.
+- Some new ones should be reported next month.
