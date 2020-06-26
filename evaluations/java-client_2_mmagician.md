@@ -14,6 +14,13 @@
 | 3. | Unit Tests |<ul><li>[x] </li></ul>|[Unit Tests](https://codecov.io/gh/emeraldpay/polkaj)| ...| 
 | 4. | Documentation |<ul><li>[x] </li></ul>|[Docs](https://github.com/emeraldpay/polkaj/tree/master/docs)| ...| 
 
+## Completeness
+
+The original milestone proposes the implementation of chain, contracts, and state APIs.
+Comparing https://github.com/emeraldpay/polkaj/blob/master/docs/ref-01-api-commands.adoc with https://polkadot.js.org/api/substrate/rpc.html#chain, 
+the contracts APIs are missing and others (like chain) are incomplete. 
+
+
 ## General Notes
 Good communication and responsiveness following the comments to the delivery PR:
 https://github.com/w3f/Grant-Milestone-Delivery/pull/15, in particular commits: 
