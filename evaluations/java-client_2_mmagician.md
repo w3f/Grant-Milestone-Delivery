@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0. | Apache License 2.0 | <ul><li>[x] </li></ul>|[License](https://github.com/emeraldpay/polkaj/blob/master/LICENSE)| - |
-| 1. | RPC Client |<ul><li>[x] </li></ul>|[RPC Client](https://github.com/emeraldpay/polkaj/blob/master/docs/03-rpc-client.adoc)| ...| 
+| 1. | RPC Client |<ul><li>[ ] </li></ul>|[RPC Client](https://github.com/emeraldpay/polkaj/blob/master/docs/03-rpc-client.adoc)| contracts APIs are missing and chain is incomplete| 
 | 2. | Example App |<ul><li>[x] </li></ul>|[Example App](https://github.com/emeraldpay/polkaj/tree/master/examples)| ...| 
 | 3. | Unit Tests |<ul><li>[x] </li></ul>|[Unit Tests](https://codecov.io/gh/emeraldpay/polkaj)| ...| 
 | 4. | Documentation |<ul><li>[x] </li></ul>|[Docs](https://github.com/emeraldpay/polkaj/tree/master/docs)| ...| 
