@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress
+* **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/12
 * **Milestone:** 2
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0. | Apache License 2.0 | <ul><li>[x] </li></ul>|[License](https://github.com/emeraldpay/polkaj/blob/master/LICENSE)| - |
-| 1. | RPC Client |<ul><li>[ ] </li></ul>|[RPC Client](https://github.com/emeraldpay/polkaj/blob/master/docs/03-rpc-client.adoc)| contracts APIs are missing and chain is incomplete| 
+| 1. | RPC Client |<ul><li>[x] </li></ul>|[RPC Client](https://github.com/emeraldpay/polkaj/blob/master/docs/03-rpc-client.adoc)| contracts APIs are missing and chain is incomplete| 
 | 2. | Example App |<ul><li>[x] </li></ul>|[Example App](https://github.com/emeraldpay/polkaj/tree/master/examples)| ...| 
 | 3. | Unit Tests |<ul><li>[x] </li></ul>|[Unit Tests](https://codecov.io/gh/emeraldpay/polkaj)| ...| 
 | 4. | Documentation |<ul><li>[x] </li></ul>|[Docs](https://github.com/emeraldpay/polkaj/tree/master/docs)| ...| 
@@ -18,7 +18,10 @@
 
 The original milestone proposes the implementation of chain, contracts, and state APIs.
 Comparing https://github.com/emeraldpay/polkaj/blob/master/docs/ref-01-api-commands.adoc with https://polkadot.js.org/api/substrate/rpc.html#chain, 
-the contracts APIs are missing and others (like chain) are incomplete. 
+the contracts APIs are missing and others (like chain) are incomplete.
+
+Update:
+Wrappers for each RPC method has been added.
 
 
 ## General Notes
