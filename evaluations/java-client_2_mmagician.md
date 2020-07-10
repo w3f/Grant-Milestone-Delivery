@@ -21,7 +21,7 @@ Comparing https://github.com/emeraldpay/polkaj/blob/master/docs/ref-01-api-comma
 the contracts APIs are missing and others (like chain) are incomplete.
 
 Update:
-Wrappers for each RPC method has been added.
+Wrappers for each RPC method has been added & problems with some existing ones fixed.
 
 
 ## General Notes
