@@ -16,12 +16,7 @@
 
 ## Completeness
 
-The original milestone proposes the implementation of chain, contracts, and state APIs.
-Comparing https://github.com/emeraldpay/polkaj/blob/master/docs/ref-01-api-commands.adoc with https://polkadot.js.org/api/substrate/rpc.html#chain, 
-the contracts APIs are missing and others (like chain) are incomplete.
-
-Update:
-Wrappers for each RPC method has been added & problems with some existing ones fixed.
+Following a discussion, wrappers for each RPC method has been added & problems with some existing ones fixed.
 
 
 ## General Notes
