@@ -8,7 +8,6 @@
 - [:ballot_box_with_check: External Evaluation WIP](#ballot_box_with_check-external-evaluation-wip)
   - [Requirements](#requirements)
   - [Process](#process)
-  - [Incentivization](#incentivization)
 - [:bulb: Help](#bulb-help)
   - [Additional information](#additional-information)
   - [Real-time conversation](#real-time-conversation)
@@ -36,7 +35,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 ## :ballot_box_with_check: External Evaluation [WIP]
 
-As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. In the future, we also plan to incentivize external evaluators.  
+As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **10 KSM**. The KSM will be sent to their Kusama identity address.    
 
 ### Requirements
 * [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
@@ -50,19 +49,9 @@ As part of the open grant program, we allow everyone to participate in the evalu
 4. Fill out the template with the details of your evaluation.
 5. Once you have completed the evaluation, click on "create new pull request".
 6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.  
-7. Milestone evaluations are potentially double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
+7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
 
 *In the future we plan to integrate a reputation system: With each successful milestone evaluation the probability of being double-checked decreases. If you have done enough milestone evaluations, you become part of the Grants Evaluators yourself.*
-
-### Incentivization
-
-*At this point it’s unclear if and how we incentivize external evaluations. Therefore the below is just an initial draft.*
-
-The reward for a successful milestone evaluation will only be paid out to the on-chain identity address. To get part of the rewards the evaluator needs to have done *at least one previous successful milestone evaluation*. The total prize pool will be shared between all successful evaluations.  
-
-``` 
-Total prize pool per milestone delivery = estimated duration of milestone x FTE x price multiplicator  
-```
 
 ## :bulb: Help
 
