@@ -33,12 +33,12 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 *Grant application can be amended at any time, necessitating a reevaluation by the Committee.*
 
-## :ballot_box_with_check: External Evaluation [WIP]
+## :ballot_box_with_check: External Evaluation 
 
 As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **10 KSM**. The KSM will be sent to their Kusama identity address.    
 
 ### Requirements
-* [On-Chain Identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
+* [On-Chain identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
 * GitHub account
 * The evaluation has to be submitted within 10 days after the milestone was delivered. 
 
