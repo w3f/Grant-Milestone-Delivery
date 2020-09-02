@@ -1,7 +1,7 @@
 # Evaluation
 
 * **Status:** Accepted
-* **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/32
+* **PR Link:** [original](https://github.com/w3f/Open-Grants-Program/pull/32), [amendment](https://github.com/w3f/Open-Grants-Program/pull/44)
 * **Milestone:** 1
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
 * **Previously successfully merged evaluation:** All by mmagician
