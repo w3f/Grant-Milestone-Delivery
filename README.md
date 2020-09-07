@@ -35,7 +35,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 ## :ballot_box_with_check: External Evaluation 
 
-As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **10 KSM**. The KSM will be sent to their Kusama identity address.    
+As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 10 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.    
 
 ### Requirements
 * [On-Chain identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
@@ -46,10 +46,10 @@ As part of the open grant program, we allow everyone to participate in the evalu
 1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
 2. In the newly created fork, create a **copy** of the [evaluation-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/evaluation-template.md).
 3. Label the file as "project-name_milestone-number_your-github-name.md".
-4. Fill out the template with the details of your evaluation.
+4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
 5. Once you have completed the evaluation, click on "create new pull request".
-6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.  
-7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged. 
+6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.
+7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged & the evaluator is rewarded with KSMs. 
 
 *In the future we plan to integrate a reputation system: With each successful milestone evaluation the probability of being double-checked decreases. If you have done enough milestone evaluations, you become part of the Grants Evaluators yourself.*
 
