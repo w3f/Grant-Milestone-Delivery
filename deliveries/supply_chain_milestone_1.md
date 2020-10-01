@@ -17,3 +17,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 4. | Unit Tests | In repo |
 | 5. | Docker | Described in repo [M1 repo](https://github.com/wivtech/Substrate-SupplyChain/tree/M1)  |
 | 6. | License | Unlicense  |
+| 7. | Other | [M1 overview webpage](https://wivtech.github.io/Substrate-SupplyChain/)  |
