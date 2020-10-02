@@ -8,7 +8,7 @@
 * **Milestone Number:** [Milestone 1](https://github.com/w3f/Open-Grants-Program/blob/master/applications/polkadex.md#milestone-1----optimize-trading-algorithm--check-for-data-errors)
 
 Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
-
+## Milestone #1 Deliverables
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Refactoring and Optimizing DEX Pallet |[Polkadex Pallet](https://github.com/Polkadex-Substrate/Polkadex/blob/master/pallets/polkadex/src/lib.rs)| We have minimized the storage access| 
