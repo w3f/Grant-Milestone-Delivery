@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0. | Correct License |<ul><li>[x] </li></ul>|[Apache 2.0](https://github.com/luniehq/lunie/blob/develop/app/LICENSE)| License meets standard requirements.| 
-| 1. | Proposals are readable in Lunie |<ul><li>[x] </li></ul>|[GitHub](https://github.com/luniehq/lunie/blob/develop/api/lib/reducers/polkadotV0-reducers.js#L539-L615)| Reviewed relevant section in `polkadotV0-reducers.js` and verified functionality in both the Browser extension and mobile application.| 
+| 1. | Proposals are readable in Lunie |<ul><li>[x] </li></ul>|[GitHub](https://github.com/luniehq/lunie/blob/develop/api/lib/reducers/polkadotV0-reducers.js#L539-L615)| Reviewed relevant section in `polkadotV0-reducers.js` and verified functionality the Browser extension.| 
 | 2. | Voting, Deposits, Time Locking |<ul><li>[x] </li></ul>|[GitHub](https://github.com/luniehq/lunie/blob/develop/app/src/ActionModal/components/ModalVotePolkadot.vue)| Also seems to work as expected.  | 
 | 3. | Notifications, Council, Treasury |<ul><li>[x] </li></ul>|[GitHub](https://github.com/luniehq/lunie/blob/36768cfd5ac7acaf29b05e10770fce49ef347450/api/lib/reducers/polkadotV0-reducers.js#L706)| Tested by signing in with my email, received notifications when expected.| 
 
