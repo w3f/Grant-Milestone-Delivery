@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Acceptance:** In Progress
+* **Acceptance:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/50
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0. | Apache License 2.0 | <ul><li>[x] </li></ul>| [License](https://github.com/Polkadex-Substrate/Polkadex/blob/master/LICENSE)| - | 
-| 1. | Refactor Trading Engine in DEX pallet |<ul><li>[ ] </li></ul>| [Polkadex Pallet](https://github.com/Polkadex-Substrate/Polkadex/blob/17f5d0faa079b1fadc44c24b784d430eaf8b037c/pallets/polkadex/src/lib.rs) | Compiles, Can not really test refactoring, currently I have an issue with createAsset in polkadot.js
+| 1. | Refactor Trading Engine in DEX pallet |<ul><li>[x] </li></ul>| [Polkadex Pallet](https://github.com/Polkadex-Substrate/Polkadex/blob/17f5d0faa079b1fadc44c24b784d430eaf8b037c/pallets/polkadex/src/lib.rs) | Compiles, Can not really test refactoring
 | 2. | Optimize Storage access |<ul><li>[x] </li></ul>| [see  comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/40#issuecomment-705406092) | Provided information on how they improved the [original implementation](https://github.com/Polkadex-Substrate/Polkadex/tree/4fc885dd9c6439bf1497a46a3d7ba24a16a95f14). 
 | 3. | Check for Data errors |<ul><li>[x] </li></ul>| [Polkadex Pallet](https://github.com/Polkadex-Substrate/Polkadex/blob/17f5d0faa079b1fadc44c24b784d430eaf8b037c/pallets/polkadex/src/lib.rs) | Integrated .ok_or, but no tests for it
 | 4. | Market Data API |<ul><li>[x] </li></ul>| [Market Data](https://github.com/Polkadex-Substrate/Polkadex/blob/17f5d0faa079b1fadc44c24b784d430eaf8b037c/pallets/polkadex/src/lib.rs#L113) |  stored on the chain 
@@ -20,6 +20,4 @@
 
 ## General Notes
 
-issue with createAsset in polkadot.js
-
-Very detailed tutorials in a separate repository. In addition to the regular unit tests, they provided a javascript file to test the runtime. The code is well documented. 
+Everything works. Very detailed tutorials in a separate repository. In addition to the regular unit tests, they provided a javascript file to test the runtime. The code is well documented. 
