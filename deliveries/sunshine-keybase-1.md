@@ -16,3 +16,4 @@
 | 3. | Substrate module: Identity | [code](https://github.com/sunshine-protocol/sunshine-keybase/blob/master/identity/pallet/src/lib.rs) | We will create a pallet that uses the Chain module to manage data relevant to the registered identity. This module adds more granular management when storing the user key, device keys, password and social media accounts. |  
 | 4. | Flutter UI | [code](https://github.com/sunshine-protocol/sunshine-keybase-ui) | We will write a Flutter UI that communicates directly between our Rust substrate-subxt client and our Flutter interface to express the user identity configuration interface. |  
 | 5. | Substrate chain | [docs](https://sunshine-protocol.github.io/sunshine-bounty/client/keybase.html) | Flutter UI works with local node to enable identity registration, password reset, and github authentication. |  
+| 6. | Dockerfile upon request | [Dockerfile](https://github.com/sunshine-protocol/sunshine/blob/master/docker-compose.yml) |  |
