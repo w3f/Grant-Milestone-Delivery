@@ -8,7 +8,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
-| 0a. | Unlicense | <ul><li>[ ] </li></ul>| [sunshine-keybase/LICENSE](https://github.com/sunshine-protocol/sunshine-keybase/blob/master/LICENSE), [sunshine-keybase-ui/LICENSE](https://github.com/sunshine-protocol/sunshine-keybase-ui/blob/master/LICENSE) | One repo currently has the unlicense, the other has the apache license, which is fine
+| 0a. | Unlicense | <ul><li>[x] </li></ul>| [sunshine-keybase/LICENSE](https://github.com/sunshine-protocol/sunshine-keybase/blob/master/LICENSE), [sunshine-keybase-ui/LICENSE](https://github.com/sunshine-protocol/sunshine-keybase-ui/blob/master/LICENSE) | One repo currently has the unlicense, the other has the apache license, which is fine
 | 0b. | Documentation | <ul><li>[x] </li></ul>| [high-level docs](https://sunshine-protocol.github.io/sunshine-bounty/client/keybase.html), [code docs](https://docs.rs/sunshine-identity-client/0.2.3/sunshine_identity_client/) | inline documentation plus guide
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>| [subxt docs](https://sunshine-protocol.github.io/sunshine-bounty/client/subxt.html) | Works
 | 1. | Substrate module: Chain | <ul><li>[x] </li></ul>| [code](https://github.com/sunshine-protocol/sunshine-keybase/blob/master/chain/pallet/src/lib.rs) | Including unit tests 
