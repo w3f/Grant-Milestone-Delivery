@@ -13,7 +13,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Creating wallet |[Link](https://github.com/fractapp/fractapp/blob/master/src/screens/SettingWallet.tsx#L9)| Procedure for creating/importing a wallet |  
 | 2. | Backup wallet | [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/ImportWallet.tsx#L66) | User can backup wallet one of method: google drive/encrypted file to phone/display of seed phrase on the screen  |  
-| 3. | Wallet details | [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/WalletDetails.tsx#L72) | User can see balance, transactions, transaction info   | 
+| 3. | Wallet details | [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/WalletDetails.tsx#L72) | User can see balance, transactions, transaction info | 
 | 4. | Documentation | [Link](https://github.com/fractapp/fractapp/tree/master/docs) | A standalone document, describing usage |
 | 5. | Unit-testing | [Link](https://github.com/fractapp/fractapp/tree/master/__tests__) | Unit tests covering at least 75% of the code | 
-| 6. | Distributing |  | We will provide .apk files for Android | 
+| 6. | Distributing | [Link](https://github.com/fractapp/fractapp/releases/tag/0.0.1) | We will provide .apk files for Android | 
