@@ -21,4 +21,5 @@
 ## General Notes
 
 - Tested on Release alpha 0.0.1 and self-compiled version (commit [558147f](https://github.com/fractapp/fractapp/commit/558147f27920609bd472a7f8e1aa9d5f81b5d61e))
-- Would be great to have more thorough setup instructions (Android SDK, react-native, APK signing certificate, Jest snapshot updating)
+- Tests and documentation not 100%, but sufficient
+- Would also be useful to have more thorough setup instructions (Android SDK, react-native, APK signing certificate, Jest snapshot updating)
