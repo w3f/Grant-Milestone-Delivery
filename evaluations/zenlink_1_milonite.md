@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** Progress
+* **Status:** Accepted
 * **PR Link:** [Zenlink Grant proposal](https://github.com/w3f/Open-Grants-Program/pull/56). 
 * **Milestone:** 1
 * **Kusama Identity:** DoZVD3qkjXysdjh3pg6C2UkVNkSw3xWNzch58aPMyXq5mer
