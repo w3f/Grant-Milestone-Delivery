@@ -38,7 +38,3 @@ $ sup upgrade --tag <substrate-tag> --registry <substrate-based-registry>
 > ## `sup switch`
 > 
 > We use `sup switch` to replace `sup upgrade`, because the `upgrade` command is easy to be mixed up with `update`.
-
-
-
-
