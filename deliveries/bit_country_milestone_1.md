@@ -11,19 +11,21 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0. | License, Documentation, Testing Guide | [Link](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) | 
+| 0a. | License | [Link for blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Link for dapp](https://github.com/bit-country/Bit-Country-Dapp/blob/master/LICENSE) | 
+| 0b. | Documentation | [Link](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) | 
+| 0c. | Testing Guide | [Link for blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Link for dapp](https://github.com/bit-country/Bit-Country-Dapp-Testing/blob/master/README.md) | 
 | 1. | Substrate module: Countries | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | 
 | 2. | Substrate module: Economies | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | 
 | 3. | Bit.Country testnet node | [Link](https://github.com/bit-country/Bit-Country-Blockchain/) | 
-| 4. | Bit.Country Dapp - Country | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 5. | Dapp - User Registration | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 6. | Dapp - Country Explorer | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 7. | Dapp - Country Membership | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 8. | Dapp - Country Block | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 9. | Dapp - Country Block Planner | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 10. | Dapp - Country Map | [Link](https://github.com/bit-country/Bit-Country-Dapp) |
-| 11. | Dapp - Country Economy | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 12. | Dapp - Country Ownership | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 13. | Dapp - Country Block Post | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
+| 4. | Bit.Country Dapp - Country | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 5. | Dapp - User Registration | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 6. | Dapp - Country Explorer | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 7. | Dapp - Country Membership | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 8. | Dapp - Country Block | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 9. | Dapp - Country Block Planner | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 10. | Dapp - Country Map | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) |
+| 11. | Dapp - Country Economy | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 12. | Dapp - Country Ownership | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
+| 13. | Dapp - Country Block Post | [Link](https://github.com/bit-country/Bit-Country-Dapp/commit/017d220546513d34aaa583eaf1a4bef6855ec0ef) | 
 | 14. | Dapp - Country Block 3D View | [Link](https://github.com/bit-country/Bit-Country-Dapp) | Code contains confidential data, request can be granted on request to Web3 Evaluators |
 | 15. | Docker / UAT | [Link](http://uat.bit.country/) | 
