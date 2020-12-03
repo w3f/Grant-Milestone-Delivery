@@ -25,5 +25,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 11. | Dapp - Country Economy | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
 | 12. | Dapp - Country Ownership | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
 | 13. | Dapp - Country Block Post | [Link](https://github.com/bit-country/Bit-Country-Dapp) | 
-| 14. | Dapp - Country Block 3D View | [Link](https://github.com/bit-country/Bit-Country-Dapp) |
+| 14. | Dapp - Country Block 3D View | [Link](https://github.com/bit-country/Bit-Country-Dapp) | Code contains confidential data, request can be granted on request to Web3 Evaluators |
 | 15. | Docker / UAT | [Link](http://uat.bit.country/) | 
