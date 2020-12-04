@@ -11,9 +11,9 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | [Link for blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Link for dapp](https://github.com/bit-country/Bit-Country-Dapp/blob/master/LICENSE) | 
+| 0a. | License | [Blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Dapp](https://github.com/bit-country/Bit-Country-Dapp/blob/master/LICENSE) | 
 | 0b. | Documentation | [Link](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) | 
-| 0c. | Testing Guide | [Link for blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Link for dapp](https://github.com/bit-country/Bit-Country-Dapp-Testing/blob/master/README.md) | 
+| 0c. | Testing Guide | [Blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Dapp Testing](https://github.com/bit-country/Bit-Country-Dapp/commit/0cdfec02370f79c07d636df50cec7abcc8e386bd) | 
 | 1. | Substrate module: Countries | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | 
 | 2. | Substrate module: Economies | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | 
 | 3. | Bit.Country testnet node | [Link](https://github.com/bit-country/Bit-Country-Blockchain/) | 
