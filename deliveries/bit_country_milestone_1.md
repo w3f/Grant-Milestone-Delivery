@@ -12,7 +12,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [Blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/LICENSE) [Dapp](https://github.com/bit-country/Bit-Country-Dapp/blob/master/LICENSE) | Both are under the Apache License 2.0 |
-| 0b. | Documentation | [Link](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) | Documentation for running the node. Please note, the DApp can't be run from the source as we don't want to commit confidential data. You can see the running project at the UAT link at the bottom. |
+| 0b. | Documentation | [Link](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) | Documentation for running the node. Please note, the DApp can't be run from the source as we don't want to commit confidential data. You can see the running project at the UAT link at the bottom. There is also a [video demo](https://www.youtube.com/watch?v=77IXpAEL0fE) we used for BHG|
 | 0c. | Testing Guide | [Blockchain](https://github.com/bit-country/Bit-Country-Blockchain/blob/master/README.md) [Dapp Testing](https://github.com/bit-country/Bit-Country-Dapp/blob/master/ci/README.md) | Testing guide for node and for DApp. |
 | 1. | Substrate module: Countries | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | Pallets related to country creation, control and more. |
 | 2. | Substrate module: Economies | [Link](https://github.com/bit-country/Bit-Country-Blockchain/tree/master/pallets) | Pallets related to NFT creation, management and more. |
