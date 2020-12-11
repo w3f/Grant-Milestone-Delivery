@@ -1,11 +1,11 @@
 # Evaluation
 
 
-* **Status:** In Progress
+* **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/125
 * **Milestone:** 1
 * **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
-* **Previously successfully merged evaluation:** All by @semuelle
+* **Previously successfully merged evaluation:** All by semuelle
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
@@ -15,24 +15,12 @@
 | 4. | utils |<ul><li>[x] </li></ul>| [utils](https://github.com/Pocket4D/Polkadot-Dart/blob/db0957492d4f2285c1ef6c9fd9bd8330e0cef333/lib/utils) |  complete |
 | 5. | keyring |<ul><li>[x] </li></ul>| [keyring](https://github.com/Pocket4D/Polkadot-Dart/blob/9c63944fc62e0bac883d3a2b3252482869f88bfd/lib/keyring) |  complete |
 | 6.  | networks |<ul><li>[x] </li></ul>| [networks](https://github.com/Pocket4D/Polkadot-Dart/blob/353e93f2ec16b68d8f513aec6a1d736a833a151d/lib/networks) |  complete |
-| 7. | tests |<ul><li>[ ] </li></ul>| [test folder](https://github.com/Pocket4D/Polkadot-Dart/blob/1916b4392f27e5cae4c8d4c5d3a4805ed7c7da41/test) | not functional |
+| 7. | tests |<ul><li>[ ] </li></ul>| [test folder](https://github.com/Pocket4D/Polkadot-Dart/blob/1916b4392f27e5cae4c8d4c5d3a4805ed7c7da41/test) | see [General Notes](#general-notes) |
 
 
 
 ## General Notes
 
-All packages are thoroughly ported. README thorougly describes scope, building and testing. Code documentation would be useful, but was agreed to be part of Milestone 3.
+All packages are _thoroughly_ ported. README describes scope, building and testing. Code documentation would be useful, but was agreed to be part of Milestone 3.
 
-Unit tests largely not functional on Linux.
-
-### Test coverage
-
-`awaiting test fix`
-
-<!--
-* crypto: 9%
-* util_crypto: 21%
-* utils: 9%
-* keyring: 13%
-* networks: 3.7%
--->
+Issues with cross-compilation under Linux were quickly addressed. `flutter test` shows ~82% coverage.
