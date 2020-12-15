@@ -15,7 +15,7 @@
 | 4. | Multisig wallet creation and management |<ul><li>[x] </li></ul>| [code](https://github.com/itering/subscan-multisig-ui) | Works
 | 5. | Basic Multisig Extrinsic(transfer) create and process in Multisig wallet |<ul><li>[ ] </li></ul>| [code](https://github.com/itering/subscan-multisig-ui) |
 | 6. | Multisig wallet support polkadot mainnet |<ul><li>[x] </li></ul>| [code](https://github.com/itering/subscan-multisig-ui) |
-| 7. | Use database or other backend service to store the index data.|<ul><li>[ ] </li></ul>| [pr](https://github.com/itering/subscan-multisig-ui/commit/30f83b4a4d9f0f060c46db103cee3125e8f0e487) |
+| 7. | Use database or other backend service to store the index data.|<ul><li>[ ] </li></ul>| [pr](https://github.com/itering/subscan-multisig-ui/commit/30f83b4a4d9f0f060c46db103cee3125e8f0e487) | Not yet implemented
 | 8. | Docker Files and Images |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/itering/subscan-multisig-ui/blob/main/Dockerfile) | works
 | 9. | Unit tests and integration test |<ul><li>[x] </li></ul>| [tests](https://github.com/itering/subscan-multisig-ui/tree/main/tests), [Cypress](https://github.com/itering/subscan-multisig-ui/tree/main/cypress) | Contains unit and integration tests (
 | 10. | Tutorials |<ul><li>[x] </li></ul>| [tutorial](https://github.com/itering/subscan-multisig-ui#tutorial) |
