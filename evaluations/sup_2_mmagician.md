@@ -2,17 +2,17 @@
 
 * **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/65
-* **Milestone:** 1
+* **Milestone:** 2
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
 * **Previously successfully merged evaluation:** All by mmagician
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0. | Apache License 2.0 | <ul><li>[x] </li></ul> | [License](https://github.com/clearloop/sup/blob/master/LICENSE)| - |
-| 1. | sup new <node-template> | <ul><li>[x] </li></ul> | https://github.com/clearloop/sup/blob/master/src/cmd/new.rs | |
-| 2. | sup update | <ul><li>[x] </li></ul> | https://github.com/clearloop/sup/blob/master/src/cmd/update.rs | |
-| 3. | sup source --query <pattern> | <ul><li>[x] </li></ul> | https://github.com/clearloop/sup/blob/master/src/cmd/source.rs | |
-| 4. | sup tag --limit <n> | <ul><li>[x] </li></ul> | https://github.com/clearloop/sup/blob/master/src/cmd/tag.rs | |
+| 1. | sup new <node-template> --tag <t> | <ul><li>[x] </li></ul> | | |
+| 2. | sup config edit/set/list | <ul><li>[x] </li></ul> | | |
+| 3. | sup list source/tag | <ul><li>[x] </li></ul> | | |
+| 4. | sup update --tag <tag> --project <path> | <ul><li>[x] </li></ul> | | |
 
 ## General Notes
 
