@@ -2,7 +2,7 @@
 
 > Only the GitHub account, which is responsible for the pull request of the accepted application is allowed to submit milestones. Don't remove any of the mandatory parts presented in bold letters or as headlines!
 
-**The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone.**  
+**The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
 * **PR Link:** Please, provide a link to the initial accepted pull request of your application to the [Web3 Foundation Open Grants Program repository](https://github.com/w3f/Open-Grants-Program). 
 * **Milestone Number:** The number of the milestone
