@@ -8,14 +8,16 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
- 0 | Apache | <ul><li>[ ] </li></ul> | |  No license |
-| 1. | oracle pallet |<ul><li>[ ] </li></ul>| [pallet](https://github.com/aresprotocols/ares-module/blob/main/substrate-node-template/pallets/pallet-ares/src/lib.rs) | initiates a request, but I'm unsure how it works |
-| 2. | scanner |<ul><li>[ ] </li></ul>| [index.js](https://github.com/aresprotocols/ares-module/blob/main/fetch-data/index.js) |  |
-| 3. | provider |<ul><li>[ ] </li></ul>| [aggregate-ares](https://github.com/aresprotocols/ares-module/tree/main/aggregate-ares) | implemented in java | 
+ 0 | Apache | <ul><li>[x] </li></ul> | [license](https://github.com/aresprotocols/ares-module/blob/master/LICENSE) |  Initially no license, they added the Apache License |
+| 1. | oracle pallet |<ul><li>[x] </li></ul>| [pallet](https://github.com/aresprotocols/ares-module/blob/main/substrate-node-template/pallets/pallet-ares/src/lib.rs) | initiates a request, but I'm unsure how it works |
+| 2. | scanner |<ul><li>[x] </li></ul>| [index.js](https://github.com/aresprotocols/ares-module/blob/main/fetch-data/index.js) | very basic js based scanner |
+| 3. | provider |<ul><li>[x] </li></ul>| [pallet-ocw](https://github.com/aresprotocols/ares-module/blob/main/substrate-node-template/pallets/pallet-ocw/src/lib.rs), [aggregate-ares](https://github.com/aresprotocols/ares-module/tree/main/aggregate-ares) | originally implemented in java, added off-chain worker solution | 
 | 4. | Testing |<ul><li>[x] </li></ul>| [tests](https://github.com/aresprotocols/ares-module/blob/main/substrate-node-template/pallets/pallet-ares/src/tests.rs) | unit tests, but unused imports, no documentation |
-| 5. | example for demonstration |<ul><li>[ ] </li></ul>| [fetch-data](https://github.com/aresprotocols/ares-module/tree/main/fetch-data) | The example doesn't use "golang implement scanner and provider". No explanation on how to use it |
-| 6. | Documentation |<ul><li>[ ] </li></ul>| [readme](	https://github.com/aresprotocols/ares-module/blob/main/README.md) | The documentation could be a lot better. It for example doesn't contain any examples that show how developers can use the pallet  |
+| 5. | example for demonstration |<ul><li>[ ] </li></ul>| [fetch-data](https://github.com/aresprotocols/ares-module/tree/main/fetch-data) | The example doesn't use "golang implement scanner and provider". Contract needs to be amended |
+| 6. | Documentation |<ul><li>[x] </li></ul>| [readme](	https://github.com/aresprotocols/ares-module/blob/main/README.md), [video](https://www.youtube.com/watch?v=l6q8R5F7abM&t=2s), [videos](https://www.youtube.com/watch?v=HlYhsHFKzJw) | Initially the documentation was missing a lot of information, but they improved it and added two videos to it  |
 
 ## General Notes
 
-No use of any off-chain worker. Proposal: “Aggregator, Validator, Council use off-chain worker getting external data”
+Initially no use of any off-chain worker, but it was [integrated](https://github.com/aresprotocols/ares-module/blob/main/substrate-node-template/pallets/pallet-ocw/src/lib.rs). They also included a front-end
+
+Contract needs to be amended
