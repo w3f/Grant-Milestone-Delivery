@@ -5,6 +5,8 @@
 * **PR Link:** [Pontem Network](https://github.com/w3f/Open-Grants-Program/pull/138). 
 * **Milestone Number:** [Milestone #1](https://github.com/w3f/Open-Grants-Program/blob/master/applications/pontem.md#milestone-1---pre-alpha-version-of-move-pallet).
 
+See ["How to deploy module and execute script"](https://youtu.be/IJLEbk4Sx7Y) on Youtube.
+
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0 - 2. | Crates developing/replacement | [Move VM](https://github.com/dfinance/sp-move-vm/commits/master) [Petgraph](https://github.com/dfinance/petgraph/commits/master) [Indexmap](https://github.com/RIg410/indexmap/commits/master)   | During 0 - 2 tasks we forked Libra Move VM, replaced all Rust std usages with sp_std, forked some Rust crates and did the same. See commits by [@RIg410](https://github.com/RIg410) and [@fzzr-](https://github.com/fzzr-). | 
@@ -16,8 +18,6 @@
 | 8. | Documentation | [Move Pallet](https://github.com/dfinance/sp-move/blob/master/README.md) [Move VM](https://github.com/dfinance/sp-move-vm/blob/master/README.md) [Dove](https://github.com/dfinance/move-tools/blob/master/README.md#dove) | Basic docs include: how to run VM, compile scripts/modules, execute/publish it. |
 
 **Other notes**
-
-Also, see ["How to deploy module and execute script"](https://youtu.be/IJLEbk4Sx7Y) on Youtube.
 
 We are moving forward, some work done around #2 milestones. We are reporting that progress just because it's nice to have. We are going to report full #2 milestone, later. 
 
