@@ -8,6 +8,7 @@
 * **Milestone Number:** [Milestone #1](https://github.com/w3f/Open-Grants-Program/blob/master/applications/pontem.md#milestone-1---pre-alpha-version-of-move-pallet).
 
 See ["How to deploy module and execute script"](https://youtu.be/IJLEbk4Sx7Y) on Youtube.
+Use [documentation](https://github.com/dfinance/sp-move/blob/master/README.md) to repeat.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
