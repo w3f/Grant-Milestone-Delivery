@@ -4,15 +4,14 @@
 
 ---
 
-- [Web3 Grant Milestone Delivery](#web3-grant-milestone-delivery)
-  - [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
-  - [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
-    - [Requirements](#requirements)
-    - [Process](#process)
-  - [:bulb: Help](#bulb-help)
-    - [Additional information](#additional-information)
-    - [Real-time conversation](#real-time-conversation)
-  - [:information_source: License](#information_source-license)
+- [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
+- [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
+  - [Requirements](#requirements)
+  - [Process](#process)
+- [:bulb: Help](#bulb-help)
+  - [Additional information](#additional-information)
+  - [Real-time conversation](#real-time-conversation)
+- [:information_source: License](#information_source-license)
 
 ## :mailbox: Milestone Delivery Process
 
