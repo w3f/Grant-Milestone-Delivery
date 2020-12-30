@@ -2,6 +2,8 @@
 
 **The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
+**!!!BTC ADDRESS CHANGED!!!: 3NyW7fGDFqZW2PopiXeHdMvTtmXrkgQb8w**
+
 * **PR Link:** [Pontem Network](https://github.com/w3f/Open-Grants-Program/pull/138). 
 * **Milestone Number:** [Milestone #1](https://github.com/w3f/Open-Grants-Program/blob/master/applications/pontem.md#milestone-1---pre-alpha-version-of-move-pallet).
 
@@ -10,7 +12,7 @@ See ["How to deploy module and execute script"](https://youtu.be/IJLEbk4Sx7Y) on
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0 - 2. | Crates developing/replacement | [Move VM](https://github.com/dfinance/sp-move-vm/commits/master) [Petgraph](https://github.com/dfinance/petgraph/commits/master) [Indexmap](https://github.com/RIg410/indexmap/commits/master)   | During 0 - 2 tasks we forked Libra Move VM, replaced all Rust std usages with sp_std, forked some Rust crates and did the same. See commits by [@RIg410](https://github.com/RIg410) and [@fzzr-](https://github.com/fzzr-). | 
-| 3. | Move Pallet | [Move Pallet](https://github.com/dfinance/sp-move/tree/master/pallets/sp-mvm) | Move VM pallet inside substrate node template, currently dry-run. |
+| 3. | Move Pallet | [Move Pallet](https://github.com/dfinance/sp-move) | Move VM pallet inside substrate node template, currently dry-run. |
 | 4. | Addresses support | [SS58 Support](https://github.com/dfinance/sp-move/commit/45a2cfb4d33db5f4a5792b43de313b313d3ec3ca#diff-ca0cca5ccd74d8e068826c35fd076cac894c357c184a1cd8177a966e9d3be207) | Supports ss58 addresses in transactions/modules publishing. |
 | 5. | Compiler | [SS58 Support](https://github.com/dfinance/move-tools/commits/master) | Support SS58 addresses in Dove compiler. |
 | 6. | Unit-tests | [Move Pallet](https://github.com/dfinance/sp-move/tree/master/pallets/sp-mvm/tests) [SS58](https://github.com/dfinance/move-tools/blob/55c742795d7b3f240817712c2d66de17db1f5b3a/lang/src/compiler/ss58.rs#L65) [Move VM](https://github.com/dfinance/sp-move-vm) | We covered the pallet with basic unit tests, same with VM and Dove. So you can check links, but it's not everything, you also can go over code. |
