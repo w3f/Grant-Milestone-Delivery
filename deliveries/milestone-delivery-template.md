@@ -13,4 +13,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Substrate module: `stp258` pallet | https://github.com/Setheum-Labs/SERML/tree/main/serp-tes | The source code of The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
 | 2.  | Substrate module: `serp_tes` pallet | https://github.com/Setheum-Labs/SERML/tree/main/serp-tes | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
-| 3.  | Substrate module: `serp_market` pallet | https://github.com/Setheum-Labs/SERML/tree/main/serp-market | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Market | 
+| 3.  | Substrate module: `serp_market` pallet | https://github.com/Setheum-Labs/SERML/tree/main/serp-market | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Market Pallet | 
