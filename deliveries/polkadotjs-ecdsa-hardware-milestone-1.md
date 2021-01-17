@@ -1,0 +1,14 @@
+# Milestone Delivery :mailbox:
+
+**The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone.**  
+
+* **PR Link:** [ECDSA for Polkadot JS](https://github.com/w3f/Open-Grants-Program/pull/39)
+* **Milestone Number:** 1
+
+Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 1. | Trezor API ECDSA signer | [pallet](https://github.com/PlasmNetwork/Plasm/tree/08c4a9211836b929abcbad4ed33ede0f616a6423/frame/custom-signatures), [UI](https://github.com/hoonsubin/apps/pull/2/files) | Trezor support consist of two components: the pallet (that supports any signature schemes to send transactions), and UI that requests Metamask to sign custom data (the `Call` structure). |
+| 2. | Improve documentation | https://docs.plasmnet.io/workshop-and-tutorial/metamask-signatures | Added documentation page that describes provided functionality. |
+| 3. | Demo video | https://ipfs.io/ipfs/QmQx3SirhivZ3E3FqCgFYiv6NypV4oysy9beVWX77GxADx | Native metamask account and Trezor imported account demo. |
