@@ -4,7 +4,7 @@
 * **Status:** In Progress
 * **PR Link:** [https://github.com/w3f/Open-Grants-Program/pull/64](https://github.com/w3f/Open-Grants-Program/pull/64)
 * **Milestone:** 2
-* **Kusama Identity:** [EdAnXzJGJcfNATWahgMgewkSA84nGHZwANpVzGVXtDYetsw](https://polkascan.io/kusama/account/EdAnXzJGJcfNATWahgMgewkSA84nGHZwANpVzGVXtDYetsw) (no identity yet)
+* **Kusama Identity:** [EdAnXzJGJcfNATWahgMgewkSA84nGHZwANpVzGVXtDYetsw](https://polkascan.io/kusama/account/EdAnXzJGJcfNATWahgMgewkSA84nGHZwANpVzGVXtDYetsw)
 * **Previously successfully merged evaluation:** none
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
