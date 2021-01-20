@@ -19,8 +19,6 @@
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
-
 **ad 1:** Various docs on setup, deployment, deploying assets, manual and automated asset transfer. Compilation issues resolved on request. Good unit test coverage of smart contracts (>94%), node tests _very_ basic.
 
 **ad 2b:** Direct wallet transfer documentation is outdated or incomplete. There is no mention of having to add distribution accounts, and `transfer` parameters have changed.
