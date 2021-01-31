@@ -46,8 +46,8 @@ jobs:
         with:
           targetRepoOwner: "w3f"
           targetRepo: "Open-Grants-Program"
-          prLink: "${{ steps.grant_parser.outputs.contract_url }}"
-          author: "${{ github.event.pull_request.author }}"
+          prLink: ${{ steps.grant_parser.outputs.contract_url }}
+          author: ${{ github.event.pull_request.user.login }}
 
       - name: 'write the data to a gsheet'
         if: "${{ steps.validate_pr.outputs.isValid }}"
