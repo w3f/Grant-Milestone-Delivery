@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/61
 - **Milestone:** 1
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | --- | --- | --- | --- | --- |
 | 0a. | Apache 2.0 License | <ul><li>[x] </li></ul> | [License file](https://github.com/ascontract/subscript/blob/9d8e6baf6401f62c31b186a0373dff779f192557/LICENSE) | — |
-| 0b. | Testing | <ul><li>[ ] </li></ul> | [tests](https://github.com/ascontract/subscript/tree/9d8e6baf6401f62c31b186a0373dff779f192557/core/assembly/__tests__) | Minimal testing |
+| 0b. | Testing | <ul><li>[x] </li></ul> | [tests](https://github.com/ascontract/subscript/tree/9d8e6baf6401f62c31b186a0373dff779f192557/core/assembly/__tests__) | see [General Notes](#general-notes) |
 | 0c. | Documentation | <ul><li>[x] </li></ul> | [Readme1](https://github.com/ascontract/subscript/blob/master/README.md), [Readme2](https://github.com/ascontract/subscript/blob/9d8e6baf6401f62c31b186a0373dff779f192557/core/README.md) | Well structured |
 | 1. | contract runtime environment | <ul><li>[x] </li></ul> | [code](https://github.com/ascontract/subscript/tree/9d8e6baf6401f62c31b186a0373dff779f192557/core/assembly/env) | — |
 | 2. | core types | <ul><li>[x] </li></ul> | [code](https://github.com/ascontract/subscript/blob/9d8e6baf6401f62c31b186a0373dff779f192557/core/assembly/types.ts) | — |
@@ -23,6 +23,8 @@
 | 10. | example for demonstration | <ul><li>[x] </li></ul> | [flipper](https://github.com/ascontract/subscript/tree/9d8e6baf6401f62c31b186a0373dff779f192557/examples/flipper)<br />[ERC20](https://github.com/ascontract/subscript/tree/9d8e6baf6401f62c31b186a0373dff779f192557/examples/erc20) | — |
 
 ## General Notes
+
+Few smart contract tests due to limitations in off-chain environment (see delivery documentation).
 
 Test environment:
 
