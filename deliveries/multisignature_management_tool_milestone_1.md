@@ -16,5 +16,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 3.  | Docker file |[pr](https://github.com/itering/subscan-multisig-ui/commit/75ebe13a507051c5a89029f4260162835bb44fd0) | |
 | 4.  | Test |[link](https://github.com/itering/subscan-multisig-ui/blob/main/README.md#Test) [backend test](https://github.com/itering/subscan-multisig-backend/blob/master/spec/tests/crawler.spec.ts) | Follow the instruction to run test|
 | 5.  | Tutorial |[link](https://github.com/itering/subscan-multisig-ui/blob/main/README.md#tutorial) | |
-| 6.  | Code repo |[frontend](https://github.com/itering/subscan-multisig-ui), [backend](https://github.com/itering/subscan-multisig-backend) | |
+| 6.  | Code repo |[frontend](https://github.com/itering/subscan-multisig-ui), [backend](https://github.com/itering/subscan-multisig-backend) | backend design doc: https://www.notion.so/backend-doc-new-032acb3d784f4ecd93d2d6aa01a390e9 |
 
