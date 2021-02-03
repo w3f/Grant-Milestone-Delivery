@@ -14,7 +14,8 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 1. | Wiki | [Wiki](https://github.com/wivtech/supply-chain/wiki) | |
 | 2. | Demo | [Walkthrough](https://drive.google.com/file/d/1HCVrX1Ij8kcxcbzdw4cBie-NxV41pGOa/view?usp=sharing) | video |
 | 3. | Application repo | [UI-M1 repo](https://github.com/wivtech/supply-chain/tree/M1) | source, front-end | 
-| 4. | Blockchain node repo | [Node-M1 repo](https://github.com/wivtech/supply-chain-node/tree/M1) | source, back-end |
-| 5. | UI Docker image | [UI-M1 docker](https://hub.docker.com/repository/docker/wivt/supply-chain-ui) | docker, front-end |
-| 6. | Node Docker image | [Node-M1 docker](https://hub.docker.com/repository/docker/wivt/supply-chain) | docker, back-end |
-| 7. | License | Unlicense | |
+| 4. | Ink! smart contract repo | [Ink-M1 repo](https://github.com/wivtech/supply-chain-ink) | source, smart contract |
+| 5. | Blockchain node repo | [Node-M1 repo](https://github.com/wivtech/supply-chain-node/tree/M1)<br/>[Canvas branch](https://github.com/wivtech/supply-chain-node/tree/M1-Canvas) | source, back-end |
+| 6. | UI Docker image | [UI-M1 docker](https://hub.docker.com/repository/docker/wivt/supply-chain-ui) | docker, front-end |
+| 7. | Node Docker image | [Canvas docker](https://hub.docker.com/layers/wivt/supply-chain/canvas/images/sha256-87a1a679daad43e275406a353f82231022483309d3501883f0554de2b5bd6128?context=repo)<br/>[Node-M1 docker](https://hub.docker.com/layers/wivt/supply-chain/custom/images/sha256-5787dd16aa00aea1a3181897adcf1861a8affe7942bdf9bce874111ceeaa9147?context=repo) | docker, back-end |
+| 8. | License | Unlicense | |
