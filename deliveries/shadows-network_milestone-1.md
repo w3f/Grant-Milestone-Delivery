@@ -11,6 +11,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
+| 0. | License |https://github.com/ShadowsNetwork/shadows/blob/develop/LICENSE| Done | 
 | 1. | Documentation |https://shadows-blockchain.gitbook.io| Done | 
 | 2.  | Testing Guide |https://github.com/ShadowsNetwork/shadows/blob/develop/README.md| Done| 
 | 3.  | Substrate module: MintX |https://github.com/ShadowsNetwork/shadows/tree/develop/modules/mintx| The Mintx module is used to lock the collateral to issue xUSD stablecoins, which can be used to exchange their synthetic assets| 
