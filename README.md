@@ -35,7 +35,7 @@ The milestone delivery process is part of the [Open Grants Program](https://gith
 
 ## :ballot_box_with_check: External Evaluation 
 
-As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 10 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.    
+As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 5 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.    
 
 ### Requirements
 * [On-Chain identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
