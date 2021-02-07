@@ -25,5 +25,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 0a. | License | Apache 2.0 |
 | 1a. | Manta Substrate Pallet Protoype, backend | [link](https://github.com/Manta-Network/manta-node) | private repo, will open source once all milestones achieved |
 | 1a. | Manta Substrate Pallet Protoype, frontend | [link](https://github.com/Manta-Network/manta-front-end) | private repo, will open source once all milestones achieved |
-| 2. | Benchmark |  |  |
+| 2. | Benchmark | [link](https://github.com/Manta-Network/manta-node/blob/master/pallets/manta-dap/benches/manta_bench.rs)  | `13.4 ms` for proof verification |
 | 3. | Docker | | |
