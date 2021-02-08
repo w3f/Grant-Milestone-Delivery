@@ -1,4 +1,4 @@
-# Guildlines
+<!-- # Guildlines
 
 > Only the GitHub account, which is responsible for the pull request of the accepted application is allowed to submit milestones. Don't remove any of the mandatory parts presented in bold letters or as headlines!
 
@@ -13,17 +13,30 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | ------------- | ------------- | ------------- |------------- |
 | 1. | ... |...| ...| 
 | 2.  | ... |...| ...| 
-
-# Our response
+ -->
 
 * Original [pull request](https://github.com/w3f/Open-Grants-Program/pull/117)
 * Milestone number 1
 
+> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | Apache 2.0 |
-| 1a. | Manta Substrate Pallet Protoype, backend | [link](https://github.com/Manta-Network/manta-node) | private repo, will open source once all milestones achieved |
-| 1a. | Manta Substrate Pallet Protoype, frontend | [link](https://github.com/Manta-Network/manta-front-end) | private repo, will open source once all milestones achieved |
+| 1a. | Manta Substrate Pallet Protoype, backend | [docker](https://hub.docker.com/r/shumo/manta-node) |  |
+| 1a. | Manta Substrate Pallet Protoype, frontend | [link](https://github.com/Manta-Network/manta-front-end) | |
 | 2. | Benchmark | [link](https://github.com/Manta-Network/manta-node/blob/master/pallets/manta-dap/benches/manta_bench.rs)  | `13.4 ms` for proof verification |
-| 3. | Docker | | |
+| 3. | Docker | [docker](https://hub.docker.com/r/shumo/manta-node)  | |
+
+
+# Howto:
+
+1. download the backend container
+    1.1 `docker pull shumo/manta-node`
+    1.2 `docker container run -p 9944:9944 shumo/manta-node`
+2. setup the front end 
+    2.1 `git clone https://github.com/Manta-Network/manta-front-end`
+    2.2 `cd manta-front-end`
+    2.3 `yarn install`
+    2.4 `yarn start`
+3. how to play with the demo: see this [video](https://www.dropbox.com/s/hgufnzb6ssqimxx/manta-demo.mp4?dl=0)
