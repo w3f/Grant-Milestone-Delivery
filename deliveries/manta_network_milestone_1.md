@@ -15,6 +15,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 2.  | ... |...| ...| 
  -->
 
+* Invoice form has been filled
 * Original [pull request](https://github.com/w3f/Open-Grants-Program/pull/117)
 * Milestone number 1
 
@@ -31,7 +32,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 # Howto:
 
-1. download the backend container
+1. download and run the manta node:
    1. `docker pull shumo/manta-node`
    2. `docker container run -p 9944:9944 shumo/manta-node`
 2. setup the front end 
@@ -41,4 +42,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
     4. `yarn start`
 3. how to play with the demo: see this [video](https://www.dropbox.com/s/hgufnzb6ssqimxx/manta-demo.mp4?dl=0)
 
-The manta pallet code is still in a private repo. Please send shumo@manta.network an email with your github username if you want to check out the code. 
+The manta-node repo that containing the manta-dap pallet code is still in a private repo. Please send shumo@manta.network an email with your github username if you want to check out the code. 
