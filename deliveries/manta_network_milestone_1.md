@@ -40,3 +40,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
     3. `yarn install`
     4. `yarn start`
 3. how to play with the demo: see this [video](https://www.dropbox.com/s/hgufnzb6ssqimxx/manta-demo.mp4?dl=0)
+
+The manta pallet code is still in a private repo. Please send shumo@manta.network an email if with your github username if you want to check out the code. 
