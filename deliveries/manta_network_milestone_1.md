@@ -32,11 +32,11 @@ Please provide a list of all deliverables of the milestone extracted from the in
 # Howto:
 
 1. download the backend container
-    1.1 `docker pull shumo/manta-node`
-    1.2 `docker container run -p 9944:9944 shumo/manta-node`
+   1. `docker pull shumo/manta-node`
+   2. `docker container run -p 9944:9944 shumo/manta-node`
 2. setup the front end 
-    2.1 `git clone https://github.com/Manta-Network/manta-front-end`
-    2.2 `cd manta-front-end`
-    2.3 `yarn install`
-    2.4 `yarn start`
+    1. `git clone https://github.com/Manta-Network/manta-front-end`
+    2. `cd manta-front-end`
+    3. `yarn install`
+    4. `yarn start`
 3. how to play with the demo: see this [video](https://www.dropbox.com/s/hgufnzb6ssqimxx/manta-demo.mp4?dl=0)
