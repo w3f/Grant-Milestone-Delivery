@@ -13,5 +13,5 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Contract Implementation |[Solidty](https://github.com/oxydev/SubsCrypt-solidty) - [Ink!](https://github.com/oxydev/SubsCrypt-ink)| Contract is implemented in two language which can be used both in EVM pallete and Ink! platform.| 
 | 2. 3.  | Article & Design Front-End component | [Git Version](https://github.com/oxydev/SubsCrypt-docs) - [Web Version](https://oxydev.github.io/SubsCrypt-docs/)| SubsCrypt Documntaion platform that more details will be written in next phases.| 
-| 4.  | White-Paper | [PDF]()| SubsCrypt platform and future plans are explained in an abstract level .| 
-| 5.  | Polkadot Standards Proposals (PSPs) | [Proposal](#)| Our proposal for implementing the Subscription mechanism with refund method.| 
+| 4.  | White-Paper | [PDF](https://github.com/oxydev/SubsCrypt-docs/blob/master/SubsCrypt-White-Paper.pdf)| SubsCrypt platform and future plans are explained in an abstract level.| 
+| 5.  | Polkadot Standards Proposals (PSPs) | [Proposal](https://github.com/w3f/PSPs/pull/12)| Our proposal for implementing the Subscription mechanism with refund method.| 
