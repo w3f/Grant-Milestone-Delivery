@@ -14,7 +14,7 @@
 | 1. | Oracle Node Module Repo | <ul><li>[x] </li></ul> | [Oracle Node](https://github.com/Kylin-Network/kylin-node)| Works |
 | 2. | Data Feeding/Miner Repo | <ul><li>[x] </li></ul> | [Data Feeding/Miner](https://github.com/Kylin-Network/kylin-ocw-module)  | Mostly based on the [offchain worker example](https://github.com/paritytech/substrate/blob/master/frame/example-offchain-worker/src/lib.rs) |
 | 3. | Datasource Sample Repo | <ul><li>[x] </li></ul> | [sample-data-fetcher](https://github.com/Kylin-Network/sample-data-fetcher) | Not rustdocs, only one test |
-| 4. | Data Analytics Sample Repo | <ul><li>[] </li></ul> | []() | ELK (Elasticsearch, Logstash, and Kibana) to collect and analytics data rather than implement a full data analytics solution |
+| 4. | Data Analytics Sample Repo | <ul><li>[ ] </li></ul> | []() | ELK (Elasticsearch, Logstash, and Kibana) to collect and analytics data rather than implement a full data analytics solution |
 | 5. | Docker Image | <ul><li>[x] </li></ul> | [Docker Image](https://drive.google.com/file/d/1sdTbaEhWZdToZ3ASeoNerOeZwfNy4KPN/view?usp=sharing), [docker-compose.yml](https://github.com/Kylin-Network/kylin-node/blob/main/scripts/docker-compose.yml), [] | - |
 
 
