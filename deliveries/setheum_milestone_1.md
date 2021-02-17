@@ -11,7 +11,6 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0. | Old/First Delivery PR: `Setheum Milestone 1 - SERP Pallets #73` |[Setheum Milestone 1 - SERP Pallets #73 :pencil:](https://github.com/w3f/Grant-Milestone-Delivery/pull/73) | The Link to the First Grant Delivery PR #73 | 
 | 1. | Substrate module: `stp258` pallet | https://github.com/Setheum-Labs/Setheum/tree/master/pallets/stp258 | The source code of The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
 | 1b. | Unit Tests: `stp258` pallet | https://github.com/Setheum-Labs/Setheum/blob/master/pallets/stp258/src/tests.rs | The unit tests for The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
 | 2.  | Substrate module: `serp_tes` pallet | https://github.com/Setheum-Labs/Setheum/tree/master/pallets/serp-tes | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
