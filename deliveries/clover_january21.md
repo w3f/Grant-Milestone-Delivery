@@ -10,7 +10,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | 1. | Documentation | https://docs.clover.finance/ | Start documenting on the various aspect of the Clover. |
-| 2. | Unit Test | https://github.com/clover-network/apps | The chain specific unit tests will cover 50% at the end of Jan. | 
+| 2. | Unit Test | https://docs.clover.finance/technical-documentation/clover-test-cases | The chain specific unit tests will cover 50% at the end of Jan. | 
 | 3. | License | MIT license | license |
 | 4. | Article/Tutorials | https://docs.clover.finance/quick-start/local-node | Writing varios tutorials to demonstrate how to setup clover nodes |  
 | 5. | Clover Rosetta Services | https://github.com/clover-network/clover-rosetta-service | Integrating Coinbase Rosetta services to ensure the cross-chain compatibility |  
@@ -20,4 +20,4 @@
 | 9. | Clover Testnet | http://faucet.clovernode.com/ | We will finalize the Clover testnet and the faucet to receive test tokens |
 | 10. | Clover Wallet App | https://github.com/clover-network/clover-mobile-wallet | Delivering initial build of Clover official wallet on both android/iOS |
 | 11. | Clover Wallet Chrome Extension| https://github.com/clover-network/clover-mulichain-wallet | Delivering initial build of Chrome Extension of Clover web3 wallet |
-| 12. | Substrate module: Frontier-EVM pallet| https://github.com/clover-network/clover | Rolling out minor EVM adjustments with Clover chain |
+| 12. | Substrate module: Frontier-EVM pallet| https://docs.clover.finance/technical-documentation/clover-evm | Rolling out minor EVM adjustments with Clover chain |
