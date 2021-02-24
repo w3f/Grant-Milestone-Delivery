@@ -13,7 +13,7 @@
 | 0a. | License |https://github.com/Philasande-map/mapbridge/blob/master/LICENSE | Apache License |
 | 0b. | Testing |https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/tests.rs | test mmr module method |
 | 1. | MMR Trie Structure | https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/mock.rs#L115 | customlized MMR node field,  merging method and MMR manager |
-| 2. | Substrae MMR proof runtime module | https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/lib.rs#L84| MMR proof verification, generate and manage MMR in substrate SRML runtime |
+| 2. | Substrae MMR proof runtime module | https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/lib.rs#L84| MMR proof verification, generate and manage MMR Trie in substrate SRML runtime |
 | 3. | AppendBlock |https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/lib.rs#L193 | Append current block as MMR leaf node  |
 | 4. | RetrieveMMR |https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/lib.rs#L214 | Retrieve the MMR based on the root provide |
 | 5. | GenerateProof | https://github.com/Philasande-map/mapbridge/blob/master/pallets/map-mmr/src/lib.rs#L224 | Generate the merkle branch proof in MMR |
