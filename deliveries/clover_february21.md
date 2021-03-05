@@ -19,6 +19,6 @@
 | 6. | Clover Wallet App | https://github.com/clover-network/clover-multichain-mobile-wallet | Integrating Clover OS on Clover Wallet App |  
 | 7. | Clover Wallet Chrome Extension | https://github.com/clover-network/clover-multichain-wallet | Finalizing Clover chrome extension and distribute it on google store |  
 | 8. | Tulip Editor | Project aborted. | Deliverig first POC version of Tulip editor |  
-| 9. | Clover Developer Portal | https://apps.clover.finance/#/explorer | Delivering basic functionalities of developer portal with account creation/upload/upgrade eAPP |
+| 9. | Clover Developer Portal | https://apps.clover.finance/#/explorer https://docs.clover.finance/quick-start/testnet| Delivering basic functionalities of developer portal and documentation |
 | 10. | IPFS Integration | https://github.com/clover-network/clover-store-upload | Integrating IPFS node along with Clover node into single Docker file for distribution |
 
