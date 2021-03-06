@@ -5,7 +5,7 @@
 ---
 
 - [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
-- [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
+- [:ballot_box_with_check: External Evaluations](#ballot_box_with_check-external-evaluations)
   - [Requirements](#requirements)
   - [Process](#process)
 - [:bulb: Help](#bulb-help)
