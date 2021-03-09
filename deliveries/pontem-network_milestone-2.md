@@ -26,4 +26,4 @@ We are going forward, not everything we worked included in this milestone, as it
 * [Move Pallet](https://github.com/pontem-network/sp-move)
 * [Move Tools](https://github.com/pontem-network/move-tools)
 
-In next milestone we also planning to improve documentation, up gitbook, add more examples and etc.
+In the next milestone we also plan to improve documentation, up gitbook, add more examples and etc.
