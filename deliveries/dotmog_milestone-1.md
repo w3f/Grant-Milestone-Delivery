@@ -23,7 +23,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/LICENSE) |Apache 2.0 |
 | 0b. | Documentation | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/README.md) | We will provide both inline documentation of the code and a basic tutorial that explains how a user can (for example) spin up one of our Substrate nodes. Once the node is up, it will be possible to send test transactions that will show how the new functionality works. |
-| 0c. | Testing Guide | [LINK](https://github.com/dotmog/SubstrateNetApi/tree/origin/SubstrateNetApiTest) |  The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests | 
+| 0c. | Testing Guide | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/README.md#testing-guide) |  The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests | 
 | 0d. | Article/Tutorial | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/README.md) | We will write an article or tutorial that explains the work done as part of the grant. 
 | 1. | Basic API | | Create a solid base for the API, to be reusable, easy to use and simple to maintain |
 | 1a. | MetaData Model | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/SubstrateNetApi/MetaDataParser.cs) | read & parse metadata v11, v12 to json, [DOTMog.json](https://github.com/dotmog/SubstrateNetApi/blob/origin/DemoApiTest/DOTMogNET.json) |  
