@@ -24,22 +24,44 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | Apache 2.0 |
-| 1a. | Manta Substrate Pallet Protoype, backend | [docker](https://hub.docker.com/r/shumo/manta-node), [source code](https://github.com/Manta-Network/manta-node/tree/master/pallets/manta-dap) |  |
-| 1a. | Manta Substrate Pallet Protoype, frontend | [Github](https://github.com/Manta-Network/manta-front-end) | |
-| 2. | Benchmark | [link](https://github.com/Manta-Network/manta-node/blob/master/pallets/manta-dap/benches/manta_bench.rs)  | `13.4 ms` for proof verification |
-| 3. | Docker | [docker](https://hub.docker.com/r/shumo/manta-node)  | |
+| 1a. | Manta DAP Pallet, backend | [manta-dap-pallet](https://github.com/Manta-Network/manta-node/tree/master/pallets/manta-dap) |  |
+| 1b. | Manta Substrate Node | [manta-node](https://github.com/Manta-Network/manta-node) | |
+| 1c. | Manta Frontend | [manta-front-end](https://github.com/Manta-Network/manta-front-end) | | 
+| 2. | Test Coverage and Benchmark | [test-coverage](https://github.com/Manta-Network/pallet-manta-dap#test-coverage), [benchmark](https://github.com/Manta-Network/pallet-manta-dap#benchmark)|  |
 
 
-# Howto:
+# Milestone 1 Delivery
 
-1. download and run the manta node:
-   1. `docker pull shumo/manta-node`
-   2. `docker container run -p 9944:9944 shumo/manta-node`
-2. setup the front end 
-    1. `git clone https://github.com/Manta-Network/manta-front-end`
-    2. `cd manta-front-end`
-    3. `yarn install`
-    4. `yarn start`
-3. how to play with the demo: see this [video](https://www.dropbox.com/s/hgufnzb6ssqimxx/manta-demo.mp4?dl=0)
+## Code Organization
 
-The manta-node repo that containing the manta-dap pallet code is still in a private repo. Please send shumo@manta.network an email with your github username if you want to check out the code. 
+* [manta-dap-pallet](https://github.com/Manta-Network/manta-node/tree/master/pallets/manta-dap): the implementation of manta DAP protocol. It implement the following functions:
+  - `init`: create a public asset (a.k.a. base token), which is public
+  - `transfer`: tranfer the base token from one polkadot address to another
+  - `mint`: mint a private token from the public token
+  - `manta_transfer`: transfer a private token to a new shielded address
+  - `forfeit`: reclaim a public token from a private token
+* [manta-node](https://github.com/Manta-Network/manta-node): Manta substrate node that integrate `manta-dap-pallet`. You can start a manta local testnet using this code.
+* [manta-front-end](https://github.com/Manta-Network/manta-front-end): A minimal web front-end for Manta that is forked from `substrate-front-end-template`.
+
+## Run a Manta Demo
+
+Detailed instructions can be found [here](https://github.com/Manta-Network/manta-node#demo).
+
+![step3](https://user-images.githubusercontent.com/720571/110532076-3b84a100-80d1-11eb-9c7b-ab7f98350a0b.png)
+
+## Test Coverage
+
+Detailed instructions to run test coverage can be found [here](https://github.com/Manta-Network/pallet-manta-dap#test-coverage).
+
+![Result](https://github.com/Manta-Network/pallet-manta-dap/blob/master/coverage/coverage.png)
+
+
+## Benchmark
+
+Detailed instructions to run Benchmark can be found [benchmark](https://github.com/Manta-Network/pallet-manta-dap#benchmark).
+
+Summary of Benchmark Result:
+| Function      | init |  trasfer | mint | manta_transfer | forfeit |
+| ----------- |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| Rust       |    1.2 ms    |  30 \mu s | 3.5 ms | 18.1 ms | 16.1 ms |
+| Wasm |    244 ms    |  178 \mu s | 1018 ms | 6079 ms | 5387 ms |
