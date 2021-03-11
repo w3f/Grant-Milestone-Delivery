@@ -24,7 +24,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | Apache 2.0 |
-| 1a. | Manta DAP Pallet, backend | [manta-dap-pallet](https://github.com/Manta-Network/manta-node/tree/master/pallets/manta-dap) |  |
+| 1a. | Manta DAP Pallet, backend | [pallet-manta-dap](https://github.com/Manta-Network/pallet-manta-dap) |  |
 | 1b. | Manta Substrate Node | [manta-node](https://github.com/Manta-Network/manta-node) | |
 | 1c. | Manta Frontend | [manta-front-end](https://github.com/Manta-Network/manta-front-end) | | 
 | 2. | Test Coverage and Benchmark | [test-coverage](https://github.com/Manta-Network/pallet-manta-dap#test-coverage), [benchmark](https://github.com/Manta-Network/pallet-manta-dap#benchmark)|  |
@@ -34,7 +34,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 ## Code Organization
 
-* [manta-dap-pallet](https://github.com/Manta-Network/manta-node/tree/master/pallets/manta-dap): the implementation of manta DAP protocol. It implement the following functions:
+* [pallet-manta-dap](https://github.com/Manta-Network/pallet-manta-dap): the implementation of manta DAP protocol. It implement the following functions:
   - `init`: create a public asset (a.k.a. base token), which is public
   - `transfer`: tranfer the base token from one polkadot address to another
   - `mint`: mint a private token from the public token
