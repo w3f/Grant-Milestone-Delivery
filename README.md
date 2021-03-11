@@ -1,57 +1,58 @@
 # Web3 Grant Milestone Delivery
 
-**:loudspeaker: Important:** This repository is only for submitting finished milestone for the [Web3 Foundation Open Grants Program](https://github.com/w3f/Open-Grants-Program). 
+**:loudspeaker: Important:** This repository is only for submitting finished milestones for the [Web3 Foundation Open Grants Program](https://github.com/w3f/Open-Grants-Program). 
 
 ---
 
 - [:mailbox: Milestone Delivery Process](#mailbox-milestone-delivery-process)
-- [:ballot_box_with_check: External Evaluation](#ballot_box_with_check-external-evaluation)
+- [:ballot_box_with_check: External Evaluations](#ballot_box_with_check-external-evaluations)
   - [Requirements](#requirements)
   - [Process](#process)
 - [:bulb: Help](#bulb-help)
   - [Additional information](#additional-information)
   - [Real-time conversation](#real-time-conversation)
-- [:information_source: License](#information_source-license)
 
 ## :mailbox: Milestone Delivery Process
 
-The milestone delivery process is part of the [Open Grants Program](https://github.com/w3f/Open-Grants-Program). You can find the full process [here](https://github.com/w3f/Open-Grants-Program/blob/master/README.md#pencil-process).  
+The milestone delivery process is part of the [Open Grants Program](https://github.com/w3f/Open-Grants-Program). You can find the application process [here](https://github.com/w3f/Open-Grants-Program/blob/master/README.md#pencil-process).  
+
+:warning: Before you submit a milestone, make sure it complies with our [Guidelines for Milestone Deliverables](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).
 
 1. **Milestone Delivery:**
-    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](./evaluations/evaluation-template.md) repo with the **same GitHub account, which you used to submit the application!**
-    2. In the newly created fork, create a **copy** of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md). In other words: In the GitHub web interface, you need to create a new file and copy the content of the [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md) inside the new file. Don't change the template file directly!
-    3. Label the file as "project-name_milestone-number.md".
-    4. Fill out the [invoice form](https://forms.gle/QvsbeSA3ziuC9k9b9).
-    5. Fill out the template with the details of your milestone including a **link to the initial pull request**.
-    6. Once you have completed the application, click on "create new pull request".
+   1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application.
+   2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**.
+   3. Name the file `project_name-milestone_number.md`.
+   4. Fill out the [invoice form](https://forms.gle/QvsbeSA3ziuC9k9b9).
+   5. Fill out the template with the details of your milestone including a **link to the pull request** of your application.
+   6. Once you're done, create a pull request.
 2. **Milestone Review:**
-    1. Evaluators can issue comments and request changes on the pull request.
-    2. Grants Evaluators can approve a pull request to accept the deliverable.
+   1. [Evaluators](https://github.com/w3f/Open-Grants-Program#w3f-grants-evaluators) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
+   2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
-    1. The Operations Team receives a notification once the delivery was accepted or after two weeks without any feedback after the initial delivery. As soon as feedback is provided by the evaluators, this feedback first needs to be resolved.  
-    2. Operations Team makes the payment to the Bitcoin address specified in the initial application.
+   1. The [Operations Team](https://github.com/w3f/Open-Grants-Program#w3f-operations-team) receives a notification once the delivery is accepted.
+   2. Payment is made to the Bitcoin or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
-*Grant application can be amended at any time, necessitating a reevaluation by the Committee.*
+Grant applications can be amended at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
 
-## :ballot_box_with_check: External Evaluation 
+## :ballot_box_with_check: External Evaluations
 
-As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 10 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.    
+As part of the open grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 5 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.    
 
 ### Requirements
-* [On-Chain identity](https://wiki.polkadot.network/docs/en/mirror-learn-identity#__docusaurus) on Kusama
-* GitHub account
+* [On-Chain identity](https://guide.kusama.network/docs/en/mirror-learn-identity) on Kusama.
+* GitHub account.
 * The evaluation has to be submitted within 10 days after the milestone was delivered. 
 
 ### Process
-1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) the [Grant Milestone Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
-2. In the newly created fork, create a **copy** of the [evaluation-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/evaluation-template.md).
-3. Label the file as "project-name_milestone-number_your-github-name.md".
+1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository.
+2. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
+3. Name the file `project-name_milestone-number_your-github-username.md`.
 4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
 5. Once you have completed the evaluation, click on "create new pull request".
-6. Add a comment or review to the pull request, which contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the full evaluation.
-7. Milestone evaluations are double-checked by the [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#team). Successful milestone evaluations are merged & the evaluator is rewarded with KSMs. 
+6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
+7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Open-Grants-Program#w3f-grants-evaluators). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 
-*In the future we plan to integrate a reputation system: With each successful milestone evaluation the probability of being double-checked decreases. If you have done enough milestone evaluations, you become part of the Grants Evaluators yourself.*
+*In the future we plan to integrate a reputation system: with each successful milestone evaluation, the probability of being double-checked decreases. If you have done enough milestone evaluations, you become a recognised [W3F Grants Evaluator](https://github.com/w3f/Open-Grants-Program#w3f-grants-evaluators) yourself.*
 
 ## :bulb: Help
 
@@ -65,9 +66,9 @@ As part of the open grant program, we allow everyone to participate in the evalu
 * [Web 3.0 Reddit](https://www.reddit.com/r/web3)
 
 ### Real-time conversation
-We have Riot channels for real-time discussions on Web3 and Polkadot. Join the conversations.
-* [Web3 Foundation](https://riot.im/app/#/room/#web3foundation:matrix.org)
-* [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)
+We have Riot channels for real-time discussions on Web3 and Polkadot. Join the conversation.
+* [Web3 Foundation](https://app.element.io/#/room/#w3f:matrix.org)
+* [Polkadot Watercooler](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation)
 
-## :information_source: License
-[Apache License 2.0](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/LICENSE) © Web3 Foundation 
+## :information_source: License <!-- omit in toc -->
+[Apache License 2.0](LICENSE) © Web3 Foundation.
