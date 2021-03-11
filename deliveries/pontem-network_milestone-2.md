@@ -5,7 +5,7 @@
 * **PR Link:** [Pontem Network](https://github.com/w3f/Open-Grants-Program/pull/138). 
 * **Milestone Number:** [Milestone #2](https://github.com/w3f/Open-Grants-Program/blob/master/applications/pontem.md#milestone-2--alpha-version-of-move-pallet).
 
-See how to try result of work on milestone #2: Move VM, Move Pallet, and tools, in Move Pallet [documentation](https://github.com/dfinance/sp-move/blob/master/README.md).
+See how to try result of work on milestone #2: Move VM, Move Pallet, and tools, in Move Pallet [documentation](https://github.com/pontem-network/sp-move/blob/master/README.md).
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
