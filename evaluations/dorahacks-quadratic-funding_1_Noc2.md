@@ -9,11 +9,11 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/zhangjiannan/QFgrant/blob/main/LICENSE) |  MIT License which is fine  |
-| 0b. | Testing Guide | <ul><li>[ ] </li></ul> |  | The repo contains no testing guide and is just a copy past of the substrate template readme. Also the pallet doesn’t have any readme file or some inline documentation that explains the purpose of it or how to test it. |
-| 1. | Quadratic Funding Substrate Pallet | <ul><li>[ ] </li></ul> | [quadratic-funding](https://github.com/zhangjiannan/QFgrant/tree/199b61301975653adb3dda8e53a36c3ccab85503/pallets/quadratic-funding)| unused variables, functions, etc, How do I start a round?, more inline documentation would be helpful |
-| 2. | 	Deploy the runtime module to Substrate testnet | <ul><li>[ ] </li></ul> | | Contains unit tests |
+| 0b. | Testing Guide | <ul><li>[ ] </li></ul> | [readme](https://github.com/zhangjiannan/QFgrant) | Initial version was just a copy paste of the substrate template readme, they fixed it. But it still doesn't contain a "testing guide" |
+| 1. | Quadratic Funding Substrate Pallet | <ul><li>[ ] </li></ul> | [quadratic-funding](https://github.com/zhangjiannan/QFgrant/blob/c5048f3e45846af8d4361bce1e9f0bed12d60e41/pallets/quadratic-funding/src/lib.rs)| Originally the delivery had unused variables, functions, etc, and very little inline documentation. Also start_round function wasn't implemented, the size limit of name as well support for multiple rounds, but the team fixed it. However it's still difficult to follow the code. How/Where is the matched amount calculated? |
+| 2. | 	Test | <ul><li>[x] </li></ul> | [tests](https://github.com/zhangjiannan/QFgrant/blob/main/pallets/quadratic-funding/src/tests.rs) | Contains 5 unit tests |
 
 
 ## General Notes
 
-name has no limited size: https://github.com/zhangjiannan/QFgrant/blob/main/pallets/quadratic-funding/src/lib.rs#L186 
+In Progress
