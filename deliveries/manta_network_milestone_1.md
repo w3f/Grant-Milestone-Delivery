@@ -63,5 +63,5 @@ Detailed instructions to run Benchmark can be found [benchmark](https://github.c
 Summary of Benchmark Result:
 | Function      | init |  trasfer | mint | manta_transfer | forfeit |
 | ----------- |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| Rust       |    1.2 ms    |  30 \mu s | 3.5 ms | 18.1 ms | 16.1 ms |
-| Wasm |    244 ms    |  178 \mu s | 1018 ms | 6079 ms | 5387 ms |
+| Rust       |    640 us   |  13 us | 1.9 ms | 10.1 ms | 8.8 ms |
+| Wasm |    2.8 ms    |  111  us | 13.1 ms | 130 ms | 107 ms |
