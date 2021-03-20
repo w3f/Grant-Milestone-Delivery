@@ -11,8 +11,8 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Crowdloan DApp |...| This the main deliverable and it includes a web based application that interacts with the westend runtime. | 
-| 2.  | Polkadot launch config file |...| Public networks do not support the crowdloan module; thus we'll have to run a local netwrok using the polkadot-launch cli too. This will spin up the westend runtime which has integrated the crowdloan module. We'll be using this local runtime to interact with the module. | 
+| 1. | Crowdloan DApp |https://github.com/Apocentre/polkastarter-crowdloan| This the main deliverable and it includes a web based application that interacts with the westend runtime. | 
+| 2.  | Polkadot launch config file |https://github.com/Apocentre/polkastarter-crowdloan/blob/main/polkadot-launch/config.json| Public networks do not support the crowdloan module; thus we'll have to run a local netwrok using the polkadot-launch cli too. This will spin up the westend runtime which has integrated the crowdloan module. We'll be using this local runtime to interact with the module. | 
 | 3.  | Westend runtime binary |https://drive.google.com/file/d/1lwkSjOnS1uJxUUfaXj6-zbVU0X7fVbK4| This is a pre-built binary of the westend runtime that includes the crowdloan module.|
-| 4.  | Documentation |...| A thorough description of the crowdloan module and how one can interact by sending extrinsics either via the Polkadot.js Apps or the Polkastarter Crowdloan DApp.|
+| 4.  | Documentation |https://github.com/Apocentre/polkastarter-crowdloan/blob/main/README.md| A thorough description of the crowdloan module and how one can interact by sending extrinsics either via the Polkadot.js Apps or the Polkastarter Crowdloan DApp.|
 | 5.  | Initial manual integration of the crowdloan module |https://github.com/Apocentre/polkadot/pull/1/files| When we started implementing the DApp we were at a stage where there were no integration of the crowdloan on the official polkadot repository. The module itself was implemented but it was not included in any of the runtimes. In order to overcome this blocker we had to manually integrate the module ourselves with one of the runtime.|
