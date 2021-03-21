@@ -16,7 +16,7 @@ const main = async () => {
   const targetRepo = core.getInput('targetRepo')
   const targetRepoOwner = core.getInput('targetRepoOwner')
 
-  const prNumberPattern = /(?<=pulls\/)\d*/g
+  const prNumberPattern = /(?<=pull\/)\d*/g
 
   const prNumber = prLink.match(prNumberPattern)[0]
   console.log(`PR number is ${prNumber}`)
