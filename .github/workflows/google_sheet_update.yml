@@ -62,7 +62,7 @@ jobs:
                 "args": 
                 { 
                   "data": [[
-                    "=INDEX(Legal!$A$7:$A$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))", 
+                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(B384, Legal!$D:$D, 0) & \":\" & MATCH(B384, Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(B384,Legal!$D$2:$D,0))), \"\")", 
                     "${{ steps.grant_parser.outputs.project_name }}", 
                     "${{ steps.grant_parser.outputs.milestone_number }}", 
                     "",
