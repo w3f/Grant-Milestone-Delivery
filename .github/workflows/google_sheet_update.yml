@@ -49,6 +49,18 @@ jobs:
           prLink: ${{ steps.grant_parser.outputs.contract_url }}
           author: ${{ github.event.pull_request.user.login }}
 
+      - name: Get last row
+        if: github.event.pull_request.merged == true
+        id: get_last_row
+        uses: mmagician/gsheet.action@v0.1.0
+        with:
+          spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
+          startRow: 380
+          worksheetTitle: "Evaluation"
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+
       - name: 'write the data to a gsheet'
         if: "${{ steps.validate_pr.outputs.isValid }}"
         id: 'update_worksheet'
@@ -62,18 +74,21 @@ jobs:
                 "args": 
                 { 
                   "data": [[
-                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(B384, Legal!$D:$D, 0) & \":\" & MATCH(B384, Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(B384,Legal!$D$2:$D,0))), \"\")", 
+                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
                     "${{ steps.grant_parser.outputs.project_name }}", 
                     "${{ steps.grant_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
-                    "=INDEX(Legal!$W$7:$W$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))",
+                    "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
+                    "", 
+                    "", 
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
                   "worksheetTitle": "Evaluation", 
                   "minCol": 1,
-                  "valueInputOption": "USER_ENTERED"
+                  "valueInputOption": "USER_ENTERED",
+                  "minRow": "${{ steps.get_last_row.outputs.lastRow }}"
                 }
                }
             ]
