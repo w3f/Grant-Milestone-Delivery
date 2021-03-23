@@ -16,9 +16,9 @@
 | 3. | Decentralized API Market / Front End Repo | <ul><li>[x] </li></ul> | [dashboard](https://github.com/Apron-Network/dashboard-static/tree/bb3044f3f6fe3c4a18c1e941e64920e7db732771) | —— |
 | 4. | Apron SDK Repo | <ul><li>[ ] </li></ul> |  | —— |
 | 5. | Docker | <ul><li>[x] </li></ul> | [gdrive](https://drive.google.com/file/d/1509jfQpUawIdok7UYHr8WcY6_wB5YG8X/view) | Repo contains Dockerfile as well |
-| 6. | Tutorial | <ul><li>[ ] </li></ul> |  | Getting a `Could not fetch chain ID. Is your RPC URL correct?` when adding endpoint to MetaMask |
-| 7. | Article | <ul><li>[ ] </li></ul> |  | —— |
-| 8. | DAO | <ul><li>[ ] </li></ul> |  | —— |
+| 6. | Tutorial | <ul><li>[x] </li></ul> | [materials](https://github.com/Apron-Network/materials/blob/9e34f92eda0d0a0eec68646fd1990d912631f66d/tutorials/DemoTutorial.md) | Works in Brave but not Firefox |
+| 7. | Article | <ul><li>[x] </li></ul> | [Medium](https://apron-network.medium.com/how-does-apron-network-avoid-the-limitations-of-a-centralized-node-service-provider-3658034de361), [Medium](https://apron-network.medium.com/meet-apron-in-the-web-3-0-99973791ccaa), [Medium](https://apron-network.medium.com/blockchain-middleware-the-http-of-the-web-3-0-age-5cc80b0952d0) | —— |
+| 8. | DAO | <ul><li>[x] </li></ul> | [DAOHaus](https://app.daohaus.club/dao/0x1/0xf6aa3d578eca4821beb07a38a08031dd44f8c795) | —— |
 
 
 ## General Notes
