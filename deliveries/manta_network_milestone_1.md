@@ -49,6 +49,17 @@ Detailed instructions can be found [here](https://github.com/Manta-Network/manta
 
 ![step3](https://user-images.githubusercontent.com/720571/110532076-3b84a100-80d1-11eb-9c7b-ab7f98350a0b.png)
 
+## Run from docker
+
+1. download and run the manta node:
+   1. `docker pull mantalab/manta-node`
+   2. `docker container run -p 9944:9944 mantalab/manta-node:w3f-milestone-1`
+2. setup the front end 
+    1. `git clone https://github.com/Manta-Network/manta-front-end`
+    2. `cd manta-front-end`
+    3. `yarn install`
+    4. `yarn start`
+
 ## Test Coverage
 
 Detailed instructions to run test coverage can be found [here](https://github.com/Manta-Network/pallet-manta-dap#test-coverage).
