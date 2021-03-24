@@ -13,14 +13,22 @@ const main = async () => {
   console.log(`Author is ${author}`)
 
   const prLink = core.getInput('prLink')
+  console.log(`PR is ${prLink}`)
   const targetRepo = core.getInput('targetRepo')
+  console.log(`Repo is ${targetRepo}`)
   const targetRepoOwner = core.getInput('targetRepoOwner')
+  console.log(`Owner is ${targetRepoOwner}`)
 
   const prNumberPattern = /(?<=pull\/)\d*/g
 
-  const prNumber = prLink.match(prNumberPattern)[0]
+  const prNumber = prLink.match(prNumberPattern)
+  if(!prNumber) {
+    core.setOutput('isValid', false)
+    throw `Error parsing application PR link (${prLink}).`
+  } 
+  
+  prNumber = prNumber[0]
   console.log(`PR number is ${prNumber}`)
-
   var client = github.client();
 
   var ghpr = client.pr(`${targetRepoOwner}/${targetRepo}`, prNumber)
@@ -32,17 +40,20 @@ const main = async () => {
   const prData = res[0];
   console.log(`Got PR info as ${prData}`)
 
+  // Making sure that the PR was merged
   if ( !prData.merged ) {
-    // Making sure that the PR was merged
     core.setOutput('isValid', false)
+    throw `Application PR is not yet approved.`
+//       core.setOutput('isValid', false)
+  } 
+  
+  const originalPrAuthor = prData.user.login
+  // Making sure it's the same user
+  if (originalPrAuthor !== author) {
+    core.setOutput('isValid', false)
+    throw `Only author of application PR can submit milestone PRs.`
   } else {
-    const originalPrAuthor = prData.user.login
-    // Making sure it's the same user
-    if (originalPrAuthor !== author) {
-      core.setOutput('isValid', false)
-    } else {
-      core.setOutput('isValid', true)
-    }
+    core.setOutput('isValid', true)
   }
 }
 
