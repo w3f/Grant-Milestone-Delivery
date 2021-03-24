@@ -32,7 +32,7 @@ jobs:
       - name: 'parse files'
         if: ${{ !env.ACT }}
         id: grant_parser
-        uses: mmagician/read-file-action@v2
+        uses: w3f-community/read-file-action@v2.11
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
