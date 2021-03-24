@@ -52,7 +52,7 @@ Detailed instructions can be found [here](https://github.com/Manta-Network/manta
 ## Run from docker
 
 1. download and run the manta node:
-   1. `docker pull mantalab/manta-node`
+   1. `docker pull mantalab/manta-node:w3f-milestone-1`
    2. `docker container run -p 9944:9944 mantalab/manta-node:w3f-milestone-1`
 2. setup the front end 
     1. `git clone https://github.com/Manta-Network/manta-front-end`
