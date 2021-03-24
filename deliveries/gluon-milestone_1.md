@@ -15,8 +15,8 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ---------------|
-| 0 | Gluon Website and Web Portal Framework | website: http://www.gluonwallet.com website repo: https://github.com/tearust/gluon-website ||
-| 1 | Milestone1 feature list and test instruction | Instruction https://github.com/tearust/gluon-app/blob/milestone1/readme.md  Video demo: https://www.youtube.com/watch?v=wV4Q1-wTvFE | features: Users can create Gluon accounts and pair the Gluon mobile App with the web portal. |
+| 0 | Gluon Website and Web Portal Framework | website: http://www.gluonwallet.com website <br>repo: https://github.com/tearust/gluon-website ||
+| 1 | Milestone1 feature list and test instruction | Instruction https://github.com/tearust/gluon-app/blob/milestone1/readme.md  <br>Video demo: https://www.youtube.com/watch?v=wV4Q1-wTvFE | features: Users can create Gluon accounts and pair the Gluon mobile App with the web portal. |
 | 2 | Test docker-compose | https://github.com/tearust/gluon-app/blob/main/docker-compose.yml | Please follow the instruction https://github.com/tearust/gluon-app/blob/main/readme.md to start local test server |
-| 3 | Source code on GitHub | https://github.com/tearust/gluon-app/tree/milestone1 | There two projects inside this repo. The mobile app under /mobile folder, the webapp under /webapp folder |
+| 3 | Source code on GitHub | gluon app: https://github.com/tearust/gluon-app/tree/milestone1 <br>the pellet: https://github.com/tearust/gluon-pallet/tree/milestone-1 <br>tea-layer1: https://github.com/tearust/tea-layer1/tree/milestone-1| There are two projects inside gluon-app repo. The mobile app under /mobile folder, the webapp under /webapp folder. <br>TEA-layer1 is the blockchain, it uses gluon-pellet |
 
