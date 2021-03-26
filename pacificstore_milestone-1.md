@@ -13,12 +13,13 @@
 
 | Number | Deliverable                                       | Link | Notes |
 | ------ | --------------------------------------------------| ---- | -------|
-| 1a.    | License |  |Unlicense|
-| 1b.    | Documentation                                      | [Doc](https://github.com/vlbos/pacific-store-node/blob/dev/doc/pacific_store_milestone1.md)  | Describe functionalities and instructions on compiling |
-| 2.     | Substrate Runtime Module:backend orderbook |[Orderbook](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/orderbook)|The orderbook includes:`postOrder``postAssetWhitelist`,`getOrder`,`getOrders`,`getAsset`,`getAssets`.|
-| 3.     | Substrate Runtime Module:wyvern Exchange |[WyvernExchange](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/wyvern-exchange) |The Exchange includes:`hashOrder`,`requireValidOrder`,`validateOrderParameters`,`validateOrder`,`approveOrder`,`cancelOrder`.[wyvern](https://github.com/ProjectOpenSea/wyvern-js/blob/master/src/wyvern-ethereum/contracts/exchange/ExchangeCore.sol)|
-| 4.    | Unit Tests                             |[Orderbook](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/orderbook/src/tests.rs);[WyvernExchange Tests](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/wyvern-exchange/src/tests.rs) |The code will have 95% unit-test coverage to ensure functionality |
-| 5.    | Docker file                            | [Link](https://github.com/vlbos/pacific-store-node/blob/dev/Dockerfile)|Docker image with a Substrate chain using the sdk, demonstrating its functionality |
-| 6.    | Medium article                            | [Link](https://vlbos2018.medium.com/pacificstore-orderbook-wyvernexchange-modules-bca9af39111)| Describe Quickstart,How to use, demonstrating its functionality |
+| 0a.    | License |  |Unlicense|
+| 0b.    | Documentation                                      | [Doc](https://github.com/vlbos/pacific-store-node/blob/dev/doc/pacific_store_milestone1.md)  | Describe functionalities |
+| 0c.    | Testing Guide                                      | [Doc](https://github.com/vlbos/pacific-store-node/blob/dev/doc/pacific_store_milestone1_testing_guide.md)  | Describe quick start,how to use,test example |
+| 1.     | Substrate Runtime Module:backend orderbook |[Orderbook](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/orderbook)|The orderbook includes:`postOrder``postAssetWhitelist`,`getOrder`,`getOrders`,`getAsset`,`getAssets`.|
+| 2.     | Substrate Runtime Module:wyvern Exchange |[WyvernExchange](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/wyvern-exchange) |The Exchange includes:`hashOrder`,`requireValidOrder`,`validateOrderParameters`,`validateOrder`,`approveOrder`,`cancelOrder`.[wyvern](https://github.com/ProjectOpenSea/wyvern-js/blob/master/src/wyvern-ethereum/contracts/exchange/ExchangeCore.sol)|
+| 3.    | Unit Tests                             |[Orderbook](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/orderbook/src/tests.rs);[WyvernExchange Tests](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/wyvern-exchange/src/tests.rs) |The code will have 95% unit-test coverage to ensure functionality |
+| 4.    | Docker file                            | [Link](https://github.com/vlbos/pacific-store-node/blob/dev/Dockerfile)|Docker image with a Substrate chain using the sdk, demonstrating its functionality |
+| 5.    | Medium article                            | [Link](https://vlbos2018.medium.com/pacificstore-orderbook-wyvernexchange-modules-bca9af39111)| Describe Quickstart,How to use, demonstrating its functionality |
 
 
