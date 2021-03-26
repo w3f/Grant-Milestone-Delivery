@@ -13,7 +13,8 @@
 
 | Number | Deliverable                                       | Link | Notes |
 | ------ | --------------------------------------------------| ---- | -------|
-| 1.     | Documentation                                      | [Doc](https://github.com/vlbos/pacific-store-node/blob/dev/doc/pacific_store_milestone1.md)  | Describe functionalities and instructions on compiling |
+| 1a.    | License |  |Unlicense|
+| 1b.    | Documentation                                      | [Doc](https://github.com/vlbos/pacific-store-node/blob/dev/doc/pacific_store_milestone1.md)  | Describe functionalities and instructions on compiling |
 | 2.     | Substrate Runtime Module:backend orderbook |[Orderbook](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/orderbook)|The orderbook includes:`postOrder``postAssetWhitelist`,`getOrder`,`getOrders`,`getAsset`,`getAssets`.|
 | 3.     | Substrate Runtime Module:wyvern Exchange |[WyvernExchange](https://github.com/vlbos/pacific-store-node/tree/dev/pallets/wyvern-exchange) |The Exchange includes:`hashOrder`,`requireValidOrder`,`validateOrderParameters`,`validateOrder`,`approveOrder`,`cancelOrder`.[wyvern](https://github.com/ProjectOpenSea/wyvern-js/blob/master/src/wyvern-ethereum/contracts/exchange/ExchangeCore.sol)|
 | 4.    | Unit Tests                             |[Orderbook](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/orderbook/src/tests.rs);[WyvernExchange Tests](https://github.com/vlbos/pacific-store-node/blob/dev/pallets/wyvern-exchange/src/tests.rs) |The code will have 95% unit-test coverage to ensure functionality |
