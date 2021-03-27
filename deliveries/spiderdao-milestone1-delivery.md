@@ -6,7 +6,7 @@
 
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/113
 * **Milestone Number:** 1
-* **Version:** 1.0
+* **Version:** 1.1
 
 Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
 
@@ -14,9 +14,9 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | **Number** | **Deliverable**                          | Link                                                         | Notes                                                        |
 | ---------- | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 0a.        | License                                  | https://github.com/SpiderDAO/spiderdao/blob/main/LICENSE | Apache License 2.0                                           |
-| 0b.        | Documentation                            | https://github.com/SpiderDAO/spiderdao/blob/main/README.md | Includes the describion of how it works.                     |
-| 0c.        | Testing Guide                            | https://github.com/SpiderDAO/spiderdao/blob/prod/INSTALL.md |  |
-| 1.         | DAO Framework Repo                       | https://github.com/SpiderDAO/spiderdao                  |                                                              |
-| 2.         | Discord Communication Repo              | https://github.com/SpiderDAO/spiderdao/tree/prod/discord_bot              |                                                              |
-| 3.         | DAO Node Testnet Docker Image          |         |  |
+| 0a.        | License                                  | https://github.com/SpiderDAO/spiderdao_testnet/blob/main/LICENSE | Apache License 2.0.                                           |
+| 0b.        | Documentation                            | https://github.com/SpiderDAO/spiderdao_testnet/blob/main/README.md | Includes the description of how the testnet works.                     |
+| 0c.        | Testing Guide                            | https://github.com/SpiderDAO/spiderdao_testnet/blob/main/INSTALL.md | Includes the steps required to setup the testnet. |
+| 1.         | DAO Framework Repo                       | https://github.com/SpiderDAO/spiderdao_testnet/tree/main/src                  | Includes the SpiderDAO framework modules.                                                             |
+| 2.         | Discord Communication Repo              | https://github.com/SpiderDAO/spiderdao_testnet/tree/main/discord_bot              | Includes SpiderDAO discord bot source.                                                             |
+| 3.         | DAO Node Testnet Docker Image          |         | Includes SpiderDAO full docker image can be deployed for testing. |
