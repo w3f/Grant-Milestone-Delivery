@@ -6,7 +6,7 @@
 
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/113
 * **Milestone Number:** 1
-* **Version:** 1.2
+* **Version:** 1.3
 
 Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
 
@@ -21,3 +21,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 2.         | Discord Communication Repo              | https://github.com/SpiderDAO/spiderdao_testnet/tree/main/discord_bot              | Includes SpiderDAO discord bot source.                                                             |
 | 3.         | DAO Node Testnet Docker Image          |         | Includes SpiderDAO full docker image can be deployed for testing. |
 | 4.          | Medium Article                        | N/A   | Ready to go subject to ** Parity Inc ** approval |
+| 5.          | Unit Tests                        | https://github.com/SpiderDAO/spiderdao_testnet/tree/main/tests   | Includes unit tests for both the framework and API |
