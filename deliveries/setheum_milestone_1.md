@@ -11,9 +11,12 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Substrate module: `stp258` pallet | https://github.com/Setheum-Labs/Setheum/tree/master/pallets/stp258 | The source code of The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
-| 1b. | Unit Tests: `stp258` pallet | https://github.com/Setheum-Labs/Setheum/blob/master/pallets/stp258/src/tests.rs | The unit tests for The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
-| 2.  | Substrate module: `serp_tes` pallet | https://github.com/Setheum-Labs/Setheum/tree/master/pallets/serp-tes | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
-| 2b. | Unit Tests: `serp_tes` pallet | https://github.com/Setheum-Labs/Setheum/blob/master/pallets/serp-tes/src/tests.rs| The unit tests for The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
-| 3.  | Substrate module: `serp_market` pallet | https://github.com/Setheum-Labs/Setheum/tree/master/pallets/serp-market | The source code of The SERP-Market Pallet, the Setheum Elastic Reserve Protocol - Market| 
-| 3b. | Unit Tests: `serp_market` pallet | https://github.com/Setheum-Labs/Setheum/blob/master/pallets/serp-market/src/tests.rs | The unit tests for The SERP-Market Pallet, the Setheum Elastic Reserve Protocol - Market | 
+| 1. | Substrate module: `stp258` pallet | https://github.com/Setheum-Labs/stp258/tree/v0.5.3 | The source code of The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
+| 1b. | Unit Tests: `stp258` pallet | https://github.com/Setheum-Labs/stp258/blob/v0.5.3/src/tests.rs | The unit tests for The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
+| 1c. | Test Guide: `stp258` pallet | https://github.com/Setheum-Labs/stp258/tree/v0.5.3#test--build | The test guide for The STP258 Pallet, the Setheum Tokenisation Protocol to Fiat | 
+| 2.  | Substrate module: `serp_tes` pallet | https://github.com/Setheum-Labs/serp-tes/tree/v0.5.3 | The source code of The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
+| 2b. | Unit Tests: `serp_tes` pallet | https://github.com/Setheum-Labs/serp-tes/blob/v0.5.3/src/tests.rs| The unit tests for The SERP-TES Pallet, the Setheum Elastic Reserve Protocol - Token Elasticity of Supply | 
+| 2c. | Test Guide: `serp_tes` pallet | https://github.com/Setheum-Labs/serp-tes/tree/v0.5.3#test--build | The test guide for The SERP-TES Pallet, the Setheum Tokenisation Protocol to Fiat | 
+| 3.  | Substrate module: `serp_market` pallet | hhttps://github.com/Setheum-Labs/serp-market/tree/v0.5.3 | The source code of The SERP-Market Pallet, the Setheum Elastic Reserve Protocol - Market| 
+| 3b. | Unit Tests: `serp_market` pallet | https://github.com/Setheum-Labs/serp-market/blob/v0.5.3/src/tests.rs | The unit tests for The SERP-Market Pallet, the Setheum Elastic Reserve Protocol - Market | 
+| 3c. | Test Guide: `serp_market` pallet | https://github.com/Setheum-Labs/serp-tes/tree/v0.5.3#test--build | The test guide for The SERP-Market Pallet, the Setheum Tokenisation Protocol to Fiat | 
