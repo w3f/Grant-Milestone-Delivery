@@ -17,12 +17,12 @@
 
 | **Number** | **Deliverable**        | **Link** | ** Notes **                                            |
 | ---------- | ----------------------- |--- | ------------------------------------------------------------ |
-| 0a.        | License                | | Apache License 2.0                                           |
-| 0b.        | Documentation          | | Documents containing the description of whole architecture design for NFTStore. |
+| 0a.        | License                | https://github.com/NFTT-studio/nftmart/blob/beta/LICENSE-APACHE2 | Apache License 2.0                                           |
+| 0b.        | Documentation          | https://github.com/NFTT-studio/nftmart/blob/beta/README.md | Documents containing the description of whole architecture design for NFTStore. |
 | 0c.        | Testing Guide          | | We will provide a full test suite and guide for  NFT .     |
-| 1a.        | Node Repo              | | Complete the deployment of the basic public chain  |
+| 1a.        | Node Repo              | https://github.com/NFTT-studio/nftmart | Complete the deployment of the basic public chain  |
 | 1b.        | NFTStore token         | | $NFTT Complete the design of the economic model   | 
-| 2a.        | Pallet_nft             | | Complete the development of pallet_nft and realize the ERC721 standard. [Related nft interfaces](#nft) that need to be delivered |
-| 2b.        | Pallet_store           | | Complete the development of pallet_store . [Related store interfaces](#store) that need to be delivered |
-| 3.         | Front End              | | Complete the development of the basic interactive page, the specific page can refer to: [https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT](https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT) |
+| 2a.        | Pallet_nft             | https://github.com/NFTT-studio/nftmart/blob/beta/pallets/nftmart-nft/src/lib.rs | Complete the development of pallet_nft and realize the ERC721 standard. [Related nft interfaces](#nft) that need to be delivered |
+| 2b.        | Pallet_store           | https://github.com/NFTT-studio/nftmart/blob/beta/pallets/nftmart-nft/src/lib.rs | Complete the development of pallet_store . [Related store interfaces](#store) that need to be delivered |
+| 3.         | Front End              | https://github.com/NFTT-studio/nftmart-fontend | Complete the development of the basic interactive page, the specific page can refer to: [https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT](https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT) |
 | 4.         | Docker Image           | | The NFTStore Network docker image contains the POC version running anywhere to verify the idea of the NFTStore. |
