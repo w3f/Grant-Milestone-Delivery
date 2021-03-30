@@ -3,11 +3,11 @@
 > Don't remove any of the mandatory parts presented in bold letters or as headlines!
 > Lines starting with `>`, such as this one, can be removed.
 
-- **Status:** In Progress/Accepted/Rejected
+- **Status:** Accepted
 - **PR Link:** https://github.com/w3f/Grant-Milestone-Delivery/pull/117
 - **Milestone:** 2
-- **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** Link
+- **Kusama Identity:** GtQGjMx6hdCwxh6t3zy7HLU66oKQcJgkgRxU83ExFg58sLx
+- **Previously successfully merged evaluation:** None
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- |------------- |------------- |
@@ -25,7 +25,7 @@
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/README.md)|
 | 8. | Distributing |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/releases/tag/alpha-v1.0.0) | Tested on Android emulator Pixel_XL_Api_30 | 
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/releases/tag/alpha-v1.0.0)|
-| Bonus | Chats |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/alpha-v1.0.0/src/screens/Chats.tsx) | Payment chat loads too slowly before sending transactions. The chat window properly renders received and sent transactions. “Enter amount” screen needs improvement with the remaining balance information.   (From Milestone #3) | 
+| Bonus | Chats |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/alpha-v1.0.0/src/screens/Chats.tsx) | Payment chat loads too slowly before sending transactions. The chat window properly renders received and sent transactions. “Enter amount” screen needs UX improvement, such as the addition of the remaining balance information. | 
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
@@ -34,6 +34,6 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 * Repo documentation needs more details on how to test & run the app through an Android emulator/Minor improvements in the order and formatiing of commands (such as keystore generation)
 * Probably required to bump google-services to 4.3.5, according to the Firebase documentation
-* Several UI/UX corrections would be nice: resetting the field when entering incorrect seed (in touch with the author about the improvements)
+* Several UI/UX corrections would be nice: e.g. resetting the field when entering incorrect seed (in touch with the author about the improvements)
 * Minor typos in the app
-* Loading times need to be improved (although might be a side-effect of using an emulator)
+* Loading times could be improved (although might be a side-effect of using an emulator, needs further testing and comparison)
