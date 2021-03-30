@@ -15,17 +15,17 @@
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/controller/profile/profile.go)|                                           |
 | 2. | Connect phone number/email |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/Connecting.tsx) | Both “authentication” methods (sms/email) work, however the email ended up in spam (Gmail). |  
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/controller/auth/auth.go)|
-| 3. | Push-Notification service for transaction |<ul><li>[ ] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/scanner/scanner.go) | It turns out that Push-Notifications can’t be tested easily via yarn and require an installation of additional packages. | 
+| 3. | Push-Notification service for transaction |<ul><li>[ ] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/scanner/scanner.go) | It turns out that Push-Notifications can’t be tested easily via yarn and require an installation of extra packages: this needs to be additionally described in readme's. | 
 | 4. | Backend for profile storage |<ul><li>[ ] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/tree/alpha-v1.0.0) | Profile pics are stored persistently and can be modified. |
-| 5. | Docker |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/Dockerfile) | A Docker Hub image would be convenient to have.  | 
-| 6. | Documentation |<ul><li>[x] </li></ul>| [Auth](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/AUTH.md) | Overall documentation is sufficiently detailed but needs improvement in some aspects. | 
+| 5. | Docker |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/Dockerfile) | Recommendation: a Docker Hub image might be convenient to have.  | 
+| 6. | Documentation |<ul><li>[x] </li></ul>| [Auth](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/AUTH.md) | Overall, the documentation is sufficiently detailed but needs improvement in some aspects. | 
 |    |         |<ul><li>[x] </li></ul>|[Swagger](https://api.fractapp.com/swagger/index.html)|
 |    |         |<ul><li>[x] </li></ul>|[App](https://github.com/fractapp/fractapp/blob/master/docs/index.html)|
 | 7. | Unit-testing |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/tree/master/__tests__) | Test Suites: 73 passed, 73 total; Tests: 420 passed, 420 total; Coverage corresponds to what is stated in the milestone delivery| 
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/README.md)|
 | 8. | Distributing |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/releases/tag/alpha-v1.0.0) | Tested on Android emulator Pixel_XL_Api_30 | 
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/releases/tag/alpha-v1.0.0)|
-| Bonus | Chats |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/alpha-v1.0.0/src/screens/Chats.tsx) | Payment chat loads too slowly before sending transactions. The chat window properly renders received and sent transactions. “Enter amount” screen needs UX improvement, such as the addition of the remaining balance information. | 
+| Bonus | Chats |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/alpha-v1.0.0/src/screens/Chats.tsx) | Payment chat loads too slowly before sending transactions. The chat window properly renders received and sent transactions. “Enter amount” screen needs UX improvement, such as the addition of the remaining balance information and more detailed descriptions in modals. | 
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
