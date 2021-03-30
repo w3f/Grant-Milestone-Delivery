@@ -15,8 +15,8 @@
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/controller/profile/profile.go)|                                           |
 | 2. | Connect phone number/email |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/Connecting.tsx) | Both “authentication” methods (sms/email) work, however the email ended up in spam (Gmail). |  
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/controller/auth/auth.go)|
-| 3. | Push-Notification service for transaction |<ul><li>[ ] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/scanner/scanner.go) | It turns out that Push-Notifications can’t be tested easily via yarn and require an installation of extra packages: this needs to be additionally described in readme's. | 
-| 4. | Backend for profile storage |<ul><li>[ ] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/tree/alpha-v1.0.0) | Profile pics are stored persistently and can be modified. |
+| 3. | Push-Notification service for transaction |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/scanner/scanner.go) | It turns out that Push-Notifications can’t be tested easily via yarn and require an installation of extra packages: this needs to be additionally described in readme's. | 
+| 4. | Backend for profile storage |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/tree/alpha-v1.0.0) | Profile pics are stored persistently and can be modified. |
 | 5. | Docker |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/Dockerfile) | Recommendation: a Docker Hub image might be convenient to have.  | 
 | 6. | Documentation |<ul><li>[x] </li></ul>| [Auth](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/AUTH.md) | Overall, the documentation is sufficiently detailed but needs improvement in some aspects. | 
 |    |         |<ul><li>[x] </li></ul>|[Swagger](https://api.fractapp.com/swagger/index.html)|
