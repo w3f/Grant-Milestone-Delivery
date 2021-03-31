@@ -1,7 +1,7 @@
 name: Google Sheet Update
 on:
   pull_request_target:
-    types: [opened]
+    types: [opened, synchronize]
 
 jobs:
   update_sheet:
