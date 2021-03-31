@@ -11,6 +11,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- |------------- |------------- |
+| 0. | License | <ul><li>[x] </li></ul> | [fractapp-server](https://github.com/fractapp/fractapp-server/blob/main/LICENSE), [fractapp](https://github.com/fractapp/fractapp/blob/master/LICENSE)  | License files are correct |
 | 1. | Profile |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp/blob/alpha-v1.0.0/src/screens/EditProfile.tsx)| Adding/editing profile info works properly, including changing profile pic. A couple of UX improvements for searching functionality are needed: for instance, a nickname search needs to start with an @ symbol, which is not intuitive. Also, if a user does not enter a name or a username after registration, other users will only see the avatar i.e. the name and username fields will be empty.  |  
 |    |         |<ul><li>[x] </li></ul>|[Link](https://github.com/fractapp/fractapp-server/blob/alpha-v1.0.0/controller/profile/profile.go)|                                           |
 | 2. | Connect phone number/email |<ul><li>[x] </li></ul>| [Link](https://github.com/fractapp/fractapp/blob/master/src/screens/Connecting.tsx) | Both “authentication” methods (sms/email) work, however the email ended up in spam (Gmail). |  
