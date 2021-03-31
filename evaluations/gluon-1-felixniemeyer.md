@@ -31,7 +31,6 @@ which was used for testing the delivery. It should also be checked if the softwa
 ## General Notes
 
 ### Minor requests
-- The LICENSE files in gluon-website, gluon-app, gluon-pallet are missing copyright year and owner (line 189 each). Fill it in. 
 - Rename any "p**e**llet" typo into "p**a**llet" in the grant application. 
     
 ### Other notes 
