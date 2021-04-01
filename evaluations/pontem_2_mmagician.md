@@ -9,8 +9,6 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache License 2.0 | <ul><li>[x] </li></ul> | [License move tools](https://github.com/dfinance/move-tools/blob/master/LICENSE) [License pallet](https://github.com/dfinance/sp-move/blob/master/LICENSE) [License Move VM](https://github.com/dfinance/sp-move-vm/blob/master/LICENSE) [License Move stdlib](https://github.com/pontem-network/move-stdlib/blob/master/LICENSE) | - |
-| Number | Deliverable | Specification |
-| ------------- | ------------- | ------------- |
 | 0. | WriteSets processing      | <ul><li>[x] </li></ul> | [Storage adapter](https://github.com/pontem-network/sp-move/blob/master/pallets/sp-mvm/src/storage.rs) | Implemented in M1 |
 | 1. | Events processing         | <ul><li>[x] </li></ul> | [Events implementation](https://github.com/pontem-network/sp-move/blob/master/pallets/sp-mvm/src/event.rs) [Example](https://github.com/pontem-network/sp-move/blob/master/pallets/sp-mvm/src/lib.rs#L140)| | 
 | 2. | Publish Transaction       | <ul><li>[x] </li></ul> | [Publish module implementation](https://github.com/pontem-network/sp-move/blob/master/pallets/sp-mvm/src/lib.rs#L119) | |
