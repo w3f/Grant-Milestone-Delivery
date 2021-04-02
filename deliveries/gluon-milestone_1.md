@@ -29,4 +29,4 @@
 | 2.1 | Pairing mobile UI, scan QR code to start | After the mobile app is installed, scan web pairing page to start pairing |
 | 2.2 | Mobile user profile page | After pairing, show user profile. This is the same as the WebUI user profile content |
 | 3.0 | Gluon substrate pallet: Pairing/Unpairing API | Add mobile app pub id to existing Gluon account. Pair the mobile to this user |
-| 3.1 | Gluon substrate pallet: Search API | Search user public information |
+| 3.1 | Gluon substrate pallet: Search API | Search user public information code: https://github.com/tearust/gluon-pallet/blob/aceb1766447a9ac7697e92f43cc4d0330bdfb8f2/gluon/src/lib.rs#L149  and  https://github.com/tearust/gluon-app/blob/375e37fad03ff5c08e8e56b96ec2b568f2dbd2c2/webapp/src/tea/gluon.js#L283 |
