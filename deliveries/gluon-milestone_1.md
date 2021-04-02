@@ -18,7 +18,7 @@
 | 0 | Gluon Website and Web Portal Framework | website: http://www.gluonwallet.com website <br>repo: https://github.com/tearust/gluon-website ||
 | 1 | Milestone1 feature list and test instruction | Instruction https://github.com/tearust/gluon-app/blob/milestone1/readme.md  <br>Video demo: https://www.youtube.com/watch?v=wV4Q1-wTvFE | features: Users can create Gluon accounts and pair the Gluon mobile App with the web portal. |
 | 2 | Test docker-compose | https://github.com/tearust/gluon-app/blob/main/docker-compose.yml | Please follow the instruction https://github.com/tearust/gluon-app/blob/main/readme.md to start local test server |
-| 3 | Source code on GitHub | gluon app: https://github.com/tearust/gluon-app/tree/milestone1 <br>the pellet: https://github.com/tearust/gluon-pallet/tree/milestone-1 <br>tea-layer1: https://github.com/tearust/tea-layer1/tree/milestone-1| There are two projects inside gluon-app repo. The mobile app under /mobile folder, the webapp under /webapp folder. <br>TEA-layer1 is the blockchain, it uses gluon-pellet |
+| 3 | Source code on GitHub | gluon app: https://github.com/tearust/gluon-app/tree/milestone1 <br>the pallet: https://github.com/tearust/gluon-pallet/tree/milestone-1 <br>tea-layer1: https://github.com/tearust/tea-layer1/tree/milestone-1| There are two projects inside gluon-app repo. The mobile app under /mobile folder, the webapp under /webapp folder. <br>TEA-layer1 is the blockchain, it uses gluon-pallet |
 
 | Task ID | Module name | Description |
 | ------ | ----------- | ---- |
@@ -28,5 +28,5 @@
 | 2.0 | Mobile app framework | Gluon mobile app framework. We will add features one by one |
 | 2.1 | Pairing mobile UI, scan QR code to start | After the mobile app is installed, scan web pairing page to start pairing |
 | 2.2 | Mobile user profile page | After pairing, show user profile. This is the same as the WebUI user profile content |
-| 3.0 | Gluon substrate pellet: Pairing/Unpairing API | Add mobile app pub id to existing Gluon account. Pair the mobile to this user |
-| 3.1 | Gluon substrate pellet: Search API | Search user public information |
+| 3.0 | Gluon substrate pallet: Pairing/Unpairing API | Add mobile app pub id to existing Gluon account. Pair the mobile to this user |
+| 3.1 | Gluon substrate pallet: Search API | Search user public information |
