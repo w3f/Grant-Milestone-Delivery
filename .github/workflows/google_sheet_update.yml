@@ -45,7 +45,7 @@ jobs:
         uses: ./.github/actions/validate_pr
         with:
           targetRepoOwner: "w3f"
-          targetRepo: "Grant-Milestone-Delivery"
+          targetRepo: "Open-Grants-Program"
           prLink: ${{ steps.grant_parser.outputs.contract_url }}
           author: ${{ github.event.pull_request.user.login }}
 
