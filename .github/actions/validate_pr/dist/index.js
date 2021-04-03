@@ -2190,35 +2190,47 @@ const main = async () => {
   console.log(`Author is ${author}`)
 
   const prLink = core.getInput('prLink')
+  console.log(`PR is ${prLink}`)
   const targetRepo = core.getInput('targetRepo')
+  console.log(`Repo is ${targetRepo}`)
   const targetRepoOwner = core.getInput('targetRepoOwner')
+  console.log(`Owner is ${targetRepoOwner}`)
 
-  const prNumberPattern = /(?<=pulls\/)\d*/g
+  const prNumberPattern = /(?<=pull\/)\d*/g
 
-  const prNumber = prLink.match(prNumberPattern)[0]
+  const prNumber = prLink.match(prNumberPattern)
+  if(!prNumber || prNumber.length < 1) {
+    core.setOutput('isValid', false)
+    throw `Error parsing application PR link (${prLink}).`
+  } 
+  
+  prNumber = prNumber[0]
   console.log(`PR number is ${prNumber}`)
-
   var client = github.client();
 
   var ghpr = client.pr(`${targetRepoOwner}/${targetRepo}`, prNumber)
 
   console.log("Getting PR info...")
-  const res = await ghpr.infoAsync();
-  const prData = res[0];
-  // await ghpr.infoAsync();
+  // Wait for the response
+  const prData = await ghpr.infoAsync();
+  // res is (data, error)
+  // const prData = res[0];
   console.log(`Got PR info as ${prData}`)
 
+  // Making sure that the PR was merged
   if ( !prData.merged ) {
-    // Making sure that the PR was merged
     core.setOutput('isValid', false)
+    throw `Application PR is not yet approved.`
+//       core.setOutput('isValid', false)
+  } 
+  
+  const originalPrAuthor = prData.user.login
+  // Making sure it's the same user
+  if (originalPrAuthor !== author) {
+    core.setOutput('isValid', false)
+    throw `Only author of application PR can submit milestone PRs.`
   } else {
-    const originalPrAuthor = prData.user.login
-    // Making sure it's the same user
-    if (originalPrAuthor !== author) {
-      core.setOutput('isValid', false)
-    } else {
-      core.setOutput('isValid', true)
-    }
+    core.setOutput('isValid', true)
   }
 }
 
@@ -34072,7 +34084,7 @@ module.exports = {"$id":"beforeRequest.json#","$schema":"http://json-schema.org/
 /* 821 */
 /***/ (function(module) {
 
-module.exports = {"name":"octonode","version":"0.10.0","author":"Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (http://pksunkara.github.com)","description":"nodejs wrapper for github v3 api","main":"./lib/octonode","repository":"pksunkara/octonode","keywords":["wrapper","api","v3","github"],"scripts":{"test":"npm run lib && vows --spec test/auth/index.js","lib":"coffee -c -o lib src"},"dependencies":{"bluebird":"^3.5.0","deep-extend":"^0.6.0","randomstring":"^1.1.5","request":"^2.72.0"},"devDependencies":{"coffeescript":"^1.12.7","nock":"^13.0.5","vows":"^0.8.2"},"engines":{"node":">0.4.11"},"license":"MIT"};
+module.exports = {"_args":[["octonode@0.10.0","/home/sebastian/work/w3f/code/open-grants/Grant-Milestone-Delivery/.github/actions/validate_pr"]],"_from":"octonode@0.10.0","_id":"octonode@0.10.0","_inBundle":false,"_integrity":"sha512-XnB9zEK8hWYsVaoq8G/RnNOTSl+kwi0lSx4DEqjxtKc6PkkiT5ZiIUufcjtDQ0pZJsVpwWhUd6ZOhpoIVBOAwA==","_location":"/octonode","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"octonode@0.10.0","name":"octonode","escapedName":"octonode","rawSpec":"0.10.0","saveSpec":null,"fetchSpec":"0.10.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/octonode/-/octonode-0.10.0.tgz","_spec":"0.10.0","_where":"/home/sebastian/work/w3f/code/open-grants/Grant-Milestone-Delivery/.github/actions/validate_pr","author":{"name":"Pavan Kumar Sunkara","email":"pavan.sss1991@gmail.com","url":"http://pksunkara.github.com"},"bugs":{"url":"https://github.com/pksunkara/octonode/issues"},"dependencies":{"bluebird":"^3.5.0","deep-extend":"^0.6.0","randomstring":"^1.1.5","request":"^2.72.0"},"description":"nodejs wrapper for github v3 api","devDependencies":{"coffeescript":"^1.12.7","nock":"^13.0.5","vows":"^0.8.2"},"engines":{"node":">0.4.11"},"homepage":"https://github.com/pksunkara/octonode#readme","keywords":["wrapper","api","v3","github"],"license":"MIT","main":"./lib/octonode","name":"octonode","repository":{"type":"git","url":"git+https://github.com/pksunkara/octonode.git"},"scripts":{"lib":"coffee -c -o lib src","test":"npm run lib && vows --spec test/auth/index.js"},"version":"0.10.0"};
 
 /***/ }),
 /* 822 */,
