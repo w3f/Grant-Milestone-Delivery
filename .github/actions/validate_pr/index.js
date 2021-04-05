@@ -22,7 +22,7 @@ const main = async () => {
   const prNumberPattern = /(?<=pull\/)\d*/g
 
   const prNumber = prLink.match(prNumberPattern)
-  if(!prNumber) {
+  if(!prNumber || prNumber.length < 1) {
     core.setOutput('isValid', false)
     throw `Error parsing application PR link (${prLink}).`
   } 
@@ -35,9 +35,9 @@ const main = async () => {
 
   console.log("Getting PR info...")
   // Wait for the response
-  const res = await ghpr.infoAsync();
+  const prData = await ghpr.infoAsync();
   // res is (data, error)
-  const prData = res[0];
+  // const prData = res[0];
   console.log(`Got PR info as ${prData}`)
 
   // Making sure that the PR was merged
