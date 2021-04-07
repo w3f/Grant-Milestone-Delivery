@@ -15,11 +15,12 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1.a. | We will implement methods to work with asset pools: add liquidity.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L394 |  |
-| 1.b. | We will implement methods to work with asset pools: remove liquidity.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L655 |  |
-| 2. | We will implement methods to exchange assets within pools. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L570 |  |
+| 1.a. | We will implement methods to work with asset pools: add liquidity.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L400 |  | 
+| 1.b. | We will implement methods to work with asset pools: remove liquidity.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L675 |  |
+| 2. | We will implement methods to exchange assets within pools. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L576 |  |
 | 3. | We will implement liquidity superfluidity: assets locked inside Curve liquidity pools may be further used in various lending protocols across the Polkadot ecosystem. |  | Any runtime that successfully integrated Equilibrium Curve Amm Pallet is able to generate LP tokens using underlying asset implementation. |
-| 4. | We will implement a mechanism to reward liquidity providers with LP tokens.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L609 | LP tokens represent balances supplied to the protocol. Users earn interest from exchange fees through the LP token's exchange rate appreciation when LP tokens increases in value relative to underlying assets. |
+| 4. | We will implement a mechanism to reward liquidity providers with LP tokens.  | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L617 | LP tokens represent balances supplied to the protocol. Users earn interest from exchange fees through the LP token's exchange rate appreciation when LP tokens increases in value relative to underlying assets. |
 | 5. | The code will have complete unit-test coverage to ensure functionality and robustness. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/tests.rs |  |
 | 6. | We will publish the code in the Equilibrium’s public GitHub repository. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm |  |
 | 7. | We will provide detailed technical documentation describing pallet logic, storage, interfaces, subscriptions. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs | See rustocs and comments throughout entire file. |
+
