@@ -9,14 +9,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | https://github.com/oxydev/SubsCrypt-ink/blob/main/LICENSE | |
-| 1. | Contract Implementation | we will implement the contract and deploy it to a test net. | [PR with suggestions & fixes](https://github.com/oxydev/SubsCrypt-ink/pull/13) |
+| 1. | Contract Implementation | <ul><li>[x] </li></ul> | [PR with suggestions & fixes](https://github.com/oxydev/SubsCrypt-ink/pull/13) |
 | 1.1 | Contract code | <ul><li>[x] </li></ul> | https://github.com/oxydev/SubsCrypt-ink/blob/main/src/lib.rs | |
 | 1.2 | High-level API | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/Tech/Contract/Api | |
 | 1.3 | Documentation | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/ | [PR with typo fixes](https://github.com/oxydev/SubsCrypt-docs/pull/1) |
 | 1.4 | Testing Guide | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/Tech/Contract/test | |
 | 2. | Article | <ul><li>[x] </li></ul> | The documentation ^ works fine for now | | 
 | 3. | Design Front-End component | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/Tech/Front_end/design | | 
-| 4. | white-paper | <ul><li>[x] </li></ul> | ttps://github.com/oxydev/SubsCrypt-docs/blob/master/SubsCrypt-White-Paper.pdf | |
+| 4. | white-paper | <ul><li>[x] </li></ul> | https://github.com/oxydev/SubsCrypt-docs/blob/master/SubsCrypt-White-Paper.pdf | |
 | 5. | Polkadot Standards Proposals (PSPs) | <ul><li>[x] </li></ul> | https://github.com/w3f/PSPs/pull/12 | |
 
 ## General Notes
