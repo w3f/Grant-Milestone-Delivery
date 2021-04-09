@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | https://github.com/oxydev/SubsCrypt-ink/blob/main/LICENSE | |
-| 1. | Contract Implementation | <ul><li>[x] </li></ul> | [PR with suggestions & fixes](https://github.com/oxydev/SubsCrypt-ink/pull/13) |
+| 1. | Contract Implementation | <ul><li>[x] </li></ul> | | [PR with suggestions & fixes](https://github.com/oxydev/SubsCrypt-ink/pull/13) |
 | 1.1 | Contract code | <ul><li>[x] </li></ul> | https://github.com/oxydev/SubsCrypt-ink/blob/main/src/lib.rs | |
 | 1.2 | High-level API | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/Tech/Contract/Api | |
 | 1.3 | Documentation | <ul><li>[x] </li></ul> | https://oxydev.github.io/SubsCrypt-docs/#/ | [PR with typo fixes](https://github.com/oxydev/SubsCrypt-docs/pull/1) |
