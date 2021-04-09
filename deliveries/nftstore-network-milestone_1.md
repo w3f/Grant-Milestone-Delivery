@@ -18,10 +18,10 @@
 | **Number** | **Deliverable**        | **Link** | ** Notes **                                            |
 | ---------- | ----------------------- |--- | ------------------------------------------------------------ |
 | 0a.        | License                | https://github.com/NFTT-studio/nftmart/blob/beta/LICENSE-APACHE2 | Apache License 2.0                                           |
-| 0b.        | Documentation          | https://github.com/NFTT-studio/nftmart/blob/beta/README.md | Documents containing the description of whole architecture design for NFTStore. |
-| 0c.        | Testing Guide          | https://github.com/NFTT-studio/nftmart/blob/beta/README.md | We will provide a full test suite and guide for  NFT .     |
-| 1a.        | Node Repo              | https://github.com/NFTT-studio/nftmart | Complete the deployment of the basic public chain  |
-| 2a.        | Pallet_nft             | https://github.com/NFTT-studio/nftmart/blob/beta/pallets/nftmart-nft/src/lib.rs | Complete the development of pallet_nft and realize the ERC721 standard. [Related nft interfaces](#nft) that need to be delivered |
-| 2b.        | Pallet_store           | https://github.com/NFTT-studio/nftmart/blob/beta/pallets/nftmart-nft/src/lib.rs | Complete the development of pallet_store . [Related store interfaces](#store) that need to be delivered |
-| 3.         | Front End              | https://github.com/NFTT-studio/nftmart-fontend | Complete the development of the basic interactive page, the specific page can refer to: [https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT](https://www.figma.com/file/o3N4WbUFlBPX8gXpAl4iBN/NFT) |
+| 0b.        | Documentation          | https://github.com/NFTT-studio/nftmart/blob/beta/README.md | Documents containing the description of whole architecture  design for NFTStore. |
+| 0c.        | Testing Guide          | https://github.com/NFTT-studio/nftmart/blob/beta/README.md#use-nodejs-to-access-nftmart-blockchain | We will provide a full test suite and guide for  NFT .     |
+| 1a.        | Node Repo              | https://github.com/NFTT-studio/nftmart | Substrate node source code   |
+| 2.        | Pallet_nft             | https://github.com/NFTT-studio/nftmart/tree/beta/pallets/nftmart-nft | Complete the development of pallet_nft and realize the ERC721 standard, include order and trade |
+| 2a.        | Pallet_nft             | https://github.com/NFTT-studio/nftmart/tree/beta/pallets/nftmart-nft | Complete the development of pallet_nft and realize the ERC721 standard, include order and trade |
+| 3.         | Front End              | https://github.com/NFTT-studio/nftmart-fontend | Complete the development of the basic interactive page |
 | 4.         | Docker Image           | https://github.com/NFTT-studio/nftmart/blob/beta/README.md#build-and-run-a-testing-docker-environment-locally | The NFTStore Network docker image contains the POC version running anywhere to verify the idea of the NFTStore. |
