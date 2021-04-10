@@ -5,9 +5,9 @@
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/blob/master/applications/konomi.md
 * **Milestone Number:** 1
 
-
 | Number | Deliverable | Link | Notes |
-| 1 | Documentation | https://github.com/konomi-network/konomi-node/blob/master/README.md |------------- |
+| ------------- | ------------- | ------------- |------------- |
+| 1 | Documentation | https://github.com/konomi-network/konomi-node/blob/master/README.md | ... |
 | 2. | Substrate Module: Pool lending module |https://github.com/konomi-network/konomi-node| ...| 
 | 3.  | Front End |https://github.com/konomi-network/lending-demo| ...|
 | 4. | Tests | https://github.com/konomi-network/konomi-node/blob/master/README.md | ...| 
