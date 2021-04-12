@@ -10,10 +10,12 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Assets will be handled using a new assets trait. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L197 |  | 
-| 2. | We will implement a pool storage structure for handling different asset pools with different parameters. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L89 |  |
-| 3. | We will implement methods to set up custom asset pools. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L123 |  |
-| 4.a. | We will implement a method to iteratively calculate Curve’s invariant D non-overflowing integer operations. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L272 |  |
-| 4.b. | We will implement a method to iteratively calculate points on the bonding curve in non-overflowing integer operations. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/pallets/equilibrium-curve-amm/src/lib.rs#L380 |  |
-| 5. | The code will have complete unit-test coverage to ensure functionality and robustness | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/master/reports/tarpaulin-report.html |  |
+| 1. | Assets will be handled using a new assets trait. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/pallets/equilibrium-curve-amm/src/lib.rs#L1506 |  | 
+| 2. | We will implement a pool storage structure for handling different asset pools with different parameters. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/pallets/equilibrium-curve-amm/src/lib.rs#L1543 |  |
+| 3. | We will implement methods to set up custom asset pools. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/pallets/equilibrium-curve-amm/src/lib.rs#L332 |  |
+| 4.a. | We will implement a method to iteratively calculate Curve’s invariant D non-overflowing integer operations. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/pallets/equilibrium-curve-amm/src/lib.rs#L1129 |  |
+| 4.b. | We will implement a method to iteratively calculate points on the bonding curve in non-overflowing integer operations. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/pallets/equilibrium-curve-amm/src/lib.rs#L1198 |  |
+| 5. | The code will have complete unit-test coverage to ensure functionality and robustness | https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/reports/tarpaulin-report.html |  |
 | 6. | We will publish the code in the Equilibrium’s public GitHub repository. | https://github.com/equilibrium-eosdt/equilibrium-curve-amm |  |
+
+
