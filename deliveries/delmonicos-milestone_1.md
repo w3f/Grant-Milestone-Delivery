@@ -12,7 +12,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| 0a. | License | | Apache 2.0 / MIT / Unlicense |  
+| 0a. | License | https://github.com/Delmonicos/charger-node/blob/main/LICENSE | Unlicense |  
 | 0b. | Documentation | https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone1/testing-guide.md | We will provide both inline documentation of the code and a basic tutorial that explains how a user can (for example) spin up one of our Substrate nodes. Once the node is up, it will be possible to send test transactions that will show how the new functionality works. |
 | 0c. | Testing Guide | https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone1/testing-guide.md | The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests | 
 | 0d. | Article/Tutorial | | We will write an article or tutorial that explains the work done as part of the grant. |
