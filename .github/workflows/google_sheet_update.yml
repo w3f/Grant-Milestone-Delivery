@@ -22,19 +22,19 @@ jobs:
         uses: actions/checkout@master
         if: ${{ env.ACT }}
 
-      # - name: 'local testing parse files'
-      #   if: ${{ env.ACT }}
-      #   id: grant_parser
-      #   uses: mmagician/read-file-action@v2
-      #   with:
-      #     path: 'deliveries/.delivery_testing.md'
-
-      - name: 'parse files'
+      - name: 'parse milestone'
         if: ${{ !env.ACT }}
-        id: grant_parser
+        id: milestone_parser
         uses: w3f-community/read-file-action@v2.11
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+
+      - name: 'parse contract'
+        if: ${{ !env.ACT }}
+        id: grant_parser
+        uses: mmagician/read-file-action@v1
+        with:
+          path: "${{ steps.milestone_parser.outputs.pr_link }}"
 
       - name: Get current date
         id: date
@@ -46,7 +46,7 @@ jobs:
         with:
           targetRepoOwner: "w3f"
           targetRepo: "Open-Grants-Program"
-          prLink: ${{ steps.grant_parser.outputs.contract_url }}
+          prLink: ${{ steps.milestone_parser.outputs.pr_link }}
           author: ${{ github.event.pull_request.user.login }}
 
       - name: Get last row
@@ -76,7 +76,7 @@ jobs:
                   "data": [[
                     "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
                     "${{ steps.grant_parser.outputs.project_name }}", 
-                    "${{ steps.grant_parser.outputs.milestone_number }}", 
+                    "${{ steps.milestone_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
