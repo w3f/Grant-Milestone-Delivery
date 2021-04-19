@@ -25,12 +25,12 @@ jobs:
       - name: 'parse milestone'
         if: ${{ !env.ACT }}
         id: milestone_parser
-        uses: w3f-community/read-file-action@v2.11
+        uses: w3f-community/read-file-action@v2.12
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
       - name: 'parse contract'
-        if: ${{ !env.ACT }}
+        if: ${{ !env.ACT }} && success() }}
         id: grant_parser
         uses: mmagician/read-file-action@v1
         with:
