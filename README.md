@@ -1,6 +1,6 @@
 # Web3 Grant Milestone Delivery <!-- omit in toc -->
 
-**:loudspeaker: Important:** This repository is only for submitting finished milestones for the [Web3 Foundation Open Grants Program](https://github.com/w3f/Open-Grants-Program).
+> **:loudspeaker:** This repository is only for submitting finished milestones for the [Web3 Foundation Open Grants Program](https://github.com/w3f/Open-Grants-Program).
 
 ---
 
