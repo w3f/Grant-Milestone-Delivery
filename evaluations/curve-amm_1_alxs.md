@@ -7,7 +7,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | <ul><li>[x]</li></ul> | [LICENSE](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/LICENSE) | Apache 2.0
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/LICENSE) | Apache 2.0
 | 0b. | Documentation | <ul><li>[x]</li></ul> | | Inline documentation and basic README provided, integration guide not yet but can be delivered with M2
 | 0ca. | Testing | <ul><li>[x]</li></ul> | [Tarpaulin Report](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/blob/milestone-2/reports/tarpaulin-report.html) | 85% line coverage
 | 0cb. | Testing Guide | <ul><li>[x]</li></ul> | [Instructions](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/tree/milestone-2#tests)
