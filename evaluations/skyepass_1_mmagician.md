@@ -11,8 +11,8 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [vault](https://github.com/skyekiwi/skyepass-vault/blob/master/LICENSE.txt), [ux](https://github.com/skyekiwi/skyepass-ux/blob/master/LICENSE.txt) | |
 | 0b. | Documentations | <ul><li>[x] </li></ul> | [instructions on how to run](https://github.com/skyekiwi/skyepass-vault/blob/master/README.md) | |
 | 1.  | Smart Contract | <ul><li>[x] </li></ul> | [smart contract](https://github.com/skyekiwi/skyepass-vault/blob/master/contracts/lib.rs) | |
-| 2.  | Client Side PoC | 1. [Local data storage schema and adapters with lowDB](https://github.com/skyekiwi/skyepass-vault/blob/master/client/db.ts)<br/>2. [IPFS](https://github.com/skyekiwi/skyepass-vault/blob/master/client/ipfs.ts)<br/>3. [ECIES encryption & decryption](https://github.com/skyekiwi/skyepass-vault/blob/master/client/metadata.ts)<br/>4. [Shamir secret sharing](https://github.com/skyekiwi/skyepass-vault/blob/master/client/metadata.ts#L71)<br/>5. [integration test](https://github.com/skyekiwi/skyepass-vault/blob/master/tests/skyepassvault.test.ts#L25)<br/>6. [Unit testing](https://github.com/skyekiwi/skyepass-vault/blob/master/tests/skyepassvault.test.ts) | |
-| 3.  | Client Side UI/UX | <ul><li>[x] </li></ul> | [app]((https://github.com/skyekiwi/skyepass-ux/tree/master) | | 
+| 2.  | Client Side PoC | <ul><li>[x] </li></ul> | 1. [Local data storage schema and adapters with lowDB](https://github.com/skyekiwi/skyepass-vault/blob/master/client/db.ts)<br/>2. [IPFS](https://github.com/skyekiwi/skyepass-vault/blob/master/client/ipfs.ts)<br/>3. [ECIES encryption & decryption](https://github.com/skyekiwi/skyepass-vault/blob/master/client/metadata.ts)<br/>4. [Shamir secret sharing](https://github.com/skyekiwi/skyepass-vault/blob/master/client/metadata.ts#L71)<br/>5. [integration test](https://github.com/skyekiwi/skyepass-vault/blob/master/tests/skyepassvault.test.ts#L25)<br/>6. [Unit testing](https://github.com/skyekiwi/skyepass-vault/blob/master/tests/skyepassvault.test.ts) | |
+| 3.  | Client Side UI/UX | <ul><li>[x] </li></ul> | [app](https://github.com/skyekiwi/skyepass-ux/tree/master) | | 
 
 ## General Notes
 
