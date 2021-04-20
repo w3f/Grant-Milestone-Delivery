@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In Progress
+* **Status:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/225
 * **Milestone:** 1
 * **Previously successfully merged evaluation:** All by alxs
