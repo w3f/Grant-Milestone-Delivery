@@ -19,4 +19,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 3.  | xpmrl-tokens pallet | https://github.com/XPredictMarket/NodePredict/tree/master/pallets/tokens | Asset creation and management module.| 
 | 4.  | xpmrl-traits pallet | https://github.com/XPredictMarket/NodePredict/tree/master/pallets/traits |Module interface constraint features. | 
 | 5.  | xpmrl-utils pallet | https://github.com/XPredictMarket/NodePredict/tree/master/pallets/utils | Macroinstruction used in the project.| 
-| 6.  | Articles/Tutorials | https://docs.google.com/document/d/1lW0NzIf45IKt3Z1Ggx-ZsKVRKI_4sSpmcDEuloACSig/edit | X predict market DAPP Test Guideline | 
+| 6.  | Articles/Tutorials | https://docs.google.com/document/d/1lW0NzIf45IKt3Z1Ggx-ZsKVRKI_4sSpmcDEuloACSig/edit?usp=sharing | X predict market DAPP Test Guideline | 
