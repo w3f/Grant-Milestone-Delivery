@@ -3,7 +3,7 @@
 
 **The [invoice `form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone - BTC Address changed.**  
 
-* **PR Link:** [original ] https://github.com/w3f/Open-Grants-Program/pull/110
+* **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/110
 
 * **Milestone Number:** 1
 
