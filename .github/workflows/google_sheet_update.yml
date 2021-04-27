@@ -8,33 +8,73 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'get all added files in the PR'
-        if: ${{ !env.ACT }}
         id: 'files'
-        uses: mmagician/get-changed-files@master
+        uses: mmagician/get-changed-files@v2
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout
-        uses: actions/checkout@master
-        if: ${{ !env.ACT }}
+      - name: 'Checkout delivery'
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Local Testing Checkout
-        uses: actions/checkout@master
-        if: ${{ env.ACT }}
-
+      
       - name: 'parse milestone'
-        if: ${{ !env.ACT }}
         id: milestone_parser
         uses: w3f-community/read-file-action@v2.12
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
-      - name: 'parse contract'
-        if: ${{ !env.ACT }} && success() }}
-        id: grant_parser
-        uses: mmagician/read-file-action@v1
+      - name: Get contract PR number
+        uses: actions/github-script@0.9.0
+        id: get_application_pr_number
+        env:
+          link: ${{ steps.milestone_parser.outputs.pr_link }}
+        with: 
+          script: |
+            let contract_pr = process.env.link.split('/').pop()
+            console.log({contract_pr});
+            core.setOutput('contract_pr', contract_pr);
+
+      - run: "echo contract PR: ${{ steps.get_application_pr_number.outputs.contract_pr }}"
+
+      - name: 'Get contract PR data'
+        if: ${{ success() }}
+        uses: octokit/request-action@v2.x
+        id: get_application_pr
         with:
-          path: "${{ steps.milestone_parser.outputs.pr_link }}"
+          route: GET /repos/{owner}/{repo}/pulls/{pull_number}
+          owner: w3f
+          repo: Open-Grants-Program
+          pull_number: ${{ steps.get_application_pr_number.outputs.contract_pr }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get contract PR number
+        uses: actions/github-script@0.9.0
+        id: get_application_pr_number
+        env:
+          link: ${{ steps.milestone_parser.outputs.pr_link }}
+        with: 
+          script: |
+            let contract_pr = process.env.link.split('/').pop()
+            console.log({contract_pr});
+            core.setOutput('contract_pr', contract_pr);
+
+      - run: "echo merge_commit_sha: ${{ JSON.parse(steps.get_application_pr.outputs.data).merge_commit_sha }}"
+
+      - name: 'Checkout application'
+        id: get_application_data
+        uses: actions/checkout@master
+        with:
+          repository: 'w3f/Open-Grants-Program'
+          ref: ${{steps.get_application_pr.outputs.data.merge_commit_sha}}
+
+      # - name: 'parse contract'
+      #   if: ${{ success() }}
+      #   id: grant_parser
+      #   uses: mmagician/read-file-action@v1
+      #   with:
+      #     path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
       - name: Get current date
         id: date
@@ -42,7 +82,7 @@ jobs:
 
       - name: 'check author validity'
         id: 'validate_pr'
-        uses: ./.github/actions/validate_pr
+        uses: w3f-community/validate_pr@master
         with:
           targetRepoOwner: "w3f"
           targetRepo: "Open-Grants-Program"
@@ -67,7 +107,7 @@ jobs:
         uses: jroehl/gsheet.action@v1.0.0 # you can specify '@release' to always have the latest changes
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
-          commands: | # list of commands, specified as a valid JSON string
+          commands: | # list of commands, specified as a valid JSON string. Second entry in 'data' should be project name.
             [
               { 
                 "command": "appendData", 
@@ -75,13 +115,12 @@ jobs:
                 { 
                   "data": [[
                     "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
-                    "${{ steps.grant_parser.outputs.project_name }}", 
+                    "", 
                     "${{ steps.milestone_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
-                    "", 
-                    "", 
+                    "${{ steps.milestone_parser.outputs.pr_link }}", 
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
