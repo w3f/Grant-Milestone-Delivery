@@ -60,8 +60,6 @@ jobs:
             console.log({contract_pr});
             core.setOutput('contract_pr', contract_pr);
 
-      - run: "echo merge_commit_sha: ${{ JSON.parse(steps.get_application_pr.outputs.data).merge_commit_sha }}"
-
       - name: 'Checkout application'
         id: get_application_data
         uses: actions/checkout@master
