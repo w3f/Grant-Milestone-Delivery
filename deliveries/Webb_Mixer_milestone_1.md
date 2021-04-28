@@ -8,7 +8,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://github.com/webb-tools/anon, https://github.com/webb-tools/bulletproof-gadgets/ | Apache 2.0 / MIT / Unlicense |
-| 0b. | Documentation | https://github.com/webb-tools/anon, https://github.com/webb-tools/bulletproof-gadgets/ | We will provide both inline documentation of the code and a basic tutorial that explains how a user can (for example) spin up one of our Substrate nodes. Once the node is up, it will be possible to send test transactions that will show how the new functionality works. |
+| 0b. | Documentation | https://github.com/webb-tools/anon, https://github.com/webb-tools/bulletproof-gadgets/, https://docs.rs/pallet-mixer/3.0.0/pallet_mixer/, https://docs.rs/pallet-merkle/3.0.0/pallet_merkle/ | We will provide both inline documentation of the code and a basic tutorial that explains how a user can (for example) spin up one of our Substrate nodes. Once the node is up, it will be possible to send test transactions that will show how the new functionality works. |
 | 0c. | Testing Guide | https://github.com/webb-tools/anon, https://github.com/webb-tools/bulletproof-gadgets/ | The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests | 
 | 0d. | Article/Tutorial | We will write an article or tutorial that explains the work done as part of the grant. 
 | 1. | Substrate module: SparseMerkleTree (SMT) | https://github.com/webb-tools/anon | We will create a Sparse Merkle Tree module that will support a standard interface for interacting with Merkle Trees |  
