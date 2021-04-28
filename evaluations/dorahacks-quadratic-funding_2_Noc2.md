@@ -12,7 +12,7 @@
 | 0b. | Testing Guide | <ul><li>[x] </li></ul> | [hackerlink-test-guide.md](https://github.com/zhangjiannan/QFgrant/blob/main/doc/hackerlink-test-guide.md) |  |
 | 1. | Connecting to PolkadotJS extension | <ul><li>[ ] </li></ul> | | No Polkadot.js integration |
 | 2. | HackerLink Integration | <ul><li>[ ] </li></ul> | [HackerLink](https://qf.tophacker.com/en/Grant?type=Polkadot) | Demo online |
-| 3. | Test | <ul><li>[] </li></ul> |  |  |
+| 3. | Test | <ul><li>[ ] </li></ul> |  |  |
 
 ## General Notes
 
