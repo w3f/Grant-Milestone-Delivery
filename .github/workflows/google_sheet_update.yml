@@ -31,9 +31,10 @@ jobs:
           link: ${{ steps.milestone_parser.outputs.pr_link }}
         with: 
           script: |
-            let contract_pr = process.env.link.split('/').pop()
-            console.log({contract_pr});
-            core.setOutput('contract_pr', contract_pr);
+            var uri_pattern = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
+            let contract_pr = process.env.link.match(uri_pattern);
+            console.log(contract_pr);
+            core.setOutput('contract_pr', contract_pr[0]);
 
       - run: "echo contract PR: ${{ steps.get_application_pr_number.outputs.contract_pr }}"
 
