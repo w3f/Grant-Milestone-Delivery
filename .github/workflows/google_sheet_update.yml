@@ -51,7 +51,7 @@ jobs:
 
       - name: Get contract PR number
         uses: actions/github-script@0.9.0
-        id: get_application_pr_number
+        id: get_contract_pr_number
         env:
           link: ${{ steps.milestone_parser.outputs.pr_link }}
         with: 
