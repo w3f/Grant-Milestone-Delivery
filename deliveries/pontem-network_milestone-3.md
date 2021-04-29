@@ -7,7 +7,7 @@
  
 See how to try result of work on milestone #3 in our [Pontem network](https://docs.pontem.network/02.-getting-started/getting_started) official documentation.
  
-After the current 3rd milestone we are going to continue work on the Move pallet, we still have a lot of things to do: updates, refactoring, adoption, launch of our own Parathread.
+After the current 3rd milestone we are going to continue work on the Move pallet, we still have a lot of things to do: update the Move VM and its toolchain, develop tools for popular IDEs, launch our own Parathread, constantly refactor and develop new features.
  
 Use the latest tags and if there are no no tags in the repository just use master branch.
  
@@ -19,7 +19,7 @@ Use the latest tags and if there are no no tags in the repository just use maste
 | 4. | Documentation | [Commits](https://github.com/pontem-network/docs/commits/master) | We implemented large documentation and described as much as possible, we also continued to increase the amount of materials with more examples, tutorials, etc. See [docs](https://docs.pontem.network). |
 | 5. | Deployment of prod env | [Commit #1](https://github.com/pontem-network/sp-move/commit/755cc9bc2268f13f1b3e30a495cb1bd9feca0459) [Commit #2](https://github.com/pontem-network/sp-move/commit/d071378f719d427f687c2f3fa44a7ee123a8af93) [Testnet](https://docs.pontem.network/02.-getting-started/getting_started#connection-to-network) | We deployed our own private network as testnet, little modified docker files. Currently you can connect to testnet via UI or CLI using the address `wss://testnet.pontem.network/wss`. |
 | 6. | Disassembler adoption | [Commit #1](https://github.com/pontem-network/move-tools/commit/e269763405e2f0b4e629ed03da706dd8c7d3b7b9#diff-ad94159425a4e644ecb2cd3b265d3c1c176245797327099cacc1ff52047dd204) [Commit #2](https://github.com/pontem-network/move-tools/commit/1eb933958926401c452d9c5831099671e2ca1c3f#diff-ad94159425a4e644ecb2cd3b265d3c1c176245797327099cacc1ff52047dd204) | As we adopted Move Tools for Polkadot in previous milestones, here we just updated the disassembler with the right dialect and made small documentation. |
-| 7. | Unit-tests | TODO | TODO |
+| 7. | Unit-tests | [Tests #1](https://github.com/pontem-network/sp-move/commit/cce333b8808cd9bcf46c047d86ffbd841ef1eeea) [Tests #2](https://github.com/pontem-network/sp-move/commit/e981ab99544e1dee3e845e251f11f999cd540bb9) [Tests #3](https://github.com/pontem-network/sp-move/commit/49d6f1d8598aca86bf7e59f309a078cd573fcc0e) [Tests #4](https://github.com/pontem-network/sp-move/commit/b87042df7f439080bc941cf3bdfcbffbbec645ca) | We increase test coverage time to time because of active development and trying to cover new features, we also in-progress with benchmark tests. |
  
 During this milestone we also moved everything to Substrate version 3, written large documentation, up testnet, so anyone can connect and try without local build, implemented CLI, started migration on a new version of Diem VM that is currently in progress.
  
