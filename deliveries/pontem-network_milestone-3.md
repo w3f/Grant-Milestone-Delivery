@@ -28,10 +28,12 @@ Previous time you suggested:
 > Could you allow specifying output filename for dove ct, for creating multiple Txs each with a different input. The workaround is to create multiple scripts, changing method names, but that's not very elegant. Just a suggestion 🙂
  
 [Done](https://github.com/pontem-network/move-tools/commit/69629b08b100f05a739e46cda2e447b64851b50f):
- 
-   dove ct 'emit(100)' --output emit_100.mv
-   dove ct 'emit(200)' -f emit.move --output emit_200.mv
- 
+
+```sh 
+dove ct 'emit(100)' --output emit_100.mv
+dove ct 'emit(200)' -f emit.move --output emit_200.mv
+```
+
 There are also updates to move-tools, like packages (because the deployment of stdlib is not painful anymore), support of `{{sender}}`, just FYI.
  
 * [Move VM](https://github.com/pontem-network/sp-move-vm)
