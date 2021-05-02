@@ -18,6 +18,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 [![contributors](https://img.shields.io/github/contributors/darkfriend77/SubstrateNetApi)](https://github.com/darkfriend77/SubstrateNetApi/graphs/contributors)
 
 **Milestone 2** (tag): https://github.com/dotmog/SubstrateNetApi/releases/tag/v1.0.3 
+
 **Milestone 2.1 (Changes Requested)** (tag): tbd
 
 | Number | Deliverable | Link | Notes
