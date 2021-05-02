@@ -38,4 +38,4 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 https://ci.appveyor.com/project/darkfriend77/substratenetapi
 
-Sidenote: We are currently refactoring our closed source gameEngine to a domain driven design, we will reapply for a follow up grant which will contain the API and an open sourced GameEngine, ready to use in unity as an free unity asset.
+Sidenote: We are currently refactoring our closed source GameEngine to a domain driven design, we will reapply for a follow up grant which will contain the API and an open sourced GameEngine, ready to use in unity as an free unity asset.
