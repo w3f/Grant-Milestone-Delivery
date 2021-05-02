@@ -30,7 +30,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 2. | Subscriptions | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/983b77efa4460eae413c52fe284c31123bd5a6c7/SubstrateNetApi/Modules/State.cs#L100) | Implement basic subscriptions | 
 | 2a. | Subscriptions | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/SubstrateNetApi/SubscriptionListener.cs) | Implement generic Callback for handling multiple subscriptions with subscriptionId |
 | 2b. | Subscriptions | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/983b77efa4460eae413c52fe284c31123bd5a6c7/SubstrateNetApi/Modules/State.cs#L49) | Added storage subscriptions, with paging |
-| 2c. | Unit Tests | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/983b77efa4460eae413c52fe284c31123bd5a6c7/SubstrateNetWalletTest/WalletTest.cs#L259) | Create unit test for subscriptions |
+| 2c. | Unit Tests | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/SubstrateNetApiTest/Subscription/SubscriptionTest.cs) | Create unit test for subscriptions |
 | 3. | Refactoring | done | Refactor type converters to be generic and reusable inheriting from IType, BaseType & Struct Type |
 | 4. | Pallet | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/9bea9a4dacda64d83d7dc9606f6a4e5c9af9fd2b/SubstrateNetApi/Modules/Author.cs#L40) | DotMogPallet add base functionality, MogwaiStruct, AccountConfig & BreedType | 
 | 5. | Pallet | [LINK](https://github.com/dotmog/substrate/tree/dotmog_v3.0.0/bin/node/pallets/dotmog/src) | DotMogPallet add pairing algorithm and MogwaiBios |
