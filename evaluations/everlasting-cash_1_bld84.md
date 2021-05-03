@@ -24,4 +24,4 @@ I am having problems running the ELP-Runtime-Node, so I couldn't deploy and run 
 
 The whitepaper is well explained but there is some space for improvement adding some diagrams explaining the ELC protocol and adding a "References" section. Also there are some minor mistakes with the format PDF format.
 
-Ont the other hand the authors are using the Exchange smart contract from [Patractlabs/store-contracts](https://github.com/patractlabs/store-contracts) at [contracts/pool/Cargo.toml](https://github.com/CycanTech/ELC/blob/main/contracts/pool/Cargo.toml) line 21 without any attribution to the original authors.
+Ont the other hand the authors are using the Exchange smart contract from [Patractlabs/store-contracts](https://github.com/patractlabs/store-contracts) at [contracts/pool/Cargo.toml](https://github.com/CycanTech/ELC/blob/main/contracts/pool/Cargo.toml) line 21. The attribution of the authority is in the testing guide and maybe it should be moved to the README.
