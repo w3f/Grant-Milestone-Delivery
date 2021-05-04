@@ -7,7 +7,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | ? |
+| 0a. | License | Apache 2.0 | Placed in each module |
 | 0b. | Documentation | [Node Template Spartan Readme](https://github.com/subspace/substrate/tree/poc/bin/node-template-spartan#readme) | Each module also has its own docs |
 | 0c. | Testing Guide | [From Readme](https://github.com/subspace/substrate/tree/poc/bin/node-template-spartan#run-tests) | Spartan, PoC, and Farmer all have tests |
 | 0d. | Article | [Article](https://medium.com/@jeremiahwagstaff/bringing-poc-consensus-to-substrate-d49d49a912bd) | Draft medium article |
@@ -15,7 +15,7 @@
 | 2. | `sp_consensus_PoC` | [Module Link](https://github.com/subspace/substrate/tree/poc/primitives/consensus/poc) |  |
 | 3. | `sc_consensus_PoC` | [Module Link](https://github.com/subspace/substrate/tree/poc/client/consensus/poc) |  |
 | 4. | `sp_consensus_spartan` | [Module Link](https://github.com/subspace/substrate/tree/poc/primitives/consensus/spartan) | Wrapper for [`spartan-codec`](https://github.com/subspace/spartan-codec)  | 
-| 5. | `sc_consensus_spartan` | None | This is basicaly the functionality provided by `spartan-farmer` and proved unessecary. |
+| 5. | `sc_consensus_spartan` | None | This is essentially the functionality provided by `spartan-farmer` and proved unessecary. |
 | 6. | `pallet_spartan` | [Module Link](https://github.com/subspace/substrate/tree/poc/frame/spartan) | |
 | 7. | `spartan_farmer` | [Module Link](https://github.com/subspace/spartan-farmer) |  |
 | 8. | `spartan_client` | [Module Link](https://github.com/subspace/substrate/tree/poc/bin/node-template-spartan) |  | 
