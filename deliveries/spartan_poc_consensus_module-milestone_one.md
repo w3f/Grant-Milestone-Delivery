@@ -14,7 +14,7 @@
 | 1. | Design Document | [From `pallet_spartan`](https://github.com/subspace/substrate/blob/poc/frame/spartan/design.md) | |
 | 2. | `sp_consensus_PoC` | [Module Link](https://github.com/subspace/substrate/tree/poc/primitives/consensus/poc) |  |
 | 3. | `sc_consensus_PoC` | [Module Link](https://github.com/subspace/substrate/tree/poc/client/consensus/poc) |  |
-| 4. | `sp_consensus_spartan` | [Module Link](https://github.com/subspace/substrate/tree/poc/primitives/consensus/spartan | Wrapper for [`spartan-codec`](https://github.com/subspace/spartan-codec)  | 
+| 4. | `sp_consensus_spartan` | [Module Link](https://github.com/subspace/substrate/tree/poc/primitives/consensus/spartan) | Wrapper for [`spartan-codec`](https://github.com/subspace/spartan-codec)  | 
 | 5. | `sc_consensus_spartan` | None | This is basicaly the functionality provided by `spartan-farmer` and proved unessecary. |
 | 6. | `pallet_spartan` | [Module Link](https://github.com/subspace/substrate/tree/poc/frame/spartan) | |
 | 7. | `spartan_farmer` | [Module Link](https://github.com/subspace/spartan-farmer) |  |
