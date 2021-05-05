@@ -13,7 +13,7 @@
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | as above | 
 | 0d. | Article/Tutorial | <ul><li>[x] </li></ul> | as above |
 | 1. | Substrate module: Identity | <ul><li>[x] </li></ul> | [DID pallet](https://github.com/Delmonicos/pallet-did/) | [PR created](https://github.com/substrate-developer-hub/pallet-did/pull/15) to update the pallet to substrate v3 |
-| 2. | Substrate module: Membership | <ul><li>[] </li></ul> |  
+| 2. | Substrate module: Membership | <ul><li>[x] </li></ul> | [registar module](https://github.com/Delmonicos/charger-node/tree/main/pallets/registrar) | Registrar module developed instead, as the membership module is designed for one org only |
 | 3. | Substrate module: Contracts | <ul><li>[x] </li></ul> | [integration into runtime](https://github.com/Delmonicos/charger-node/blob/main/runtime/Cargo.toml#L62) |
 | 4. | Substrate module: Charger | <ul><li>[x] </li></ul> | [charger session module](https://github.com/Delmonicos/charger-node/tree/main/pallets/charge-session) |
 | 5. | Substrate chain | <ul><li>[x] </li></ul> | [runtime](https://github.com/Delmonicos/charger-node/tree/main/runtime) |
@@ -21,10 +21,26 @@
 
 ## General Notes
 
-###
-Minor requirements changes: registrar vs. membership pallet
+Overall a good simple delivery, most of the pallets for M1 have only basic functionality.
 
-###
-Extra:
+A good suite of unit tests.
+
+### Naming
+
+UserConsent struct in two modules:
+
+`pallet-user-consent`
+
+map of hash -> (user_id, charger_id)
+`pallet-session-payment`
+
+map of AccountId -> (timestamp, iban, bic_code) 
+
+### Minor requirements changes
+
+Registrar vs. membership pallet used. No amendement deemed necessary.
+
+### Extra
 
 [PR](https://github.com/substrate-developer-hub/pallet-did/pull/15) to update the DID pallet to substrate 3.0. Still in review.
+
