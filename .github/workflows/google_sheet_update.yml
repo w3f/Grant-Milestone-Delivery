@@ -31,24 +31,12 @@ jobs:
           link: ${{ steps.milestone_parser.outputs.pr_link }}
         with: 
           script: |
-            var uri_pattern = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
+            var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
             let contract_pr = process.env.link.match(uri_pattern);
             console.log(contract_pr);
             core.setOutput('contract_pr', contract_pr[0]);
 
       - run: "echo contract PR: ${{ steps.get_application_pr_number.outputs.contract_pr }}"
-
-      - name: 'Get contract PR data'
-        if: ${{ success() }}
-        uses: octokit/request-action@v2.x
-        id: get_application_pr
-        with:
-          route: GET /repos/{owner}/{repo}/pulls/{pull_number}
-          owner: w3f
-          repo: Open-Grants-Program
-          pull_number: ${{ steps.get_application_pr_number.outputs.contract_pr }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get contract PR number
         uses: actions/github-script@0.9.0
@@ -67,6 +55,18 @@ jobs:
         with:
           repository: 'w3f/Open-Grants-Program'
           ref: ${{steps.get_application_pr.outputs.data.merge_commit_sha}}
+
+      - name: 'Get contract PR data'
+        if: ${{ success() }}
+        uses: octokit/request-action@v2.x
+        id: get_application_pr
+        with:
+          route: GET /repos/{owner}/{repo}/pulls/{pull_number}
+          owner: w3f
+          repo: Open-Grants-Program
+          pull_number: ${{ steps.get_contract_pr_number.outputs.contract_pr }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: 'parse contract'
       #   if: ${{ success() }}
