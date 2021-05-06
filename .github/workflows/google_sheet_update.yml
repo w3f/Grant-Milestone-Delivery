@@ -24,51 +24,34 @@ jobs:
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
-      - name: Get contract PR number
+      - name: Get application PR link
         uses: actions/github-script@0.9.0
-        id: get_application_pr_number
+        id: get_application_pr
         env:
           link: ${{ steps.milestone_parser.outputs.pr_link }}
         with: 
           script: |
             var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
-            let contract_pr = process.env.link.match(uri_pattern);
-            console.log(contract_pr);
-            core.setOutput('contract_pr', contract_pr[0]);
+            let application_pr = process.env.link.match(uri_pattern);
+            console.log({application_pr});
+            core.setOutput('application_pr', application_pr[0]);
+            let application_pr_number = application_pr[0].split('/').pop()
+            console.log({application_pr_number});
+            core.setOutput('application_pr_number', new String(application_pr_number));
 
-      - run: "echo contract PR: ${{ steps.get_application_pr_number.outputs.contract_pr }}"
+      - run: "echo application PR: ${{ steps.get_application_pr.outputs.application_pr }}"
+      - run: "echo application PR number: ${{ steps.get_application_pr.outputs.application_pr_number }}"
 
-      - name: Get contract PR number
-        uses: actions/github-script@0.9.0
-        id: get_contract_pr_number
-        env:
-          link: ${{ steps.milestone_parser.outputs.pr_link }}
-        with: 
-          script: |
-            let contract_pr = process.env.link.split('/').pop()
-            console.log({contract_pr});
-            core.setOutput('contract_pr', contract_pr);
-
-      - name: 'Checkout application'
-        id: get_application_data
-        uses: actions/checkout@master
-        with:
-          repository: 'w3f/Open-Grants-Program'
-          ref: ${{steps.get_application_pr.outputs.data.merge_commit_sha}}
-
-      - name: 'Get contract PR data'
+      - name: 'Get application PR data'
         if: ${{ success() }}
         uses: octokit/request-action@v2.x
-        id: get_application_pr
+        id: get_application_pr_data
         with:
-          route: GET /repos/{owner}/{repo}/pulls/{pull_number}
-          owner: w3f
-          repo: Open-Grants-Program
-          pull_number: ${{ steps.get_contract_pr_number.outputs.contract_pr }}
+          route: GET /repos/w3f/Open-Grants-Program/pulls/${{ steps.get_application_pr.outputs.application_pr_number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: 'parse contract'
+      # - name: 'parse application'
       #   if: ${{ success() }}
       #   id: grant_parser
       #   uses: mmagician/read-file-action@v1
@@ -89,7 +72,6 @@ jobs:
           author: ${{ github.event.pull_request.user.login }}
 
       - name: Get last row
-        if: github.event.pull_request.merged == true
         id: get_last_row
         uses: mmagician/gsheet.action@v0.1.0
         with:
@@ -119,7 +101,9 @@ jobs:
                     "",
                     "Not Yet", 
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
-                    "${{ steps.milestone_parser.outputs.pr_link }}", 
+                    "${{ steps.get_application_pr_data.outputs.application_pr }}",
+                    "${{ github.event.pull_request.html_url }}",
+                    "", 
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
