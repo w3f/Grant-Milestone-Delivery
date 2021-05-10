@@ -3,7 +3,7 @@
 - **Status:** In Progress
 - **PR Link:** Spartan POC Consensus Module: [Accepted W3F Grant App PR](https://github.com/w3f/Open-Grants-Program/pull/357).
 - **Milestone:** 1
-- **Kusama Identity:** t.b.a.
+- **Kusama Identity:** GqVuCLydpKFFx9w3CbBF1nD8xWxtA1UM5npCZxPVoZq7CjQ
 - **Previously successfully merged evaluation:** None
 
 | Number | Deliverable            | Accepted              | Link                                                                                                                                                    | Evaluation Notes                                                                               |
