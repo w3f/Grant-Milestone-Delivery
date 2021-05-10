@@ -15,13 +15,6 @@
 | 1. | Integrate game client with polkadot.js for wallet management and signing txs | <ul><li>[x] </li></ul> | [gh](https://github.com/WiktorStarczewski/newomega.polkadot/blob/98a8dbb88ff0cf662fafd794f5d5ddb20cee701c/newomega_client/src/facades/ContractFacade.js#L1) | |
 
 
-| 0. | Apache License 2.0 | <ul><li>[ ] </li></ul> | license | —— |
-| 1. | ... | <ul><li>[ ] </li></ul> | link | —— |
-| 2. | ... | <ul><li>[ ] </li></ul> | link | —— |
-| 3. | ... | <ul><li>[ ] </li></ul> | link | —— |
-| X. | ... | <ul><li>[ ] </li></ul> | link | —— |
-
-
 ## General Notes
 
--
+Good documentation and setup instructions, good code, good visuals.
