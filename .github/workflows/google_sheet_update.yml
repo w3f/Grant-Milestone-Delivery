@@ -105,7 +105,6 @@ jobs:
                     "${{ steps.get_application_pr_data.outputs.application_pr }}",
                     "${{ github.event.pull_request.html_url }}",
                     "", 
-                    "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
                   "worksheetTitle": "Evaluation", 
