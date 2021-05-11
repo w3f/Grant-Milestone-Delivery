@@ -23,23 +23,4 @@
 
 ## General Notes
 
-Good work, let me explain a room for improvements. In the context of whitepaper, I am not sure whether there is a need to mention about Bitcoin performance but what is more important, when I was reading the whitepaper I have read many general terms like:
-- "providing unlimited possibilities for distributed mobile applications."
-- "SubGame is a public chain development team based on the Polkadot parachain"
-- "It combines public cloud and private cloud hybrid storage technology"
-- "blockchain storage space"
-- "Polkadot can be said to be a creation public chain that has reached a new level of technical strength. It was developed by the Web3 Foundation."
-- "After the smart contract developed on the SubGame chain is processed by AI cloud computing, it can be perfectly compatible with other public chains to achieve high chain-to-chain collaboration."
-
-I am really afraid when some software engineer claims that: "will deliver unlimited possibilities", maybe this statement replace with more specific description like "we will deliver SDK in order to give software engineers possibility to integrate with" and try to propose (even a draft) of interfaces, the interface is not be carved in stone and everyone understand it. Regarding "based on the Polkadot parachain", I think that the chain is based on Substrate Framework, not "parachain", in case you have a plan to became a parachain would be interesting what is your strategy to become one? Combining public and private cloud, what does it really mean, maybe more specific what are you going to deliver, same with "blockchain storage space". Maybe there is a room to use already existing solutions like IPFS, I suggest to look at [SubSocial](https://app.subsocial.network/) they are going to use IPFS. Web3 Foundation is an organization for research, strictly speaking Substrate framework was developed by Parity Technologies company and "Polkadot" is the name of relay chain as a whole network. Could you describe more about "combining" smart contracts and AI, I know those word but what does it mean in practical sense? Comment regarding "Data on Chain" section, I do not think that blockchain technology per se is a good/cheap/efficient way to keep data, maybe research IPFS solution? And a comment regarding: "it can be perfectly compatible with other public chains to achieve high chain-to-chain collaboration" could you describe how are you going to deliver it in more specific way? In the whitepaper there are pictures of mobile phones, are you going to deliver mobile version, if so how are you going to integrate wallet on mobile?
-
-Explanation of RPC in the white paper is described as "RPC refers to remote procedure call, that is to say, two servers A and B, one application is deployed on server A, and you want to call the functions/methods provided by the application on server B.", this is not exact explanation of RPC.
-
-In the whitepaper is written "After smart contract is processed by AI cloud computing, it can be perfectly compatible with other public chains to achieve high chain-to-chain collaboration.", could you elaborate more on that? ;-)
-
-In the whitepaper is written "When the dependency between two modules is higher, their coupling is higher, which is called high coupling." - are you sure of that?
-
-I think that description of the game in the form of GIVEN-WHEN-THEN convention is really, really good idea. In the source code I have found two types of comments, the first one is in English, the [second](https://github.com/SubGame-Network/subgame-network/blob/master/pallets/gametemplates-guess-hash/src/lib.rs) one is Taiwanese, I think that the comments should be unified in English language.
-Regarding documenting a source code, I recommend to use [Rustdoc](https://doc.rust-lang.org/rustdoc/index.html) even for the most crucial functions I know that the Rome wasn't built in a day but let start to document a source code in Rust-like way.
-
-I just want to ask about staging environment, there is any? If not, are you going to run the node with working frontend for public usage? I suggest also to improve bibliography in the whitepaper, some [tips on that](https://guides.library.cornell.edu/annotatedbibliography).
+The progress was made, when I was trying to open a new version of the whitepaper I saw the error, I am not able to open the whitepaper at all. Still lack of Rustdoc. Some comments I have included in comments section above, really curios why have you exposed public all functions but not `DrawMap`, [link](https://github.com/SubGame-Network/subgame-network/blob/master/pallets/gamecenter/src/lib.rs#L52).
