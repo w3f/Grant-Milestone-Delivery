@@ -24,7 +24,7 @@ Overall good delivery with an extensive documentation, which is definitely neede
 
 Quick fix provided by the team for a [dependancy issue](https://github.com/pontem-network/tools/commit/1ea5ee56ffd65c796b78ab8001a1e33209c85e05).
 
-Units for the native PONT token interactions were not very intuituve. This was pointed out and addressed in a [doc update]().
+Units for the native PONT token interactions were not very intuituve. This was pointed out and addressed in a [doc update](https://github.com/pontem-network/docs/commit/f536ee194944465909abef1808bfbaa409823599).
 
 Perhaps it would be nice to see an intergration test that automates the whole testing process (manually it can be quite tedious), e.g.:
 - deploy all std modules
