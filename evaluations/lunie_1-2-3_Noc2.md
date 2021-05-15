@@ -2,7 +2,7 @@
 
 * **Acceptance:** Accepted
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/20
-* **Milestone:** 1
+* **Milestone:** 1+2+3
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
 * **Previously successfully merged evaluation:** All evaluations by Noc2
 
