@@ -16,7 +16,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE](https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE) | | 
-| 0b. | Documentation | [https://subgame.guanfantech.com/api/assets/whitePaper/en/%E6%8A%80%E8%A1%93%E7%99%BD%E7%9A%AE%E6%9B%B8_%E8%8B%B1%E6%96%87_v7.pdf](https://subgame.guanfantech.com/api/assets/whitePaper/en/%E6%8A%80%E8%A1%93%E7%99%BD%E7%9A%AE%E6%9B%B8_%E8%8B%B1%E6%96%87_v7.pdf) | |
+| 0b. | Documentation | [https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf](https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf) | |
 | 0c. | Testing Guide | [https://github.com/SubGame-Network/subgame-network/tree/master/pallets](https://github.com/SubGame-Network/subgame-network/tree/master/pallets) | |
 | 1a. | SubGame Node | [https://github.com/SubGame-Network/subgame-network/tree/master/node](https://github.com/SubGame-Network/subgame-network/tree/master/node) | |
 | 2a. | pallet-chips | [https://github.com/SubGame-Network/subgame-network/tree/master/pallets/chips](https://github.com/SubGame-Network/subgame-network/tree/master/pallets/chips) | |
