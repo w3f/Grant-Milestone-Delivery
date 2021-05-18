@@ -100,10 +100,10 @@ jobs:
                     "${{ steps.milestone_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
+                    "3", 
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ steps.get_application_pr_data.outputs.application_pr }}",
                     "${{ github.event.pull_request.html_url }}",
-                    "", 
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
