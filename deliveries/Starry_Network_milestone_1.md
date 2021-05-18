@@ -20,7 +20,7 @@
 | 0b. | Testing Guide |[https://github.com/Starry-Network/starry_node#test](https://github.com/Starry-Network/starry_node#test)|  |
 | 0d. | Article/Tutorial |[✨Introducing the Starry Protocol](https://starry.substack.com/p/introducing-the-starry-protocol)| change to use substack. |
 | 1. | Node Repo |[https://github.com/Starry-Network/starry_node](https://github.com/Starry-Network/starry_node)|  |
-| 2a. | Pallet_SubNFT |[https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub](https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub)|  |
+| 2a. | Pallet_SubNFT |[https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub](https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub)| This relies on [pallet_nft](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-nft) and [pallet_graph](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-graph). |
 | 2b. | Pallet_NFTDAO |[https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-nftdao](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-nftdao)|  |
 | 2c. | Pallet_EX |[https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-exchange](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-exchange)|  |
 | 3. | Front End |[https://github.com/Starry-Network/app](https://github.com/Starry-Network/app)|  |
