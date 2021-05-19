@@ -8,8 +8,8 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 1. | License | <ul><li>[X]</li></ul> | [https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE](https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE) | Looks good to me | 
-| 2. | Documentation | <ul><li>[X]</li></ul> | [https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf](https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf) | Looks good to me |
+| 1. | License | <ul><li>[X] </li></ul> | [https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE](https://github.com/SubGame-Network/subgame-network/blob/master/LICENSE) | Looks good to me | 
+| 2. | Documentation | <ul><li>[X] </li></ul> | [https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf](https://subgame.org/api/assets/whitePaper/en/White%20Paper_v9.pdf) | Looks good to me |
 | 3. | Testing Guide | <ul><li>[X]</li></ul> | [https://github.com/SubGame-Network/subgame-network/tree/master/pallets](https://github.com/SubGame-Network/subgame-network/tree/master/pallets) | Looks good to me |
 | 4. | SubGame Node | <ul><li>[X]</li></ul> | [https://github.com/SubGame-Network/subgame-network/tree/master/node](https://github.com/SubGame-Network/subgame-network/tree/master/node) | Readable source code, cool [optimization](https://github.com/SubGame-Network/subgame-network/blob/master/node/src/service.rs#L238) |
 | 5. | pallet-chips | <ul><li>[X]</li></ul> | [https://github.com/SubGame-Network/subgame-network/tree/master/pallets/chips](https://github.com/SubGame-Network/subgame-network/tree/master/pallets/chips) | Looks good to me |
