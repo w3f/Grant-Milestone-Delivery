@@ -23,4 +23,4 @@
 
 ## General Notes
 
-Lack of Rustdoc although do not think that it is crucial but nice to have in future development. I have made also a PR with a [configuration script](https://github.com/SubGame-Network/subgame-network/pull/1/files) to make life easier for a new developers in a Substrate space, appreciate to accept and/or suggest an improvement.
+Lack of Rustdoc although do not think that it is crucial but nice to have in future development. I have made also a PR with a [configuration script](https://github.com/SubGame-Network/subgame-network/pull/1/files) to make life easier for a new developers in a Substrate space, appreciate to accept and/or suggest an improvement. Please consider also to improve warnings from `cargo clippy`.
