@@ -23,4 +23,4 @@
 
 ## General Notes
 
-Lack of Rustdoc although do not think that it is crucial but nice to have in future development. Some comment I have included in comments section above, really curios why have you exposed public all functions but not `DrawMap`, [link](https://github.com/SubGame-Network/subgame-network/blob/master/pallets/gamecenter/src/lib.rs#L52). I have made also a PR with a [configuration script](https://github.com/SubGame-Network/subgame-network/pull/1/files) to make life easier for a new developers in a Substrate space, appreciate to accept and/or suggest an improvement.
+Lack of Rustdoc although do not think that it is crucial but nice to have in future development. I have made also a PR with a [configuration script](https://github.com/SubGame-Network/subgame-network/pull/1/files) to make life easier for a new developers in a Substrate space, appreciate to accept and/or suggest an improvement.
