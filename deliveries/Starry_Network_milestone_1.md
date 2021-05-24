@@ -16,8 +16,8 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License |[Apache License](https://github.com/Starry-Network/starry_node/blob/master/LICENSE)|  |
-| 0c. | Documentation |[https://github.com/Starry-Network/starry_node#pallets-documentation](https://github.com/Starry-Network/starry_node#pallets-documentation)|  |
-| 0b. | Testing Guide |[https://github.com/Starry-Network/starry_node#test](https://github.com/Starry-Network/starry_node#test)|  |
+| 0b. | Documentation |[https://github.com/Starry-Network/starry_node#pallets-documentation](https://github.com/Starry-Network/starry_node#pallets-documentation)|  |
+| 0c. | Testing Guide |[https://github.com/Starry-Network/starry_node#test](https://github.com/Starry-Network/starry_node#test)|  |
 | 0d. | Article/Tutorial |[✨Introducing the Starry Protocol](https://starry.substack.com/p/introducing-the-starry-protocol)| change to use substack. |
 | 1. | Node Repo |[https://github.com/Starry-Network/starry_node](https://github.com/Starry-Network/starry_node)|  |
 | 2a. | Pallet_SubNFT |[https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub](https://github.com/Starry-Network/starry_node/blob/master/pallets/pallet-sub)| This relies on [pallet_nft(can batch mint/transfer)](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-nft) and [pallet_graph(Can combine different tokens)](https://github.com/Starry-Network/starry_node/tree/master/pallets/pallet-graph). |
