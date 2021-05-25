@@ -27,7 +27,7 @@
 | 3.0 | Mobile app | Social recovery if initiated from phone | this has been done in webapp. Not mobile app. Because Recovery pallet doesn't have 2nd account (mobile account) support. |
 | 3.1 | Mobile app | Scan QR code to confirm friends recovery request |  this has been done in webapp. Not mobile app. Because Recovery pallet doesn't have 2nd account (mobile account) support.  |
 | 4.0 | Gluon TeaLeaf | Suspend old P2 P3 | The tx name is **test_transfer_all_asset** with [source-code](https://github.com/tearust/gluon-pallet/blob/milestone-2/gluon/src/lib.rs). when transfer will check it need suspend or not. |
-| 4.1 | Layer1 | Suspend old account activity during the recovering process | The tx name is **test_transfer_all_asset** with [source-code](https://github.com/tearust/gluon-pallet/blob/milestone-2/gluon/src/lib.rs). when transfer will check it need suspend or not. |
+| 4.1 | Layer1 | Suspend old account activity during the recovering process | The tx name is **test_transfer_all_asset** with [source-code](https://github.com/tearust/gluon-pallet/blob/milestone-2/gluon/src/lib.rs#L900-L902). when transfer will check it need suspend or not. more details to get from [https://github.com/tearust/gluon-app/blob/milestone-2/readme.md#asset-suspend](https://github.com/tearust/gluon-app/blob/milestone-2/readme.md#asset-suspend) | 
 | 4.2 | Gluon TeaLeaf | Generate a new account to accept assets | User generate the new account on the Polkadot Browser Extension. Copy and paste to the Web UI for recovery process. |
 | 5.0 | Layer1 | Verify all social recovery confirmation, transfer assets to new account | The tx name is **test_transfer_all_asset** with [source-code](https://github.com/tearust/gluon-pallet/blob/milestone-2/gluon/src/lib.rs). |
 
