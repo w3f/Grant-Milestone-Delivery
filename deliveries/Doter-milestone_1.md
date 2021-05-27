@@ -10,6 +10,6 @@
 | 1. | License | https://github.com/ChainBridgeNetworkTeam/Doter/blob/master/LICENSE | Apache License 2.0 |
 | 1. | Source code | https://github.com/ChainBridgeNetworkTeam/Doter | Doter has been launched on [google extension store](https://chrome.google.com/webstore/detail/doter/abamjefkidngfegdjbmffdmbgjgpaobf) |
 | 2.  | Unit Tests |https://github.com/ChainBridgeNetworkTeam/Doter/blob/master/README.md| At project root directory, type `yarn test` in command line to run test case |
-| 3. | Demo video: General module | https://youtu.be/C-0Tap93JdM | screen recording for specific feature |
-| 4. | Demo video: Injection and signature | https://youtu.be/44bz0zS-EFU | screen recording for specific feature |
+| 3. | Demo video: General module | https://youtu.be/pKK5rHJgxVw | screen recording for General module |
+| 4. | Demo video: Injection and signature | https://youtu.be/FP9yrLoOQ8k | screen recording for Injection and signature |
 
