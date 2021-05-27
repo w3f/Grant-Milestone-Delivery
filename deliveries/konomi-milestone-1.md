@@ -7,8 +7,6 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1 | Documentation | https://github.com/konomi-network/konomi-node/blob/master/README.md | ... |
-| 2. | Substrate Module: Pool lending module |https://github.com/konomi-network/konomi-node| Node site is https://app.konomi.tech/nodes | 
-| 3.  | Front End |https://github.com/konomi-network/lending-demo| Hosted site is https://app.konomi.tech.|
-| 4. | Tests | https://github.com/konomi-network/konomi-node/blob/master/README.md | ...| 
-| 5. | Docker | https://github.com/konomi-network/konomi-node/blob/master/README.md | ...| 
+| 1 | Documentation | https://github.com/konomi-network/cumulus/blob/develop/README.md | ... |
+| 2. | Substrate Module: Pool lending module |https://github.com/konomi-network/cumulus/blob/develop/README.md| Node site is https://dev.konomi.tech/nodes | 
+| 3.  | Front End |https://github.com/konomi-network/lending-demo| Hosted site is https://dev.konomi.tech.|
