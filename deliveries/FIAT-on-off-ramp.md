@@ -2,6 +2,7 @@
 
 * Name: FIAT on-off-ramp [FIAT-on-off-ramp.md](https://github.com/w3f/Open-Grants-Program/blob/master/applications/FIAT-on-off-ramp.md)
 * Milestone 1 of 3 
+* Link to the initial [pull request 348](https://github.com/w3f/Open-Grants-Program/pull/348)
 
 
 ### Milestone 1 Implement FIAT Rest interface
