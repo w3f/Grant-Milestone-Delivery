@@ -15,6 +15,6 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Substrate module: Stable Swap Substrate module |[compute code](https://github.com/nutsfinance/stable-asset/blob/master/pallets/stable-asset/src/lib.rs#L360-L446) [swap code](https://github.com/nutsfinance/stable-asset/blob/master/pallets/stable-asset/src/lib.rs#L482-L517)||
-| 2.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/master/pallets/stable-asset/src/tests.rs)||
-| 3.  | Docker |[code](https://github.com/nutsfinance/stable-asset/blob/master/Dockerfile)||
+| 1. | Substrate module: Stable Swap Substrate module |[compute code](https://github.com/nutsfinance/stable-asset/blob/c441c511bb4b403fe54346a58f66d52947c78d1b/pallets/stable-asset/src/lib.rs#L415-L513) [swap code](https://github.com/nutsfinance/stable-asset/blob/c441c511bb4b403fe54346a58f66d52947c78d1b/pallets/stable-asset/src/lib.rs#L571-L629)||
+| 2.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/c441c511bb4b403fe54346a58f66d52947c78d1b/pallets/stable-asset/src/tests.rs)||
+| 3.  | Docker |[code](https://github.com/nutsfinance/stable-asset/blob/c441c511bb4b403fe54346a58f66d52947c78d1b/Dockerfile)||
