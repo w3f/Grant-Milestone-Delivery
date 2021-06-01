@@ -33,7 +33,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 1c. | Wallet | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/3d2a4f42260baac8961bf887db2cb9f6e1a3df77/SubstrateNetWallet/Wallet.cs#L269) | Add events so game can register to changes, like mogwai creation, or extrinsic finalization |
 | 2. | Examples | [LINK](https://github.com/dotmog/Unity3DExample) | Provide basic examples of Unity3D application using the SubstrateNetApi |
 | 2a. | Examples | [LINK](https://github.com/dotmog/Unity3DExample/blob/master/Assets/Scripts/MetaDataCrawler.cs#L11) | Simple connection example | 
-| 2b. | Examples | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/3d2a4f42260baac8961bf887db2cb9f6e1a3df77/SubstrateNetWalletTest/WalletTest.cs#L175) | Small wallet example |
+| 2b. | Examples | [LINK](https://github.com/dotmog/SubstrateUnityWalletSimple) | Small wallet example |
 | 3. | Documentation | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/README.md) | Add documentation to the usage of the SubstrateNetApi |
 
 https://ci.appveyor.com/project/darkfriend77/substratenetapi
