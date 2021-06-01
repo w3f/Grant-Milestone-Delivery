@@ -17,7 +17,7 @@
 | 4. | `sp_consensus_spartan` | [Module Link](https://github.com/subspace/substrate/tree/w3f-spartan-ms-1/primitives/consensus/spartan) | Wrapper for [`spartan-codec`](https://github.com/subspace/spartan-codec)  | 
 | 5. | `sc_consensus_spartan` | None | This is essentially the functionality provided by `spartan-farmer` and proved unessecary. |
 | 6. | `pallet_spartan` | [Module Link](https://github.com/subspace/substrate/tree/w3f-spartan-ms-1/frame/spartan) | |
-| 7. | `spartan_farmer` | [Module Link](https://github.com/subspace/spartan-farmer/tree/w3f-spartan-ms-1.1) |  |
+| 7. | `spartan_farmer` | [Module Link](https://github.com/subspace/spartan-farmer/tree/w3f-spartan-ms-1.2) |  |
 | 8. | `spartan_client` | [Module Link](https://github.com/subspace/substrate/blob/w3f-spartan-ms-1/bin/node-template-spartan) |  | 
 | 9. | Docker | [From Readme](https://github.com/subspace/substrate/blob/w3f-spartan-ms-1/bin/node-template-spartan#run-with-docker) |  |
 
