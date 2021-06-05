@@ -34,7 +34,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | 2c. | Unit Tests | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/origin/SubstrateNetApiTest/Subscription/SubscriptionTest.cs) | Create unit test for subscriptions |
 | 3. | Refactoring | done | Refactor type converters to be generic and reusable inheriting from IType, BaseType & Struct Type |
 | 4. | Pallet | [LINK](https://github.com/dotmog/SubstrateNetApi/blob/9bea9a4dacda64d83d7dc9606f6a4e5c9af9fd2b/SubstrateNetApi/Modules/Author.cs#L40) | DotMogPallet add base functionality, MogwaiStruct, AccountConfig & BreedType | 
-| 5. | Pallet | [LINK](https://github.com/dotmog/substrate/tree/dotmog_v3.0.0/bin/node/pallets/dotmog/src) | DotMogPallet add pairing algorithm and MogwaiBios |
+| 5. | Pallet | [LINK](https://github.com/dotmog/pallet-dotmog) | DotMogPallet add pairing algorithm and MogwaiBios |
 | 6. | Update | [LINK](https://github.com/dotmog/substrate/commit/92a898c5f9f92d59cf10980f9f1623c70ffef39d#diff-572d688bd26b0a2a2fa69c889d99057d0fa1c21dcdaa4e345f5733b61a90336d) | Update to Substrate v3.0/0.9 – Apollo 14, adjust types |
 
 https://ci.appveyor.com/project/darkfriend77/substratenetapi
