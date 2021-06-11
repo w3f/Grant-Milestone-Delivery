@@ -6,8 +6,8 @@
 - **Status:** In Progress
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/190
 - **Milestone:** 1
-- **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** Link
+- **Kusama Identity:** J1GUA7rLTkDkx79DsgtN6KScuSjnu2NcFy8R45KsWrmpBhh
+- **Previously successfully merged evaluation:** 
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
