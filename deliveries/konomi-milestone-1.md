@@ -8,5 +8,5 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1 | Documentation | https://github.com/konomi-network/cumulus/blob/develop/README.md | ... |
-| 2. | Substrate Module: Pool lending module |https://github.com/konomi-network/cumulus/blob/develop/README.md| Locations: https://github.com/konomi-network/cumulus/tree/develop/polkadot-parachains/pallets/floating-rate-lend. Node site is https://dev.konomi.tech/nodes | 
-| 3.  | Front End |https://github.com/konomi-network/lending-demo| Hosted site is https://dev.konomi.tech.|
+| 2. | Substrate Module: Pool lending module |https://github.com/konomi-network/cumulus/blob/develop/README.md| Locations: https://github.com/konomi-network/cumulus/tree/develop/polkadot-parachains/pallets/floating-rate-lend. Node site is https://parachain.konomi.tech/parachain | 
+| 3.  | Front End |https://github.com/konomi-network/lending-demo| Hosted site is https://parachain.konomi.tech.|
