@@ -17,4 +17,4 @@
 
 Great delivery overall, especially taking into account the milestone's moderate price. Communication was at times patchy and the feedback provided sometimes left unaddressed, both of which improved when switching to instant communication.
 
-As mentioned above tests are rather minimal and documentation could be greatly improved. The evaluation revealted plenty of bugs, many of which could most likely have been avoided with a more comprehensive test suite.
+As mentioned above tests are rather minimal and documentation could be greatly improved. The evaluation revealed plenty of bugs, many of which could most likely have been avoided with a more comprehensive test suite.
