@@ -8,33 +8,55 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'get all added files in the PR'
-        if: ${{ !env.ACT }}
         id: 'files'
-        uses: mmagician/get-changed-files@master
+        uses: mmagician/get-changed-files@v2
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout
-        uses: actions/checkout@master
-        if: ${{ !env.ACT }}
+      - name: 'Checkout delivery'
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Local Testing Checkout
-        uses: actions/checkout@master
-        if: ${{ env.ACT }}
-
-      # - name: 'local testing parse files'
-      #   if: ${{ env.ACT }}
-      #   id: grant_parser
-      #   uses: mmagician/read-file-action@v2
-      #   with:
-      #     path: 'deliveries/.delivery_testing.md'
-
-      - name: 'parse files'
-        if: ${{ !env.ACT }}
-        id: grant_parser
-        uses: mmagician/read-file-action@v2
+      
+      - name: 'parse milestone'
+        id: milestone_parser
+        uses: w3f-community/read-file-action@v2.12
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+
+      - name: Get application PR link
+        uses: actions/github-script@0.9.0
+        id: get_application_pr
+        env:
+          link: ${{ steps.milestone_parser.outputs.pr_link }}
+        with: 
+          script: |
+            var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
+            let application_pr = process.env.link.match(uri_pattern);
+            console.log({application_pr});
+            core.setOutput('application_pr', application_pr[0]);
+            let application_pr_number = application_pr[0].split('/').pop()
+            console.log({application_pr_number});
+            core.setOutput('application_pr_number', new String(application_pr_number));
+
+      - run: "echo application PR: ${{ steps.get_application_pr.outputs.application_pr }}"
+      - run: "echo application PR number: ${{ steps.get_application_pr.outputs.application_pr_number }}"
+
+      - name: 'Get application PR data'
+        if: ${{ success() }}
+        uses: octokit/request-action@v2.x
+        id: get_application_pr_data
+        with:
+          route: GET /repos/w3f/Open-Grants-Program/pulls/${{ steps.get_application_pr.outputs.application_pr_number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: 'parse application'
+      #   if: ${{ success() }}
+      #   id: grant_parser
+      #   uses: mmagician/read-file-action@v1
+      #   with:
+      #     path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
       - name: Get current date
         id: date
@@ -42,12 +64,23 @@ jobs:
 
       - name: 'check author validity'
         id: 'validate_pr'
-        uses: ./.github/actions/validate_pr
+        uses: w3f-community/validate_pr@master
         with:
           targetRepoOwner: "w3f"
           targetRepo: "Open-Grants-Program"
-          prLink: ${{ steps.grant_parser.outputs.contract_url }}
+          prLink: ${{ steps.milestone_parser.outputs.pr_link }}
           author: ${{ github.event.pull_request.user.login }}
+
+      - name: Get last row
+        id: get_last_row
+        uses: mmagician/gsheet.action@v0.1.0
+        with:
+          spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
+          startRow: 420
+          worksheetTitle: "Evaluation"
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
 
       - name: 'write the data to a gsheet'
         if: "${{ steps.validate_pr.outputs.isValid }}"
@@ -55,25 +88,29 @@ jobs:
         uses: jroehl/gsheet.action@v1.0.0 # you can specify '@release' to always have the latest changes
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
-          commands: | # list of commands, specified as a valid JSON string
+          commands: | # list of commands, specified as a valid JSON string. Second entry in 'data' should be project name.
             [
               { 
                 "command": "appendData", 
                 "args": 
                 { 
                   "data": [[
-                    "=INDEX(Legal!$A$7:$A$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))", 
-                    "${{ steps.grant_parser.outputs.project_name }}", 
-                    "${{ steps.grant_parser.outputs.milestone_number }}", 
+                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
+                    "", 
+                    "${{ steps.milestone_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
-                    "=INDEX(Legal!$W$7:$W$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))",
+                    "3", 
+                    "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
+                    "${{ steps.get_application_pr_data.outputs.application_pr }}",
+                    "${{ github.event.pull_request.html_url }}",
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
                   "worksheetTitle": "Evaluation", 
                   "minCol": 1,
-                  "valueInputOption": "USER_ENTERED"
+                  "valueInputOption": "USER_ENTERED",
+                  "minRow": "${{ steps.get_last_row.outputs.lastRow }}"
                 }
                }
             ]
