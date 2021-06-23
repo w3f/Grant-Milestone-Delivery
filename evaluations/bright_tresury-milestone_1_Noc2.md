@@ -18,7 +18,7 @@
 |	5.	|	User story 5	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine) | Works |
 |	6.	|	User story 6	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  |	Works |
 |	7.	|	User story 7	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  |	Submitting transaction looks nice	|
-|	8.	|	User story 8	| <ul><li>[ ] </li></ul> |   |	Not implemented yet	|
+|	8.	|	User story 8	| <ul><li>[ ] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  | Let’s you edit ideas even once they are submitted.|
 |	9.	|	User story 9	| <ul><li>[x] </li></ul> | [ideas](https://testing.treasury.brightinventions.pl/ideas)  | Works	|
 |	10.	|	User story 10	| <ul><li>[x] </li></ul> | [ideas](https://testing.treasury.brightinventions.pl/ideas)  | Works	|
 |	11.	|	User story 11	| <ul><li>[x] </li></ul> | [proposals](https://testing.treasury.brightinventions.pl/proposals)  |	Works	|
