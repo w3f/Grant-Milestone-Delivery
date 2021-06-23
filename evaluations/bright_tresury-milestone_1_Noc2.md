@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress 
+- **Status:** Accepted 
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/251
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -18,7 +18,7 @@
 |	5.	|	User story 5	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine) | Works |
 |	6.	|	User story 6	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  |	Works |
 |	7.	|	User story 7	| <ul><li>[x] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  |	Submitting transaction looks nice	|
-|	8.	|	User story 8	| <ul><li>[ ] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  | Let’s you edit ideas even once they are submitted.|
+|	8.	|	User story 8	| <ul><li>[ ] </li></ul> | [my idea](https://testing.treasury.brightinventions.pl/ideas?filter=mine)  | Let’s you edit ideas even once they are submitted. No longer part of this milestone, see https://github.com/w3f/Open-Grants-Program/pull/464 |
 |	9.	|	User story 9	| <ul><li>[x] </li></ul> | [ideas](https://testing.treasury.brightinventions.pl/ideas)  | Works	|
 |	10.	|	User story 10	| <ul><li>[x] </li></ul> | [ideas](https://testing.treasury.brightinventions.pl/ideas)  | Works	|
 |	11.	|	User story 11	| <ul><li>[x] </li></ul> | [proposals](https://testing.treasury.brightinventions.pl/proposals)  |	Works	|
@@ -29,5 +29,5 @@
 
 ## General Notes
 
-It looks really nice. Everything works. We just need to amend the contract because of user story 8. Other than I’m already looking forward to the end result. Great delivery! 
+It looks really nice. Everything works. [Story 8 was removed from the deliverables](https://github.com/w3f/Open-Grants-Program/pull/464). I’m already looking forward to the end result. Great delivery! 
 
