@@ -20,6 +20,8 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [Blockchain](https://github.com/PlasmNetwork/Plasm/blob/dusty/LICENSE) [Contract](https://github.com/Coinversation/coinpro/blob/main/LICENSE) | Both are under the Apache License 2.0 |
-| 0b. | Documentation | [Link](https://github.com/Coinversation/white-paper) | Documentation for running the node. Please note, the DApp can't be run from the source as we don't want to commit confidential data. You can see the running project at the UAT link at the bottom. |
-| 1. | Coinversation testnet  | [Link](https://github.com/Coinversation/jupiter) | testnet|
-| 2. | website: Economies | [Link](https://github.com/Coinversation/coinversation-website-en) | Coinversation website. |
+| 0b. | Documentation | [Link](https://github.com/Coinversation/white-paper) | Documentation for running the node. 
+| 1. | Coinversation Minting Center+ Destorying cUSD  | [Link]（https://github.com/Coinversation/coinpro/tree/main/contracts/stakepool） | Minting Center+ Destorying cUSD|
+| 2. | Coinversation DEX | [Link](https://github.com/Coinversation/coinpro/tree/main/contracts%2Fexchangeproxy
+) | DEX|
+| 3. | website: Economies | [Link](https://github.com/Coinversation/coinversation-website-en) | Coinversation website. |
