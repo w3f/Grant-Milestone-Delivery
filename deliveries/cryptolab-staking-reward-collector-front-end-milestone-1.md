@@ -17,5 +17,5 @@
 | 4.  | UI for data visualizer | https://github.com/cryptolab-network/polkadot-staking-site/commit/b4b0498c09fff2f89394d2fe0baf07137aed558b | | 
 | 5.  | Drop-down List for download report | https://github.com/cryptolab-network/polkadot-staking-site/commit/b4b0498c09fff2f89394d2fe0baf07137aed558b  | |
 | 6.  | Help page  |https://github.com/cryptolab-network/polkadot-staking-site/commit/9ca81c793612c35bbc163d22b7a0dcfe00e87855 | |
-| 7.  | Deployment | | |
+| 7.  | Deployment | https://github.com/cryptolab-network/cryptolab-package/blob/main/compatibility_test_report.md | |
 | 8.  | Test live environment | https://www.cryptolab.network/tools/dotSR | |
