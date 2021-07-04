@@ -17,4 +17,3 @@
 | 4.     | Pallet_swap | https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets/swap_amm<br />https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets/swap_auction<br />https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets/swap_orderbook | Complete the development of pallet_swap and realize the NFT swap mechanism |
 | 5.     | Pallet_dao  | https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets/dao | Complete the development of pallet_dao and realize the governance mechanism |
 | 6.     | Front End   | https://github.com/DNFT-Team/dnft-substrate-front            | Complete the development of the basic interactive page in vue，and the interface will be available in chinese as well as english |
-
