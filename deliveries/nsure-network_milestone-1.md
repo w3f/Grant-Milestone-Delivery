@@ -12,7 +12,7 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Nsure Network Module Design |https://docs.nsure.network/nsure-network/polkadot/mvp-shi-yong-shuo-ming| Please review the *DOT Specifications* section. | 
-| 2.  | Nsure Network Smart Contract Repository |https://github.com/nsure-tech/dot-contract| This is the source code for dot, and referred to ethereum contract which audited by Certik.| 
+| 2.  | Nsure Network Smart Contract Repository |https://github.com/nsure-tech/dot-contract| This is the source code for dot.| 
 | 3.  | Tests |https://github.com/nsure-tech/dot-contract| We added the test cases within the code which you can get from the dot contract directory.| 
-| 4.  | Docker | - | No docker file, please refer to the tutorial to run the test/program. | 
-| 5. | Tutorial | https://docs.nsure.network/nsure-network/polkadot/mvp-shi-yong-shuo-ming | You can follow the tutorial to run our node. | 
+| 4. | Tutorial | https://docs.nsure.network/nsure-network/polkadot/mvp-shi-yong-shuo-ming | You can follow the tutorial to run our node. | 
+| 5. | Implementation | https://dot.nsure.network | UI for MVP |
