@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* [**Application Document**](https://github.com/w3f/Open-Grants-Program/blob/master/applications/parachain-staking.md)
+* **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/472
 * **Milestone Number:** 1
 
 | Number | Deliverable | Link | Notes |
@@ -13,4 +13,3 @@
 | 2. | Patch both Critical Vulnerabilities disclosed by SR-Labs | [Patch (1) underflow bug](https://github.com/PureStake/moonbeam/pull/502), [Patch (2) nomination DOS attack vector](https://github.com/PureStake/moonbeam/pull/505) | See user-level docs. |
 | 3. | Configurable Inflation | [PR adding MonetaryGovernanceOrigin to configure Inflation](https://github.com/PureStake/moonbeam/pull/571) | See user-level docs. |
 | 4. | Configurable Parachain Bond Reservation | [PR adding Configurable Parachain Bond Account + Percent](https://github.com/PureStake/moonbeam/pull/484) | See user-level docs. |
-
