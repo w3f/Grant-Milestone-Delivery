@@ -4,7 +4,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSdSqj2vYjvpiIytkjcc40Pwl0Eg76WGUAq5L9e8eFuuOegmLw/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/393
+* **Application Document:** https://github.com/w3f/Open-Grants-Program/blob/master/applications/dora-factory-molochdao-v1-v2.md
 * **Milestone Number:** 2
 
 Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
