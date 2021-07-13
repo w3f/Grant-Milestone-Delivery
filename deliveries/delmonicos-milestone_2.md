@@ -16,8 +16,8 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | https://github.com/Delmonicos/charger-node/blob/milestone-2/LICENSE | Apache 2.0 |  
-| 0b. | Documentation | https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone2/testing-guide.md | The testing guide describes what has been developed in this milestone and how to test it. |
-| 0c. | Testing Guide | https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone2/testing-guide.md | The code has unit-test. | 
+| 0b. | Documentation | https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md | The testing guide describes what has been developed in this milestone and how to test it. |
+| 0c. | Testing Guide | https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md | The code has unit-test. | 
 | 1. | Substrate module: Identity | https://github.com/Delmonicos/pallet-did | We have integrated the Did module identity to support users identities and chargers identities.  |
 | 2. | Substrate module: Membership | https://github.com/Delmonicos/charger-node/tree/milestone-1/pallets/membership | We have integrated the registrar module to verify that chargers have account chargers.| 
 | 3. | Substrate module: Contracts |  | The contract module has been integrated but we decided not to use Smart Contract due to compilation problems related to the fact that we also use offchain-worker. We use the tariff-manager pallet to do the job that could have been done by the smart contract. | 
