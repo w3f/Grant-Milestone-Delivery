@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress
+* **Status:** Accepted
 * **Application Document:** https://github.com/w3f/Open-Grants-Program/blob/master/applications/mobile-game-framework.md
 * **Milestone:** 3
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
@@ -29,4 +29,4 @@ Currently failing, see error logs attached to the PR comments.
 
 ### Misc
 
-Excellent effort from the team to demo the project and to try to reproduce the testing environment as closely as possible.
+Excellent effort from the team to demo the project and to try to reproduce the testing environment as closely as possible. I was able to install the iOS apps in the previous milestone and as it's not critical for the deliverables here, I am happy to accept the 3rd milestone as is now.
