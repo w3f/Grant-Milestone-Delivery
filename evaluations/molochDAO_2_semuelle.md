@@ -9,8 +9,8 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [license](https://github.com/DoraFactory/Substrate-Moloch-V2/blob/3e000a08679609029276767cdb013edcfe6db12d/LICENSE) | MIT |
-| 0b. | Testing Guide | <ul><li>[x] </li></ul> | [gh](https://github.com/DoraFactory/Substrate-Moloch-V2/blob/3e000a08679609029276767cdb013edcfe6db12d/doc/test-guide.md) | tarpaulin reports 93% code coverage |
-| 1. | MolochDAO v2 Substrate Pallet | <ul><li>[x] </li></ul> | link | see [General Notes](#general-notes) |
+| 0b. | Testing Guide | <ul><li>[x] </li></ul> | [gh](https://github.com/DoraFactory/Substrate-Moloch-V2/blob/ced0a467e80d1f11f74f44dc5f922e30f93872ca/doc/test-guide.md) | tarpaulin reports 93% code coverage |
+| 1. | MolochDAO v2 Substrate Pallet | <ul><li>[x] </li></ul> | [gh](https://github.com/DoraFactory/Substrate-Moloch-V2/blob/ced0a467e80d1f11f74f44dc5f922e30f93872ca/pallets/moloch-v2/src/lib.rs) | see [General Notes](#general-notes) |
 | 2. | Test | <ul><li>[x] </li></ul> | [gh](https://github.com/DoraFactory/Substrate-Moloch-V2/blob/3e000a08679609029276767cdb013edcfe6db12d/pallets/moloch-v2/src/tests.rs) | — |
 
 
