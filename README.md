@@ -16,7 +16,7 @@
 
 The milestone delivery process is part of the [W3F Grants Program](https://github.com/w3f/Grants-Program). You can find the application process [here](https://github.com/w3f/Grants-Program/blob/master/README.md#pencil-process).  
 
-:warning: Before you submit a milestone, make sure it complies with our [Guidelines for Milestone Deliverables](https://github.com/w3f/Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).
+:warning: Before you submit a milestone, make sure it complies with our [Guidelines for Milestone Deliverables](https://github.com/w3f/Grants-Program/blob/master/src/milestone-deliverables-guidelines.md).
 
 1. **Milestone Delivery:**
    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application.
