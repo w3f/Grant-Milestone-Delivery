@@ -21,6 +21,6 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [Blockchain](https://github.com/PlasmNetwork/Plasm/blob/dusty/LICENSE) [Contract](https://github.com/Coinversation/coinpro/blob/main/LICENSE) | Both are under the Apache License 2.0 |
 | 0b. | Documentation | [Link](https://github.com/Coinversation/white-paper) | Documentation for running the node. 
-| 1. | forging center  | [forging contract]（https://github.com/Coinversation/coinpro/tree/main/contracts/stakepool） [polkadot asset token contract] (https://github.com/Coinversation/coinpro/tree/main/contracts/pat_standard)| Realize the functions of staking DOT and CTO by ink! Smart Contract, forging synthetic assets, including cUSD, cBTC, cETH, cAAPL, cXAU, etc.|
+| 1. | forging center  | [forging contract]（https://github.com/Coinversation/coinpro/tree/main/contracts/stakepool) [polkadot asset token contract] (https://github.com/Coinversation/coinpro/tree/main/contracts/pat_standard)| Realize the functions of staking DOT and CTO by ink! Smart Contract, forging synthetic assets, including cUSD, cBTC, cETH, cAAPL, cXAU, etc.|
 | 2. | Testing | [test code](https://github.com/Coinversation/coinpro/tree/main/tests) | The code will have proper unit-test coverage to ensure functionality and robustness.|
 | 3. | Tutorial | (https://github.com/Coinversation/coinpro/blob/main/README.md) | Please follow this tutorial to build，test and deploy |
