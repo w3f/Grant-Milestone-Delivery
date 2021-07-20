@@ -26,10 +26,10 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    5. Fill out the template with the details of your milestone including a **link to the pull request** of your application.
    6. Once you're done, create a pull request.
 2. **Milestone Review:**
-   1. [Evaluators](https://github.com/w3f/Grants-Program#w3f-grants-evaluators) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
+   1. [Evaluators](https://github.com/w3f/Grants-Program#team) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
-   1. The [Operations Team](https://github.com/w3f/Grants-Program#w3f-operations-team) receives a notification once the delivery is accepted.
+   1. The [Operations Team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted.
    2. Payment is made to the Bitcoin or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
 Grant applications can be amended at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
