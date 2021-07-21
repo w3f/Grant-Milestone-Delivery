@@ -10,10 +10,8 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [Readme](https://github.com/veradefi/defi#license), [Ambrosia LICENSE](https://github.com/veradefi/ambrosia/blob/main/LICENSE), [veradefi LICENSE](https://github.com/veradefi/defi/blob/master/LICENSE) | Initially no license file, but it was added.  |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Docs](https://docs.vera.financial/) |   |
-| 1. | NFT Lending |  <ul><li>[x] </li></ul> | [lendingmanager](https://github.com/veradefi/defi/tree/master/lendingmanager) | Compiles, unused variables. The functionality is implemented according to the contract. 
- | 
-| 2. | ExchangeManager |  <ul><li>[x] </li></ul> | [exchangemanager](https://github.com/veradefi/defi/tree/master/exchangemanager) | Compiles, no unit tests, unused variable. The functionality is implemented according to the contract. 
-  |
+| 1. | NFT Lending |  <ul><li>[x] </li></ul> | [lendingmanager](https://github.com/veradefi/defi/tree/master/lendingmanager) | Compiles, unused variables. The functionality is implemented according to the contract.  | 
+| 2. | ExchangeManager |  <ul><li>[x] </li></ul> | [exchangemanager](https://github.com/veradefi/defi/tree/master/exchangemanager) | Compiles, no unit tests, unused variable. The functionality is implemented according to the contract. |
 | 3. | UI/Design |  <ul><li>[x] </li></ul> | [figma 1](https://www.figma.com/file/oZOJk9ujxFZ4Ip1To7mWDP/Vera-web-app-UI_v1?node-id=0%3A1), [figma 2](https://www.figma.com/proto/ien0b4twQ5nygfCy7AYokO/Vera-Real-Estate?node-id=325%3A0&scaling=min-zoom&page-id=218%3A0), [video](https://drive.google.com/file/d/16sUVt-wvYdWAUsfupGVtnzWDOvYAbio6/view) | Most of the figma design pages seems to be unrelated to the wireframe https://balsamiq.cloud/sa6mpd1/pvn6rks/r5D27  (for example: https://www.figma.com/proto/ien0b4twQ5nygfCy7AYokO/Vera-Real-Estate?node-id=223%3A0&scaling=min-zoom&page-id=218%3A0) and none of them shows polkadot.js. However the UI is already live, so they finished the design work: http://beta.vera.financial/  |
 | 4. | User Interface |  <ul><li>[x] </li></ul> | [UI](https://github.com/veradefi/ambrosia), [live version](http://beta.vera.financial) | Compiled with warnings. |
 | 5. | Docker | <ul><li>[x] </li></ul> | [docker](https://github.com/veradefi/ambrosia/blob/main/docker-compose.yml) | Works |  
