@@ -6,7 +6,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**
 
-* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Open-Grants-Program/tree/master/applications) directory).
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/staking-rewards-collector-front-end.md
 * **Milestone Number:** 1
 
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work.
@@ -27,4 +27,3 @@
 | 5. | Tooltips/Helpers | [commit](https://github.com/jackson-harris-iii/staking-rewards-viewer/commit/f8d0c317e15a502899902760c36fc340c92268eb): f8d0c317e15a502899902760c36fc340c92268eb | Complete |
 | 6. | Testing | [commit](https://github.com/jackson-harris-iii/staking-rewards-viewer/commit/78b1dd37fbaa2c233d3fed4b9806edd57bf297c2): 78b1dd37fbaa2c233d3fed4b9806edd57bf297c2 | Complete |
 | 7. | Polishing & Delivery | [commit](https://github.com/jackson-harris-iii/staking-rewards-viewer/commit/68c6837a932ef2397d08934d923d4ecd7bdcd343): 68c6837a932ef2397d08934d923d4ecd7bdcd343 | Ready For Review |
-
