@@ -8,72 +8,104 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'get all added files in the PR'
-        if: ${{ !env.ACT }}
         id: 'files'
-        uses: mmagician/get-changed-files@master
+        uses: mmagician/get-changed-files@v2
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout
-        uses: actions/checkout@master
-        if: ${{ !env.ACT }}
+      - name: 'Checkout delivery'
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Local Testing Checkout
-        uses: actions/checkout@master
-        if: ${{ env.ACT }}
-
-      # - name: 'local testing parse files'
-      #   if: ${{ env.ACT }}
-      #   id: grant_parser
-      #   uses: mmagician/read-file-action@v2
-      #   with:
-      #     path: 'deliveries/.delivery_testing.md'
-
-      - name: 'parse files'
-        if: ${{ !env.ACT }}
-        id: grant_parser
-        uses: mmagician/read-file-action@v2
+      
+      - name: 'parse milestone'
+        id: milestone_parser
+        uses: w3f-community/read-file-action@v2.13
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+
+      - name: 'parse application doc path'
+        id: application_doc_path
+        uses: actions/github-script@0.9.0
+        env:
+          link: ${{ steps.milestone_parser.outputs.application_document }}
+        with: 
+          script: |
+            var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
+            let application_doc = process.env.link.match(uri_pattern);
+            let application_doc_path = application_doc[0];
+            let application_doc_path_array = application_doc_path.split('/');
+            application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
+            core.setOutput('application_doc_path', application_doc_path);
+      - name: 'Get application commit data'
+        if: ${{ success() }}
+        uses: octokit/request-action@v2.x
+        id: get_application_commit_data
+        with:
+          route: "GET /repos/w3f/Open-Grants-Program/commits?path=${{ steps.application_doc_path.outputs.application_doc_path }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Find delivery author in application PRs
+        uses: actions/github-script@0.9.0
+        id: match_author
+        env:
+          commits: ${{steps.get_application_commit_data.outputs.data}}
+          pr_author: ${{github.event.pull_request.user.login}}
+        with: 
+          script: |
+            let commits = JSON.parse(process.env.commits);
+            for(commit of commits) {
+              if(commit.author.login === process.env.pr_author) {
+                return true;
+              }
+            }
+            core.setFailed(`PR author does not match any author of application.`);
 
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
 
-      - name: 'check author validity'
-        id: 'validate_pr'
-        uses: ./.github/actions/validate_pr
+      - name: Get last row
+        if: github.event.pull_request.merged == true
+        id: get_last_row
+        uses: w3f/gsheet.action@v1.1.3
         with:
-          targetRepoOwner: "w3f"
-          targetRepo: "Open-Grants-Program"
-          prLink: ${{ steps.grant_parser.outputs.contract_url }}
-          author: ${{ github.event.pull_request.user.login }}
+          spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
+          startRow: 450
+          worksheetTitle: "Evaluation"
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
 
       - name: 'write the data to a gsheet'
-        if: "${{ steps.validate_pr.outputs.isValid }}"
         id: 'update_worksheet'
         uses: jroehl/gsheet.action@v1.0.0 # you can specify '@release' to always have the latest changes
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
-          commands: | # list of commands, specified as a valid JSON string
+          commands: | # list of commands, specified as a valid JSON string. Second entry in 'data' should be project name.
             [
               { 
                 "command": "appendData", 
                 "args": 
                 { 
                   "data": [[
-                    "=INDEX(Legal!$A$7:$A$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))", 
-                    "${{ steps.grant_parser.outputs.project_name }}", 
-                    "${{ steps.grant_parser.outputs.milestone_number }}", 
+                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
+                    "", 
+                    "${{ steps.milestone_parser.outputs.milestone_number }}", 
                     "",
                     "Not Yet", 
-                    "=INDEX(Legal!$W$7:$W$400,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$7:$D$400,0))",
+                    "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), "Not Yet", 3, "In Progress", 2, "Asked for Changes", 1, "Final Check", 2, "Done", 0, "Terminated", 0))", 
+                    "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
+                    "${{ steps.get_application_pr_data.outputs.application_pr }}",
+                    "${{ github.event.pull_request.html_url }}",
                     "", 
                     "${{ steps.date.outputs.date }}"
                   ]], 
                   "worksheetTitle": "Evaluation", 
                   "minCol": 1,
-                  "valueInputOption": "USER_ENTERED"
+                  "valueInputOption": "USER_ENTERED",
+                  "minRow": "${{ steps.get_last_row.outputs.lastRow }}"
                 }
                }
             ]

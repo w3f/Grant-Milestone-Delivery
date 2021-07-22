@@ -4,7 +4,7 @@
 > Lines starting with `>`, such as this one, can be removed.
 
 - **Status:** In Progress/Accepted/Rejected
-- **PR Link:** Please, provide a link to the initial accepted pull request of grant, which you're evaluating to the [Web3 Foundation Open Grants Program repository](https://github.com/w3f/Open-Grants-Program).
+- **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). 
 - **Milestone:** Number
 - **Kusama Identity:** Address
 - **Previously successfully merged evaluation:** Link
