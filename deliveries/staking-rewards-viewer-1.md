@@ -6,7 +6,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**
 
-* **Application Document:** [Accepted W3F Grant App PR](https://github.com/w3f/Grants-Program/blob/master/applications/staking-rewards-collector-front-end.md)
+* **Application Document:** [staking-rewards-collector-front-end.md](https://github.com/w3f/Grants-Program/blob/master/applications/staking-rewards-collector-front-end.md)
 * **Milestone Number:** 1
 
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work.
