@@ -1,4 +1,4 @@
-# Web3 Grant Milestone Delivery <!-- omit in toc -->
+# W3F Grant Milestone Delivery <!-- omit in toc -->
 
 > **:loudspeaker:** This repository is only for submitting finished milestones for the [Web3 Foundation Grants Program](https://github.com/w3f/Grants-Program).
 
@@ -22,7 +22,7 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application.
    2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**.
    3. Name the file `project_name-milestone_number.md`.
-   4. Fill out the [invoice form](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform).
+   4. Fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89).
    5. Fill out the template with the details of your milestone including a **link to the pull request** of your application.
    6. Once you're done, create a pull request.
 2. **Milestone Review:**
@@ -36,13 +36,13 @@ Grant applications can be amended at any time. However, this _necessitates a ree
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 1 KSM**, depending on the quality and depth of the evaluation. The KSM will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 500 USD in KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
 
 ### Requirements
 
-- [On-Chain identity](https://guide.kusama.network/docs/en/mirror-learn-identity) on Kusama.
+- [On-Chain identity](https://guide.kusama.network/docs/mirror-learn-identity/) on Kusama.
 - GitHub account.
-- The evaluation has to be submitted within 10 days after the milestone was delivered.
+- The evaluation must be submitted within 10 days after the milestone was delivered.
 
 ### Process
 
@@ -54,7 +54,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
 7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 
-*You can evaluate as many deliveries as you like. With each successful evaluation, the probability of being double-checked decreases and once you have done enough of them, you'll be added to the list of [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team) yourself.*
+*You can evaluate as many deliveries as you like. With each successful evaluation, the probability of being double-checked decreases and eventually you'll be added to the list of [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team) yourself.*
 
 ## :bulb: Help
 
