@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/356
 * **Milestone:** 2
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -10,18 +10,22 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [License](https://github.com/ChainBridgeNetworkTeam/Doter/blob/master/) | Correct |
 | 0b. | Polkadot Support | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Works |
-| 0c. | Integration Tests, Unit Test + Release | <ul><li>[ ] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Test fail, see below |
+| 0c. | Integration Tests, Unit Test + Release | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | No real integration tests, but that’s not an issue. Test initially failed, see below, but everything was fixed |
 | 1a. | Create and import wallets on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter)  | Works |
-| 1b. | Transfer and receive on Kusama | <ul><li>[ ] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Doesn't work for me at the moment |
+| 1b. | Transfer and receive on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Didn't work initially but it was fixed with v1.0.5 |
 | 1c. | Backup wallet on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Same as on polkadot |
 | 1d. | Query transaction records on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Transaction Record works |
-| 1e. | Referendum on the chain on Kusama | <ul><li>[ ] </li></ul> | []() |  |
+| 1e. | Referendum on the chain on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Works |
 | 1f. | Switch multiple wallets on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Works |
 | 1g. | Manage address book on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | address book works |
 | 1h. | Switch language on Kusama | <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Support for chinese and english |
 | 1i. | Wallet injection and signature on Kusama| <ul><li>[x] </li></ul> | [Doter repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Works |
 
 ## General Notes
+
+Initially the delivery had some smaller issues, but they fixed everything very quickly. The USD price sometimes shows the wrong amount. For example it seems to take the KSM price for DOTs. Also the UI sometimes doesn’t reload the information when you switch between multiple wallets, but that’s not part of deliverables of this grant.  
+
+**Previous notes:** 
 
 - When I tried to transfer a small amount to another account on kusama, I wasn’t able to confirm the transaction. It constantly showed a loading animation instead of the confirm button.  
 
