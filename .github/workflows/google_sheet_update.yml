@@ -66,46 +66,33 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
 
-      - name: Get last row
-        if: github.event.pull_request.merged == true
-        id: get_last_row
-        uses: w3f/gsheet.action@v1.1.3
-        with:
-          spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
-          startRow: 450
-          worksheetTitle: "Evaluation"
-        env:
-          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
-          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
-
       - name: 'write the data to a gsheet'
         id: 'update_worksheet'
-        uses: jroehl/gsheet.action@v1.0.0 # you can specify '@release' to always have the latest changes
+        uses: jroehl/gsheet.action@v1.1.1 # you can specify '@release' to always have the latest changes
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
           commands: | # list of commands, specified as a valid JSON string. Second entry in 'data' should be project name.
             [
-              { 
-                "command": "appendData", 
-                "args": 
-                { 
+              {
+                "command": "appendData",
+                "args":
+                {
                   "data": [[
-                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")", 
-                    "", 
-                    "${{ steps.milestone_parser.outputs.milestone_number }}", 
+                    "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")",
                     "",
-                    "Not Yet", 
-                    "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), "Not Yet", 3, "In Progress", 2, "Asked for Changes", 1, "Final Check", 2, "Done", 0, "Terminated", 0))", 
+                    "${{ steps.milestone_parser.outputs.milestone_number }}",
+                    "",
+                    "Not Yet",
+                    "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), "Not Yet", 3, "In Progress", 2, "Asked for Changes", 1, "Final Check", 2, "Done", 0, "Terminated", 0))",
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ steps.get_application_pr_data.outputs.application_pr }}",
                     "${{ github.event.pull_request.html_url }}",
-                    "", 
+                    "",
                     "${{ steps.date.outputs.date }}"
-                  ]], 
-                  "worksheetTitle": "Evaluation", 
+                  ]],
+                  "worksheetTitle": "Evaluation",
                   "minCol": 1,
                   "valueInputOption": "USER_ENTERED",
-                  "minRow": "${{ steps.get_last_row.outputs.lastRow }}"
                 }
                }
             ]
