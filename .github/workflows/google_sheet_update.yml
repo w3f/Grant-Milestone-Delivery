@@ -42,7 +42,7 @@ jobs:
         uses: octokit/request-action@v2.x
         id: get_application_commit_data
         with:
-          route: "GET /repos/w3f/Open-Grants-Program/commits?path=${{ steps.application_doc_path.outputs.application_doc_path }}"
+          route: "GET /repos/w3f/Grants-Program/commits?path=${{ steps.application_doc_path.outputs.application_doc_path }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
