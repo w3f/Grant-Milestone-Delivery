@@ -9,18 +9,21 @@ jobs:
     steps:
       - name: 'get all added files in the PR'
         id: 'files'
-        uses: mmagician/get-changed-files@v2
+        uses: Ana06/get-changed-files@v1.2
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Checkout delivery'
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      
+
+
+#       - name: 'check out application'
+#         uses: actions/checkout@v2
+#         with:
+#           ref: ${{ steps.application_doc_path.outputs.application_doc_url }}
+
+
       - name: 'parse milestone'
         id: milestone_parser
-        uses: w3f-community/read-file-action@v2.13
+        uses: w3f/read-file-action@v2.13
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
@@ -64,7 +67,11 @@ jobs:
 #             core.setFailed(`PR author does not match any author of application.`);
 
 
-      - name: 'parse files'
+      - name: 'get application'
+        id: get_application
+        run: wget -O ${{ steps.application_doc_path.outputs.application_doc_path }} "https://raw.githubusercontent.com/w3f/Grants-Program/${{ steps.application_doc_path.outputs.application_doc_path }}"
+
+      - name: 'parse application file'
         id: grant_parser
         uses: mmagician/read-file-action@v1
         with:
