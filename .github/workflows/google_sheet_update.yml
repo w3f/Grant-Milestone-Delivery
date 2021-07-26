@@ -68,7 +68,7 @@ jobs:
 
       - name: 'get application'
         id: get_application
-        run: wget -O "https://raw.githubusercontent.com/w3f/Grants-Program/master/${{ steps.application_doc_path.outputs.application_doc_path }}"
+        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/${{ steps.application_doc_path.outputs.application_doc_path }}"
 
       - name: 'parse application file'
         id: grant_parser
