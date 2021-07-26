@@ -29,7 +29,7 @@ jobs:
         uses: actions/github-script@0.9.0
         env:
           link: ${{ steps.milestone_parser.outputs.application_document }}
-        with: 
+        with:
           script: |
             var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
             let application_doc = process.env.link.match(uri_pattern);
@@ -63,6 +63,13 @@ jobs:
 #             }
 #             core.setFailed(`PR author does not match any author of application.`);
 
+
+      - name: 'parse files'
+        id: grant_parser
+        uses: mmagician/read-file-action@v1
+        with:
+          path: "${{ steps.application_doc_path.outputs.application_doc_path }}"
+
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
@@ -80,7 +87,7 @@ jobs:
                 {
                   "data": [[
                     "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")",
-                    "",
+                    "${{ steps.grant_parser.outputs.project_name }}",
                     "${{ steps.milestone_parser.outputs.milestone_number }}",
                     "",
                     "Not Yet",
