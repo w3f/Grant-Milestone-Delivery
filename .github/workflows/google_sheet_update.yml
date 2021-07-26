@@ -92,7 +92,7 @@ jobs:
                   ]],
                   "worksheetTitle": "Evaluation",
                   "minCol": 1,
-                  "valueInputOption": "USER_ENTERED",
+                  "valueInputOption": "USER_ENTERED"
                 }
                }
             ]
