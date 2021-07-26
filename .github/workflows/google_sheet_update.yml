@@ -13,14 +13,12 @@ jobs:
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: 'check out application'
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
-
-#       - name: 'check out application'
-#         uses: actions/checkout@v2
-#         with:
-#           ref: ${{ steps.application_doc_path.outputs.application_doc_url }}
-
-
+        # requires checkout first
       - name: 'parse milestone'
         id: milestone_parser
         uses: w3f/read-file-action@v2.13
