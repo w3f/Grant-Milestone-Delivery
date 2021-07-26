@@ -38,6 +38,7 @@ jobs:
             let application_doc_path_array = application_doc_path.split('/');
             application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
             core.setOutput('application_doc_path', application_doc_path);
+            core.setOutput('application_doc_name', application_doc_path_array[application_doc_path_array.length - 1]);
 
       - name: 'Get application commit data'
         if: ${{ success() }}
@@ -67,13 +68,13 @@ jobs:
 
       - name: 'get application'
         id: get_application
-        run: wget -O ${{ steps.application_doc_path.outputs.application_doc_path }} "https://raw.githubusercontent.com/w3f/Grants-Program/${{ steps.application_doc_path.outputs.application_doc_path }}"
+        run: wget -O "https://raw.githubusercontent.com/w3f/Grants-Program/master/${{ steps.application_doc_path.outputs.application_doc_path }}"
 
       - name: 'parse application file'
         id: grant_parser
         uses: mmagician/read-file-action@v1
         with:
-          path: "${{ steps.application_doc_path.outputs.application_doc_path }}"
+          path: "${{ steps.application_doc_path.outputs.application_doc_name }}"
 
       - name: Get current date
         id: date
