@@ -37,6 +37,7 @@ jobs:
             let application_doc_path_array = application_doc_path.split('/');
             application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
             core.setOutput('application_doc_path', application_doc_path);
+
       - name: 'Get application commit data'
         if: ${{ success() }}
         uses: octokit/request-action@v2.x
@@ -46,21 +47,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Find delivery author in application PRs
-        uses: actions/github-script@0.9.0
-        id: match_author
-        env:
-          commits: ${{steps.get_application_commit_data.outputs.data}}
-          pr_author: ${{github.event.pull_request.user.login}}
-        with: 
-          script: |
-            let commits = JSON.parse(process.env.commits);
-            for(commit of commits) {
-              if(commit.author.login === process.env.pr_author) {
-                return true;
-              }
-            }
-            core.setFailed(`PR author does not match any author of application.`);
+#       - name: Find delivery author in application PRs
+#         uses: actions/github-script@0.9.0
+#         id: match_author
+#         env:
+#           commits: ${{steps.get_application_commit_data.outputs.data}}
+#           pr_author: ${{github.event.pull_request.user.login}}
+#         with: 
+#           script: |
+#             let commits = JSON.parse(process.env.commits);
+#             for(commit of commits) {
+#               if(commit.author.login === process.env.pr_author) {
+#                 return true;
+#               }
+#             }
+#             core.setFailed(`PR author does not match any author of application.`);
 
       - name: Get current date
         id: date
