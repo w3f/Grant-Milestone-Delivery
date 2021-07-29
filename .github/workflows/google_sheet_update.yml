@@ -67,7 +67,7 @@ jobs:
 
       - name: 'parse application file'
         id: grant_parser
-        uses: mmagician/read-file-action@v1
+        uses: w3f/parse-grant-application-action@v1
         with:
           path: "${{ steps.application_doc_path.outputs.application_doc_name }}"
 
