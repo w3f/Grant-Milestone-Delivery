@@ -10,8 +10,6 @@ jobs:
       - name: 'get names of all added files in the PR'
         id: 'files'
         uses: Ana06/get-changed-files@v1.2
-        env:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'check out delivery file'
         uses: actions/checkout@v2
