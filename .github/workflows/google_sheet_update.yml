@@ -20,7 +20,7 @@ jobs:
 
       - name: 'parse milestone'
         id: milestone_parser
-        uses: w3f/read-file-action@v2.13
+        uses: w3f/parse-milestone-delivery-action@v2.13
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
