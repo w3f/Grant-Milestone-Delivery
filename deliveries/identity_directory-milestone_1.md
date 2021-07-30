@@ -17,8 +17,8 @@
 | 0c. | Article/Tutorial | https://medium.com/@mm_54014/bee3878de40e | We will write an article or tutorial that explains the work done as part of the grant. |
 | 1. | Design a list page | https://www.figma.com/file/Q8ueqnAQYtDQq4bVgwY1Uf/Identity-Directory-Design?node-id=0%3A1 | Create design mockups in Figma. |
 | 2. | Design an individual identity page | https://www.figma.com/file/Q8ueqnAQYtDQq4bVgwY1Uf/Identity-Directory-Design?node-id=0%3A1 | Create design mockups in Figma. |
-| 3. | Implement list page | https://github.com/Shard-Labs/identity-directory | Build UI components in VueJS used in the identity list page. | 
-| 4. | Implement individual identity page | https://github.com/Shard-Labs/identity-directory | Build UI components in VueJS used in the individual identity page. 
-| 5. | Implement query logic for identity data | https://github.com/Shard-Labs/identity-directory | Implement query logic which will be used to retrieve identity data. |  
-| 6. | Query identity activities | https://github.com/Shard-Labs/identity-directory | Implement query logic which will be used to retrieve activities indicative of a member’s reputation. |   
+| 3. | Implement list page | https://github.com/Shard-Labs/identity-directory/blob/main/src/components/Identities | Build UI components in VueJS used in the identity list page. | 
+| 4. | Implement individual identity page | https://github.com/Shard-Labs/identity-directory/blob/main/src/components/Identity  | Build UI components in VueJS used in the individual identity page. 
+| 5. | Implement query logic for identity data | https://github.com/Shard-Labs/identity-directory/blob/main/src/store/actions.ts#L87 | Implement query logic which will be used to retrieve identity data. |  
+| 6. | Query identity activities | https://github.com/Shard-Labs/identity-directory/blob/main/src/store/actions.ts#L104 | Implement query logic which will be used to retrieve activities indicative of a member’s reputation. |   
 
