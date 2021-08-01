@@ -13,6 +13,17 @@
 > 
 > If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
+* **Application Document:**  [LINK](https://github.com/w3f/Grants-Program/blob/master/applications/Jeton_Network_follow_up.md) 
+* **Milestone Number:** 1
+
+# SubstrateNetApi (NETStandard2.0)
+*Just another Substrate .NET API*  
+[![Build status](https://ci.appveyor.com/api/projects/status/jsei7yv376en17rr?svg=true)](https://ci.appveyor.com/project/darkfriend77/substratenetapi)
+[![nuget](https://img.shields.io/nuget/v/SubstrateNetApi)](https://ci.appveyor.com/project/darkfriend77/substratenetapi/build/artifacts)
+[![GitHub issues](https://img.shields.io/github/issues/darkfriend77/SubstrateNetApi.svg)](https://github.com/darkfriend77/SubstrateNetApi/issues)
+[![license](https://img.shields.io/github/license/darkfriend77/SubstrateNetApi)](https://github.com/darkfriend77/SubstrateNetApi/blob/origin/LICENSE)
+[![contributors](https://img.shields.io/github/contributors/darkfriend77/SubstrateNetApi)](https://github.com/darkfriend77/SubstrateNetApi/graphs/contributors)
+
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LINK](https://github.com/JetonNetwork/SubstrateNetApi/blob/origin/LICENSE) | | 
@@ -37,3 +48,5 @@
 | 6e. | Custom Test | [LINK](https://github.com/JetonNetwork/Open-Grants-Program/issues/20#issuecomment-879431163) | Add documentation for custom pallet and type testing | 
 | 7. | Jeton Network | [LINK]() | **JetonNetwork has been rebranded to Polkadot Play** the apperance is underconstruction under www.polkadotplay.com | 
 | 7a. | Jeton Network | [LINK](https://medium.com/polkadot-play/project-introduction-681820988416) | Article and Blog about this open grant and the deliverables, at least one deep dive post into each milestone subject area, SubstrateNetApi, GameEngine, ServiceLayer & ConnectFour (if accpeted) | 
+
+https://ci.appveyor.com/project/darkfriend77/substratenetapi
