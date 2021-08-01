@@ -13,9 +13,6 @@
 > 
 > If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
-* **Application Document:**  [LINK](https://github.com/w3f/Grants-Program/blob/master/applications/Jeton_Network_follow_up.md) 
-* **Milestone Number:** 1
-
 # SubstrateNetApi (NETStandard2.0)
 *Just another Substrate .NET API*  
 [![Build status](https://ci.appveyor.com/api/projects/status/jsei7yv376en17rr?svg=true)](https://ci.appveyor.com/project/darkfriend77/substratenetapi)
