@@ -13,5 +13,6 @@
 | 1. | Source code|https://github.com/ReserveLabs/AlgoCash|Token mint, Bond purchase and redemption are deliverable functions in this milestone.| 
 | 2.  | License|https://github.com/ReserveLabs/AlgoCash/blob/main/LICENSE| Apache 2.0 |
 | 3.  | Documentation|https://github.com/ReserveLabs/AlgoCash/blob/main/README.md| Brief Intro of Algo Cash, code structure and how to deploy the contracts.| 
-| 4.  | Tests|https://github.com/ReserveLabs/AlgoCash/tree/main/contracts| UTs are in the contact files.|   
-| 5.  | Demo vidoe|https://youtu.be/RalxYnx0Go8| Demo for 1st milestone of Algo Cash.| 
+| 4.  | Tests|https://github.com/ReserveLabs/AlgoCash/tree/main/tests|Tests for Distribution, Treasury and Boradroom|   
+| 5.  | Demo vidoe|https://youtu.be/RalxYnx0Go8| Demo for ALB and ALC working woth Treasury.| 
+| 6.  |Dock Image| http://dl.veim.cn/download/algocash/europa-algocash.tar.gz|Please kindly follow the [README](https://github.com/ReserveLabs/AlgoCash/blob/main/README.md#docker) to run the docker.|
