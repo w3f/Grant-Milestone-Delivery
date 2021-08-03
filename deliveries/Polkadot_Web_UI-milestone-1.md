@@ -2,13 +2,15 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** https://github.com/w3f/Grants-Program/pull/252
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Polkadot_Web_UI.md
 * **Milestone Number:** 1
 
-| Number | Deliverable | Link | Notes |
-| ------------- | ------------- | ------------- |------------- |
-| 1. | License | https://github.com/ChainBridgeNetworkTeam/Doter/blob/master/LICENSE | Apache License 2.0 |
-| 2. | Polkadot Angular Identicon Source code | https://github.com/RidOne-technologies/polkadot-angular-identicon |  |
-| 3. | Polkadot Web Identicon Source code | https://github.com/RidOne-technologies/polkadot-web-identicon |  |
-| 4. | Usage guide | Usage guides are published for each component in README files |  |
-| 5. | Npm published packages |  Packages for (angular)[]https://www.npmjs.com/package/polkadot-angular-identicon and (web)[https://www.npmjs.com/package/polkadot-web-identicon]  are published on npm and available for use|  |
+| Number | Deliverable | Link |
+| ------------- | ------------- | ------------- |
+| 0a. | Licence | Apache 2.0 |
+| 0b. | Documentation | Usage guides are published for each component in README files|
+| 0c. | Testing guide | (README)[https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/dist/polkadot-web-identicon/README.md#testing]  |
+| 1. | Angular_Identicon | (github link)[https://github.com/RidOne-technologies/polkadot-angular-identicon]   |
+| 2. | Web_Identicon | (github link)[https://github.com/RidOne-technologies/polkadot-web-identicon]   |
+| 3. | publishing into NPM registry |(Angular Identicon npm package)[https://www.npmjs.com/package/polkadot-angular-identicon] (Web Identicon npm package)[https://www.npmjs.com/package/polkadot-web-identicon]|
+| 4. | Documentation / Tutorials | (Angular usage guide)[https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/dist/polkadot-web-identicon/README.md] (Angular Example project)[https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/example-app/README.md]  |
