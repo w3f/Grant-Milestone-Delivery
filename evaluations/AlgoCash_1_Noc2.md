@@ -17,6 +17,6 @@
 ## General Notes
 
 **General questions:**
-- This seems to be based on [basis](https://www.basis.io/basis_whitepaper_en.pdf). What’s the difference between this and the existing implementation https://basis.cash/ for example on ethereum, which clearly doesn’t work. (decreased demand)
+- This seems to be based on [basis](https://www.basis.io/basis_whitepaper_en.pdf) or more specifically [basiscash-protocol](https://github.com/Basis-Cash/basiscash-protocol/tree/master/contracts). What’s the difference between this and the existing implementation https://basis.cash/ for example on ethereum, which clearly doesn’t work. (decreased demand)
 - Why can I choose the [target price](https://github.com/ReserveLabs/AlgoCash/blob/6ef24ec93eb19aaf5b7ceb74635bc0d6a3da1e8d/contracts/treasury/lib.rs#L149) when I buy bonds? Is there an auction? 
 - It would be nice if they could also have shown how to deploy the contracts. 
