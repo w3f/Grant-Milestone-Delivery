@@ -17,7 +17,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache | [Apache License](https://github.com/gbctech/starks-node/blob/master/LICENSE-APACHE2), [MIT License](https://github.com/gbctech/starks-node/blob/master/frame/distaff-vm/LICENSE) | ... |
-| 1. | UI/UX for Stone Platform |...| ...| 
-| 2. | Indexed basket management |https://github.com/stonedefi/stoneindex-node| ...| 
+| 1. | UI/UX for Stone Platform |https://github.com/stonedefi/stone-index-substrate-ui|For the usage guide, please see details Tuturial.md in /tutorial folder| 
+| 2. | Indexed basket management |https://github.com/stonedefi/stoneindex-node| The app document is updated in README.md| 
 | 3. | DEX integration | https://github.com/stonedefi/stoneindex-node/tree/master/pallets/swaps-integration-demo| ...| 
 
