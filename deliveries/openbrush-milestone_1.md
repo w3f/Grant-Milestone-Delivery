@@ -1,0 +1,18 @@
+# Milestone Delivery :mailbox:
+
+**The Supercolony team covers the price of the first milestone, so the invoice is not filled. The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** [OpenBrush](https://github.com/w3f/Grants-Program/blob/master/applications/openbrush.md)
+* **Milestone Number:** 1
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0a.    | License                          | MIT | The MIT license is used in the project. |
+| 0b.    | Documentation                    | [Examples how to import/reuse the contracts](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples) | Each contract contains comments with descriptions of methods |
+| 0c.    | Testing Guide                    | [Integration tests](https://github.com/Supercolony-net/openbrush-contracts/tree/main/tests), [Instruction how to run tests](https://github.com/Supercolony-net/openbrush-contracts#testing) | Each contract contains `test` folder with unit tests for this contract. |
+| 1a.    | Fungible token(Erc20)            | [Implementation](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/token/psp20/traits.rs), [PSP](https://github.com/w3f/PSPs/blob/master/PSPs/drafts/psp-22.md), [How to reuse](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples/psp20) | Implemented native(for ink!) analog of [Erc20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), it is called PSP20 at the moment, but we will rename it to PSP22 based on according PSP.
+| 1b.    | Non Fungible token(Erc721)       | [Implementation](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/token/psp721/traits.rs), [How to reuse](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples/access-control) | Implemented native(for ink!) analog of [Erc721](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721), it is called PSP721 at the moment, but we will rename it based on the number of PSP for NFT.
+| 1c.    | Multi token(Erc1155)             | [Implementation](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/token/psp1155/traits.rs), [How to reuse](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples/ownable) | Implemented native(for ink!) analog of [Erc1155](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC1155), it is called PSP1155 at the moment, but we will rename it based on the number of PSP for multi token.
+| 2a.    | AccessControl                    | [Implementation](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/access/access-control/traits.rs), [How to reuse](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples/access-control) | Implemented native(for ink!) analog of [AccessControl](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol).
+| 2b.    | Ownable                          | [Implementation](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/access/ownable/traits.rs), [How to reuse](https://github.com/Supercolony-net/openbrush-contracts/tree/main/examples/ownable) | Implemented native(for ink!) analog of [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol).
+
