@@ -1,7 +1,5 @@
 # Milestone Delivery :mailbox:
 
-Payment in DOTS to: 16aN6hVU7WtMD7pw2kjXNwnApQB9tNxcdsknTSyFDps6YAiA
-
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/w3f/Open-Grants-Program/pull/422
