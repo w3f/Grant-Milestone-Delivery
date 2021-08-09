@@ -9,8 +9,8 @@
 | ------------- | ------------- | ------------- |
 | 0a. | Licence | Apache 2.0 |
 | 0b. | Documentation | Usage guides are published for each component in README files|
-| 0c. | Testing guide | (README)[https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/dist/polkadot-web-identicon/README.md#testing]  |
-| 1. | Angular_Identicon | (github link)[https://github.com/RidOne-technologies/polkadot-angular-identicon]   |
-| 2. | Web_Identicon | (github link)[https://github.com/RidOne-technologies/polkadot-web-identicon]   |
-| 3. | publishing into NPM registry |(Angular Identicon npm package)[https://www.npmjs.com/package/polkadot-angular-identicon] (Web Identicon npm package)[https://www.npmjs.com/package/polkadot-web-identicon]|
-| 4. | Documentation / Tutorials | (Angular usage guide)[https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/dist/polkadot-web-identicon/README.md] (Angular Example project)[https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/example-app/README.md]  |
+| 0c. | Testing guide | [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md)  |
+| 0d. | Article/Tutorial | [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) |
+| 1. | Angular_Identicon | [github link](https://github.com/RidOne-technologies/polkadot-angular-identicon)   |
+| 2. | Web_Identicon | [github link](https://github.com/RidOne-technologies/polkadot-web-identicon)   |
+| 3. | publishing into NPM registry |[Angular Identicon npm package](https://www.npmjs.com/package/polkadot-angular-identicon) / [Web Identicon npm package](https://www.npmjs.com/package/polkadot-web-identicon)   |
