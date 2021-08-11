@@ -8,8 +8,8 @@
 | Number | Deliverable | Link |
 | ------------- | ------------- | ------------- |
 | 0a. | Licence | Apache 2.0 |
-| 0b. | Documentation | Usage guides are published for each component in README files|
-| 0c. | Testing guide | [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md)  |
+| 0b. | Documentation | Usage guides are published for each component in README.md and BUILD.md files|
+| 0c. | Testing guide | [Unit Testing](https://github.com/RidOne-technologies/polkadot-angular-identicon#unit-tests)  |
 | 0d. | Article/Tutorial | [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) |
 | 1. | Angular_Identicon | [github link](https://github.com/RidOne-technologies/polkadot-angular-identicon)   |
 | 2. | Web_Identicon | [github link](https://github.com/RidOne-technologies/polkadot-web-identicon)   |
