@@ -44,6 +44,6 @@
 | 6d. | Node | [LINK](https://github.com/JetonNetwork/SubstrateNetApi/wiki/Testing#node-template) | Add documentation how to setup live node-template testing, for extrinsic | 
 | 6e. | Custom Test | [LINK](https://github.com/JetonNetwork/Open-Grants-Program/issues/20#issuecomment-879431163) | Add documentation for custom pallet and type testing | 
 | 7. | Jeton Network | [LINK]() | **JetonNetwork has been rebranded to Polkadot Play** the apperance is underconstruction under www.polkadotplay.com | 
-| 7a. | Jeton Network | [LINK](https://medium.com/polkadot-play/project-introduction-681820988416) | Article and Blog about this open grant and the deliverables, at least one deep dive post into each milestone subject area, SubstrateNetApi, GameEngine, ServiceLayer & ConnectFour (if accpeted) | 
+| 7a. | Jeton Network | [LINK](https://medium.polkadotplay.com/w3f-open-grant-substratenetapi-85701e9e6494) | Article and Blog about this open grant and the deliverables, at least one deep dive post into each milestone subject area, SubstrateNetApi, GameEngine, ServiceLayer & ConnectFour (if accpeted) | 
 
 https://ci.appveyor.com/project/darkfriend77/substratenetapi
