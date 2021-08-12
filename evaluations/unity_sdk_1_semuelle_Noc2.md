@@ -1,10 +1,10 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/Jeton_Network_follow_up.md
 - **Milestone:** 1
-- **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
-- **Previously successfully merged evaluation:** All by semuelle
+- **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA), [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
+- **Previously successfully merged evaluation:** All evaluations by semuelle and by Noc2
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
@@ -21,16 +21,17 @@
 | 2b. | Implement SR25519 | <ul><li>[x] </li></ul> | [gh](https://github.com/dotmog/Schnorrkel/blob/main/Schnorrkel/Sr25519v091.cs) | — |
 | 3. | Add mnemonic seed | <ul><li>[x] </li></ul> | [gh](https://github.com/JetonNetwork/SubstrateNetApi/commit/01abe3aa3d9e8aca0bf63a5c6f9bbfbd2eb780a0) | — |
 | 3a. | Recovery on lost password or wallet file | <ul><li>[x] </li></ul> | [gh](https://github.com/JetonNetwork/SubstrateNetApi/blob/503c3c1b73ab4a2e6fd6fcf3b653af0b5375da31/SubstrateNetWallet/Wallet.cs#L125) | — |
-| 6. | Documentation | <ul><li>[ ] </li></ul> | gh | "Documentation referencing prev. milestone 1 https://github.com/w3f/Grant-Milestone-Delivery/pull/102#issuecomment-795929390"  |
+| 6. | Documentation | <ul><li>[x] </li></ul> | [github issue](https://github.com/JetonNetwork/Open-Grants-Program/issues/16#issuecomment-892966649) | They improved the inline documentation |
 | 6a. | Inline Documentation | <ul><li>[x] </li></ul> | [gh](https://github.com/JetonNetwork/SubstrateNetApi/search?q=%3Csummary%3E) | XML docs |
 | 6b. | Wiki | <ul><li>[x] </li></ul> | [wiki](https://github.com/JetonNetwork/SubstrateNetApi/wiki) | — |
 | 6c. | Documentation on workflow for adding types and maintaining the api | <ul><li>[x] </li></ul> | [wiki](https://github.com/JetonNetwork/SubstrateNetApi/wiki/Types) | — |
 | 6d. | Documentation how to setup live node-template testing | <ul><li>[x] </li></ul> | [wiki](https://github.com/JetonNetwork/SubstrateNetApi/wiki/Testing#node-template) | Successfully running tests on Linux requires [patch](https://github.com/JetonNetwork/SubstrateNetApi/tree/a76220c46b0987ea8605a9ec685016dfe00ae4f0) |
 | 6e. | Custom Test | <ul><li>[x] </li></ul> | [gh](https://github.com/JetonNetwork/SubstrateNetApiExt/tree/6c9f5456ee7ea4a306eb0793bc277ae30eac6bf8) | JetonNetwork/SubstrateNetApiExt |
 | 7. | Jeton Network | <ul><li>[x] </li></ul> | [www](https://www.polkadotplay.com) | jeton.network -> polkadotplay.com |
-| 7a. | Jeton Network | <ul><li>[ ] </li></ul> | [medium](https://medium.com/polkadot-play/project-introduction-681820988416) | "Article and Blog about this open grant and the deliverables, at least one deep dive post into each milestone subject area, SubstrateNetApi, GameEngine, ServiceLayer & ConnectFour (if accpeted)" |
+| 7a. | Jeton Network | <ul><li>[x] </li></ul> | [medium](https://medium.com/polkadot-play/project-introduction-681820988416), [W3f Open Grant, SubstrateNetApi — Deep Dive](https://medium.polkadotplay.com/w3f-open-grant-substratenetapi-85701e9e6494) |Initially just an introduction, but they published another article  |
 
 
 ## General Notes
 
--
+ Everything looks very good overall. Initially only a few very small issues, but they resolved everything.
+
