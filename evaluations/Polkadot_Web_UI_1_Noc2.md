@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache License 2.0 | <ul><li>[x] </li></ul>| [Apache License 2.0 Web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/license), [Apache License 2.0 Angular](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/licence)| Correct license | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon), [polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon) | Initially very basic readme. The readme was improved. Still no inline documentation  | 
+| 0b. | Documentation | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon), [polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon) | Initially very basic readme. The readme was improved. They also [added inline documentation](https://github.com/RidOne-technologies/polkadot-angular-identicon/commit/4316c8fd2ac6351aa4ca37ecf22272c915e9dece)  | 
 | 0c. | Testing guide | <ul><li>[ ] </li></ul>| [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md) | No explanation on how to run the unit tests. "The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests" | 
 | 0d. | Article/Tutorial |<ul><li>[ ] </li></ul>| [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) | Initially no article or tutorial, but this was fixed. However the current tutorial says "npm i polkadot-angular-dependency" instead of npm i polkadot-angular-identicon (see errors below) | 
 | 1. | Angular_Identicon | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon)| See below error | 
@@ -19,9 +19,56 @@
 
 ## General Notes
 
+**Error 13.08.21**
+<pre><font color="#12488B"><b>polkadot-angular-identicon/projects/pai</b></font>$ ng build
+<font color="#A2734C">Your global Angular CLI version (12.2.1) is greater than your local version (11.2.14). The local Angular CLI version is used.</font>
+
+<font color="#A2734C">To disable this warning use &quot;ng config -g cli.warnings.versionMismatch false&quot;.</font>
+<font color="#12488B">Building Angular Package</font>
+<font color="#A2734C">******************************************************************************</font>
+<font color="#A2734C">It is not recommended to publish Ivy libraries to NPM repositories.</font>
+<font color="#A2734C">Read more here: https://v9.angular.io/guide/ivy#maintaining-library-compatibility</font>
+<font color="#A2734C">******************************************************************************</font>
+
+<font color="#D0CFCC">------------------------------------------------------------------------------</font>
+<font color="#D0CFCC">Building entry point &apos;polkadot-angular-identicon&apos;</font>
+<font color="#D0CFCC">------------------------------------------------------------------------------</font>
+<font color="#C01C28">✖</font> Compiling TypeScript sources through NGC
+<font color="#C01C28"><b>ERROR: </b></font><font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">1</font>:<font color="#E9AD0C">45</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>1</b></font></span> import { polkadotIcon, beachballIcon } from &apos;@polkadot/ui-shared/icons&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+<font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">2</font>:<font color="#E9AD0C">24</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons/types&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>2</b></font></span> import { Circle } from &apos;@polkadot/ui-shared/icons/types&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+<font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">3</font>:<font color="#E9AD0C">28</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;jdenticon&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>3</b></font></span> import * as jdenticon from &apos;jdenticon&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                           ~~~~~~~~~~~</font>
+
+<font color="#C01C28"><b>An unhandled exception occurred: </b></font><font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">1</font>:<font color="#E9AD0C">45</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>1</b></font></span> import { polkadotIcon, beachballIcon } from &apos;@polkadot/ui-shared/icons&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+<font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">2</font>:<font color="#E9AD0C">24</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons/types&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>2</b></font></span> import { Circle } from &apos;@polkadot/ui-shared/icons/types&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+<font color="#33C7DE"><b>../polkadot-angular-identicon/src/lib/render-helper.ts</b></font>:<font color="#E9AD0C">3</font>:<font color="#E9AD0C">28</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;jdenticon&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>3</b></font></span> import * as jdenticon from &apos;jdenticon&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                           ~~~~~~~~~~~</font>
+
+<font color="#C01C28"><b>See &quot;/tmp/ng-CVBLBB/angular-errors.log&quot; for further details.</b></font>
+</pre>
+
+**Warnings 13.08.21**
+
+<pre>found 1 <font color="#E9AD0C">moderate</font> severity vulnerability
+</pre>
+
 **Error 09.08.21**
-
-
 <pre><font color="#12488B"><b>RidOne/pai</b></font>$ npm i polkadot-angular-dependency
 <span style="background-color:#171421"><font color="#D0CFCC">npm</font></span> <span style="background-color:#171421"><font color="#C01C28">ERR!</font></span> <font color="#A347BA">code</font> E404
 <span style="background-color:#171421"><font color="#D0CFCC">npm</font></span> <span style="background-color:#171421"><font color="#C01C28">ERR!</font></span> <font color="#A347BA">404</font> Not Found - GET https://registry.npmjs.org/polkadot-angular-dependency - Not found
