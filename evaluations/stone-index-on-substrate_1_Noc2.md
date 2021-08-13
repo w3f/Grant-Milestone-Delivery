@@ -11,12 +11,19 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [The Unlicense node](https://github.com/stonedefi/stoneindex-node/blob/master/LICENSE), [The Unlicense UI](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/LICENSE) | Unlicense which is fine |
 | 0b. | Documentation | <ul><li>[ ] </li></ul> | [Readme](https://github.com/stonedefi/stoneindex-node/blob/master/README.md) | Readme just contains the grant application  |
 | 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Readme Frontend](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/README.md)  | Very basic testing guide, no installation instructions, No instruction on how to run the unit test |
-| 0d. | Article/Tutorial | <ul><li>[ ] </li></ul> | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md) | I'm currently unable to follow the tutorial see below errors |
-| 1. | UI/UX for Stone Platform | <ul><li>[ ] </li></ul> | [UI](https://github.com/stonedefi/stone-index-substrate-ui) | Initially they didn't deliver the UI, now I get the below warnings and it also doesn't connect to substrate: "Error Connecting to Substrate{}". See console error below | 
+| 0d. | Article/Tutorial | <ul><li>[ ] </li></ul> | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md) | I'm currently unable to follow the tutorial see below errors. **Update:** [I fixed myself](https://github.com/stonedefi/stone-index-substrate-ui/pull/1), but I'm not able to buy an index |
+| 1. | UI/UX for Stone Platform | <ul><li>[ ] </li></ul> | [UI](https://github.com/stonedefi/stone-index-substrate-ui) | Initially they didn't deliver the UI. | 
 | 2. | Indexed basket management | <ul><li>[ ] </li></ul> | [stone-index pallet](https://github.com/stonedefi/stoneindex-node/blob/master/pallets/stone-index/src/lib.rs) | Unit tests work |
 | 3. | DEX integration | <ul><li>[ ] </li></ul> | [swaps-integration-demo](https://github.com/stonedefi/stoneindex-node/tree/master/pallets/swaps-integration-demo) | Unit tests work |
 
 ## General Notes
+
+**Index Buy Error 13.08.21:**
+
+ {"ApplyExtrinsic":1}: system.ExtrinsicFailed:: [{"Module":{"index":9,"error":1}},{"weight":100010000,"class":"Normal","paysFee":"Yes"}]
+
+According to polkadot.js via the extrinsic tab:
+stoneIndex.InsufficientAssetBalance 
 
 **Console error**
 ```
