@@ -10,16 +10,52 @@
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache License 2.0 | <ul><li>[x] </li></ul>| [Apache License 2.0 Web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/license), [Apache License 2.0 Angular](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/licence)| Correct license | 
 | 0b. | Documentation | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon), [polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon) | Initially very basic readme. The readme was improved. They also [added inline documentation](https://github.com/RidOne-technologies/polkadot-angular-identicon/commit/4316c8fd2ac6351aa4ca37ecf22272c915e9dece)  | 
-| 0c. | Testing guide | <ul><li>[ ] </li></ul>| [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md) | No explanation on how to run the unit tests. "The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests" | 
-| 0d. | Article/Tutorial |<ul><li>[ ] </li></ul>| [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) | Initially no article or tutorial, but this was fixed. However the current tutorial says "npm i polkadot-angular-dependency" instead of npm i polkadot-angular-identicon (see errors below) | 
+| 0c. | Testing guide | <ul><li>[ ] </li></ul>| [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md) | Initially no explanation on how to run the unit tests. "The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests". Explanation was added, but I'm still unable to run test | 
+| 0d. | Article/Tutorial |<ul><li>[ ] </li></ul>| [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) | Initially no article or tutorial, but this was fixed. Then tutorial said "npm i polkadot-angular-dependency" instead of npm i polkadot-angular-identicon (see errors below), but this was also updated. However it still doesn't work for me | 
 | 1. | Angular_Identicon | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon)| See below error | 
 | 2. | Web_Identicon | <ul><li>[ ] </li></ul>|[polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon)| See below error | 
-| 3. | publishing into NPM registry | <ul><li>[x] </li></ul>| [Angular Identicon npm package](https://www.npmjs.com/package/polkadot-angular-identicon) / [Web Identicon npm package](https://www.npmjs.com/package/polkadot-web-identicon) | Published but doesn't install | 
+| 3. | publishing into NPM registry | <ul><li>[x] </li></ul>| [Angular Identicon npm package](https://www.npmjs.com/package/polkadot-angular-identicon) / [Web Identicon npm package](https://www.npmjs.com/package/polkadot-web-identicon) | Published but initially didn't install, now it's fixed | 
 | 4. | Documentation/ Tutorials | <ul><li>[ ] </li></ul>| [ ]()| - | 
 
 ## General Notes
 
-**Error 13.08.21**
+**Error 13.08.21 ng test**
+
+<pre><font color="#12488B"><b>olkadot-angular-identicon</b></font>$ ng test
+<font color="#A2734C">Your global Angular CLI version (12.2.1) is greater than your local version (11.2.14). The local Angular CLI version is used.</font>
+
+<font color="#A2734C">To disable this warning use &quot;ng config -g cli.warnings.versionMismatch false&quot;.</font>
+<font color="#2AA1B3">⠋</font> Generating browser application bundles...<font color="#A2734C">13 08 2021 10:50:46.976:WARN [karma]: </font>No captured browser, open http://localhost:9876/
+<font color="#26A269">13 08 2021 10:50:46.979:INFO [karma-server]: </font>Karma v6.1.2 server started at http://localhost:9876/
+<font color="#26A269">13 08 2021 10:50:46.979:INFO [launcher]: </font>Launching browsers Chrome with concurrency unlimited
+<font color="#26A269">13 08 2021 10:50:46.981:INFO [launcher]: </font>Starting browser Chrome
+<font color="#F66151">13 08 2021 10:50:46.982:ERROR [launcher]: </font>No binary for Chrome browser on your platform.
+  Please, set &quot;CHROME_BIN&quot; env variable.
+<font color="#26A269">✔</font> Browser application bundle generation complete.
+
+<font color="#F66151">Error: </font><font color="#33C7DE">projects/polkadot-angular-identicon/src/lib/render-helper.ts</font>:<font color="#E9AD0C">1</font>:<font color="#E9AD0C">45</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>1</b></font></span> import { polkadotIcon, beachballIcon } from &apos;@polkadot/ui-shared/icons&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+
+
+<font color="#F66151">Error: </font><font color="#33C7DE">projects/polkadot-angular-identicon/src/lib/render-helper.ts</font>:<font color="#E9AD0C">2</font>:<font color="#E9AD0C">24</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;@polkadot/ui-shared/icons/types&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>2</b></font></span> import { Circle } from &apos;@polkadot/ui-shared/icons/types&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</font>
+
+
+<font color="#F66151">Error: </font><font color="#33C7DE">projects/polkadot-angular-identicon/src/lib/render-helper.ts</font>:<font color="#E9AD0C">3</font>:<font color="#E9AD0C">28</font> - <font color="#F66151">error</font><font color="#5E5C64"> TS2307: </font>Cannot find module &apos;jdenticon&apos; or its corresponding type declarations.
+
+<span style="background-color:#C01C28"><font color="#300A24"><b>3</b></font></span> import * as jdenticon from &apos;jdenticon&apos;;
+<span style="background-color:#C01C28"><font color="#300A24"><b> </b></font></span> <font color="#F66151">                           ~~~~~~~~~~~</font>
+
+
+<font color="#F66151">Error: </font>Module not found: Error: Can&apos;t resolve &apos;@polkadot/ui-shared/icons&apos; in &apos;/home/david/source/web3/evaluation/RidOne/polkadot-angular-identicon/projects/polkadot-angular-identicon/src/lib&apos;
+
+<font color="#F66151">Error: </font>Module not found: Error: Can&apos;t resolve &apos;jdenticon&apos; in &apos;/home/david/source/web3/evaluation/RidOne/polkadot-angular-identicon/projects/polkadot-angular-identicon/src/lib&apos;</pre>
+
+**Error 13.08.21 ng build**
 <pre><font color="#12488B"><b>polkadot-angular-identicon/projects/pai</b></font>$ ng build
 <font color="#A2734C">Your global Angular CLI version (12.2.1) is greater than your local version (11.2.14). The local Angular CLI version is used.</font>
 
