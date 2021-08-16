@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [SubsCrypt-front/LICENSE](https://github.com/oxydev/SubsCrypt-front/blob/main/LICENSE), [SubsCrypt-npm-library/LICENSE](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/LICENSE) | Correct License |
-| 1. | UI Dashboard | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | npm run dev doesn't work for me, see below |
+| 1. | UI Dashboard | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | **12.08.21:** npm run dev doesn't work for me, see below, **16.08.21:** [Dart Sass 2.0.0 was fixed](https://github.com/oxydev/SubsCrypt-front/blob/main/package.json), but the UI doesn't show, see npm run dev errors  |
 | 1.1 | UI Dashboard for users | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | Not sure how I can test:  manage user's subscriptions and refund  |
 | 1.2 | UI Dashboard for admins | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | When I click on register. It seems to simply ask me to sign a transaction with a random address via polkadot.js.  |  
 | 2. | ES6 Module for developers |<ul><li>[x] </li></ul> | [npm package](https://www.npmjs.com/package/@oxydev/subscrypt) | |
@@ -27,8 +27,81 @@ Live version: https://subscrypt.io
 - Is there a way to see/query the transaction on-chain for the live version? 
 - snyk test found no issues
 
+**npm run dev 16.08.21**
 
-**npm run dev**
+<pre><font color="#26A269"><b>david@noc2</b></font>:<font color="#12488B"><b>~/source/web3/evaluation/oxydev/subsCrypt-front</b></font>$ npm --version
+7.20.6
+<font color="#26A269"><b>david@noc2</b></font>:<font color="#12488B"><b>~/source/web3/evaluation/oxydev/subsCrypt-front</b></font>$ npm run dev
+
+&gt; SubsCrypt-front@1.0.0 dev
+&gt; next dev -p 5000
+
+<font color="#26A269">ready</font> - started server on 0.0.0.0:5000, url: http://localhost:5000
+<font color="#2AA1B3">info</font>  - Using webpack 5. Reason: Enabled by default https://nextjs.org/docs/messages/webpack5
+<font color="#A347BA">event</font> - compiled successfully
+<font color="#A347BA">event</font> - build page: /
+<font color="#2AA1B3">wait</font>  - compiling...
+<font color="#A347BA">event</font> - compiled successfully
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+(node:11826) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 4)
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 6)
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 8)
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 10)
+(node:11826) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property &apos;protocol&apos; of &apos;window.location&apos; as it is undefined.
+    at Object.getLocationOrigin (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/utils.js:27:13)
+    at Object.parseRelativeUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js:9:89)
+    at Object.parseUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-url.js:10:39)
+    at Object.parseNextUrl (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/shared/lib/router/utils/parse-next-url.js:10:38)
+    at DevServer.handleRequest (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next-server.js:189:40)
+    at Server.&lt;anonymous&gt; (/home/david/source/web3/evaluation/oxydev/subsCrypt-front/node_modules/next/dist/server/next.js:54:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:11826) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 12)
+
+</pre>
+
+**npm run dev 12.08.21**
 
 <pre> npm run dev
 
