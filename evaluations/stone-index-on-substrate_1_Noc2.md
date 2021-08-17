@@ -11,12 +11,115 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [The Unlicense node](https://github.com/stonedefi/stoneindex-node/blob/master/LICENSE), [The Unlicense UI](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/LICENSE) | Unlicense which is fine |
 | 0b. | Documentation | <ul><li>[ ] </li></ul> | [Readme](https://github.com/stonedefi/stoneindex-node/blob/master/README.md) | Readme just contains the grant application  |
 | 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Readme Frontend](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/README.md)  | Very basic testing guide, no installation instructions, No instruction on how to run the unit test |
-| 0d. | Article/Tutorial | <ul><li>[ ] </li></ul> | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md) | I'm currently unable to follow the tutorial see below errors. **Update:** [I fixed myself](https://github.com/stonedefi/stone-index-substrate-ui/pull/1), but I'm not able to buy an index |
-| 1. | UI/UX for Stone Platform | <ul><li>[ ] </li></ul> | [UI](https://github.com/stonedefi/stone-index-substrate-ui) | Initially they didn't deliver the UI. | 
+| 0d. | Article/Tutorial | <ul><li>[x] </li></ul> | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md) | I'm currently unable to follow the tutorial see below errors. **13.08.21:** [I fixed myself](https://github.com/stonedefi/stone-index-substrate-ui/pull/1), but I'm not able to buy an index **17.08.21:** Tutorial works now |
+| 1. | UI/UX for Stone Platform | <ul><li>[ ] </li></ul> | [UI](https://github.com/stonedefi/stone-index-substrate-ui) | Initially they didn't deliver the UI. **17.08.21:** It compiles but shows a lot of warnings, no tests, see below | 
 | 2. | Indexed basket management | <ul><li>[ ] </li></ul> | [stone-index pallet](https://github.com/stonedefi/stoneindex-node/blob/master/pallets/stone-index/src/lib.rs) | Unit tests work |
 | 3. | DEX integration | <ul><li>[ ] </li></ul> | [swaps-integration-demo](https://github.com/stonedefi/stoneindex-node/tree/master/pallets/swaps-integration-demo) | Unit tests work |
 
+
 ## General Notes
+
+- The UI let’s you update the index, but there doesn’t seem to be any on-chain logic for actually updating the index: 
+https://github.com/stonedefi/stoneindex-node/blob/master/pallets/stone-index/src/lib.rs  How is this implemented? 
+- It seems their reused Logan Saether's code, which is published under the  GPL-3.0 License, without any attribution: 
+https://github.com/stonedefi/stoneindex-node/blob/bca42fb9eb1a6fe2dc1706bd1a0f91e528aa9bb7/pallets/swaps/src/lib.rs 
+https://github.com/lsaether/pallet-swaps/blob/45a65a1488250581e861175a8d7370ea6e11fa38/src/lib.rs 
+
+
+
+**UI 17.08.21:**
+
+<pre><font color="#12488B"><b>stone-index-substrate-ui</b></font>$ yarn test
+<b>yarn run v1.22.5</b>
+<font color="#AAAAAA">$ CI=true react-app-rewired test --env=jsdom</font>
+FAIL src/__tests__/App.js
+  ● Test suite failed to run
+</pre>
+
+**Index Buy Error 17.08.21:**
+
+index.js:1 2021-08-17 09:45:12        REGISTRY: Error: findMetaEvent: Unable to find Event with index 0x93c7/[147,199]
+    at assert (assert.mjs:24)
+    at assertReturn (assert.mjs:33)
+    at TypeRegistry.findMetaEvent (registry.mjs:263)
+    at Function.decodeEvent (Event.mjs:119)
+    at new GenericEvent (Event.mjs:97)
+    at new Type (registry.mjs:289)
+    at decodeU8a (decodeU8a.mjs:20)
+    at decodeU8a (decodeU8a.mjs:21)
+    at decodeStruct (Struct.mjs:85)
+    at new Struct (Struct.mjs:119)
+    at new <anonymous> (Struct.mjs:137)
+    at new Type (registry.mjs:289)
+    at decodeU8a (decodeU8a.mjs:20)
+    at decodeU8a (decodeU8a.mjs:21)
+    at decodeU8a (decodeU8a.mjs:21)
+    at Function.decodeVec (Vec.mjs:42)
+    at new Vec (Vec.mjs:19)
+    at new <anonymous> (Vec.mjs:48)
+    at initType (createType.mjs:39)
+    at createTypeUnsafe (createType.mjs:59)
+    at RpcCore._newType (index.js:460)
+    at RpcCore._formatStorageData (index.js:402)
+    at RpcCore._formatOutput (index.js:381)
+    at callWithRegistry (index.js:262)
+console.<computed> @ index.js:1
+apply @ logger.mjs:47
+error @ logger.mjs:87
+createTypeUnsafe @ createType.mjs:61
+_newType @ index.js:460
+_formatStorageData @ index.js:402
+_formatOutput @ index.js:381
+callWithRegistry @ index.js:262
+async function (async)
+callWithRegistry @ index.js:253
+(anonymous) @ index.js:268
+Observable._trySubscribe @ Observable.ts:239
+Observable.subscribe @ Observable.ts:218
+ConnectableObservable.connect @ ConnectableObservable.ts:44
+(anonymous) @ refCountDelay.mjs:17
+Observable._trySubscribe @ Observable.ts:239
+Observable.subscribe @ Observable.ts:218
+subscribeToResult @ subscribeToResult.ts:37
+CombineLatestSubscriber._complete @ combineLatest.ts:289
+Subscriber.complete @ Subscriber.ts:127
+(anonymous) @ subscribeToArray.ts:13
+Observable._trySubscribe @ Observable.ts:239
+Observable.subscribe @ Observable.ts:218
+CombineLatestOperator.call @ combineLatest.ts:255
+Observable.subscribe @ Observable.ts:215
+MapOperator.call @ map.ts:60
+Observable.subscribe @ Observable.ts:215
+(anonymous) @ memo.mjs:13
+Observable._trySubscribe @ Observable.ts:239
+Observable.subscribe @ Observable.ts:218
+CatchOperator.call @ catchError.ts:106
+Observable.subscribe @ Observable.ts:215
+DistinctUntilChangedOperator.call @ distinctUntilChanged.ts:75
+Observable.subscribe @ Observable.ts:215
+ConnectableObservable.connect @ ConnectableObservable.ts:44
+(anonymous) @ refCountDelay.mjs:17
+Observable._trySubscribe @ Observable.ts:239
+Observable.subscribe @ Observable.ts:218
+MapOperator.call @ map.ts:60
+Observable.subscribe @ Observable.ts:215
+innerSubscribe @ innerSubscribe.ts:112
+SwitchMapSubscriber._innerSub @ switchMap.ts:141
+SwitchMapSubscriber._next @ switchMap.ts:127
+Subscriber.next @ Subscriber.ts:100
+Subject.next @ Subject.ts:71
+ReplaySubject.nextInfiniteTimeWindow @ ReplaySubject.ts:53
+Subscriber._next @ Subscriber.ts:140
+Subscriber.next @ Subscriber.ts:100
+DistinctUntilChangedSubscriber._next @ distinctUntilChanged.ts:122
+Subscriber.next @ Subscriber.ts:100
+Subscriber._next @ Subscriber.ts:140
+Subscriber.next @ Subscriber.ts:100
+update @ index.js:337
+value @ index.mjs:244
+value @ index.mjs:179
+Show 24 more frames
+index.js:1 2021-08-17 09:45:12        RPC-CORE: Unable to decode storage system.events: createType(Vec<EventRecord>):: findMetaEvent: Unable to find Event with index 0x93c7/[147,199]
 
 **Index Buy Error 13.08.21:**
 
