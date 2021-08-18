@@ -9,13 +9,13 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [SubsCrypt-front/LICENSE](https://github.com/oxydev/SubsCrypt-front/blob/main/LICENSE), [SubsCrypt-npm-library/LICENSE](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/LICENSE) | Correct License |
-| 1. | UI Dashboard | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | **12.08.21:** npm run dev doesn't work for me, see below, **16.08.21:** [Dart Sass 2.0.0 was fixed](https://github.com/oxydev/SubsCrypt-front/blob/main/package.json), but the UI doesn't show, see npm run dev errors  |
-| 1.1 | UI Dashboard for users | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | Not sure how I can test:  manage user's subscriptions and refund  |
-| 1.2 | UI Dashboard for admins | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | When I click on register. It seems to simply ask me to sign a transaction with a random address via polkadot.js.  |  
+| 1. | UI Dashboard | <ul><li>[x] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | **12.08.21:** npm run dev doesn't work for me, see below, **16.08.21:** [Dart Sass 2.0.0 was fixed](https://github.com/oxydev/SubsCrypt-front/blob/main/package.json), but the UI doesn't show, see npm run dev errors **18.08.21:** Works now  |
+| 1.1 | UI Dashboard for users | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | **12.08.21:** Not sure how I can test:  manage user's subscriptions and refund **18.08.21:** Same issue with polkadot.js extension as below, subscription worked with the help of https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcanvas.subscrypt.io%3A443#/accounts. However refunding didn't seem to work |
+| 1.2 | UI Dashboard for admins | <ul><li>[ ] </li></ul> | [SubsCrypt-front](https://github.com/oxydev/SubsCrypt-front) | When I click on register. It seems to simply ask me to sign a transaction with a random address via polkadot.js rather than the address I have selected at the beginning. When I add a plan as admin it doesn't show up as active plan  |  
 | 2. | ES6 Module for developers |<ul><li>[x] </li></ul> | [npm package](https://www.npmjs.com/package/@oxydev/subscrypt) | |
 | 2.1 | Implementation of ES6 Module for developers | <ul><li>[ ] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | |
-| 2.2 | Documentation of ES6 Module | <ul><li>[x] </li></ul> | [Readme](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/README.md) | Readme explains how to integrate it and some of the code has inline documentation |
-| 3. | Unit Test | <ul><li>[ ] </li></ul> | [here](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/src/index.test.js) | npm test fails see below |
+| 2.2 | Documentation of ES6 Module | <ul><li>[x] </li></ul> | [Readme](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/README.md) | Readme explains how to integrate it and some of the code has inline documentation. But the documentation [here](https://oxydev.github.io/SubsCrypt-docs/#/Tech/Front_end/index) should probably also be updated |
+| 3. | Unit Test | <ul><li>[x] </li></ul> | [here](https://github.com/oxydev/SubsCrypt-npm-library/blob/main/src/index.test.js) | **12.08.21:** npm test fails see below **18.08.21:** Works now |
 
 ## General Notes
 
