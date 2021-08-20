@@ -7,19 +7,18 @@ jobs:
   update_sheet:
     runs-on: ubuntu-latest
     steps:
-      - name: 'get all added files in the PR'
+      - name: 'get names of all added files in the PR'
         id: 'files'
         uses: Ana06/get-changed-files@v1.2
 
-      - name: 'check out application'
+      - name: 'check out delivery file'
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-        # requires checkout first
       - name: 'parse milestone'
         id: milestone_parser
-        uses: w3f/read-file-action@v2.13
+        uses: w3f/parse-milestone-delivery-action@v2.13
         with:
           path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
 
@@ -30,15 +29,15 @@ jobs:
           link: ${{ steps.milestone_parser.outputs.application_document }}
         with:
           script: |
-            var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
-            let application_doc = process.env.link.match(uri_pattern);
+            var url_pattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
+            let application_doc = process.env.link.match(url_pattern);
             let application_doc_path = application_doc[0];
             let application_doc_path_array = application_doc_path.split('/');
             application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
             core.setOutput('application_doc_path', application_doc_path);
             core.setOutput('application_doc_name', application_doc_path_array[application_doc_path_array.length - 1]);
 
-      - name: 'Get application commit data'
+      - name: 'get application commit data'
         if: ${{ success() }}
         uses: octokit/request-action@v2.x
         id: get_application_commit_data
@@ -47,28 +46,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-#       - name: Find delivery author in application PRs
-#         uses: actions/github-script@0.9.0
-#         id: match_author
-#         env:
-#           commits: ${{steps.get_application_commit_data.outputs.data}}
-#           pr_author: ${{github.event.pull_request.user.login}}
-#         with: 
-#           script: |
-#             let commits = JSON.parse(process.env.commits);
-#             for(commit of commits) {
-#               if(commit.author.login === process.env.pr_author) {
-#                 return true;
-#               }
-#             }
-#             core.setFailed(`PR author does not match any author of application.`);
+      - name: 'find delivery author in application PRs'
+        uses: actions/github-script@0.9.0
+        id: match_author
+        env:
+          commits: ${{steps.get_application_commit_data.outputs.data}}
+          pr_author: ${{github.event.pull_request.user.login}}
+        with: 
+          script: |
+            let commits = JSON.parse(process.env.commits);
+            for(commit of commits) {
+              if(commit.author.login === process.env.pr_author) {
+                return true;
+              }
+            }
+            core.setFailed(`PR author does not match any author of application.`);
 
-      - name: 'get application'
+      - name: 'get application file'
         run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/${{ steps.application_doc_path.outputs.application_doc_path }}"
 
       - name: 'parse application file'
         id: grant_parser
-        uses: mmagician/read-file-action@v1
+        uses: w3f/parse-grant-application-action@v1
         with:
           path: "${{ steps.application_doc_path.outputs.application_doc_name }}"
 
