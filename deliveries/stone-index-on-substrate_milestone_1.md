@@ -17,6 +17,9 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache | [Apache License](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/LICENSE)| ... |
+| 0b. | Documentation | We provides different kinds of documents, starts from inline documentation of the code to setup and deployment docs, Testing Guide and etc.   | ... |
+| 0c. | Testing Guide | [Testing Guide](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/TestingGuide.md)| ... |
+| 0d. | Article/Tutorial | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md)| ... |
 | 1. | UI/UX for Stone Platform |https://github.com/stonedefi/stone-index-substrate-ui|For the usage guide, please see details Tuturial.md in /tutorial folder| 
 | 2. | Indexed basket management |https://github.com/stonedefi/stoneindex-node| The app document is updated in README.md| 
 | 3. | DEX integration | https://github.com/stonedefi/stoneindex-node/tree/master/pallets/swaps-integration-demo| ...| 
