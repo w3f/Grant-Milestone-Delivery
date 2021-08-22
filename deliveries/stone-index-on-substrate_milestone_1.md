@@ -22,5 +22,5 @@
 | 0d. | Article/Tutorial | [Tutorial](https://github.com/stonedefi/stone-index-substrate-ui/blob/master/tutorial/Tutorial.md)| ... |
 | 1. | UI/UX for Stone Platform |https://github.com/stonedefi/stone-index-substrate-ui|For the usage guide, please see details Tuturial.md in /tutorial folder| 
 | 2. | Indexed basket management |https://github.com/stonedefi/stoneindex-node| The app document is updated in README.md| 
-| 3. | DEX integration | https://github.com/stonedefi/stoneindex-node/tree/master/pallets/swaps-integration-demo| ...| 
+| 3. | DEX integration | [stone-index-swaps-integration-demo](https://github.com/stonedefi/stone-index-swaps-integration-demo)| This repo is for the demo purpose that how will stone-index integrate with a dex swap application. The code repo has a dependency of [pallet-swap](https://github.com/lsaether/pallet-swaps)| 
 
