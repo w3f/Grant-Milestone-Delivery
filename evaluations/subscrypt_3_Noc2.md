@@ -19,7 +19,7 @@
 | 2.3 | Django Library Unit test |  <ul><li>[ ] </li></ul> |  | |
 | 2.4 | Node.js Library |  <ul><li>[ ] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | Same as previous milestone! |
 | 2.5 | Node.js Library documentation |  <ul><li>[ ] </li></ul> |  [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | Not a "fully comprehensive documentation to use our library" |
-| 2.6 | Node.js Library Unit test | <ul><li>[ ] </li></ul> |  [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | Not "The code will have unit-test coverage (100%) to ensure functionality and robustness", see below |
+| 2.6 | Node.js Library Unit test | <ul><li>[x] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | **18.08.21:** Not "The code will have unit-test coverage (100%) to ensure functionality and robustness", see below **24.08.21:** [They added additional and sufficient tests](https://github.com/oxydev/SubsCrypt-npm-library/pull/27) |
 
 ## General Notes
 
