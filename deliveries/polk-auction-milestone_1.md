@@ -12,7 +12,7 @@
 | 0b. | Documentation | [Readme documentation](https://github.com/CrommVardek/polk-auction-core/blob/develop/README.md)
 | 0c. | Testing Guide | [Testing section](https://github.com/CrommVardek/polk-auction-core/blob/develop/README.md#Tests) |
 | 0d. | Docker | [Dockerfile](https://github.com/CrommVardek/polk-auction-core/blob/develop/Dockerfile) |
-| 1. | Current-Auction end-point |   |  The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
-| 2. | Current-Parachains end-point |  |  The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
-| 3. | Current-Crowdloan end-point |   | The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
+| 1. | Current-Auction end-point | [Endpoint implementation](https://github.com/CrommVardek/polk-auction-core/blob/develop/src/main/polkauction/core/route/AuctionRouting.kt)  |  The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
+| 2. | Current-Parachains end-point |  [Endpoint implementation](https://github.com/CrommVardek/polk-auction-core/blob/develop/src/main/polkauction/core/route/ParachainRouting.kt) |  The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
+| 3. | Current-Crowdloan end-point |  [Endpoint implementation](https://github.com/CrommVardek/polk-auction-core/blob/develop/src/main/polkauction/core/route/CrowdloanRouting.kt)  | The websocket client to connect to a node was not developed. An off-chain database is used to store information about the known parachains.
 
