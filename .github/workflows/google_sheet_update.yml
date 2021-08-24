@@ -29,8 +29,8 @@ jobs:
           link: ${{ steps.milestone_parser.outputs.application_document }}
         with:
           script: |
-            var uri_pattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/i;
-            let application_doc = process.env.link.match(uri_pattern);
+            var url_pattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
+            let application_doc = process.env.link.match(url_pattern);
             let application_doc_path = application_doc[0];
             let application_doc_path_array = application_doc_path.split('/');
             application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
