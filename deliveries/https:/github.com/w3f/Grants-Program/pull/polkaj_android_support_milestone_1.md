@@ -2,9 +2,7 @@
     
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**
 
-* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
-
-https://github.com/w3f/Grants-Program/pull/573/files#diff-a9e0c30a18173f453bc93c8e7cde4aa7982688f812c1badca05a72e8406d2ea7
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkaj_android_support.md
 
 * **Milestone Number:** 1
 
