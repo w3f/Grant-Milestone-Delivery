@@ -4,7 +4,6 @@
 
 * **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/163
 * **Milestone Number:** [Milestone #2](https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_1.md#milestone-2--event-manager---part-1)
-https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
@@ -29,7 +28,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-
 
 **Note**  
 
-* Considering the comments from first milestone delivery we have added below components that where not in scope inorder bring a utility for this delivery
+* Considering the comments from first milestone delivery we have added below components that where not in scope inorder to bring a utility for this delivery
     * Push Notification
     * Balance Filter
     * Minimal UI for Registering Balance Notification
