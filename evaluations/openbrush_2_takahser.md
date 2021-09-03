@@ -21,6 +21,6 @@
 ## General Notes
 
 - documentation and delivery documents partially lack in writing quality which makes them hard to understand
-- Unit tests are failing
+- Unit tests were failing at first but now work after the [patch](https://github.com/Supercolony-net/openbrush-contracts/tree/592b4c7b5129fafc227ef603bb8b96e1dab0eb68) was pushed. I recommend setting up a CI workflow and integrate it with Github to prevent this situation from happening again, e.g. using [Github Actions](https://dev.to/bampeers/rust-ci-with-github-actions-1ne9).
 - I wasn't [able to setup a node](https://github.com/paritytech/canvas-node/issues/75) hence I wasn't able to run the integration tests
 - the Rust code examples on the documentation fail to execute
