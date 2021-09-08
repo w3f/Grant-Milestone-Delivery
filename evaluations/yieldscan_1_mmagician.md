@@ -16,8 +16,29 @@
 |     2. | Ledger Wallet Support      | <ul><li>[ ] </li></ul> | https://yieldscan.app/                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                               |
 |     3. | Docker                     | <ul><li>[x] </li></ul> | <ul><li>[Docker file](https://hub.docker.com/r/sahilnanda/yieldscan-frontend)</li><li>[Docker command](https://github.com/yieldscan/yieldscan-frontend/tree/develop#docker)</li></ul>                                                                                                                                                                                                |                                                                                                                                                               |
 
-### General notes
+## General notes
 
 A lot of code duplication between the crawler and the api repos, probably everything under `src/models` & `src/interfaces` & large parts of other sub-directories. Would be good to consider using for example git submodules to share the code.
 
 Could you also point to the exact location of the patch used for going around ledger's batch Tx's please?
+
+### Frontend
+
+Cannot run the frontend with `yarn dev`. Getting the following errors:
+```
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at eval (webpack-internal:///./yieldscan.config.js:23:21)
+    at Module../yieldscan.config.js (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/pages/index.js:72:1)
+    at __webpack_require__ (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///./lib/store.js:40:74)
+    at Module../lib/store.js (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/pages/index.js:52:1)
+    at __webpack_require__ (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///./components/common/layouts/base.js:9:68)
+    at Module../components/common/layouts/base.js (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/pages/index.js:22:1)
+    at __webpack_require__ (/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/server/webpack-runtime.js:33:43)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/cache/webpack/client-development/1.pack_' -> '/Users/marcin/dev/yieldscan/yieldscan-frontend/.next/cache/webpack/client-development/1.pack'
+false
+```
+
+I believe I followed all the steps from the README's tutorial.
