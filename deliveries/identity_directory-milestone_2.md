@@ -9,6 +9,6 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Implement logic for sending tokens | https://github.com/Shard-Labs/identity-hub/blob/main/src/store/actions.ts#L322 | Implement logic for sending tokens; retrieve balance, parse inputs, display transaction fee, create the transfer transaction. |
-| 2. | Make the web service work offline | https://github.com/Shard-Labs/identity-hub/blob/main/src/store/actions.ts#L211 https://github.com/Shard-Labs/identity-hub/blob/main/src/components/navigation/SideBar.vue#L11 | Web service can be used in offline mode; the user can specify a local node to which will the service connect. |
+| 1. | Implement logic for sending tokens | https://github.com/Shard-Labs/identity-hub/blob/main/src/store/actions.ts#L381 | Implement logic for sending tokens; retrieve balance, parse inputs, display transaction fee, create the transfer transaction. |
+| 2. | Make the web service work offline | https://github.com/Shard-Labs/identity-hub/blob/main/src/store/actions.ts#L270 https://github.com/Shard-Labs/identity-hub/blob/main/src/components/navigation/SideBar.vue#L11 | Web service can be used in offline mode; the user can specify a local node to which will the service connect. |
 
