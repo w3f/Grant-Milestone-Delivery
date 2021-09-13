@@ -1,36 +1,30 @@
 # Evaluation
 
-* **Status:** Rejected
+* **Status:** In progress
 * **Application Document:** https://github.com/w3f/Open-Grants-Program/blob/master/applications/evanesco_networks.md
 * **Milestone:** 1
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
 * **Previously successfully merged evaluation:** All by mmagician
 
-## Milestone 1
+| Number | Deliverable          | Accepted               | Link                                                                                                                      | Evaluation notes                                                                                                                   |
+|--------|----------------------|------------------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+|    0a. | License              | <ul><li>[ ] </li></ul> | License missing from https://github.com/Evanesco-Labs/WhiteNoise.rs & https://github.com/Evanesco-Labs/WhiteNoise-RPC.git |                                                                                                                                    |
+|    0b. | Documentation        | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/whitenoise.md)        |                                                                                                                                    |
+|    0c. | Testing Guide        | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md)                                                |                                                                                                                                    |
+|    0d. | Article/Tutorial     | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md)                                                | Tutorial improved                                                                                                                  |
+|     1. | P2Private-rust Repo  | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs)                                                                    |                                                                                                                                    |
+|     2. | private service node | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/substrate.git)                                                                    | Integration with substrate limited to running the WhiteNoise.rs binary alongside the substrate node, which can accept RPC requests |
+|     3. | Testnet              | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md#4-whitenoise-testnet)                           | Straightforward to setup after the documentation had been updated                                                                  |
 
-### Substrate integration
+## General notes
 
-According to the deliverables in the contract, the following was expected:
-> the substrate node integrate with P2Private-rust module and perform as a Tor-like network
+### Testnet
 
-
-Instead, the code that is available in WhiteNoise-For-Substrate.git is not an integration into substrate. It does two things:
-- it is running your binary alongside `node-template` using the same MultiAddress
-- it exposes one RPC endpoint for information
-
-I might be missing something important here, but at the moment I fail to see how the deployed substrate nodes would form a Tor-like network.
-
-### Unit tests
-Overall, your contract states a test coverage of 70%, which is not achieved at the current stage.
-
-### Misc
----
-`get_main_net_peers(&mut self, _cnt: i32)`
-
-_cnt is never used, e.g. in `network_test.rs`: 
+Some warnings emitted: 
 ```
-client.get_main_net_peers(10).await;
+Dial upgrade error Upgrade(Select(Failed))
 ```
 
-## Milestone 2
-The WhiteNoise-client.rs repository is basically a copy of the `sdk` directory in your WhiteNoise.rs repo, with some methods renamed.
+This happens at every connection. Would be good to either address the issue, or if non-important at all to the functionality of this project, silence it.
+
+Quick testnet validation with e.g. a Docker setup would be advantagous. Please consider that for your future projects. It's also easy to then set-up CI/CD pipeline that runs an integration test before making changes to master.
