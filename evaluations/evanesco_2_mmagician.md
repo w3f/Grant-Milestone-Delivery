@@ -12,7 +12,7 @@
 | 0b.    | Documentation    | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise-client.rs/blob/main/README.md) |                  |
 | 0c.    | Testing Guide    | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise-client.rs/blob/main/README.md) |                  |
 | 0d.    | Article/Tutorial | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise-client.rs/blob/main/README.md) |                  |
-| 1.     | P2Private-cli    | <ul><li>[ ] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise-client.rs/blob/main/README.md) |                  |
+| 1.     | P2Private-cli    | <ul><li>[x] </li></ul> | [Link](https://github.com/Evanesco-Labs/WhiteNoise-client.rs/blob/main/README.md) |                  |
 
 ## General notes
 
