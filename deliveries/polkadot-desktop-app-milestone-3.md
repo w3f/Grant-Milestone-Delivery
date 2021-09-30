@@ -8,13 +8,16 @@
 | Number | Deliverable                   | Link          | Notes |
 | --- | -------------------------------- | ------------- |------ |
 | 1.  | Accounts list redesign           | [Figma designs][figma-designs] | Also includes proposed design for network multi-selection per account in extension and apps (see [#5439][apps-5439]) |
-| 2.  | Accounts list implementation     | https://polkadot.js.org/apps/#/accounts <br/> Source code changes mainly in [Accounts][code-accounts] - consult PRs for details.<br/>Automated tests - primarily in [Accounts][code-accounts-tests] - consult PRs for details |<ol><li>[Summary bar][pr-summary-bar] + [styles][pr-summary-bar-styles]</li><li>[Tag styles][pr-tag-styles]</li><li>[Account collapsible details row][pr-row-details]</li><ol> |
-| 3.  | Accounts sidebar implementation  | TODO | Figma designs: work-in-progress | 
-| 4.  | Accounts App modals improvements | <ol><li>[Create/derive - remove code duplication][pr-modals-duplication]</li></ol> | development in progress |
+| 2.  | Accounts list implementation     | New designs are applied to [Accounts][app-accounts] and [Address book][app-address-book]. <br/> Source code changes mainly in [App Accounts][code-accounts] - consult PRs for details.<br/>Automated tests - primarily in [App Accounts][code-accounts-tests] - consult PRs for details. | <ol><li>[Summary bar][pr-summary-bar] + [styles][pr-summary-bar-styles]</li><li>[Tag styles][pr-tag-styles]</li><li>[Account collapsible details row][pr-row-details]</li><li>[Style address balances][pr-style-address-balances]</li><li>[Add accounts sorting][pr-accounts-sorting]</li><li>[Replace SUI popup with custom one][pr-replace-sui-popup]</li><li>[Display parent above account name][pr-display-parent]</li><li>[Account actions popup redesign][pr-accounts-popup]</li><li>[Explorer links placement][pr-accounts-buttons]</li><li>[Add hover to expand button][pr-expand-hover]</li><li>[Account filter placement][pr-move-filter-input]</li><li>[Style sort input][pr-sort-style]</li><li>[Apply table style to Address Book][pr-row-details-addresses]</li><li>[Apply button and filter styles to Address Book][pr-filter-addresses]</li><li>[Correct row coloring when filtering][pr-filtering-bugfix]</li><ol> |
+| 3.  | Accounts sidebar implementation  | Click on any account in [apps][app].<br/>Source code changes mainly in [Sidebar][code-sidebar] - consult PRs for details. | <ol><li>[Accounts flags placement][pr-flags-width]</li><li>[Icons for explorer links][pr-sidebar-links]</li><li>[Style flags][pr-sidebar-flags]</li><li>[Edit name and tags][pr-sidebar-edit]</li><li>[Style identity and balances sections][pr-sidebar-identity]</li><li>[Increase width][pr-sidebar-width]</li><li>[Style upper part][pr-sidebar-style-upper]</li></ol> | 
+| 4.  | Accounts App modals improvements | Try interacting with "Create account" modal on [Accounts page][app-accounts] with `Esc` and `Enter`. Other changes are mostly low-level in code, consult PRs for details.| <ol><li>[Create/derive - remove code duplication][pr-modals-duplication]</li><li>[Replace SUI modals with custom ones][pr-replace-sui-modal]</li><li>[Support keyboard in modals][pr-keyboard-in-modal]</li></ol> |
 | 5.  | Documentation updates            | TODO | |
 
-Almost every PR listed includes automated tests.
+Most of the PRs listed include automated tests.
 
+[app]: https://polkadot.js.org/apps
+[app-accounts]: https://polkadot.js.org/apps/#/accounts 
+[app-address-book]: https://polkadot.js.org/apps/#/addresses 
 [figma-designs]: https://www.figma.com/file/5NAICV06SHNbbIoYhrUS3u/PolkaDot?node-id=2839%3A8075
 [code-accounts]: https://github.com/polkadot-js/apps/blob/master/packages/page-accounts/src/Accounts/index.tsx
 [code-accounts-tests]: https://github.com/polkadot-js/apps/blob/master/packages/page-accounts/src/Accounts/index.spec.ts
@@ -30,10 +33,11 @@ Almost every PR listed includes automated tests.
 [pr-replace-sui-popup]: https://github.com/polkadot-js/apps/pull/5924
 [pr-display-parent]: https://github.com/polkadot-js/apps/pull/5947
 [pr-keyboard-in-modal]: https://github.com/polkadot-js/apps/pull/5968
+[code-sidebar]: https://github.com/polkadot-js/apps/tree/master/packages/page-accounts/src/Sidebar
 [pr-flags-width]: https://github.com/polkadot-js/apps/pull/5957
 [pr-sidebar-links]: https://github.com/polkadot-js/apps/pull/5999
 [pr-sidebar-flags]: https://github.com/polkadot-js/apps/pull/6003
-[pr-replace-sui-popup]: https://github.com/polkadot-js/apps/pull/6007
+[pr-accounts-popup]: https://github.com/polkadot-js/apps/pull/6007
 [pr-accounts-buttons]: https://github.com/polkadot-js/apps/pull/6012
 [pr-sidebar-edit]: https://github.com/polkadot-js/apps/pull/6049
 [pr-expand-hover]: https://github.com/polkadot-js/apps/pull/6052
