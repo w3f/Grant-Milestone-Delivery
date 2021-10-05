@@ -4,7 +4,7 @@
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkaj_android_support.md
 
-* **Milestone Number:** 1
+* **Milestone Number:** 2
 
 
 | Number | Deliverable | Link | Notes |
