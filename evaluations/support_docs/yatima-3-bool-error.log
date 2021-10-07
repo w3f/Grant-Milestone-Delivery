@@ -1,0 +1,65 @@
+====================
+
+Version: 3.0.0-ae78e5a-x86_64-macos
+
+   0: backtrace::backtrace::trace
+   1: backtrace::capture::Backtrace::new
+   2: sp_panic_handler::set::{{closure}}
+   3: std::panicking::rust_panic_with_hook
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/std/src/panicking.rs:628:17
+   4: std::panicking::begin_panic_handler::{{closure}}
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/std/src/panicking.rs:521:13
+   5: std::sys_common::backtrace::__rust_end_short_backtrace
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/std/src/sys_common/backtrace.rs:141:18
+   6: rust_begin_unwind
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/std/src/panicking.rs:517:5
+   7: core::panicking::panic_fmt
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/core/src/panicking.rs:93:14
+   8: core::result::unwrap_failed
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/core/src/result.rs:1617:5
+   9: <pallet_template::pallet::Call<T> as frame_support::traits::dispatch::UnfilteredDispatchable>::dispatch_bypass_filter
+  10: <node_template_runtime::Call as frame_support::traits::dispatch::UnfilteredDispatchable>::dispatch_bypass_filter
+  11: <node_template_runtime::Call as sp_runtime::traits::Dispatchable>::dispatch
+  12: <sp_runtime::generic::checked_extrinsic::CheckedExtrinsic<AccountId,Call,Extra> as sp_runtime::traits::Applyable>::apply
+  13: frame_executive::Executive<System,Block,Context,UnsignedValidator,AllPallets,COnRuntimeUpgrade>::apply_extrinsic
+  14: <node_template_runtime::Runtime as sp_block_builder::runtime_decl_for_BlockBuilder::BlockBuilder<sp_runtime::generic::block::Block<sp_runtime::generic::header::Header<u32,sp_runtime::traits::BlakeTwo256>,sp_runtime::generic::unchecked_extrinsic::UncheckedExtrinsic<sp_runtime::multiaddress::MultiAddress<<<sp_runtime::MultiSignature as sp_runtime::traits::Verify>::Signer as sp_runtime::traits::IdentifyAccount>::AccountId,()>,node_template_runtime::Call,sp_runtime::MultiSignature,(frame_system::extensions::check_spec_version::CheckSpecVersion<node_template_runtime::Runtime>,frame_system::extensions::check_tx_version::CheckTxVersion<node_template_runtime::Runtime>,frame_system::extensions::check_genesis::CheckGenesis<node_template_runtime::Runtime>,frame_system::extensions::check_mortality::CheckMortality<node_template_runtime::Runtime>,frame_system::extensions::check_nonce::CheckNonce<node_template_runtime::Runtime>,frame_system::extensions::check_weight::CheckWeight<node_template_runtime::Runtime>,pallet_transaction_payment::ChargeTransactionPayment<node_template_runtime::Runtime>)>>>>::apply_extrinsic
+  15: sp_block_builder::runtime_decl_for_BlockBuilder::apply_extrinsic_native_call_generator::{{closure}}
+  16: std::thread::local::LocalKey<T>::with
+  17: sc_executor::native_executor::WasmExecutor::with_instance::{{closure}}
+  18: sc_executor::wasm_runtime::RuntimeCache::with_instance
+  19: <sc_executor::native_executor::NativeExecutor<D> as sp_core::traits::CodeExecutor>::call
+  20: sp_state_machine::execution::StateMachine<B,H,N,Exec>::execute_aux
+  21: sp_state_machine::execution::StateMachine<B,H,N,Exec>::execute_using_consensus_failure_handler
+  22: <sc_service::client::call_executor::LocalCallExecutor<Block,B,E> as sc_client_api::call_executor::CallExecutor<Block>>::contextual_call
+  23: <sc_service::client::client::Client<B,E,Block,RA> as sp_api::CallApiAt<Block>>::call_api_at
+  24: sp_block_builder::runtime_decl_for_BlockBuilder::apply_extrinsic_call_api_at
+  25: <node_template_runtime::RuntimeApiImpl<__SR_API_BLOCK__,RuntimeApiImplCall> as sp_block_builder::BlockBuilder<__SR_API_BLOCK__>>::BlockBuilder_apply_extrinsic_runtime_api_impl
+  26: <node_template_runtime::RuntimeApiImpl<Block,C> as sp_api::ApiExt<Block>>::execute_in_transaction
+  27: <core::future::from_generator::GenFuture<T> as core::future::future::Future>::poll
+  28: <sc_service::task_manager::prometheus_future::PrometheusFuture<T> as core::future::future::Future>::poll
+  29: <futures_util::future::select::Select<A,B> as core::future::future::Future>::poll
+  30: <core::future::from_generator::GenFuture<T> as core::future::future::Future>::poll
+  31: <tracing_futures::Instrumented<T> as core::future::future::Future>::poll
+  32: std::thread::local::LocalKey<T>::with
+  33: futures_executor::local_pool::block_on
+  34: tokio::runtime::task::core::Core<T,S>::poll
+  35: <core::panic::unwind_safe::AssertUnwindSafe<F> as core::ops::function::FnOnce<()>>::call_once
+  36: tokio::runtime::task::harness::Harness<T,S>::poll
+  37: tokio::runtime::blocking::pool::Inner::run
+  38: tokio::runtime::context::enter
+  39: std::sys_common::backtrace::__rust_begin_short_backtrace
+  40: core::ops::function::FnOnce::call_once{{vtable.shim}}
+  41: <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/alloc/src/boxed.rs:1636:9
+      <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/alloc/src/boxed.rs:1636:9
+      std::sys::unix::thread::Thread::new::thread_start
+             at /rustc/0fa3190394475a84360b34e074e719d519bc40f1/library/std/src/sys/unix/thread.rs:106:17
+  42: __pthread_start
+
+
+Thread 'tokio-runtime-worker' panicked at 'called `Result::unwrap()` on an `Err` value: Error(ParseError { input: LocatedSpan { offset: 0, line: 1, fragment: "package bool where\n\ndef Bool: Type = #Bool\n\ndef Bool.True: Bool = #Bool.true\ndef Bool.False: Bool = #Bool.false\n\ndef Bool.eql: ∀ (x y: Bool) -> Bool = #Bool.eql\ndef Bool.lte: ∀ (x y: Bool) -> Bool = #Bool.lte\ndef Bool.lth: ∀ (x y: Bool) -> Bool = #Bool.lth\ndef Bool.gte: ∀ (x y: Bool) -> Bool = #Bool.gte\ndef Bool.gth: ∀ (x y: Bool) -> Bool = #Bool.gth\n\n\ndef Bool.and: ∀ (x y: Bool) -> Bool = #Bool.and\ndef Bool.or:  ∀ (x y: Bool) -> Bool = #Bool.or\ndef Bool.xor: ∀ (x y: Bool) -> Bool = #Bool.xor\n\ndef Bool.not: ∀ (x: Bool) -> Bool = #Bool.not\n\ndef Bool.neq (x y: Bool): Bool = Bool.not (Bool.eql x y)\n\ndef Bool.if (A: Type) (bool : Bool) (t f: A): A = (case bool) (λ _ => A) t f", extra: () }, expected: None, errors: [Nom(Tag), Nom(Tag), Nom(Alt)] })', /Users/marcin/dev/yatima/substrate-node-template/pallets/template/src/lib.rs:82
+
+This is a bug. Please report it at:
+
+	support.anonymous.an
