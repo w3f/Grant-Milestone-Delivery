@@ -14,7 +14,7 @@
 | 0d. | Tutorial | <ul><li>[x] </li></ul> | [Tutorial](https://medium.com/oak-blockchain/user-tutorial-of-oaks-hackathon-winning-quadratic-funding-dapp-f484fe6a506f) |  Tutorial includes a youtube video  |
 | 1. | UI Design | <ul><li>[ ] </li></ul> | []() |  The design was never shared with us: "We will create UI sketches to demonstrate the user flow of the web application, and post here for advice" |
 | 2. | Javascript Library | <ul><li>[ ] </li></ul> | []() | Didn’t add any APIs to Polkadot js -> needs an amendment |
-| 3. | Application Implementation | <ul><li>[ ] </li></ul> | [quadratic-funding-webapp](https://github.com/OAK-Foundation/quadratic-funding-webapp) |  Already funded via a hackathon: https://medium.com/oak-blockchain/user-tutorial-of-oaks-hackathon-winning-quadratic-funding-dapp-f484fe6a506f. [See our guidelines](https://github.com/w3f/Grants-Program#hackathons)  |
+| 3. | Application Implementation | <ul><li>[ ] </li></ul> | [quadratic-funding-webapp](https://github.com/OAK-Foundation/quadratic-funding-webapp) | Hackathon project: https://medium.com/oak-blockchain/user-tutorial-of-oaks-hackathon-winning-quadratic-funding-dapp-f484fe6a506f. [See our guidelines](https://github.com/w3f/Grants-Program#hackathons)  |
 | 4. | Deployment Instructions | <ul><li>[x] </li></ul> | [deployment](https://github.com/OAK-Foundation/quadratic-funding-webapp#deployment) | Very basic deployment instructions  |
 
 ## General Notes
