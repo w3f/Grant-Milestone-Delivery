@@ -15,7 +15,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [License](https://github.com/SubGame-Network/SubGameModule/blob/master/LICENSE) |
-| 0b. | Documentation | [SubGame Network m2](https://github.com/w3f/Grants-Program/blob/master/applications/SubGame_Network_m2.md) |
+| 0b. | Documentation | - [SubGame Network m2](https://github.com/w3f/Grants-Program/blob/master/applications/SubGame_Network_m2.md) <br> - [https://github.com/SubGame-Network/SubGameModule](https://github.com/SubGame-Network/SubGameModule) |
 | 0c. | Testing Guide | [Testing Guide](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets)|  
 | 1a. | pallet-lease | [pallet-lease](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/lease) | 
 | 1b. | pallet-stake-nft | [pallet-stake-nft](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/stake-nft) |
