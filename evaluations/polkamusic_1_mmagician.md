@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress
+* **Status:** Accepted
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkamusic.md
 * **Milestone:** 1
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
@@ -12,7 +12,7 @@
 | 0b.    | Documentation                     | <ul><li>[x] </li></ul> | https://github.com/polkamusic/PolkaMusic-Core/blob/main/README.md              |                          |
 | 0c.    | Testing Guide                     | <ul><li>[x] </li></ul> | https://github.com/polkamusic/PolkaMusic-Core/blob/main/doc/examples_data.md   |                          |
 | 1.     | Contract Rights Management Pallet | <ul><li>[x] </li></ul> | https://github.com/polkamusic/PolkaMusic-Core/blob/main/pallets/crm/src/lib.rs |                          |
-| 2.     | Rights Management Portal          | <ul><li>[ ] </li></ul> | https://github.com/polkamusic/Rights-Management-Portal                         | See the UI section below |
+| 2.     | Rights Management Portal          | <ul><li>[x] </li></ul> | https://github.com/polkamusic/Rights-Management-Portal                         | See the UI section below |
 
 ## Comments
 
@@ -43,6 +43,8 @@ How am I supposed to know if it succeeded? How can I check the status of the con
 Where is the data supposed to be stored, actually? Could you provide some helper commands for checking the data written to IPFS?
 
 Also, how can I change which substrate chain I connect to? In the logs I see: `You are connected to chain Development using Substrate Node v0.0.1-248ae28-x86_64-linux-gnu` - but I would like to change this to my local version of the node that you ship with the `PolkaMusic-core` repo.
+
+Update: somewhat improved, but again not really user-centric - there is a choice of two networks, both of which hardcoded. No way to input your own url in case you're not running it from `localhost:9944`.
 
 Lastly, the error messages that pop up in the top right hand corner are very easy to miss, and not informative at all, e.g.:
 "Missing mp3, artowkr, or csv files, save error".
