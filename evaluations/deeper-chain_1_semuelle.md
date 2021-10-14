@@ -22,4 +22,4 @@
 
 ## General Notes
 
-—
+- Referenced `atomos-dev` repository material republished as `deeper-chain/scripts/micropayment_example`
