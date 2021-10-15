@@ -5,6 +5,16 @@
 * **Application Document:** [link](https://github.com/w3f/Grants-Program/blob/master/applications/polkadot-desktop-app.md)
 * **Milestone Number:** 3
 
+## Visual summary of the changes
+
+|          | Before | After |
+| -------  | -------| ----- |
+| Accounts | ![image](https://user-images.githubusercontent.com/430616/137498444-0ead994f-a541-482d-a9cb-62c7aeb09918.png) | ![image](https://user-images.githubusercontent.com/430616/137498472-52ab3a62-8eb7-4afc-894e-a1768c68427f.png) |
+| Popup    | ![image](https://user-images.githubusercontent.com/430616/137498521-c03a3c56-79c0-4990-80f4-3f51c13d349a.png) | ![image](https://user-images.githubusercontent.com/430616/137498539-ecc5afa1-d2bf-4db3-bf87-08b5cd9318ab.png) |
+| Sidebar  | ![image](https://user-images.githubusercontent.com/430616/137497848-c3e86adc-c713-4313-9e68-d5503089ad1b.png) | ![image](https://user-images.githubusercontent.com/430616/137497997-973064d3-8941-4d70-a954-01a54b215078.png) |
+
+## Detailed delivery description
+
 | Number | Deliverable                   | Link          | Notes |
 | --- | -------------------------------- | ------------- |------ |
 | 1.  | Accounts list redesign           | [Figma designs][figma-designs] | Also includes proposed design for network multi-selection per account in extension and apps (see [#5439][apps-5439]) |
