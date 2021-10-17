@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress
+* **Status:** Accepted
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_1.md
 * **Milestone:** 3
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
