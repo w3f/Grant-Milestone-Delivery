@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/440
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -10,20 +10,24 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | GPLv3 |  <ul><li>[x] </li></ul> | [chain-data-collector](https://github.com/cryptolab-network/chain-data-collector/blob/main/LICENSE), [cryptolab-web-server](https://github.com/cryptolab-network/cryptolab-web-server/blob/main/LICENSE)  | Correct License |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [README.md web-server](https://github.com/cryptolab-network/cryptolab-web-server/blob/staking-rewards-collector/README.md), [README.md staking rewards collector](https://github.com/cryptolab-network/polkadot-staking-site/blob/staking-rewards-collector/README.md)   | Very little documentation, only readmes, Almost no inline documentation or even rust doc support  |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Readme](https://github.com/cryptolab-network/cryptolab-web-server/blob/staking-rewards-collector/README.md)  |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Readme](https://github.com/cryptolab-network/cryptolab-web-server/blob/staking-rewards-collector/README.md), [cryptolab-package](https://github.com/cryptolab-network/cryptolab-package)  |  |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Docker files](https://1drv.ms/u/s!AiJ0e-NXMtnGg2S6fXOq4Fm4aKaa?e=WRWmdZ)  |  |
-| 1.  | Integrate Staking Rewards Collector to CryptoLab | <ul><li>[ ] </li></ul> | [backend](https://github.com/cryptolab-network/cryptolab-web-server/blob/staking-rewards-collector) | unused imports: `NaiveDate`, 4 test fail |
-| 2.  | Integrate Staking Rewards Collector to CryptoLab/RESTful APIs | <ul><li>[ ] </li></ul> | [](https://github.com/cryptolab-network/polkadot-staking-site)  | It’s integrated into the main page: https://www.cryptolab.network/tools, 24 vulnerabilities! A lot of DEPRECATION WARNING |
+| 1.  | Integrate Staking Rewards Collector to CryptoLab | <ul><li>[x] </li></ul> | [backend](https://github.com/cryptolab-network/cryptolab-web-server/blob/staking-rewards-collector) | Initially: unused imports: `NaiveDate`, 4 test fail, but everything works now |
+| 2.  | Integrate Staking Rewards Collector to CryptoLab/RESTful APIs | <ul><li>[x] </li></ul> | [polkadot-staking-site](https://github.com/cryptolab-network/polkadot-staking-site)  | It’s integrated into the main page: https://www.cryptolab.network/tools, non-devDependencies vulnerabilities are resolved. Deprecated warnings are resolved. |
 | 3.  | UI for filter | <ul><li>[x] </li></ul> | [Filter](https://github.com/cryptolab-network/polkadot-staking-site/commit/b4b0498c09fff2f89394d2fe0baf07137aed558b) |  |
-| 4.  | UI for data visualizer  | <ul><li>[ ] </li></ul> | [visualizer](https://github.com/cryptolab-network/polkadot-staking-site/commit/b4b0498c09fff2f89394d2fe0baf07137aed558b)  | Doesn’t show weekly rewards for: 16iNp8A8EU6naBzvDmJR2i4hgP5EQnZHeGQ6omKeK9C4NTkp |
+| 4.  | UI for data visualizer  | <ul><li>[x] </li></ul> | [visualizer](https://github.com/cryptolab-network/polkadot-staking-site/commit/b4b0498c09fff2f89394d2fe0baf07137aed558b)  | Fixed: Doesn’t show weekly rewards for: 16iNp8A8EU6naBzvDmJR2i4hgP5EQnZHeGQ6omKeK9C4NTkp |
 | 5.  | Drop-down List for download report  | <ul><li>[x] </li></ul> | [Help](https://github.com/cryptolab-network/polkadot-staking-site/commit/9ca81c793612c35bbc163d22b7a0dcfe00e87855)  | Implement |
 | 7.  | Deployment | <ul><li>[x] </li></ul> | [website](https://www.cryptolab.network/tools/dotSR) | Deployed |
 | 8.  | Test live environment | <ul><li>[x] </li></ul> | [Test doc](https://github.com/cryptolab-network/cryptolab-package/blob/main/compatibility_test_report.md)  | Only tested on three browsers, but according to contract |
-| 9.  | Polishing | <ul><li>[ ] </li></ul> | []()  | Didn’t reach out to grants teams so far. Probably part of the milestone delivery itself.   |
+| 9.  | Polishing | <ul><li>[x] </li></ul> | [see](https://github.com/w3f/Grant-Milestone-Delivery/pull/209#issuecomment-872291752)  | Part of the milestone delivery  |
 
 ## General Notes
 
-**NPM issues:**
+They fixed everything very quickly. I personally think that the design of the website and icons can be improved further, but this isn’t part of the delivery. 
+
+**Initial issues (01.07.2021):**
+
+**NPM:**
 
 <pre>up to date, audited 1711 packages in 2s
 
