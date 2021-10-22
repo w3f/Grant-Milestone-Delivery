@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress
+* **Status:** Accepted
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_1.md
 * **Milestone:** 2
 * **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
@@ -29,6 +29,8 @@ Good delivery documentation: extra features listed, reasonable changes of scope 
 
 Is there a way to make the `<project root>/deploy.sh` more testing-friendly, e.g. to have it accept extra options, e.g. to not force re-building all the actions? Also, individual `deploy` scripts could be refactored avoid code duplication.
 
+Update: extra options added.
+
 ## Integration test
 
 The example fork of substrate frontend doesn't seem to work properly. The dropdown list for Event Source won't expand and also the Push Notification Token field is not clickable and I can't enter anything there. 
@@ -38,3 +40,5 @@ The push notification example could be slightly better explained - how does the 
 I also made a quick [PR](https://github.com/HugoByte/aurras/pull/11) to fix the frontend template not building locally.
 
 Finally, would be good to get some auotmation in the integration test.
+
+Update: tutorials expanded, including the testing instructions, although no end-to-end integration test available (also would be hard since it requires integration with a 3rd party provider).
