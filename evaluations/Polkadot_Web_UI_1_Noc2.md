@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Status:** In progress 
+* **Status:**  Accepted 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Polkadot_Web_UI.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,15 +9,17 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | Apache License 2.0 | <ul><li>[x] </li></ul>| [Apache License 2.0 Web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon/blob/main/license), [Apache License 2.0 Angular](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/licence)| Correct license | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon), [polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon) | Initially very basic readme. The readme was improved. They also [added inline documentation](https://github.com/RidOne-technologies/polkadot-angular-identicon/commit/4316c8fd2ac6351aa4ca37ecf22272c915e9dece)  | 
-| 0c. | Testing guide | <ul><li>[ ] </li></ul>| [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md) | Initially no explanation on how to run the unit tests. "The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests". Explanation was added, but I'm still unable to run test | 
-| 0d. | Article/Tutorial |<ul><li>[ ] </li></ul>| [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) | Initially no article or tutorial, but this was fixed. Then tutorial said "npm i polkadot-angular-dependency" instead of npm i polkadot-angular-identicon (see errors below), but this was also updated. However it still doesn't work for me | 
-| 1. | Angular_Identicon | <ul><li>[ ] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon)| See below error | 
-| 2. | Web_Identicon | <ul><li>[ ] </li></ul>|[polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon)| See below error | 
+| 0b. | Documentation | <ul><li>[x] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon), [polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon) | Initially very basic readme. The readme was improved. They also [added inline documentation](https://github.com/RidOne-technologies/polkadot-angular-identicon/commit/4316c8fd2ac6351aa4ca37ecf22272c915e9dece)  | 
+| 0c. | Testing guide | <ul><li>[x] </li></ul>| [Testing guide](https://github.com/RidOne-technologies/polkadot-angular-identicon/blob/main/README.md) | **13.08.21:** Initially no explanation on how to run the unit tests. "The code will have unit-test coverage (min. 70%) to ensure functionality and robustness. In the guide we will describe how to run these tests". Explanation was added, but I'm still unable to run test **26.10.21:** Works now | 
+| 0d. | Article/Tutorial |<ul><li>[x] </li></ul>| [Polkadot Angular Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-angular-identicon-4659) / [Polkadot Web Identicon tutorial](https://dev.to/morgueye4/how-to-use-polkadot-web-identicon-2344) |  **13.08.21:** Initially no article or tutorial, but this was fixed. Then tutorial said "npm i polkadot-angular-dependency" instead of npm i polkadot-angular-identicon (see errors below), but this was also updated. However it still doesn't work for me **26.10.21:** Works now | 
+| 1. | Angular_Identicon | <ul><li>[x] </li></ul>|[polkadot-angular-identicon](https://github.com/RidOne-technologies/polkadot-angular-identicon)| **13.08.21:** See below error **26.10.21:** Works now | 
+| 2. | Web_Identicon | <ul><li>[x] </li></ul>|[polkadot-web-identicon](https://github.com/RidOne-technologies/polkadot-web-identicon)| **13.08.21:** See below error **26.10.21:** Works now | 
 | 3. | publishing into NPM registry | <ul><li>[x] </li></ul>| [Angular Identicon npm package](https://www.npmjs.com/package/polkadot-angular-identicon) / [Web Identicon npm package](https://www.npmjs.com/package/polkadot-web-identicon) | Published but initially didn't install, now it's fixed | 
-| 4. | Documentation/ Tutorials | <ul><li>[ ] </li></ul>| [ ]()| - | 
+| 4. | Documentation/ Tutorials | <ul><li>[x] </li></ul>| [pai-example](https://github.com/RidOne-technologies/pai-example), [pwi-example](https://github.com/RidOne-technologies/pwi-example)| See tutorials above, plus the examples | 
 
 ## General Notes
+
+Initially the delivery had a lot of issues and it took them a long time to fix it, but now everything works. 
 
 **Error 13.08.21 ng test**
 
