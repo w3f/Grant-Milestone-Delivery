@@ -11,8 +11,8 @@
 | Number | Deliverable | Link | Notes
 | ------------- | ------------- | ------------- |  ------------- |
 | 1. | Protocol and Library Upgrade | [Milestone&nbsp;Delivery&nbsp;Repository](https://github.com/SaitoTech/Saito-Game-Engine) | Relevant code and documentation grouped into a single repository. |
-| 2. | Documentation<br /> | -  [Saito Game Engine](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/saito-game-engine.md) and [API](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/api.md)<br /> - [Test Game]()<br /> - [Cryptocurrency Integration](https://github.com/SaitoTech/saito-crypto-api-modules)| Includes upgrades and work from [milestone one](https://github.com/w3f/Grant-Milestone-Delivery/pull/188) <br />Includes extensive [inline documentation](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/gametestsuite/gametestsuite.js) of functions.<br />Delivered with milestone one.|
-| 3. | Game | [Test Game](https://github.com/SaitoTech/Saito-Game-Engine/tree/master/test-game)<br /> | A Saito Game module that exposes all game functionality.<br />All game functions can be tested agains live test and main-nets. |
+| 2. | Documentation<br /> | -  [Saito Game Engine](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/saito-game-engine.md) and [API](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/api.md)<br /> - [Test Game](https://github.com/SaitoTech/Saito-Game-Engine/tree/master/gametestsuite)<br /> - [Cryptocurrency Integration](https://github.com/SaitoTech/saito-crypto-api-modules)| Includes upgrades and work from [milestone one](https://github.com/w3f/Grant-Milestone-Delivery/pull/188) <br />Includes extensive [inline documentation](https://github.com/SaitoTech/Saito-Game-Engine/blob/master/gametestsuite/gametestsuite.js) of functions.<br />Delivered with milestone one.|
+| 3. | Game | [Test Game](https://github.com/SaitoTech/Saito-Game-Engine/tree/master/gametestsuite)<br /> | A Saito Game module that exposes all game functionality.<br />All game functions can be tested agains live test and main-nets. |
 |||||
 
 
