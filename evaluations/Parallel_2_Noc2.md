@@ -9,15 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 |      0 | License  | <ul><li>[x] </li></ul> | [License](https://github.com/parallel-finance/parallel/blob/master/LICENSE)  | Correct License |
-|    1.a | Substrate module: Staking DOT | <ul><li>[ ] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L399)  |  |  |
-|    1.b | Substrate module: Unstaking DOT | <ul><li>[ ] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L462)  |  |
-|    1.c | Substrate module: Exchange Rate     | <ul><li>[ ] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L514)  |  |
-|    1.d | Substrate module: Slashing Scenario | <ul><li>[ ] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L614)  |  |
-|    1.e | Substrate module: KSM | <ul><li>[ ] </li></ul> | [ ]()  |  |
+|    1.a | Substrate module: Staking DOT | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L399)  |  Implemented  |
+|    1.b | Substrate module: Unstaking DOT | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L462)  | Implemented |
+|    1.c | Substrate module: Exchange Rate     | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L514)  | Implemented |
+|    1.d | Substrate module: Slashing Scenario | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L614)  | Implemented |
+|    1.e | Substrate module: KSM | <ul><li>[ ] </li></ul> | [ ]()  | UI currently only supports KSM, and not polkadot |
 |    2   | Validator evaluation schema | <ul><li>[ ] </li></ul> | [ ]()  |  |
-|    3. | Integration with front-end  | <ul><li>[ ] </li></ul> | [Integration code](https://gist.github.com/yz89/34bb2954f0682b9837733f21a199c7ed)  |  they didn't open source the entire front-end, only the integration, which isn't really useful but according to the contract |
+|    3. | Integration with front-end  | <ul><li>[ ] </li></ul> | [Integration code](https://gist.github.com/yz89/34bb2954f0682b9837733f21a199c7ed)  |  they didn't open source the entire front-end, only the integration, which isn't really useful but according to the contract. However the UI currently doesn't let me select polkadot. Also the code hasn't be updated since the last time |
 |    4. | Article/Tutorial  | <ul><li>[ ] </li></ul> | [Testnet Experience](https://docs.parallel.fi/a-guide-to-testnet/testnet-experience)  |  |
-|    5. | Testing and Documentation | <ul><li>[ ] </li></ul> | [Test guide](https://github.com/parallel-finance/parallel/wiki/Test-guide)  | Very short testing guide, but the code has inline documentation. Currently I get the below error  |
+|    5. | Testing and Documentation | <ul><li>[ ] </li></ul> | [Test guide](https://github.com/parallel-finance/parallel/wiki/Test-guide)  | Very short testing guide, but the code has inline documentation and unit tests. Currently I get the below error  |
 |    6. | User Testing   | <ul><li>[x] </li></ul> | [Notion](https://parallelfinance.notion.site/Web3-Grant-Milestone-2-d98aed16ce0642348c2133f0b7d91ab2)  | They claim to have done user testing, it's difficult to prove, but they don’t provide a lot of information  |  
 
 ## General Notes
