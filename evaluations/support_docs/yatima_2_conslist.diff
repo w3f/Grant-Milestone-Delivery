@@ -1,0 +1,804 @@
+diff --git a/src/conslist.rs b/../sp-im/src/conslist.rs
+index 9ca5bc3..4b210aa 100644
+--- a/src/conslist.rs
++++ b/../sp-im/src/conslist.rs
+@@ -1,3 +1,5 @@
++// adapted from https://github.com/bodil/im-rs/blob/10.2.0/src/conslist.rs
++
+ // This Source Code Form is subject to the terms of the Mozilla Public
+ // License, v. 2.0. If a copy of the MPL was not distributed with this
+ // file, You can obtain one at http://mozilla.org/MPL/2.0/.
+@@ -15,26 +17,37 @@
+ //! of the length of the list at the current position, as an extra
+ //! optimisation, so getting the length of a list is also O(1).
+ //! Otherwise, operations are generally O(n).
+-//!
+-//! Unless you know you want a `ConsList`, you're probably better off
+-//! using a [`Vector`][vector::Vector], which has more efficient
+-//! performance characteristics in almost all cases. The `ConsList` is
+-//! particularly useful as an immutable stack where you only push and
+-//! pop items from the front of the list. Beware that it has no
+-//! mutable operations.
+-//!
+-//! [vector::Vector]: ../vector/struct.Vector.html
+-
+-use shared::Shared;
+-use std::borrow::Borrow;
+-use std::cmp::Ordering;
+-use std::fmt::{Debug, Error, Formatter};
+-use std::hash::{Hash, Hasher};
+-use std::iter::{FromIterator, Iterator, Sum};
+-use std::ops::{Add, Deref};
+-use std::sync::Arc;
+ 
+-use self::ConsListNode::{Cons, Nil};
++use crate::shared::Shared;
++use sp_std::{
++  borrow::Borrow,
++  cmp::Ordering,
++  fmt::{
++    Debug,
++    Error,
++    Formatter,
++  },
++  hash::{
++    Hash,
++    Hasher,
++  },
++  iter::{
++    FromIterator,
++    Iterator,
++    Sum,
++  },
++  ops::{
++    Add,
++    Deref,
++  },
++  sync::Arc,
++  vec::Vec,
++};
++
++use self::ConsListNode::{
++  Cons,
++  Nil,
++};
+ 
+ /// Construct a list from a sequence of elements.
+ ///
+@@ -44,18 +57,12 @@ use self::ConsListNode::{Cons, Nil};
+ /// three numbers 1, 2 and 3:
+ ///
+ /// ```
+-/// # #[macro_use] extern crate im;
+-/// # use im::conslist::{ConsList, cons};
++/// # #[macro_use] extern crate sp_im;
++/// # use sp_im::conslist::{ConsList, cons};
+ /// # fn main() {
+-/// assert_eq!(
+-///   conslist![1, 2, 3],
+-///   ConsList::from(vec![1, 2, 3])
+-/// );
++/// assert_eq!(conslist![1, 2, 3], ConsList::from(vec![1, 2, 3]));
+ ///
+-/// assert_eq!(
+-///   conslist![1, 2, 3],
+-///   cons(1, cons(2, cons(3, ConsList::new())))
+-/// );
++/// assert_eq!(conslist![1, 2, 3], cons(1, cons(2, cons(3, ConsList::new()))));
+ /// # }
+ /// ```
+ #[macro_export]
+@@ -84,13 +91,10 @@ macro_rules! conslist {
+ /// # Examples
+ ///
+ /// ```
+-/// # #[macro_use] extern crate im;
+-/// # use im::conslist::{ConsList, cons};
++/// # #[macro_use] extern crate sp_im;
++/// # use sp_im::conslist::{ConsList, cons};
+ /// # fn main() {
+-/// assert_eq!(
+-///   cons(1, cons(2, cons(3, ConsList::new()))),
+-///   conslist![1, 2, 3]
+-/// );
++/// assert_eq!(cons(1, cons(2, cons(3, ConsList::new()))), conslist![1, 2, 3]);
+ /// # }
+ /// ```
+ ///
+@@ -123,8 +127,7 @@ macro_rules! conslist {
+ pub fn cons<A, RA, RD>(car: RA, cdr: RD) -> ConsList<A>
+ where
+   RA: Shared<A>,
+-    RD: Borrow<ConsList<A>>,
+-{
++  RD: Borrow<ConsList<A>>, {
+   cdr.borrow().cons(car)
+ }
+ 
+@@ -141,15 +144,6 @@ where
+ /// of the length of the list at the current position, as an extra
+ /// optimisation, so getting the length of a list is also O(1).
+ /// Otherwise, operations are generally O(n).
+-///
+-/// Unless you know you want a `ConsList`, you're probably better off
+-/// using a [`Vector`][vector::Vector], which has more efficient
+-/// performance characteristics in almost all cases. The `ConsList` is
+-/// particularly useful as an immutable stack where you only push and
+-/// pop items from the front of the list. Beware that it has no
+-/// mutable operations.
+-///
+-/// [vector::Vector]: ../vector/struct.Vector.html
+ pub struct ConsList<A>(Arc<ConsListNode<A>>);
+ 
+ #[doc(hidden)]
+@@ -160,15 +154,11 @@ pub enum ConsListNode<A> {
+ 
+ impl<A> ConsList<A> {
+   /// Construct an empty list.
+-    pub fn new() -> ConsList<A> {
+-        ConsList(Arc::new(Nil))
+-    }
++  pub fn new() -> ConsList<A> { ConsList(Arc::new(Nil)) }
+ 
+   /// Construct a list with a single element.
+   pub fn singleton<R>(v: R) -> ConsList<A>
+-    where
+-        R: Shared<A>,
+-    {
++  where R: Shared<A> {
+     ConsList(Arc::new(Cons(1, v.shared(), conslist![])))
+   }
+ 
+@@ -187,9 +177,7 @@ impl<A> ConsList<A> {
+   ///
+   /// Time: O(1)
+   pub fn cons<R>(&self, car: R) -> ConsList<A>
+-    where
+-        R: Shared<A>,
+-    {
++  where R: Shared<A> {
+     ConsList(Arc::new(Cons(self.len() + 1, car.shared(), self.clone())))
+   }
+ 
+@@ -231,10 +219,11 @@ impl<A> ConsList<A> {
+   /// list:
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
+-    /// # use im::conslist::{ConsList, cons};
++  /// # #[macro_use] extern crate sp_im;
++  /// # use sp_im::conslist::{ConsList, cons};
+   /// # use std::fmt::Debug;
+-    /// fn walk_through_list<A>(list: &ConsList<A>) where A: Debug {
++  /// fn walk_through_list<A>(list: &ConsList<A>)
++  /// where A: Debug {
+   ///   match list.uncons() {
+   ///     None => (),
+   ///     Some((ref head, ref tail)) => {
+@@ -251,7 +240,7 @@ impl<A> ConsList<A> {
+   ///
+   /// [head]: #method.head
+   /// [tail]: #method.tail
+-    /// [None]: https://doc.rust-lang.org/std/option/enum.Option.html#variant.None
++  /// [None]: https://doc.rust-lang.org/core/option/enum.Option.html#variant.None
+   pub fn uncons(&self) -> Option<(Arc<A>, ConsList<A>)> {
+     match *self.0 {
+       Nil => None,
+@@ -259,9 +248,42 @@ impl<A> ConsList<A> {
+     }
+   }
+ 
++  /// Get the two first elements and the tail of a list.
++  ///
++  /// This function performs both the [`head`][head] function twice and
++  /// the [`tail`][tail] function in one go, returning a tuple of
++  /// the double head and the tail, or [`None`][None] if the list is empty.
++  ///
++  /// # Examples
++  ///
++  /// This can be useful when pattern matching your way through a
++  /// list:
++  ///
++  /// ```
++  /// # #[macro_use] extern crate sp_im;
++  /// # use sp_im::conslist::{ConsList, cons};
++  /// # use std::fmt::Debug;
++  /// fn walk_through_list<A>(list: &ConsList<A>)
++  /// where A: Debug {
++  ///   match list.uncons2() {
++  ///     None => (),
++  ///     Some((ref head, ref head2, ref tail)) => {
++  ///       print!("{:?} {:?}", head, head2);
++  ///       walk_through_list(tail)
++  ///     }
++  ///   }
++  /// }
++  /// # fn main() {
++  /// # }
++  /// ```
++  ///
++  /// Time: O(1)
++  ///
++  /// [head]: #method.head
++  /// [tail]: #method.tail
++  /// [None]: https://doc.rust-lang.org/core/option/enum.Option.html#variant.None
+   pub fn uncons2(&self) -> Option<(Arc<A>, Arc<A>, ConsList<A>)> {
+-        self.uncons()
+-            .and_then(|(a1, d)| d.uncons().map(|(a2, d)| (a1, a2, d)))
++    self.uncons().and_then(|(a1, d)| d.uncons().map(|(a2, d)| (a1, a2, d)))
+   }
+ 
+   /// Get the length of a list.
+@@ -274,7 +296,7 @@ impl<A> ConsList<A> {
+   /// # Examples
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
++  /// # #[macro_use] extern crate sp_im;
+   /// # fn main() {
+   /// assert_eq!(5, conslist![1, 2, 3, 4, 5].len());
+   /// # }
+@@ -282,7 +304,7 @@ impl<A> ConsList<A> {
+   pub fn len(&self) -> usize {
+     match *self.0 {
+       Nil => 0,
+-            Cons(l, _, _) => l,
++      Cons(l, ..) => l,
+     }
+   }
+ 
+@@ -293,19 +315,16 @@ impl<A> ConsList<A> {
+   /// # Examples
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
+-    /// # use im::conslist::ConsList;
++  /// # #[macro_use] extern crate sp_im;
++  /// # use sp_im::conslist::ConsList;
+   /// # fn main() {
+-    /// assert_eq!(
+-    ///   conslist![1, 2, 3].append(conslist![7, 8, 9]),
+-    ///   conslist![1, 2, 3, 7, 8, 9]
+-    /// );
++  /// assert_eq!(conslist![1, 2, 3].append(conslist![7, 8, 9]), conslist![
++  ///   1, 2, 3, 7, 8, 9
++  /// ]);
+   /// # }
+   /// ```
+   pub fn append<R>(&self, right: R) -> Self
+-    where
+-        R: Borrow<Self>,
+-    {
++  where R: Borrow<Self> {
+     match *self.0 {
+       Nil => right.borrow().clone(),
+       Cons(_, ref a, ref d) => cons(a.clone(), &d.append(right)),
+@@ -319,13 +338,10 @@ impl<A> ConsList<A> {
+   /// # Examples
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
+-    /// # use im::conslist::ConsList;
++  /// # #[macro_use] extern crate sp_im;
++  /// # use sp_im::conslist::ConsList;
+   /// # fn main() {
+-    /// assert_eq!(
+-    ///   conslist![1, 2, 3, 4, 5].reverse(),
+-    ///   conslist![5, 4, 3, 2, 1]
+-    /// );
++  /// assert_eq!(conslist![1, 2, 3, 4, 5].reverse(), conslist![5, 4, 3, 2, 1]);
+   /// # }
+   /// ```
+   pub fn reverse(&self) -> ConsList<A> {
+@@ -337,23 +353,17 @@ impl<A> ConsList<A> {
+   }
+ 
+   /// Get an iterator over a list.
+-    pub fn iter(&self) -> Iter<A> {
+-        Iter {
+-            current: self.clone(),
+-        }
+-    }
++  pub fn iter(&self) -> Iter<A> { Iter { current: self.clone() } }
+ 
+   /// Sort a list using a comparator function.
+   ///
+   /// Time: O(n log n)
+   pub fn sort_by<F>(&self, cmp: F) -> ConsList<A>
+-    where
+-        F: Fn(&A, &A) -> Ordering,
+-    {
++  where F: Fn(&A, &A) -> Ordering {
+     fn merge<A>(
+       la: &ConsList<A>,
+       lb: &ConsList<A>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<A> {
+       match (la.uncons(), lb.uncons()) {
+         (Some((ref a, _)), Some((ref b, ref lb1)))
+@@ -361,7 +371,7 @@ impl<A> ConsList<A> {
+         {
+           cons(b.clone(), &merge(la, lb1, cmp))
+         }
+-                (Some((a, la1)), Some((_, _))) => cons(a.clone(), &merge(&la1, lb, cmp)),
++        (Some((a, la1)), Some((..))) => cons(a.clone(), &merge(&la1, lb, cmp)),
+         (None, _) => lb.clone(),
+         (_, None) => la.clone(),
+       }
+@@ -369,17 +379,19 @@ impl<A> ConsList<A> {
+ 
+     fn merge_pairs<A>(
+       l: &ConsList<ConsList<A>>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<ConsList<A>> {
+       match l.uncons2() {
+-                Some((a, b, rest)) => cons(merge(&a, &b, cmp), &merge_pairs(&rest, cmp)),
++        Some((a, b, rest)) => {
++          cons(merge(&a, &b, cmp), &merge_pairs(&rest, cmp))
++        }
+         _ => l.clone(),
+       }
+     }
+ 
+     fn merge_all<A>(
+       l: &ConsList<ConsList<A>>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<A> {
+       match l.uncons() {
+         None => conslist![],
+@@ -390,9 +402,9 @@ impl<A> ConsList<A> {
+ 
+     fn ascending<A>(
+       a: &Arc<A>,
+-            f: &Fn(ConsList<A>) -> ConsList<A>,
++      f: &dyn Fn(ConsList<A>) -> ConsList<A>,
+       l: &ConsList<A>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<ConsList<A>> {
+       match l.uncons() {
+         Some((ref b, ref lb)) if cmp(a, b) != Ordering::Greater => {
+@@ -406,7 +418,7 @@ impl<A> ConsList<A> {
+       a: &Arc<A>,
+       la: &ConsList<A>,
+       lb: &ConsList<A>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<ConsList<A>> {
+       match lb.uncons() {
+         Some((ref b, ref bs)) if cmp(a, b) == Ordering::Greater => {
+@@ -418,7 +430,7 @@ impl<A> ConsList<A> {
+ 
+     fn sequences<A>(
+       l: &ConsList<A>,
+-            cmp: &Fn(&A, &A) -> Ordering,
++      cmp: &dyn Fn(&A, &A) -> Ordering,
+     ) -> ConsList<ConsList<A>> {
+       match l.uncons2() {
+         Some((ref a, ref b, ref xs)) if cmp(a, b) == Ordering::Greater => {
+@@ -434,9 +446,8 @@ impl<A> ConsList<A> {
+     merge_all(&sequences(self, &cmp), &cmp)
+   }
+ 
+-    pub fn ptr_eq(&self, other: &Self) -> bool {
+-        Arc::ptr_eq(&self.0, &other.0)
+-    }
++  /// Compare the Arc pointers of two ConsList
++  pub fn ptr_eq(&self, other: &Self) -> bool { Arc::ptr_eq(&self.0, &other.0) }
+ 
+   /// Insert an item into a sorted list.
+   ///
+@@ -449,32 +460,29 @@ impl<A> ConsList<A> {
+   /// # Examples
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
++  /// # #[macro_use] extern crate sp_im;
+   /// # fn main() {
+-    /// assert_eq!(
+-    ///   conslist![2, 4, 6].insert(5).insert(1).insert(3),
+-    ///   conslist![1, 2, 3, 4, 5, 6]
+-    /// );
++  /// assert_eq!(conslist![2, 4, 6].insert(5).insert(1).insert(3), conslist![
++  ///   1, 2, 3, 4, 5, 6
++  /// ]);
+   /// # }
+   /// ```
+   pub fn insert<T>(&self, item: T) -> ConsList<A>
+   where
+     A: Ord,
+-        T: Shared<A>,
+-    {
++    T: Shared<A>, {
+     self.insert_ref(item.shared())
+   }
+ 
+   fn insert_ref(&self, item: Arc<A>) -> ConsList<A>
+-    where
+-        A: Ord,
+-    {
++  where A: Ord {
+     match *self.0 {
+       Nil => ConsList(Arc::new(Cons(0, item, ConsList::new()))),
+       Cons(_, ref a, ref d) => {
+         if a.deref() > item.deref() {
+           self.cons(item)
+-                } else {
++        }
++        else {
+           d.insert_ref(item).cons(a.clone())
+         }
+       }
+@@ -488,9 +496,9 @@ impl<A> ConsList<A> {
+   /// # Examples
+   ///
+   /// ```
+-    /// # #[macro_use] extern crate im;
+-    /// # use im::conslist::ConsList;
+-    /// # use std::iter::FromIterator;
++  /// # #[macro_use] extern crate sp_im;
++  /// # use sp_im::conslist::ConsList;
++  /// # use sp_std::iter::FromIterator;
+   /// # fn main() {
+   /// assert_eq!(
+   ///   conslist![2, 8, 1, 6, 3, 7, 5, 4].sort(),
+@@ -499,18 +507,12 @@ impl<A> ConsList<A> {
+   /// # }
+   /// ```
+   pub fn sort(&self) -> ConsList<A>
+-    where
+-        A: Ord,
+-    {
++  where A: Ord {
+     self.sort_by(Ord::cmp)
+   }
+ }
+ 
+-impl<A> ConsList<A>
+-where
+-    A: Ord,
+-{
+-}
++impl<A> ConsList<A> where A: Ord {}
+ 
+ // Core traits
+ 
+@@ -530,22 +532,19 @@ impl<A> Clone for ConsList<A> {
+ 
+ impl<A> Default for ConsList<A> {
+   /// `Default` for lists is the empty list.
+-    fn default() -> Self {
+-        ConsList::new()
+-    }
++  fn default() -> Self { ConsList::new() }
+ }
+ 
+ #[cfg(not(has_specialisation))]
+ impl<A> PartialEq for ConsList<A>
+-where
+-    A: PartialEq,
++where A: PartialEq
+ {
+   /// Test if two lists are equal.
+   ///
+   /// This could potentially be an expensive operation, as we need to walk
+   /// both lists to test for equality. We can very quickly determine equality
+-    /// if the lists have different lengths (can't be equal). Otherwise, we walk the
+-    /// lists to compare values.
++  /// if the lists have different lengths (can't be equal). Otherwise, we walk
++  /// the lists to compare values.
+   ///
+   /// Time: O(n)
+   fn eq(&self, other: &ConsList<A>) -> bool {
+@@ -555,19 +554,18 @@ where
+ 
+ #[cfg(has_specialisation)]
+ impl<A> PartialEq for ConsList<A>
+-where
+-    A: PartialEq,
++where A: PartialEq
+ {
+   /// Test if two lists are equal.
+   ///
+   /// This could potentially be an expensive operation, as we need to walk
+   /// both lists to test for equality. We can very quickly determine equality
+-    /// if the lists have different lengths (can't be equal). Otherwise, we walk the
+-    /// lists to compare values.
++  /// if the lists have different lengths (can't be equal). Otherwise, we walk
++  /// the lists to compare values.
+   ///
+   /// If `A` implements `Eq`, we have an additional shortcut available to us: if
+-    /// both lists refer to the same cons cell, as determined by `Arc::ptr_eq`, they
+-    /// have to be equal.
++  /// both lists refer to the same cons cell, as determined by `Arc::ptr_eq`,
++  /// they have to be equal.
+   ///
+   /// Time: O(n)
+   default fn eq(&self, other: &ConsList<A>) -> bool {
+@@ -577,19 +575,18 @@ where
+ 
+ #[cfg(has_specialisation)]
+ impl<A> PartialEq for ConsList<A>
+-where
+-    A: Eq,
++where A: Eq
+ {
+   /// Test if two lists are equal.
+   ///
+   /// This could potentially be an expensive operation, as we need to walk
+   /// both lists to test for equality. We can very quickly determine equality
+-    /// if the lists have different lengths (can't be equal). Otherwise, we walk the
+-    /// lists to compare values.
++  /// if the lists have different lengths (can't be equal). Otherwise, we walk
++  /// the lists to compare values.
+   ///
+   /// If `A` implements `Eq`, we have an additional shortcut available to us: if
+-    /// both lists refer to the same cons cell, as determined by `Arc::ptr_eq`, they
+-    /// have to be equal.
++  /// both lists refer to the same cons cell, as determined by `Arc::ptr_eq`,
++  /// they have to be equal.
+   ///
+   /// Time: O(n)
+   fn eq(&self, other: &ConsList<A>) -> bool {
+@@ -598,20 +595,13 @@ where
+   }
+ }
+ 
+-impl<A> Eq for ConsList<A>
+-where
+-    A: Eq,
+-{
+-}
++impl<A> Eq for ConsList<A> where A: Eq {}
+ 
+ impl<A> Hash for ConsList<A>
+-where
+-    A: Hash,
++where A: Hash
+ {
+   fn hash<H>(&self, state: &mut H)
+-    where
+-        H: Hasher,
+-    {
++  where H: Hasher {
+     for i in self.iter() {
+       i.hash(state);
+     }
+@@ -621,28 +611,21 @@ where
+ impl<'a, A> Add for &'a ConsList<A> {
+   type Output = ConsList<A>;
+ 
+-    fn add(self, other: Self) -> Self::Output {
+-        self.append(other)
+-    }
++  fn add(self, other: Self) -> Self::Output { self.append(other) }
+ }
+ 
+ impl<A> Add for ConsList<A> {
+   type Output = Self;
+ 
+-    fn add(self, other: Self) -> Self::Output {
+-        self.append(&other)
+-    }
++  fn add(self, other: Self) -> Self::Output { self.append(&other) }
+ }
+ 
+ impl<A> Debug for ConsList<A>
+-where
+-    A: Debug,
+-{
+-    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+-        fn items<A>(l: &ConsList<A>, f: &mut Formatter) -> Result<(), Error>
+-        where
+-            A: Debug,
++where A: Debug
+ {
++  fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
++    fn items<A>(l: &ConsList<A>, f: &mut Formatter<'_>) -> Result<(), Error>
++    where A: Debug {
+       match *l.0 {
+         Nil => Ok(()),
+         Cons(_, ref a, ref d) => {
+@@ -665,6 +648,7 @@ where
+ 
+ // Iterators
+ 
++/// An iterator for ConsList
+ pub struct Iter<A> {
+   #[doc(hidden)]
+   current: ConsList<A>,
+@@ -692,43 +676,32 @@ impl<A> Iterator for Iter<A> {
+ impl<A> ExactSizeIterator for Iter<A> {}
+ 
+ impl<A> IntoIterator for ConsList<A> {
+-    type Item = Arc<A>;
+   type IntoIter = Iter<A>;
++  type Item = Arc<A>;
+ 
+-    fn into_iter(self) -> Iter<A> {
+-        self.iter()
+-    }
++  fn into_iter(self) -> Iter<A> { self.iter() }
+ }
+ 
+ impl<A> Sum for ConsList<A> {
+   fn sum<I>(it: I) -> Self
+-    where
+-        I: Iterator<Item = Self>,
+-    {
++  where I: Iterator<Item = Self> {
+     it.fold(Self::new(), |a, b| a.append(b))
+   }
+ }
+ 
+ impl<A, T> FromIterator<T> for ConsList<A>
+-where
+-    T: Shared<A>,
++where T: Shared<A>
+ {
+   fn from_iter<I>(source: I) -> Self
+-    where
+-        I: IntoIterator<Item = T>,
+-    {
+-        source
+-            .into_iter()
+-            .fold(conslist![], |l, v| l.cons(v))
+-            .reverse()
++  where I: IntoIterator<Item = T> {
++    source.into_iter().fold(conslist![], |l, v| l.cons(v)).reverse()
+   }
+ }
+ 
+ // Conversions
+ 
+ impl<'a, A, R> From<&'a [R]> for ConsList<A>
+-where
+-    &'a R: Shared<A>,
++where &'a R: Shared<A>
+ {
+   fn from(slice: &'a [R]) -> Self {
+     slice.into_iter().map(|a| a.shared()).collect()
+@@ -736,17 +709,13 @@ where
+ }
+ 
+ impl<A, R> From<Vec<R>> for ConsList<A>
+-where
+-    R: Shared<A>,
++where R: Shared<A>
+ {
+-    fn from(vec: Vec<R>) -> Self {
+-        vec.into_iter().map(|a| a.shared()).collect()
+-    }
++  fn from(vec: Vec<R>) -> Self { vec.into_iter().map(|a| a.shared()).collect() }
+ }
+ 
+ impl<'a, A, R> From<&'a Vec<R>> for ConsList<A>
+-where
+-    &'a R: Shared<A>,
++where &'a R: Shared<A>
+ {
+   fn from(vec: &'a Vec<R>) -> Self {
+     vec.into_iter().map(|a| a.shared()).collect()
+@@ -755,54 +724,60 @@ where
+ 
+ // QuickCheck
+ 
+-#[cfg(any(test, feature = "quickcheck"))]
+-use quickcheck::{Arbitrary, Gen};
++// #[cfg(any(test))]
++// use arbitrary::{Arbitrary};
++#[cfg(any(test))]
++use quickcheck::{
++  Arbitrary,
++  Gen,
++};
+ 
+ #[cfg(any(test, feature = "quickcheck"))]
+ impl<A: Arbitrary + Sync> Arbitrary for ConsList<A> {
+-    fn arbitrary<G: Gen>(g: &mut G) -> Self {
+-        ConsList::from(Vec::<A>::arbitrary(g))
+-    }
++  fn arbitrary(g: &mut Gen) -> Self { ConsList::from(Vec::<A>::arbitrary(g)) }
+ }
+ 
+ // Proptest
+ 
+-#[cfg(any(test, feature = "proptest"))]
+-pub mod proptest {
+-    use super::*;
+-    use proptest::strategy::{BoxedStrategy, Strategy, ValueTree};
+-    use std::ops::Range;
+-
+-    /// A strategy for a cons list of a given size.
+-    ///
+-    /// # Examples
+-    ///
+-    /// ```rust,ignore
+-    /// proptest! {
+-    ///     #[test]
+-    ///     fn proptest_a_conslist(ref l in conslist(".*", 10..100)) {
+-    ///         assert!(l.len() < 100);
+-    ///         assert!(l.len() >= 10);
+-    ///     }
+-    /// }
+-    /// ```
+-    pub fn conslist<A: Strategy + 'static>(
+-        element: A,
+-        size: Range<usize>,
+-    ) -> BoxedStrategy<ConsList<<A::Value as ValueTree>::Value>> {
+-        ::proptest::collection::vec(element, size.clone())
+-            .prop_map(ConsList::from)
+-            .boxed()
+-    }
+-}
++//#[cfg(any(test, feature = "proptest"))]
++// pub mod proptest {
++//    use super::*;
++//    use ::proptest::strategy::{BoxedStrategy, Strategy, ValueTree};
++//    use sp_std::ops::Range;
++
++//    /// A strategy for a cons list of a given size.
++//    ///
++//    /// # Examples
++//    ///
++//    /// ```rust,ignore
++//    /// proptest! {
++//    ///     #[test]
++//    ///     fn proptest_a_conslist(ref l in conslist(".*", 10..100)) {
++//    ///         assert!(l.len() < 100);
++//    ///         assert!(l.len() >= 10);
++//    ///     }
++//    /// }
++//    /// ```
++//    pub fn conslist<A: Strategy + 'static>(
++//        element: A,
++//        size: Range<usize>,
++//    ) -> BoxedStrategy<ConsList<<A::Value as ValueTree>::Value>> {
++//        ::proptest::collection::vec(element, size.clone())
++//            .prop_map(ConsList::from)
++//            .boxed()
++//    }
++//}
+ 
+ // Tests
+ 
+ #[cfg(test)]
+ mod test {
+-    use super::proptest::*;
++  // use super::{proptest::*, *};
+   use super::*;
+-    use test::is_sorted;
++  use crate::test::is_sorted;
++  // use ::proptest::*;
++  use quickcheck::quickcheck;
++  use sp_std::alloc::string::String;
+ 
+   #[test]
+   fn exact_size_iterator() {
+@@ -853,7 +828,9 @@ mod test {
+       }
+ 
+       fn append_two_lists(xs: ConsList<i32>, ys: ConsList<i32>) -> bool {
+-            let extended = ConsList::from_iter(xs.iter().map(|v| *v).chain(ys.iter().map(|v| *v)));
++          let extended = ConsList::from_iter(
++            xs.iter().map(|v| *v).chain(ys.iter().map(|v| *v))
++          );
+           xs.append(&ys) == extended
+       }
+ 
+@@ -862,12 +839,4 @@ mod test {
+           l.len() == sorted.len() && is_sorted(sorted)
+       }
+   }
+-
+-    proptest! {
+-        #[test]
+-        fn proptest_a_conslist(ref l in conslist(".*", 10..100)) {
+-            assert!(l.len() < 100);
+-            assert!(l.len() >= 10);
+-        }
+-    }
+ }
