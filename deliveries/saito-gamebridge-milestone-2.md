@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** [Saito - Polkadot Game Bridge - Open Grant Application - PR](https://github.com/w3f/Open-Grants-Program/pull/73). 
+* **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/73. 
 
 * **Milestone Number: 2**
    
