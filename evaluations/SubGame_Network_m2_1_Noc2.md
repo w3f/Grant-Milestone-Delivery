@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Contract Link:** https://github.com/w3f/Grants-Program/blob/master/applications/SubGame_Network_m2.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,20 +9,24 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [License](https://github.com/SubGame-Network/SubGameModule/blob/master/LICENSE) | Correct License  |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> |  |  The documentation seems to be missing. They currently simply link to the application  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [readme](https://github.com/SubGame-Network/SubGameModule/blob/master/README.md) |  Only readme  |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets) | Real test cases and no unit tests, but according to contract  |
-| 1a. | pallet-lease | <ul><li>[ ] </li></ul> | [pallet-lease](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/lease) |  unit test fail, see error below |
-| 1b. | pallet-stake-nft | <ul><li>[ ] </li></ul> | [pallet-stake-nft](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/stake-nft) |   |
+| 1a. | pallet-lease | <ul><li>[x] </li></ul> | [pallet-lease](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/lease) | **7.10.21:** unit test fail, see error below **11.10.21:** Unit test compile now  |
+| 1b. | pallet-stake-nft | <ul><li>[x] </li></ul> | [pallet-stake-nft](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/stake-nft) |   |
 | 1c. | pallet-nft | <ul><li>[x] </li></ul> | [pallet-nft](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/nft) | Simply reused https://github.com/danforbes/pallet-nft, would be nice if they mention this  |
-| 1d. | pallet-gameA | <ul><li>[ ] </li></ul> | [pallet-demogame](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/demogame) |   |
-| 2a. | Front End | <ul><li>[ ] </li></ul> | [Front End](https://github.com/SubGame-Network/SubGameModule/tree/master/frontend) | See error below  |
-| 2b. | UI mock-ups | <ul><li>[ ] </li></ul> | [Mockup](https://www.figma.com/file/7ZUQSuAfNrrmq5s3LSIFik/SubGame?node-id=3649%3A62086) | File not found   |
-| 2c. | Tutorial | <ul><li>[ ] </li></ul> | [readme](https://github.com/SubGame-Network/SubGameModule/blob/master/README.md) | Image with lorem ipsum  |
-| 2d. | Docker | <ul><li>[ ] </li></ul> | [docker compose](https://github.com/SubGame-Network/SubGameModule/blob/master/docker-compose.yml) | Starts, but doesn't work, see errors below |
+| 1d. | pallet-gameA | <ul><li>[x] </li></ul> | [pallet-demogame](https://github.com/SubGame-Network/subgame-network/tree/develop/pallets/demogame) |  Initially no explanation about the purpose of this module. |
+| 2a. | Front End | <ul><li>[x] </li></ul> | [Front End](https://github.com/SubGame-Network/SubGameModule/tree/master/frontend) | **7.10.21:** See error below **11.10.21:** Front-end compiles now |
+| 2b. | UI mock-ups | <ul><li>[x] </li></ul> | [Mockup](https://www.figma.com/file/7ZUQSuAfNrrmq5s3LSIFik/SubGame?node-id=3649%3A62086) | **7.10.21:** File not found, **11.10.21:** Designs are public   |
+| 2c. | Tutorial | <ul><li>[x] </li></ul> | [readme](https://github.com/SubGame-Network/SubGameModule/blob/master/README.md) | Image with lorem ipsum, but that's fine  |
+| 2d. | Docker | <ul><li>[x] </li></ul> | [docker compose](https://github.com/SubGame-Network/SubGameModule/blob/master/docker-compose.yml) | **7.10.21:**  Starts, but doesn't work, see errors below **13.10.21:** Works, previous issue was because of my setup |
 
 ## General Notes
 
-**Lease unit tests error, 07.10.21**
+In general, the pallets could be better tested and documented inline, but everything works according to the contract. 
+
+### Previous comments, 07.10.21
+
+**Lease unit tests error**
 
 <pre>   <font color="#2A7BDE"><b>--&gt; </b></font>/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pallet-timestamp-3.0.0/src/lib.rs:290:5
     <font color="#2A7BDE"><b>|</b></font>
