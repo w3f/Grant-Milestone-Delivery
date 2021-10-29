@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Open-Grants-Program/pull/419
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -13,16 +13,18 @@
 |    1.b | Substrate module: Unstaking DOT | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L462)  | Implemented |
 |    1.c | Substrate module: Exchange Rate     | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L514)  | Implemented |
 |    1.d | Substrate module: Slashing Scenario | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/blob/0f8d47a1ec/pallets/liquid-staking/src/lib.rs#L614)  | Implemented |
-|    1.e | Substrate module: KSM | <ul><li>[ ] </li></ul> | [ ]()  | UI currently only supports KSM, and not polkadot |
-|    2   | Validator evaluation schema | <ul><li>[ ] </li></ul> | [ ]()  |  |
-|    3. | Integration with front-end  | <ul><li>[ ] </li></ul> | [Integration code](https://gist.github.com/yz89/34bb2954f0682b9837733f21a199c7ed)  |  they didn't open source the entire front-end, only the integration, which isn't really useful but according to the contract. However the UI currently doesn't let me select polkadot. Also the code hasn't be updated since the last time |
-|    4. | Article/Tutorial  | <ul><li>[ ] </li></ul> | [Testnet Experience](https://docs.parallel.fi/a-guide-to-testnet/testnet-experience)  |  |
-|    5. | Testing and Documentation | <ul><li>[ ] </li></ul> | [Test guide](https://github.com/parallel-finance/parallel/wiki/Test-guide)  | Very short testing guide, but the code has inline documentation and unit tests. Currently I get the below error  |
+|    1.e | Substrate module: KSM | <ul><li>[x] </li></ul> | - | UI currently only supports KSM, and not polkadot, but it doesn't really matter here. The implementation is the same for both |
+|    2   | Validator evaluation schema | <ul><li>[x] </li></ul> | [code](https://github.com/parallel-finance/parallel/tree/master/pallets/nominee-election/src)  | Implemented |
+|    3. | Integration with front-end  | <ul><li>[x] </li></ul> | [Integration code](https://gist.github.com/yz89/34bb2954f0682b9837733f21a199c7ed)  |  they didn't open source the entire front-end, only the integration, which isn't really useful but according to the contract. However the UI currently doesn't let me select polkadot. Also the code hasn't be updated since the last time |
+|    4. | Article/Tutorial  | <ul><li>[x] </li></ul> | [Testnet Experience](https://docs.parallel.fi/a-guide-to-testnet/testnet-experience)  | Long article which describes every step in detail |
+|    5. | Testing and Documentation | <ul><li>[x] </li></ul> | [Test guide](https://github.com/parallel-finance/parallel/wiki/Test-guide)  | **27.10.21:**  Very short testing guide, but the code has inline documentation and unit tests. Currently I get the below error **29.10.21:** It's fixed now  |
 |    6. | User Testing   | <ul><li>[x] </li></ul> | [Notion](https://parallelfinance.notion.site/Web3-Grant-Milestone-2-d98aed16ce0642348c2133f0b7d91ab2)  | They claim to have done user testing, it's difficult to prove, but they don’t provide a lot of information  |  
 
 ## General Notes
 
-**Testing guide error**
+In general the quality of the delivery is very good, especially given the size of the grant. However the front-end shouldn’t have been part of the contract, since the open sourced code is basically useless for others and hard to evaluate (but according to the contract). 
+
+**27.10.21, Testing guide error**
 
 <pre>sudo make launch
 docker-compose -f output/docker-compose.yml -f output/docker-compose.override.yml down --remove-orphans &gt; /dev/null 2&gt;&amp;1 || true
