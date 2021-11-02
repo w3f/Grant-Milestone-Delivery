@@ -1,86 +1,70 @@
 name: Google Sheet Update
 on:
   pull_request_target:
-    types: [opened]
-
+    types: [opened, synchronize]
+    
 jobs:
-  update_sheet:
+  get-delivery-once:
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.check-no-success.conclusion }} # TODO and is a delivery
+      filenames: ${{ steps.files.outputs.filenames }}
+      milestone-number: ${{ steps.files.outputs.milestone-number }}
+      application-filename: ${{ steps.files.outputs.application-filename }}
     steps:
-      - name: 'get names of all added files in the PR'
-        id: 'files'
-        uses: Ana06/get-changed-files@v1.2
+      - name: Checkout and parse delivery file
+        id: delivery
+        uses: ${{ github.action_path }}/get_delivery.yml
 
-      - name: 'check out delivery file'
-        uses: actions/checkout@v2
+      - name: Check that the workflow didn't yet run successfully in this PR
+        uses: actions/github-script@v5
+        id: check-no-success
+        if: steps.delivery.outputs.filenames
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: 'parse milestone'
-        id: milestone_parser
-        uses: w3f/parse-milestone-delivery-action@v2.13
-        with:
-          path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
-
-      - name: 'parse application doc path'
-        id: application_doc_path
-        uses: actions/github-script@0.9.0
-        env:
-          link: ${{ steps.milestone_parser.outputs.application_document }}
-        with:
+          # TODO run shouldn't fail if it succeeded earlier, we just need to skip the sheet update
           script: |
-            var url_pattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
-            let application_doc = process.env.link.match(url_pattern);
-            let application_doc_path = application_doc[0];
-            let application_doc_path_array = application_doc_path.split('/');
-            application_doc_path = application_doc_path_array[application_doc_path_array.length - 2] + '/' + application_doc_path_array[application_doc_path_array.length - 1];
-            core.setOutput('application_doc_path', application_doc_path);
-            core.setOutput('application_doc_name', application_doc_path_array[application_doc_path_array.length - 1]);
+            // https://octokit.github.io/rest.js/v18
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'google_sheet_update.yml',
+              status: 'success',
+              per_page: 100
+            });
+            const pr_commits = await github.rest.pulls.listCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: ${{ github.event.number }},
+              per_page: 100
+            });
+            const runs_shas = runs.data.workflow_runs.map(run => {return run.head_sha});
+            const pr_shas = pr_commits.data.map(c => {return c.sha});
+            if(pr_shas.filter(s => runs_shas.includes(s)).length)
+              core.setFailed();
 
-      - name: 'get application commit data'
-        if: ${{ success() }}
-        uses: octokit/request-action@v2.x
-        id: get_application_commit_data
-        with:
-          route: "GET /repos/w3f/Grants-Program/commits?path=${{ steps.application_doc_path.outputs.application_doc_path }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  update-sheet: # TODO run for each delivery
+    needs: get-delivery-once
+    if: needs.get-delivery-once.outputs.status == 'success'
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Get application file
+        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ needs.get-delivery-once.outputs.application-filename }}"
 
-      - name: 'find delivery author in application PRs'
-        uses: actions/github-script@0.9.0
-        id: match_author
-        env:
-          commits: ${{steps.get_application_commit_data.outputs.data}}
-          pr_author: ${{github.event.pull_request.user.login}}
-        with: 
-          script: |
-            let commits = JSON.parse(process.env.commits);
-            for(commit of commits) {
-              if(commit.author.login === process.env.pr_author) {
-                return true;
-              }
-            }
-            core.setFailed(`PR author does not match any author of application.`);
-
-      - name: 'get application file'
-        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/${{ steps.application_doc_path.outputs.application_doc_path }}"
-
-      - name: 'parse application file'
-        id: grant_parser
+      - name: Parse application file
+        id: parse-grant
         uses: w3f/parse-grant-application-action@v1
         with:
-          path: "${{ steps.application_doc_path.outputs.application_doc_name }}"
+          path: "${{ steps.parse-delivery.outputs.application_document }}"
 
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
 
-      - name: 'write the data to a gsheet'
-        id: 'update_worksheet'
-        uses: jroehl/gsheet.action@v1.1.1 # you can specify '@release' to always have the latest changes
+      - name: Write data to sheet
+        uses: jroehl/gsheet.action@v1.1.1
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
-          commands: | # list of commands, specified as a valid JSON string. Second entry in 'data' should be project name.
+          commands: |
             [
               {
                 "command": "appendData",
@@ -88,8 +72,8 @@ jobs:
                 {
                   "data": [[
                     "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")",
-                    "${{ steps.grant_parser.outputs.project_name }}",
-                    "${{ steps.milestone_parser.outputs.milestone_number }}",
+                    "${{ steps.parse-grant.outputs.project_name }}",
+                    "${{ needs.get-delivery-once.outputs.milestone_number }}",
                     "",
                     "Not Yet",
                     "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), \"Not Yet\", 3, \"In Progress\", 2, \"Asked for Changes\", 1, \"Final Check\", 2, \"Done\", 0, \"Terminated\", 0))",

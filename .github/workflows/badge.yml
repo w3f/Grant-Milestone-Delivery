@@ -1,0 +1,29 @@
+# TODO level 1 grants don't get this
+
+name: Award Badge
+on:
+  pull_request_target:
+    types: [closed]
+
+  badge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Checkout and parse delivery file
+        id: delivery
+        uses: ${{ github.action_path }}/get_delivery.yml
+
+      # TODO only leave comment for level 2+3 grants
+      - name: Leave badge comment if it was the first milestone
+        if: steps.files.outputs.filenames && steps.parse-delivery.outputs.milestone_number == 1
+        uses: thollander/actions-comment-pull-request@1.0.1
+        with:
+          message: > # TODO draft
+            Congratulations on completing the first milestone of this grant!
+            As part of the Grants Program, we want to help grant recipients acknowledge their grants publicly.
+            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/grant-badge-guidelines.md)
+            that successfully delivered their first milestone.<br/><br/>
+            Furthermore, you may now announce the grant publicly, though please remember to still observe the
+            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/announcement-guidelines.md) in doing so.
+            In case you haven't done so yet, you may also reach out to grantspr@web3.foundation for feedback on your announcement or for cross-promotion.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
