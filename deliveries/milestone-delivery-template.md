@@ -9,7 +9,7 @@
 * **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
 * **Milestone Number:** e.g. 1
 
-**Context**
+**Context** (optional)
 > Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
 
 **Deliverables**
