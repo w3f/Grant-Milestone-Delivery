@@ -1,7 +1,7 @@
 name: Parse Delivery
 outputs:
   filenames:
-    description: "Filenames of all delivery documents"
+    description: Filenames of all delivery documents
     value: ${{ steps.files.outputs.added }}
   milestone-number:
     description: "Milestone number"
@@ -25,7 +25,7 @@ runs:
         fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: Parse delivery file # TODO parse all
+    - name: Parse delivery file # TODO parse all files + push changes to below repo
       if: steps.files.outputs.added
       id: parse-delivery
       uses: w3f/parse-milestone-delivery-action@v2.13
