@@ -23,7 +23,7 @@
 
 ## General Notes
 
-I'm impressed by the delivery. They/He clearly put a lot of work into this and it’s an innovative approach, which should be supported and further researched. A functional reputation system like this could be used for a lot of things including consensus itself! In general this system requires a lot of on-chain transactions for “just” keeping track of the reputation. The optimistic setup of the reputation system might cause problems in the long run. Potentially off-chain worker could help with this. An additional idea might be to implement a governance court or something similar as a failsafe mechanism.  
+I'm impressed by the delivery. They/He clearly put a lot of work into this and it’s an innovative approach, which should be supported and further researched. A fully functional reputation system could be used for a lot of things including consensus itself. In general this system requires a lot of on-chain transactions for “just” keeping track of the reputation. The optimistic setup of the reputation system might cause problems in the long run. Potentially off-chain worker could help with this. An additional idea might be to implement a governance court or something similar as a failsafe mechanism. The idea behind social finance is nice, but doesn’t it lead to users creating multiple accounts and trusting themselves?  
 
 **App Warning Message, 25.11.21**
 
