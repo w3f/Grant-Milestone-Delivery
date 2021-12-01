@@ -9,4 +9,8 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Milestone 0 |https://github.com/galacticcouncil/Basilisk-node/tree/feat/auctions| | 
+| 0a. | License | https://github.com/galacticcouncil/Basilisk-node/blob/feat/auctions/LICENSE | Apache 2.0 |
+| 0b. | Documentation | https://github.com/galacticcouncil/Basilisk-node/blob/175850c7edb3cc561351e9f68255c89cadf09634/pallets/auctions/src/lib.rs#L21 | inline |
+| 1. | Pallet auctions |https://github.com/galacticcouncil/Basilisk-node/tree/feat/auctions| | 
+| 2. | Tests | https://github.com/galacticcouncil/Basilisk-node/blob/feat/auctions/pallets/auctions/src/tests.rs | |
+| 3. | Docker compose | https://github.com/galacticcouncil/Basilisk-node/blob/master/docker-compose.yml | 
