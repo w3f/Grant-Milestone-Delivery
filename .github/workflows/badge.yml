@@ -21,13 +21,13 @@ jobs:
 
       - name: Parse application file
         id: parse-grant
-        if: steps.files.outputs.filenames
+        if: steps.delivery.outputs.filenames
         uses: w3f/parse-grant-application-action@v1
         with:
           path: "${{ steps.delivery.outputs.application-filename }}"
 
       - name: Leave badge comment if applicable
-        if: steps.files.outputs.filenames && steps.delivery.outputs.milestone-number == 1 && steps.parse-grant.outputs.level != 1
+        if: steps.delivery.outputs.filenames && steps.delivery.outputs.milestone-number == 1 && steps.parse-grant.outputs.level != 1
         uses: thollander/actions-comment-pull-request@1.0.1
         with:
           message: >
