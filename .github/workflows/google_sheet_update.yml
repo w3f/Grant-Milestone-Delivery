@@ -42,7 +42,7 @@ jobs:
             });
             const runs_shas = runs.data.workflow_runs.map(run => {return run.head_sha});
             const pr_shas = pr_commits.data.map(c => {return c.sha});
-            core.setOutput("has-succeeded", pr_shas.filter(s => runs_shas.includes(s)).length);
+            core.setOutput("has-succeeded", pr_shas.filter(s => runs_shas.includes(s)).length != 0);
 
   update-sheet: # TODO run for each delivery if PR contains more than one (see also get_delivery.yml)
     needs: get-delivery-once
