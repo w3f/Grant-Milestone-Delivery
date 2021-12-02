@@ -7,7 +7,7 @@ jobs:
   get-delivery-once:
     runs-on: ubuntu-latest
     outputs:
-      status: ${{ steps.check-no-success.has-succeeded }}
+      has-succeeded: ${{ steps.check-no-success.outputs.has-succeeded }}
       filenames: ${{ steps.files.outputs.filenames }}
       milestone-number: ${{ steps.files.outputs.milestone-number }}
       application-filename: ${{ steps.files.outputs.application-filename }}
@@ -46,7 +46,7 @@ jobs:
 
   update-sheet: # TODO run for each delivery if PR contains more than one (see also get_delivery.yml)
     needs: get-delivery-once
-    if: needs.get-delivery-once.outputs.filenames && !steps.delivery.outputs.has-succeeded
+    if: needs.get-delivery-once.outputs.filenames && !needs.get-delivery-once.outputs.has-succeeded
     runs-on: ubuntu-latest
     steps:
       - name: Get application file
