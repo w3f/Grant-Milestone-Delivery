@@ -17,7 +17,7 @@ on:
       - name: Parse application file
         id: parse-grant
         if: steps.files.outputs.filenames
-        uses: w3f/parse-grant-application-action@v1
+        uses: alxs/parse-grant-application-action@v1
         with:
           path: "${{ steps.delivery.outputs.application-filename }}"
 
