@@ -54,7 +54,7 @@ jobs:
         id: parse-grant
         uses: w3f/parse-grant-application-action@v1
         with:
-          path: "${{ steps.parse-delivery.outputs.application_document }}"
+          path: "${{ needs.get-delivery-once.outputs.application-filename }}"
 
       - name: Get current date
         id: date
