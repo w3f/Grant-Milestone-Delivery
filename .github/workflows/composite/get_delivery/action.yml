@@ -4,10 +4,10 @@ outputs:
     description: Filenames of all delivery documents
     value: ${{ steps.files.outputs.added }}
   milestone-number:
-    description: "Milestone number"
+    description: Milestone number
     value: ${{ steps.parse-delivery.outputs.milestone_number }}
   application-filename:
-    description: "Filename of the application document"
+    description: Filename of the application document
     value: ${{ steps.parse-delivery.outputs.application_document }}
 
 runs:
