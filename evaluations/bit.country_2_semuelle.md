@@ -24,8 +24,6 @@
 | 8. | Local NFT Market | <ul><li>[x] </li></ul> | [commit/863cca8](https://github.com/bit-country/Metaverse-Network/commit/863cca868bc29ac6333792140df48cf81ce09bbc#diff-8e8c0cf481010b2028d5602d98fed256b970e43c00033a24858fea89d9b91c2b) | — |
 | 9. | Multi token in local NFT Market | <ul><li>[x] </li></ul> | [commit/863cca8](https://github.com/bit-country/Metaverse-Network/commit/863cca868bc29ac6333792140df48cf81ce09bbc) | — |
 | 10. | Docker / UAT | <ul><li>[x] </li></ul> | [UAT](https://dev.bit.country/home) (see submission for access credentials), [Docker](https://github.com/bit-country/Metaverse-Network/tree/9932efc9e09c1a0377e9acc11fdabd1612ecb6dc/scripts)  | —
-| X. | ... | <ul><li>[ ] </li></ul> | link | see [General Notes](#general-notes) |
-
 
 ## General Notes
 
