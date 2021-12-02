@@ -17,6 +17,7 @@ jobs:
         uses: ./.github/workflows/composite/get_delivery
 
       - name: Get application file
+        if: steps.delivery.outputs.filenames
         run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.delivery.outputs.application-filename }}"
 
       - name: Parse application file
