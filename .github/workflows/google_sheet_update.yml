@@ -46,7 +46,7 @@ jobs:
 
   update-sheet: # TODO run for each delivery if PR contains more than one (see also get_delivery.yml)
     needs: get-delivery-once
-    if: needs.get-delivery-once.outputs.filenames && !needs.get-delivery-once.outputs.has-succeeded
+    if: needs.get-delivery-once.outputs.filenames && needs.get-delivery-once.outputs.has-succeeded == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Get application file
