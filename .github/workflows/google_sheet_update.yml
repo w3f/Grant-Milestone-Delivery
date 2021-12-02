@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has-succeeded: ${{ steps.check-no-success.outputs.has-succeeded }}
-      filenames: ${{ steps.files.outputs.filenames }}
-      milestone-number: ${{ steps.files.outputs.milestone-number }}
-      application-filename: ${{ steps.files.outputs.application-filename }}
+      filenames: ${{ steps.delivery.outputs.filenames }}
+      milestone-number: ${{ steps.delivery.outputs.milestone-number }}
+      application-filename: ${{ steps.delivery.outputs.application-filename }}
     steps:
       - uses: actions/checkout@v2
         with:
