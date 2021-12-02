@@ -19,12 +19,6 @@ runs:
       with:
         filter: 'deliveries/*.md'
 
-    - uses: actions/checkout@v2
-      if: steps.files.outputs.added
-      with:
-        fetch-depth: 0
-        ref: ${{ github.event.pull_request.head.sha }}
-
     - name: Parse delivery file # TODO parse all files if there are multiple
       if: steps.files.outputs.added
       id: parse-delivery

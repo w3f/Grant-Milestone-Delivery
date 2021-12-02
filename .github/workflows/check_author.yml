@@ -7,9 +7,14 @@ jobs:
   check_author:
     runs-on: ubuntu-latest 
     steps:
-      - name: Checkout and parse delivery file
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Parse delivery file
         id: delivery
-        uses: ${{ github.action_path }}/get_delivery.yml
+        uses: ./.github/workflows/composite/get_delivery
 
       - name: Find PR author in application authors
         if: steps.delivery.outputs.filenames

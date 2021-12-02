@@ -7,9 +7,14 @@ on:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout and parse delivery file
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Parse delivery file
         id: delivery
-        uses: ${{ github.action_path }}/get_delivery.yml
+        uses: ./.github/workflows/composite/get_delivery
 
       - name: Get application file
         run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.delivery.outputs.application-filename }}"
@@ -21,7 +26,7 @@ on:
         with:
           path: "${{ steps.delivery.outputs.application-filename }}"
 
-      - name: Leave badge comment if it was the first milestone
+      - name: Leave badge comment if applicable
         if: steps.files.outputs.filenames && steps.delivery.outputs.milestone-number == 1 && steps.parse-grant.outputs.level != 1
         uses: thollander/actions-comment-pull-request@1.0.1
         with:
