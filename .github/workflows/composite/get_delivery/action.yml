@@ -19,7 +19,7 @@ runs:
       with:
         filter: 'deliveries/*.md'
 
-    - name: Parse delivery file # TODO parse all files if there are multiple
+    - name: Parse delivery file # TODO parse all files separately if there are multiple
       if: steps.files.outputs.added
       id: parse-delivery
       uses: w3f/parse-milestone-delivery-action@v3
