@@ -11,6 +11,9 @@ on:
         id: delivery
         uses: ${{ github.action_path }}/get_delivery.yml
 
+      - name: Get application file
+        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.delivery.outputs.application-filename }}"
+
       - name: Parse application file
         id: parse-grant
         if: steps.files.outputs.filenames
