@@ -24,4 +24,4 @@ runs:
       id: parse-delivery
       uses: alxs/parse-milestone-delivery-action@v2.13
       with:
-        path: "${{ github.workspace }}/${{ steps.files.outputs.added[0] }}"
+        path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
