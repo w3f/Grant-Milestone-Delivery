@@ -1,0 +1,27 @@
+name: Parse Delivery
+outputs:
+  filenames:
+    description: Filenames of all delivery documents
+    value: ${{ steps.files.outputs.added }}
+  milestone-number:
+    description: Milestone number
+    value: ${{ steps.parse-delivery.outputs.milestone_number }}
+  application-filename:
+    description: Filename of the application document
+    value: ${{ steps.parse-delivery.outputs.application_document }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Get filenames of any deliveries being added
+      id: files
+      uses: Ana06/get-changed-files@v2.0.0
+      with:
+        filter: 'deliveries/*.md'
+
+    - name: Parse delivery file # TODO parse all files separately if there are multiple
+      if: steps.files.outputs.added
+      id: parse-delivery
+      uses: w3f/parse-milestone-delivery-action@v3
+      with:
+        path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
