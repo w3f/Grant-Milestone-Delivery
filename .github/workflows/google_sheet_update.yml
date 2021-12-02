@@ -7,7 +7,7 @@ jobs:
   get-delivery-once:
     runs-on: ubuntu-latest
     outputs:
-      status: ${{ steps.check-no-success.conclusion }} # TODO and is a delivery
+      status: ${{ steps.check-no-success.has-succeeded }}
       filenames: ${{ steps.files.outputs.filenames }}
       milestone-number: ${{ steps.files.outputs.milestone-number }}
       application-filename: ${{ steps.files.outputs.application-filename }}
@@ -21,7 +21,6 @@ jobs:
         id: check-no-success
         if: steps.delivery.outputs.filenames
         with:
-          # TODO run shouldn't fail if it succeeded earlier, we just need to skip the sheet update
           script: |
             // https://octokit.github.io/rest.js/v18
             const runs = await github.rest.actions.listWorkflowRuns({
@@ -39,12 +38,11 @@ jobs:
             });
             const runs_shas = runs.data.workflow_runs.map(run => {return run.head_sha});
             const pr_shas = pr_commits.data.map(c => {return c.sha});
-            if(pr_shas.filter(s => runs_shas.includes(s)).length)
-              core.setFailed();
+            core.setOutput("has-succeeded", pr_shas.filter(s => runs_shas.includes(s)).length);
 
-  update-sheet: # TODO run for each delivery
+  update-sheet: # TODO run for each delivery if PR contains more than one (see also get_delivery.yml)
     needs: get-delivery-once
-    if: needs.get-delivery-once.outputs.status == 'success'
+    if: needs.get-delivery-once.outputs.filenames && !steps.delivery.outputs.has-succeeded
     runs-on: ubuntu-latest 
     steps:
       - name: Get application file
