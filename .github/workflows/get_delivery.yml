@@ -25,9 +25,9 @@ runs:
         fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: Parse delivery file # TODO parse all files + push changes to below repo
+    - name: Parse delivery file # TODO parse all files if there are multiple
       if: steps.files.outputs.added
       id: parse-delivery
       uses: w3f/parse-milestone-delivery-action@v2.13
       with:
-        path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+        path: "${{ github.workspace }}/${{ steps.files.outputs.added[0] }}"
