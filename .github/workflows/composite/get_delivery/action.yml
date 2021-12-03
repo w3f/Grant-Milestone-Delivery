@@ -29,3 +29,5 @@ runs:
       uses: w3f/parse-milestone-delivery-action@v3
       with:
         path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+
+    - uses: actions/checkout@v2 # Return to master branch (otherwise the composite action fails)
