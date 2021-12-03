@@ -13,8 +13,6 @@ jobs:
       application-filename: ${{ steps.delivery.outputs.application-filename }}
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Parse delivery file
         id: delivery
