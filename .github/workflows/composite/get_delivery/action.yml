@@ -13,6 +13,10 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
     - name: Get filenames of any deliveries being added
       id: files
       uses: Ana06/get-changed-files@v2.0.0
@@ -25,3 +29,5 @@ runs:
       uses: w3f/parse-milestone-delivery-action@v3
       with:
         path: "${{ github.workspace }}/${{ steps.files.outputs.added }}"
+
+    - uses: actions/checkout@v2 # Return to master branch (otherwise the composite action fails)
