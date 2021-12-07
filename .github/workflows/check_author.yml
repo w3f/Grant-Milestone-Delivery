@@ -1,0 +1,31 @@
+name: Check Author
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  check_author:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Parse delivery file
+        id: delivery
+        uses: ./.github/workflows/composite/get_delivery
+
+      - name: Find PR author in application authors
+        if: steps.delivery.outputs.filenames
+        uses: actions/github-script@v5
+        env:
+          pr_author: ${{ github.event.pull_request.user.login }}
+        with: 
+          script: |
+            await github.rest.repos.listCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path: 'applications/${{ steps.delivery.outputs.application_document }}'
+            }).then( app_commits => {
+              app_authors = app_commits.data.map(c => {return c.author.login});
+              if(!app_authors.includes(process.env.pr_author))
+                core.setFailed('PR author does not match any application author.');
+            });
