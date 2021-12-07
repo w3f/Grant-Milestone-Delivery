@@ -2,7 +2,7 @@
 
 
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ZeroPool.md
-- **Milestone:** 2
+- **Milestone Number:** 2
 
 
 **Deliverables**
