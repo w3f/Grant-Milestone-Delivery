@@ -13,7 +13,7 @@
 | 0d. | Article | https://docs.google.com/document/d/1k6DhCfSs7rmsSV-WB7o8EkvqDFz5Bvn12QYrjjW7R2w/edit?usp=sharing | on approval grantsPR@web3.foundation| ... | 
 | 1. | Substrate pallet | https://github.com/uddugteam/substrate/tree/Juni/key-value | In the application, we mistakenly called current clause as "Substrate ML pallet". But here its about the  basic database layout implementation with key-value data storage. | 
 | 2. | Web application | https://github.com/uddugteam/substrate-front-end-template/tree/Juni/key-value | ...| 
-| 3. | Docker image | https://github.com/uddugteam/substrate/blob/Juni/key-value/.maintain/docker/substrate.Dockerfile | ...| 
+| 3. | Docker image | https://hub.docker.com/repository/docker/andskur/juni-db | ...| 
 
 ## Additional Information
 
