@@ -24,6 +24,5 @@
   - "In the guide, we will describe how to run these tests."
 - rs-ipfs repository now points to uddugteam's: https://github.com/rs-ipfs/substrate/blob/3d0f293c3abb624ec170edc40a20669f848ee8ea/README.md?plain=1#L6
 - Pulling docker image from DockerHub fails because the URL is wrong in the delivery, the documentation AND the article.
-- The article references a `docker run` command that isn't there.
-- Pulling and `run`ning `andskur/substrate-offchain-ipfs:latest` results in: `Error: Input("Please specify which chain you want to run, e.g. --dev or -chain=local")`
+- For docker, pull `andskur/substrate-offchain-ipfs:latest` and run `docker run andskur/substrate-offchain-ipfs:latest node-template --ws-external --rpc-external --base-path=/offchain-ipfs --dev`
 
