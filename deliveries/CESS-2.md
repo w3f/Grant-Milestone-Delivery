@@ -25,4 +25,4 @@
 **Additional Information:** 
 
 1. We changed the submission account because the previous account “CumulusSystem” has been changed to an organization account. In order to prove our identity, you can find our accounts under the organization of the original account. If you need us to provide more evidence, please don't hesitate to bring it up.
-2. Due to the team's full participation in Polkadot Hackathon: APAC Edition, this submission was later than expected. We hope you can understand. In addition, the remaining milestone 3 has also been developed and will be submitted soon.
+2. Due to the team's full participation in Polkadot Hackathon: APAC Edition (proud that we got the first place), this submission was later than expected. Thus, we hope you can understand. In addition, the remaining milestone 3 has also been developed and will be submitted soon.
