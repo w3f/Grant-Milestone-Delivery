@@ -10,7 +10,7 @@
 | 0a. | License | https://github.com/SubDAO-Network/polkasign-contract/blob/main/LICENSE | MIT |
 | 0b.  | Documentation | https://github.com/SubDAO-Network/polkasign-docs |  |
 | 0c.  | Testing Guide | https://github.com/SubDAO-Network/polkasign-docs/blob/main/Usage.md |  |
-| 0d. | Article | N/A |  |
+| 0d. | Article | https://subdao.medium.com/subdao-launched-polkasign-beta-which-will-be-embedded-in-ventures-dao-7fde5037c278 |  |
 | 1a. | PolkaSign Client | https://github.com/SubDAO-Network/subdao-polkasign |  |
 | 1b. | PolkaSign Smart Contract | https://github.com/SubDAO-Network/polkasign-contract |  |
 | 2.  | Build instruction | https://github.com/SubDAO-Network/polkasign-docs/blob/main/Deploy.md |  |
