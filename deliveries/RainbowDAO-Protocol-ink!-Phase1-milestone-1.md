@@ -6,7 +6,7 @@
 
 * **Application Document:** 
 
-  https://github.com/w3f/Grants-Program/pull/680
+  https://github.com/w3f/Grants-Program/blob/master/applications/RainbowDAO%20Protocol%20ink!%20%20Phase%201.md
 
 * **Milestone Number:**  1
 
