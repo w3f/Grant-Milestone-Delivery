@@ -15,6 +15,6 @@ Please provide a list of all deliverables of the milestone extracted from the in
 | **Number** | **Deliverable**                          | Link                                                         | Notes                                                        |
 | ---------- | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 0a.        | License                                  |                                                          | Apache License 2.0                                           |
-| 0b.        | Article/Tutorial                            |  https://github.com/rubyprotocol/Ruby_milestone2/blob/main/tutorial.md |           |
+| 0b.        | Article/Tutorial                            |  https://github.com/rubyprotocol/Ruby_milestone2/blob/main/tutorial.md |  This tutorial illustrates how to run our apps         |
 | 1        | Personal data monetization framework based on functional encryption and substrate pallet | https://github.com/rubyprotocol/Ruby_milestone2 | This work is based on the existing work on private ml (https://github.com/Ruby-Protocol/private_ml) and it provides the client and the necessary UI to enable the users to interact with the algorithms and substrate modules.|
 | 2        | Testing Guide                            |   https://github.com/rubyprotocol/Ruby_milestone2/blob/main/README.md | Please follow the instruction in the link to perform the test              |
