@@ -23,7 +23,7 @@ jobs:
             await github.rest.repos.listCommits({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              path: 'applications/${{ steps.delivery.outputs.application_document }}'
+              path: 'applications/${{ steps.delivery.outputs.application-filename }}'
             }).then( app_commits => {
               app_authors = app_commits.data.map(c => {return c.author.login});
               if(!app_authors.includes(process.env.pr_author))
