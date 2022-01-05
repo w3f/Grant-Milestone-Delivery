@@ -10,27 +10,31 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [License](https://github.com/bright/bright-tresury/blob/milestone3/LICENSE.md)  | Apache 2.0 |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Readme](https://github.com/bright/bright-tresury/blob/milestone3/LICENSE.md) |  Repo is well documented |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Readme](https://github.com/bright/bright-tresury/blob/milestone3/LICENSE.md), [test version](https://testing.treasury.bright.dev/stats?networkId=development-2) | Very well tested, but some of the test currently fail, see below |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Readme](https://github.com/bright/bright-tresury/blob/milestone3/LICENSE.md), [test version](https://testing.treasury.bright.dev/stats?networkId=development-2) | Very well tested, but some of the test currently fail, see below **05.01.22:** All tests work now |
 |	1.	|	User story 22	|	<ul><li>[x] </li></ul> | [create a bounty](https://testing.treasury.bright.dev/bounties/new?networkId=development-2) |  Works |
 |	2.	|	User story 23	|	<ul><li>[x] </li></ul> | [e.g. bounties on kusama](https://testing.treasury.bright.dev/bounties?networkId=kusama) | Works for kusama |
 |	3.	|	User story 24	|	<ul><li>[x] </li></ul> | [bounties with curator voting on kusama](https://testing.treasury.bright.dev/bounties/4/info?networkId=kusama) | Works	|
-|	4.	|	User story 25	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
+|	4.	|	User story 25	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) |  Doesn't work for me. At least with two different accounts, see image below	|
 |	5.	|	User story 26	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
 |	6.	|	User story 27	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
 |	7.	|	User story 28	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
 |	8.	|	User story 29	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	9.	|	User story 30	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
-|	10.	|	User story 31	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
+|	9.	|	User story 30	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
+|	10.	|	User story 31	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
 |	11.	|	User story 32	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
-|	12.	|	User story 33	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
+|	12.	|	User story 33	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
 |	13.	|	User story 34	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
 |	14.	|	User story 35	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
-|	15.	|	User story 36	|	<ul><li>[ ] </li></ul> | [Live version](https://treasury.bright.dev/) | Polkadot and Kusama versions are live
-|	16.	|	User story 37	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
+|	15.	|	User story 36	|	<ul><li>[x] </li></ul> | [Live version](https://treasury.bright.dev/) | Polkadot and Kusama versions are live
+|	16.	|	User story 37	|	<ul><li>[x] </li></ul> | [Ideas overview](https://testing.treasury.bright.dev/ideas?networkId=development-2) | 	|
 
 ## General Notes
 
 They already have a live version for polkadot as well as kusama. 
+
+**05.01.22 Curator accept nomination error:**
+
+![Screenshot from 2022-01-05 09-36-23](https://user-images.githubusercontent.com/24638510/148187004-d32bcb85-ad70-42ad-832e-c2cb341c11c5.png)
 
 **Failing tests:** 
 
