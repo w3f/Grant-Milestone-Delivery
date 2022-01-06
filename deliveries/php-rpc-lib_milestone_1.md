@@ -3,7 +3,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone.**
 
-* **PR Link:** [php-rpc-lib](https://github.com/w3f/Grants-Program/pull/622)
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/php-rpc-lib.md
 * **Milestone Number:** 1
 
 Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
