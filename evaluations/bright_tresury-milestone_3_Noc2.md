@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/bright_treasury.md
 * **Milestone:** 3
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -14,23 +14,23 @@
 |	1.	|	User story 22	|	<ul><li>[x] </li></ul> | [create a bounty](https://testing.treasury.bright.dev/bounties/new?networkId=development-2) |  Works |
 |	2.	|	User story 23	|	<ul><li>[x] </li></ul> | [e.g. bounties on kusama](https://testing.treasury.bright.dev/bounties?networkId=kusama) | Works for kusama |
 |	3.	|	User story 24	|	<ul><li>[x] </li></ul> | [bounties with curator voting on kusama](https://testing.treasury.bright.dev/bounties/4/info?networkId=kusama) | Works	|
-|	4.	|	User story 25	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) |  Doesn't work for me. At least with two different accounts, see image below	|
-|	5.	|	User story 26	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	6.	|	User story 27	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	7.	|	User story 28	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	8.	|	User story 29	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	9.	|	User story 30	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	10.	|	User story 31	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	11.	|	User story 32	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
-|	12.	|	User story 33	|	<ul><li>[ ] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | 	|
-|	13.	|	User story 34	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
-|	14.	|	User story 35	|	<ul><li>[ ] </li></ul> | [ ]() | 	|
+|	4.	|	User story 25	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) |  **05.01.22:** Doesn't work for me. At least with two different accounts, see image below **06.01.22:** Works now	|
+|	5.	|	User story 26	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | **06.01.22:** Works |
+|	6.	|	User story 27	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works	|
+|	7.	|	User story 28	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works	|
+|	8.	|	User story 29	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works	|
+|	9.	|	User story 30	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works	|
+|	10.	|	User story 31	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works|
+|	11.	|	User story 32	|	<ul><li>[x] </li></ul> | [Polkadot](https://testing.treasury.bright.dev/proposals?networkId=polkadot) | Works	|
+|	12.	|	User story 33	|	<ul><li>[x] </li></ul> | [Bounties overview](https://testing.treasury.bright.dev/bounties?networkId=development-2) | Works |
+|	13.	|	User story 34	|	<ul><li>[x] </li></ul> | [Polkadot](https://testing.treasury.bright.dev/proposals?networkId=polkadot) | Works	|
+|	14.	|	User story 35	|	<ul><li>[x] </li></ul> | [Kusama](https://testing.treasury.bright.dev/bounties/new?networkId=kusama) | Works	|
 |	15.	|	User story 36	|	<ul><li>[x] </li></ul> | [Live version](https://treasury.bright.dev/) | Polkadot and Kusama versions are live
-|	16.	|	User story 37	|	<ul><li>[x] </li></ul> | [Ideas overview](https://testing.treasury.bright.dev/ideas?networkId=development-2) | 	|
+|	16.	|	User story 37	|	<ul><li>[x] </li></ul> | [Ideas overview](https://testing.treasury.bright.dev/ideas?networkId=development-2) | Implemented 	|
 
 ## General Notes
 
-They already have a live version for polkadot as well as kusama. 
+They already have a live version for polkadot as well as kusama. In general a very good delivery. 
 
 **05.01.22 Curator accept nomination error:**
 
