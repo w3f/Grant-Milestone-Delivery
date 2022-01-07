@@ -13,4 +13,4 @@
 ## General Notes
 
 Deliverables mentioned that there should be uncompressed archives available online
-for which I haven't found a link.
+for which I haven't found a link. Medium post pending PR review.
