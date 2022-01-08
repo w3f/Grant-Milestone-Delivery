@@ -44,6 +44,6 @@
 | 18.     | Demo video 02 | https://youtu.be/CCio4TV3STk | RainbowDAO-multiSignDemo |
 | 19.     | Demo video 02 | https://youtu.be/xF3ym0MudRE | RainbowDAO -TokenFactoryDemo |
 | 20.     | Functional Testnet URL | http://www.rainbowdao.io/polkadot | Functional Testnet URL |
-
+| 21.     | Contract Tutorial Documentation | https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-docs/blob/main/rainbowDaoProtocolTest.md | Contract Tutorial Documentation |
 
 
