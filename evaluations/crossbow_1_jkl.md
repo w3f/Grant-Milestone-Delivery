@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** In Progress
+- **Status:**  Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/crossbow.md
 - **Milestone:** 1
 - **Kusama Identity:** Ha27MB4gKH36ieRPa1T1ASqhUz4sVxMoVmK7o5CS6tXDqjW
@@ -10,14 +10,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/crossbow/blob/main/LICENSE| Correct Licence Apache 2.0 |
-| 0b.  | Documentation |<ul><li>[ ] </li> </ul>| https://github.com/dodorare/crossbow/wiki | Missing documentation about generating and signing AAB file. The documentation for generating a project is sufficient. |
+| 0b.  | Documentation |<ul><li>[ X ] </li> </ul>| https://github.com/dodorare/crossbow/wiki | Missing documentation about generating and signing AAB file. The documentation for generating a project is sufficient. |
 | 0c. | Testing |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/crossbow/tree/main/crossbundle/tools/tests | Missing test guide documentation on how to run tests. Test guide was included as part of the proposal. |
-| 0d. | Docker |<ul><li>[ ] </li></ul>| https://github.com/creator-rs/crossbow/pkgs/container/android | Building the project via docker as described in the documentation, throws the following error: <br> error: Creator Tools errorcaused by: Failed to find manifest: Found argument '--message-format' which wasn't expected, or isn't valid in this contextUSAGE:    cargo locate-project [OPTIONS]For more information try --help <br> I cloned the project from main branch: https://github.com/dodorare/crossbow.git |
+| 0d. | Docker |<ul><li>[ X ] </li></ul>| https://github.com/creator-rs/crossbow/pkgs/container/android | Building the project via docker as described in the documentation, throws the following error: <br> error: Creator Tools errorcaused by: Failed to find manifest: Found argument '--message-format' which wasn't expected, or isn't valid in this contextUSAGE:    cargo locate-project [OPTIONS]For more information try --help <br> I cloned the project from main branch: https://github.com/dodorare/crossbow.git |
 | 1. | aapt2 tool wrapper |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/android-tools-rs/tree/main/src/aapt2 | ...|
 | 2. | bundletool wrapper |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/android-tools-rs/tree/main/src/bundletool | ...|
 | 3. | Support AAB |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/crossbow/blob/main/crossbundle/cli/src/commands/build/android.rs#L155 | ...|
 | 4. | Support Macroquad engine |<ul><li>[ X ] </li></ul>|https://github.com/dodorare/crossbow/blob/main/crossbundle/cli/src/commands/build/mod.rs#L56 | ...|
-| 5. | Enhance documentation |<ul><li>[ ] </li></ul>| https://github.com/dodorare/crossbow/tree/main/crossbundle/cli#readme| Ambiguous deliverable. The wiki documentation is present, but can always be enhanced more.  |
+| 5. | Enhance documentation |<ul><li>[ X ] </li></ul>| https://github.com/dodorare/crossbow/tree/main/crossbundle/cli#readme| Ambiguous deliverable. The wiki documentation is present, but can always be enhanced more.  |
 
 
 Ideally all links inside the above table should include the commit hash,
