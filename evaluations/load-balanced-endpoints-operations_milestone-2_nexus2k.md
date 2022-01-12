@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [link](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md) 
 - **Milestone:** 2
 - **Kusama Identity:** PHILIPP W3F
@@ -12,5 +12,4 @@
 
 ## General Notes
 
-Deliverables mentioned that there should be uncompressed archives available online
-for which I haven't found a link. Medium post pending PR review.
+Uncompressed archives of full polkadot DB found at https://substrate.archive.aws.geometry.io/polkadot_manifest.txt. All promised deliverables found.
