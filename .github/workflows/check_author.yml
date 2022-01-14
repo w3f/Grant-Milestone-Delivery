@@ -21,8 +21,8 @@ jobs:
         with: 
           script: |
             await github.rest.repos.listCommits({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner: 'w3f',
+              repo: 'Grants-Program',
               path: 'applications/${{ steps.delivery.outputs.application-filename }}'
             }).then( app_commits => {
               app_authors = app_commits.data.map(c => {return c.author.login});
