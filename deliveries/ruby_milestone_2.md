@@ -4,7 +4,7 @@
 
 **The [invoice form :pencil:](https://forms.gle/LSRr7PCjBpEbKGh89) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** https://github.com/w3f/Grants-Program/pull/311
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/RubyProtocol.md
 
 * **Milestone Number:** 2
 
