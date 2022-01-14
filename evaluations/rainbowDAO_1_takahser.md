@@ -31,7 +31,8 @@
 - Documentation on how to setup and test the node, protocol and ui can be found in [this additional repo](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-docs/blob/3898c3526db94f40037909b3e141ed223f4a524d/rainbowDaoProtocolTest.md).
 - [Ink! contracts](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-milestone_1/tree/a23014890e50dad5fdb2b1e46ffef5d2aa4cd034)
   - Currently there are a lot of warnings when building and testing the contracts. It would be good if the code could be cleaned up a little.
-  - Also I found some legacy or confusing comments, for example [this one](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-milestone_1/blob/a23014890e50dad5fdb2b1e46ffef5d2aa4cd034/govnance_dao/lib.rs#L90). Cleaning up these would be good also.
+  - Also I found some legacy or confusing comments, for example [this one](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-milestone_1/blob/a23014890e50dad5fdb2b1e46ffef5d2aa4cd034/govnance_dao/lib.rs#L90).
+  - **While I'm willing to give it a pass for M1 please consider improving your code quality for M2**. 
 - [contract UI](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-UI-milestone_1/tree/c0786b2d2a6e4290fe9abd0353f419a85894dbb2)
   - Token Mint UI: After creating a token, the "Token Panel" screen doesn't show the token:
   ![image](https://user-images.githubusercontent.com/5393704/149517672-09455bfb-fb7f-4b19-a0b9-f252991f0f89.png)
