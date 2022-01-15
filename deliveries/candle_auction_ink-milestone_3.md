@@ -24,5 +24,6 @@ Once candle auction mechanics for two subjects are in place with previous milest
 | 7. | § Add New Reward Contract | [link](https://github.com/agryaznov/substrate-docs/blob/develop/v3/tutorials/12-candle-workshop/index.mdx#add-new-rewarding-option) | Learn to add a new type of auction subject and to plug-in it into our conract logic | 
 | 8. | § Change Randomness Source | [link](https://github.com/agryaznov/substrate-docs/blob/develop/v3/tutorials/12-candle-workshop/index.mdx#change-randomness-source) | Learn to set another on-chain randomness source for our candle |
 
+**Additional Information**  
 
-
+Please use the [develop](https://github.com/agryaznov/substrate-docs/tree/develop) branch of my fork of the *substrate-docs* repo. New tutorial lives at [http://localhost:8001/tutorials/v3/candle](http://localhost:8001/tutorials/v3/candle).
