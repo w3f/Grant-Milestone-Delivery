@@ -11,7 +11,7 @@ official [milestone delivery guidelines](https://github.com/w3f/General-Grants-P
 
 | Number | Deliverable              | Link                                                         | Notes                                                        |
 | ------ | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 0a.    | License                  | Apache 2.0                                                   |  Apache 2.0                                                            |
+| 0a.    | License                  |  [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/whitenoise.md)  |  Apache 2.0                                                            |
 | 0b.    | Documentation            | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/whitenoise.md) | Dotpay user guide, workflow, and what is dotpay.                                  |
 | 0c.    | Testing Guide            | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/README.md) |    Test Guide of the Rust implementation of WhiteNoise protocol                                                          |
 | 0d.    | Docker        | [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md) |   We will provide Dockerfile and docker image to run the website in one command line                                                           |
