@@ -22,6 +22,8 @@
 | 4.     |Recharge management                         | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
 | 5.     | Transfer ink! contract                          | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
 
+
+
 | Number | Deliverable                     | Link                                                         | Notes                                                        |
 | ------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 0a.    | License                         | [Apache 2.0](https://github.com/Cumulus2021/cess/blob/main/LICENSE) |                                                              |
@@ -32,4 +34,3 @@
 | 1b.    | Substrate module: Files Map     | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map](https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map) | Management to stored file routing.                           |
 | 1c.    | Substrate module: Storage Miner | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer](https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer) | Contains operations related storage miners.                  |
 | 2.     | Docker                          | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
-
