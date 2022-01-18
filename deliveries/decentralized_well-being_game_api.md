@@ -17,4 +17,4 @@
 | Number | Deliverable                     | Link                                                         | Notes                                                        |
 | ------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1. | License | https://github.com/HealthHero/web3-decentarlized-api/blob/master/LICENSE | Apache License 2.0 |
-| 2. | Source code | https://github.com/HealthHero/web3-decentarlized-api/ |  |
+| 2. | Source code | https://github.com/HealthHero/web3-decentarlized-api/ | Source Code, Ink! Contracts and API(s)|
