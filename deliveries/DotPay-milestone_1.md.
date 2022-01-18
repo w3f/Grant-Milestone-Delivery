@@ -22,16 +22,14 @@
 | 4.     |Recharge management                         | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
 | 5.     | Transfer ink! contract                          | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
 
-1
+| Number | Deliverable                     | Link                                                         | Notes                                                        |
+| ------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 0a.    | License                         | [Apache 2.0](https://github.com/Cumulus2021/cess/blob/main/LICENSE) |                                                              |
+| 0b.    | Documentation                   | [https://github.com/Cumulus2021/cess#run-the-cess-node](https://github.com/Cumulus2021/cess#run-the-cess-node) | Basic tutorial that explains how a user can running substrate to join CESS network and support storage service (planned to be fulfilled in the delivery 2). |
+| 0c.    | Testing Guide                   | [https://github.com/Cumulus2021/cess#run-tests](https://github.com/Cumulus2021/cess#run-tests) | Core functions in pallets are covered by unit tests to ensure functionality and robustness. Tests can be run in the docker container also. |
+| 0d.    | Article/Tutorial                | [https://github.com/Cumulus2021/cess#module-documentation](https://github.com/Cumulus2021/cess#module-documentation) | A tutorial that explains the work done as part of the grant. |
+| 1a.    | Substrate module: Files Bank    | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-bank](https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-bank) | Contains operations related info of files on multi-direction. |
+| 1b.    | Substrate module: Files Map     | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map](https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map) | Management to stored file routing.                           |
+| 1c.    | Substrate module: Storage Miner | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer](https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer) | Contains operations related storage miners.                  |
+| 2.     | Docker                          | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
 
-| Number | Deliverable | Specification |
-| ------------- | ------------- | ------------- |
-| 0a. | License | Apache 2.0 |
-| 0b. | Documentation | Dotpay user guide, workflow, and what is dotpay. |
-| 0c. |  | We will provide uni test for user management and recharge management modules(70% cover), the two module UI test report |
-| 0d. | Docker | We will provide Dockerfile and docker image to run the website in one command line |
-| 1. | User management, create an polkadot account for each developer | We will provide login function, you can login our website using github, and we will create an polkadot account for each user by default |
-| 2. | Repo & webhook management| We will fetch your github repo list, so you can active the repo you want integrate with polkadot, the webhook module will listen the pay event and tigger transform module to pay developer DOT |
-| 3. | Address binding | Develop using github issue comment to bind there polkadot address. `/dotpay bind [address]` |
-| 4. | Recharge management | Recharge DOT to your platform account |
-| 5. | Transfer ink! contract| We will provide an tested ink! contract on Substrate Smart Contracts Node, provide transfer limit, witelist and transfer function. The platform will integrate the contract when the Polkadot mainnet contract para chain is available. |
