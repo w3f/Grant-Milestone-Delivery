@@ -6,7 +6,7 @@ has been filled out correctly for this milestone and the delivery is according t
 official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md)
 .**
 
-* **Application Document:** https://github.com/w3f/Open-Grants-Program/pull/161
+* **Application Document:** https://github.com/AdaLam7/Grants-Program/blob/master/applications/DotPay.md
 * **Milestone Number:** 1
 
 | Number | Deliverable              | Link                                                         | Notes                                                        |
