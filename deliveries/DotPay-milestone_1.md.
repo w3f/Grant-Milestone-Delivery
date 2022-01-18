@@ -24,13 +24,14 @@
 
 
 
-| Number | Deliverable                     | Link                                                         | Notes                                                        |
-| ------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 0a.    | License                         | [Apache 2.0](https://github.com/Cumulus2021/cess/blob/main/LICENSE) |                                                              |
-| 0b.    | Documentation                   | [https://github.com/Cumulus2021/cess#run-the-cess-node](https://github.com/Cumulus2021/cess#run-the-cess-node) | Basic tutorial that explains how a user can running substrate to join CESS network and support storage service (planned to be fulfilled in the delivery 2). |
-| 0c.    | Testing Guide                   | [https://github.com/Cumulus2021/cess#run-tests](https://github.com/Cumulus2021/cess#run-tests) | Core functions in pallets are covered by unit tests to ensure functionality and robustness. Tests can be run in the docker container also. |
-| 0d.    | Article/Tutorial                | [https://github.com/Cumulus2021/cess#module-documentation](https://github.com/Cumulus2021/cess#module-documentation) | A tutorial that explains the work done as part of the grant. |
-| 1a.    | Substrate module: Files Bank    | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-bank](https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-bank) | Contains operations related info of files on multi-direction. |
-| 1b.    | Substrate module: Files Map     | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map](https://github.com/Cumulus2021/cess/tree/main/c-pallets/files-map) | Management to stored file routing.                           |
-| 1c.    | Substrate module: Storage Miner | [https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer](https://github.com/Cumulus2021/cess/tree/main/c-pallets/sminer) | Contains operations related storage miners.                  |
-| 2.     | Docker                          | [https://github.com/Cumulus2021/cess#run-in-docker](https://github.com/Cumulus2021/cess#run-in-docker) |                                                              |
+| Number | Deliverable              | Link                                                         | Notes                                                        |
+| ------ | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 0a.    | License                  | Apache 2.0                                                   |                                                              |
+| 0b.    | Documentation            | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/whitenoise.md) | Specifics about WhiteNoise protocol                                  |
+| 0c.    | Testing Guide            | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs/blob/94372dc6d2ab5958b747529aa6899ab070b623bd/README.md) |    Test Guide of the Rust implementation of WhiteNoise protocol                                                          |
+| 0d.    | Article/Tutorial         | [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md) |   Guide to start local WhiteNoise network and to start substrate node with WhiteNoise-based rpc                                                           |
+| 1.     | WhiteNoise.rs            | [Link](https://github.com/Evanesco-Labs/WhiteNoise.rs)               | The implementation of privacy p2p network protocol in Rust |
+| 2.     | WhiteNoise rpc           | [Link](https://github.com/Evanesco-Labs/WhiteNoise-RPC.git)    | Json rpc based on WhiteNoise network |
+| 3.     | substrate                | [Link](https://github.com/Evanesco-Labs/substrate.git)  | Add WhiteNoise-based rpc as an option to substrate node |
+| 4.     | WhiteNoise Testnet      |  [Link](https://github.com/Evanesco-Labs/substrate/blob/master/tutorial.md#4-whitenoise-testnet)| Guide to start substrate node with WhiteNoise-based rpc using WhiteNoise testnet                                   |
+
