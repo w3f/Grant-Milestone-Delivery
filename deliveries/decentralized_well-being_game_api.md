@@ -17,7 +17,7 @@
 | Number | Deliverable                     | Link                                                         | Notes                                                        |
 | ------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1. | License | https://github.com/HealthHero/web3-decentarlized-api/blob/master/LICENSE | Apache License 2.0 |
-| 2. | PolkaDot Contracts | https://github.com/HealthHero/web3-decentarlized-api/tree/master/polkacontract | Polkadot Implementation|
-| 3. | Substrate  Contracts | https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate | Substrate Implementation|
+| 2. | PolkaDot | https://github.com/HealthHero/web3-decentarlized-api/tree/master/polkacontract | Polkadot Implementation|
+| 3. | Substrate  | https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate | Substrate Implementation|
 | 4. | Perun Pallets | https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate/pallets/pallet-perun | Perun Pallet Implementation |
 | 5. | Game API(s) | https://github.com/HealthHero/web3-decentarlized-api | Game API(s) Implementation |
