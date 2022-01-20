@@ -21,17 +21,18 @@
 
 **Main README**
 
-Here you wrote
-> `virto` is a parachain node, which means it _must_ connect to a relay chain and be onboarded in order to
+- Here you wrote
+    > `virto` is a parachain node, which means it _must_ connect to a relay chain and be onboarded in order to
 produce blocks.
 
-This is not entirely correct. Blocks can be produced by a parachain node however, they cannot be finalized.
+    This is not entirely correct. Blocks can be produced by a parachain node however, they cannot be finalized.
+
+- Instructions on how to run tests are missing (I used `cargo test`).
 
 **Payment Pallet README**
 
-This seems to be outdated. For example, I can't find any `create` extrinsic in your code while the `pay` and `pay_with_remark` extrinsics are missing in the doc. Please also make sure to format the document properly as especially the extrinsics section looks a bit messy.
-
-I also opened a [PR](https://github.com/virto-network/virto-node/pull/178/files) for some minor changes/improvments in your README.
+- seems to be outdated. For example, I can't find any `create` extrinsic in your code while the `pay` and `pay_with_remark` extrinsics are missing in the doc. Please also make sure to format the document properly as especially the extrinsics section looks a bit messy.
+- I also opened a [PR](https://github.com/virto-network/virto-node/pull/178/files) for some minor changes/improvments in your README.
 
 **Inline docs**
 
@@ -118,8 +119,6 @@ warning: build failed, waiting for other jobs to finish...
 error: build failed
 ```
 
-
-    - How can I run the tests? (I used `cargo test`)
   - Tests pass, however, there are only 10. Is there any specific reason, you didn't add unit tests for `create_payment`, `release_payment`, `cancel_payment` and `get_payment_details` functions that are part of the `PaymentHandler` in the payment pallet?
     ```
     % cargo test                                       
