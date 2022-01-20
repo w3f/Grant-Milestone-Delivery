@@ -9,11 +9,11 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- | ---------------- |
-| 0a. | License | <ul><li>[x]</li></ul> | ['Unlicence' License](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/LICENSE) | "Unlicense" License |
-| 0b. | Documentation | <ul><li>[]</li></ul> | [Main README](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/README.md) | See [Documentation](#documentation) section |
-| 0c. | Tests and benchmarks | <ul><li>[]</li></ul> | [tests](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/tests.rs) | See [Tests & benchmarks](#tests-and-benchmarks) section |
-| 1. | Escrow functionality | <ul><li>[x]</li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains escrow logic |  
-| 2. | Dispute resolution  | <ul><li>[x]</li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains dispute logic |  
+| 0a. | License | <ul><li> [x] </li></ul> | ['Unlicence' License](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/LICENSE) | "Unlicense" License |
+| 0b. | Documentation | <ul><li> [ ] </li></ul> | [Main README](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/README.md) | See [Documentation](#documentation) section |
+| 0c. | Tests and benchmarks | <ul><li> [ ] </li></ul> | [tests](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/tests.rs) | See [Tests & benchmarks](#tests-and-benchmarks) section |
+| 1. | Escrow functionality | <ul><li> [x] </li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains escrow logic |  
+| 2. | Dispute resolution  | <ul><li> [x] </li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains dispute logic |  
 
 ## General Notes
 
