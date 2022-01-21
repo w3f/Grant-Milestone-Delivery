@@ -20,7 +20,7 @@
 | 0b. | Documentation | https://github.com/HealthHero/web3-decentarlized-api/tree/master/frontend |  inline documentation of the code |
 | 0c. | Testing Guide | https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate/pallets/pallet-perun/tests |  Testing Guide For User/Devs|
 | 0d. | DockerFile | https://github.com/HealthHero/web3-decentarlized-api/blob/master/substrate/Dockerfile | Dockefile for Substrate/Pallets|
-| 0e. | Press | Will add Once we Move Ahead| |
+| 0e. | Press | Will add Once we move ahead| |
 | 1a. | Ink/Substrate Contract | https://github.com/HealthHero/web3-decentarlized-api/tree/master/polkacontract, https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate| Contracts Implementation|
 | 1b. | Services Implementation	 | https://github.com/HealthHero/web3-decentarlized-api | |
 | 1c. | State Channels| https://github.com/HealthHero/web3-decentarlized-api/tree/master/substrate/pallets/pallet-perun | State Channels Implementation |
