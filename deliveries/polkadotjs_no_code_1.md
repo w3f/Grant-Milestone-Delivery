@@ -15,7 +15,7 @@
 | 0b.  | Demo Pages | https://polkadotjs.bubbleapps.io/version-test/ | You will find on this page links to all demo pages available. Most of the feauters are on separate pages, but some of them are combined on one page for a better experience. For example, features for Wallet extension | 
 | 0c. | Documentation | https://polkadotjs.docs.ezcodeplugins.com | | 
 | 0d. | Testing Guide | https://polkadotjs.bubbleapps.io/version-test/ | As described in the application, the only way to test it is through demo pages that covers all integrated features. Also, refer to plugin documentation. | 
-| 0e. | Forum post|  | Will post once this milestone will be approved | 
+| 0e. | Forum post| https://forum.bubble.io/t/plugin-polkadot-js-by-ezcode/187940 | It was written in our usual style for such plugin posts | 
 | 1. | Extension | Successfully integrated Extension features in the plugin element. See in plugin editor element "Polkadot Wallet": https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4  | | 
 | 2. | Utilities | Successfully integrated Utilities in the plugin element. See in plugin editor element "Polkadot Utils": https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4 | | 
 | 3. | Deploy v.1.0 | Marketplace: https://bubble.io/plugin/polkadotjs-1639402639641x977692461648052200 GitHub: https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js| | 
