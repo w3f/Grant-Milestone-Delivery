@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkadotjs_no_code.md 
 - **Milestone:** 1
 - **Kusama Identity:** HNdC4zNpYVUHJYT9Du9p9Haad5xkXvcyte9vmfUQvHAf8dC
@@ -12,7 +12,7 @@
 | 0b. | Demo pages | yes | [Polkadot.js plugin: All demo pages](https://polkadotjs.bubbleapps.io/version-test/) | Successfully tested all actions except "Send Transaction" because I do not have token, sorry about that.
 | 0c. | Documentation | yes | [EzCode Plugin Docs](https://polkadotjs.docs.ezcodeplugins.com/) | Sufficient :)
 | 0d. | Testing Guide | yes | [Polkadot.js plugin: All demo pages](https://polkadotjs.bubbleapps.io/version-test/) | I was able to test functionality of their already-made demo app, but not able to create my own app to test.
-| 0e. | Forum post | no | | Due to lack of this, I was not easily able to perform in-depth testing. Details in "Testing Guide" notes below.
+| 0e. | Forum post | yes | [Forum Post](https://forum.bubble.io/t/free-plugin-polkadot-js-by-ezcode/187940) | Due to lack of this, I was not easily able to perform in-depth testing. Details in "Testing Guide" notes below. **Updated by [David](https://github.com/Noc2)**
 | 1. | Extension | yes | Code: [Bubble.io Elements Tab](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4) > Plugin Elements > Polkadot Wallet <br><br> Demo: [Polkadot.js plugin: All demo pages](https://polkadotjs.bubbleapps.io/version-test/) > Wallet Demo | The EzCode team has successfully connected to the Polkadot{.js} Browser Wallet Extension API functionality in Bubble.io with their Polkadot NoCode Plugin "Polkadot Wallet" plugin element.  
 | 2. | Utilities | yes | Code: [Bubble.io Elements Tab](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4) > Plugin Elements > Polkadot Utils <br><br> Demo: [Polkadot.js plugin: All demo pages](https://polkadotjs.bubbleapps.io/version-test/) > Utils Demo | The EzCode team has successfully connected to the Polkadot{.js} Utilities/utils API functionality in Bubble.io with their Polkadot NoCode Plugin "Polkadot Utils" plugin element.
 | 3. | Deploy v.1.0 | yes | Marketplace: https://bubble.io/plugin/polkadotjs-1639402639641x977692461648052200 <br><br> GitHub: https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js | The EzCode team has published their plugin for free on the free Bubble.io NoCode platform. <br><br> They have published a backup of their code on GitHub, but please refer to [Bubble.io Elements Tab](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4) for the live code. 
