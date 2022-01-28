@@ -12,7 +12,7 @@ There is also [documentation](https://github.com/imbuenetwork/imbue) detailing h
 
 The team has been mainly focused on getting the collator part done for both milestones as we felt that was the more difficult part. We are proud of what we have achieved given the time spent.
 
-The only missing point is 0e which is an article explaining how to go through the UI. We are planning to do this as soon as we complete the UI for voting/contributing as we feel it will make sense to our community
+The only missing point is `0e` which is an article explaining how to go through the UI. We are planning to do this as soon as we complete the UI for voting/contributing as we feel it will make sense to our community
 
 
 However, that said the core functionality of creating a project, defining its milestones as well as contributing and having the funds unloked based on votes is complete
@@ -20,7 +20,7 @@ However, that said the core functionality of creating a project, defining its mi
 We also did a tremendous amount of work to make it seamless to launch the collator using docker/polkadot-js so every single member of our community can launch the entire chain with very little technical knowledge
 
 
-Finaly, We have shared a demo of the full flow [here](https://imbuenetwork.medium.com/imbue-mvp-demo-33d6c3e29856)
+Finally, We have shared a demo of the full flow [here](https://imbuenetwork.medium.com/imbue-mvp-demo-33d6c3e29856)
 
 
 
@@ -33,8 +33,7 @@ Finaly, We have shared a demo of the full flow [here](https://imbuenetwork.mediu
 | 0b  | DAPP |The UI to allow you to submit proposals| https://github.com/ImbueNetwork/prototype | 
 | 0c  | Documentation | The main repo has a guide on launching from source | https://github.com/ImbueNetwork/imbue/blob/main/scripts/docker-compose.yml| 
 | 0d  | Docker |The main repo has a polkadot-launch docker-compose file to get the entire infrastructure up, including polkadotJS| https://github.com/ImbueNetwork/prototype |
-
-| 1  | Grants Pallet | Renamed to proposals, has alot of the functionality required for milestone 2.  | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L187| 
+| 1 | Grants Pallet | Renamed to proposals, has alot of the functionality required for milestone 2.  | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L187
 
 
 **Additional Information**
