@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress 
+- **Status:** Accepted 
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/CESS.md
 * **Milestone:** 3
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -8,17 +8,19 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[ ] </li></ul> | [web-app](https://github.com/CESSProject/web-app), [cess-ui-js](https://github.com/CESSProject/cess-ui-js/blob/main/LICENSE), [cess-proving-system](https://github.com/CESSProject/cess-proving-system/blob/main/LICENSE-APACHE) | web-app has no license file |
+| 0a. | License | <ul><li>[x] </li></ul> | [web-app](https://github.com/CESSProject/web-app/blob/main/LICENSE), [cess-ui-js](https://github.com/CESSProject/cess-ui-js/blob/main/LICENSE), [cess-proving-system](https://github.com/CESSProject/cess-proving-system/blob/main/LICENSE-APACHE) | **19.01.2022:**  web-app has no license file  **24.01.22:** License was added |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [cess](https://github.com/CESSProject/cess) | Documentation via readme files. No inline documentation, but it’s also not a requirement of the grant.  |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [cess](https://github.com/CESSProject/cess#run-tests) | Test all work |
 | 0d. | Article/Tutorial | <ul><li>[x] </li></ul> | [medium](https://medium.com/@swowk1/cess-forw3f-grants-the-last-step-ui-design-8a51b348aec3) | The article is rather strange and seems to be more a combination of different readme files than a real article. |
 | 1. | Cryptographic modules | <ul><li>[x] </li></ul> | [cess-proving-system](https://github.com/CESSProject/cess-proving-system) | This is mostly just a filecoin fork |
 | 2. | UI Modules | <ul><li>[x] </li></ul> | [cess-ui-js](https://github.com/CESSProject/cess-ui-js) | The UI looks nice and they already have a live version |
-| 3. | File processing | <ul><li>[ ] </li></ul> | [web-app](https://github.com/CESSProject/web-app) | I can not buy anything via the app, Upload seems to work, but it has no storage costs |
+| 3. | File processing | <ul><li>[x] </li></ul> | [web-app](https://github.com/CESSProject/web-app) | **19.01.2022:** I can not buy anything via the app, Upload seems to work, but it has no storage costs **24.01.22:** Works now |
 | 4. | Benchmark | <ul><li>[x] </li></ul> | [benchmarks](https://github.com/CESSProject/cess#run-tests-with-benchmarks) | Benchmarks for each pallet, not the individual algorithms |
 | 5. | Docker | <ul><li>[x] </li></ul> | [Docker](https://github.com/CESSProject/cess#run-in-docker) | - |
 
 ## General Notes
+
+Given the price of the milestones, it’s hard to complain about the work. They clearly put a lot of effort into this project. They obviously depend on the work done by filecoin and the implementation might not be secure in its current form, but the purpose of this grant was to fund an initial PoC and this is what they delivered.  
 
 General comments: 
 - The roadmap on their website is outdated. 
