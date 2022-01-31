@@ -10,10 +10,10 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License|<ul><li>[ X ] </li></ul>|https://github.com/virto-network/virto-node/blob/master/LICENSE| Correct License |
-| 0b.   | Documentation |<ul><li>[ ] </li></ul>| https://github.com/virto-network/virto-node/blob/master/pallets/payment/README.md| Pallet documentation is sufficient. However, the general documentation for the project seems outdated. See more details in [Documentation Feedback](#documentation-feedback).|
-| 0c. | Tests & benchmarks |<ul><li>[ ] </li></ul>| https://github.com/virto-network/virto-node/blob/master/pallets/payment/src/tests.rs <br> https://github.com/virto-network/virto-node/blob/master/pallets/payment/src/benchmarking.rs| See details in [Tests Feedback](#tests-feedback)|
+| 0b.   | Documentation |<ul><li>[ X ] </li></ul>| https://github.com/virto-network/virto-node/blob/master/pallets/payment/README.md| Pallet documentation is sufficient. However, the general documentation for the project seems outdated. See more details in [Documentation Feedback](#documentation-feedback).|
+| 0c. | Tests & benchmarks |<ul><li>[ X ] </li></ul>| https://github.com/virto-network/virto-node/blob/master/pallets/payment/src/tests.rs <br> https://github.com/virto-network/virto-node/blob/master/pallets/payment/src/benchmarking.rs| See details in [Tests Feedback](#tests-feedback)|
 | 1 | Escrow functionality |<ul><li>[ X ] </li></ul>| https://github.com/virto-network/virto-node/pull/95/files/de72267a8cd507275f255acf7a0e961669f81ab0  | Escrow functionality is sufficient. Side question: Your pull request was merged into master, but I can only see the payment pallet on master currently. why?|
-| 2 | Dispute resolution |<ul><li>[ ] </li></ul>|https://github.com/virto-network/virto-node/pull/99/files| By what mechanism are accounts added to JudgeWhitelist? (Random, Elected, By Sudo Account or ) ? Also, is there possibility for partial refund instead of full release/cancel from escrow? Meaning, can the judge give 50% of the funds to claimant, and 50% to issuer? |
+| 2 | Dispute resolution |<ul><li>[ X ] </li></ul>|https://github.com/virto-network/virto-node/pull/99/files| By what mechanism are accounts added to JudgeWhitelist? (Random, Elected, By Sudo Account or ) ? Also, is there possibility for partial refund instead of full release/cancel from escrow? Meaning, can the judge give 50% of the funds to claimant, and 50% to issuer? |
 
 
 
@@ -24,6 +24,8 @@
 2. I like that you are trying to simplify the build with a Makefile. Please try to document correctly the main MAKE commands for people in the ecosystem who want to use your work. 
 
 3. I did commits on a new branch(evaluation) on your repo, but I don't have commit rights, so my commits were not accepted.
+
+Accepted Note: Merge request was accepted and merged into master branch: https://github.com/virto-network/virto-node/pull/173
 
 #### Documentation Feedback
 
@@ -76,7 +78,7 @@ instead of
 ./target/release/virto_node --help
 ```
 
-
+Accepted Note: Documentation was added after initial review. https://github.com/virto-network/virto-node#build
 
 #### Tests Feedback
 
@@ -202,3 +204,5 @@ Can you let me know why this is? I see that you can run benchmarks also through
 ./target/release/virto-parachain benchmark
 ```
 but benchmark should be able to run independently. 
+
+Accepted Note: Running benchmark using Makefile was documented after initial review: https://github.com/virto-network/virto-node#benchmark
