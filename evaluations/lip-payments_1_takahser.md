@@ -6,12 +6,11 @@
 - **Kusama Identity:** Address
 - **Previously successfully merged evaluation:** All by takahser
 
-
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- | ---------------- |
 | 0a. | License | <ul><li>[x]</li></ul> | ['Unlicence' License](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/LICENSE) | "Unlicense" License |
 | 0b. | Documentation | <ul><li>[x]</li></ul> | [Main README](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/README.md) | See [Documentation](#documentation) section |
-| 0c. | Tests and benchmarks | <ul><li>[x]</li></ul> | [tests](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/tests.rs) | See [Tests & benchmarks](#tests-and-benchmarks) section |
+| 0c. | Tests and benchmarks | <ul><li>[x]</li></ul> | [tests](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/tests.rs) | See [Tests and benchmarks](#tests-and-benchmarks) section |
 | 1. | Escrow functionality | <ul><li>[x]</li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains escrow logic |  
 | 2. | Dispute resolution  | <ul><li>[x]</li></ul> | [Payment Pallet](https://github.com/virto-network/virto-node/blob/bc0bd8ca74deb58499b9258094fcae462b96729d/pallets/payment/src/lib.rs) | payment pallet contains dispute logic |  
 
@@ -238,7 +237,7 @@
     Writes = 1
     ```
 
-### Tests & benchmarks
+### Tests and benchmarks
 
   - benchmarks can now be executed together with the tests
   - the team followed [my feedback](https://github.com/w3f/Grant-Milestone-Delivery/pull/338#issuecomment-1024143883) and added 8 additional tests to the original 10 tests it already had to cover all `PaymentHandler` methods
