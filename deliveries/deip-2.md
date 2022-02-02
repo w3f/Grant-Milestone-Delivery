@@ -15,5 +15,5 @@
 | 0b.  | Documentation |[Docs](https://github.com/vedai-org/polkadot-grant-delivery/blob/master/docs/user-stories.md)| User stories| 
 | 0c.  | Testing Guide |[Testing guide](https://github.com/vedai-org/polkadot-grant-delivery/blob/master/docs/testing-guide.md)| Test check list|
 | 0d. | Docker | [Docker](https://github.com/vedai-org/polkadot-grant-delivery/blob/master/docker-compose.yml)| [Launch guide](https://github.com/vedai-org/polkadot-grant-delivery#launching)|
-| 0e. | Article | [Article](TODO)| Articles are being reviewed by content editors and prepared for publication in the upcoming couple of days. Links will be updated once articles are published. |
+| 0e. | Article | [Article](https://medium.com/deip/what-is-vedai-and-why-are-we-doing-it-c60c3d8472bc)| Article (part 1,  with two more parts to be published in upcoming weeks) about Vedai |
 | 1 | Web-based UI | [Source code](https://github.com/vedai-org/polkadot-grant-delivery/tree/master/src) | ...| 
