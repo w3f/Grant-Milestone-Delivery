@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MIXERv2.md
+* **Application Document:** https://github.com/w3f/Grants-Program/pull/422
 * **Milestone Number:** 2
 
 **Context**
@@ -17,10 +17,14 @@ This delivery includes the webb-dapp w/ designs, the webb.js SDK, the webb priva
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://github.com/webb-tools/webb-dapp |...| 
-| 0b.  | Documentation for running | https://github.com/webb-tools/webb-dapp| Inside the readme |
+| 0a. | License | https://github.com/webb-tools/webb-dapp/blob/master/LICENSE |...| 
+| 0b.  | Documentation for running | https://github.com/webb-tools/webb-dapp/blob/master/README.md | Inside the readme |
 | 1. | Relayer | https://github.com/webb-tools/relayer | ... |
 | 2. | CLI | Amended in future milestone | ... |
-| 4. | DApp UI designs | https://github.com/webb-tools/webb-dapp | ... |
-| 5. | DApp proof gen | https://github.com/webb-tools/webb-dapp | ... |
-| 6. | API Support | https://github.com/webb-tools/webb.js | ... |
+| 3. | WASM bindings | https://github.com/webb-tools/webb.js/tree/master/packages/wasm-utils | Core rust tools compiling to WASM with wasm_bindgen |
+| 3a. | WASM bindings: Web Worker Support | https://github.com/webb-tools/webb.js/tree/master/packages/sdk-core/src/proving | Uses `Worker` within that can be injected from a web application. |
+| 4. | UI Support: Multi-assets support | https://github.com/webb-tools/webb-dapp/tree/master/packages/react-environment/src/webb-context/currency, https://github.com/webb-tools/webb-dapp/tree/master/packages/react-environment/src/api-providers/polkadot | In the polkadot deposit class, it supports multi-assets from ORML. |
+| 4a. | UI Support: Multi-asset design | https://github.com/webb-tools/webb-dapp/tree/master/packages/mixer/src/components/Deposit | The UI component |
+| 5. | UI Support: Proof generation | https://github.com/webb-tools/webb-dapp/blob/master/packages/react-environment/src/api-providers/polkadot/polkadot-mixer-withdraw.ts#L173 | In the withdraw method, we do proof generation against `webb.js` SDK |
+| 6. | API Support: Types | https://github.com/webb-tools/webb.js/tree/master/packages/types | ... |
+| 6a. | API Support: Usage | https://github.com/webb-tools/webb.js/tree/master/examples/sdk-mixer | Example of creating note, proving, setting up tree for proofs |
