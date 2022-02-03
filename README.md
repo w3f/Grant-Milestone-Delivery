@@ -29,14 +29,14 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    1. [Evaluators](https://github.com/w3f/Grants-Program#team) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
-   1. The [operations team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted.
+   1. The [operations team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted. Payments are usually processed within 14 days.
    2. Payment is made to the Bitcoin or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
-Grant applications can be amended at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
+Grant applications can be [amended](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 500 USD in KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 2 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
 
 ### Requirements
 
