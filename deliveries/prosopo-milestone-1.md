@@ -24,9 +24,11 @@ This Milestone contains the very first version of the Prosopo human verification
 
 **Additional Information**
 
-Our `Provider` node is currently architected as a series of TypeScript files that will be broken into sensible packages as part of Milestone 2. This is to allow re-use of components.
+- Our `Provider` node is currently architected as a series of TypeScript files that will be broken into sensible packages as part of Milestone 2. This is to allow re-use of components.
 
-We recognise the `Protocol` contract is very long, and we will be migrating it to use [OpenBrush's contract library](https://github.com/Supercolony-net/openbrush-contracts/tree/c71097ff10ef6d187bf9c86f0248bfbc6ec40a3c/docs/docs/smart-contracts) as part of Milestone 2.
+- We recognise the `Protocol` contract is very long, and we will be migrating it to use [OpenBrush's contract library](https://github.com/Supercolony-net/openbrush-contracts/tree/c71097ff10ef6d187bf9c86f0248bfbc6ec40a3c/docs/docs/smart-contracts) as part of Milestone 2.
+
+- Our original contract design involves checking captcha solutions for users within a timeframe. It has not been possible to unit test this as `block_timestamp` does not exist in the experimental `ink!` unit test engine. We are exploring alternatives for this feature as part of Milestone 2.
 
 As part of this Milestone we contributed PRs and comments to various Polkadot ecosystem projects.
 
