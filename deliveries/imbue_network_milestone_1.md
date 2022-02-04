@@ -29,11 +29,11 @@ Finally, We have shared a demo of the full flow [here](https://imbuenetwork.medi
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a (milestone 2) | CI/CD |https://github.com/ImbueNetwork/imbue/blob/main/.github/workflows/collator_actions.yml| While this pipeline only ensures the code can be built, we will be expanding it to include deployment to an environment as soon the UI prototype is done |
-| 0a | licence |License| https://github.com/ImbueNetwork/imbue | 
-| 0b  | DAPP |The UI to allow you to submit proposals| https://github.com/ImbueNetwork/prototype | 
-| 0c  | Documentation | The main repo has a guide on launching from source | https://github.com/ImbueNetwork/imbue/blob/main/scripts/docker-compose.yml| 
-| 0d  | Docker |The main repo has a polkadot-launch docker-compose file to get the entire infrastructure up, including polkadotJS| https://github.com/ImbueNetwork/prototype |
-| 1 | Grants Pallet | Renamed to proposals, has alot of the functionality required for milestone 2.  | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L187
+| 0a | licence | https://github.com/ImbueNetwork/imbue| License | 
+| 0b  | DAPP |https://github.com/ImbueNetwork/prototype| The UI to allow you to submit proposals | 
+| 0c  | Documentation | https://github.com/ImbueNetwork/imbue/blob/main/scripts/docker-compose.yml | The main repo has a guide on launching from source | 
+| 0d  | Docker |https://github.com/ImbueNetwork/prototype | The main repo has a polkadot-launch docker-compose file to get the entire infrastructure up, including polkadotJS |
+| 1 | Grants Pallet | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L187 | Renamed to proposals, has alot of the functionality required for milestone 2. |
 
 
 **Additional Information**
