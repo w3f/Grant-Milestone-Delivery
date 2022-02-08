@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** In Progress
-- **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/356
+- **Application Link:** https://github.com/w3f/Grants-Program/blob/master/applications/DotPay.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
 * **Previously successfully merged evaluation:** All evaluations by Noc2
