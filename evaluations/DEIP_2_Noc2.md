@@ -20,7 +20,7 @@
 
 ## General Notes
 
-Published as part of separate repo, which makes it difficult to find for others 
+Published as part of a separate repo, which makes it difficult to find for others 
 
 <pre><font color="#12488B"><b>polkadot-grant-delivery</b></font>$ snyk test
 

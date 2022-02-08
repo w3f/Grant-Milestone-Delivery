@@ -73,10 +73,10 @@ jobs:
                   "data": [[
                     "=IFERROR(HYPERLINK(\"#gid=0&range=\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0) & \":\" & MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))), Legal!$D:$D, 0), INDEX(Legal!$A$2:$A,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))), \"\")",
                     "${{ steps.parse-grant.outputs.project_name }}",
-                    "${{ needs.get-delivery-once.outputs.milestone_number }}",
+                    "${{ needs.get-delivery-once.outputs.milestone-number }}",
                     "",
                     "Not Yet",
-                    "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), \"Not Yet\", 3, \"In Progress\", 2, \"Asked for Changes\", 1, \"Final Check\", 2, \"Done\", 0, \"Terminated\", 0))",
+                    "=IFERROR(SWITCH(INDIRECT(ADDRESS(ROW(),COLUMN()-1)), \"Not Yet\", 4, \"In Progress\", 3, \"Asked for Changes\", 2, \"Final Check\", 3, \"Final Warning\", 3, \"Done\", 0, \"Terminated\", 0, \"On Hold\", 1))",
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ github.event.pull_request.html_url }}",
                     "",
