@@ -24,6 +24,8 @@ This Milestone contains the very first version of the Prosopo human verification
 
 **Additional Information**
 
+We've created a branch in each of our repositories called `milestone1`. We'd appreciate you using these branches when running / testing the code.
+
 - Our `Provider` node is currently architected as a series of TypeScript files that will be broken into sensible packages as part of Milestone 2. This is to allow re-use of components.
 
 - We recognise the `Protocol` contract is very long, and we will be migrating it to use [OpenBrush's contract library](https://github.com/Supercolony-net/openbrush-contracts/tree/c71097ff10ef6d187bf9c86f0248bfbc6ec40a3c/docs/docs/smart-contracts) as part of Milestone 2.
