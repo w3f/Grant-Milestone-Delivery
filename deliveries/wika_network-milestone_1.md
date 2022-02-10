@@ -16,7 +16,7 @@
 
 Dockerized ETL Service to sync Wika blockchain data with 3 indexed databases: Postgres, Neo4j and Elastic Search.
 
-[Medium article](https://wikanetwork.medium.com/introducing-wika-network-8c21a34b7f5b)
+[Medium article](https://wikanetwork.medium.com/the-wika-network-dataset-bbb936cb27c3)
 
 **Deliverables**
 All deliverables are merged into `master` branch of the repo [wika_etl](https://github.com/randombishop/wika_etl)
@@ -27,7 +27,7 @@ All deliverables are merged into `master` branch of the repo [wika_etl](https://
 | 0b. | Documentation | [README](https://github.com/randombishop/wika_etl/blob/master/README.md) |
 | 0c. | Testing Guide | [tests](https://github.com/randombishop/wika_etl/tree/master/subql_wika/src/tests) | See repo README for instructions on how to run the tests
 | 0d. | Docker | [docker-compose.yml](https://github.com/randombishop/wika_etl/blob/master/subql_wika/docker-compose.yml) |
-| 0e. | Article | [Medium article](https://wikanetwork.medium.com/introducing-wika-network-8c21a34b7f5b) | Since everything is packaged in a unique repo with an easy to use docker-compose, we compiled all 3 databases in one single article.
+| 0e. | Article | [Medium article](https://wikanetwork.medium.com/the-wika-network-dataset-bbb936cb27c3) | Since everything is packaged in a unique repo with an easy to use docker-compose, we compiled all 3 databases in one single article.
 | 1. | ETL | [wika_etl](https://github.com/randombishop/wika_etl) | 
 | 2. | ETL Elastic Search | [wika_etl](https://github.com/randombishop/wika_etl) |   
 | 3. | ETL Neo4J | [wika_etl](https://github.com/randombishop/wika_etl) |  
