@@ -4,7 +4,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**
 
 
-* **PR Link:** https://github.com/w3f/Grants-Program/pull/455
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/NuLink.md
 * **Milestone Number:** 2
 
 
