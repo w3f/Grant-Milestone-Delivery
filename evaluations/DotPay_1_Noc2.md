@@ -9,15 +9,20 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [bytepay](https://github.com/bytepayment/bytepay/blob/main/LICENSE) | Correct License |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [overview](https://bytepay.online/docs/bytepay-overview) [userguide](https://bytepay.online/docs/bytepay-userguide) | Can’t access the documentation or see anything without login via github and sharing my data.  |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [how-to-run-test](https://github.com/bytepayment/bytepay#how-to-run-test) | Only description on how to run tests inside docker.  |
-| 1. | User management, create an polkadot account for each developer | <ul><li>[ ] </li></ul> | [Link](https://github.com/bytepayment/bytepay#how-to-run-this-project-dev-mode) | Docker set up doesn't seem to work for me, see below. http://bytepay.local-dev.host/ doesn't open |
-| 2. | Repo & webhook management| <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/bind) |  |
-| 3. | Address binding | <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/settings/address) | | 
-| 4. | Recharge management | <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/property) |  |
-| 5. | Transfer ink! contract| <ul><li>[ ] </li></ul> | [smart-contract](https://github.com/bytepayment/bytepay/tree/main/smart-contract) | **08.02.22:** Test fail, the contract seems mostly to be a copy of [contract-transfer](https://github.com/paritytech/ink/blob/ba7e8edbae4a3dd8460b37d4ee30cf31f00a2fc3/examples/contract-transfer/lib.rs). The documentation should be updated at least | 
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [overview](https://bytepay.online/docs/bytepay-overview) [userguide](https://bytepay.online/docs/bytepay-userguide) | **08.02.22:** Can’t access the documentation or see anything without login via github and sharing my data. **14.02.22:** Access no longer requires a log in and according to the contract |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [how-to-run-test](https://github.com/bytepayment/bytepay#how-to-run-test) | Only description on how to run tests inside docker. **14.02.22:** Added description on how to run it local |
+| 1. | User management, create an polkadot account for each developer | <ul><li>[ ] </li></ul> | [Link](https://github.com/bytepayment/bytepay#how-to-run-this-project-dev-mode) | **08.02.22:** Docker set up doesn't seem to work for me, see below. http://bytepay.local-dev.host/ doesn't open **14.02.22** Works. Not sure where it’s implemented in the backend. |
+| 2. | Repo & webhook management| <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/bind) | Works. Not sure where it’s implemented in the backend.  |
+| 3. | Address binding | <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/settings/address) | Works. Not sure where it’s implemented in the backend.  | 
+| 4. | Recharge management | <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/property) | Shows a substrate account instead of a polkakdot address, not sure how to fund this account |
+| 5. | Transfer ink! contract| <ul><li>[x] </li></ul> | [smart-contract](https://github.com/bytepayment/bytepay/tree/main/smart-contract) | **08.02.22:** Test fail, the contract seems mostly to be a copy of [contract-transfer](https://github.com/paritytech/ink/blob/ba7e8edbae4a3dd8460b37d4ee30cf31f00a2fc3/examples/contract-transfer/lib.rs). The documentation should be updated at least **14.02.22:** The documentation was updated. But I’m not sure how the smart contract is actually integrated. Given there is now way to deploy this on Polkadot and the live version works with DOTs!
+ | 
 
 ## General Notes
+
+The service is centralised and requests github access, so users should be aware that this evaluation didn’t check the security of the setup. It also has a lot of smaller issues, like password changing worked even though I typed two different words. 
+
+**08.02.22 General Comments:**
 
 Documentation for local testing would be nice 
 
