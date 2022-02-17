@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Link:** https://github.com/w3f/Grants-Program/blob/master/applications/DotPay.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -14,13 +14,13 @@
 | 1. | User management, create an polkadot account for each developer | <ul><li>[x] </li></ul> | [Link](https://github.com/bytepayment/bytepay#how-to-run-this-project-dev-mode), [get_polkdot_keyring](https://github.com/bytepayment/bytepay/blob/main/cloudfuncs/get_polkdot_keyring/index.ts) | **08.02.22:** Docker set up doesn't seem to work for me, see below. http://bytepay.local-dev.host/ doesn't open **14.02.22** Works. Not sure where it’s implemented in the backend. **16.02.22:** They shared the links |
 | 2. | Repo & webhook management| <ul><li>[x] </li></ul> | [Link](https://bytepay.online/bind), [webhooks](https://github.com/bytepayment/bytepay/blob/main/cloudfuncs/webhooks/index.ts) | Works. Not sure where it’s implemented in the backend. **16.02.22:** They shared the links |
 | 3. | Address binding | <ul><li>[x] </li></ul> | [Link](https://bytepay.online/settings/address), [bind_polka_address](https://github.com/bytepayment/bytepay/blob/main/cloudfuncs/bind_polka_address/index.ts) | Works. Not sure where it’s implemented in the backend. **16.02.22:** They shared the links | 
-| 4. | Recharge management | <ul><li>[ ] </li></ul> | [Link](https://bytepay.online/property) | **08.02.22:** Shows a substrate account instead of a polkakdot address, not sure how to fund this account **17.02.22:** New Docker Error |
+| 4. | Recharge management | <ul><li>[x] </li></ul> | [Link](https://bytepay.online/property) | **08.02.22:** Shows a substrate account instead of a polkakdot address, not sure how to fund this account **17.02.22:** New Docker Error, but it was immediately fixed |
 | 5. | Transfer ink! contract| <ul><li>[x] </li></ul> | [smart-contract](https://github.com/bytepayment/bytepay/tree/main/smart-contract) | **08.02.22:** Test fail, the contract seems mostly to be a copy of [contract-transfer](https://github.com/paritytech/ink/blob/ba7e8edbae4a3dd8460b37d4ee30cf31f00a2fc3/examples/contract-transfer/lib.rs). The documentation should be updated at least **14.02.22:** The documentation was updated. But I’m not sure how the smart contract is actually integrated. Given there is now way to deploy this on Polkadot and the live version works with DOTs! **16.02.22:** The contract is actually not integrated
  | 
 
 ## General Notes
 
-The team fixed things very quickly and seems to be motivated. However, the service is centralized (no use of the contract on polkadot) and requests github access, so users should be aware that this evaluation didn’t check the security of the setup. It also has a lot of smaller issues, like password changing worked even though I typed two different words, which is fine given that this is only the first milestone. 
+The team fixed everything very quickly and seems to be motivated. However, the service is centralized (no use of the contract on polkadot) and requests github access, so users should be aware that this evaluation didn’t check the security of the setup. It also has a lot of smaller issues, like password changing worked even though I typed two different words, which is fine given that this is only the first milestone. 
 
 **17.02.22 Docker Error** 
 
