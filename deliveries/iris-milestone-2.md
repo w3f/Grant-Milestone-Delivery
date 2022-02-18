@@ -6,7 +6,7 @@
 * **Milestone Number:** 2
 
 **Context**
-This milestone enables a decentralized pinning service using Substrate and IPFS. It introduces a pallet to allow new validators to be added to a our proof of authority network and provides incentive for validators to provide storage capacity to the network.
+This milestone enables a semi-decentralized pinning service using Substrate and IPFS. It introduces a pallet to allow new validators to be added to a our proof of authority network and introduces incentive for validators to provide storage capacity to the network. Additionally, validators are responsible (and are rewarded) for proxying requests to the IPFS network.
 
 Prerelease: https://github.com/iridium-labs/substrate/releases/tag/v0.0.2
 Futher details can be found in the docs [here](https://iridium-labs.github.io/)
