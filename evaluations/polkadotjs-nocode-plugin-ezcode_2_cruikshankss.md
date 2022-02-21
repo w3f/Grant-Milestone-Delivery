@@ -8,12 +8,14 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | yes | [MIT license](https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js/blob/main/LICENSE) | 
-| 0b. | Demo pages | yes | [All demo pages](https://polkadotjs.bubbleapps.io/version-test/) | 
-| 0c. | Documentation | yes | [EzCode's Polkadot{.js} NodeCode Plugin Docs](https://polkadotjs.docs.ezcodeplugins.com/) | 
-| 0d. | Testing Guide | yes | [Bubble Beginner Tutorials](https://ezcodeco.gitbook.io/polkadot-testing-guide/) |
-| 0e. | Forum post |  | [New post about added features with all necessary links](https://forum.bubble.io/t/free-plugin-polkadot-wallet-by-ezcode/187940/2) | 
-
+| 0a. | License | yes | https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js/blob/main/LICENSE | MIT
+| 0b. | Demo pages | yes | [All demo pages](https://polkadotjs.bubbleapps.io/version-test/) | Well done!!
+| 0c. | Documentation | yes | [EzCode's Polkadot{.js} NodeCode Plugin Docs](https://polkadotjs.docs.ezcodeplugins.com/) | High-quality website with extensive docs.
+| 0d. | Testing Guide | yes | [Bubble Beginner Tutorials](https://ezcodeco.gitbook.io/polkadot-testing-guide/) | Accessible for beginners. Thank you so much!
+| 0e. | Forum post | yes | [New post about added features with all necessary links](https://forum.bubble.io/t/free-plugin-polkadot-wallet-by-ezcode/187940/2) | Simple & clear. Explains the features of each of the two new plugin elements, "Polkadot API" and "Polkadot Keyring". 
+| 1. | API | yes | [New "Polkadot API" Plugin Element](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4)  | Uses `@polkadot/api` & `@polkadot/util` in [this part of the demo](https://polkadotjs.bubbleapps.io/version-test/polkadot_api). | 
+| 2. | Keyring | yes | [New "Polkadot Keyring" Plugin Element](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4) | Uses `@polkadot/keyring`, `@polkadot/util-crypto` & `@polkadot/util` in [this part of the demo](https://polkadotjs.bubbleapps.io/version-test/keyring). | 
+| 3. | Deploy v.2.0 | yes | [their v.2. plugin in the Marketplace](https://bubble.io/plugin/polkadotjs-1639402639641x977692461648052200) and their [GitHub](https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js) | Their [Bubble.io plugin demo-app editor](https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4) has their live code and [GitHub](https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js) is the backup. |
 
 ## General Notes
 > Summarizes the overall performance plus additional feedback/comments
@@ -22,14 +24,17 @@
 
 Note: Links in the above table do not include commit hashes. This could make sense in a no-code context. It's only my second evaluation, I don't know.
 
-## 1. Name of the grant project: Polkadot{.js} NoCode Plugin by EzCode
+## 1. Name of the grant project
+
+Polkadot{.js} NoCode Plugin 
+by EzCode
 
 ## 2. Link to the open-source code/delivery 
-#### How to run their code:
+> How to run their code.
 
-- view live source-code directly in the Bubble.io plugin demo-app editor: https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4
+- View live source-code directly in the Bubble.io plugin demo-app editor: https://bubble.io/plugin_editor?id=1639402639641x977692461648052200&tab=tabs-4
 
-- their github with code back-ups: https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js
+- P.S. Their GitHub has their code back-ups: https://github.com/ezcodeco/Bubble-Plugin-Polkadot.js
 
 ## 3. License
 Their code is MIT-licensed.
@@ -75,7 +80,7 @@ Here's their tutorial/my result:
 
 I verified the block number and amount held in a wallet on https://polkadot.js.org/apps/#/explorer. 
 
-I tested their live app more in my [Milestone 1 Evaluation](). 
+I tested their live app more in my [Milestone 1 Evaluation](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/polkadotjs-nocode-plugin_1_cruikshankss.md). 
 
 I did not read through all of their code, neither did I perform any unit tests on their code.
 
