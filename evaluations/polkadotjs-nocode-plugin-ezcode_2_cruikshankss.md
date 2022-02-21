@@ -87,4 +87,4 @@ I did not read through all of their code, neither did I perform any unit tests o
 ## 7. Milestone Deliverables (see table above) 
 
 ## Conclusion
-It seems they've built a great plugin & tutorial documentation for Bubble beginners to understand and rebuild the EzCode demo app. 
+Thank you EzCode for adding your plugin to the Polka eco! We're thankful to have a new way to create a Polkadot dApp! It seems you've built a great plugin and a great docs website. I've been so happy to build/test in the Bubble eco. Thanks for providing beginner docs to recreate a sufficient amount of your extensive EzCode demo app! I would love to see your gitbook tutorials for Bubble beginners added to your main website, because they are excellent! Thanks again and good luck on the road ahead!
