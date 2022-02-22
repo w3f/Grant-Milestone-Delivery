@@ -40,11 +40,14 @@ by EzCode
 Their code is MIT-licensed.
 
 ## 4. Documentation 
-Separately from that documentation, they've added excellent [new gitbook docs for absolute beginners](https://ezcodeco.gitbook.io/polkadot-testing-guide/testing-plugin-features) which I discuss more in the `6. Testing Guide` section of this evaluation.
 
-I left them a note making suggestions on a very simple tech stack documnation listing/linking to the APIs they use.
+They've updated their [website documentation](https://polkadotjs.docs.ezcodeplugins.com/) very thoroughly & extensively!
 
-They responded with this beautiful (seriously, take a quick look!) & clear new [tech stack documentation](https://polkadotjs.docs.ezcodeplugins.com/technology-stack) of their dependencies): 
+Separately, they've added excellent [new gitbook docs for absolute beginners](https://ezcodeco.gitbook.io/polkadot-testing-guide/testing-plugin-features) which I discuss more in the `6. Testing Guide` section of this evaluation.
+
+I had left them a note requesting a very simple tech stack documnation listing/linking to the APIs they use.
+
+They responded immediately with this clear new [tech stack documentation](https://polkadotjs.docs.ezcodeplugins.com/technology-stack) of their dependencies: 
 
 ```json
 "dependencies": {
@@ -60,7 +63,7 @@ FYI, I provided more notes on their documentation in [my eval for their Mileston
 
 ## 5. Formatted Code
 
-I reviewed their live app and live plugin editor as well as reviewing a bit of code in the live plugin editor.
+Here I attempt to explain how their app code/functionality is formatted in the live plugin editor.
 
 Their `.js` code for their plugin is separated by function/action on their [live source-code directly in the Bubble.io plugin demo-app editor](https://bubble.io/page?type=page&name=polkadot_api&id=polkadotjs&tab=tabs-1).
 
