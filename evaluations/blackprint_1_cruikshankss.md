@@ -6,8 +6,6 @@ Blackprint conceptually designs software like hardware (with "cable connections"
 Blackprint Engine ß
 cable connections,
 
-
-
  execute exported JSON of node, cable connections, and embedded data.
 
 
@@ -31,3 +29,7 @@ Blackprint Editor: An IDE that combine the sketch and the engine and provide ano
 Blackprint conceptually designs software like hardware (with "cable connections") in their no-code app. 
 
  Polkadot.js's library then will handle the connection between parachain and the current environment (Browser/Node.js).
+
+WebSocket Provider? (reading list)
+
+what is dummy key for?
