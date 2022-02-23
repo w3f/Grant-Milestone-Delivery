@@ -1,27 +1,28 @@
 # Evaluation
 
-* **Status:** In Progress
+* **Status:** Accepted
 * **Application:** https://github.com/w3f/Grants-Program/blob/master/applications/SubsCrypt.md
 * **Milestone:** 3
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
-* **Previously successfully merged evaluation:** All evaluations by Noc2
+* **Previously successfully merged evaluation:** All evaluations by Noc2 & mmagician
 
-| Number | Deliverable | Accepted | Link | Evaluation Notes |
-| ------------- | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [Apache License 2.0](https://github.com/oxydev/SubsCrypt-nodejs-backend/blob/main/LICENSE), [SubsCrypt-python-package/LICENSE](https://github.com/oxydev/SubsCrypt-python-package/blob/main/LICENSE) | Correct |
-| 1. | Backend RestAPI |  <ul><li>[x] </li></ul> | [online version](https://api.subscrypt.io/) | - |
-| 1.1 | Backend RestAPI Implementation |  <ul><li>[ ] </li></ul> | [SubsCrypt-nodejs-backend](https://github.com/oxydev/SubsCrypt-nodejs-backend) | |
-| 1.2 | Backend RestAPI Documentation | <ul><li>[x] </li></ul> | [documented with Swagger](https://api.subscrypt.io/subscrypt-doc/) | But not sure if this is a "fully comprehensive documentation to use our RestAPI" |
-| 1.3 | Backend RestAPI Unit test |  <ul><li>[ ] </li></ul> | [SubsCrypt-nodejs-backend](https://github.com/oxydev/SubsCrypt-nodejs-backend) | npm run test, but not 100% ("The code will have unit-test coverage (100%) to ensure functionality and robustness"), tested with https://istanbul.js.org/, see below  |
-| 2. | Third Party libraries | <ul><li>[ ] </li></ul> |  | |
-| 2.1 | Django Library |  <ul><li>[ ] </li></ul> |  | |
-| 2.2 | Django Library documentation |  <ul><li>[ ] </li></ul> |  | |
-| 2.3 | Django Library Unit test |  <ul><li>[ ] </li></ul> |  | |
-| 2.4 | Node.js Library |  <ul><li>[ ] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | Same as previous milestone! |
-| 2.5 | Node.js Library documentation |  <ul><li>[ ] </li></ul> |  [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | Not a "fully comprehensive documentation to use our library" |
-| 2.6 | Node.js Library Unit test | <ul><li>[x] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library) | **18.08.21:** Not "The code will have unit-test coverage (100%) to ensure functionality and robustness", see below **24.08.21:** [They added additional and sufficient tests](https://github.com/oxydev/SubsCrypt-npm-library/pull/27) |
+|        Number | Deliverable                    | Accepted               | Link                                                                                                                                                                                                 | Evaluation Notes                                                                                                                                                                                                                       |
+| ------------- | -------------                  | -------------          | -------------                                                                                                                                                                                        | -------------                                                                                                                                                                                                                          |
+|           0a. | License                        | <ul><li>[x] </li></ul> | [Apache License 2.0](https://github.com/oxydev/SubsCrypt-nodejs-backend/blob/main/LICENSE), [SubsCrypt-python-package/LICENSE](https://github.com/oxydev/SubsCrypt-python-package/blob/main/LICENSE) | Correct                                                                                                                                                                                                                                |
+|            1. | Backend RestAPI                | <ul><li>[x] </li></ul> | [online version](https://api.subscrypt.io/)                                                                                                                                                          | -                                                                                                                                                                                                                                      |
+|           1.1 | Backend RestAPI Implementation | <ul><li>[x] </li></ul> | [SubsCrypt-nodejs-backend](https://github.com/oxydev/SubsCrypt-nodejs-backend)                                                                                                                       |                                                                                                                                                                                                                                        |
+|           1.2 | Backend RestAPI Documentation  | <ul><li>[x] </li></ul> | [documented with Swagger](https://api.subscrypt.io/subscrypt-doc/)                                                                                                                                   | But not sure if this is a "fully comprehensive documentation to use our RestAPI"                                                                                                                                                       |
+|           1.3 | Backend RestAPI Unit test      | <ul><li>[x] </li></ul> | [SubsCrypt-nodejs-backend](https://github.com/oxydev/SubsCrypt-nodejs-backend)                                                                                                                       | npm run test, but not 100% ("The code will have unit-test coverage (100%) to ensure functionality and robustness"), tested with https://istanbul.js.org/, see below                                                                    |
+|            2. | Third Party libraries          | <ul><li>[x] </li></ul> | [python-package](https://github.com/oxydev/SubsCrypt-python-package)                                                                                                                                 | Very minimal integration, might as well not have included it                                                                                                                                                                           |
+|           2.1 | Node.js Library                | <ul><li>[x] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library)                                                                                                                             | Same as previous milestone!                                                                                                                                                                                                            |
+|           2.2 | Node.js Library documentation  | <ul><li>[x] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library)                                                                                                                             | Not a "fully comprehensive documentation to use our library". There are some instructions on how to integrate into an existing project.                                                                                                |
+|           2.3 | Node.js Library Unit test      | <ul><li>[x] </li></ul> | [SubsCrypt-npm-library](https://github.com/oxydev/SubsCrypt-npm-library)                                                                                                                             | **18.08.21:** Not "The code will have unit-test coverage (100%) to ensure functionality and robustness", see below **24.08.21:** [They added additional and sufficient tests](https://github.com/oxydev/SubsCrypt-npm-library/pull/27) |
 
 ## General Notes
+
+### Summary
+
+While in general the project has seen significant improvement in terms of UX and code (e.g. testing), the initial idea of making it re-usable for other applications by providing SDK-like tools seems out of reach. It's OK for the project to be a stand-alone platform, though.
 
 **18.08.21 Istanbul/nyc Backend Node.js**
 
