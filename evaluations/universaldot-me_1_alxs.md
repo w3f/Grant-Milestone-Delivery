@@ -7,7 +7,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [pallets](https://github.com/UniversalDot/pallets/blob/master/LICENSE), [node](https://github.com/UniversalDot/universal-dot-node/blob/master/LICENSE), [docker](https://github.com/UniversalDot/compose-service/LICENSE) | Apache 2.0, Unlicense
+| 0a. | License | <ul><li>[x] </li></ul> | [pallets](https://github.com/UniversalDot/pallets/blob/master/LICENSE), [node](https://github.com/UniversalDot/universal-dot-node/blob/master/LICENSE), [docker](https://github.com/UniversalDot/compose-service/blob/master/LICENSE) | Apache 2.0, Unlicense
 | 0b. | Documentation |<ul><li>[x] </li></ul>| [Videos](https://youtube.com/playlist?list=PLecEhYhLLqu72Vh0nqgSHS1jv76DTDyvj) | Pallets contain extensive inline documentation
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>| [Instructions](https://github.com/UniversalDot/pallets#testing) | All 3 pallets have >80% coverage
 | 0d. | Docker |<ul><li>[x] </li></ul>| [separate repo](https://github.com/UniversalDot/compose-service) | Successfully ran the node following the README
