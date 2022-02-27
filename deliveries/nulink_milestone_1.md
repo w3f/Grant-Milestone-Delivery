@@ -15,8 +15,8 @@
 | 0b. | Documentation |https://github.com/NuLink-network/nulink-chain/blob/main/README.md| documentation |
 | 0c. | Testing |https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/tests.rs| all tests |
 | 1. | nuproxy pallet | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs | The nuproxy pallet is mostly used for retrieving the information of stakers and bonding workers from NuCypher contracts in Ethereum to the Polkadot parachain. |
-| 2. | register_watcher | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L159| This function would record the public key of the watcher nodes and would be executed when the mirror pallet first deployed. |
-| 3. | ValidateWatchers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L177| This function would check if the signature in updating request is come from the watchers. |
-| 4. | UpdateStakers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L175| This function would provide the functionality of updating the information of current stakers and bonding workers of Ursulas network. |
-| 5. | GetActiveStakers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L295| This function would return a list of active stakers by random sampling. |
+| 2. | register_watcher | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L153| This function would record the public key of the watcher nodes and would be executed when the mirror pallet first deployed. |
+| 3. | ValidateWatchers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L171| This function would check if the signature in updating request is come from the watchers. |
+| 4. | UpdateStakers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L169| This function would provide the functionality of updating the information of current stakers and bonding workers of Ursulas network. |
+| 5. | GetActiveStakers | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L289| This function would return a list of active stakers by random sampling. |
 
