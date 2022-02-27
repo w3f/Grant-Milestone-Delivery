@@ -15,7 +15,7 @@
 | 0b. | Documentation |https://github.com/NuLink-network/nulink-chain/blob/main/README.md| documentation |
 | 0c. | Testing |https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/tests.rs| all tests |
 | 1. | policy pallet | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/lib.rs| The policy management pallet will manage the policy fees and distribute. |
-| 2. | CreatePolicy | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/lib.rs#L123| This function would lock the fee for a specific policy for a locking period. |
-| 3. | RevokePolicy | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/lib.rs#L134| This function would revoke a specific policy and refund the unconsumed policy fee depending on the locking period. |
-| 4. | Mint | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L183 https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L188| This function would computes and transfers the policy fee to the staker’s account. |
-| 5. | Withdraw | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L201  https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L211| The staker could call this function to claim the reward fee. |
+| 2. | CreatePolicy | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/lib.rs#L108| This function would lock the fee for a specific policy for a locking period. |
+| 3. | RevokePolicy | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/policy/src/lib.rs#L119| This function would revoke a specific policy and refund the unconsumed policy fee depending on the locking period. |
+| 4. | Mint | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L177 https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L182| This function would computes and transfers the policy fee to the staker’s account. |
+| 5. | Withdraw | https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L195  https://github.com/NuLink-network/nulink-chain/blob/main/pallets/nuproxy/src/lib.rs#L205| The staker could call this function to claim the reward fee. |
