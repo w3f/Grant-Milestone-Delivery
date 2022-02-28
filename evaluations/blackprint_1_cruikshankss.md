@@ -186,19 +186,42 @@ Blackprint can connect to Polkadot networks via both HTTPS and WebSocket. They k
 
  I was able to successfully test connecting to Polkadot and Kusama via HTTPS and Westend via WebSocket, for example.
 
+<img width="231" alt="1_https_websocket_connection_kusama" src="https://user-images.githubusercontent.com/22508682/156003031-4e4b6d4c-b27a-4ca8-a8b9-1bc7bd5c2042.png">
+<img width="235" alt="1_https_websocket_connection_polka" src="https://user-images.githubusercontent.com/22508682/156003037-82b4a4a0-c6f0-4f24-a34b-86ea42d02980.png">
+
+
 ### **Deliverable 2: Event node** 
 
-Events only work via a WebSocket connection. The example Blackprint uses for an event is listening for/subscribing to pushes of a new block on the network and the number of the new block. I was able to successfully connect to Polkadot and Kusama via WebSocket and confirmed the block numbers. 
+Events only work via a WebSocket connection. The example Blackprint uses for an event is listening for/subscribing to pushes of a new block on the network and the number of the new block. 
+
+I was able to connect to test networks and subscribe to events.
+
+<img width="584" alt="2_event_test_networks" src="https://user-images.githubusercontent.com/22508682/156003066-4a671738-7eb9-499c-b5c9-f7190f1909e8.png">
+
+I was able to successfully connect to Polkadot and Kusama via WebSocket and confirmed the block numbers. 
+
+<img width="719" alt="2_event_main_networks" src="https://user-images.githubusercontent.com/22508682/156003048-6507e371-b36b-4e6d-8fc4-cc5f695874c3.png">
+<img width="579" alt="2_kusama_current_block" src="https://user-images.githubusercontent.com/22508682/156003089-37b25d05-c621-4224-99d7-0f999d5e1964.png">
+<img width="580" alt="2_polkadot_current_block" src="https://user-images.githubusercontent.com/22508682/156003091-680dbe08-29e3-4a6f-8c6c-cb55d18ceea4.png">
 
 ### **Deliverable 3: Mnemonic/seed importer node**    
 Given a mnemonic, Blackprint generates new addresses (public keys) with either a default key type (ed25519). I also provided input for an external key type (e.g. sr25519) which yielded a different address. I tested it with bad data and it only seems to accept valid mnemonics.
 
 
+<img width="854" alt="3_mnemonic_seed" src="https://user-images.githubusercontent.com/22508682/156003093-ba0e25db-9042-4aaf-abbb-f0104c5c7d75.png">
+
+
+
 ### **Deliverable 4: Encrypt/decrypt data node**  
 I tested encrypting different input data with Bob's wallet ("key pair") and gave the target as Alice's public key/address. When I connect Alice's wallet to a decrypt data action, I can decrypt the data properly. I tried testing with bad data for the target on the encrypted data, and in this case, Alice cannot decrypt the data, as expected. 
 
+<img width="1143" alt="4_encrypt_decrypt_data" src="https://user-images.githubusercontent.com/22508682/156003136-f3d7c3ee-c57b-47f7-b4c4-1bebeb5d45bb.png">
+
+
 ### **Deliverable 5: Sign/verify data node**  
 I tested signing a message and verifying a signed message. Then I was able to verify (true) that the signature came from a certain public key address. 
+
+<img width="902" alt="5_sign_verify_data" src="https://user-images.githubusercontent.com/22508682/156003200-2770dcef-696b-4c39-a8d2-8d929f70441c.png">
 
 ### **Deliverable 6: Package**  
 npm registry:
