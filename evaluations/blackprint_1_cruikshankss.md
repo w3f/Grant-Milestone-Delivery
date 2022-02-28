@@ -1,4 +1,3 @@
-
 # Evaluation
 
 - **Status:** In Progress
@@ -180,6 +179,3 @@ This is from their application and it's really exciting:
 Good luck helping along the metaverse! ;-)
 
 This seems like really excellent, high-quality codebase. With such high-quality comments and documentation, I expect it will be possible for Blackprint to build new features and maintain the code. It seems very accessible to devs who wish to join an open-source project. One small suggestion, if you're interested, would be to add more tutorials for absolute beginners to blockchain/crypto/Polkadot/coding/etc. to extend your already highly-accessible project. Wishing you continued success! It was a wonderful experience to evaluate your code!
-
-
-
