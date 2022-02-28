@@ -1,107 +1,3 @@
-Blackprint conceptually designs software like hardware (with "cable connections") in their no-code app. 
-
-"node" === "the blackprint engine"
-
-"help developers interact with libraries by simply connecting nodes in realtime"
-Blackprint Engine 
-cable connections,
-
- execute exported JSON of node, cable connections, and embedded data.
-
-
-> Blackprint hopefully can help the development of Metaverse, frontend development, as well as automation such as bots that connect to multiple blockchains. Blackprint itself is planning to expand to support several programming languages such as JavaScript, PHP, Golang, and Python. But this proposal is currently only for JavaScript as Blackprint is still trying to improve.
-
-Technology stack
-JavaScript (Browser & Node.js)
-Polkadot.js's library
-Blackprint does have 2 main component:
-Engine: Designed for managing data flow between nodes and can be run on Browser/Node.js/Deno
-Sketch: Can be used for creating node editor and modify node connections
-Blackprint Editor: An IDE that combine the sketch and the engine and provide another tools on the GUI to make the development more easier
- Browser/Node.js/Deno
-
- "node editor"
-
- don't have to download the Blackprint Editor because the browser/Node.js can run a node editor too
-
- "modify node connections"
-
-Blackprint conceptually designs software like hardware (with "cable connections") in their no-code app. 
-
- Polkadot.js's library then will handle the connection between parachain and the current environment (Browser/Node.js).
-
-WebSocket Provider? (reading list)
-
-what is dummy key for?
-
-Currently the MVP can be run on browsers. 
-
- The support for Node.js is still work in progress and may be delivered on Milestone 3. The current MVP may already contain nodes that will be delivered for Milestone 1 and Milestone 2, I'm still preparing to create the unit test and some example before I deliver it.
-
- Milestone 1 — Connection and data encryption nodes for Browser
-
- I will provide inline documentation of the code and simple example that can be imported to the Blackprint Editor
-
-We will use GitHub Action/Workflow instead, for manual UI testing/interaction we can use Blackprint Editor
-
-1.	HTTP & WebSocket node	Able to connect to parachain's test/mainnet (including: Polkadot/Kusama/Westend) by specifying the RPC URL
-2.	Event node	Able to listen for new blocks/heads of the connected parachain node
-3.	Mnemonic/seed importer node	Able to convert mnemonic into private key (seed) that can be used for decrypting data or signing data, the private key is in the Keyring
-4.	Encrypt, Decrypt node	Able to encrypt data with public key, and able to decrypt data with private key. Public key and private key is in the Keyring
-5.	Sign, Verify node	Able to sign data with private key, and able to verify data with public key. Public key and private key is in the Keyring
-6.	Package	I will submit the JavaScript package/module to NPM registry so it can be loaded browser via CDN
-
-
-Able to encrypt data with public key, and able to decrypt data with private key. Public key and private key is in the Keyring
-
-Able to sign data with private key, and able to verify data with public key. 
-
-Able to convert mnemonic into private key (seed) that can be used for decrypting data or signing data, the private key is in the Keyring
-
-why?^
-
-https://github.com/Blackprint/Blackprint#blackprint-roadmap
-
-import mnemonic/seeds, encrypt/decrypt data, and sign/verify data. ??? what's the difference between each pair?
-
-
-Testing follow tutorial https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md
-
-
-Download and run Sketch editor 
-https://github.com/Blackprint/Blackprint/blob/master/.github/CONTRIBUTING.md#the-build-script-how-it-works
-
-error
-npm install -g npm@8.5.2
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /Users/ash/.npm/_logs/2022-02-27T15_55_59_619Z-debug.log
-
-19 vulnerabilities (8 moderate, 11 high)
-Run `npm audit` for details.
-
-npm notice New minor version of npm available! 8.1.2 -> 8.5.2
-npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.5.2
-npm notice Run npm install -g npm@8.5.2 to update!
-
-sudo npm install -g npm@8.5.2
-
-https://github.com/Blackprint/blackprint.github.io/blob/master/.github/CONTRIBUTING.md
-
-You may also need to change <script> URL on /index.html and /dev.html if you want to test the engine or sketch library from the browser.
-
-<!-- Comment this -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@blackprint/engine@0.3.0"></script> -->
-
-<!-- Uncomment this -->
-<script src="/dist/engine.min.js"></script>
-
-note: yarn 
-
-note: make it more clear the editor is live here and I dont have to run a local instance of it 
-https://blackprint.github.io/#page/sketch/1 works
-
-
-import 
 
 
 **Deliverables**
@@ -110,8 +6,8 @@ import
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | yes | [LICENSE](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/LICENSE) | MIT License |
 | 0b. | Documentation | yes | 1. [Examples](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/example) <br> 2. [Guide for importing the module and load examples](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md) | The examples were wonderful, thank you. |
-| 0c. | Testing Guide | no | [Guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) | The guide was really excellent and clear, but I did have an error with the gulpfile. |
-| 0d. | Docker | no | [Test files](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/tests), [GitHub Action](https://github.com/Blackprint/nodes-polkadot.js/actions/workflows/build.yml) |  |
+| 0c. | Testing Guide | yes | [Guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) | Your method of communication and documentation is extremely clear and well-maintained. |
+| 0d. | Docker | yes | [Test files](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/tests), [GitHub Action](https://github.com/Blackprint/nodes-polkadot.js/actions/workflows/build.yml) |  |
 | 1. | HTTP & WebSocket node |  yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-http-connection.json) <br> 2. [Connection/HTTP](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/HTTP.js) <br> 3. [Connection/WebSocket](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/WebSocket.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/http-and-ws-provider.js) |  |
 | 2. | Event node | yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-event-new-blocks.json) <br> 2. [Events/Blocks](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Events/Blocks.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/event-new-heads.js) |  |
 | 3. | Mnemonic/seed importer node | yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/import-mnemonic.json) <br> 2. [Keyring/Create/Keypair](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Keyring/Create/Keypair.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/import-mnemonic.js) |  |
@@ -150,9 +46,25 @@ Their documentation is really excellent. The [grant application](https://github.
 
 ## 6. Testing Guide
 
+I manually tested each deliverable on https://blackprint.github.io/#page/sketch/1. Detailed description is below in `7. Milestone Deliverables`.
 
-I unsuccessfully attempted to run and test their code from [this repository](https://github.com/Blackprint/Blackprint) with [this guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) and the command `npm i & npm run build-prod & npm test`. Discuss more below.
+I successfully ran and passed all unit tests from two different JavaScript testing suites. 
 
+First, I cloned the [the Blackprint engine repo](https://github.com/Blackprint/Blackprint) and followed the [testing guide](https://github.com/Blackprint/Blackprint/blob/2cbbc226dd550a10d48f49dbd8ddea2f6dc4e399/README.md#build-and-run-the-unit-test), yielding these results:
+
+<img width="595" alt="Screen Shot 2022-02-28 at 2 11 56 PM" src="https://user-images.githubusercontent.com/22508682/156048246-852435d3-56e5-4447-a867-cdde787dcde5.png">
+
+Then, I cloned the [Polkadot.js module repo](https://github.com/Blackprint/nodes-polkadot.js) and followed the [testing guide](https://github.com/Blackprint/nodes-polkadot.js/tree/,ce4de7b316d864489d4f207144ea87e4310e4299#development), yielding these results:
+
+<img width="574" alt="Screen Shot 2022-02-28 at 2 20 04 PM" src="https://user-images.githubusercontent.com/22508682/156048225-c897fb52-c8b0-422c-9157-9a445afed82e.png">
+
+They provide excellent comments throughout their testing suite. They properly prepare and execute a testing environment, documented in the `prepare-env.js`. Then, they provide separate tests for both the Browser and Node.js environments. I learned a lot, for example, how they use modern JavaScript's `await` to help set up a Jest testing environment: 
+
+```
+	// Wait and avoid Jest's test environment being torn down
+	await Blackprint.getContext('Polkadot.js');
+	await new Promise(resolve => setTimeout(resolve, 1000));
+```
 
 ## 7. Milestone Deliverables (see table above & descriptions here)
 
@@ -220,7 +132,84 @@ I tested signing a message and verifying a signed message. Then I was able to ve
 <img width="902" alt="5_sign_verify_data" src="https://user-images.githubusercontent.com/22508682/156003200-2770dcef-696b-4c39-a8d2-8d929f70441c.png">
 
 ### **Deliverable 6: Package**  
-npm registry:
+npm registry: 
+
+Package	I will submit the JavaScript package/module to NPM registry so it can be loaded browser via CDN
 
 
 ## Conclusion
+This seems like really excellent, high-quality codebase. With such high-quality comments and documentation, I expect it will be possible for Blackprint to build new features and maintain the code. It seems very accessible to devs who wish to join an open-source project. One small suggestion, if you're interested, would be to add more tutorials for absolute beginners to blockchain/crypto/Polkadot/coding/etc. to extend your already highly-accessible project. Wishing you continued success! It was a wonderful experience to evaluate your code!
+
+
+note: yarn 
+
+note: make it more clear the editor is live here and I dont have to run a local instance of it 
+https://blackprint.github.io/#page/sketch/1 works
+
+
+Blackprint conceptually designs software like hardware (with "cable connections") in their no-code app. 
+
+"node" === "the blackprint engine"
+
+"help developers interact with libraries by simply connecting nodes in realtime"
+Blackprint Engine 
+cable connections,
+
+ execute exported JSON of node, cable connections, and embedded data.
+
+
+> Blackprint hopefully can help the development of Metaverse, frontend development, as well as automation such as bots that connect to multiple blockchains. Blackprint itself is planning to expand to support several programming languages such as JavaScript, PHP, Golang, and Python. But this proposal is currently only for JavaScript as Blackprint is still trying to improve.
+
+Technology stack
+JavaScript (Browser & Node.js)
+Polkadot.js's library
+Blackprint does have 2 main component:
+Engine: Designed for managing data flow between nodes and can be run on Browser/Node.js/Deno
+Sketch: Can be used for creating node editor and modify node connections
+Blackprint Editor: An IDE that combine the sketch and the engine and provide another tools on the GUI to make the development more easier
+ Browser/Node.js/Deno
+
+ "node editor"
+
+ don't have to download the Blackprint Editor because the browser/Node.js can run a node editor too
+
+ "modify node connections"
+
+Blackprint conceptually designs software like hardware (with "cable connections") in their no-code app. 
+
+ Polkadot.js's library then will handle the connection between parachain and the current environment (Browser/Node.js).
+
+WebSocket Provider? (reading list)
+
+what is dummy key for?
+
+Currently the MVP can be run on browsers. 
+
+ The support for Node.js is still work in progress and may be delivered on Milestone 3. The current MVP may already contain nodes that will be delivered for Milestone 1 and Milestone 2, I'm still preparing to create the unit test and some example before I deliver it.
+
+ Milestone 1 — Connection and data encryption nodes for Browser
+
+ I will provide inline documentation of the code and simple example that can be imported to the Blackprint Editor
+
+We will use GitHub Action/Workflow instead, for manual UI testing/interaction we can use Blackprint Editor
+
+1.	HTTP & WebSocket node	Able to connect to parachain's test/mainnet (including: Polkadot/Kusama/Westend) by specifying the RPC URL
+2.	Event node	Able to listen for new blocks/heads of the connected parachain node
+3.	Mnemonic/seed importer node	Able to convert mnemonic into private key (seed) that can be used for decrypting data or signing data, the private key is in the Keyring
+4.	Encrypt, Decrypt node	Able to encrypt data with public key, and able to decrypt data with private key. Public key and private key is in the Keyring
+5.	Sign, Verify node	Able to sign data with private key, and able to verify data with public key. Public key and private key is in the Keyring
+6.	Package	I will submit the JavaScript package/module to NPM registry so it can be loaded browser via CDN
+
+
+Able to encrypt data with public key, and able to decrypt data with private key. Public key and private key is in the Keyring
+
+Able to sign data with private key, and able to verify data with public key. 
+
+Able to convert mnemonic into private key (seed) that can be used for decrypting data or signing data, the private key is in the Keyring
+
+why?^
+
+https://github.com/Blackprint/Blackprint#blackprint-roadmap
+
+import mnemonic/seeds, encrypt/decrypt data, and sign/verify data. ??? what's the difference between each pair?
+
