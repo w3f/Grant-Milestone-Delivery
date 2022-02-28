@@ -106,21 +106,21 @@ import
 
 **Deliverables**
 
-| Number | Deliverable | Link | Notes |
-| ------------- | ------------- | ------------- |------------- |
-| 0a. | License | [LICENSE](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/LICENSE) | MIT License |
-| 0b. | Documentation | 1. [Examples](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/example) <br> 2. [Guide for importing the module and load examples](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md) | Inline documentation is provided for nodes that being delivered for this milestone. |
-| 0c. | Testing Guide | [Guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) | `npm i & npm run build-prod & npm test` |
-| 0d. | Docker | [Test files](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/tests), [GitHub Action](https://github.com/Blackprint/nodes-polkadot.js/actions/workflows/build.yml) | To run the test manually, please follow the instruction on the `README.md`. For manual UI testing, you can use the example provided for each deliverable nodes below. |
-| 1. | HTTP & WebSocket node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-http-connection.json) <br> 2. [Connection/HTTP](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/HTTP.js) <br> 3. [Connection/WebSocket](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/WebSocket.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/http-and-ws-provider.js) |  |
-| 2. | Event node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-event-new-blocks.json) <br> 2. [Events/Blocks](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Events/Blocks.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/event-new-heads.js) | Events can only be used if we connected to the network via WebSocket. |
-| 3. | Mnemonic/seed importer node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/import-mnemonic.json) <br> 2. [Keyring/Create/Keypair](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Keyring/Create/Keypair.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/import-mnemonic.js) | Mnemonic/seed will be imported with Keypair nodes, and the keypair will be stored in the Keyring. |
-| 4. | Encrypt, Decrypt node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/encrypt-decrypt.json) <br> 2. [Data/Keyring/Encrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Encrypt.js) <br> 3. [Data/Keyring/Decrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Decrypt.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/encrypt-decrypt.js) | For encrypting or decrypting data, we do need to use the Keypair. Private key can't be exposed from the keypair, but the public key is exposed as wallet address. |
-| 5. | Sign, Verify node | 1. [Example: Sign with mnemonic](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-mnemonic.json) <br> 2. [Example: Sign with extension](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-extension.json) <br> 3. [Data/Sign](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Sign.js) <br> 4. [Data/Verify](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Verify.js) <br> 5. [Extension/Get/Signer](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Extension/Get/Signer.js) <br> 6. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/sign-verify.js) | Signer can be obtained from Keypair or Extension |
-| 6. | Package | [NPM Registry](https://www.npmjs.com/package/@blackprint/nodes-polkadot.js) | Published: v0.2 |
+| Number | Deliverable | Accepted | Link | Evaluation Notes |
+| ------ | ----------- | -------- | ---- |----------------- |
+| 0a. | License | yes | [LICENSE](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/LICENSE) | MIT License |
+| 0b. | Documentation | yes | 1. [Examples](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/example) <br> 2. [Guide for importing the module and load examples](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md) | The examples were wonderful, thank you. |
+| 0c. | Testing Guide | no | [Guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) | The guide was really excellent and clear, but I did have an error with the gulpfile. |
+| 0d. | Docker | no | [Test files](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/tests), [GitHub Action](https://github.com/Blackprint/nodes-polkadot.js/actions/workflows/build.yml) |  |
+| 1. | HTTP & WebSocket node |  yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-http-connection.json) <br> 2. [Connection/HTTP](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/HTTP.js) <br> 3. [Connection/WebSocket](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/WebSocket.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/http-and-ws-provider.js) |  |
+| 2. | Event node | yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-event-new-blocks.json) <br> 2. [Events/Blocks](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Events/Blocks.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/event-new-heads.js) |  |
+| 3. | Mnemonic/seed importer node | yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/import-mnemonic.json) <br> 2. [Keyring/Create/Keypair](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Keyring/Create/Keypair.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/import-mnemonic.js) |  |
+| 4. | Encrypt, Decrypt node | yes | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/encrypt-decrypt.json) <br> 2. [Data/Keyring/Encrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Encrypt.js) <br> 3. [Data/Keyring/Decrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Decrypt.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/encrypt-decrypt.js) |  |
+| 5. | Sign, Verify node | yes | 1. [Example: Sign with mnemonic](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-mnemonic.json) <br> 2. [Example: Sign with extension](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-extension.json) <br> 3. [Data/Sign](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Sign.js) <br> 4. [Data/Verify](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Verify.js) <br> 5. [Extension/Get/Signer](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Extension/Get/Signer.js) <br> 6. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/sign-verify.js) |  |
+| 6. | Package |  | [NPM Registry](https://www.npmjs.com/package/@blackprint/nodes-polkadot.js) | Published: v0.2 |
 
 
- npm run build-prod
+npm run build-prod
 npm ERR! Missing script: "build-prod"
 
 
@@ -141,22 +141,18 @@ They made a [Polkadot.js JavaScript module](https://github.com/Blackprint/nodes-
 Their code is MIT-licensed.
 
 ## 4. Documentation 
-Their documentation is really excellent. The creator has 
+Their documentation is really excellent. The [grant application](https://github.com/w3f/Grants-Program/pull/774/files#diff-5d05027d6d628ef75e532128d8c85353e6fa41745b5c9fec3e3d4c7a04540fc1), this [milestone delivery](https://github.com/w3f/Grant-Milestone-Delivery/pull/368/files?short_path=80fb60a#diff-80fb60a7dd4f6350144b74e3b5f16a187f30ebf0e67eecf03208a6e62b608b59), their [GitHub](https://github.com/Blackprint/Blackprint) `README`s and the on-screen notes in their [browser editor](https://blackprint.github.io/) are wonderful. 
 
 ## 5. Formatted Code
 
-Here I attempt to explain how their app code/functionality is formatted in the.
 
 
-<img width="400" alt="" src="">
 
 ## 6. Testing Guide
 
-<img width="400" alt="" src="">
-
-I verified the block number on Polkadot and Kusama:
 
 I unsuccessfully attempted to run and test their code from [this repository](https://github.com/Blackprint/Blackprint) with [this guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) and the command `npm i & npm run build-prod & npm test`. Discuss more below.
+
 
 ## 7. Milestone Deliverables (see table above & descriptions here)
 
