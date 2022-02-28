@@ -123,11 +123,48 @@ import
  npm run build-prod
 npm ERR! Missing script: "build-prod"
 
-1. Blackprint can connect to Polkadot networks via both HTTPS and WebSocket.
- They keep a great list of the main and test networks and teach the different address types needed for either HTTPS and WebSocket RPC connections:
+
+
+
+## 1. Name of the grant project
+
+Blackprint visual programming for Polkadot.js
+
+## 2. Link to the open-source code/delivery 
+> How to run their code.
+
+Run their code and manually test the UI on the browser here: https://blackprint.github.io/
+
+They made a [Polkadot.js JavaScript module](https://github.com/Blackprint/nodes-polkadot.js)  so their [Blackprint engine](https://github.com/Blackprint/Blackprint) implements Polkadot functionality on the Browser/Node.js.
+
+## 3. License
+Their code is MIT-licensed.
+
+## 4. Documentation 
+Their documentation is really excellent. The creator has 
+
+## 5. Formatted Code
+
+Here I attempt to explain how their app code/functionality is formatted in the.
+
+
+<img width="400" alt="" src="">
+
+## 6. Testing Guide
+
+<img width="400" alt="" src="">
+
+I verified the block number on Polkadot and Kusama:
+
+I unsuccessfully attempted to run and test their code from [this repository](https://github.com/Blackprint/Blackprint) with [this guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) and the command `npm i & npm run build-prod & npm test`. Discuss more below.
+
+## 7. Milestone Deliverables (see table above & descriptions here)
+
+### **Deliverable 1: HTTP & WebSocket node** 
+Blackprint can connect to Polkadot networks via both HTTPS and WebSocket. They keep a great list of the main and test networks and teach the different address types needed for either HTTPS and WebSocket RPC connections:
 
  ```
-  Main network
+  Main networks
 
   https://rpc.polkadot.io
   https://kusama-rpc.polkadot.io
@@ -139,7 +176,7 @@ npm ERR! Missing script: "build-prod"
   wss://statemint-rpc.polkadot.io
   wss://astar.api.onfinality.io/public-ws
 
-  Test network
+  Test networks
 
   wss://westend-rpc.polkadot.io
   wss://ws.test.azero.dev
@@ -149,15 +186,22 @@ npm ERR! Missing script: "build-prod"
 
  I was able to successfully test connecting to Polkadot and Kusama via HTTPS and Westend via WebSocket, for example.
 
+### **Deliverable 2: Event node** 
 
-2. Events only work via a WebSocket connection. The example Blackprint uses for an event is listening for/subscribing to pushes of a new block on the network and the number of the new block. I was able to successfully connect to Polkadot and Kusama via WebSocket and confirmed the block numbers. 
-   
-3. Given a mnemonic, Blackprint generates new addresses (public keys) with either a default key type (ed25519). I also provided input for an external key type (e.g. sr25519) which yielded a different address. I tested it with bad data and it only seems to accept valid mnemonics.
+Events only work via a WebSocket connection. The example Blackprint uses for an event is listening for/subscribing to pushes of a new block on the network and the number of the new block. I was able to successfully connect to Polkadot and Kusama via WebSocket and confirmed the block numbers. 
 
-
-4. I tested encrypting different input data with Bob's wallet ("key pair") and gave the target as Alice's public key/address. When I connect Alice's wallet to a decrypt data action, I can decrypt the data properly. I tried testing with bad data for the target on the encrypted data, and in this case, Alice cannot decrypt the data, as expected. 
-
-5. 
+### **Deliverable 3: Mnemonic/seed importer node**    
+Given a mnemonic, Blackprint generates new addresses (public keys) with either a default key type (ed25519). I also provided input for an external key type (e.g. sr25519) which yielded a different address. I tested it with bad data and it only seems to accept valid mnemonics.
 
 
+### **Deliverable 4: Encrypt/decrypt data node**  
+I tested encrypting different input data with Bob's wallet ("key pair") and gave the target as Alice's public key/address. When I connect Alice's wallet to a decrypt data action, I can decrypt the data properly. I tried testing with bad data for the target on the encrypted data, and in this case, Alice cannot decrypt the data, as expected. 
 
+### **Deliverable 5: Sign/verify data node**  
+I tested signing a message and verifying a signed message. Then I was able to verify (true) that the signature came from a certain public key address. 
+
+### **Deliverable 6: Package**  
+npm registry:
+
+
+## Conclusion
