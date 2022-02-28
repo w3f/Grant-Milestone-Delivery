@@ -3,7 +3,7 @@ Blackprint conceptually designs software like hardware (with "cable connections"
 "node" === "the blackprint engine"
 
 "help developers interact with libraries by simply connecting nodes in realtime"
-Blackprint Engine ß
+Blackprint Engine 
 cable connections,
 
  execute exported JSON of node, cable connections, and embedded data.
@@ -68,19 +68,96 @@ import mnemonic/seeds, encrypt/decrypt data, and sign/verify data. ??? what's th
 Testing follow tutorial https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md
 
 
+Download and run Sketch editor 
+https://github.com/Blackprint/Blackprint/blob/master/.github/CONTRIBUTING.md#the-build-script-how-it-works
+
+error
+npm install -g npm@8.5.2
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/ash/.npm/_logs/2022-02-27T15_55_59_619Z-debug.log
+
+19 vulnerabilities (8 moderate, 11 high)
+Run `npm audit` for details.
+
+npm notice New minor version of npm available! 8.1.2 -> 8.5.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.5.2
+npm notice Run npm install -g npm@8.5.2 to update!
+
+sudo npm install -g npm@8.5.2
+
+https://github.com/Blackprint/blackprint.github.io/blob/master/.github/CONTRIBUTING.md
+
+You may also need to change <script> URL on /index.html and /dev.html if you want to test the engine or sketch library from the browser.
+
+<!-- Comment this -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@blackprint/engine@0.3.0"></script> -->
+
+<!-- Uncomment this -->
+<script src="/dist/engine.min.js"></script>
+
+note: yarn 
+
+note: make it more clear the editor is live here and I dont have to run a local instance of it 
+https://blackprint.github.io/#page/sketch/1 works
 
 
+import 
 
 
+**Deliverables**
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0a. | License | [LICENSE](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/LICENSE) | MIT License |
+| 0b. | Documentation | 1. [Examples](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/example) <br> 2. [Guide for importing the module and load examples](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md) | Inline documentation is provided for nodes that being delivered for this milestone. |
+| 0c. | Testing Guide | [Guide](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/README.md#development) | `npm i & npm run build-prod & npm test` |
+| 0d. | Docker | [Test files](https://github.com/Blackprint/nodes-polkadot.js/tree/ce4de7b316d864489d4f207144ea87e4310e4299/tests), [GitHub Action](https://github.com/Blackprint/nodes-polkadot.js/actions/workflows/build.yml) | To run the test manually, please follow the instruction on the `README.md`. For manual UI testing, you can use the example provided for each deliverable nodes below. |
+| 1. | HTTP & WebSocket node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-http-connection.json) <br> 2. [Connection/HTTP](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/HTTP.js) <br> 3. [Connection/WebSocket](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Connection/WebSocket.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/http-and-ws-provider.js) |  |
+| 2. | Event node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/ws-event-new-blocks.json) <br> 2. [Events/Blocks](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Events/Blocks.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/event-new-heads.js) | Events can only be used if we connected to the network via WebSocket. |
+| 3. | Mnemonic/seed importer node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/import-mnemonic.json) <br> 2. [Keyring/Create/Keypair](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Keyring/Create/Keypair.js) <br> 3. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/import-mnemonic.js) | Mnemonic/seed will be imported with Keypair nodes, and the keypair will be stored in the Keyring. |
+| 4. | Encrypt, Decrypt node | 1. [Example](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/encrypt-decrypt.json) <br> 2. [Data/Keyring/Encrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Encrypt.js) <br> 3. [Data/Keyring/Decrypt](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Keyring/Decrypt.js) <br> 4. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/encrypt-decrypt.js) | For encrypting or decrypting data, we do need to use the Keypair. Private key can't be exposed from the keypair, but the public key is exposed as wallet address. |
+| 5. | Sign, Verify node | 1. [Example: Sign with mnemonic](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-mnemonic.json) <br> 2. [Example: Sign with extension](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/example/sign-verify-extension.json) <br> 3. [Data/Sign](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Sign.js) <br> 4. [Data/Verify](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Data/Verify.js) <br> 5. [Extension/Get/Signer](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/src/Extension/Get/Signer.js) <br> 6. [Unit Test](https://github.com/Blackprint/nodes-polkadot.js/blob/ce4de7b316d864489d4f207144ea87e4310e4299/tests/nodes/sign-verify.js) | Signer can be obtained from Keypair or Extension |
+| 6. | Package | [NPM Registry](https://www.npmjs.com/package/@blackprint/nodes-polkadot.js) | Published: v0.2 |
 
 
+ npm run build-prod
+npm ERR! Missing script: "build-prod"
+
+1. Blackprint can connect to Polkadot networks via both HTTPS and WebSocket.
+ They keep a great list of the main and test networks and teach the different address types needed for either HTTPS and WebSocket RPC connections:
+
+ ```
+  Main network
+
+  https://rpc.polkadot.io
+  https://kusama-rpc.polkadot.io
+  https://statemint-rpc.polkadot.io
+  https://astar.api.onfinality.io/public-http
+
+  wss://rpc.polkadot.io
+  wss://kusama-rpc.polkadot.io
+  wss://statemint-rpc.polkadot.io
+  wss://astar.api.onfinality.io/public-ws
+
+  Test network
+
+  wss://westend-rpc.polkadot.io
+  wss://ws.test.azero.dev
+  wss://rpc.shibuya.astar.network
+
+ ```
+
+ I was able to successfully test connecting to Polkadot and Kusama via HTTPS and Westend via WebSocket, for example.
 
 
+2. Events only work via a WebSocket connection. The example Blackprint uses for an event is listening for/subscribing to pushes of a new block on the network and the number of the new block. I was able to successfully connect to Polkadot and Kusama via WebSocket and confirmed the block numbers. 
+   
+3. Given a mnemonic, Blackprint generates new addresses (public keys) with either a default key type (ed25519). I also provided input for an external key type (e.g. sr25519) which yielded a different address. I tested it with bad data and it only seems to accept valid mnemonics.
 
 
+4. I tested encrypting different input data with Bob's wallet ("key pair") and gave the target as Alice's public key/address. When I connect Alice's wallet to a decrypt data action, I can decrypt the data properly. I tried testing with bad data for the target on the encrypted data, and in this case, Alice cannot decrypt the data, as expected. 
 
-
-
+5. 
 
 
 
