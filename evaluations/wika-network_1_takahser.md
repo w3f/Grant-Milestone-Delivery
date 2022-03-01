@@ -18,19 +18,8 @@
 | 3. | ETL Neo4J |<ul><li>[x] </li></ul>| [Neo4J Plugin](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/src/plugins/neo4j.ts) | - |
 | 4. | ETL Error Recovery |<ul><li>[ ] </li></ul>| [Mail sending service](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/src/plugins/emails.ts), [Mail alert config](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/docker-compose.yml#L61-L65) | The spec `PluginEmails > should send a test email` is currently failing, see [Tests Feedback](#tests-feedback). |
 | 5. | ETL Logging |<ul><li>[x] </li></ul>| [Logging usage example](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/src/mappings/mappingHandlers.ts#L151) | The [pino logger](https://www.npmjs.com/package/pino) is used for logging new blocks, `UrlRegisteredEvent` events, errors and db initiate events. The JavaScript-native `console.log` can't be used because it's a sandboxed environment. |
-| 6. | Configuration |<ul><li>[ ] </li></ul>| [docker-compose.yml file](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/docker-compose.yml), [project.yaml](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/project.yaml) | The connection between subql and db containers is configured in the `docker-compose.yml` file. Subql itself is configured in the `project.yaml` file. However, I didn't identify a way to changed the config file using en environment variable (which was part of the milestone in the original grant application). |
+| 6. | Configuration |<ul><li>[ ] </li></ul>| [docker-compose.yml file](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/docker-compose.yml), [project.yaml](https://github.com/randombishop/wika_etl/blob/038978c07f297de6056c688dc00e688e4fb99a5c/subql_wika/project.yaml) | The connection between subql and db containers is configured in the `docker-compose.yml` file. Subql itself is configured in the `project.yaml` file. However, I didn't identify a way to change the config file using en environment variable (which was part of the milestone in the original grant application). |
 | 7. | Example clients |<ul><li>[x] </li></ul>| [Elastic Search example client](https://es-test.wika.network/), [Neo4J example client](http://neo4j-test.wika.network:7474/) | - |
-
-| Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
-| 1. | ETL | The ETL starts at the block number saved in the database and processes one block at a time. When done processing history, it will listen to new blocks and apply the same ETL. |
-| 2. | ETL Elastic Search |  Elastic Search will store one document per URL with title and other meta information pulled from the web page.    |  
-| 3. | ETL Neo4J | Neo4J will store one node per URL, one node per Account, Like relationships (edges) and Ownership relationships... |  
-| 4. | ETL Error Recovery | The service should report errors to its admin recipient by email and gracefully keep retrying a certain number of times before stopping.  | 
-| 6. | Configuration | Database endpoints are defined in a configuration file. The configuration file location has a default, and can also be changed using en environment variable. The ETL also allows to do Elastic Search only, Neo4J only, or both.  |  
-| 7. | Example clients | Not part of the repo scope itself, but it will provide documentation on how to plug-in client tools. |  
-
-
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
