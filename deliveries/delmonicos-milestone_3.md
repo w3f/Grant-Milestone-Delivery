@@ -5,7 +5,7 @@
 
 **The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).** 
 
-* **PR Link:** <https://github.com/w3f/Open-Grants-Program/pull/283> 
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/delmonicos.md
 
 * **Milestone Number:** 3
 
