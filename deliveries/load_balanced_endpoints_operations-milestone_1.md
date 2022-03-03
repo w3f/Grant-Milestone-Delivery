@@ -21,11 +21,37 @@ Alongside the above development, attention was put into enhancing the observabil
 
 **Deliverables**
 
-| Number | Deliverable | Link | Notes |
-| ------------- | ------------- | ------------- |------------- |
-| 1. [D1](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Extend to include Kusama and Operations | All code can be found at [substrate-meta](https://github.com/geometry-labs/substrate-meta). It is a meta repo that all the relevant code can be found. See note above about testing. | Efforts were made to make the deployment simpler for new users consolidating several prior modules into two single modules, one for a single node that can be run as a validator or API node and one for autoscaling API nodes.  We also included a telemetry module as well.  Additional information about the stack can be found in an upcoming medium article under review by PR department. | 
-| 2. [D2](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [Grafana US](https://grafana.substrate.us-west-2.aws.geometry.io/) [Grafana EU](https://grafana.substrate.eu-west-1.aws.geometry.io/) [Kibana](https://kibana.us-west-2.aws.geometry.io/) [Telemetry](http://telemetry.substrate.geometry.io/#/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3) | Monitoring and logging data streams have been piped into dashboarding tools and alarms configured internally to support on-call rotation schedules via pagerduty. Websockets needed special handling for logging so [log interceptor](https://github.com/geometry-labs/websocket-logger) was built for this project. | 
-| 2. [D3](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [status.substrate.geometry.io](https://status.substrate.geometry.io/) | Initially we were planning on using [Cachet](https://github.com/CachetHQ/Cachet) for a status page, a popular self hosted open source solution. After not being able to get it to support the exact feature set we were looking for, attention was moved to a newer github hosted solution called [Upptime](https://github.com/upptime/upptime) which we plan on supporting long term. Links to all dashboards above can be navigated to via the status page serving as the central hub for all monitoring. | 
+| Number | Deliverable | Link | Notes | Engineering Time |
+| --- | --- | --- | ---------- | --- |
+| 1. [D1](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Extend to include Kusama and Operations | All code can be found at [substrate-meta](https://github.com/geometry-labs/substrate-meta). See note above about testing. | Efforts were made to make the deployment simpler for new users consolidating several prior modules into two single modules, one for a single node run as a validator, API, or telemetry node and one for autoscaling API nodes. Additional information about the stack was written and waiting to be published. | 5 days original estimate / 25 days actual |
+| 2. [D2](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [Grafana US](https://grafana.substrate.us-west-2.aws.geometry.io/) [Grafana EU](https://grafana.substrate.eu-west-1.aws.geometry.io/) [Kibana](https://kibana.us-west-2.aws.geometry.io/) [Telemetry](http://telemetry.substrate.geometry.io/#/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3) | Monitoring and logging data streams have been piped into dashboarding tools and alarms configured internally to support on-call rotation schedules via pagerduty. Websockets needed special handling for logging so [log interceptor](https://github.com/geometry-labs/websocket-logger) was built for this project. | 13 days original estimate / 16 days actual |
+| 2. [D3](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [status.substrate.geometry.io](https://status.substrate.geometry.io/) | Initially we were planning on using [Cachet](https://github.com/CachetHQ/Cachet) for a status page, a popular self hosted open source solution. After not being able to get it to support the exact feature set we were looking for, attention was moved to a newer github hosted solution called [Upptime](https://github.com/upptime/upptime) which we plan on supporting long term. Links to all dashboards above can be navigated to via the status page serving as the central hub for all monitoring. | 5 days original estimate / 15 days actual |
+
+**Explanations of Deviations from Original Scope** 
+
+- Deliverable 1 
+    - The most significent deviation came from re-writing the core terraform modules used in this project into consolidated modules that we felt would be able to be adopted by the community more easily. 
+
+    - A new configuration object was built to support multiple parachains. This object had to be configured from terraform and flow into the ansible playbooks used to deploy images with packer and VMs directly. 
+
+    - To have georouting work with the global load balancer and have the ability to issue certificates with letsencrypt, a new networking pattern had to be implemented. Certificates were issued at both the apex and in zones for each individual cluster. 
+
+    - To allow the deployment to better integrate into our existing infrastructure, work was done to add the deployment to a service mesh powered by Envoy, which required changes to almost every module. For the autoscaling API nodes, this required a lot of complex templating but was needed to integrate with the rest of our services. 
+
+- Deliverable 2
+    - To aggregate the logs from multiple regions required an enterprise elasticsearch license so we opted to setup individual elasticsearch DBs in each region. 
+    
+    - Troubleshooting and diagnosis was required for the middleware to determine why websocket connections were unexpectedly being dropped. It was determined to be an issue with a third-party package that was being used. A patch was applied, which solved the issue.
+
+    - Extra prometheus exporter for cloudwatch metrics was built and deployed with rules to collect data on autoscaling groups and billing.
+
+- Deliverable 3
+    - The decision to ditch cachet did not come without significent developer hours being invested into that solution but ditching it for upptime ultimately was the right choice. The current status page is simpler to setup and runs entirely on github actions. 
+
+    - Monitoring the websockets through upptime was not supported so we made a custom upptime plugin to be able to do this.  This plugin was [contributed back](https://github.com/upptime/uptime-monitor/pull/164) to upptime so that others can benefit. 
+
+    - Metrics were originally being built into cachet but because upptime had its own metrics representation, links to telemetry / kibana were instead included in the upptime status page.
+
 
 **Additional Information**
 
