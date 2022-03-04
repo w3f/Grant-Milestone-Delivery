@@ -27,10 +27,10 @@ Alongside the above development, attention was put into enhancing the observabil
 | 2. [D2](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [Grafana US](https://grafana.substrate.us-west-2.aws.geometry.io/) [Grafana EU](https://grafana.substrate.eu-west-1.aws.geometry.io/) [Kibana](https://kibana.us-west-2.aws.geometry.io/) [Telemetry](http://telemetry.substrate.geometry.io/#/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3) | Monitoring and logging data streams have been piped into dashboarding tools and alarms configured internally to support on-call rotation schedules via pagerduty. Websockets needed special handling for logging so [log interceptor](https://github.com/geometry-labs/websocket-logger) was built for this project. | 13 days original estimate / 16 days actual |
 | 2. [D3](https://github.com/w3f/General-Grants-Program/blob/master/grants/speculative/load_balanced_endpoints_operations.md#milestones-and-deliverables) | Monitoring a logging | [status.substrate.geometry.io](https://status.substrate.geometry.io/) | Initially we were planning on using [Cachet](https://github.com/CachetHQ/Cachet) for a status page, a popular self hosted open source solution. After not being able to get it to support the exact feature set we were looking for, attention was moved to a newer github hosted solution called [Upptime](https://github.com/upptime/upptime) which we plan on supporting long term. Links to all dashboards above can be navigated to via the status page serving as the central hub for all monitoring. | 5 days original estimate / 15 days actual |
 
-**Explanations of Deviations from Original Scope** 
+#### **Explanations of Deviations from Original Scope** 
 
 - Deliverable 1 
-    - The most significent deviation came from re-writing the core terraform modules used in this project into consolidated modules that we felt would be able to be adopted by the community more easily. 
+    - The most significant deviation came from re-writing the core terraform modules used in this project into consolidated modules that we felt would be able to be adopted by the community more easily. 
 
     - A new configuration object was built to support multiple parachains. This object had to be configured from terraform and flow into the ansible playbooks used to deploy images with packer and VMs directly. 
 
@@ -46,7 +46,7 @@ Alongside the above development, attention was put into enhancing the observabil
     - Extra prometheus exporter for cloudwatch metrics was built and deployed with rules to collect data on autoscaling groups and billing.
 
 - Deliverable 3
-    - The decision to ditch cachet did not come without significent developer hours being invested into that solution but ditching it for upptime ultimately was the right choice. The current status page is simpler to setup and runs entirely on github actions. 
+    - The decision to ditch cachet did not come without significant developer hours being invested into that solution but ditching it for upptime ultimately was the right choice. The current status page is simpler to setup and runs entirely on github actions. 
 
     - Monitoring the websockets through upptime was not supported so we made a custom upptime plugin to be able to do this.  This plugin was [contributed back](https://github.com/upptime/uptime-monitor/pull/164) to upptime so that others can benefit. 
 
