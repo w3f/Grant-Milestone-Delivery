@@ -12,7 +12,7 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License Apache 2.0 |https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/master/packages/extension-plus/LICENSE | 
 | 0b. | Documentation | https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki | Inline docs and wiki are available |
-| 0c. | Testing Guide	| https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/Installation#testing |  unit tests and testing on westend blockchain are available|
+| 0c. | Testing Guide	| https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/Installation |  unit tests and testing on westend blockchain are available|
 | 1. | Show balance and address as QRcode | https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/master/packages/extension-plus/src/components/Plus.tsx , https://github.com/Nick-1979/polkadot-Js-Plus-extension/tree/master/packages/extension-plus/src/Popup/AddressQRcode | to show available, reseved, and total balances in cryto and USD, also shows an address as a QRcode | 
 | 2.  | Fund transfer | https://github.com/Nick-1979/polkadot-Js-Plus-extension/tree/master/packages/extension-plus/src/Popup/Transfer | to transfer funds from one account to another on Kusama/Polkadot | 
 | 3.  | Tranaction history | https://github.com/Nick-1979/polkadot-Js-Plus-extension/tree/master/packages/extension-plus/src/Popup/History | transactions' history are shown in different categories | 
