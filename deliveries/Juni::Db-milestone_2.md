@@ -13,7 +13,7 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://github.com/uddugteam/substrate/blob/master/LICENSE-GPL3 | ... | 
 | 0b. | Documentation | https://uddugteam.github.io/offchain-ipfs-manual/ | ... | 
-| 0c. | Testing Guide  | https://uddugteam.github.io/offchain-ipfs-manual/previewing-functionality.html | ... | 
+| 0c. | Testing Guide  | https://uddugteam.github.io/offchain-ipfs-manual/testing.html | ... | 
 | 0d. | Article | https://docs.google.com/document/d/1k6DhCfSs7rmsSV-WB7o8EkvqDFz5Bvn12QYrjjW7R2w/edit?usp=sharing | We did it complex for the 2 first Milestones. | ... | 
 | 1. | Update [offchain::ipfs](https://github.com/rs-ipfs/substrate) | https://github.com/uddugteam/substrate/tree/offchain_ipfs | ... | 
 | 2. | Docker image| https://hub.docker.com/repository/docker/andskur/substrate-offchain-ipfs | ... | 
