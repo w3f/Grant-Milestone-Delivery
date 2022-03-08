@@ -9,16 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [bytepayment/bytepay](https://github.com/bytepayment/bytepay/blob/main/LICENSE), [bytepayment/bytepaytest](https://github.com/bytepayment/bytepaytest/blob/main/LICENSE) | Apache 2.0 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | link | We will provide docs about how to create a task, how to tigger the payment, and how to withdraw |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | link | We will provide uni test for task,transfer,informal,withdraw modules(70% cover), and UI test report |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | link | We will provide Dockerfile and docker image to run the website in one command line, and you can to test those modules |
-| 1. | Task management | <ul><li>[ ] </li></ul> | link | Create a paid task by comment an issue, it will trigger the create task event though the webhook, and webhook server will save the task and show it on our page, when developer complete the task, will tigger transfer module to pay the developer |
-| 2. | Transfer module | <ul><li>[ ] </li></ul> | link | Trigger a payment by comment an issue, like `/pay Bob 10DOT`, the DOT will transfer to developer platform account |
-| 3. | Withdraw module | <ul><li>[ ] </li></ul> | link | Withdraw the DOT from our platform to developer own wallet, if developer bind it own address, payment will transfer to the account directly |
-| 4. | Informal | <ul><li>[ ] </li></ul> | link | Developer will receive the event, tell him how to withdraw DOT in our platform, robot will send Bob email and comment the issue |
-| X. | ... | <ul><li>[ ] </li></ul> | link | see [General Notes](#general-notes) |
+| 0b. | Documentation | <ul><li>[ ] </li></ul> | [bytepay.online](https://bytepay.online/docs/bytepay-userguide) | Screenshots of basic functions; hosted |
+| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [link](https://github.com/bytepayment/bytepay/tree/b4f888152526ebea93e9fab855cb1a81d206ae35#how-to-run-test) | Smart contracts not compiling |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [bytepayment/bytepay](https://github.com/bytepayment/bytepay/blob/b4f888152526ebea93e9fab855cb1a81d206ae35/docker-compose.yml) | — |
+| 1. | Task management | <ul><li>[x] </li></ul> | [bytepayment/bytepay](https://github.com/bytepayment/bytepay/blob/b4f888152526ebea93e9fab855cb1a81d206ae35/cloudfuncs/webhooks/index.ts#L71-L140) | — |
+| 2. | Transfer module | <ul><li>[x] </li></ul> | [backend](https://github.com/bytepayment/bytepay/blob/b4f888152526ebea93e9fab855cb1a81d206ae35/cloudfuncs/polka_dot_transfer/index.ts), [smart contract](https://github.com/bytepayment/bytepay/blob/b4f888152526ebea93e9fab855cb1a81d206ae35/smart-contract/lib.rs#L113) | `set_whitelist` functionality and documentation at odds |
+| 3. | Withdraw module | <ul><li>[x] </li></ul> | [bytepayment/bytepay](https://github.com/bytepayment/bytepay/blob/b4f888152526ebea93e9fab855cb1a81d206ae35/smart-contract/lib.rs#L70-L86) | — |
+| 4. | Informal | <ul><li>[x] </li></ul> | [bytepayment/bytepay](https://github.com/bytepayment/bytepay/blob/0cf981eb05b779c8795d494de00649c92127ea25/server/functions/webhooks/index.ts), [example](https://github.com/bytepayment/bytepaytest/issues/22) | — |
 
 
 ## General Notes
 
-- —
+- Smart contracts not compiling
