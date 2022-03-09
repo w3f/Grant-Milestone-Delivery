@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress 
+- **Status:** Accepted 
 - **Application:** https://github.com/w3f/Grants-Program/blob/master/applications/skynet-substrate-integration.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/SkynetLabs/skynet-substrate/blob/main/LICENSE) | Correct License |
-| 0b.    | Documentation |  <ul><li>[ ] </li></ul> | [rust docs](https://skynetlabs.github.io/skynet-substrate/skynet_substrate/) | Rust docs plus some inline documentation.  Documentation that explains how a user can use the SDK in a pallet for basic off-chain functionality is missing  |
+| 0b.    | Documentation |  <ul><li>[x] </li></ul> | [rust docs](https://skynetlabs.github.io/skynet-substrate/skynet_substrate/), [tutorial](https://skynetlabs.notion.site/Skynet-Substrate-SDK-5d0e02a25a43419ba39f30da071517dd) | **Mar 3, 2022:**  Rust docs plus some inline documentation.  Documentation that explains how a user can use the SDK in a pallet for basic off-chain functionality is missing **Mar 9, 2022:** They wrote a really useful article   |
 | 0c.    | Testing Guide |  <ul><li>[x] </li></ul> | [testing](https://github.com/SkynetLabs/skynet-substrate#testing) | Works, only one warning, see below  |
 | 0d.    | Sample Node with OCW Pallet & Read-Only Frontend |  <ul><li>[x] </li></ul> | [skynet-substrate-offchain-worker-node](https://github.com/SkynetLabs/skynet-substrate-offchain-worker-node), [skynet-substrate-front-end-example](https://github.com/SkynetLabs/skynet-substrate-front-end-example) | separate node and front-end |
 | 1.     | Skynet Substrate SDK for Off-Chain Worker Pallet (Skyfiles) |  <ul><li>[x] </li></ul> | [download.rs](https://github.com/SkynetLabs/skynet-substrate/blob/main/src/download.rs), [upload.rs](https://github.com/SkynetLabs/skynet-substrate/blob/main/src/upload.rs), [skylink.rs](https://github.com/SkynetLabs/skynet-substrate/blob/main/src/skylink.rs) | **Mar 3, 2022:** Rust implementation, but not actually implemented into a pallet **Mar 7, 2022:** Clarified that the pallet implementation isn't necessary |  
@@ -19,6 +19,8 @@
 
 
 ## General Notes
+
+Overall a very good delivery, that helps devs to get started with substrate + skynet. 
 
 **Mar 7, 2022:** The following version works: https://000a09kgtkertvla0vdksg42rihmgg1armrfa245krprc67nrap5pm0.fileportal.org/#/
 
