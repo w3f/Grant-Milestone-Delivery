@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/skyekiwi-protocol.md
 - **Milestone:** 2
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [GPLv3.0](https://github.com/skyekiwi/skyekiwi-network/blob/master/LICENSE) | GPLv3.0 instead of Apache 2.0, which is fine  |
-| 0b. | Documentation       | <ul><li>[ ] </li></ul> | [skw-blockchain-pallets](https://github.com/skyekiwi/skyekiwi-network/tree/master/crates/skw-blockchain-pallets/pallet-secrets) | **15.02.22:** Code has inline documentation, but no "basic tutorial that explains how a user can integrate the SkyeKiwi Protocol into their project." or any other tutorial **16.02.22:** Improved [docs](https://github.com/skyekiwi/skyekiwi-network/pull/18/files) Still no tutorial  |
+| 0b. | Documentation       | <ul><li>[x] </li></ul> | [skw-blockchain-pallets](https://github.com/skyekiwi/skyekiwi-network/tree/master/crates/skw-blockchain-pallets/pallet-secrets) | **15.02.22:** Code has inline documentation, but no "basic tutorial that explains how a user can integrate the SkyeKiwi Protocol into their project." or any other tutorial **16.02.22:** Improved [docs](https://github.com/skyekiwi/skyekiwi-network/pull/18/files) Still no tutorial **02.03.22:** They added a [basic tutorial](https://github.com/skyekiwi/skyekiwi-network#tutorials-of-how-to-interact-with-the-skyekiwi-network)  |
 | 0c. | Testing Guide       | <ul><li>[x] </li></ul> | [testing-guide](https://github.com/skyekiwi/skyekiwi-network#descriptions--build--testing-guide) | **15.02.22:** Only describes how to run all tests. It would be nice to also have docs/readmes in the subfolders of some of the projects. yarn main:build fails for me because of near-test-contracts v0.0.0  **16.02.22:** Improved [docs](https://github.com/skyekiwi/skyekiwi-network/pull/18/files). Test compile now |
 | 1. | `pallet-secrets`    | <ul><li>[x] </li></ul> | [skw-blockchain-pallets](https://github.com/skyekiwi/skyekiwi-network/tree/master/crates/skw-blockchain-pallets/pallet-secrets) | Tests work, The implementation changed quite a bit compared to the [contract](https://github.com/skyekiwi/contract-demo/blob/c1118b218b4e597c8373a649f52b131081e09b4a/simple-storage/contracts/lib.rs), but that is fine and in general it looks good |
 | 2. | Rust Implementation | <ul><li>[x] </li></ul> | [enclave](https://github.com/skyekiwi/skyekiwi-network/tree/master/enclave), [skw-sgx-protocol](https://github.com/skyekiwi/skyekiwi-network/tree/master/crates/skw-sgx-protocol) | **16.02.22:** See error below. Probably because of AMD **23.02.22:** Everything works now |
@@ -17,6 +17,7 @@
 
 ## General Notes
 
+It's a huge and complex project and the main developer is actively working on it and helped during the evaluation. The documentation could be petter, but the project is at an early stage. 
 
 **16.02.22** 
 
