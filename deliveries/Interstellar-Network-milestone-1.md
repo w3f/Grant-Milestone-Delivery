@@ -7,7 +7,9 @@
 >The company registration is pending and we still haven't received our VAT ID.
 Our invoice with "VAT ID: registration pending" is compliant with the french law. However, we will have to reissue the same invoice with the VAT ID as soon as we receive it. 
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/3892460da004c06a0cec0e4b55d90bef96f2523e/applications/Interstellar-Network.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Interstellar-Network.md
+
+* **Milestone Number:**  1
 
 **Context** (optional)
 
