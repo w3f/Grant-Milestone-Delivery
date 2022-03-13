@@ -6,7 +6,7 @@
 
 **The [invoice form :pencil:](https://forms.gle/8Wx7nxtq8fKrsuEz8) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** [https://github.com/w3f/Grants-Program/pull/804](https://github.com/w3f/Grants-Program/pull/804).
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/stable-asset.md
 * **Milestone Number:** 3
 
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work.
