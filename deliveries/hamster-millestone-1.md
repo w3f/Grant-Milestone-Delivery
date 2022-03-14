@@ -7,14 +7,14 @@
 - **Milestone Number:** Milestone 1
 
 
-| Number | Deliverable               | Link                                                         | Notes                                   |
-| ------ | ------------------------- | ------------------------------------------------------------ | --------------------------------------- |
-| 0a.    | License                   | https://github.com/hamster-shared/hamster/blob/main/LICENSE  | Apache 2.0                              |
-| 0b.    | Documentation             | https://github.com/hamster-shared/hamster-doc                | Includes all tutorials and white papers |
-| 0c.    | Testing Guide             |                                                              |                                         |
-| 1.     | Hamster Client            | https://github.com/hamster-shared/hamster-client             |                                         |
-| 2.     | Hamster Provider          | https://github.com/hamster-shared/hamster-provider           |                                         |
-| 3.     | Hamster Provider: web app | https://github.com/hamster-shared/frontend                   |                                         |
-| 4.     | Hamster chain             | https://github.com/hamster-shared/hamster                    |                                         |
-| 5.     | Whitepaper                | https://github.com/hamster-shared/hamster-doc/blob/main/Hamster%20Whitepaper.docx |                                         |
+| Number | Deliverable               | Link                                                         | Notes                                                  |
+| ------ | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------ |
+| 0a.    | License                   | https://github.com/hamster-shared/hamster/blob/main/LICENSE  | Apache 2.0                                             |
+| 0b.    | Documentation             | https://github.com/hamster-shared/hamster-doc                | Includes all tutorials and white papers                |
+| 0c.    | Testing Guide             | https://github.com/hamster-shared/hamster-doc                | Tests can be found in the individual project tutorials |
+| 1.     | Hamster Client            | https://github.com/hamster-shared/hamster-client             |                                                        |
+| 2.     | Hamster Provider          | https://github.com/hamster-shared/hamster-provider           |                                                        |
+| 3.     | Hamster Provider: web app | https://github.com/hamster-shared/frontend                   |                                                        |
+| 4.     | Hamster chain             | https://github.com/hamster-shared/hamster                    |                                                        |
+| 5.     | Whitepaper                | https://github.com/hamster-shared/hamster-doc/blob/main/Hamster%20Whitepaper.docx |                                                        |
 
