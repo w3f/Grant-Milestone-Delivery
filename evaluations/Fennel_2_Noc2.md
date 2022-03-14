@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress 
+- **Status:** Accepted 
 - **Application Link:** https://github.com/w3f/Grants-Program/blob/master/applications/Fennel_Protocol.md
 * **Milestone:** 2
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -8,17 +8,49 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[ ] </li></ul> | [LICENSE](https://github.com/fennelLabs/Fennel-Protocol/blob/main/LICENSE), [Fennel-lib](https://github.com/fennelLabs/fennel-lib) | Fennel lib has no license file |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [wiki](https://github.com/fennelLabs/Fennel-Protocol/wiki), [rust docs](https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html) |  |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Testing-Milestone-2](https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-2) | Testing guide, but I'm unable to run the test for Fennel lib, see below  |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/fennelLabs/Fennel-Protocol/blob/main/LICENSE), [Fennel-lib](https://github.com/fennelLabs/fennel-lib/blob/master/LICENSE) | Fennel lib has no license file **14.03.22:** License file was added |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [wiki](https://github.com/fennelLabs/Fennel-Protocol/wiki), [rust docs](https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html), [rust docs fennel lib](https://fennellabs.com/fennel-lib/fennel_lib/index.html ) | According to the contract |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Testing-Milestone-2](https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-2) | Testing guide, but I'm unable to run the test for Fennel lib, see below  |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile) | According to the contract |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Article](https://fennellabs.com/FennelBlog/Milestone-Two/) | Not very long, but according to the contract |
-| 1. | Keypair Creation | <ul><li>[ ] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/rsa_tools/mod.rs) |  |
+| 1. | Keypair Creation | <ul><li>[x] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/rsa_tools/mod.rs) | Works, but needs to be compiled with a rust nightly version. |
 | 2. | Public Key Transmission | <ul><li>[x] </li></ul> | [keystore](https://github.com/fennelLabs/Fennel-Protocol/blob/6a93b9abab9f643b001756597323f4882012714b/pallets/keystore/src/lib.rs#L67) | Works |
-| 3. | Public Key Retrieval | <ul><li>[ ] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/fennel/mod.rs#L153) |  |
-| 4. | Encrypted Communciation Channel Negotiation | <ul><li>[x] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/dh_tools/mod.rs), [lib.rs](https://github.com/fennelLabs/Fennel-Protocol/blob/6a93b9abab9f643b001756597323f4882012714b/pallets/keystore/src/lib.rs#L95) | Works |
+| 3. | Public Key Retrieval | <ul><li>[x] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/fennel/mod.rs#L153) | Works |
+| 4. | Encrypted Communciation Channel Negotiation | <ul><li>[x] </li></ul> | [mod.rs](https://github.com/fennelLabs/fennel-lib/blob/master/src/dh_tools/mod.rs), [lib.rs](https://github.com/fennelLabs/Fennel-Protocol/blob/6a93b9abab9f643b001756597323f4882012714b/pallets/keystore/src/lib.rs#L95) | Works, but needs to be compiled with a rust nightly version. |
 
 ## General Notes
+
+**14.03.22:**
+
+Link https://fennellabs.com/fennel-lib/fennel_lib/index.html was fixed and license file was added. I also was able to compile it, but got a few warnings:
+
+
+<pre><font color="#A2734C"><b>warning</b></font><b>: type alias is never used: `RawIdentity`</b>
+  <font color="#2A7BDE"><b>--&gt; </b></font>src/fennel/mod.rs:14:1
+   <font color="#2A7BDE"><b>|</b></font>
+<font color="#2A7BDE"><b>14</b></font> <font color="#2A7BDE"><b>| </b></font>type RawIdentity = [u8; 4];
+   <font color="#2A7BDE"><b>| </b></font><font color="#A2734C"><b>^^^^^^^^^^^^^^^^^^^^^^^^^^^</b></font>
+   <font color="#2A7BDE"><b>|</b></font>
+   <font color="#2A7BDE"><b>= </b></font><b>note</b>: `#[warn(dead_code)]` on by default
+
+<font color="#A2734C"><b>warning</b></font><b>: field is never read: `identity_db`</b>
+  <font color="#2A7BDE"><b>--&gt; </b></font>src/fennel/mod.rs:40:5
+   <font color="#2A7BDE"><b>|</b></font>
+<font color="#2A7BDE"><b>40</b></font> <font color="#2A7BDE"><b>| </b></font>    identity_db: Arc&lt;Mutex&lt;DB&gt;&gt;,
+   <font color="#2A7BDE"><b>| </b></font>    <font color="#A2734C"><b>^^^^^^^^^^^^^^^^^^^^^^^^^^^</b></font>
+
+<font color="#A2734C"><b>warning</b></font><b>: field is never read: `messages_db`</b>
+  <font color="#2A7BDE"><b>--&gt; </b></font>src/fennel/mod.rs:41:5
+   <font color="#2A7BDE"><b>|</b></font>
+<font color="#2A7BDE"><b>41</b></font> <font color="#2A7BDE"><b>| </b></font>    messages_db: Arc&lt;Mutex&lt;DB&gt;&gt;,
+   <font color="#2A7BDE"><b>| </b></font>    <font color="#A2734C"><b>^^^^^^^^^^^^^^^^^^^^^^^^^^^</b></font>
+
+<font color="#A2734C"><b>warning</b></font><b>:</b> `fennel-lib` (lib) generated 3 warnings
+<font color="#A2734C"><b>warning</b></font><b>:</b> `fennel-lib` (lib test) generated 3 warnings (3 duplicates)
+</pre>
+
+
+**11.03.22:**
 
 - I can not open the following link: https://fennellabs.com/fennel-lib/fennel_lib/index.html 
 - Fennel lib has no license file
