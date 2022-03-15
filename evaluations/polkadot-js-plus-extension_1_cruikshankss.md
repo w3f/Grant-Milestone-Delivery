@@ -1,7 +1,7 @@
 # Evaluation
 
-- **Status:** In Progress
-- **Application Document:** 
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/pull/778
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
