@@ -6,7 +6,6 @@
 - **Kusama Identity:** N/A
 - **Previously successfully merged evaluation:** N/A
 
-| -----: | ----------- | ------------- |
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [GPL 3](https://github.com/w3f-community/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation/blob/main/LICENSE)|
