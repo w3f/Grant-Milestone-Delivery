@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress 
+- **Status:** Accepted
 - **PR Link:** https://github.com/w3f/Open-Grants-Program/pull/356
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -12,13 +12,22 @@
 | 0b. | Wallet injection | <ul><li>[x] </li></ul> | [injectScript.ts](https://github.com/ChainBridgeNetworkTeam/Doter/blob/master/project/pluginFile/injectScript.ts) | Works with the version on Github. Doesn't work with the version in the chrome store |
 | 0c. | Google Extended Market | <ul><li>[x] </li></ul> | [chrome web store](https://chrome.google.com/webstore/detail/doter/abamjefkidngfegdjbmffdmbgjgpaobf) |  |
 | 0d. | Unit test | <ul><li>[x] </li></ul> | [entry](https://github.com/ChainBridgeNetworkTeam/Doter/tree/master/project/entry) | 29 tests  |
-| 1. | Wallet injection on Polkadot with the following [following features](https://github.com/w3f/Open-Grants-Program/blob/master/applications/Doter.md#ui-prototype) | <ul><li>[ ] </li></ul> | [repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Updating the metadata with polkadot.js/apps doesn't seem to work (entering the password doesn't work) |
+| 1. | Wallet injection on Polkadot with the following [following features](https://github.com/w3f/Open-Grants-Program/blob/master/applications/Doter.md#ui-prototype) | <ul><li>[x] </li></ul> | [repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Issue with updating the metadata with polkadot.js/apps was fixed |
 | 2. | Transaction signature on Polkadot | <ul><li>[x] </li></ul> | [repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Works (See [example transfer](https://polkadot.subscan.io/block/5243934)) |
 | 3. | Optimize account creation, transfer, account management and other functions to improve user experience | <ul><li>[x] </li></ul> | [repo](https://github.com/ChainBridgeNetworkTeam/Doter) | Account creation works and regular transfers work in the UI. The user experience is still far from perfect, but it's only the first milestone  |
 
 ## General Notes
 
 Extra demo videos: [General module](https://www.youtube.com/watch?v=pKK5rHJgxVw), [Injection and signature](https://youtu.be/FP9yrLoOQ8k)
+
+**Update June 8, 2021**: 
+- issue with chromium on ubuntu was fixed 
+- Metadata issue was fixed
+- Fixed all except one issue found by snyk (Denial of Service [Medium Severity][https://snyk.io/vuln/SNYK-JS-NODEFETCH-674311] in node-fetch@1.7.3, introduced by umi-request@1.3.9 > isomorphic-fetch@2.2.1 > node-fetch@1.7.3, This issue was fixed in versions: 2.6.1, 3.0.0-beta.9)
+
+It’s nice to see that the team fixed almost everything, which I mentioned previously, instead of just focusing on getting the milestone signed off. They are clearly motivated. The design of the UI certainly can still be improved, but given that this was only the first milestone, they did really good work. 
+
+**Initial Feedback on May 27, 2021**: 
 
 - I had issues because I tried to open polkadot.js/apps with doter as well as the polkadot.js extension installed.
 - Updating the metadata with polkadot.js/apps doesn't seem to work (entering the password doesn't work)
