@@ -20,16 +20,14 @@ by the community that is already familiar with ORML the repository.
 | 3. | Remarks system | [Pay with remark PR][PR3] | Making payments with metadata to allow custom login react differently based on the payment information. |  
 
 [docs]: https://github.com/virto-network/virto-node/blob/master/pallets/payment/README.md
-[post]: https://github.com/virto-network/website/pull/11
+[post]: https://github.com/virto-network/website/pull/13
 [orml]: https://github.com/open-web3-stack/open-runtime-module-library/pull/691
 [PR2]: https://github.com/virto-network/virto-node/pull/161
 [PR3]: https://github.com/virto-network/virto-node/pull/163
 
 **Additional Information**
 
-Since the proposed new features were finished prior our first milestone review(so technically already reviewed?), 
-we recommend checking the latest version of the code that has fixes from previous feedback regarding how to test and run the code.
-
+Since the proposed new features were finished prior our first milestone review, the required features of this milestone are technically already reviewed, 
+nonetheless we recommend checking the latest version of the code included in the ORML Pull Request which still contains features of points 2 and 3 with updates and fixes we've found in the last month of development.  
 Although outside of the scope of the milestone review, feedback on the latest state of the code that we plan to merge in ORML is 
-very much welcomed which includes some of the extra features we've been working on like payment requests, allowing internal settlement
-of payments by percentages, requesting refunds and other features that might make the cut. 
+very much welcomed, it includes some of the extra features we've been working that we'd like to propose for a follow-up grant featuring [payments pallet v1](https://github.com/virto-network/open-runtime-module-library/milestone/1) and a high-level payments and merchants "decentralizable API" powered by our [*Valor*](https://github.com/virto-network/valor) runtime.
