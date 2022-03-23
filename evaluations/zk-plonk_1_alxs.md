@@ -20,4 +20,4 @@ A fair amount of confusion on my side due to unusual wording, as well as during 
 
 Some initial errors when interacting with the pallet from polkadot.{js} due to outdated types were addressed.
 
-Although the delivery is conceptually rather simple since it solely concerns the adaptatino of an existing library to be compatible with Substrate, it is clear this wasn't a straightforwards task. Furthermore, the delivery is comprehensive with hosted documentation, a tutorial and example pallet.
+Although the delivery is conceptually rather simple since it concerns the adaptation of an existing library to be compatible with Substrate, it is clear this wasn't a straightforwards task. Furthermore, the delivery is comprehensive with hosted documentation, a tutorial and example pallet.
