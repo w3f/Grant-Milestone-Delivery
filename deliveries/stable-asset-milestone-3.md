@@ -15,6 +15,6 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Substrate module: Stable Asset Substrate module |[collect yield code](https://github.com/nutsfinance/stable-asset/blob/eb5dc8a8cfd90ab62d78735d6a5d4a42a26d507f/lib/stable-asset/src/lib.rs#L1152-L1191)||
-| 2.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/eb5dc8a8cfd90ab62d78735d6a5d4a42a26d507f/lib/stable-asset/src/tests.rs) [integration test](https://github.com/AcalaNetwork/Acala/blob/969878303c90f9a019df32b017e87c76c6b5d73e/runtime/integration-tests/src/stable_asset.rs)||
-| 3.  | Docker |[code](https://github.com/nutsfinance/stable-asset/blob/eb5dc8a8cfd90ab62d78735d6a5d4a42a26d507f/demo/Dockerfile)||
+| 1. | Substrate module: Stable Asset Substrate module |[collect yield code](https://github.com/nutsfinance/stable-asset/blob/2f6619b15d04879127586f791a33d40f86360ab8/lib/stable-asset/src/lib.rs#L1168-L1207)||
+| 2.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/2f6619b15d04879127586f791a33d40f86360ab8/lib/stable-asset/src/tests.rs) [integration test](https://github.com/AcalaNetwork/Acala/blob/2f6619b15d04879127586f791a33d40f86360ab8/runtime/integration-tests/src/stable_asset.rs)||
+| 3.  | Docker |[code](https://github.com/nutsfinance/stable-asset/blob/2f6619b15d04879127586f791a33d40f86360ab8/Dockerfile)||
