@@ -22,7 +22,6 @@
 
 ## General Notes
 
-- —
 - Service expects MySQL schema and tables to be set up (`npm run start` fails with `Access denied for user 'xxx'@'localhost' to database 'ido-platform'`), no instructions how to reproduce
 - `npm audit` shows
   - 45 vulnerabilities (26 moderate, 15 high, 4 critical) for `portal-ui`
