@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polk-auction.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,14 +9,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| [Apache License](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/LICENSE) | - |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| [polk-auction-ui README](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/README.md) | Instructions for installing NPM dependencies are missing. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| [polk-auction-ui README](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/README.md#test) | See [Test Feedback](#test-feedback) |
-| 0d. | Docker |<ul><li>[ ] </li></ul>| [Dockerfile](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/Dockerfile) | See [Docker Feedback](#docker-feedback) |
-| 1. | Current-Auction page |<ul><li>[ ] </li></ul>| [Auction Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/auction) | See [Current Auction Page Feedback](#current-auction-page-feedback) |
-| 2. | Current-Parachains page |<ul><li>[ ] </li></ul>| [Parachain Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/parachain) | See [Parachain Page Feedback](#parachain-page-feedback) |
-| 3. | Current-Crowdloan page |<ul><li>[ ] </li></ul>| [Crowdloan Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/crowdloan) | See [Crowdloan Page Feedback](#crowdloan-page-feedback) |
-| 4. | Others pages |<ul><li>[ ] </li></ul>| [About Page](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/about/AboutPage.tsx) | Contrary to the specification, there is no FAQ section. |
-| 4. | Header |<ul><li>[ ] </li></ul>| [Header Component](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/header) | See [Header Feedback](#header-feedback) |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [polk-auction-ui README](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/README.md) | - |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| [polk-auction-ui README](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/README.md#test) | See [Test Feedback](#test-feedback) |
+| 0d. | Docker |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/Dockerfile) | - |
+| 1. | Current-Auction page |<ul><li>[x] </li></ul>| [Auction Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/auction) | See [Current Auction/Parachain/Crowdloan Pages Feedback](#current-auctionparachaincrowdloan-pages-feedback) |
+| 2. | Current-Parachains page |<ul><li>[x] </li></ul>| [Parachain Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/parachain) | See [Current Auction/Parachain/Crowdloan Pages Feedback](#parachain-page-feedback) |
+| 3. | Current-Crowdloan page |<ul><li>[x] </li></ul>| [Crowdloan Page](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/crowdloan) | See [Current Auction/Parachain/Crowdloan Pages Feedback](#crowdloan-page-feedback) |
+| 4. | Others pages |<ul><li>[x] </li></ul>| [About Page](https://github.com/CrommVardek/polk-auction-ui/blob/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/about/AboutPage.tsx) | About page with basic information and FAQ section is present, although there is only 1 entry. |
+| 4. | Header |<ul><li>[x] </li></ul>| [Header Component](https://github.com/CrommVardek/polk-auction-ui/tree/3286f5de70e87bd14e86fe43999897059d65aebb/src/components/header) | Header indicates active network (Kusama or Polkadot) and contains link to about page |
 
 
 Ideally all links inside the above table should include the commit hash,
@@ -24,265 +24,90 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-In general, I'm confused why you use the following IPs instead of 127.0.0.1 (localhost) in the docker configs located in your [polk-auction-core repo](https://github.com/CrommVardek/polk-auction-core):
+In general, I was initially confused why the team uses the following IPs instead of 127.0.0.1 (localhost) in the docker configs located in your [polk-auction-core repo](https://github.com/CrommVardek/polk-auction-core):
 - 127.0.33.1 for the DB container
 - 127.0.0.10 for the sidecar container
 
+This was their [explanation](https://github.com/w3f/Grant-Milestone-Delivery/pull/358#issuecomment-1066133063) on why they decided to do it that way:
+
+> Since some ports (8080 and 30333) are used by multiple containers, I wanted different IP (because I prefer not to change default ports). But I guess I could use the same IP for each node and its sidecar. Same for the DB and polkauction-core. I'll probably change that. I'm not too familiar with network, infrastructure and operational best practice, in my mind it made sense to have different IP (because different services).
+
 ### Test Feedback
 
-When running the tests, the following warning occurs multiple times:
+Frontent tests succeed:
 
 ```bash
- console.error
-    Warning: Each child in a list should have a unique "key" prop.
-    
-    Check the render method of `RelayChainsTab`. See https://reactjs.org/link/warning-keys for more information.
-        at RelayChainButton (/repos/polk-auction-ui/src/components/header/RelayChainsTab.tsx:16:8)
-        at RelayChainsTab (/repos/polk-auction-ui/src/components/header/RelayChainsTab.tsx:34:85)
-        at WrapperComponent (/repos/polk-auction-ui/node_modules/@wojtekmaj/enzyme-adapter-utils/src/createMountWrapper.jsx:48:26)
+$ yarn test
+yarn run v1.22.17
+$ jest
+ PASS  test/utils/DisplayUtils.test.ts
+  ✓ Number should be formatted as expected with commas (1 ms)
+  ✓ Number with decimals should be formatted as expected with commas
+
+ PASS  test/components/header/RelayChainsTab.test.tsx
+  <RelayChainsTab />
+    ✓ renders a button for each relaychain (44 ms)
+
+ PASS  test/components/crowdloan/CrowdloanTable.test.tsx
+  <CrowdloanTable />
+    ✓ renders a table (5 ms)
+    ✓ renders X <tr>, where X is the number of funds + 1 (2 ms)
+
+ PASS  test/components/crowdloan/CrowdloanPage.test.tsx
+  <CrowdloanPage />
+    ✓ renders one spinner if loading crowdloan (132 ms)
+    ✓ renders two tables (23 ms)
+
+ PASS  test/components/parachain/ParachainsPage.test.tsx
+  <ParachainsPage />
+    ✓ renders one spinner if loading data (129 ms)
+    ✓ renders one tables (8 ms)
+    ✓ renders as much website link as there are parachain URL from data (23 ms)
+    ✓ renders X <tr>, where X is the number of parachains with lifecycle Parachain + 1 (16 ms)
+
+ PASS  test/App.test.tsx
+  ✓ app name is in App (35 ms)
+  <App />
+    ✓ renders one footer element (33 ms)
+    ✓ renders one header element (9 ms)
+
+Test Suites: 6 passed, 6 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        3.768 s
+Ran all test suites.
+Done in 4.38s.
 ```
 
-### Docker Feedback
-
-When building the docker image it fails with the following error:
+Server-side tests succeed:
 
 ```bash
-% docker build -t polk-auction-ui .
-[+] Building 3.4s (12/13)                                                                                                                                                                                   
- => [internal] load build definition from Dockerfile                                                                                                                                                   0.0s
- => => transferring dockerfile: 37B                                                                                                                                                                    0.0s
- => [internal] load .dockerignore                                                                                                                                                                      0.0s
- => => transferring context: 34B                                                                                                                                                                       0.0s
- => [internal] load metadata for docker.io/library/nginx:stable-alpine                                                                                                                                 2.0s
- => [internal] load metadata for docker.io/library/node:14                                                                                                                                             2.0s
- => [build 1/6] FROM docker.io/library/node:14@sha256:b2c75df8c9706156c38b4f1f678d00e11cb2bfda09fc4ab6e36ec17ac9163865                                                                                 0.0s
- => [internal] load build context                                                                                                                                                                      0.0s
- => => transferring context: 6.48kB                                                                                                                                                                    0.0s
- => CACHED [stage-1 1/2] FROM docker.io/library/nginx:stable-alpine@sha256:74694f2de64c44787a81f0554aa45b281e468c0c58b8665fafceda624d31e556                                                            0.0s
- => CACHED [build 2/6] WORKDIR /app                                                                                                                                                                    0.0s
- => CACHED [build 3/6] COPY package*.json ./                                                                                                                                                           0.0s
- => CACHED [build 4/6] RUN yarn install                                                                                                                                                                0.0s
- => [build 5/6] COPY . ./                                                                                                                                                                              0.0s
- => ERROR [build 6/6] RUN yarn build:prod                                                                                                                                                              1.3s
-------                                                                                                                                                                                                      
- > [build 6/6] RUN yarn build:prod:                                                                                                                                                                         
-#12 0.316 yarn run v1.22.17                                                                                                                                                                                 
-#12 0.336 $ cross-env NODE_ENV=prod parcel build ./src/index.html                                                                                                                                           
-#12 0.655 Building...                                                                                                                                                                                       
-#12 1.036 🚨 Build failed.                                                                                                                                                                                  
-#12 1.037 
-#12 1.038 Error: /lib/aarch64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found
-#12 1.038 (required by
-#12 1.038 /app/node_modules/@parcel/transformer-js/parcel-swc.linux-arm64-gnu.node)
-#12 1.038 
-#12 1.041   Error: /lib/aarch64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found
-#12 1.041   (required by
-#12 1.041   /app/node_modules/@parcel/transformer-js/parcel-swc.linux-arm64-gnu.node)
-#12 1.041   at Object.Module._extensions..node (internal/modules/cjs/loader.js:1144:18)
-#12 1.041   at Module.load (internal/modules/cjs/loader.js:950:32)
-#12 1.041   at NodePackageManager.load
-#12 1.041   (/app/node_modules/@parcel/package-manager/lib/index.js:3391:15)
-#12 1.041   at NodePackageManager.requireSync
-#12 1.041   (/app/node_modules/@parcel/package-manager/lib/index.js:3369:21)
-#12 1.041   at Module.m.require
-#12 1.041   (/app/node_modules/@parcel/package-manager/lib/index.js:3382:25)
-#12 1.041   at require (internal/modules/cjs/helpers.js:101:18)
-#12 1.041   at Object.<anonymous>
-#12 1.041   (/app/node_modules/@parcel/transformer-js/native.js:30:20)
-#12 1.041   at Module._compile (internal/modules/cjs/loader.js:1085:14)
-#12 1.041   at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
-#12 1.041   at Module.load (internal/modules/cjs/loader.js:950:32)
-#12 1.041 
-#12 1.235 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-#12 1.235 error Command failed with exit code 1.
-------
-executor failed running [/bin/sh -c yarn build:prod]: exit code: 1
+polk-auction-core$ mvn test
+(...)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.324 s - in polkauction.core.service.ParachainServiceTest
+[INFO] Running polkauction.core.model.RuntimeSpecificationPropertiesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in polkauction.core.model.RuntimeSpecificationPropertiesTest
+[INFO] Running polkauction.core.model.mapper.SidecarDtoMapperTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in polkauction.core.model.mapper.SidecarDtoMapperTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.940 s
+[INFO] Finished at: 2022-03-22T11:35:32+01:00
+[INFO] ------------------------------------------------------------------------
 ```
 
-When trying to spin up the container using `docker-compose` it fails because it doesn't find the image:
+### Current Auction/Parachain/Crowdloan Pages Feedback
 
-```bash
- % docker-compose up -d --build
-Pulling polk-auction-core-api (polk-auction-ui:latest)...
-ERROR: The image for the service you're trying to recreate has been removed. If you continue, volume data could be lost. Consider backing up your data before continuing.
+All 3 pages work for both networks (Kusama, Polkadot) and display useful data:
 
-Continue with the new image? [yN]y
-Pulling polk-auction-core-api (polk-auction-ui:latest)...
-ERROR: pull access denied for polk-auction-ui, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
-```
+- Current Auction
+- Parachain
+- Crowdloan Pages Feedback
 
-I suppose, if you can solve the build issue this error will also disappear.
-
-### Current Auction Page Feedback
-
-In general, there is the following console error when the single-page app is initially loaded.
-
-```
-Warning: Each child in a list should have a unique "key" prop.
-
-Check the render method of `RelayChainsTab`. See https://reactjs.org/link/warning-keys for more information.
-    at RelayChainButton (http://localhost:3000/index.9978ec32.js:28232:20)
-    at RelayChainsTab (http://localhost:3000/index.9978ec32.js:28252:21)
-    at Header (http://localhost:3000/index.9978ec32.js:25268:30)
-    at Router (http://localhost:3000/index.9978ec32.js:22395:34)
-    at BrowserRouter (http://localhost:3000/index.9978ec32.js:22075:39)
-    at App (http://localhost:3000/index.9978ec32.js:21989:12)
-```
-It's the same error as already described in the [Test Feedback](#test-feedback).
-
-
-### Parachain Page Feedback
-
-When navigating to `/parachain`, the following console error occurs and the site is blank:
-
-```
-ParachainsDetails.tsx:22 Uncaught TypeError: parachains.filter is not a function
-    at ParachainsDetails (ParachainsDetails.tsx:22:130)
-    at renderWithHooks (react-dom.development.js:14985:18)
-    at mountIndeterminateComponent (react-dom.development.js:17811:13)
-    at beginWork (react-dom.development.js:19049:16)
-    at HTMLUnknownElement.callCallback (react-dom.development.js:3945:14)
-    at Object.invokeGuardedCallbackDev (react-dom.development.js:3994:16)
-    at invokeGuardedCallback (react-dom.development.js:4056:31)
-    at beginWork$1 (react-dom.development.js:23964:7)
-    at performUnitOfWork (react-dom.development.js:22776:12)
-    at workLoopSync (react-dom.development.js:22707:5)
-ParachainsDetails @ ParachainsDetails.tsx:22
-renderWithHooks @ react-dom.development.js:14985
-mountIndeterminateComponent @ react-dom.development.js:17811
-beginWork @ react-dom.development.js:19049
-callCallback @ react-dom.development.js:3945
-invokeGuardedCallbackDev @ react-dom.development.js:3994
-invokeGuardedCallback @ react-dom.development.js:4056
-beginWork$1 @ react-dom.development.js:23964
-performUnitOfWork @ react-dom.development.js:22776
-workLoopSync @ react-dom.development.js:22707
-renderRootSync @ react-dom.development.js:22670
-performSyncWorkOnRoot @ react-dom.development.js:22293
-(anonymous) @ react-dom.development.js:11327
-unstable_runWithPriority @ scheduler.development.js:468
-runWithPriority$1 @ react-dom.development.js:11276
-flushSyncCallbackQueueImpl @ react-dom.development.js:11322
-flushSyncCallbackQueue @ react-dom.development.js:11309
-scheduleUpdateOnFiber @ react-dom.development.js:21893
-dispatchAction @ react-dom.development.js:16139
-_callee$ @ useBaseAxios.ts:58
-tryCatch @ runtime.js:45
-invoke @ runtime.js:271
-prototype.<computed> @ runtime.js:97
-asyncGeneratorStep @ asyncToGenerator.js:3
-_next @ asyncToGenerator.js:25
-Promise.then (async)
-asyncGeneratorStep @ asyncToGenerator.js:13
-_next @ asyncToGenerator.js:25
-(anonymous) @ asyncToGenerator.js:32
-(anonymous) @ asyncToGenerator.js:21
-(anonymous) @ useBaseAxios.ts:50
-(anonymous) @ useAxios.ts:24
-invokePassiveEffectCreate @ react-dom.development.js:23487
-callCallback @ react-dom.development.js:3945
-invokeGuardedCallbackDev @ react-dom.development.js:3994
-invokeGuardedCallback @ react-dom.development.js:4056
-flushPassiveEffectsImpl @ react-dom.development.js:23574
-unstable_runWithPriority @ scheduler.development.js:468
-runWithPriority$1 @ react-dom.development.js:11276
-flushPassiveEffects @ react-dom.development.js:23447
-(anonymous) @ react-dom.development.js:23324
-workLoop @ scheduler.development.js:417
-flushWork @ scheduler.development.js:390
-performWorkUntilDeadline @ scheduler.development.js:157
-react-dom.development.js:20085 The above error occurred in the <ParachainsDetails> component:
-
-    at ParachainsDetails (http://localhost:3000/index.9978ec32.js:37322:25)
-    at div
-    at ParachainsPage (http://localhost:3000/index.9978ec32.js:37269:57)
-    at Route (http://localhost:3000/index.9978ec32.js:22670:33)
-    at Switch (http://localhost:3000/index.9978ec32.js:22831:33)
-    at Routes
-    at div
-    at Router (http://localhost:3000/index.9978ec32.js:22395:34)
-    at BrowserRouter (http://localhost:3000/index.9978ec32.js:22075:39)
-    at App (http://localhost:3000/index.9978ec32.js:21989:12)
-
-Consider adding an error boundary to your tree to customize error handling behavior.
-Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
-```
-
-### Crowdloan Page Feedback
-
-When navigating to `/crowdloan`, the following console error occurs and the site is blank:
-
-```
-CrowdloanPage.tsx:16 Uncaught TypeError: Cannot read properties of undefined (reading 'filter')
-    at CrowdloanPage (CrowdloanPage.tsx:16:123)
-    at renderWithHooks (react-dom.development.js:14985:18)
-    at updateFunctionComponent (react-dom.development.js:17356:20)
-    at beginWork (react-dom.development.js:19063:16)
-    at HTMLUnknownElement.callCallback (react-dom.development.js:3945:14)
-    at Object.invokeGuardedCallbackDev (react-dom.development.js:3994:16)
-    at invokeGuardedCallback (react-dom.development.js:4056:31)
-    at beginWork$1 (react-dom.development.js:23964:7)
-    at performUnitOfWork (react-dom.development.js:22776:12)
-    at workLoopSync (react-dom.development.js:22707:5)
-CrowdloanPage @ CrowdloanPage.tsx:16
-renderWithHooks @ react-dom.development.js:14985
-updateFunctionComponent @ react-dom.development.js:17356
-beginWork @ react-dom.development.js:19063
-callCallback @ react-dom.development.js:3945
-invokeGuardedCallbackDev @ react-dom.development.js:3994
-invokeGuardedCallback @ react-dom.development.js:4056
-beginWork$1 @ react-dom.development.js:23964
-performUnitOfWork @ react-dom.development.js:22776
-workLoopSync @ react-dom.development.js:22707
-renderRootSync @ react-dom.development.js:22670
-performSyncWorkOnRoot @ react-dom.development.js:22293
-(anonymous) @ react-dom.development.js:11327
-unstable_runWithPriority @ scheduler.development.js:468
-runWithPriority$1 @ react-dom.development.js:11276
-flushSyncCallbackQueueImpl @ react-dom.development.js:11322
-flushSyncCallbackQueue @ react-dom.development.js:11309
-scheduleUpdateOnFiber @ react-dom.development.js:21893
-dispatchAction @ react-dom.development.js:16139
-_callee$ @ useBaseAxios.ts:58
-tryCatch @ runtime.js:45
-invoke @ runtime.js:271
-prototype.<computed> @ runtime.js:97
-asyncGeneratorStep @ asyncToGenerator.js:3
-_next @ asyncToGenerator.js:25
-Promise.then (async)
-asyncGeneratorStep @ asyncToGenerator.js:13
-_next @ asyncToGenerator.js:25
-(anonymous) @ asyncToGenerator.js:32
-(anonymous) @ asyncToGenerator.js:21
-(anonymous) @ useBaseAxios.ts:50
-(anonymous) @ useAxios.ts:24
-invokePassiveEffectCreate @ react-dom.development.js:23487
-callCallback @ react-dom.development.js:3945
-invokeGuardedCallbackDev @ react-dom.development.js:3994
-invokeGuardedCallback @ react-dom.development.js:4056
-flushPassiveEffectsImpl @ react-dom.development.js:23574
-unstable_runWithPriority @ scheduler.development.js:468
-runWithPriority$1 @ react-dom.development.js:11276
-flushPassiveEffects @ react-dom.development.js:23447
-(anonymous) @ react-dom.development.js:23324
-workLoop @ scheduler.development.js:417
-flushWork @ scheduler.development.js:390
-performWorkUntilDeadline @ scheduler.development.js:157
-react-dom.development.js:20085 The above error occurred in the <CrowdloanPage> component:
-
-    at CrowdloanPage (http://localhost:3000/index.9978ec32.js:37039:57)
-    at Route (http://localhost:3000/index.9978ec32.js:22670:33)
-    at Switch (http://localhost:3000/index.9978ec32.js:22831:33)
-    at Routes
-    at div
-    at Router (http://localhost:3000/index.9978ec32.js:22395:34)
-    at BrowserRouter (http://localhost:3000/index.9978ec32.js:22075:39)
-    at App (http://localhost:3000/index.9978ec32.js:21989:12)
-
-Consider adding an error boundary to your tree to customize error handling behavior.
-Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
-```
-
-### Header Feedback
-
-- There is currently no indication on the currently selected network (Polkadot or Kusama) which might affects the UX. On hover, a tab is displayed but it disappeares when moving the mouse outside that area. Suggestion: Always display the currently selected tab.
+Note: Since I was using an external machine for the evaluation and relied on portforwarding to my local machine, I had to change the [`env.prod` file](https://github.com/CrommVardek/polk-auction-ui/blob/eef0c3b17662ebd80c86548e3f3b815744d1f8b5/.env.prod) in the polk-auction-ui, otherwise the requests would fail.
