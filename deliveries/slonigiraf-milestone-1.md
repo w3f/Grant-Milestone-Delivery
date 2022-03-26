@@ -3,7 +3,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/slonigiraf.md
-* **Milestone Number:** e.g. 1
+* **Milestone Number:** 1
 
 **Context**
 [SLON recommendation letter system](https://medium.com/@slonigiraf/recommendations-that-work-a223e28a2437) looks promising in managing onchain reputation, recruitment and at education. We created a [Substrate module](https://github.com/slonigiraf/recommendation-letter) that enables to penalize referees for fraud, a [React UI](https://github.com/slonigiraf/recommendation-letter-example-ui) to create and manage recommendation letters and a [blockchain example implementation of managing reputation via recommendation letters](https://github.com/slonigiraf/recommendation-letter-example-node).
