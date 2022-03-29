@@ -8,7 +8,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
-| 0a. | License | <ul><li>[ ] </li></ul> | [charger-node](https://github.com/Delmonicos/charger-node/blob/milestone-2/LICENSE), [charging-management-platform](https://github.com/Delmonicos/charging-management-platform/blob/main/LICENSE.md), [frontend](https://github.com/Delmonicos/user-frontend) | The front-end has no license file |
+| 0a. | License | <ul><li>[x] </li></ul> | [charger-node](https://github.com/Delmonicos/charger-node/blob/milestone-2/LICENSE), [charging-management-platform](https://github.com/Delmonicos/charging-management-platform/blob/main/LICENSE.md), [frontend](https://github.com/Delmonicos/user-frontend/blob/master/LICENSE) | The front-end has no license file **Update 29.03.22:** Front-end now also has a license file |
 | 0b. | Documentation | <ul><li>[ ] </li></ul> | []() | Documentation only for the previous milestones |
 | 0c. | Testing Guide | <ul><li>[ ] </li></ul> | []() | No testing guide for milestone 3 |
 | 0d. | Article/Tutorial |<ul><li>[ ] </li></ul> | [Article](https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone2/Article.md) | Same article as for milestone |
