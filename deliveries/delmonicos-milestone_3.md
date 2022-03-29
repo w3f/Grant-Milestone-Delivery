@@ -15,10 +15,10 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| 0a. | License | https://github.com/Delmonicos/charger-node/blob/milestone-2/LICENSE | Apache 2.0 |  
-| 0b. | Documentation | [milestone1](https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone1/testing-guide.md) [milestone2](https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md) | The testing guide describes what has been developed in this milestone and how to test it. |
-| 0c. | Testing Guide | [milestone1](https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone1/testing-guide.md) [milestone2](https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md) | The code has unit-test. | 
-| 0d. | Article/Tutorial | https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone2/Article.md | The article has been initialised and will be published on Medium | 
+| 0a. | License | https://github.com/Delmonicos/charger-node/blob/milestone-3/LICENSE | Apache 2.0 |  
+| 0b. | Documentation | [milestone1](https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone1/testing-guide.md) [milestone2](https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md) [milestone3](https://github.com/Delmonicos/charger-node/blob/milestone-3/Web3-Grant/milestone3/testing-guide.md) | The testing guide describes what has been developed in this milestone and how to test it. |
+| 0c. | Testing Guide | [milestone1](https://github.com/Delmonicos/charger-node/blob/milestone-1/Web3-Grant/milestone1/testing-guide.md) [milestone2](https://github.com/Delmonicos/charger-node/blob/milestone-2/Web3-Grant/milestone2/testing-guide.md) [milestone3](https://github.com/Delmonicos/charger-node/blob/milestone-3/Web3-Grant/milestone3/testing-guide.md)| The code has unit-test. | 
+| 0d. | Article/Tutorial | https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone2/Article.md | The article has been updated (since milestone 2), is now finalized and will be published on Medium | 
 | 1. | Substrate chain | https://github.com/Delmonicos/charger-node | The Charger Node has been compiled for ARM architecture and tested on Raspberry Pi 4  |
 | 2. | Admin Front-End | https://github.com/Delmonicos/charging-management-platform | Basic Admin-UI connected to Elastic Search for monitoring of blockchain events and to Substrate using Polkadot.js in order to register a new charger and manage pricing.| 
 | 3. | User Front-End	 | https://github.com/Delmonicos/user-frontend | A React-based responsive webapp, used as the User Interface for the Proof-Of-Concept, allows an user to locate chargers, start & monitor a charge. | 
