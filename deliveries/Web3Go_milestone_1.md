@@ -14,17 +14,17 @@ N/A
 **Deliverables**
 
 | Number | Deliverable | Link | Notes |
-| -----: | ----------- | ------------- | ------------- |
-| 0a. | License | https://github.com/web3go-xyz/portal-ui/blob/main/LICENSE | ... |
-| 0b. | Documentation | https://doc.web3go.xyz/ | ... |
-| 0c. | Testing Guide | Portal UI: https://github.com/web3go-xyz/portal-ui/blob/main/testing-with-dockerfile.md; Portal Service: https://github.com/web3go-xyz/portal-service/blob/main/testing-with-dockerfile.md | ... |
-| 0d. | Docker | Portal UI: https://github.com/web3go-xyz/portal-ui/blob/main/Dockerfile; Portal Service: https://github.com/web3go-xyz/portal-service/blob/main/Dockerfile | ... |
-| 0e. | Article | https://web3go.medium.com/introducing-web3go-fcf5f1880a72; https://web3go.medium.com/rmrk-nft-garden-dashboard-introduction-2e773238db01; https://web3go.medium.com/moonbeam-moonriver-staking-dashboards-tracking-and-simulation-14fcc6f7024e | ... |
-| 1.a & 1.b | Indexer| https://github.com/web3go-xyz/RMRK-Indexer; https://github.com/web3go-xyz/Crowdloan-Indexer; https://github.com/web3go-xyz/moonbeam-balance-indexer; https://github.com/web3go-xyz/polkadot-balance-indexer  | ... |
-| 2. | UI Module:general WebApp| https://web3go.xyz/#/ | ... | 
-| 3. | 3 more Data Boards:| RMRK NFT Garden: https://web3go.xyz/#/NFTProfiler; Moonriver Staking: https://web3go.xyz/#/Moonriver; DOT Token God Mod: 1. Account Overview - https://web3go.xyz/#/InsightDetail?link=https%3A%2F%2Fmb.web3go.xyz%2Fpublic%2Fdashboard%2Fe3756838-40a8-432e-acaf-4ecbe65e66f7%23https%3A%2F%2Fweb3go.xyz%2Fstatic%2Fparachain-icon%2Fpolkadot.png&name=Polkadot%20Transaction%20Overview, 2. Transaction Overview - https://web3go.xyz/#/InsightDetail?link=https%3A%2F%2Fmb.web3go.xyz%2Fpublic%2Fdashboard%2F95a9ce20-aed6-48cc-8a5a-9eecb1849631%23https%3A%2F%2Fweb3go.xyz%2Fstatic%2Fparachain-icon%2Fpolkadot.png&name=Polkadot%20Account%20Overview ; | ... |
-| 4. | UI Module: semi-automatic chart generation| https://web3go.xyz/#/CustomQuery?editSupport=true | ... |
-| 5. | Support more Kusama Token:|  https://github.com/web3go-xyz/moonbeam-balance-indexer/tree/moonriver-balance-indexer  | ... |
+| ------ | ----------- | :------: |----------------- |
+| 0a. | License  | [ui](https://github.com/web3go-xyz/portal-ui/blob/756f98c7b7f4e905c71aecc3cde4203f87788286/LICENSE), [service](https://github.com/web3go-xyz/portal-service/blob/9c36e31f1dff908a4cec1ad73746b5df6fabc624/LICENSE) (Apache 2.0), [RMRK indexer](https://github.com/web3go-xyz/RMRK-Indexer/blob/6e294a5f51251db856eee485cdf9fee5a000d329/LICENSE), [crowdloan indexer](https://github.com/web3go-xyz/Crowdloan-Indexer/blob/67551bab9e6666bf8ef6436ad2e65697c2e6ee59/LICENSE), [Moonbeam indexer](https://github.com/web3go-xyz/moonbeam-balance-indexer/blob/aff17fa1960a527845462af5c28370b2e31c61d4/LICENSE), [Polkadot indexer](https://github.com/web3go-xyz/polkadot-balance-indexer/blob/73cba611e20686ee7d1a83fcfc7cd7411dafd04b/LICENSE) (MIT) | — |
+| 0b. | Documentation | [doc.web3go.xyz](https://doc.web3go.xyz) | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can use the existing data board, and use the UI to create/publish their own customized data board|
+| 0c. | Testing Guide | UI: https://github.com/web3go-xyz/portal-ui/blob/main/testing-with-dockerfile.md; Portal Service: https://github.com/web3go-xyz/portal-service/blob/main/testing-with-dockerfile.md | Guides to reproduce the services locally |
+| 0d. | Docker  | [UI]( https://hub.docker.com/r/web3go/release ), [service]( https://hub.docker.com/r/web3go/portal-service ) | Images on docker hub |
+| 0e. | Article | [medium](https://web3go.medium.com/introducing-web3go-fcf5f1880a72), [medium](https://web3go.medium.com/rmrk-nft-garden-dashboard-introduction-2e773238db01), [medium](https://web3go.medium.com/moonbeam-moonriver-staking-dashboards-tracking-and-simulation-14fcc6f7024e) | — |
+| 1.a & 1.b | Indexer | [RMRK](https://github.com/web3go-xyz/RMRK-Indexer), [crowdloan](https://github.com/web3go-xyz/Crowdloan-Indexer), [moonbeam](https://github.com/web3go-xyz/moonbeam-balance-indexer), [polkadot](https://github.com/web3go-xyz/polkadot-balance-indexer) | — |
+| 2. | UI Module:general WebApp | https://web3go.xyz | Production: https://web3go.xyz ; To reproduce locally, following the testing guide for UI: https://github.com/web3go-xyz/portal-ui/blob/main/testing-with-dockerfile.md |
+| 3. | 3 more Data Boards: | [NFT Profiler](https://web3go.xyz/#/NFTProfiler), [MOVR staking](https://web3go.xyz/#/Moonriver), [GLMR staking](https://web3go.xyz/#/Moonbeam) | Production: https://web3go.xyz ; To reproduce locally, following the testing guide for UI: https://github.com/web3go-xyz/portal-ui/blob/main/testing-with-dockerfile.md |
+| 4. | UI Module: semi-automatic chart generation | [web3go-xyz/portal-ui](https://github.com/web3go-xyz/portal-ui/blob/7d10c762c052d5dee87a8466f6093befc58a9adf/src/components/customQuery/CustomQuery.vue) | — |
+| 5. | Support more Kusama Token: | [MOVR](https://github.com/web3go-xyz/moonbeam-balance-indexer/tree/moonriver-balance-indexer), [RMRK NFTs](https://github.com/web3go-xyz/RMRK-Indexer) | Pivoted from KAR and kUSD to MOVR and RMRK |
 
 **Additional Information**
 
