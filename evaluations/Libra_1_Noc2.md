@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Libra.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -10,13 +10,15 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/atscaletech/libra/blob/main/LICENSE) | Correct License |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/atscaletech/libra/blob/main/README.md), [Readme lrp-protocol](https://github.com/atscaletech/libra/tree/main/pallets/lrp#lrp-protocol), [Readme Currencies registry](https://github.com/atscaletech/libra/tree/main/pallets/currencies-registry#currencies-registry)  | Only readme files, no inline documentation, but according to contract.  |
-| 0c. | Testing | <ul><li>[ ] </li></ul> | [lrp tests](https://github.com/atscaletech/libra/blob/main/pallets/lrp/src/tests.rs), [currencies tests](https://github.com/atscaletech/libra/blob/main/pallets/currencies-registry/src/tests.rs) | cargo test under pallets/lrp doesn't work, see below. Similar output for pallets/currencies-registry  |
-| 0d. | Live testnet |<ul><li>[ ] </li></ul> | [wss://rpc.libra.atscale.xyz](wss://rpc.libra.atscale.xyz) | The testnet is currently not running or producing any blocks|
-| 1. | Substrate module: LRP pallet | <ul><li>[ ] </li></ul> | [lrp](https://github.com/atscaletech/libra/blob/main/pallets/lrp) | Tests currently don't work, inline documentation would be nice |
-| 2. | Substrate module: Currencies pallet | <ul><li>[ ] </li></ul> | [currencies-registry](https://github.com/atscaletech/libra/blob/main/pallets/currencies-registry) | Tests currently don't work, inline documentation would be nice |
+| 0c. | Testing | <ul><li>[x] </li></ul> | [lrp tests](https://github.com/atscaletech/libra/blob/main/pallets/lrp/src/tests.rs), [currencies tests](https://github.com/atscaletech/libra/blob/main/pallets/currencies-registry/src/tests.rs) | cargo test under pallets/lrp doesn't work, see below. Similar output for pallets/currencies-registry **Update 08.04.22:** Tests work now |
+| 0d. | Live testnet |<ul><li>[x] </li></ul> | [wss://rpc.libra.atscale.xyz](wss://rpc.libra.atscale.xyz) | The testnet is currently not running or producing any blocks **Update 08.04.22:** Testnet is working |
+| 1. | Substrate module: LRP pallet | <ul><li>[x] </li></ul> | [lrp](https://github.com/atscaletech/libra/blob/main/pallets/lrp) | Tests currently don't work, inline documentation would be nice **Update 08.04.22:** Everything works now and inline documentation was added |
+| 2. | Substrate module: Currencies pallet | <ul><li>[x] </li></ul> | [currencies-registry](https://github.com/atscaletech/libra/blob/main/pallets/currencies-registry) | Tests currently don't work, inline documentation would be nice **Update 08.04.22:** Everything works now and inline documentation was added |
 | 3. | Substrate based chain | <ul><li>[x] </li></ul> | [libra](https://github.com/atscaletech/libra) | Correct |
 
 ## General Notes
+
+Initial delivery had some small issues, but they fixed everything very quickly. Given the price and scope of the application, they did a good job. 
 
 **Cargo Test Error under pallets/lrp**
 
