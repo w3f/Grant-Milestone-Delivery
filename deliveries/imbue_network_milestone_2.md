@@ -24,7 +24,7 @@ We have shared a demo of the full flow [here](https://www.youtube.com/watch?v=1d
 | 0c | Voting Pallet | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L622 | this was signed off in milestone 1
 | 0d  | public board | https://tinyurl.com/imbueboard |
 | 0e  | Dapp | https://github.com/ImbueNetwork/dapp/blob/main/web/src/proposals/detail/index.ts#L451 |
-| 0f  | Atricle | https://github.com/ImbueNetwork/dapp/blob/main/README.md | The documentation gives a overview of the flow. but we are also planning to publish a medium article that is more user friendly |
+| 0f  | Article | https://github.com/ImbueNetwork/dapp/blob/main/README.md | The documentation gives a overview of the flow. but we are also planning to publish a medium article that is more user friendly |
 | 1 | Votes Pallet | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L622 | Renamed to proposals, already evaluated with milestone 1 |
 | 2 | Funding Pallet | https://github.com/ImbueNetwork/imbue/blob/main/pallets/proposals/src/lib.rs#L785 | Renamed to proposals, already evaluated with milestone 1 |
 
