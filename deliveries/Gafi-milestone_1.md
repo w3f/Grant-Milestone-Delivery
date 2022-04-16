@@ -1,6 +1,6 @@
 # Milestone Delivery :mailbox:
 
-* **The Invoice:** not filled yet
+* **The Invoice:** filled
 * **Application Document:** https://github.com/w3f/Grants-Program/pull/896
 * **Milestone Number:** 1
 
@@ -26,6 +26,7 @@
 | 0b. | Docker | https://github.com/cryptoviet/gafi#run-in-docker | Docker | 
 | 0c. | Article | https://wiki.gafi.network/ | Merge into learn section of Wiki | 
 | 0d. | Demo | https://wiki.gafi.network/learn/demo | Try all the features of milestone 1 | 
+| 0e. | Benchmarking | https://github.com/cryptoviet/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
 | 1. | pallet proof-address-mapping | https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | A simple, secure way to dealing with address mapping between Substrate(H256) address and EVM(H160) address | 
 | 2.  | pallet staking_pool | https://github.com/cryptoviet/gafi/tree/master/pallets/staking-pool | One of the ways provides staking services is to reduce transaction fees, and enhance the security of the network | 
 | 3.  | pallet upfront-pool | https://github.com/cryptoviet/gafi/tree/master/pallets/upfront-pool | One of the ways provides upfront-charge services is to reduce transaction fees, and enhance the security of the network | 
