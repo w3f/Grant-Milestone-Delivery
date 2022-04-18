@@ -19,6 +19,7 @@ REST API to consume the blockchain data synced into Neo4j and Elastic Search (se
 [Medium article](https://wikanetwork.medium.com/the-wika-network-api-4309e48a7d4f)
 
 **Deliverables**
+
 All deliverables are merged into `master` branch of the repo [wika_api](https://github.com/randombishop/wika_api)
 
 | Number | Deliverable | Link | Notes |
@@ -36,5 +37,7 @@ All deliverables are merged into `master` branch of the repo [wika_api](https://
 
 
 **Additional Information**
+
 Local tests PASS.
+
 Deployed on a GCP instance and currently up and running at https://api-test.wika.network/doc 
