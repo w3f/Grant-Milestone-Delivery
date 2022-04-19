@@ -1,6 +1,6 @@
 # Evaluation
 
-* **Acceptance:** In progress 
+* **Acceptance:** Accepted
 * **Application:** https://github.com/w3f/Grants-Program/blob/master/applications/dora-factory-multisig.md
 * **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -12,10 +12,14 @@
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [documentation](https://github.com/DoraFactory/dorafactory-multisig/blob/main/docs/documentation.md) | Very basic docs, but according to the contract |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [test-guide](https://github.com/DoraFactory/dorafactory-multisig/blob/main/docs/test-guide.md) | Including images, works, but doesn't describe unit test |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/DoraFactory/dorafactory-multisig/blob/main/Dockerfile) |  Works |
-| 1. | Multisig frontend MVP | <ul><li>[ ] </li></ul> | [dorafactory-multisig](https://github.com/DoraFactory/dorafactory-multisig/) |  If I try to create a transaction it just forwards me to https://polkadot.js.org/apps! -> 2) Initiate, sign, and confirm transactions **Update 12.04.22:** Initiate and sign transaction works now, but it doesn't let you confirm the transaction via the UI |
+| 1. | Multisig frontend MVP | <ul><li>[x] </li></ul> | [dorafactory-multisig](https://github.com/DoraFactory/dorafactory-multisig/) |  If I try to create a transaction it just forwards me to https://polkadot.js.org/apps! -> 2) Initiate, sign, and confirm transactions **Update 12.04.22:** Initiate and sign transaction works now, but it doesn't let you confirm the transaction via the UI **Update 19.04.22:** Confirmation works now |
 | 2. | Test | <ul><li>[x] </li></ul> | [tests](https://github.com/DoraFactory/dorafactory-multisig/tree/main/src/tests) | Only a single test, in general it would be nice to have more test **Update 12.04.22:** Added additional tests, all passed |
 
 ## General Notes
+
+**Update 19.04.22:**
+
+Everything works now according to the contract. However, the UI certainly still can be improved. For example the logout/login feature didn’t work for me and I had to recreate the same multisig. 
 
 **Update 12.04.22:**
 - They fixed the previous issues (except snyk), but I'm unable to confirm the transaction via the UI 
