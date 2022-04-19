@@ -8,8 +8,7 @@
 
 * **Application Document:** [Wika Network](https://github.com/w3f/Grants-Program/blob/master/applications/wika_network.md)
 
-* **Milestone Number:** 
-2
+* **Milestone Number:** 2
 
 **Context**
 
