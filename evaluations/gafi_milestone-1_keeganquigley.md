@@ -11,7 +11,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [License](https://github.com/bright/bright-tresury/blob/master/LICENSE.md)  | Apache 2.0 |
+| 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Readme](https://github.com/bright/bright-tresury/blob/milestone1/README.md), [decisions](https://github.com/bright/bright-tresury/tree/milestone1/doc/architecture/decisions), [front-end](https://github.com/bright/bright-tresury/tree/milestone1/www), [backend](https://github.com/bright/bright-tresury/tree/master/backend) | Repo is clearly structured and well documented  |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | , [Readme](https://github.com/bright/bright-tresury/blob/milestone1/README.md)  | Even the front-end contains unit tests | 
 
