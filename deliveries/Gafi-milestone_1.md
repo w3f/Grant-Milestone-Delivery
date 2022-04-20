@@ -1,7 +1,7 @@
 # Milestone Delivery :mailbox:
 
 * **The Invoice:** filled
-* **Application Document:** https://github.com/w3f/Grants-Program/pull/896
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md
 * **Milestone Number:** 1
 
 
