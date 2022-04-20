@@ -12,8 +12,8 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | |
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [Readme](https://github.com/bright/bright-tresury/blob/milestone1/README.md), [decisions](https://github.com/bright/bright-tresury/tree/milestone1/doc/architecture/decisions), [front-end](https://github.com/bright/bright-tresury/tree/milestone1/www), [backend](https://github.com/bright/bright-tresury/tree/master/backend) | Repo is clearly structured and well documented  |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | , [Readme](https://github.com/bright/bright-tresury/blob/milestone1/README.md)  | Even the front-end contains unit tests | 
+| 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | |
+| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | Docker | 
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
