@@ -13,14 +13,14 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | Thorough documentation.     |
 | 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | All code tested and compiled successfully.     |
-| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | comment | 
-| 0c. | Article | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | comment | 
-| 0d. | Demo | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | comment | 
-| 0e. | Benchmarking | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | comment | 
-| 1. | pallet proof-address-mapping | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | comment | 
-| 2.  | pallet staking_pool | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/staking-pool | comment | 
-| 3.  | pallet upfront-pool | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/upfront-pool | comment | 
-| 4.  | pallet player | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/player | comment | 
+| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | | 
+| 0c. | Article | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | | 
+| 0d. | Demo | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | | 
+| 0e. | Benchmarking | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | benchmark successful | 
+| 1. | pallet proof-address-mapping | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | | 
+| 2.  | pallet staking_pool | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/staking-pool | | 
+| 3.  | pallet upfront-pool | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/upfront-pool | | 
+| 4.  | pallet player | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/player | | 
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
