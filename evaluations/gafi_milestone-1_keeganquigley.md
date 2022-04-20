@@ -11,7 +11,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | comment |
+| 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | Thorough documentation. |
 | 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | comment |
 | 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | comment | 
 | 0c. | Article | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | comment | 
