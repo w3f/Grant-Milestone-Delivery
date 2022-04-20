@@ -15,7 +15,7 @@
 | 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | All code tested and compiled successfully.     |
 | 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | | 
 | 0c. | Article | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | | 
-| 0d. | Demo | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | | 
+| 0d. | Demo | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | Got halfway through| 
 | 0e. | Benchmarking | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | | 
 | 1. | pallet proof-address-mapping | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | | 
 | 2.  | pallet staking_pool | <ul><li>[ ] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/staking-pool | | 
