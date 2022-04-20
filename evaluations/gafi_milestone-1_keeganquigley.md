@@ -13,11 +13,11 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | |
 | 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | |
-| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | Docker | 
-| 0c. | Article | | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | Merge into learn section of Wiki | 
-| 0d. | Demo | | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | Try all the features of milestone 1 | 
-| 0e. | Benchmarking | | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
-| 1. | pallet proof-address-mapping | https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | A simple, secure way to dealing with address mapping between Substrate(H256) address and EVM(H160) address | 
+| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | | 
+| 0c. | Article | | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | | 
+| 0d. | Demo | | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | | 
+| 0e. | Benchmarking | | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | | 
+| 1. | pallet proof-address-mapping || https://github.com/cryptoviet/gafi/tree/master/pallets/address-mapping | A simple, secure way to dealing with address mapping between Substrate(H256) address and EVM(H160) address | 
 | 2.  | pallet staking_pool | https://github.com/cryptoviet/gafi/tree/master/pallets/staking-pool | One of the ways provides staking services is to reduce transaction fees, and enhance the security of the network | 
 | 3.  | pallet upfront-pool | https://github.com/cryptoviet/gafi/tree/master/pallets/upfront-pool | One of the ways provides upfront-charge services is to reduce transaction fees, and enhance the security of the network | 
 | 4.  | pallet player | https://github.com/cryptoviet/gafi/tree/master/pallets/player | Holding the basic information of the player | 
