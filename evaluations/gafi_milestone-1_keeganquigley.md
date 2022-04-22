@@ -27,4 +27,4 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+Code is clean and well commented. 
