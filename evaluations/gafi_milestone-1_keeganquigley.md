@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md 
 - **Milestone:** 1
 - **Kusama Identity:** Address
