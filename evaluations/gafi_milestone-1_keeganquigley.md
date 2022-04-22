@@ -21,4 +21,4 @@
 
 ## General Notes
 
-Clean and well commented code, with proper licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions. Address mapping pallet works nicely.
+Clean and well commented code, with proper licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions. Pallets work nicely, as well as contract deployment.
