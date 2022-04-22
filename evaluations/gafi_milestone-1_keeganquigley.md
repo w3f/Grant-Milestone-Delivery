@@ -22,9 +22,6 @@
 | 3.  | pallet upfront-pool | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/upfront-pool | Looks good. | 
 | 4.  | pallet player | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi/tree/master/pallets/player | Looks good. | 
 
-Ideally all links inside the above table should include the commit hash,
-which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
-
 ## General Notes
 
-Clean and well commented code, with proper licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions.
+Clean and well commented code, with proper licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions. Address mapping pallet works nicely.
