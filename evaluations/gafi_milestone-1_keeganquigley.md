@@ -1,8 +1,5 @@
 # Evaluation
 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines!
-> Lines starting with `>`, such as this one, can be removed.
-
 - **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md 
 - **Milestone:** 1
