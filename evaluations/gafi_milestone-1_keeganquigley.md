@@ -3,8 +3,7 @@
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md 
 - **Milestone:** 1
-- **Kusama Identity:** Address
-- **Previously successfully merged evaluation:**
+- **Previously successfully merged evaluation: All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
