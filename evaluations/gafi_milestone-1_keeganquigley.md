@@ -13,7 +13,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0. | Documentation | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | Thorough documentation.     |
 | 0a. | Testing Guide | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#test | All code tested and compiled successfully.     |
-| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | Successful | 
+| 0b. | Docker | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#run-in-docker | Successful. | 
 | 0c. | Article | <ul><li>[x] </li></ul> | https://wiki.gafi.network/ | | 
 | 0d. | Demo | <ul><li>[x] </li></ul> | https://wiki.gafi.network/learn/demo | Was able to get all the way through the demo successfully. | 
 | 0e. | Benchmarking | <ul><li>[x] </li></ul> | https://github.com/cryptoviet/gafi#benchmarking | | 
@@ -27,4 +27,4 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Code is clean and well commented. Unit tests all passed successfully. 
+Code is clean and well commented. Unit tests all passed successfully. Nice easy-to-follow demo instructions.
