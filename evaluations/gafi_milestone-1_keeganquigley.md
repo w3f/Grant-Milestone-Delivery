@@ -27,4 +27,4 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Code is clean and well commented. Unit tests all passed successfully. Nice easy-to-follow demo instructions.
+Clean and well commented code, with proper licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions.
