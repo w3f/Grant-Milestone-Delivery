@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** Accepted
+- **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/slonigiraf.md
 - **Milestone:** 1
 - **Kusama Identity:** -
