@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/pull/778
 - **Milestone:** 2
 
@@ -15,7 +15,6 @@
 | 3.  | Treasury and Tips | [x] | https://github.com/Nick-1979/polkadot-Js-Plus-extension/tree/master/packages/extension-plus/src/Popup/Governance/Treasury | To view/submit treasury proposals and tips | 
 
 
-
 # Additional Notes
 
 I got all 19 test suites to pass locally by running:
@@ -28,4 +27,9 @@ yarn build
 yarn test:plus
 ```
 
-I downloaded Mozilla and installed Plus from the [Firefox Add-Ons extension link](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/).
+I downloaded Mozilla and installed Plus from the [Firefox Add-Ons extension link](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/). 
+
+The app adheres to many ideals of a Progressive Web App (PWA). Plus is very helpful and has nice aesthetics in a cohesive style to the original extension. I learned a lot about Polkadot governance from using your extension.
+
+Thank you very much for completing a grant with the Web3 Foundation! Congratulations on your invention. 
+
