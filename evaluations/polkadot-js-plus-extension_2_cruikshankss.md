@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/pull/778
 - **Milestone:** 2
 
@@ -28,4 +28,4 @@ yarn build
 yarn test:plus
 ```
 
-I downloaded Mozilla and installed Plus from the [Firefox Add-Ons extension link](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/).
+I downloaded Mozilla and installed Plus from the [Firefox Add-Ons extension link](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/). Congratulations on publishing the add-on with Firefox! :celebrate: 
