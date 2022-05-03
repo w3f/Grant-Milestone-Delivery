@@ -21,8 +21,8 @@ It can already be used to bridge different kinds of assets from Stellar to the S
 | 0a. | License | https://github.com/pendulum-chain/spacewalk/blob/main/LICENSE | - | 
 | 0b. | Documentation | https://docs.pendulumchain.org/spacewalk/introduction | A basic tutorial that explains how a user can employ the bridge pallet and the Spacewalk protocol to build a working bridge. | 
 | 0c. | Testing Guide | https://github.com/pendulum-chain/spacewalk#run-all-tests | Run a complete suit of unit tests | 
-| 2a. | Multi asset deposit | https://github.com/pendulum-chain/spacewalk#run-all-tests | Run a complete suit of unit tests |
-| 2b. | Multi asset withdrawal | https://github.com/pendulum-chain/spacewalk#run-all-tests | Run a complete suit of unit tests | 
+| 2a. | Multi asset deposit | https://github.com/pendulum-chain/spacewalk | Run a complete suit of unit tests |
+| 2b. | Multi asset withdrawal | https://github.com/pendulum-chain/spacewalk | Run a complete suit of unit tests | 
 
 **Additional Information**
 We did not deliver the deliverables 1 and 2c for the following purposes:
