@@ -12,17 +12,15 @@ This version of the bridge is not secure yet: it does not use vault collateraliz
 It can already be used to bridge different kinds of assets from Stellar to the Substrate chain.
 
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://github.com/pendulum-chain/spacewalk/blob/main/LICENSE | - | 
 | 0b. | Documentation | https://docs.pendulumchain.org/spacewalk/introduction | A basic tutorial that explains how a user can employ the bridge pallet and the Spacewalk protocol to build a working bridge. | 
 | 0c. | Testing Guide | https://github.com/pendulum-chain/spacewalk#run-all-tests | Run a complete suit of unit tests | 
-| 2a. | Multi asset deposit | https://github.com/pendulum-chain/spacewalk | Run a complete suit of unit tests |
-| 2b. | Multi asset withdrawal | https://github.com/pendulum-chain/spacewalk | Run a complete suit of unit tests | 
+| 0d. | Article | https://pendulum-chain.medium.com/introducing-spacewalk-the-trust-minimized-bridge-between-stellar-and-pendulum-68ddbe7349a0 | This article explains how we extend interBTC to support multiple Stellar assets and provides an overview of the upcoming milestones of the protocol. |
+| 2a. | Multi asset deposit | https://github.com/pendulum-chain/spacewalk#issue | We refer to "deposit" as "issue" now (using the wording of interBTC). The link directs to a summary of the code implementing the issue. It is spread over the vault client and the spacewalk pallet. |
+| 2b. | Multi asset withdrawal | https://github.com/pendulum-chain/spacewalk#redeem | We refer to "withdrawal" as "redeem" now (using the wording of interBTC). The link directs to a summary of the code implementing the redeem. It is spread over the vault client and the spacewalk pallet. | 
 
 **Additional Information**
 We did not deliver the deliverables 1 and 2c for the following purposes:
