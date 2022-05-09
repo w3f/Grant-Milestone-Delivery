@@ -18,6 +18,8 @@
 
 1 test in the `php-substrate-api` repo failed: (addressed)
 
+This was same error that occurred in last eval.
+
 ```
 4) Rpc\Test\HashTest::testEd25519
 FFI\Exception: Failed loading '/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.so'
