@@ -11,7 +11,7 @@
 | 0b. | Documentation | <ul><li>[ ] </li></ul> | READMEs | README could be more thorough.
 | 1. | HTTP RPC support | <ul><li>[ ] </li></ul> | [docs](https://github.com/gmajor-encrypt/php-substrate-api#rpc) |
 | 2. | sr25519 | <ul><li>[ ] </li></ul> | [repo](https://github.com/gmajor-encrypt/sr25519-bindings) |
-| 3. | Unit test | <ul><li>[ ] </li></ul> | [sr25519-bindings](https://github.com/gmajor-encrypt/sr25519-bindings/tree/main/test/Crypto/Test), [php-substrate-api](https://github.com/gmajor-encrypt/php-substrate-api/tree/master/test/Rpc) |
+| 3. | Unit test | <ul><li>[ ] </li></ul> | [sr25519-bindings](https://github.com/gmajor-encrypt/sr25519-bindings/tree/main/test/Crypto/Test), [php-substrate-api](https://github.com/gmajor-encrypt/php-substrate-api/tree/master/test/Rpc) | tests improved.
 | 4. | Packagist | <ul><li>[ ] </li></ul> | [link](https://packagist.org/packages/gmajor/php-substrate-api) |
 
 ## General Notes
