@@ -16,45 +16,4 @@
 
 ## General Notes
 
-1 test in the `php-substrate-api` repo failed: (addressed)
-
-This was same error that occurred in last eval.
-
-```
-4) Rpc\Test\HashTest::testEd25519
-FFI\Exception: Failed loading '/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.so'
-
-/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.php:29
-/Users/keeganquigley/php-substrate-api/src/Rpc/Hasher/Hasher.php:20
-/Users/keeganquigley/php-substrate-api/test/Rpc/HashTest.php:18
-
-5) Rpc\Test\HashTest::testKeyring
-FFI\Exception: Failed loading '/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.so'
-
-/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.php:29
-/Users/keeganquigley/php-substrate-api/src/Rpc/Hasher/Hasher.php:20
-/Users/keeganquigley/php-substrate-api/test/Rpc/HashTest.php:18
-
-6) Rpc\Test\StorageKeyTest::testStorageKeyEncode
-FFI\Exception: Failed loading '/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.so'
-
-/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.php:29
-/Users/keeganquigley/php-substrate-api/src/Rpc/Hasher/Hasher.php:20
-/Users/keeganquigley/php-substrate-api/src/Rpc/StorageKey.php:104
-/Users/keeganquigley/php-substrate-api/test/Rpc/StorageKeyTest.php:35
-
---
-
-There was 1 failure:
-
-1) Rpc\Test\ClientTest::testHttpClientShouldReceiveData
-Failed asserting that exception of type "FFI\Exception" matches expected exception "InvalidArgumentException". Message was: "Failed loading '/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.so'" at
-/Users/keeganquigley/php-substrate-api/vendor/gmajor/sr25519-bindings/src/Crypto/sr25519.php:29
-/Users/keeganquigley/php-substrate-api/src/Rpc/Hasher/Hasher.php:20
-/Users/keeganquigley/php-substrate-api/src/Rpc/SubstrateRpc.php:40
-/Users/keeganquigley/php-substrate-api/test/Rpc/ClientTest.php:59
-.
-
-ERRORS!
-Tests: 11, Assertions: 18, Errors: 6, Failures: 1.
-```
+After grantee updated docs, unit tests now run successfully! Added better comments as well.
