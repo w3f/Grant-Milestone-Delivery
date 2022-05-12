@@ -32,4 +32,3 @@ I downloaded Mozilla and installed Plus from the [Firefox Add-Ons extension link
 The app adheres to many ideals of a Progressive Web App (PWA). Plus is very helpful and has nice aesthetics in a cohesive style to the original extension. I learned a lot about Polkadot governance from using your extension.
 
 Thank you very much for completing a grant with the Web3 Foundation! Congratulations on your invention. 
-

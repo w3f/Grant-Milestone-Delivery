@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress 
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Open-Grants-Program/blob/master/applications/delmonicos.md
 * **Milestone:** 3
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
@@ -9,19 +9,23 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [charger-node](https://github.com/Delmonicos/charger-node/blob/milestone-2/LICENSE), [charging-management-platform](https://github.com/Delmonicos/charging-management-platform/blob/main/LICENSE.md), [frontend](https://github.com/Delmonicos/user-frontend/blob/master/LICENSE) | The front-end has no license file **Update 29.03.22:** Front-end now also has a license file |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | []() | Documentation only for the previous milestones **31.03.22:** It general at least the readme files of the repos, should have some basic documentation |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [testing-guide.md](https://github.com/Delmonicos/charger-node/blob/milestone-3/Web3-Grant/milestone3/testing-guide.md) | No testing guide for milestone 3 **31.03.22:** They added a basic testing guide, but it doesn't explain how to run the node. No unit-test coverage, see contract (min. 70%)  |
-| 0d. | Article/Tutorial |<ul><li>[ ] </li></ul> | [Article](https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone2/Article.md) | Same article as for milestone 2 but they changed it a little bit |
-| 1. | Substrate chain | <ul><li>[ ] </li></ul> | [charger-node](https://github.com/Delmonicos/charger-node) | No documentation on how to run it. Hasn't been updated in a long time |
-| 2. | Admin Front-End | <ul><li>[ ] </li></ul> | [charging-management-platform](https://github.com/Delmonicos/charging-management-platform) | Wasn't updated in the last 7 month. No documentation on how to run it. See error below  |
-| 3. | User Front-End | <ul><li>[ ] </li></ul> | [user-frontend](https://github.com/Delmonicos/user-frontend) | Barely any documentation |
-| 4. | Docker | <ul><li>[ ] </li></ul> | [](https://github.com/Delmonicos/charger-node/blob/milestone-1/Dockerfile) |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [testing-guide.md](https://github.com/Delmonicos/charger-node/blob/milestone-3/Web3-Grant/milestone3/testing-guide.md) | Documentation only for the previous milestones **31.03.22:** It general at least the readme files of the repos, should have some basic documentation **09.05.22:** Improved readmes but far from perfect.  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [testing-guide.md](https://github.com/Delmonicos/charger-node/blob/milestone-3/Web3-Grant/milestone3/testing-guide.md) | No testing guide for milestone 3 **31.03.22:** They added a basic testing guide, but it doesn't explain how to run the node. No unit-test coverage, see contract (min. 70%)  |
+| 0d. | Article/Tutorial |<ul><li>[x] </li></ul> | [Article](https://github.com/Delmonicos/charger-node/blob/main/Web3-Grant/milestone2/Article.md), [Updated article](https://medium.com/@Delmonicos/how-blockchain-can-ease-electromobility-955bb0d92fbf) | Same article as for milestone 2 but they changed it a little bit **09.05.22:** Updated |
+| 1. | Substrate chain | <ul><li>[x] </li></ul> | [charger-node](https://github.com/Delmonicos/charger-node) | No documentation on how to run it. Hasn't been updated in a long time **09.05.22:** Updated and it works now |
+| 2. | Admin Front-End | <ul><li>[x] </li></ul> | [charging-management-platform](https://github.com/Delmonicos/charging-management-platform) | Wasn't updated in the last 7 month. No documentation on how to run it. See error below **09.05.22:** Updated and it works now |
+| 3. | User Front-End | <ul><li>[x] </li></ul> | [user-frontend](https://github.com/Delmonicos/user-frontend) | Barely any documentation **09.05.22:** Updated and it works now |
+| 4. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Delmonicos/charger-node/blob/milestone-1/Dockerfile) | Works  |
 | 5. | Demo | <ul><li>[x] </li></ul> | [Video](https://www.youtube.com/watch?v=AlJrFuhhVN4) | According to the contract |
 
 
 ## General Notes
 
-Project wasn’t publicly updated since october 2021! Documentation, Testing Guide and Article only for milestone 1 and 2. 
+Initially the project wasn’t publicly updated since october 2021! Documentation, Testing Guide and Article initially only for milestone 1 and 2. It took them quite a while to fix everything. But now it’s working again and according to the contract. 
+
+**09.05.22:**
+
+Small issue with the [devDependencies in package.json](https://github.com/Delmonicos/user-frontend/pull/2/files), but the user front-end compiles now.  
 
 **31.03.22:** They added a new testing guide
 

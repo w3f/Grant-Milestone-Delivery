@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/pull/774
 - **Milestone:** 2
 
@@ -29,7 +29,7 @@ See the [Conversation tab of M2 Delivery](https://github.com/w3f/Grant-Milestone
 
 2. I created an `.env` file based on `.env.example` with two WND addresses that were funded with WND. 
 
-3. I ran these commands:
+3. I ran these commands to run the tests locally from source:
 
 ```
   npm install
@@ -37,15 +37,12 @@ See the [Conversation tab of M2 Delivery](https://github.com/w3f/Grant-Milestone
   npm test
 ```
 
-4. These were the results of the commands:
-
-  [not working yet]
    
-5. Then I went to [this website](https://blackprint.github.io/) and tested these [examples](https://github.com/Blackprint/nodes-polkadot.js/tree/72aad794cf647d2ea403b1c3d44eb40bec1c6af3/example).  
+4. Then I went to [this website](https://blackprint.github.io/) and tested these [examples](https://github.com/Blackprint/nodes-polkadot.js/tree/72aad794cf647d2ea403b1c3d44eb40bec1c6af3/example).  
 
-For deliverables 1, 2 & 3, I loaded the examples from the [browser sandbox](https://blackprint.github.io/) and imported the `nodes-polkadot` example list.
+5. For deliverables 1, 2 & 3, I loaded the examples from the [browser sandbox](https://blackprint.github.io/) and imported the `nodes-polkadot` example list.
 
-For deliverable 4, I tested in incognito mode to prevent caching issues & copied in the [json example](https://github.com/Blackprint/nodes-polkadot.js/blob/11a27d89879a4f15e8c745f607ac31fdb9048c49/example/payment-info.json).
+6. For deliverable 4, I tested in incognito mode to prevent caching issues & copied in the [json example](https://github.com/Blackprint/nodes-polkadot.js/blob/11a27d89879a4f15e8c745f607ac31fdb9048c49/example/payment-info.json).
 
 
 #### All Github repos:
