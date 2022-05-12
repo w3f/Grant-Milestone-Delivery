@@ -3,7 +3,7 @@
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/php-rpc-lib.md
 - **Milestone:** 2
-- **Previously successfully merged evaluation:** Alxs, Keeganquigley
+- **Previously successfully merged evaluation:** All by Keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
