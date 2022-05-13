@@ -36,7 +36,7 @@ Grant applications can be [amended](https://github.com/w3f/Grants-Program#change
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 2 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 5 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
 
 ### Requirements
 
