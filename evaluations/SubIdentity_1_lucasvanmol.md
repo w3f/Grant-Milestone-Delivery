@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/tree/master/applications/SubIdentity.md
 - **Milestone:** 1
 - **Kusama Identity:** Fa73LcKf9BMHUp9k6wv7LiHu2jd65UhWPn7JSRUPpt2XgAQ
