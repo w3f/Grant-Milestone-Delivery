@@ -3,7 +3,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone, has been submitted, and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**
 
 - **Application Document:** [Application](https://github.com/w3f/Grants-Program/blob/master/applications/stardust.md).
-- **Milestone Number:** 1
+- **Milestone Number:** 2
 
 **Context** (optional)
 
