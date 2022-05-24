@@ -17,7 +17,7 @@ We also originally intended to use the identity pallet `additional` mapping for 
 
 **Deliverables**
 | Number | Deliverable | Link | Notes |
-| -----: | ----------- | ------------- |
+| ------------- | ------------- | ------------- |------------- |
 | 1. | License | https://github.com/hashed-io/hashed-substrate/blob/main/LICENSE  | MIT |
 | 2. | Pallet | https://github.com/hashed-io/hashed-substrate/tree/main/pallets/nbv-storage | The code has inline documentation and each repository has a detailed README with build, run, and test instructions. |
 | 3. | Video | https://youtu.be/OYKvt-xir3E  | 15-minute video details the milestone delivery and demonstrates the software  |
