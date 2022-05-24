@@ -1,5 +1,13 @@
  deliveries/Interstellar-Network-milestone-2.md
 
+# Evaluation
+
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/pull/734
+- **Milestone:** 2
+
+**Deliverables** (all accepted)
+
 
 | Number | Deliverable | Link | Notes  |
 | -----: | ----------- | -----------|------------ |
