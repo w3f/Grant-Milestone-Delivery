@@ -1,4 +1,4 @@
-deliveries/Interstellar-Network-milestone-2.md
+ deliveries/Interstellar-Network-milestone-2.md
 
 
 | Number | Deliverable | Link | Notes  |
@@ -15,13 +15,19 @@ deliveries/Interstellar-Network-milestone-2.md
 
 ## Additional Notes
 
-The team made huge progress with their testing guide between Milestone 1 and 2. Their documentation was always excellent, but now additionally their testing guide is excellent. Thank you very much for your work and wishing you continued success with Milestone 3!
+Dear Interstellar team,
 
-Overview: https://book.interstellar.gg/GCF.html
+You've made huge progress with your testing guide between Milestone 1 and 2. Your documentation was always excellent, but now additionally your testing guide is excellent. Thank you so much for implementing my feedback. And thanks; I've learned so much from your project.
+
+Testing guide ("tutorial to get the entire pipeline running"): https://book.interstellar.gg/M2_demo_tutorial.html
 
 > The thing is it really is structured as a pipeline, so you have to look at it step by step.
 Code-wise most of the complexity is in "api_circuits" and "api_garble". The rest is essentially glue.
 (At the M2 stage, b/c later the substrate/TEE part will be quite important)
 
-Tutorial to get the entire pipeline running: https://book.interstellar.gg/M2_demo_tutorial.html
- 
+Documentation ("overview"): https://book.interstellar.gg/GCF.html
+
+I think you have a logical & ambitious business plan and I agree with your ideals such as cryptography. The logical work you've done so far seems awesome. Thank you very much for your work and wishing you continued success with the .exe of all your milestones! 
+
+Kind regards,
+Ashley Grevelink
