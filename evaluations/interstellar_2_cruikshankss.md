@@ -1,5 +1,3 @@
- deliveries/Interstellar-Network-milestone-2.md
-
 # Evaluation
 
 - **Status:** Accepted
