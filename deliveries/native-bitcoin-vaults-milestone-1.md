@@ -24,7 +24,7 @@ We also originally intended to use the identity pallet `additional` mapping for 
 | 4. | BDK Integration | https://github.com/hashed-io/bdk-services | Web services that are invoked via offchain-worker; will be replaced with `no_std` version of BDK in future release |  
 | 5. | Set `xpub` | https://github.com/hashed-io/hashed-substrate/blob/main/pallets/nbv-storage/src/lib.rs#L349 | User can set an `xpub` associated to their account within the NBV pallet |  
 | 6. | Output Descriptors | https://github.com/hashed-io/bdk-services/blob/master/README.md#generate-output-descriptors | Generate output descriptor (vault/wallet) based on the selected Vault Signers |  
-| 7. | Generate Receiving Addresses | https://github.com/hashed-io/bdk-services/blob/master/README.md#generate-new-address | NBV will be able to generate receiving addresses for a vault (can be generated on web or mobile |  
+| 7. | Generate Receiving Addresses | https://github.com/hashed-io/bdk-services/blob/master/README.md#generate-new-address | NBV will be able to generate receiving addresses for a vault (can be generated on web or mobile) |  
 | 8. | List and View vaults | https://github.com/hashed-io/native-bitcoin-vaults-UI | NBV client will show a list of treasuries/vault, their labels, and the eligible signers |  
 | 9. | Pass to Signer | https://github.com/hashed-io/nbv-ur-codec | Web client communicates with BlueWallet mobile app via QR codes |  
 
@@ -39,4 +39,5 @@ We also originally intended to use the identity pallet `additional` mapping for 
 
 
 **Additional Information**
+
 We will create more extensive and polished end user documentation with the full product release (next milestone).
