@@ -23,7 +23,7 @@ To run - simply navigate to `tesseract-playground` inside the repo and `cargo ru
 | 0b. | Documentation | [README.MD](https://github.com/tesseract-one/Tesseract.rs/blob/master/README.md) | please, see "usage" section for links with more detailed docs |
 | 0c. | Testing Guide | [gdoc](https://docs.google.com/document/d/14kaTRfZoiHsQ7eLiC1q9jcWddrNeh9PxTa4dSA5OxNI/edit?usp=sharing) |  |
 | 0d. | Docker | N/A | not applicable for this deliverable |
-| 0e. | Article | [gdoc](https://docs.google.com/document/d/14cqqXptPL-ksWFWTSCbVfzMBjDjneR7jLhBmrW39_j4/edit?usp=sharing) | will be bublished on Medium after approval |
+| 0e. | Article | [gdoc](https://docs.google.com/document/d/1PULJiNfKABkM4xsvsKp6_EgbKvxuxCZxxPbka2T7zVc/edit?usp=sharing) | will be bublished on Medium after approval |
 | 1. | Architecture | N/A | architecture is described in the article and the docs, also can be explored in the code |
 | 2. | Application-level framework | [example protocol](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract-playground/src/polkadot) | probably the best place to start is this example link. Protocols APIs are have common part for the call messages and separate for the friendly APIs for `client` and `service`. Please, also consider checking out the Protocols doc section (see link below) |
 | 3. | Messages and envelopes | [tesseract](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract) | `tesseract` sub repo serves as a depencency for both `tesseract-client` and `tesseract-service` and contains most of the data layer |
