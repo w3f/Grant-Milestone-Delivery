@@ -1,13 +1,13 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** private
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by alxs
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 1.     | Operation of "source of truth" node to send copies of the chain data for kusama and polkadot to persistent layers on a schedule |<ul><li>[ ] </li></ul> | [terraform-polkadot-aws-node](https://github.com/geometry-labs/terraform-polkadot-aws-node) + [Fast sync script](https://github.com/geometry-labs/substrate-meta/blob/main/sync/archive_download.sh) | sync script currently does not terminate
+| 1.     | Operation of "source of truth" node to send copies of the chain data for kusama and polkadot to persistent layers on a schedule |<ul><li>[ ] </li></ul> | [terraform-polkadot-aws-node](https://github.com/geometry-labs/terraform-polkadot-aws-node) + [Fast sync script](https://github.com/geometry-labs/substrate-meta/blob/main/sync/archive_download.sh) | sync script currently does not terminate [fixed]
 | 2.     | Content delivery network (cloudfront) for distributing compressed copies of the chain data |<ul><li>[x] </li></ul> | [terraform-substrate-archive-cloudfront](https://github.com/geometry-labs/terraform-substrate-archive-cloudfront) | Likely not cost effective and more expensive than the team initially estimated
 | 2a.    | Alarms when for when download quotas are reached (eg each TB of download) |<ul><li>[ ] </li></ul> | 
 
