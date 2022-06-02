@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**
 
--   **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/anagolay-project-idiyanale-phase-1-milestone-2.md
+-   **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/anagolay-project-idiyanale-phase-1.md
 -   **Milestone Number:** 2
 -   **W3F support repository**: https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2
 
