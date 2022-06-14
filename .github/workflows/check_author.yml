@@ -4,39 +4,17 @@ on:
     types: [opened]
 
 jobs:
-  get-delivery-files:
-      runs-on: ubuntu-latest
-      outputs:
-        filenames: ${{ steps.files.outputs.added }}
-      
-      steps:
-        - name: Get filenames of any deliveries being added
-          id: files
-          uses: Ana06/get-changed-files@v2.0.0
-          with:
-            format: 'json'
-            filter: 'deliveries/*.md'
-            
   check_author:
     runs-on: ubuntu-latest 
-    needs: get-delivery-files
-    if: needs.get-delivery-files.outputs.filenames != '[]'
-    strategy:
-      matrix:
-        filename: ${{ fromJson(needs.get-delivery-files.outputs.filenames) }}
- 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Parse delivery file 
-        id: parse-delivery
-        uses: w3f/parse-milestone-delivery-action@v3
-        with:
-          path: "${{ github.workspace }}/${{ matrix.filename }}"
+      - name: Parse delivery file
+        id: delivery
+        uses: ./.github/workflows/composite/get_delivery
 
       - name: Find PR author in application authors
+        if: steps.delivery.outputs.filenames
         uses: actions/github-script@v5
         env:
           pr_author: ${{ github.event.pull_request.user.login }}
@@ -45,7 +23,7 @@ jobs:
             await github.rest.repos.listCommits({
               owner: 'w3f',
               repo: 'Grants-Program',
-              path: 'applications/${{ steps.parse-delivery.outputs.application_document }}'
+              path: 'applications/${{ steps.delivery.outputs.application-filename }}'
             }).then( app_commits => {
               app_authors = app_commits.data.map(c => {return c.author.login});
               if(!app_authors.includes(process.env.pr_author))
