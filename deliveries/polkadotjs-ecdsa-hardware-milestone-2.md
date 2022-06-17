@@ -9,6 +9,6 @@ Please provide a list of all deliverables of the milestone extracted from the in
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Ledger API ECDSA signer | [pallet](https://github.com/PlasmNetwork/Plasm/tree/08c4a9211836b929abcbad4ed33ede0f616a6423/frame/custom-signatures), [UI](https://github.com/hoonsubin/apps/pull/2/files) | Ledger support consist of two components: the pallet (that supports any signature schemes to send transactions), and UI that requests Metamask to sign custom data (the `Call` structure). |
+| 1. | Ledger API ECDSA signer | [pallet](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.24/frame/custom-signatures), [UI](https://github.com/hoonsubin/apps/pull/2/files) | Ledger support consist of two components: the pallet (that supports any signature schemes to send transactions), and UI that requests Metamask to sign custom data (the `Call` structure). |
 | 2. | Improve documentation | https://docs.plasmnet.io/build/metamask-signatures | Added documentation page that describes provided functionality. |
 | 3. | Demo video | [Link](https://user-images.githubusercontent.com/40356749/104814290-7137a700-5851-11eb-8cef-00b9495da0d6.mp4) | Attached to [PR](https://github.com/hoonsubin/apps/pull/2). |
