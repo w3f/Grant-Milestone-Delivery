@@ -16,7 +16,7 @@
 
 ## General Notes
 
-They don’t get paid for this milestone, since it’s focused on the deployment. The delivery is according to the contract, but if they continue with it. I strongly recommend to first focus on the usability before adding additional features. For example:
+They don’t get paid for this milestone, since it’s focused on the deployment. The delivery is according to the contract. But if they continue with it, I strongly recommend to first focus on the usability before adding additional features. For example:
 - Website has no favicon
 - Very little information on the page itself. 
 - Name of projects are missing, etc. 
