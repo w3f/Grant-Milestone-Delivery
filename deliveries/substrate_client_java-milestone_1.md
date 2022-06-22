@@ -12,7 +12,7 @@ This delivery adds API for accessing substrate node storages together with multi
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LICENSE](https://github.com/strategyobject/substrate-client-java/blob/v0.1.0/LICENSE) | Apache 2.0 |
-| 1. | Documentation | [Storage](https://github.com/strategyobject/substrate-client-java/wiki/Storage) | |
+| 1. | Documentation | [HowTo](https://github.com/strategyobject/substrate-client-java/wiki/HowTo-Examples) | |
 | 2. | Testing | [Tests](https://github.com/strategyobject/substrate-client-java/tree/v0.1.0/storage/src/test/java/com/strategyobject/substrateclient/storage) | |
 | 3. | Wiki | [Wiki](https://github.com/strategyobject/substrate-client-java/wiki) | |
 | 4. | Storage API | [storage](https://github.com/strategyobject/substrate-client-java/tree/v0.1.0/storage) | | 
