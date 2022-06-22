@@ -4,6 +4,7 @@
 - **Application
   Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md
 - **Milestone:** 2
+- **Kusama Identity:** J1LkAxDM71AwuVMCEHs2okHRuGAxRLSqwmUoRFPHRrNmnWb
 - **Previously successfully merged evaluation:** All by bitmaskit
 
 | Number | Deliverable           | Link                                                                  | Notes                                                                                                                                                                                                                                 |
