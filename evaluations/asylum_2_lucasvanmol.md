@@ -21,3 +21,8 @@
 
 ## General Notes
 
+Initially ran into problems with the Unity SDK not working for the latest LTS unity version (`2021.3.5f1` as of writing). It turns out version `2021.3.1f` is required, and the team has said they'll look into possible fixes to get the SDK working for LTS.
+
+Documentation for the SDK was also added & improved after changes were requested, along with an example project.
+
+The rest of the project worked smoothly.
