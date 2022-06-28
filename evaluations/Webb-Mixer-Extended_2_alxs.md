@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MIXERv2.md
 - **Milestone:** 2
 
@@ -9,7 +9,7 @@
 | 0a. | License |<ul><li>[x] </li></ul>| [relayer](https://github.com/webb-tools/relayer/blob/main/LICENSE), [webb-dapp](https://github.com/webb-tools/webb-dapp/blob/master/LICENSE), [webb.js](https://github.com/webb-tools/webb.js/blob/master/LICENSE) | GPLv3, Apache 2.0. Infringements [addressed](https://github.com/webb-tools/webb.js/commit/bdf41fd0ab07fdab077500cdc2638a110fbc7588).
 | 0b. | Documentation |<ul><li>[x] </li></ul>| [docs repo](https://github.com/webb-tools/webb-docs), [hosted](https://docs.webb.tools/), [relayer rustdocs](https://webb-tools.github.io/relayer/webb_relayer/index.html), [protocol-substrate rustdocs](https://webb-tools.github.io/protocol-substrate/), READMEs  | Documentation vastly improved in reponse to feedback, with external docs, more verbose readmes and more code documentation
 | 1. | Relayer in Rust |<ul><li>[x] </li></ul>| [repo](https://github.com/webb-tools/relayer) | Documentation greatly improved, tarpaulin fails but test coverage seems to be on the low side
-| 3. | WASM bindings |<ul><li>[ ] </li></ul>| [package](https://github.com/webb-tools/webb.js/tree/master/packages/wasm-utils) | No documentation
+| 3. | WASM bindings |<ul><li>[x] </li></ul>| [package](https://github.com/webb-tools/webb.js/tree/master/packages/wasm-utils), API in [sdk-core](https://github.com/webb-tools/webb.js/tree/master/packages/sdk-core) | no documentation for the bindings themselves, API in sdk-core wrapper well documented
 | 3a. | WASM bindings: Web Worker Support |<ul><li>[x] </li></ul>| [code](https://github.com/webb-tools/webb.js/tree/master/packages/sdk-core/src/proving) |
 | 4. | UI Support: Multi-Asset support |<ul><li>[x] </li></ul>| [link1](https://github.com/webb-tools/webb-dapp/tree/master/packages/react-environment/src/webb-context/currency), [link2](https://github.com/webb-tools/webb-dapp/tree/master/packages/react-environment/src/api-providers/polkadot) | node updated to 16.x, UI and stability improvements. Code is not easy to read.
 | 4a. | UI Support: Multi-Asset designs |<ul><li>[x] </li></ul>| [component](https://github.com/webb-tools/webb-dapp/tree/master/packages/mixer/src/components/Deposit) |
@@ -46,4 +46,4 @@ There's no option to choose what node the interface connects to.
 
 The delivery was initially very bare-bones mostly with minimal instructions to run the different projects, but no conceptual documentation and little code documentation. Most things also failed to run and some code had been adapted without attribution.
 
-In response to feedback, the team fixed most issues and vastly expanded on documentation, with clear READMEs, lengthy external docs and excellent rustdocs.
+In response to feedback, the team fixed most issues and vastly expanded on documentation, with clear READMEs, lengthy external docs and thorough rustdocs.
