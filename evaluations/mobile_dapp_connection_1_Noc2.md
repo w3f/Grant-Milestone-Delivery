@@ -1,7 +1,7 @@
 # Evaluation
 
-- **Status:** In Progress
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polk-auction.md
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/mobile_dapp_connection.md
 - **Milestone:** 1
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
 * **Previously successfully merged evaluation:** All evaluations by Noc2
@@ -14,13 +14,15 @@
 | 0d.    | Docker                             |  <ul><li>[x] </li></ul>| N/A  | Which is fine  |
 | 0e.    | Article                            |  <ul><li>[x] </li></ul>| [gdoc](https://docs.google.com/document/d/1PULJiNfKABkM4xsvsKp6_EgbKvxuxCZxxPbka2T7zVc/edit?usp=sharing)  | Already in contact with grantspr  |
 | 1.     | Architecture                       |  <ul><li>[x] </li></ul>| [README.MD](https://github.com/tesseract-one/Tesseract.rs/blob/master/README.md), [gdoc](https://docs.google.com/document/d/1PULJiNfKABkM4xsvsKp6_EgbKvxuxCZxxPbka2T7zVc/edit?usp=sharing)  | Repo itself contains the structure.   |
-| 2.     | Application-level framework        |  <ul><li>[ ] </li></ul>| [example protocol](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract-playground/src/polkadot)  | See below  |
-| 3.     | Messages and envelopes             |  <ul><li>[ ] </li></ul>| [tesseract](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract)  |   |
-| 4.     | Transport-level framework          |  <ul><li>[ ] </li></ul>| [example "local" transport](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract-playground/src/plt)  |   |
-| 5.     | Transport-layer development APIs   |  <ul><li>[ ] </li></ul>| [Transports](https://github.com/tesseract-one/Tesseract.rs/blob/master/EXTENDING.MD#Transport)  |   |
-| 6.     | Application-layer development APIs |  <ul><li>[ ] </li></ul>| [Protocols](https://github.com/tesseract-one/Tesseract.rs/blob/master/EXTENDING.MD#Protocol)  |   |   
+| 2.     | Application-level framework        |  <ul><li>[x] </li></ul>| [example protocol](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract-playground/src/polkadot)  | See below  |
+| 3.     | Messages and envelopes             |  <ul><li>[x] </li></ul>| [tesseract](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract)  | Works  |
+| 4.     | Transport-level framework          |  <ul><li>[x] </li></ul>| [example "local" transport](https://github.com/tesseract-one/Tesseract.rs/tree/master/tesseract-playground/src/plt)  |   |
+| 5.     | Transport-layer development APIs   |  <ul><li>[x] </li></ul>| [Transports](https://github.com/tesseract-one/Tesseract.rs/blob/master/EXTENDING.MD#Transport)  | Works  |
+| 6.     | Application-layer development APIs |  <ul><li>[x] </li></ul>| [Protocols](https://github.com/tesseract-one/Tesseract.rs/blob/master/EXTENDING.MD#Protocol)  | Works  |   
 
 ## General Notes
+
+Generally a good delivery. The documentation and command line output could be improved for other devs (see below), but they pointed out that they need to change it with the next milestone anyway.
 
 Cargo run currently produces the following output. 
 
