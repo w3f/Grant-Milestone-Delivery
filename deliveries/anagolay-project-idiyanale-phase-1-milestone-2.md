@@ -24,12 +24,12 @@ If you need anything else let us know.
 |    0c. | Testing Guide                    |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
 |    0d. | Docker                           |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
 |    0e. | Article                          |   [Article](https://blog.anagolay.network/articles/project-idiyanale-phase-1/milestone-2.html)   |       |
-|     1. | Substrate module: `an_workflow` |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
-|     2. | Benchmarks: `an_workflow`       |  [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)    |       |
-|     3. | Anagolay CLI: workflow manifest generation   |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
-|     4. | Operation: `op_cid`             |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
-|     5. | Operation: `op_multihash`             |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
-|     6. | Workflow: execution        |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
+|     1. | Substrate module: `an_workflow` |   [Pallet folder](https://github.com/anagolay/anagolay-chain/blob/w3f-project-idiyanale-phase1_milestone-2/pallets/workflows)   |       |
+|     2. | Benchmarks: `an_workflow`       |  [Pallet folder](https://github.com/anagolay/anagolay-chain/blob/w3f-project-idiyanale-phase1_milestone-2/pallets/workflows/src/)    |       |
+|     3. | Anagolay CLI: workflow manifest generation   |   [code](https://gitlab.com/anagolay/micro-services/-/blob/w3f-project-idiyanale-phase1_milestone-2/services/publish/src/jobs/publishWorkflow.ts#L37)   |       |
+|     4. | Operation: `op_cid`             |   [repo](https://gitlab.com/anagolay/operations/op_cid/-/tree/w3f-project-idiyanale-phase1_milestone-2)   |       |
+|     5. | Operation: `op_multihash`             |   [repo](https://gitlab.com/anagolay/operations/op_multihash/-/tree/w3f-project-idiyanale-phase1_milestone-2)   |       |
+|     6. | Workflow: execution        |   [code gen repo and exec](https://gitlab.com/anagolay/anagolay-workflow-template/-/tree/w3f-project-idiyanale-phase1_milestone-2)   |       |
 |     6. | Demo nodejs app part 1        |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
 |     6. | Rust demo crate - Part 2        |   [Support repo](https://github.com/anagolay/w3f-grant-support-repo/tree/project-idiyanale-phase1_milestone-2)   |       |
 
