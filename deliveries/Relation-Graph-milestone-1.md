@@ -7,7 +7,7 @@
 
 ### Milestone 1 Implement Relation Graph deploy as pallet
 
-* Link to [github repo](https://github.com/relationlabs/Relation-Graph/), commit hash: c1aa5ef9f88655fcea49f042e8f39822617217c0
+* Link to [github repo](https://github.com/relationlabs/Relation-Graph/)
 
 | Number | Deliverable | Link | Notes | 
 | -----: | ----------- | ------------- | ------| 
