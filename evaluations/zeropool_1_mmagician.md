@@ -9,10 +9,10 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------ | ----------- | ---- |----------------- | --------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-APACHE), [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-MIT), [LICENSE](https://github.com/zeropoolnetwork/libzeropool/blob/beae8527536bd03a22e4d110de10079d096f9b55/LICENSE-APACHE), [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-MIT) | - |
-| 0b.  | Documentation | <ul><li>[]</li></ul> | [docs.rs](https://docs.rs/libzeropool/0.5.2/libzeropool/), [docs.rs](https://docs.rs/fawkes-crypto/4.3.0/fawkes_crypto/), [README](https://github.com/zeropoolnetwork/libzeropool/blob/beae8527536bd03a22e4d110de10079d096f9b55/README.md) [README](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/README.md) | Documentation is incomplete. |
-| 0c. | Testing Guide | <ul><li>[]</li></ul> |[fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto), [libzeropool](https://github.com/zeropoolnetwork/libzeropool)| |
-| 0d. | Article/Tutorial | <ul><li>[]</li></ul> | | No tutorial |
-| 1. | zkSNARK circuit and cryptography library | <ul><li>[]</li></ul> |  [fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto), [libzeropool](https://github.com/zeropoolnetwork/libzeropool) | Difficult to evaluate without any docs explaining what is what. |
+| 0b.  | Documentation | <ul><li>[ ] </li></ul> | [docs.rs](https://docs.rs/libzeropool/0.5.2/libzeropool/), [docs.rs](https://docs.rs/fawkes-crypto/4.3.0/fawkes_crypto/), [README](https://github.com/zeropoolnetwork/libzeropool/blob/beae8527536bd03a22e4d110de10079d096f9b55/README.md) [README](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/README.md) | Documentation is incomplete. |
+| 0c. | Testing Guide | <ul><li>[ ] </li></ul> |[fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto), [libzeropool](https://github.com/zeropoolnetwork/libzeropool)| |
+| 0d. | Article/Tutorial | <ul><li>[ ] </li></ul> | | No tutorial |
+| 1. | zkSNARK circuit and cryptography library | <ul><li>[ ] </li></ul> |  [fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto), [libzeropool](https://github.com/zeropoolnetwork/libzeropool) | Difficult to evaluate without any docs explaining what is what. |
 
 ### General notes
 
