@@ -13,8 +13,8 @@ We have delivered the roles and housing fund pallets, that are both parts of the
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License: Apache 2.0 |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/LICENSE)| | 
-| 0b.  | Documentation & tutorial |...| The inline documentation is the lib.rs files of [roles-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs) and the [housing-fund-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/housing_fund/src/lib.rs). The tutorial is in the g-doc.| 
-| 0c. | Testing Guide |[Link](https://docs.google.com/document/d/186XCQliGloijWBnk4N5HivKt9TyXG3PUM1I6C1994CQ/edit#heading=h.wpxzjrnoi4x)| guide will be published directly after FS-article| 
+| 0b.  | Documentation & tutorial |[Link](https://docs.google.com/document/d/186XCQliGloijWBnk4N5HivKt9TyXG3PUM1I6C1994CQ/edit#heading=h.wpxzjrnoi4x)| The inline documentation is the lib.rs files of [roles-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs) and the [housing-fund-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/housing_fund/src/lib.rs). The basic tutorial is in the g-doc it will be published once the milestone is approved| 
+| 0c. | Testing Guide |[Link](https://github.com/Fair-Squares/fair-squares#run-all-tests) || 
 | 0d. | Dockerfile |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/Dockerfile) | | 
 | 0e.  | Article |[Link](https://docs.google.com/document/d/1YT5tLNmcCsrmn4_2W9UHZb1QgTiRo0inVWUUvr8sr5M/edit?usp=sharing)| waiting for w3f feedback before publishing| 
 | 1.  | pallet-roles |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/roles)| tag: .../commit-hash|
@@ -23,4 +23,5 @@ We have delivered the roles and housing fund pallets, that are both parts of the
 | 4.  | fs-node M1 |[Link](https://github.com/Fair-Squares/fair-squares)|  tag: .../commit-hash|
 
 **Additional Information**
-We mentioned in this milestone we would build a role-verifier module. This is built in a bit different way than we had imagined, but it's cleaner. We have a function called [set_manager](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs#L240-L251) The setter which is SUDO can select a different accountId that can be the role-verifier. 
+We mentioned in this milestone we would build a role-verifier module. This is built in a bit different way than we had imagined, but it's cleaner implementation.
+We have a function called [set_manager](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs#L240-L251) The setter which is Sudo can select a different accountId that can be the role-verifier. The Sudo is temporary, as we hava a decent council.
