@@ -40,7 +40,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 
 ### Requirements
 
-- [On-Chain identity](https://guide.kusama.network/docs/mirror-learn-identity/) on Kusama.
+- [On-Chain identity](https://guide.kusama.network/docs/learn-identity/) on Kusama.
 - GitHub account.
 - The evaluation must be submitted within 10 days after the milestone was delivered.
 
