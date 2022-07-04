@@ -9,8 +9,6 @@
 
 ### Milestone 1 Implement Relation Graph deploy as pallet
 
-* Link to [github repo](https://github.com/relationlabs/Relation-Graph/)
-
 | Number | Deliverable | Link | Notes | 
 | -----: | ----------- | ------------- | ------| 
 | 0a. | License | [Licence badge](https://github.com/relationlabs/Relation-Graph/blob/main/LICENSE) |Apache 2.0  |
