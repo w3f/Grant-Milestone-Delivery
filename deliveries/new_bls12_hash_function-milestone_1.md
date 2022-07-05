@@ -13,8 +13,8 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://www.gnu.org/licenses/gpl-3.0.html | ... |
 | 0b. | Documentation | published article: https://link.springer.com/article/10.1007/s10623-022-01012-8, free eprint version: https://eprint.iacr.org/2021/301 | ... |
-| 0c. | Testing Guide | ... | The main function prints the hash point H(s) = (X:Y:Z) = (x:y:1) on the curve BLS12-381 or BLS12-377, where s is a random string, X, Y, Z are the projective coordinates, and x, y are the affine ones, that is x = X/Z, y = Y/Z. Also, some inline documentation on the implementation is provided. |
-| 0e. | Article | Section 1.1 of my new article https://eprint.iacr.org/2021/1082 | ... |
+| 0c. | Testing Guide | ... | The main function prints the hash point H(s) = (X:Y:Z) = (x:y:1) on an elliptic curve, where s is a random string, X, Y, Z are the projective coordinates, and x, y are the affine ones, that is x = X/Z, y = Y/Z. Also, inline documentation on the implementation is provided. |
+| 0e. | Article | A link to the implementation is given in Section 1.1 of my new article https://eprint.iacr.org/2021/1082. My gratitude to W3F for its support is expressed at the end of that article. | ... |
 | 1. | Sage implementation | https://github.com/dishport/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation | ... | 
 
 **Additional Information**
