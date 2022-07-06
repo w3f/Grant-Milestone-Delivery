@@ -9,10 +9,10 @@
 
 | 0a. | License | [x] |  Apache 2.0 and GPL3, see [iris node repo](https://github.com/ideal-lab5/iris/tree/milestone_1) and [contracts repo](https://github.com/ideal-lab5/contracts/tree/iris_milestone_1) | |
 
-| 0b. | Documentation | [x] |  https://ideal-lab5.github.io/ | |
+| 0b. | Documentation | [x] |  https://ideal-lab5.github.io/ | Great job evolving your wiki by including a disclaimer about rapid changes but still including a very clear [roadmap](https://ideal-lab5.github.io/quickstart/development_status.html). You may want to add the link to your second w3f grant in your wiki intro asap, but I trust your timing. Overall, great combo of docs including the whitepaper and an aesthetic & clear [website](https://www.idealabs.network/) too. |
 
 
-| 0c. | Testing Guide | [x] |  https://docs.google.com/document/d/1XhBUSWp1lGhZbBVmFmre5ojEPlNCMccmFz-pvV2VypM/edit?usp=sharing | See the spreadsheet embedded in the testing guide for a detailed breakdown of scenarios and steps to execute them |
+| 0c. | Testing Guide | [x] |  https://docs.google.com/document/d/1XhBUSWp1lGhZbBVmFmre5ojEPlNCMccmFz-pvV2VypM/edit?usp=sharing | |
 
 | 0d. | Docker | [x] |  Iris: Iris-UI: | | |
 
