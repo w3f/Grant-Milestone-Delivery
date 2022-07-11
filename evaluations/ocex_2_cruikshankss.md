@@ -1,3 +1,5 @@
+Preliminary Notes
+
 POC. It should be a service for minting and validating coupons using 2-keys, one of which is known only to the buyer
 
 our proposed app offers a fully decentralized service with a front-end communicating straight to the smart-contract with Polkadot.js and the centralized back-end will be used only for coupons generation and pushing them to the smart-contract, as well as for managing the service provider’s liquidity pool
@@ -16,3 +18,5 @@ Centralized system management module for stakeholders (coupons generation, inval
 Centralized system management module for service provider (commissions management and stats) with front-end service for new off-chain users: all-in-one service for wallet generation and immediate transaction with gas charged from service provider’s pool;
 Management apps;
 User apps.
+
+In this milestone we've developed a Centralized management back-end, that includes CLI tools for coupon lifecycle management and a user's basic web interface for coupons redemption.
