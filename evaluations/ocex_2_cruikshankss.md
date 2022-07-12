@@ -50,4 +50,4 @@ I think this is a very logical, practical and useful idea. Idealizes democratiza
 
 Really excellent article! Thanks for teaching the community how complicated wallet setup & security is while providing a solution.
 
-Congratulations on your successful M2 & wishing you success in completing all 5 modules!
+Congratulations on your successful grant!!
