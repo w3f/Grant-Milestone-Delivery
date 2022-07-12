@@ -1,21 +1,21 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/fair_squares.md
 - **Milestone:** 1
-- **Kusama Identity:** Address
+- **Kusama Identity:** GbxefAnqRioX195Vc5jApLdUi8qc2D7A6FNzLPe2JmVLVRm
 - **Previously successfully merged evaluation:** N/A
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License: Apache 2.0 |<ul><li>[X] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares/blob/main/LICENSE)| |
-| 0b. | Documentation & tutorial |<ul><li>[X] </li></ul>| [Link](https://docs.google.com/document/d/186XCQliGloijWBnk4N5HivKt9TyXG3PUM1I6C1994CQ/edit#heading=h.wpxzjrnoi4x) | Functional. Minor typos and some requirements questions. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares#run-all-tests)| Minor problem for running with docker.|
+| 0b. | Documentation & tutorial |<ul><li>[X] </li></ul>| [Link](https://docs.google.com/document/d/186XCQliGloijWBnk4N5HivKt9TyXG3PUM1I6C1994CQ/edit#heading=h.wpxzjrnoi4x) | Functional. Minor typos and some requirements questions. R1 Fixed and answered. |
+| 0c. | Testing Guide |<ul><li>[X] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares#run-all-tests)| Minor problem for running with docker. R1 Fixed.|
 | 0d. | Dockerfile |<ul><li>[X] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares/blob/main/Dockerfile)| Functional.|
 | 0d. | Article |<ul><li>[X] </li></ul>| [Link](https://docs.google.com/document/d/1YT5tLNmcCsrmn4_2W9UHZb1QgTiRo0inVWUUvr8sr5M/edit?usp=sharing)| Minor suggestion.|
-| 1.  | pallet-roles |<ul><li>[ ] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/roles) | Needs better testing. |
-| 2.  | pallet-housing-fund |<ul><li>[ ] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/housing_fund) | Needs better testing. |
-| 3.  | role-verifier |<ul><li>[ ] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs#L208-L251) | Needs better testing. |
+| 1.  | pallet-roles |<ul><li>[X] </li></ul>| [Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/roles) | Needs better testing. R1 Ok, valid argumentation. |
+| 2.  | pallet-housing-fund |<ul><li>[X] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/housing_fund) | Needs better testing. R1 Ok, valid argumentation. |
+| 3.  | role-verifier |<ul><li>[X] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/lib.rs#L208-L251) | Needs better testing. R1 Ok, valid argumentation. |
 | 4.  | fs-node M1 |<ul><li>[X] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares) |  |
 
 
