@@ -12,7 +12,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. |  Unlicense |[LICENSE](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/milestone-1/LICENSE)||
-| 0b. | Documentation |[docs](https://github.com/rust-0x0/hex-space-protocol-docs)||
+| 0b. | Documentation |[docs](https://github.com/rust-0x0/hex-space-protocol-docs/tree/milestone-1)||
 | 0c. | Testing Guide | [docs](https://github.com/rust-0x0/hex-space-protocol-docs/blob/milestone-1/README.md)||
 | 0d. | Docker | [dockerfile](https://github.com/rust-0x0/hex-space-protocol-front-end/blob/milestone-1/Dockerfile) ||
 | 0e. | Article | [article](https://medium.com/@rust.0x0/hex-space-social-graph-487c548c2391)||
