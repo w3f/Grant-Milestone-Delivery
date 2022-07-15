@@ -12,6 +12,8 @@ A pull request with the deliverable has been submitted, reviewed, approved and m
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
+| 0b. | Documentation | [PR](https://github.com/polkadot-js/extension/pull/1068) | Inline documentation was provided along with the code for reviewer to understand any non ovious decision |
+| 0e. | Article | <ul><li>[ ] </li></ul>| | Article is WIP, expected to be published next week (hopefully)|
 | 1. | new approval screen |[PR](https://github.com/polkadot-js/extension/pull/1068)| Users can see all their accounts, check which one they want to share with the website, and optionnaly select all accounts at once.| 
 | 2. | new approval back-end |[PR](https://github.com/polkadot-js/extension/pull/1068)| The old system of whitelist was removed and a new system of authorization per website per account was implemented. Note that the account visibility feature (with the eye) was kept untouched as previously discussed.| 
 | 3. | website approval enhancement | [PR](https://github.com/polkadot-js/extension/pull/1068) | The parameter screen "Manage Website Access" wasenhanced and users can select per website what accounts are shared with each website. The account selection component was re-used here so as to reduce maintenance hurdle. |
