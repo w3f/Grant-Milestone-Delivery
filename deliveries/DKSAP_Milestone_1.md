@@ -24,7 +24,7 @@
 | 0b.    | Documentation                        | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)        | README.md       
 | 0c.    | Testing Guide                        | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)        |                           
 | 1.     | (Node.js)SDK: Client Tool            | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/tree/main/client)           | Node.js scripts to test ink! contract
-| 2.     | (ink!)Smart contracts: Anonymous NFT	| [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.r)     | ink! implementation of DKSAP
+| 2.     | (ink!)Smart contracts: Anonymous NFT	| [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.rs)    | ink! implementation of DKSAP
 | 3.     | HTTPS Service: Node.js Relayer	      | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/relayer/index.js) | Relayer service should start before test the client tool
 
 
