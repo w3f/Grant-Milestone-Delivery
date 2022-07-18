@@ -16,11 +16,11 @@
 | 0.b    | Documentation  | [Massbit Components](https://docs.massbit.io/massbit-route-mbr/components), [Massbit Architecture](https://docs.massbit.io/massbit-route-mbr/architecture) |       |
 | 0.c    | Testing Guide  |                                                                                                                                                            |       |
 | 0.d    | Docker release |
-- Web Portal image - massbit/massbitroute_web:v0.1 <br/>
-- Fisherman image - massbit/massbitroute_fisherman:v0.1  <br/>
-- Massbit Chain image - massbit/massbitroute_chain:v0.1  <br/>
-- Massbit COre image - massbit/massbitroute_api_dev:0.0.1-shamu-dev  <br/>
-- Gateway Manager image - massbit/massbitroute_gwman_dev:0.0.1-shamu-dev  <br/>                                                                                                                                                                            |       |
+- Web Portal image - massbit/massbitroute_web:v0.1 <br />
+- Fisherman image - massbit/massbitroute_fisherman:v0.1  <br />
+- Massbit Chain image - massbit/massbitroute_chain:v0.1  <br />
+- Massbit COre image - massbit/massbitroute_api_dev:0.0.1-shamu-dev  <br />
+- Gateway Manager image - massbit/massbitroute_gwman_dev:0.0.1-shamu-dev  <br />                                                                                                                                                                            |       |
 | 0.e    | Article                                                                           |                                                                                                                                                                                |       |
 | 1.     | Massbit Core Implementation (Lua)                                                 | [Massbit Core Git](https://github.com/massbitprotocol/massbitroute/tree/shamu)                                                                                                 |       |
 | 2.     | Gateway Manager Implementation (C)                                                | [Gateway Manager Git](https://github.com/massbitprotocol/massbitroute_gwman/tree/shamu)                                                                                        |       |
