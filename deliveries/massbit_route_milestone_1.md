@@ -5,9 +5,6 @@
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/massbit_route.md
 * **Milestone Number:** 1
 
-**Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
-
 **Deliverables**
 
 | Number | Deliverable                                                                       | Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Notes |
@@ -24,6 +21,3 @@
 | 5.     | Web Portal implementation  (Vue.js)                                               | [Web Portal Git](https://github.com/massbitprotocol/mbr-app/tree/feature/grant-delivery)                                                                                                                                                                                                                                                                                                                                                                                               |       |
 | 6.     | Pallet Implementation for Consumer dAPI fee and reward distribution for providers | [Staking and Reward Pallet](https://github.com/massbitprotocol/massbitchain/tree/main/pallets/dapi-staking)                                                                                                                                                                                                                                                                                                                                                                            |       |
 | 7.     | Pallet Implementation for Node Provider/Delegator staking and reward distribution | [Provider Staking Pallet](https://github.com/massbitprotocol/massbitchain/tree/main/pallets/dapi)                                                                                                                                                                                                                                                                                                                                                                                      |       |
-
-**Additional Information**
-> Any further comments on the milestone that you would like to share with us.
