@@ -33,7 +33,7 @@ To parse types, we have investigated how the Polkadot-js library uses types. So 
 
 engine-strict=true
 ```
-- Add to your package.json file the following or install it with `npm i ...`:
+- Add to your package.json file the following and install it with `npm i ...`:
 ```json
 "dependencies": {
   "@supercolony-net/typechain-polkadot": "0.1.1",
