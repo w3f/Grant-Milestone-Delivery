@@ -11,13 +11,16 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. |  Unlicense |[LICENSE](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/milestone-1/LICENSE)||
-| 0b. | Documentation |[docs](https://github.com/rust-0x0/hex-space-protocol-docs/tree/milestone-1)||
-| 0c. | Testing Guide | [docs](https://github.com/rust-0x0/hex-space-protocol-docs/blob/milestone-1/README.md)||
-| 0d. | Docker | [dockerfile](https://github.com/rust-0x0/hex-space-protocol-front-end/blob/milestone-1/Dockerfile) ||
+| 0a. |  Unlicense |[LICENSE](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/f723f5f3e3c7f7136c0936b648072a7dcd920d85/LICENSE)||
+| 0b1. | Documentation 1|[Ink! Contracts Hex-space &ERC1155 SetUp&Compile Guide](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/443001cd7a3e517322553815fa4f444f6708c7b6/README.md)||
+| 0b2. | Documentation 2|[Front-End Deploy&Config Guide](https://github.com/rust-0x0/hex-space-protocol-front-end/blob/473aaa89a2ab77f633861dc0e7e08446c90e78d2/README.md)||
+| 0c1. | Testing Guide | [Ink! Contracts Hex-space &ERC1155 Test Guide](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/443001cd7a3e517322553815fa4f444f6708c7b6/README.md)||
+| 0c2. | Testing Guide of Front End  1| [How to follow my Web3.0 friends Tutorial](https://github.com/rust-0x0/hex-space-protocol-docs/blob/849c659bb76c1029ce17b7c5f7c19c2e3bb070d0/Follow.md)||
+| 0c2. | Testing Guide  of Front End  2| [How to edit the Profile on HexSpaceFrontEnd  Tutorial](https://github.com/rust-0x0/hex-space-protocol-docs/blob/849c659bb76c1029ce17b7c5f7c19c2e3bb070d0/Profile.md)||
+| 0d. | Docker | [docker file](https://github.com/rust-0x0/hex-space-protocol-front-end/blob/473aaa89a2ab77f633861dc0e7e08446c90e78d2/Dockerfile) ||
 | 0e. | Article | [article](https://medium.com/@rust.0x0/hex-space-social-graph-487c548c2391)||
-| 1. |  ink! Contract: HexSpace | [code](https://github.com/rust-0x0/hex-space-protocol-substrate/tree/milestone-1/hex_space) |  |
-| 2. |  protocol front-end  | [code](https://github.com/rust-0x0/hex-space-protocol-front-end/tree/milestone-1)|  |
+| 1. |  ink! Contract: HexSpace | [code](https://github.com/rust-0x0/hex-space-protocol-substrate/blob/443001cd7a3e517322553815fa4f444f6708c7b6/hex_space) |  |
+| 2. |  protocol front-end  | [code](https://github.com/rust-0x0/hex-space-protocol-front-end/tree/43550982e0c70ebdd1dc72eed8a87860627dbaab)|  |
 
 
 **Additional Information**
