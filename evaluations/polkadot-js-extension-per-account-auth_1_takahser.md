@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress/Accepted/Rejected
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/2f526e33e241aa03e53a0e300e3d5cf85d33c8f7/applications/polkadot-js-extension-per-account-auth.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
