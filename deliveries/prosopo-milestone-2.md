@@ -38,8 +38,9 @@ We would like to provide additional information to make it clear to the evaluato
 There is a repository called [client-example](https://github.com/prosopo-io/client-example) that demonstrates how to
 integrate the [procaptcha-react](https://github.com/prosopo-io/procaptcha-react) package into a react app.
 procaptcha-react is a wrapper of a package called [procaptcha](https://github.com/prosopo-io/procaptcha), which is an
-interface to the provider API and the protocol smart contract. The documentation consists of the READMEs in these three
-repositories.
+interface to the [provider](https://github.com/prosopo-io/provider) API and
+the [provider](https://github.com/prosopo-io/protocol) smart contract. The documentation consists of the READMEs in
+these repositories.
 
 ### 0c. Testing Guide
 
