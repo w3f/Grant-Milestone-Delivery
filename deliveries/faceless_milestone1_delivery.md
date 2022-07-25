@@ -4,7 +4,7 @@
 
 **The [invoice form :pencil:](https://forms.gle/LSRr7PCjBpEbKGh89) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/HeisenbergLin22/Grants-Program/blob/master/faceless.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/faceless.md
 
 * **Milestone Number:** 1
 
