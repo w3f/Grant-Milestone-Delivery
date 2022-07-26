@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/w3f/Grants-Program/pull/921
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/openbrush-follow-up-2.md
 * **Milestone Number:** 1 milestone of the grant and 6 milestone of the OpenBrush
 
 **Context**
