@@ -35,7 +35,7 @@
 | 2. | (ink!)smart contracts: message verification algorithm | - [link](https://github.com/dantenetwork/protocol-stack-for-ink/blob/c46af9610cd06b672226967f85d4c10351f787d0/contracts/cross-chain/lib.rs#L296) <br> - [Intuitively Test Report](https://github.com/dantenetwork/protocol-stack-for-ink/tree/main/contracts/algorithm#message-verification) | One of the basic algorithms of Dante Protocol.|  
 | 3. | (ink!)smart contracts: router credibility evaluation algorithm | - [link](https://github.com/dantenetwork/protocol-stack-for-ink/blob/c46af9610cd06b672226967f85d4c10351f787d0/contracts/cross-chain/lib.rs#L355) <br> - [Intuitively Test Report](https://github.com/dantenetwork/protocol-stack-for-ink/tree/main/contracts/algorithm#router-evaluation) |  One of the basic algorithms of Dante Protocol.|
 | 4. | off-chain routers: general message sharing | [Ink! part](https://github.com/dantenetwork/protocol-stack-for-ink/tree/green-leaf/leaf) | Off-Chain routers are working background. In this stage, we deployed three routers to encode/decode and delivery messages between different chains. The code shows the ink! part of the routers. |
-| 5. | (Rust)SDK: general message sharing | [ink sdk](https://github.com/dantenetwork/ink-sdk) | This SDK shows how to build an ink! smart contract with the ability to cooperate with other smart contracts deployed on other public chains.|
+| 5. | (Rust)SDK: general message sharing | [ink sdk](https://github.com/dantenetwork/ink-sdk) | This SDK shows how to build an ink! smart contract offering the ability to cooperate with other smart contracts deployed on other public chains.|
 
 **Additional Information**
 
