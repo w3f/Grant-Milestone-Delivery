@@ -73,9 +73,9 @@ interface package, such as [procaptcha-react](https://github.com/prosopo-io/proc
 ### 2 Demo Website
 
 [https://nft.demo.prosopo.io](https://nft.demo.prosopo.io) is a fully fledged NFT marketplace that demonstrates how the
-captcha UI works in a website and in a contract simultaneously. The website is protected by captcha UI - the "Select
-All" images captcha. The PSP34 contract in the background is protected by the protocol smart contract by using
-the `is_human` function.
+captcha UI works in a website and in a contract simultaneously. The website is protected by a captcha user interface -
+the "Select All" images captcha. The PSP34 contract in the background is protected by
+the [protocol](https://github.com/prosopo-io/protocol) smart contract by using the `is_human` function.
 
 ### 3 Integration Scripts
 
