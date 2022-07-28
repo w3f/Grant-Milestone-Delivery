@@ -48,7 +48,7 @@ Due to the nature of blockchain development, there was not much we could do in t
 almost every operation depends on either the [provider](https://github.com/prosopo-io/provider) API or a contract
 query/transaction. Therefore, there are minimal tests in the [procaptcha](https://github.com/prosopo-io/procaptcha)
 repository that test the state and context reducers. All other functionality is covered by the integration tests that
-are part of the [provider](https://github.com/prosopo-io/provider) repository.
+are part of the [provider](https://github.com/prosopo-io/provider#tests) repository.
 
 ### 0d. Docker
 
