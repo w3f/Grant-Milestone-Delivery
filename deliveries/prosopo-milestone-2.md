@@ -9,12 +9,12 @@ official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/b
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/prosopo.md
 * **Milestone Number:** 2
 
-**Context**
+## Context 
 
 This delivery builds on the smart contract and command line Provider node built in Milestone 1 to deliver a fully
 functional CAPTCHA system that can be integrated with Polkadot smart contracts via web User Interface components.
 
-**Deliverables**
+## Deliverables
 
 | Number | Deliverable            | Description                                                                                                                                                                                                                                                                                                      | Links                                                                                                                                             | Notes                                                                                                                       |
 |--------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -27,7 +27,6 @@ functional CAPTCHA system that can be integrated with Polkadot smart contracts v
 | 2      | Demo Website           | A demo website on that shows how to implement the Captcha Client.                                                                                                                                                                                                                                                | https://nft.demo.prosopo.io/                                                                                                                      | Deployed on netlify                                                                                                         |
 | 3      | Integration Repository | Scripts to run all components in developer environment                                                                                                                                                                                                                                                           | https://github.com/prosopo-io/integration/tree/develop#development-environment-set-up                                                             |
 
-**Additional Information**
 
 ## Evaluation Plan
 
