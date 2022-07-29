@@ -31,6 +31,24 @@ functional CAPTCHA system that can be integrated with Polkadot smart contracts v
 
 Below you will find additional information to make it clear on how to proceed with the evaluation.
 
+### Milestone 2 Branch
+
+Please use the [`milestone2`](https://github.com/prosopo-io/integration/tree/milestone2) branch of our integration
+repository when evaluating this milestone. This branch contains references to specific commits of the submodules
+contained within it. When you sync this repository you should receive the following commits for each submodule.
+
+```bash
+> git submodule update --init --recursive --force --checkout
+Submodule path 'client-example': checked out '473ccfa5469c8901cd4c26c420105e680ffc06fa'
+Submodule path 'dapp-example': checked out '0ecf2cdb1fd9fc00b57d4bc76a299fcf1afe79f1'
+Submodule path 'demos/demo-nft-marketplace': checked out '21e25e418c1e53cd5094028ba1cac9e9e39fcee9'
+Submodule path 'packages/contract': checked out '31a52da278164296a064adfe19a0fc36033a351b'
+Submodule path 'packages/procaptcha': checked out 'ef74c1b3bb9e4dd4c77ce9caf0ca6d0d77e05b96'
+Submodule path 'packages/procaptcha-react': checked out '8997c41c28c142de72290409623b3375d0781d77'
+Submodule path 'packages/provider': checked out '89f405b4932ebbda7e02069c19cfcc1a02d4b79f'
+Submodule path 'protocol': checked out '027eb4e1c1da1d8fdec0928f8a4eec09f0f81edb'
+```
+
 ### 0a. Licenses
 
 Licenses differ per package. All licenses are either MIT, GPLv3, or Apache License 2.0.
