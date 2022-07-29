@@ -9,7 +9,7 @@ official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/b
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/prosopo.md
 * **Milestone Number:** 2
 
-## Context 
+## Context
 
 This delivery builds on the smart contract and command line Provider node built in Milestone 1 to deliver a fully
 functional CAPTCHA system that can be integrated with Polkadot smart contracts via web User Interface components.
@@ -18,7 +18,7 @@ functional CAPTCHA system that can be integrated with Polkadot smart contracts v
 
 | Number | Deliverable            | Description                                                                                                                                                                                                                                                                                                      | Links                                                                                                                                             | Notes                                                                                                                       |
 |--------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| 0a.    | License	GPLv3          |                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                   |
+| 0a.    | License	GPLv3          |                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                   | Licenses are actually varied per repo                                                                                       |
 | 0b.    | Documentation          | Documentation that explains how to include the Captcha Client in a DApp website and smart contract.                                                                                                                                                                                                              | https://github.com/prosopo-io/client-example , https://github.com/prosopo-io/procaptcha-react, https://github.com/prosopo-io/demo-nft-marketplace | Documentation is a combination of various package READMEs                                                                   |
 | 0c.    | Testing Guide          | Core function unit tests to ensure functionality and robustness. We will describe how to run these tests in the project README.                                                                                                                                                                                  | https://github.com/prosopo-io/integration#running-tests                                                                                           | The frontend components are covered by integration tests in the provider package.                                           |
 | 0d.    | Docker                 | Dockerfile(s) that can be used to test all the functionality delivered with this milestone. These come as a single docker-compose file for all three services (Prosopo Client SDK, Provider Service SDK, Prosopo Contract)                                                                                       | https://github.com/prosopo-io/integration/blob/main/docker-compose.demo.yml                                                                       | This docker file can be used to start a pre-populated substrate node, a mongo db, and a provider node running a captcha API |
@@ -27,10 +27,13 @@ functional CAPTCHA system that can be integrated with Polkadot smart contracts v
 | 2      | Demo Website           | A demo website on that shows how to implement the Captcha Client.                                                                                                                                                                                                                                                | https://nft.demo.prosopo.io/                                                                                                                      | Deployed on netlify                                                                                                         |
 | 3      | Integration Repository | Scripts to run all components in developer environment                                                                                                                                                                                                                                                           | https://github.com/prosopo-io/integration/tree/develop#development-environment-set-up                                                             |
 
-
 ## Evaluation Plan
 
 Below you will find additional information to make it clear on how to proceed with the evaluation.
+
+### 0a. Licenses
+
+Licenses differ per package. All licenses are either MIT, GPLv3, or Apache License 2.0.
 
 ### 0b. Documentation
 
