@@ -39,15 +39,17 @@ contained within it. When you sync this repository you should receive the follow
 
 ```bash
 > git submodule update --init --recursive --force --checkout
-Submodule path 'client-example': checked out '473ccfa5469c8901cd4c26c420105e680ffc06fa'
-Submodule path 'dapp-example': checked out '0ecf2cdb1fd9fc00b57d4bc76a299fcf1afe79f1'
-Submodule path 'demos/demo-nft-marketplace': checked out '21e25e418c1e53cd5094028ba1cac9e9e39fcee9'
+Submodule path 'client-example': checked out '7268766bb1b3fcfe3cbdf18b1ad6ba8d62994586'
+Submodule path 'dapp-example': checked out '6ce098640abc6100b0e8d9d08184da7a418c9bc6'
+Submodule path 'demos/demo-nft-marketplace': checked out '7978433306fec284cf024452eb3d5134953dac0f'
 Submodule path 'packages/contract': checked out '31a52da278164296a064adfe19a0fc36033a351b'
 Submodule path 'packages/procaptcha': checked out 'ef74c1b3bb9e4dd4c77ce9caf0ca6d0d77e05b96'
 Submodule path 'packages/procaptcha-react': checked out '8997c41c28c142de72290409623b3375d0781d77'
-Submodule path 'packages/provider': checked out '89f405b4932ebbda7e02069c19cfcc1a02d4b79f'
+Submodule path 'packages/provider': checked out 'f6a454fb194fe877543c3549dbf8c99ed08e447b'
 Submodule path 'protocol': checked out '027eb4e1c1da1d8fdec0928f8a4eec09f0f81edb'
 ```
+
+Please use these commits for evaluation of the milestone.
 
 ### 0a. Licenses
 
@@ -56,28 +58,28 @@ Licenses differ per package. All licenses are either MIT, GPLv3, or Apache Licen
 ### 0b. Documentation
 
 There is a repository called [client-example](https://github.com/prosopo-io/client-example) that demonstrates how to
-integrate the [procaptcha-react](https://github.com/prosopo-io/procaptcha-react) package into a react app.
-procaptcha-react is a wrapper of a package called [procaptcha](https://github.com/prosopo-io/procaptcha), which is an
-interface to the [provider](https://github.com/prosopo-io/provider) API and
-the [provider](https://github.com/prosopo-io/protocol) smart contract. The documentation consists of the READMEs in
-these repositories.
+integrate the [procaptcha-react](https://github.com/prosopo-io/procaptcha-react) package into a React app.
+Procaptcha-react is a wrapper of [procaptcha](https://github.com/prosopo-io/procaptcha), which is an interface to
+the [provider](https://github.com/prosopo-io/provider) API and the [protocol](https://github.com/prosopo-io/protocol)
+smart contract. The documentation consists of the READMEs in these repositories. The architecture
+is [documented in our proposal](https://github.com/w3f/Grants-Program/blob/master/applications/prosopo.md#24-architecture)
+.
 
 ### 0c. Testing Guide
 
 Due to the nature of blockchain development, there was not much we could do in terms of unit tests for the frontend, as
 almost every operation depends on either the [provider](https://github.com/prosopo-io/provider) API or a contract
-query/transaction. Therefore, there are minimal tests in the [procaptcha](https://github.com/prosopo-io/procaptcha)
+query/transaction. Therefore, there are minimal unit tests in the [procaptcha](https://github.com/prosopo-io/procaptcha)
 repository that test the state and context reducers. All other functionality is covered by the integration tests that
 are part of the [provider](https://github.com/prosopo-io/provider#tests) repository.
 
 ### 0d. Docker
 
-The [demo docker file](https://github.com/prosopo-io/integration/blob/main/docker-compose.demo.yml) is the most feature
+The [demo docker file](https://github.com/prosopo-io/integration/blob/milestone2/docker-compose.demo.yml) is the most feature
 filled docker file we have. It starts a pre-populated substrate node, a mongo db, and
 a [provider](https://github.com/prosopo-io/provider) node running a captcha API. The developer is then expected to run
 either [client-example](https://github.com/prosopo-io/client-example#how-to-run-locally)
-or [demo-nft-marketplace](https://github.com/prosopo-io/demo-nft-marketplace#how-to-run-locally) after setting their
-environment variables.
+or [demo-nft-marketplace](https://github.com/prosopo-io/demo-nft-marketplace#how-to-run-locally).
 
 ### 0e. Article
 
@@ -87,7 +89,7 @@ https://github.com/prosopo-io/prosopo-website/blob/milestone2/src/articles/proso
 
 [procaptcha](https://github.com/prosopo-io/procaptcha) is the main package that communicates with
 the [provider](https://github.com/prosopo-io/provider) API and the
-[protocol](https://github.com/prosopo-io/protocol) smart contract. This package is designed to be used by a user
+[protocol](https://github.com/prosopo-io/protocol) smart contract. Procaptcha is designed to be used by a user
 interface package, such as [procaptcha-react](https://github.com/prosopo-io/procaptcha-react).
 
 ### 2 Demo Website
