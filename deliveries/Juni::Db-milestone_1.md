@@ -11,7 +11,7 @@
 | 0b. | Documentation | https://uddugteam.github.io/JuniDB-manual | ... | 
 | 0c. | Testing Guide  | https://docs.google.com/document/d/1gTuJVTt13hMM_N9XlDCNTU0ykWpVH_fC336Ea0UznLQ/edit?usp=sharing | ... | 
 | 0d. | Article | https://docs.google.com/document/d/1k6DhCfSs7rmsSV-WB7o8EkvqDFz5Bvn12QYrjjW7R2w/edit?usp=sharing | on approval grantsPR@web3.foundation| ... | 
-| 1. | Substrate pallet | https://github.com/uddugteam/substrate/tree/Juni/key-value | In the application, we mistakenly called current clause as "Substrate ML pallet". But here its about the  basic database layout implementation with key-value data storage. | 
+| 1. | Substrate pallet | https://github.com/uddugteam/substrate/tree/Juni/key-value-v0.3.0 | In the application, we mistakenly called current clause as "Substrate ML pallet". But here its about the  basic database layout implementation with key-value data storage. | 
 | 2. | Web application | https://github.com/uddugteam/substrate-front-end-template/tree/Juni/key-value | ...| 
 | 3. | Docker image | https://hub.docker.com/repository/docker/andskur/juni-db | ...| 
 
