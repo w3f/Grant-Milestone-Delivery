@@ -18,4 +18,4 @@
 
 Fantastic work on an incredibly fascinating project. The code and documentation is extremely clean and thank you for creating the demo video for a step-by-step testing guide. It was my pleasure to learn how to compile and deploy an ink! contract and to mint, transfer, and burn NFTs. 
 
-I did notice your CLI is missing a `Encrypted owner address: ` message when transferring to Bob, but otherwise, everything works extremely quickly and clearly. So far, I think this project is a great example of an extremely clean use of ink!. Thank you for teaching me about the DKSAP concept and thank you for bringing it to the ecosystem.
+I did notice your CLI is missing a `Encrypted owner address: ` message when transferring to Bob, but otherwise, everything works extremely quickly and clearly. I think this project is a great example of an extremely clean use of ink!. Thank you for teaching me about the DKSAP concept and thank you for bringing it to the ecosystem.
