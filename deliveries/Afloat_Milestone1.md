@@ -9,6 +9,8 @@
 
 Regarding the user onboarding and KYC process, we anticipated to use the identity pallet to store crucial information, however, modifying the user identity causes the current judgements to be reset, therefore we opted for storing the necessary information (which results from a developed privacy solution) within a custom pallet storage, along with some other items to describe pivotal data relations to keep it more persistant.
 
+A running instance of the code can be found [here](http://34.107.153.230/)
+
 **Deliverables**
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
