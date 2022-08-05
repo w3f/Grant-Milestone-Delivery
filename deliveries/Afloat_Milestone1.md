@@ -12,14 +12,14 @@ Regarding the user onboarding and KYC process, we anticipated to use the identit
 **Deliverables**
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
-| 0a. | License | MIT | MIT |
-| 0b. | Documentation | |
-| 0c. | Testing | Unit testing will be applied to ensure reliability. Documentation of tests and results will be provided |
-| 0d. | Video | We will provide a video demonstration that will illustrate all of the functionality delivered with this milestone. |
-| 0e. | Article | We will publish an **article** in English and Spanish that explains what was built and how it can benefit other projects |
-| 1. | Set Profile and Upload KYC Materials | User onboarding web client for uploading identity details in a privacy preserving manner. Data will be encrypted and only accessible by 1) the user, 2) a pre-specified KYC administrator account, and 3) a persistence partner/custodian that the user or app administrator selects. |
-| 2. | KYC Admin | KYC administrator screen for viewing and approving new user (market participant) requests. We plan to use the existing `registrar` process on the Identity pallet. UI is in Angular, with a small chance we may migrate it to Vuejs |
-| 3. | Slides |1-3 additional presentation slides for Louise W. Reed, CPA’s currently scheduled talks at CPA conferences regarding blockchain, cryptocurrency, triple-entry accounting and transferring state tax credits.  The additional slides will be added to address why Afloat sees value in being supported by Polkadot’s ecosystem| 
+| 0a. | License | https://github.com/hashed-io/hashed-substrate/blob/main/LICENSE | MIT |
+| 0b. | Documentation | https://github.com/Afloat-Inc/marketplaces-ui https://github.com/Afloat-Inc/pallets https://github.com/Afloat-Inc/private-server https://github.com/Afloat-Inc/private-client-api| The code has inline documentation and each repository has a detailed README with build, run, and test instructions. |
+| 0c. | Testing | https://github.com/hashed-io/hashed-substrate/blob/main/pallets/gated-marketplace/src/tests.rs | The test is built directly into the Rust project |
+| 0d. | Video | Video in [English](https://drive.google.com/file/d/1Gzz1scZt4LSBPrQ30XXZzclhAXjjdUHJ/view?usp=sharing) and [Spanish](https://drive.google.com/file/d/12HGvMEMDU5NMRXcEa8m3gkuqjwO3iONV/view?usp=sharing) | 14 minute video demonstrating the deliverables |
+| 0e. | Article | Article in [English](https://docs.google.com/document/d/1bDswb619nkdL0xt41GEJEtyLcCOc3LO-M-dB2RdDr9s/edit?usp=sharing) and [Spanish](https://docs.google.com/document/d/1DNHgONQrZfpG4f0f79n6pS9h9jUQQDW52OlWCw1TiJA/edit?usp=sharing) |
+| 1. | Set Profile and Upload KYC Materials | https://github.com/Afloat-Inc/private-server https://github.com/Afloat-Inc/private-client-api  | Users can upload files that are visible only to themselves, a designated custodian and the Marketplace owner. The video demos this functionality. |
+| 2. | KYC Admin | https://github.com/Afloat-Inc/marketplaces-ui https://github.com/Afloat-Inc/pallets | |
+| 3. | Slides | https://drive.google.com/file/d/1_YgnWkFoFXhjG1XdSFGa1F_Vbz1HkwA8/view?usp=sharing | Presentation slides used by Louise W. Reed, CPA’s talks at CPA conferences regarding blockchain, cryptocurrency, triple-entry accounting and transferring state tax credits. The slides address why Afloat sees value in being supported by Polkadot’s ecosystem| 
 
 **Repositories** 
 (all MIT licensed)
