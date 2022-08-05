@@ -13,7 +13,7 @@ Regarding the user onboarding and KYC process, we anticipated to use the identit
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
 | 0a. | License | https://github.com/hashed-io/hashed-substrate/blob/main/LICENSE | MIT |
-| 0b. | Documentation | https://github.com/Afloat-Inc/marketplaces-ui https://github.com/Afloat-Inc/pallets https://github.com/Afloat-Inc/private-server https://github.com/Afloat-Inc/private-client-api| The code has inline documentation and each repository has a detailed README with build, run, and test instructions. |
+| 0b. | Documentation | https://github.com/Afloat-Inc/marketplaces-ui <br> https://github.com/Afloat-Inc/pallets https://github.com/Afloat-Inc/private-server https://github.com/Afloat-Inc/private-client-api| The code has inline documentation and each repository has a detailed README with build, run, and test instructions. |
 | 0c. | Testing | https://github.com/hashed-io/hashed-substrate/blob/main/pallets/gated-marketplace/src/tests.rs | The test is built directly into the Rust project |
 | 0d. | Video | Video in [English](https://drive.google.com/file/d/1Gzz1scZt4LSBPrQ30XXZzclhAXjjdUHJ/view?usp=sharing) and [Spanish](https://drive.google.com/file/d/12HGvMEMDU5NMRXcEa8m3gkuqjwO3iONV/view?usp=sharing) | 14 minute video demonstrating the deliverables |
 | 0e. | Article | Article in [English](https://docs.google.com/document/d/1bDswb619nkdL0xt41GEJEtyLcCOc3LO-M-dB2RdDr9s/edit?usp=sharing) and [Spanish](https://docs.google.com/document/d/1DNHgONQrZfpG4f0f79n6pS9h9jUQQDW52OlWCw1TiJA/edit?usp=sharing) |
