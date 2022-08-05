@@ -10,10 +10,10 @@
 Regarding the user onboarding and KYC process, we anticipated to use the identity pallet to store crucial information, however, modifying the user identity causes the current judgements to be reset, therefore we opted for storing the necessary information (which results from a developed privacy solution) within a custom pallet storage, along with some other items to describe pivotal data relations to keep it more persistant.
 
 **Deliverables**
-| Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
-| 0a. | License | MIT |
-| 0b. | Documentation | We will provide **inline documentation** of the code and a basic **tutorial** of the modules delivered in this Milestone.|
+| Number | Deliverable | Link | Notes |
+| -----: | ----------- | ------------- | ------------- |
+| 0a. | License | MIT | MIT |
+| 0b. | Documentation | |
 | 0c. | Testing | Unit testing will be applied to ensure reliability. Documentation of tests and results will be provided |
 | 0d. | Video | We will provide a video demonstration that will illustrate all of the functionality delivered with this milestone. |
 | 0e. | Article | We will publish an **article** in English and Spanish that explains what was built and how it can benefit other projects |
