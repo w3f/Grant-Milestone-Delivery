@@ -2,11 +2,12 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
+* **Application Document:** [Link](https://github.com/tribal-protocol/W3F-Grants-Program/blob/master/applications/tribal_protocol.md)
 * **Milestone Number:** 1
 
-**Context** (optional)
+**Context**
 
+After our initial R&D we realized that we could just leverage the ink! contract storage itself. For the purposes of this milestone there was no need to leverage a custom Tribal Pallet for storage at this stage.
 
 **Deliverables**
 
@@ -24,4 +25,5 @@
 | 5.  | Orchestrator Client |[Link](https://github.com/tribal-protocol/substrate-poc-client/blob/main/src/lib/orchestrator.ts)| | 
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+
+In the R&D phase of this milestone, we found Substrate's ink! contract storage, and functionality to meet, or exceed our expectations, and requirements for the majority of our initial groundwork for the tribal protocol. 
