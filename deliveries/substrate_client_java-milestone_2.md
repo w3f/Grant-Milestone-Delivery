@@ -20,3 +20,4 @@ This delivery adds Events support together with a big library refactoring and mu
 **Additional Information**
 - Release: [v0.2.0](https://github.com/strategyobject/substrate-client-java/releases/tag/v0.2.0)
 - Packages: https://github.com/orgs/strategyobject/packages?visibility=public
+- Examples project: https://github.com/strategyobject/substrate-client-examples
