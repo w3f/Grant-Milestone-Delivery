@@ -141,18 +141,18 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | Development of mobile app for interaction with Polkadot wallets using Web API | https://www.figma.com/file/RhqgBddx8KhKC11Ck71SJx/Untitled?node-id=0%3A1 | Polkadot mobile integration |
+| 1. | Development of mobile app for interaction with Polkadot wallets using Web API | https://github.com/citadeldao/polkadot/blob/main/mobiledart.md  | Polkadot mobile integration |
 
 
 | Task ID | Module name | Description | Link |
 | ------ | ----------- | ---- | ----- |
-| 1.0 | Send page| Create interface of send transaction  | https://www.figma.com/file/sQCbRcJERJmdHOccOE3qou/citadel.one-v2-mobile-polkadot-send?node-id=0%3A1 |
-| 1.1 | Staking page| Create interface of staking page | https://www.figma.com/file/CCn4qdNX2OpDKQMwnhjsdn/citadel.one-v2-mobile-polkadot-stake?node-id=0%3A1 |
-| 1.2 | Stake nodes| Create components of staking nodes operation | https://www.figma.com/file/CCn4qdNX2OpDKQMwnhjsdn/citadel.one-v2-mobile-polkadot-stake?node-id=0%3A1 |
-| 1.3 | Unstake nodes| Create components of unstaking nodes operation | https://www.figma.com/file/ZLbTFaIcAMfsp4KzNSFmxW/citadel.one-v2-mobile-polkadot-unstake?node-id=0%3A1 |
+| 1.0 | Send page| Create interface of send transaction  | https://github.com/citadeldao/polkadot/blob/main/mobiledart.md https://www.figma.com/file/sQCbRcJERJmdHOccOE3qou/citadel.one-v2-mobile-polkadot-send?node-id=0%3A1 |
+| 1.1 | Staking page| Create interface of staking page | https://github.com/citadeldao/polkadot/blob/main/mobiledart.md https://www.figma.com/file/CCn4qdNX2OpDKQMwnhjsdn/citadel.one-v2-mobile-polkadot-stake?node-id=0%3A1 |
+| 1.2 | Stake nodes| Create components of staking nodes operation |https://github.com/citadeldao/polkadot/blob/main/mobiledart.md  https://www.figma.com/file/CCn4qdNX2OpDKQMwnhjsdn/citadel.one-v2-mobile-polkadot-stake?node-id=0%3A1 |
+| 1.3 | Unstake nodes| Create components of unstaking nodes operation | https://github.com/citadeldao/polkadot/blob/main/mobiledart.md https://www.figma.com/file/ZLbTFaIcAMfsp4KzNSFmxW/citadel.one-v2-mobile-polkadot-unstake?node-id=0%3A1 |
 | 2.0 | Stake  | Stake crypto assets | https://github.com/citadeldao/polkadot/blob/main/stake.dart |
 | 2.1 | Unstake | Unstake crypto assets | https://github.com/citadeldao/polkadot/blob/main/unstake.dart |
-| 2.2 | StakeAndNominate | Stake crypto assets and nominate to validator(-s) to get rewards| https://github.com/citadeldao/polkadot/blob/main/StakeAndNominate.dart|
+| 2.2 | StakeAndNominate | Stake crypto assets and nominate to validator(-s) to get rewards| https://github.com/citadeldao/polkadot/blob/main/StakeAndNominate.dart |
 | 2.3 | Transfer | Transfer the coins from one to another address between the net | https://github.com/citadeldao/polkadot/blob/main/transfer.dart |
 | 3.0 | SignAndSend transaction to blockchain | Sign the built transaction and send to blockchain | https://github.com/citadeldao/polkadot/blob/main/SignAndSend.dart |
 
