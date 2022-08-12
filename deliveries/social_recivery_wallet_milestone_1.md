@@ -28,7 +28,7 @@ Milestone 1 - Set up recovery. Also required us to implement Polkadot JS inside 
 | Number | Deliverable | Link | Notes
 | -----: | ----------- | ------------- | ------------- |
 | 0a. | License | [MIT License](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/LICENSE) | 
-| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/tutorial.md) | Same information is in the README...
+| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/tutorial.md) <BR> [Code](https://github.com/hypha-dao/hashed-wallet/tree/v1.0.0_M1_00/) | Install instructions <BR> Source code
 | 0c. | Testing Guide | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/testing_guide.md) | Note only new functionality was added to unit tests, older Seeds Light Wallet or Polkawallet code is not tested.
 | 0d. | App Binaries | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/download/1.0.0_prerelease_M1/app-release.apk) |
 | 0e. | Video | [Video Presentation](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/videos/milestone_1_delivery.md) |
