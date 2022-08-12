@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/openbrush-follow-up.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/openbrush-follow-up-2.md
 - **Milestone:** 6
 - **Previously successfully merged evaluation:** all by cruikshankss
 
