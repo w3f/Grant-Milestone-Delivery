@@ -26,8 +26,9 @@ Milestone 1 - Set up recovery. Also required us to implement Polkadot JS inside 
 
 
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
+
+Please contact me for a demo account with a balance in Hashed tokens. 
+
 ### Milestone 1 — Screen Designs and Configure Recovery
 - **Estimated duration:** 4 weeks
 - **FTE:**  2.5
@@ -36,8 +37,8 @@ Milestone 1 - Set up recovery. Also required us to implement Polkadot JS inside 
 | Number | Deliverable | Link | Notes
 | -----: | ----------- | ------------- | ------------- |
 | 0a. | License | [MIT License](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/LICENSE) | 
-| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/tutorial.md) <BR> [Code](https://github.com/hypha-dao/hashed-wallet/tree/v1.0.0_M1_00/) | Install instructions <BR> Source code
-| 0c. | Testing Guide | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/testing_guide.md) | Note only new functionality was added to unit tests, older Seeds Light Wallet or Polkawallet code is not tested.
+| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/tutorial.md) <BR> [Code](https://github.com/hypha-dao/hashed-wallet/tree/v1.0.0_M1_00/)  <BR> [Architecture Overview](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/architecture.md) | Install instructions <BR> Source code <BR> Architecture
+| 0c. | Testing Guide | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/testing_guide.md) | Note: Contact me for demo account with a token balance to test the recovery API calls. 
 | 0d. | App Binaries | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/download/1.0.0_prerelease_M1/app-release.apk) <BR> [Android Testing Track](https://play.google.com/apps/internaltest/4701631300800602818) <BR> [iOS Testflight App]() - no link yet, waiting for App Store review. Please contact me via Riot / element channel to set up test emails. |
 | 0e. | Video | [Video Presentation](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/videos/milestone_1_delivery.md) |
 | 1. | Screen Designs | [All Screens M1 PDF](https://github.com/hypha-dao/hashed-wallet/raw/v1.0.0_M1_00/documentation/Milestone%201%20Screens.pdf) | These are exported from Figma - happy to also provide Figma link
