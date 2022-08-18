@@ -13,6 +13,6 @@
 
 ## General Notes
 
-I couldn't run the tests or build myself as the instructions provided only work on Linux and I have no physical Linux machine to which to attach a Ledger.
-
-However, CI is in place with [extensive tests](https://github.com/Zondax/ledger-statemint/blob/ae36d96f26d0e371f61dcd77ae10465aaf8ea912/tests/testcases_current.json), and Ledger also has a review process for apps published on Ledger Live.
+I couldn't run the tests or build myself as the instructions provided only work on Linux, and I don't have a physical Linux machine to which I could attach a Ledger.
+However, I didn't deem it necessary as CI is in place with [extensive tests](https://github.com/Zondax/ledger-statemint/blob/ae36d96f26d0e371f61dcd77ae10465aaf8ea912/tests/testcases_current.json), including [integration tests](https://github.com/Zondax/ledger-statemint/blob/main/.github/workflows/main.yml) using Zondax's own Ledger emulator zemu.
+Besides, Ledger has its own review process for apps published on Ledger Live.
