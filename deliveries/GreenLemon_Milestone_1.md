@@ -22,10 +22,10 @@
 | ------ | ------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | 0a.    | License                              | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/LICENSE)          | Apache 2.0                                             
 | 0b.    | Documentation                        | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)        | README.md       
-| 0c.    | Testing Guide                        | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)        |                 | 1.     | Article                              | [Article](https://medium.com/@wuyahuang/green-lemon-protocol-an-anonymous-nft-solution-2fad91cc8f48) [Video](https://www.youtube.com/watch?v=etVIPgOjFNg)|
-| 2.     | (ink!)Smart contracts: Anonymous NFT	| [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.rs)    ||
+| 0c.    | Testing Guide                        | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)        | README.md
+| 0d.     | Article                             | [Article](https://medium.com/@wuyahuang/green-lemon-protocol-an-anonymous-nft-solution-2fad91cc8f48)| [Video](https://www.youtube.com/watch?v=etVIPgOjFNg)
+| 1.     | (ink!)Smart contracts: Anonymous NFT | [Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.rs)    | ApprovalForAll and set_approval_for_all are mentioned by deliverable but are not necessary due to each token owner being a unique and one-time encrypted address.
 
 
 **Additional Information**
 > We added 2 additional features to this milestone, which are both not mentioned by the deliverable. First, add function `token_uri` for users to query the link of NFT metadata. Secondly, we add an additional param into the message before hashing, which is the token nonce. Account nonce is unfit due to each token owner being a unique and one-time encrypted address. When an NFT is operated once, its corresponding token nonce is automatically added by 1. We think that token nonce can prevent replay attacks for signatures already sent to the blockchain.
-> ApprovalForAll and set_approval_for_all are mentioned by deliverable but are not necessary due to each token owner being a unique and one-time encrypted address. 
