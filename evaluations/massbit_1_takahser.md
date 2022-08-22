@@ -115,36 +115,649 @@ which was used for testing the delivery. It should also be checked if the softwa
     scheduler                        RUNNING   pid 8, uptime 1:46:46
     ```
 
-- Core API Tests are currently failing:
+- Core API Tests are currently failing. Note: this has to be run inside the mbr_api container.
 
     ```bash
-    $ ./scripts/run _run_test
-    Bailout called.  Further testing stopped:  ./t/api/api/000-create.t Api create new - Cannot start nginx using command "nginx -p /home/xxx/repos/massbitroute/t/servroot/ -c /home/xxx/repos/massbitroute/t/servroot/conf/nginx.conf > /dev/null" (status code 256).
-    FAILED--Further testing stopped: ./t/api/api/000-create.t Api create new - Cannot start nginx using command "nginx -p /home/xxx/repos/massbitroute/t/servroot/ -c /home/xxx/repos/massbitroute/t/servroot/conf/nginx.conf > /dev/null" (status code 256).
+    $ docker exec -it mbr_api_163 bash
+    root@053d138d95d9:/massbit# bash ./run_unit_test.sh
+
+    #   Failed test 't/api/api/000-create.t Api create new - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+
+    #   Failed test 't/api/api/000-create.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/000-create.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:"id":"c237c346-7a0f-478b-bc0c-e3ca2522948f")'
+    t/api/api/000-create.t .................. 5/? 
+    #   Failed test 't/api/api/000-create.t Check ID conf if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/000-create.t Check ID conf if created or not - response_body - response is expected (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1665.
+    #          got: "<html>\x{0d}\x{0a}<head><title>404 Not Found</title></head>\x{0d}"...
+    #       length: 159
+    #     expected: ""
+    #       length: 0
+    #     strings begin to differ at char 1 (line 1 column 1)
+    # Looks like you failed 5 tests of 6.
+    t/api/api/000-create.t .................. Dubious, test returned 5 (wstat 1280, 0x500)
+    Failed 5/6 subtests 
+    t/api/api/001-update-entrypoints.t ...... 1/? 
+    #   Failed test 't/api/api/001-update-entrypoints.t Api update entrypoints - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/api/001-update-entrypoints.t ...... 3/? 
+    #   Failed test 't/api/api/001-update-entrypoints.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"entrypoints":)'
+    t/api/api/001-update-entrypoints.t ...... 5/? 
+    #   Failed test 't/api/api/001-update-entrypoints.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/001-update-entrypoints.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:"id":"c237c346-7a0f-478b-bc0c-e3ca2522948f")'
+    t/api/api/001-update-entrypoints.t ...... 7/? 
+    #   Failed test 't/api/api/001-update-entrypoints.t Check ID conf if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/001-update-entrypoints.t Check ID conf if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:server_name \~\^\(\?\<myid\>c237c346-7a0f-478b-bc0c-e3ca2522948f)'
+
+    #   Failed test 't/api/api/001-update-entrypoints.t Check blockchain-network conf if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/001-update-entrypoints.t Check blockchain-network conf if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:server_name \~\^\(\?\<myid\>c237c346-7a0f-478b-bc0c-e3ca2522948f)'
+    # Looks like you failed 8 tests of 10.
+    t/api/api/001-update-entrypoints.t ...... Dubious, test returned 8 (wstat 2048, 0x800)
+    Failed 8/10 subtests 
+    t/api/api/002-update-disabled.t ......... 1/? 
+    #   Failed test 't/api/api/002-update-disabled.t Api update entrypoints - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+
+    #   Failed test 't/api/api/002-update-disabled.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"status":0)'
+    t/api/api/002-update-disabled.t ......... 5/? 
+    #   Failed test 't/api/api/002-update-disabled.t Check blockchain-network conf if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/002-update-disabled.t Check blockchain-network conf if created or not - response_body - response is expected (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1665.
+    #          got: "<html>\x{0d}\x{0a}<head><title>404 Not Found</title></head>\x{0d}"...
+    #       length: 159
+    #     expected: ""
+    #       length: 0
+    #     strings begin to differ at char 1 (line 1 column 1)
+    # Looks like you failed 4 tests of 6.
+    t/api/api/002-update-disabled.t ......... Dubious, test returned 4 (wstat 1024, 0x400)
+    Failed 4/6 subtests 
+    t/api/api/003-delete.t .................. 1/? 
+    #   Failed test 't/api/api/003-delete.t Api update entrypoints - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/api/003-delete.t .................. 5/? 
+    #   Failed test 't/api/api/003-delete.t Check blockchain-network conf if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/api/003-delete.t Check blockchain-network conf if created or not - response_body - response is expected (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1665.
+    #          got: "<html>\x{0d}\x{0a}<head><title>404 Not Found</title></head>\x{0d}"...
+    #       length: 159
+    #     expected: ""
+    #       length: 0
+    #     strings begin to differ at char 1 (line 1 column 1)
+    # Looks like you failed 3 tests of 6.
+    t/api/api/003-delete.t .................. Dubious, test returned 3 (wstat 768, 0x300)
+    Failed 3/6 subtests 
+    t/api/gateway/000-create.t .............. 1/? 
+    #   Failed test 't/api/gateway/000-create.t Gateway create new - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/gateway/000-create.t .............. 3/? 
+    #   Failed test 't/api/gateway/000-create.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"status":0)'
+    # Looks like you failed 2 tests of 4.
+    t/api/gateway/000-create.t .............. Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+    t/api/gateway/001-update-enabled.t ...... 1/? 
+    #   Failed test 't/api/gateway/001-update-enabled.t Gateway update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/gateway/001-update-enabled.t ...... 3/? 
+    #   Failed test 't/api/gateway/001-update-enabled.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"status":1)'
+    t/api/gateway/001-update-enabled.t ...... 5/? 
+    #   Failed test 't/api/gateway/001-update-enabled.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/001-update-enabled.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:"status":1)'
+    # Looks like you failed 4 tests of 6.
+    t/api/gateway/001-update-enabled.t ...... Dubious, test returned 4 (wstat 1024, 0x400)
+    Failed 4/6 subtests 
+    t/api/gateway/002-update-approved.t ..... 1/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Gateway update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"approved":1)'
+    t/api/gateway/002-update-approved.t ..... 5/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:eth-mainnet-60173a87-4d2b-469b-b02c-6f212794136c)'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:60173a87-4d2b-469b-b02c-6f212794136c)'
+    t/api/gateway/002-update-approved.t ..... 9/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:60173a87-4d2b-469b-b02c-6f212794136c)'
+    t/api/gateway/002-update-approved.t ..... 11/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:60173a87-4d2b-469b-b02c-6f212794136c)'
+    t/api/gateway/002-update-approved.t ..... 13/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:60173a87-4d2b-469b-b02c-6f212794136c.eth-mainnet)'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:89a21b17-1bbe-4a6b-a5b5-9351d3eb8c81 eth mainnet)'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:89a21b17-1bbe-4a6b-a5b5-9351d3eb8c81 eth mainnet)'
+    t/api/gateway/002-update-approved.t ..... 19/? 
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/gateway/002-update-approved.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:89a21b17-1bbe-4a6b-a5b5-9351d3eb8c81 eth mainnet)'
+    # Looks like you failed 18 tests of 20.
+    t/api/gateway/002-update-approved.t ..... Dubious, test returned 18 (wstat 4608, 0x1200)
+    Failed 18/20 subtests 
+    t/api/gateway/003-update-disapproved.t .. 1/? 
+    #   Failed test 't/api/gateway/003-update-disapproved.t Gateway update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/gateway/003-update-disapproved.t .. 3/? 
+    #   Failed test 't/api/gateway/003-update-disapproved.t Api get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"approved":0)'
+    # Looks like you failed 2 tests of 4.
+    t/api/gateway/003-update-disapproved.t .. Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+    t/api/node/000-create.t ................. 1/? 
+    #   Failed test 't/api/node/000-create.t Node create new - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/node/000-create.t ................. 3/? 
+    #   Failed test 't/api/node/000-create.t Node get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"approved":0)'
+    # Looks like you failed 2 tests of 4.
+    t/api/node/000-create.t ................. Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+    t/api/node/001-register.t ............... 3/? 
+    #   Failed test 't/api/node/001-register.t Node get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"approved":0)'
+
+    #   Failed test 't/api/node/001-register.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/node/001-register.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:"id":"fd6d64f8-70fb-4c12-aa8a-bdc2805a38a4")'
+    t/api/node/001-register.t ............... 7/? 
+    #   Failed test 't/api/node/001-register.t Check raw data if created or not - status code ok'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 936.
+    #          got: '404'
+    #     expected: '200'
+
+    #   Failed test 't/api/node/001-register.t Check raw data if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '<html>
+    # <head><title>404 Not Found</title></head>
+    # <body>
+    # <center><h1>404 Not Found</h1></center>
+    # <hr><center>openresty/1.19.9.1</center>
+    # </body>
+    # </html>
+    # '
+    #     doesn't match '(?^:server_name fd6d64f8-70fb-4c12-aa8a-bdc2805a38a4.node.mbr.massbitroute.net)'
+    # Looks like you failed 5 tests of 8.
+    t/api/node/001-register.t ............... Dubious, test returned 5 (wstat 1280, 0x500)
+    Failed 5/8 subtests 
+    t/api/node/010-update-enabled.t ......... 1/? 
+    #   Failed test 't/api/node/010-update-enabled.t Node update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/node/010-update-enabled.t ......... 3/? 
+    #   Failed test 't/api/node/010-update-enabled.t Node get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"status":1)'
+    # Looks like you failed 2 tests of 4.
+    t/api/node/010-update-enabled.t ......... Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+    t/api/node/011-update-approved.t ........ 1/? 
+    #   Failed test 't/api/node/011-update-approved.t Node update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"result":false,"err_code":100}
+    # '
+    #     doesn't match '(?^:"result":true)'
+
+    #   Failed test 't/api/node/011-update-approved.t Node get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"approved":1)'
+    # Looks like you failed 2 tests of 4.
+    t/api/node/011-update-approved.t ........ Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+    t/api/node/012-update-disapproved.t ..... 1/? 
+    #   Failed test 't/api/node/012-update-disapproved.t Node update - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"result":true)'
+    t/api/node/012-update-disapproved.t ..... 3/? 
+    #   Failed test 't/api/node/012-update-disapproved.t Node get and check if created or not - response_body - like (repeated req 0, req 0)'
+    #   at /usr/local/share/perl/5.30.0/Test/Nginx/Socket.pm line 1657.
+    #                   '{"err_code":100,"result":false}
+    # '
+    #     doesn't match '(?^:"approved":0)'
+    # Looks like you failed 2 tests of 4.
+    t/api/node/012-update-disapproved.t ..... Dubious, test returned 2 (wstat 512, 0x200)
+    Failed 2/4 subtests 
+
+    Test Summary Report
+    -------------------
+    t/api/api/000-create.t                (Wstat: 1280 Tests: 6 Failed: 5)
+    Failed tests:  2-6
+    Non-zero exit status: 5
+    t/api/api/001-update-entrypoints.t    (Wstat: 2048 Tests: 10 Failed: 8)
+    Failed tests:  2, 4-10
+    Non-zero exit status: 8
+    t/api/api/002-update-disabled.t       (Wstat: 1024 Tests: 6 Failed: 4)
+    Failed tests:  2, 4-6
+    Non-zero exit status: 4
+    t/api/api/003-delete.t                (Wstat: 768 Tests: 6 Failed: 3)
+    Failed tests:  2, 5-6
+    Non-zero exit status: 3
+    t/api/gateway/000-create.t            (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    t/api/gateway/001-update-enabled.t    (Wstat: 1024 Tests: 6 Failed: 4)
+    Failed tests:  2, 4-6
+    Non-zero exit status: 4
+    t/api/gateway/002-update-approved.t   (Wstat: 4608 Tests: 20 Failed: 18)
+    Failed tests:  2, 4-20
+    Non-zero exit status: 18
+    t/api/gateway/003-update-disapproved.t (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    t/api/node/000-create.t               (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    t/api/node/001-register.t             (Wstat: 1280 Tests: 8 Failed: 5)
+    Failed tests:  4-8
+    Non-zero exit status: 5
+    t/api/node/010-update-enabled.t       (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    t/api/node/011-update-approved.t      (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    t/api/node/012-update-disapproved.t   (Wstat: 512 Tests: 4 Failed: 2)
+    Failed tests:  2, 4
+    Non-zero exit status: 2
+    Files=13, Tests=86, 35 wallclock secs ( 0.04 usr  0.02 sys +  1.54 cusr  0.72 csys =  2.32 CPU)
+    Result: FAIL
     ```
 
-- Chain Tests are currently failing (the given folder `targetxwfqnf` doesn't exist)
+- Chain Tests are passing, with 2 minor warnings, but they'll be fixed shortly by the grantee
 
     ```bash
     $ cargo test
-    error: Permission denied (os error 13) at path "/home/xxx/repos/massbitchain/targetPv2gzO"
-    $ ls -la /home/xxx/repos/massbitchain/targetxwfqnf
-    ls: cannot access '/home/xxx/repos/massbitchain/targetxwfqnf': No such file or directory
+    
+    (...)
+
+    warning: struct is never constructed: `ExternalityBuilder`
+    --> pallets/dapi/src/mock.rs:153:12
+        |
+    153 | pub struct ExternalityBuilder;
+        |            ^^^^^^^^^^^^^^^^^^
+        |
+        = note: `#[warn(dead_code)]` on by default
+
+    warning: associated function is never used: `build`
+    --> pallets/dapi/src/mock.rs:156:9
+        |
+    156 |     pub fn build() -> TestExternalities {
+        |            ^^^^^
+
+
+        test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests src/lib.rs (target/debug/deps/keiko_runtime-d75f5835594723ac)
+
+    (...)
+
+    running 1 test
+    test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+    test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests src/lib.rs (target/debug/deps/local_runtime-7cd16be709df6c2a)
+
+    running 1 test
+    test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+    test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests src/lib.rs (target/debug/deps/massbit_node-2caf6d78f4583304)
+
+    running 0 tests
+
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests bin/main.rs (target/debug/deps/massbit_node-4b21e53b94379c27)
+
+    running 0 tests
+
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests src/lib.rs (target/debug/deps/pallet_block_reward-8662ed1a29a7bc10)
+
+    running 8 tests
+    test tests::distribution_config_is_invalid ... ok
+    test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+    test tests::default_distribution_config_is_valid ... ok
+    test tests::distribution_config_is_valid ... ok
+    test tests::set_configuration_success ... ok
+    test tests::set_configuration_fail ... ok
+    test tests::inflation_and_total_issuance_as_expected ... ok
+    test tests::reward_distribution_as_expected ... ok
+
+    test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+        Running unittests src/lib.rs (target/debug/deps/pallet_dapi-86ee53651f07dd6a)
+
+    running 1 test
+    test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+    test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+        Running unittests src/lib.rs (target/debug/deps/pallet_dapi_staking-a30585c0b337167d)
+
+    running 7 tests
+    test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+    test tests::reward_is_ok ... ok
+    test tests::unregister_stake_and_unstake_is_not_ok ... ok
+    test tests::register_is_ok ... ok
+    test tests::unregister_after_register_is_ok ... ok
+    test tests::register_same_provider_twice_fails ... ok
+    test tests::on_initialize_is_ok ... ok
+
+    test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+        Running unittests src/lib.rs (target/debug/deps/pallet_validator_set-001bf3c1140bf27a)
+
+    running 16 tests
+    test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+    test tests::cannot_set_genesis_value_twice - should panic ... ok
+    test tests::set_invulnerables ... ok
+    test tests::basic_setup_works ... ok
+    test tests::register_as_candidate_successfully ... ok
+    test tests::cannot_register_as_candidate_if_insufficient_fund ... ok
+    test tests::set_desired_candidates ... ok
+    test tests::cannot_register_as_candidate_if_already_invulnerable ... ok
+    test tests::cannot_register_candidate_if_too_many ... ok
+    test tests::set_candidacy_bond ... ok
+    test tests::cannot_register_duplicate_candidate ... ok
+    test tests::authorship_event_handler ... ok
+    test tests::cannot_unregister_candidate_if_too_few ... ok
+    test tests::leave_intent ... ok
+    test tests::session_management_works ... ok
+    test tests::kick_and_slash_mechanism ... ok
+
+    test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
     ```
 
 - Fisherman Tests are currently also failing:
 
     ```bash
     $ cargo tarpaulin -v
-    error: could not compile `migrations_macros` due to 2 previous errors
-
-    Caused by:
-    process didn't exit successfully: `rustc --crate-name migrations_macros /home/xxx/.cargo/registry/src/github.com-1ecc6299db9ec823/migrations_macros-1.4.2/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type proc-macro --emit=dep-info,link -C prefer-dynamic -C embed-bitcode=no -C debuginfo=2 --cfg 'feature="default"' -C metadata=3d9b37efe2366aee -C extra-filename=-3d9b37efe2366aee --out-dir /home/xxx/repos/massbitroute_fisherman/target/debug/deps -L dependency=/home/xxx/repos/massbitroute_fisherman/target/debug/deps --extern migrations_internals=/home/xxx/repos/massbitroute_fisherman/target/debug/deps/libmigrations_internals-330656982db456d3.rlib --extern proc_macro2=/home/xxx/repos/massbitroute_fisherman/target/debug/deps/libproc_macro2-1a91274e1ad830ba.rlib --extern quote=/home/xxx/repos/massbitroute_fisherman/target/debug/deps/libquote-f9800d15400775c0.rlib --extern syn=/home/xxx/repos/massbitroute_fisherman/target/debug/deps/libsyn-c683448ab8e12ce6.rlib --extern proc_macro --cap-lints allow -Cdebuginfo=2 --cfg=tarpaulin -Clink-dead-code` (exit status: 1)
+            Running `rustc --crate-name sea_orm_migration --edition=2021 /home/seraya/.cargo/registry/src/github.com-1ecc6299db9ec823/sea-orm-migration-0.8.3/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 -C metadata=e2771940cc7ae202 -C extra-filename=-e2771940cc7ae202 --out-dir /home/seraya/repos/massbitroute_fisherman/target/debug/deps -L dependency=/home/seraya/repos/massbitroute_fisherman/target/debug/deps --extern async_trait=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libasync_trait-292d1141c7ae2b94.so --extern clap=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libclap-fdda7181d438dff7.rmeta --extern dotenv=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libdotenv-700445d3d22bfbe4.rmeta --extern sea_orm=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libsea_orm-fc6e82eeff39febe.rmeta --extern sea_orm_cli=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libsea_orm_cli-b7cf004d9d5e5659.rmeta --extern sea_schema=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libsea_schema-0ac54271c3b65a7e.rmeta --extern tracing=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libtracing-744ece3e53eb2a48.rmeta --extern tracing_subscriber=/home/seraya/repos/massbitroute_fisherman/target/debug/deps/libtracing_subscriber-4aea1b459029d38e.rmeta --cap-lints allow -Cdebuginfo=2 --cfg=tarpaulin -Clink-dead-code`
+    Aug 22 14:14:44.327 DEBUG cargo_tarpaulin::cargo: Linker paths: ["/usr/lib/x86_64-linux-gnu", "/home/seraya/repos/massbitroute_fisherman/target/debug/build/libnghttp2-sys-d9ee638ecc4ba134/out/i/lib", "/home/seraya/repos/massbitroute_fisherman/target/debug/build/curl-sys-ac2d783be39586fd/out/build"]
+    error: Broken pipe (os error 32)
     warning: build failed, waiting for other jobs to finish...
     error: Broken pipe (os error 32)
     error: build failed
-    Aug 19 15:09:59.649 ERROR cargo_tarpaulin: Failed to compile tests! Error: migrations_macros: linking with `cc` failed: exit status: 1
-    Error: "Failed to compile tests! Error: migrations_macros: linking with `cc` failed: exit status: 1"
+    Aug 22 14:14:45.120 ERROR cargo_tarpaulin: Failed to compile tests! Error: common: there is no argument named `DEFAULT_KEY`
+    Error: "Failed to compile tests! Error: common: there is no argument named `DEFAULT_KEY`"
     ```
 
 ### Docker Feedback
