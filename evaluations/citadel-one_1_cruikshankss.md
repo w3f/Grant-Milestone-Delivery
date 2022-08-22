@@ -3,7 +3,6 @@
 - **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/citadel.md
 - **Milestone:** 1
-- **Kusama Identity:** 
 - **Previously successfully merged evaluation:** All by cruikshankss
 
 # Deliverables Table
@@ -31,9 +30,11 @@
 
 Congratulations on successfully completing your w3f grant! It's really clear how much you've built & how much value you've created. Flutter teams are extremely rare in this ecosystem (afaik). I think Flutter is one of the highest-ideal (most PWA) frontend technologies. Your team is highly skilled both mobile & desktop. And nice job implementing the polkadot api!
 
-Like we discussed, I recommend you search the [w3f grants github](https://github.com/w3f/Grants-Program) for these and other projects who are working on w3f grants : e.g. [pendulum spacewalk](https://github.com/w3f/Grants-Program/pull/749) (oracle/wasm) and [polkadart](https://github.com/w3f/Grants-Program/pull/1053) (polkadot{.js} api but with dart). You're all open-source and I think you'd all potentially be great complements to each other in the ecosystem. It seems you've built some overlapping technologies but each of your true foci are in adjacent layers of the ideal web 3.0 tech stack. 
 
-UI/UX is one of your major strenths and it's been difficult to find these teams in the substrate ecosystem (check our [tech stack wiki](https://wiki.polkadot.network/docs/build-open-source) for more info). Your asset storage & management/dApp marketplace/DeFi platform/non-custodial mobile wallet UIs seems very professional, aesthetic, fast and responsive. Nice job integrating subscan into the mobile in-app browser. It's also cool that in your roadmap you mentioned an extension and an SDK. 
+UI/UX is one of your major strengths and it's been difficult to find these teams in the substrate ecosystem (check our [tech stack wiki](https://wiki.polkadot.network/docs/build-open-source) for more info). Your asset storage & management/dApp marketplace/DeFi platform/non-custodial mobile wallet UIs seem very professional, aesthetic, fast and responsive. You've really built so much. Nice job integrating subscan into the mobile in-app browser. It's also cool that in your roadmap you mentioned an extension and an SDK. 
+
+
+Like we discussed, I recommend you search the [w3f grants github](https://github.com/w3f/Grants-Program) for these and other projects who are working on w3f grants : e.g. [pendulum spacewalk](https://github.com/w3f/Grants-Program/pull/749) (oracle/wasm) and [polkadart](https://github.com/w3f/Grants-Program/pull/1053) (polkadot{.js} api but with dart). You're all open-source and I think you'd all potentially be great complements to each other in the ecosystem. It seems you've built some overlapping technologies but each of your true foci are in adjacent layers of the ideal web 3.0 tech stack. 
 
 Once again, congratulations and thank you for your excellent contributions to the ecosystem!
 
