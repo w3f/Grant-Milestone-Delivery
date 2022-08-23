@@ -17,8 +17,3 @@
 | 0c. | Testing Guide | https://github.com/Uke-Messaging/uke-account-filter#building--running-tests & https://github.com/Uke-Messaging/uke-human-dns#building--running-tests| Testing and building sections for both contracts. | 
 | 1. | Human DNS ink! Smart Contract | https://github.com/Uke-Messaging/uke-human-dns | Fully functioning smart contract, queryable that keeps a mapping of addresses to users, allowing for user IDs and accounts to be identified.| 
 | 2. | Account Rules ink! Smart Contract |https://github.com/Uke-Messaging/uke-account-filter| Fully functioning smart contract which maps rules to registered accounts. Each account is either "opted in", or out. Accounts can then set and define rules relating to who they wish to filter out from their messages. | 
-
-
-**Additional Information**
-
-This is not info - however I'd like for the payment address in the grant application to be changed, as I need to use a new one. Is this possible? Thank you!
