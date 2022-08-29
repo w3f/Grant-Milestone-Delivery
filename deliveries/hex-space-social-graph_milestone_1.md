@@ -19,7 +19,7 @@
 | 0c2. | Testing Guide  of Front End  2| [How to edit the Profile on HexSpaceFrontEnd  Tutorial](https://github.com/rust-0x0/hex-space-protocol-docs/blob/6ce9707bed58832e262cba236e07d1f8a9dc3e39/Profile.md)||
 | 0d. | Docker | [docker file](https://github.com/rust-0x0/hex-space-protocol-front-end/blob/508ca3ccf0459e975445eded2b084efbc34c6a6a/Dockerfile) ||
 | 0e. | Article | [article](https://medium.com/@rust.0x0/hex-space-social-graph-487c548c2391)||
-| 1. |  ink! Contract: HexSpace | [code](https://github.com/rust-0x0/hex-space-protocol-substrate/tree/9123f9503f45a89958bef6c96eb308b82dd7f3a6/hex_space_social_graph) |  |
+| 1. |  ink! Contract: HexSpaceSocialGraph | [code](https://github.com/rust-0x0/hex-space-protocol-substrate/tree/9123f9503f45a89958bef6c96eb308b82dd7f3a6/hex_space_social_graph) |  |
 | 2. |  protocol front-end  | [code](https://github.com/rust-0x0/hex-space-protocol-front-end/tree/508ca3ccf0459e975445eded2b084efbc34c6a6a)|  |
 
 
