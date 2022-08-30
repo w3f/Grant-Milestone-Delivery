@@ -18,9 +18,9 @@
 
 Thank you very much for considering our comments on the deliverables. Considering the amendment to the grant and the revision to the deliveries, I would consider milestone 1 to be successfully completed. 
 
-The unified implementation of the hash function [here](https://github.com/w3f-grants-archive/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation) successfully passes all the unit tests and hashes to the four sample curves provided in the code (see [Test Results](#Test Results)).
+The unified implementation of the hash function [here](https://github.com/w3f-grants-archive/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation) successfully passes all the unit tests and hashes to the four sample curves provided in the code (see [Test Results](#test-results)).
 
-# Test Result
+# Test Results
 ```
 sage '~/code/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation/Indifferentiable hashing with the cost of one exponentiation.sage'
 testing hashing to Elliptic Curve defined by y^2 = x^3 + 1 over Finite Field of size 258664426012969094010652733694893533536393512754914660539884262666720468348340822774968888139573360124440321458177
