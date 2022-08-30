@@ -15,7 +15,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0b. | Documentation |[architecture](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/architecture.png)||
+| 0b. | Documentation |[architecture](https://nutsfinance.gitbook.io/tapio/)||
 | 0c.  | Testing |[xcm](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset-xcm/src/tests.rs) [stable-asset](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset/src/tests.rs)||
 | 0d.  | Docker |[Acala](https://github.com/AcalaNetwork/Acala/blob/ad240e9b96d4338a66fe7daad5bf53d8bb6a25f8/scripts/Dockerfile) [bifrost](https://github.com/nutsfinance/bifrost/blob/f0cba77760cf7e9b4576f6a255c6496edd36aad0/Dockerfile)||
 | 0e.  | Article |[Article](https://dingshengda.medium.com/explaining-tdot-6a8cfe999f47)||
