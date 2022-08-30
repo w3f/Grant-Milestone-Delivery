@@ -18,5 +18,5 @@
 | 0b. | Documentation |[architecture](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/architecture.png)||
 | 0c.  | Testing |[xcm](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset-xcm/src/tests.rs) [stable-asset](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset/src/tests.rs)||
 | 0d.  | Docker |[Acala](https://github.com/AcalaNetwork/Acala/blob/ad240e9b96d4338a66fe7daad5bf53d8bb6a25f8/scripts/Dockerfile) [bifrost](https://github.com/nutsfinance/bifrost/blob/f0cba77760cf7e9b4576f6a255c6496edd36aad0/Dockerfile)||
-| 0e.  | Article |[Article]()||
+| 0e.  | Article |[Article](https://dingshengda.medium.com/explaining-tdot-6a8cfe999f47)||
 | 1.  | Substrate module: Stable Asset XCM Pallet |[code](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset-xcm/src/lib.rs#L318-L363) [local invocation](https://github.com/AcalaNetwork/Acala/blob/ad240e9b96d4338a66fe7daad5bf53d8bb6a25f8/runtime/karura/src/lib.rs#L1627-L1774) [xcm invocation](https://github.com/nutsfinance/bifrost/blob/f0cba77760cf7e9b4576f6a255c6496edd36aad0/runtime/bifrost-kusama/src/lib.rs#L1976-L1997)||
