@@ -11,7 +11,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0) and MIT license (https://opensource.org/licenses/MIT) | ... |
+| 0a. | License | [LICENSE](https://github.com/zhenfeizhang/indifferentiable-hashing/blob/master/LICENSE) | MIT |
 | 0b. | Documentation |  | Inline documentation |
 | 0c. | Testing Guide | https://github.com/zhenfeizhang/indifferentiable-hashing#testing | You may need [SageMath](https://www.sagemath.org/) to validate test vectors
 | 0e. | Article | Section 1.1 of my new article https://eprint.iacr.org/2021/1082 | ... |
