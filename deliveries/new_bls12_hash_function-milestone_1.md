@@ -11,10 +11,10 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://www.gnu.org/licenses/gpl-3.0.html | ... |
+| 0a. | License | Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0) and MIT license (https://opensource.org/licenses/MIT) | ... |
 | 0b. | Documentation | published article: https://link.springer.com/article/10.1007/s10623-022-01012-8, free eprint version: https://eprint.iacr.org/2021/301 | ... |
-| 0c. | Testing Guide | ... | The main function prints the hash point H(s) = (X:Y:Z) = (x:y:1) on an elliptic curve, where s is a random string, X, Y, Z are the projective coordinates, and x, y are the affine ones, that is x = X/Z, y = Y/Z. Also, inline documentation on the implementation is provided. |
-| 0e. | Article | A link to the implementation is given in Section 1.1 of my new article https://eprint.iacr.org/2021/1082. My gratitude to W3F for its support is expressed at the end of that article. | ... |
-| 1. | Sage implementation | https://github.com/dishport/Indifferentiable-hashing-to-ordinary-elliptic-curves-of-j-0-with-the-cost-of-one-exponentiation | ... | 
+| 0c. | Testing Guide | make test | You may need [SageMath](https://www.sagemath.org/) to validate test vectors
+| 0e. | Article | Section 1.1 of my new article https://eprint.iacr.org/2021/1082 | ... |
+| 1. | Rust non-constant-time implementation | https://github.com/zhenfeizhang/indifferentiable-hashing | ... |
 
 **Additional Information**
