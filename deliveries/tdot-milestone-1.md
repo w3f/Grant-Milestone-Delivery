@@ -15,7 +15,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0b. | Documentation |[architecture](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/architecture.png)||
-| 0c.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset-xcm/src/tests.rs)||
+| 0b. | Documentation |[architecture](https://github.com/nutsfinance/stable-asset/blob/affe16c004003307bfa9c5e3db733d78e1c9f33e/architecture.png)||
+| 0c.  | Testing |[code](https://github.com/nutsfinance/stable-asset/blob/affe16c004003307bfa9c5e3db733d78e1c9f33e/lib/stable-asset-xcm/src/tests.rs)||
 | 0d.  | Docker |[code](https://github.com/AcalaNetwork/Acala/blob/ad240e9b96d4338a66fe7daad5bf53d8bb6a25f8/scripts/Dockerfile)||
-| 1.  | Substrate module: Stable Asset XCM |[code](https://github.com/nutsfinance/stable-asset/blob/09b447d33291fb1507862898684a3279c4320ed3/lib/stable-asset-xcm/src/lib.rs)||
+| 1.  | Substrate module: Stable Asset XCM |[code](https://github.com/nutsfinance/stable-asset/blob/affe16c004003307bfa9c5e3db733d78e1c9f33e/lib/stable-asset-xcm/src/lib.rs)||
