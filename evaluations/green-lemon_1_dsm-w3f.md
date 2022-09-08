@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** [Green Lemon Protocol](https://github.com/w3f/Grants-Program/blob/master/applications/GreenLemon.md) 
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,10 +9,10 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a | License |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/LICENSE)| ok |
-| 0b  | Documentation |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)| Minor improvements. See General Notes. |
-| 0c | Testing Guide  |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)| Minor improvements. See General Notes. |
+| 0b  | Documentation |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)| Minor improvements. See General Notes. Ok. |
+| 0c | Testing Guide  |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/README.md)| Minor improvements. See General Notes. Ok. |
 | 0d | Article  |<ul><li>[x] </li></ul>|[Article](https://medium.com/@wuyahuang/green-lemon-protocol-an-anonymous-nft-solution-2fad91cc8f48), [Video](https://www.youtube.com/watch?v=etVIPgOjFNg)| ok |
-| 1 | (ink!)Smart contracts: Anonymous NFT  |<ul><li>[ ] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.rs)| Possible missing requirement, also minor improvements. See General Notes. |
+| 1 | (ink!)Smart contracts: Anonymous NFT  |<ul><li>[x] </li></ul>|[Link](https://github.com/GreenLemonProtocol/dksap-polkadot/blob/main/erc721/lib.rs)| Possible missing requirement, also minor improvements. See General Notes. Ok. |
 
 ## General Notes
 
@@ -27,6 +27,8 @@ In the build contract step, I needed to add nightly builds to my runtime env. Ma
 I also got a problem with the version of binaryen since with the command suggested “apt-get install binaryen” the version installed was 91 and the required is 99. I needed to install it manually, so it would be better to suggest this way of installing in the manual, download from the link below and add wasm-opt executable path to the PATH variable:
 
 `https://github.com/WebAssembly/binaryen/releases`
+
+Ok. Improved in the documentation.
 
 
 ### 3. Automated Testing:
@@ -45,9 +47,12 @@ Comments about testing coverage:
 
 94.96% coverage, 264/278 lines covered.
 
-total_supply function not covered.
+total_supply function not covered (now covered).
 
 Error handling paths not covered.
+
+Ok. Coverage increased to 96.58% (+1.61%).
+
 
 ### 4. Static Analysis
 `cargo +nightly clippy`
@@ -58,6 +63,8 @@ Please look into the warnings and decide which makes sense to fix. You can also 
 
 `cargo +nightly clippy –fix`
 
+Ok. Some of them fixed.
+
 ### 5. Scripts
 
 All ran ok.
@@ -65,11 +72,13 @@ All ran ok.
 ### 6. Code documentation.
 It has a file header documentation and a single comment for each method. Would be better if it has method parameters and also return values documentation. I was not able to generate methods documentation with cargo doc. 
 
+Ok. Improved.
+
 ### 7. Other.
 
  The M1 specification mentions those methods: Approval, ApprovalForAll, clear_approval, and set_approval_for_all. However the methods ApprovalForAll and set_approval_for_all don’t seem to be present in the code. Could you please explain the reason for that?
 
 Just one doubt, the solution proposed relies on a relayer to send transactions. How this could affect the overall solution proposed? In practice, would be a single centralized relayer or a decentralized (or multiple) one?
 
-
+Ok. Answered. 
 
