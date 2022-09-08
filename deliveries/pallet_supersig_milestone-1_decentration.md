@@ -16,13 +16,17 @@ https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.m
 
 **Context** 
 
-Supersig is like multisig but with superpowers. This means that you can add and remove removes from the supersig through voting via simpleMajority, instead of fixed thresholds. 
+Supersig is like multisig but with superpowers. This means that you can add and remove members from the supersig through voting via simpleMajority, instead of fixed thresholds. 
 
-Secondly theres the "masteruser" feature. Where someone who is master (as opposed to standard), has 50% of the voting power. This means that if a master user is involved in a transaction, only one other person needs to sign in order to approve the transaction for execution. (More than one person can be a master user).
+Secondly, there is also the "master" user feature. A master user always has 50% of the voting power. This means that if a master user is involved in a transaction, only one other person needs to sign in order to approve the transaction for execution. (More than one person can be a master user). 
 
-Supersig is now part of Kabocha parachain's main net, and will be used in the wild. 
+Supersig is now part of Kabocha parachain's main net on Kusama. 
 
-Milestone 1 is about building pallet_supersig's first version. The pallet now allows you to do the abovementioned core functions. We went slightly overtime and over budget with the milestone, and we have also used half of milestone 3's feedback section to create RPC module to make it much easier to query the storage.  
+Milestone 1 is about building pallet_supersig's first version. The pallet now allows you to do the abovementioned core functions. 
+
+We have also apportioned half of milestone 3's feedback and imrprovements, section to: 
+a) create RPC module to make it much easier to query the storage.  
+b) change from Account nonce to AccountId to for usability. 
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
