@@ -13,12 +13,3 @@ has been filled out correctly for this milestone.**
 The first milestone covers:
 - add sign_contract method
 
-| Number | Deliverable              | Link                                                                             | Notes                                                                                                                                                         |
-| ------------- |--------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0a. | License: Apache 2.0      | https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/LICENSE            |                                                                                                                                                               | 
-| 0b.  | Documentation & tutorial | -                                                                                | The inline documentation is the lib.rs files of) | 
-| 0c. | Testing Guide            | -                                                                                || 
-| 0d. | Dockerfile               | https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/docker-compose.yml |                                                                                                                                                               | 
-| 0e.  | Article                  | -                                                                                | The article will be published once the milestone is approved.                                                                                                 | 
-| 1.  | escrow pallet            | https://github.com/herou/EscrowPallet/tree/eljo-prifti/escrow/pallets/escrow     |                                                                                                                                                               |
-
