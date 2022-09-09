@@ -4,6 +4,12 @@
 
 * **Application Document:** [Escrow Pallet](https://github.com/herou/Grants-Program/blob/af324cf01e0cfe707c262d86a0edaf81b53ca340/applications/escrow_pallet.md)
 * **Milestone Number:** 1
+  Context
+
+**Context**
+
+The first milestone covers:
+- add sign_contract method
 
 | Number | Deliverable              | Link                                                                                                    | Notes                                                                                                                                                          |
 | ------------- |--------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -13,3 +19,8 @@
 | 0d. | Dockerfile               | [Link](https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/docker-compose.yml)                                                                                                |                                                                                                                                                                | 
 | 0e.  | Article                  | [Link](https://medium.com/p/6f941c28b6fd/edit)                                                          | The article will be published once the milestone is approved.                                                                                                  | 
 | 1.  | escrow pallet            | [Link](https://github.com/herou/EscrowPallet/tree/eljo-prifti/escrow/pallets/escrow)                    |                                                                                                                                                                |
+
+
+
+
+
