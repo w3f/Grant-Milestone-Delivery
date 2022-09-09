@@ -4,16 +4,14 @@
 The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
 has been filled out correctly for this milestone.**
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/scale-codec-comparator.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/af324cf01e0cfe707c262d86a0edaf81b53ca340/applications/escrow_pallet.md
 * **Milestone Number:** 1
 
 
 | Number | Deliverable   | Link                                                                                 | Notes |
 |--------|---------------|--------------------------------------------------------------------------------------|-------|
-| 1.     | Source code   | https://github.com/gmajor-encrypt/scale-codec-comparator                             |       |
-| 2.     | License       | MIT license                                                                          | MIT   |
-| 3.     | Tests         | https://github.com/gmajor-encrypt/scale-codec-comparator#how-to-test                 |       |
-| 4.     | Github action | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows |       |
+| 1.     | Source code   | https://github.com/herou/EscrowPallet/tree/eljo-prifti/escrow                        |       |
+| 2.     | License       | Apache-2.0 license                                                                   |Apache |
 
 **Additional Information**
 This milestone completes the comparison test of scale.go, scale.rb, polkadot.js, py-scale-codec, php-scale-codec.
