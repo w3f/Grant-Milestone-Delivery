@@ -56,5 +56,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.gitignore
+.github/workflows/README.md
+deliveries/milestone-delivery-template.md
+maintenance_deliveries/maintenance-delivery-template.md
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows
