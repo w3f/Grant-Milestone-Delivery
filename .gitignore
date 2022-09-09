@@ -64,3 +64,7 @@ maintenance_deliveries/maintenance-delivery-template.md
 
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows
+/.idea/Grant-Milestone-Delivery.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
