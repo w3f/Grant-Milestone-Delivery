@@ -1,20 +1,26 @@
 # Milestone Delivery :mailbox:
 
-**
-The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
-has been filled out correctly for this milestone.**
+> ⚡ Only the GitHub account that submitted the application is allowed to submit milestones.
+>
+> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/af324cf01e0cfe707c262d86a0edaf81b53ca340/applications/escrow_pallet.md
-* **Milestone Number:** 1
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**
 
+* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
+* **Milestone Number:** e.g. 1
 
-| Number | Deliverable   | Link                                                                                 							         | Notes |
-|--------|---------------|------------------------------------------------------------------------------------------------------|-------|
-| 1.     | Source code   | https://github.com/herou/EscrowPallet/tree/eljo-prifti/escrow                       							          |       |
-| 2.     | License       | Apache-2.0 license                                                                  							          |Apache |
-| 3.     | Tests         | https://docs.google.com/document/d/1XpxfrG6Qd9AHJ7OUVv3L3D6ZcEyizGh68w7yZxN3p_A/edit?usp=sharing     |       |
-| 4.     | Article       | https://medium.com/p/6f941c28b6fd/edit                                                               |        |
-| 5.     | Github action | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows 							         |       |
+**Context** (optional)
+> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+
+**Deliverables**
+> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work.
+>
+> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 1. | ... |...| ...| 
+| 2.  | ... |...| ...| 
 
 **Additional Information**
-This milestone completes the comparison test of scale.go, scale.rb, polkadot.js, py-scale-codec, php-scale-codec.
+> Any further comments on the milestone that you would like to share with us.
