@@ -9,13 +9,13 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/f92fdb66505bba53f83a070b021cbd765d9a4070/packages/extension-plus/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [PolkadotJs Plus wiki](https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/How-To's#social-recovery) | We will provide both inline documentation of the code and a basic tutorial that explains how a user can use each of the implemented functionalities. |
-| 0c. | Testing Guide	| <ul><li>[ ] </li></ul> | [Testing Instructions](https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/Installation#testing) | See [Testing Guide Feedback](#testing-guide-feedback) |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [PolkadotJs Plus wiki](https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/How-To's#social-recovery) | I found some legacy code [here](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/AsRescuer.tsx#L115-L132). There are not a lot of inline comments, but given the nature and readability of the (ReactJs) code I'm fine with that. |
+| 0c. | Testing Guide	| <ul><li>[x] </li></ul> | [Testing Instructions](https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/Installation#testing) | See [Testing Guide Feedback](#testing-guide-feedback) |
 | 0d. | Article	| <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/@ekbatanifard/social-recovery-by-polkadot-js-plus-ca422d871850) | - |
-| 1. | Make recoverable | <ul><li>[ ] </li></ul> | [SocialRecovery/Configure.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/Configure.tsx) | I wasn't able to connect to Westend, it's missing in the dropdown menu. |  
-| 2. | Rescue account | <ul><li>[ ] </li></ul> | [SocialRecovery/Rescue.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/Rescue.tsx) | I wasn't able to connect to Westend, it's missing in the dropdown menu. |  
-| 3. | Friends vouches | <ul><li>[ ] </li></ul> | [SocialRecovery/AsFriend.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/AsFriend.tsx) | I wasn't able to connect to Westend, it's missing in the dropdown menu. |
-| 4. | Takeover lost account | <ul><li>[ ] </li></ul> | [SocialRecovery/AsRescuer.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/AsRescuer.tsx) | I wasn't able to connect to Westend, it's missing in the dropdown menu. |
+| 1. | Make recoverable | <ul><li>[x] </li></ul> | [SocialRecovery/Configure.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/Configure.tsx) | It works. However, I noticed that in the *Configure my account* the addresses don't get cached and get lost if the user navigates from the *Configuration* to the *Info* tab and back. I added an [issue](https://github.com/Nick-1979/polkadot-Js-Plus-extension/issues/67). |  
+| 2. | Rescue account | <ul><li>[x] </li></ul> | [SocialRecovery/Rescue.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/Rescue.tsx) | - |  
+| 3. | Friends vouches | <ul><li>[x] </li></ul> | [SocialRecovery/AsFriend.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/AsFriend.tsx) | It wasn't apparent to me that the rescuer has to vouch for himself as well. I think there's room for improvement from a UX perspective there. However, it works well. |
+| 4. | Takeover lost account | <ul><li>[x] </li></ul> | [SocialRecovery/AsRescuer.tsx](https://github.com/Nick-1979/polkadot-Js-Plus-extension/blob/9d6b6838579b60c312bcd91c0287cb674a28f7a2/packages/extension-plus/src/Popup/SocialRecovery/AsRescuer.tsx) | - |
 
 
 Ideally all links inside the above table should include the commit hash,
@@ -23,7 +23,7 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- Deliverables 1-4 have been successfully tested on Westend.
 
 ### Testing Guide Feedback
 
