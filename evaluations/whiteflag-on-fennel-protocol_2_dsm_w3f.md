@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Accepted
+- **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Whiteflag-on-Fennel.md 
 - **Milestone:** 2
 - **Kusama Identity:** Address
