@@ -3,7 +3,7 @@
 - **Status:** Accepted
 - **Application Document:** [universaldot.me](https://github.com/w3f/Grants-Program/blob/master/applications/universaldot.me.md) 
 - **Milestone:** 1
-- **Kusama Identity:** Address
+- **Kusama Identity:** HhsGJjwLaUaDwhT2K53mcE64JiFghVWm42Qm3Vttq6DNJKx
 - **Previously successfully merged evaluation:** N/A
 
 | Number | Deliverable | Link | Evaluation Notes |
