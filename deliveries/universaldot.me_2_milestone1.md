@@ -22,12 +22,12 @@ The new Release 0.7 contains the following features:
 | 0a. | License|https://github.com/UniversalDot/universal-dot-node/blob/universal-master/LICENSE </br> https://github.com/UniversalDot/front-end/blob/develop/LICENSE.md | ...| 
 | 0b.  | Documentation | Documentation regarding the app is provided at: https://docs.universaldot.me/| All substrate code (including tests includes ample inline code documentation)| 
 | 0c. | Testing Guide | https://docs.universaldot.me/docs/sdk/Testing | ...| 
-| 0d. | Docker |https://github.com/UniversalDot/compose-service/blob/master/docker-compose.yml| Single docker-compose file that starts the node, front-end, IPFS and Tensorflow| 
+| 0d. | Docker |https://hub.docker.com/layers/universaldot/node/develop/images/sha256-a855c5992c62a59206e964687147ce27c8541b2cf43a2a55e145fc4d746409e2| Documentation on how to run latest development image: https://github.com/UniversalDot/universal-dot-node#development|
 | 0e. | Article |https://medium.com/universaldot/vision-everything-starts-with-a-why-d4ad616a4310| ...| 
 | 1. | Improve Profile,Task, Dao pallets |Release: https://github.com/UniversalDot/universal-dot-node/releases/tag/v0.7.0 <br/> Pallet Profile: https://github.com/UniversalDot/universal-dot-node/blob/universal-master/pallets/profile/src/lib.rs <br/> Pallet Task: https://github.com/UniversalDot/universal-dot-node/blob/universal-master/pallets/task/src/lib.rs <br/> Pallet Dao: https://github.com/UniversalDot/universal-dot-node/blob/universal-master/pallets/dao/src/lib.rs | ...|
 | 2. | Tensorflow Integration |https://github.com/UniversalDot/front-end/pull/11/files <br/> Model: https://github.com/UniversalDot/tensorflow| ...| 
 | 3. | DAO Redesign |Figma:  https://www.figma.com/file/HHVZfIdNWrKOKNka6gdm5d/Dao-Design?node-id=0%3A1 <br/>  New front-end: https://test.universaldot.me| ...|
-| 4. | IPFS Design Document |https://drive.google.com/file/d/1uYoLvdV9r5kaIxKSVCKBcEF5xWb_4ktn/view?usp=sharing| ...|
+| 4. | IPFS Design Document |https://drive.google.com/file/d/11BNKzUyglGspm0Vy9ggfOp1iNAKQmpeq/view?usp=sharing | Licensed under CC|
 | 5. | CI/CD |Github Actions: <br/> Node: https://github.com/UniversalDot/universal-dot-node/actions <br/> Front-end: https://github.com/UniversalDot/front-end/actions <br/> Actions Config: <br/> Node: https://github.com/UniversalDot/universal-dot-node/blob/universal-develop/.github/workflows/check.yml <br/> Front-end: https://github.com/UniversalDot/front-end/blob/develop/.github/workflows/deploy.yml | ...|
 | 6. | Udot Wiki |https://docs.universaldot.me| ...|
 
