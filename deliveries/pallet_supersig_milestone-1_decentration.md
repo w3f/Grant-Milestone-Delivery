@@ -12,7 +12,7 @@
 https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.md
 
 
-* **Milestone Number:** 1, and half of 3. 
+* **Milestone Number:** 1
 
 **Context** 
 
