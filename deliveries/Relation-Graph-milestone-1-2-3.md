@@ -1,12 +1,10 @@
-* Name: [Relation-Graph.md](https://github.com/w3f/Grants-Program/blob/master/applications/Relation-Graph.md)
-* Milestone 1,2 and 3
-* Link to the initial [pull request 928](https://github.com/w3f/Grants-Program/pull/928)
+**The [invoice form :pencil:](https://docs.google.com/forms/u/1/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/formResponse) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
 
- * Link to [github repo](https://github.com/relationlabs/Relation-Graph/), commit hash: c1aa5ef9f88655fcea49f042e8f39822617217c0
+ * **Application Document:** [Relation Graph.md](https://github.com/w3f/Grants-Program/blob/master/applications/Relation-Graph.md)
+ * **Milestone Number:** 1,2,3 
+ * **PR Link:** [pull request 928](https://github.com/w3f/Grants-Program/pull/928)
 
 
-
-### Milestone 1, 2 and 3
  - Implement Relation Graph deploy as pallet, contains insert,query,delete and update
  - Expand the basic functions of database，contains ACL,OGM and subgraph
  - Finish use case，scaffold and demo for Relation Graph (scaffold is a package of technique tools for building and using the relation graph easily
