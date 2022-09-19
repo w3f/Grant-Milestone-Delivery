@@ -6,7 +6,7 @@
 
 
 
-### Milestone 1,2 and 3
+### Milestone 1, 2 and 3
  - Implement Relation Graph deploy as pallet, contains insert,query,delete and update
  - Expand the basic functions of database，contains ACL,OGM and subgraph
  - Finish use case，scaffold and demo for Relation Graph (scaffold is a package of technique tools for building and using the relation graph easily
