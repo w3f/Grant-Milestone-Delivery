@@ -3,9 +3,9 @@
 * Link to the initial [pull request 928](https://github.com/w3f/Grants-Program/pull/928)
 
 
- ### Implement Relation Graph deploy as pallet, contains insert,query,delete and update
- ### Expand the basic functions of database，contains ACL,OGM and subgraph
- ### Finish use case，scaffold and demo for Relation Graph (scaffold is a package of technique tools for building and using the relation graph easily
+ - Implement Relation Graph deploy as pallet, contains insert,query,delete and update
+ - Expand the basic functions of database，contains ACL,OGM and subgraph
+ - Finish use case，scaffold and demo for Relation Graph (scaffold is a package of technique tools for building and using the relation graph easily
  
 
  * Link to [github repo](https://github.com/relationlabs/Relation-Graph/), commit hash: c1aa5ef9f88655fcea49f042e8f39822617217c0
