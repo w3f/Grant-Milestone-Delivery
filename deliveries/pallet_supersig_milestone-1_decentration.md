@@ -27,9 +27,9 @@ Milestone 1 is about building pallet_supersig's first version. The pallet now al
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ---------- | 
 | 0a. | License | Apache 2.0  |  | |
-| 0b. | Documentation | https://github.com/decentration/substrate-supersig-template/tree/v0.9.28 | |
+| 0b. | Documentation | https://github.com/decentration/substrate-supersig-template/tree/v0.9.28-new | |
 | 0c. | Testing Guide | https://github.com/kabocha-network/pallet_supersig/tree/polkadot-v0.9.28/src/tests | cargo test `INSERT FILENAME` |
-| 0d. | Docker |  https://github.com/decentration/substrate-supersig-template/tree/v0.9.28 | |
+| 0d. | Docker |  https://github.com/decentration/substrate-supersig-template/tree/v0.9.28-new | |
 | 0e. | Article and video | https://decentration.medium.com/supersig-like-multisig-but-with-superpowers-86b9ce0412f6, https://www.loom.com/share/dbcaa6319b1a4644aacb709aa0e38783 | |
 | 1. | Substrate module: pallet_supersig | https://github.com/kabocha-network/pallet_supersig/tree/polkadot-v0.9.28/ | |
 | 2. | Benchmarking | The pallet is benchmarked. |https://github.com/kabocha-network/pallet_supersig/blob/polkadot-v0.9.28/src/benchmarking.rs | |
