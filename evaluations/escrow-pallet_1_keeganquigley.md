@@ -17,3 +17,5 @@
 ## General Notes
 
 Thanks for the quick communication! Errors were fixed upon request. The docs were enough for me to test the pallet but I would recommend improving these for the next milestone. Check out [this project](https://github.com/UniversalDot/universal-dot-node) for one example of great documentation.
+
+Additionally, I would recommend that you remove the default readme template and write your own. This way you can explain the architecture of your project, get rid of unneeded tests, setup instructions, etc.
