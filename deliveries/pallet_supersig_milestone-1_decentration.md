@@ -12,7 +12,7 @@
 https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.md
 
 
-* **Milestone Number:** 1, and half of 3. 
+* **Milestone Number:** 1 
 
 **Context** 
 
@@ -22,7 +22,7 @@ Secondly theres the "masteruser" feature. Where someone who is master (as oppose
 
 Supersig is now part of Kabocha parachain's main net, and will be used in the wild. 
 
-Milestone 1 is about building pallet_supersig's first version. The pallet now allows you to do the abovementioned core functions. We went slightly overtime and over budget with the milestone, and we have also used half of milestone 3's feedback section to create RPC module to make it much easier to query the storage.  
+Milestone 1 is about building pallet_supersig's first version. The pallet now allows you to do the abovementioned core functions. We went slightly overtime and over budget with the milestone.  
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
@@ -41,5 +41,3 @@ Milestone 1 is about building pallet_supersig's first version. The pallet now al
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
-
-This milestone was completed, we also used half of milestone 3 (Feedback and improvements), to iterate supersig and add RPC modules to make it much more usable. The other half of milestone 3 will be used for milestone 2 (UI development).
