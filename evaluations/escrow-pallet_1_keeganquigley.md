@@ -16,4 +16,4 @@
 
 ## General Notes
 
-The docs were enough for me to test the pallet but I would recommend improving these for the next milestone. Check out [this project](https://github.com/UniversalDot/universal-dot-node) for an example of great documentation.
+Thanks for the quick communication! Errors were fixed upon request. The docs were enough for me to test the pallet but I would recommend improving these for the next milestone. Check out [this project](https://github.com/UniversalDot/universal-dot-node) for one example of great documentation.
