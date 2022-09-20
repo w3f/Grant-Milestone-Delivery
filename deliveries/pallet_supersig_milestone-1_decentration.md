@@ -6,21 +6,16 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
-
-**Supersig link**
-https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.md
-
-
-* **Milestone Number:** 1 
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.md
+* **Milestone Number:** 1
 
 **Context** 
 
-Supersig is like multisig but with superpowers. This means that you can add and remove removes from the supersig through voting via simpleMajority, instead of fixed thresholds. 
+Supersig is like multisig but with superpowers. This means that you can add and remove members from the supersig through voting via simpleMajority, instead of fixed thresholds. 
 
-Secondly theres the "masteruser" feature. Where someone who is master (as opposed to standard), has 50% of the voting power. This means that if a master user is involved in a transaction, only one other person needs to sign in order to approve the transaction for execution. (More than one person can be a master user).
+Secondly, there is also the "master" user feature. A master user always has 50% of the voting power. This means that if a master user is involved in a transaction, only one other person needs to sign in order to approve the transaction for execution. (More than one person can be a master user). 
 
-Supersig is now part of Kabocha parachain's main net, and will be used in the wild. 
+Supersig is now part of Kabocha parachain's main net on Kusama. 
 
 Milestone 1 is about building pallet_supersig's first version. The pallet now allows you to do the abovementioned core functions. We went slightly overtime and over budget with the milestone.  
 
