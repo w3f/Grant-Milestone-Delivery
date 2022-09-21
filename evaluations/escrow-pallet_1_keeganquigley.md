@@ -16,6 +16,4 @@
 
 ## General Notes
 
-Thanks for the quick communication! Errors were fixed upon request. The docs were enough for me to test the pallet but I would recommend improving these for the next milestone. Check out [this pallet's documentation](https://github.com/chainify/substrate-nolik-dev/blob/4f1f36e01f5fb22d745e2a3566e84c43f58ba3c2/README.md#run-in-docker) for a great example on how to customize it.
-
-Additionally, I would recommend that you remove the default readme template and write your own. This way you can explain the architecture of your project, get rid of unneeded tests, setup instructions, etc.
+Thanks for the quick communication! Errors were fixed upon request. The docs were enough for me to test the pallet but I would recommend improving these for the next milestone. I would also recommend that you remove the default readme template and write your own. This way you can explain the architecture of your project, get rid of unneeded tests, setup instructions, etc. Check out [this pallet's documentation](https://github.com/chainify/substrate-nolik-dev/blob/4f1f36e01f5fb22d745e2a3566e84c43f58ba3c2/README.md#run-in-docker) for a great example on how to customize it.
