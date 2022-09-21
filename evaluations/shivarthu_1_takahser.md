@@ -9,14 +9,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/amiyatulu/shivarthu/blob/239e63e350e848fdafbd1d0ffdb5aea0367e2345/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [Template Pallet](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/lib.rs) | The inline comments are currently very sparse. The tutorial is currently missing. |
+| 0b. | Documentation | <ul><li>[ ] </li></ul> | [Template Pallet](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/lib.rs), [Tutorial](https://github.com/amiyatulu/shivarthu_frontend/blob/0e67459fd341f2244c8c0e32e18594a397d4967f/docs/Tutorial.md) | See [Documentation Feedback](#documentation-feedback) |
 | 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Template Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/tests.rs), [Election Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/election/src/tests.rs) | See [Testing Feedback](#testing-guide-feedback) |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | [docker-compose.yml](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/docker-compose.yml) | See [Docker Feedback](#docker-feedback) |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [docker-compose.yml](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/docker-compose.yml), [Docker run instructions](https://github.com/amiyatulu/shivarthu/blob/47def508fb21f102935b3b45fe2dc45dc1846b68/README.md#run-in-docker) | See [Docker Feedback](#docker-feedback) |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Article](https://github.com/amiyatulu/shivarthu/blob/239e63e350e848fdafbd1d0ffdb5aea0367e2345/docs/Shivarthu.md) | - |
-| 1. | Substrate module: Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX |  Not tested yet (waiting for instructions). |
-| 2. | Substrate Module: Approval voting | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (waiting for instructions). |
-| 3.| Reactjs UI for Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (waiting for instructions). |
-| 4.| Reactjs Approval Voting UI| <ul><li>[ ] </li></ul> | XXXX | Not tested yet (waiting for instructions). |
+| 1. | Substrate module: Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX |  Not tested yet (will test after 0b., 0c. are fixed). |
+| 2. | Substrate Module: Approval voting | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
+| 3.| Reactjs UI for Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
+| 4.| Reactjs Approval Voting UI| <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
@@ -25,9 +25,16 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 Summarizes the overall performance plus additional feedback/comments
 
+### Documentation Feedback
+
+- The inline comments are currently very sparse.
+- The tutorial has now been added.
+- I'm confused about the reason for why a [light version of the grant application doc](https://github.com/amiyatulu/shivarthu/blob/main/docs/Shivarthu.md) was added to the repo which was also mentioned in the delivery doc.
+- The template pallet that seems to build on [parity's template pallet](https://paritytech.github.io/substrate/master/src/pallet_template/lib.rs.html#1-102) should be renamed to a more meaningful name.
+
 ### Testing Guide Feedback
 
-- There is no test guide.
+- There is (still) no test guide.
 - When running the tests using `carco test`, they pass.
 
     ```bash
@@ -505,26 +512,41 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Docker Feedback
 
-- The instructions to start the docker infrastructure are missing.
-- The attempt, trying to run `docker compose up` failed:
+- The instructions to start the docker infrastructure have now been added [here](https://github.com/amiyatulu/shivarthu/blob/47def508fb21f102935b3b45fe2dc45dc1846b68/README.md#run-in-docker).
+- `docker compose up` spins up the infrastructure successfully, although with a couple of warnings (which are the same as already mentioned in [Testing Guide Feedback](#testing-guide-feedback)):
 
 ```bash
+$ mkdir .local
 $ docker-compose up
-Creating network "shivarthu_default" with the default driver
-Pulling dev (paritytech/ci-linux:974ba3ac-20201006)...
-974ba3ac-20201006: Pulling from paritytech/ci-linux
-d121f8d1c412: Pull complete
-1b985895e9b7: Pull complete
-809a473c961b: Pull complete
-89f7c794c3df: Pull complete
-ea120af1c111: Pull complete
-de2c35bb8bf1: Pull complete
-Digest: sha256:8c10a2dd7b8581d9faed5e0dca1cc902dfa23d67bbf2641c4d51f0b0a5d0f426
-Status: Downloaded newer image for paritytech/ci-linux:974ba3ac-20201006
-Creating node-template ... error
+[+] Running 1/0
+ ⠿ Container node-template  Created 0.0s
+Attaching to node-template
 
-ERROR: for node-template  Cannot create container for service dev: invalid mount config for type "bind": bind source path does not exist: /home/xxx/repos/shivarthu/.local
+(...)
 
-ERROR: for dev  Cannot create container for service dev: invalid mount config for type "bind": bind source path does not exist: /home/xxx/repos/shivarthu/.local
-ERROR: Encountered errors while bringing up the project.
+node-template  | warning: `pallet-template` (lib) generated 17 warnings
+node-template  | warning: `schelling-game-shared` (lib) generated 14 warnings
+node-template  |    Compiling node-template v4.0.0-dev (/var/www/node-template/node)
+node-template  |     Finished release [optimized] target(s) in 51.62s
+node-template  | 2022-09-13 14:09:36 Substrate Node    
+node-template  | 2022-09-13 14:09:36 ✌️  version 4.0.0-dev-47def50-x86_64-linux-gnu    
+node-template  | 2022-09-13 14:09:36 ❤️  by Substrate DevHub <https://github.com/substrate-developer-hub>, 2017-2022    
+node-template  | 2022-09-13 14:09:36 📋 Chain specification: Development    
+node-template  | 2022-09-13 14:09:36 🏷  Node name: nondescript-rabbits-9419    
+node-template  | 2022-09-13 14:09:36 👤 Role: AUTHORITY    
+node-template  | 2022-09-13 14:09:36 💾 Database: RocksDb at /tmp/substratezUVr3w/chains/dev/db/full    
+node-template  | 2022-09-13 14:09:36 ⛓  Native runtime: node-template-100 (node-template-1.tx1.au1)    
+node-template  | 2022-09-13 14:09:36 🔨 Initializing Genesis block/state (state: 0xd7a2…01f2, header-hash: 0xd0e2…e6b8)    
+node-template  | 2022-09-13 14:09:36 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+node-template  | 2022-09-13 14:09:36 Using default protocol ID "sup" because none is configured in the chain specs    
+node-template  | 2022-09-13 14:09:36 🏷  Local node identity is: 12D3KooWP5XkYGnJ9KdWpLXrUBwXaLgf4XrevQu1eguYq9AKfRFL    
+node-template  | 2022-09-13 14:09:36 📦 Highest known block at #0    
+node-template  | 2022-09-13 14:09:36 〽️ Prometheus exporter started at 127.0.0.1:9615    
+node-template  | 2022-09-13 14:09:36 Listening for new connections on 0.0.0.0:9944.
+(...)
+
+$ docker ps
+
+CONTAINER ID   IMAGE                            COMMAND                  CREATED          STATUS         PORTS                                       NAMES
+8d40d547753e   paritytech/ci-linux:production   "bash -c 'cargo buil…"   19 minutes ago   Up 2 minutes   0.0.0.0:9944->9944/tcp, :::9944->9944/tcp   node-template
 ```

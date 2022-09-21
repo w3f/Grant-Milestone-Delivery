@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/social_recovery_wallet.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/hypha-dao/hashed-wallet/blob/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2/LICENSE) | - |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2/documentation/tutorial.md) <BR> [Code](https://github.com/hypha-dao/hashed-wallet/tree/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2)  <BR> [Architecture Overview](https://github.com/hypha-dao/hashed-wallet/blob/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2/documentation/architecture.md) | Inline comments are not omnipresent in all parts of the code base. But given the nature of this grant, I don't think it's neccessary. |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2/documentation/testing_guide.md) | See [Testing Guide Feedback](#testing-guide-feedback) |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/b79f9a85626bbfd3f00749c72a4fa60c753e3aa2/documentation/testing_guide.md) | See [Testing Guide Feedback](#testing-guide-feedback) |
 | 0d. | App Binaries | <ul><li>[x] </li></ul> | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/download/1.0.0_prerelease_M1/app-release.apk), [Android Testing Track (Permissioned)](https://play.google.com/apps/internaltest/4701631300800602818)  | iOS binary was not uploaded but can be built using flutter. The reason being, that it's not very helpful, since side loading is not common on iOS. Instead, Testflight is used (tested successfully). |
 | 0e. | Video | <ul><li>[x] </li></ul> | [Video Presentation](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M1_00/documentation/videos/milestone_1_delivery.md) | Video, introducing and explaining the app. |
 | 1. | Screen Designs | <ul><li>[x] </li></ul> | [Wireframes](https://github.com/hypha-dao/hashed-wallet/raw/v1.0.0_M1_00/documentation/Milestone%201%20Screens.pdf) | - |  
@@ -27,49 +27,40 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Testing Guide Feedback
 
-- I wasn't able to run the unit tests on my machine:
+- After updating docker, the unit tests pass. However, there is no information about which unit tests actually ran. This should be improved for M2.
 
     ```bash
     % docker build -t flutterdocker .
-
-    [+] Building 1.1s (7/23)                                                                                                                                    
-    => [internal] load build definition from Dockerfile                                                                                                   0.0s
-    => => transferring dockerfile: 37B                                                                                                                    0.0s
-    => [internal] load .dockerignore                                                                                                                      0.0s
-    => => transferring context: 2B                                                                                                                        0.0s
-    => [internal] load metadata for docker.io/library/ubuntu:20.04                                                                                        0.5s
-    => [builder  1/16] FROM docker.io/library/ubuntu:20.04@sha256:af5efa9c28de78b754777af9b4d850112cad01899a5d37d2617bb94dc63a49aa                        0.0s
-    => CACHED https://api.github.com/repos/hypha-dao/hashed-wallet/commits?per_page=1                                                                     0.0s
-    => CACHED [builder  2/16] RUN ln -snf /usr/share/zoneinfo/Asia/Dubai /etc/localtime && echo Asia/Dubai > /etc/timezone                                0.0s
-    => ERROR [builder  3/16] RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget                                 0.6s
-    ------                                                                                                                                                      
-    > [builder  3/16] RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget:                                            
-    #6 0.165                                                                                                                                                    
-    #6 0.165 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.                                                                    
-    #6 0.165                                                                                                                                                    
-    #6 0.234 Get:1 http://ports.ubuntu.com/ubuntu-ports focal InRelease [265 kB]                                                                                
-    #6 0.389 Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease [114 kB]
-    #6 0.405 Err:1 http://ports.ubuntu.com/ubuntu-ports focal InRelease
-    #6 0.405   At least one invalid signature was encountered.
-    #6 0.431 Get:3 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease [108 kB]
-    #6 0.435 Err:2 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease
-    #6 0.435   At least one invalid signature was encountered.
-    #6 0.473 Get:4 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease [114 kB]
-    #6 0.478 Err:3 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease
-    #6 0.478   At least one invalid signature was encountered.
-    #6 0.515 Err:4 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease
-    #6 0.515   At least one invalid signature was encountered.
-    #6 0.518 Reading package lists...
-    #6 0.524 W: GPG error: http://ports.ubuntu.com/ubuntu-ports focal InRelease: At least one invalid signature was encountered.
-    #6 0.524 E: The repository 'http://ports.ubuntu.com/ubuntu-ports focal InRelease' is not signed.
-    #6 0.524 W: GPG error: http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease: At least one invalid signature was encountered.
-    #6 0.524 E: The repository 'http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease' is not signed.
-    #6 0.524 W: GPG error: http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease: At least one invalid signature was encountered.
-    #6 0.524 E: The repository 'http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease' is not signed.
-    #6 0.524 W: GPG error: http://ports.ubuntu.com/ubuntu-ports focal-security InRelease: At least one invalid signature was encountered.
-    #6 0.524 E: The repository 'http://ports.ubuntu.com/ubuntu-ports focal-security InRelease' is not signed.
-    ------
-    executor failed running [/bin/sh -c apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget]: exit code: 100
+    [+] Building 353.6s (24/24) FINISHED                                                                                     
+    => [internal] load build definition from Dockerfile                                                                0.0s
+    => => transferring dockerfile: 37B                                                                                 0.0s
+    => [internal] load .dockerignore                                                                                   0.0s
+    => => transferring context: 2B                                                                                     0.0s
+    => [internal] load metadata for docker.io/library/ubuntu:20.04                                                     3.2s
+    => [builder  1/16] FROM docker.io/library/ubuntu:20.04@sha256:af5efa9c28de78b754777af9b4d850112cad01899a5d37d2617  0.0s
+    => CACHED https://api.github.com/repos/hypha-dao/hashed-wallet/commits?per_page=1                                  0.0s
+    => CACHED [builder  2/16] RUN ln -snf /usr/share/zoneinfo/Asia/Dubai /etc/localtime && echo Asia/Dubai > /etc/tim  0.0s
+    => CACHED [builder  3/16] RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk  0.0s
+    => CACHED [builder  4/16] RUN useradd -ms /bin/bash user                                                           0.0s
+    => CACHED [builder  5/16] WORKDIR /home/user                                                                       0.0s
+    => CACHED [builder  6/16] RUN mkdir -p Android/sdk                                                                 0.0s
+    => CACHED [builder  7/16] RUN mkdir -p .android && touch .android/repositories.cfg                                 0.0s
+    => CACHED [builder  8/16] RUN wget -O sdk-tools.zip https://dl.google.com/android/repository/sdk-tools-linux-4333  0.0s
+    => CACHED [builder  9/16] RUN unzip sdk-tools.zip && rm sdk-tools.zip                                              0.0s
+    => CACHED [builder 10/16] RUN mv tools Android/sdk/tools                                                           0.0s
+    => CACHED [builder 11/16] RUN cd Android/sdk/tools/bin && yes | ./sdkmanager --licenses                            0.0s
+    => CACHED [builder 12/16] RUN cd Android/sdk/tools/bin && ./sdkmanager "build-tools;29.0.2" "patcher;v4" "platfor  0.0s
+    => [builder 13/16] RUN git clone https://github.com/flutter/flutter.git                                          100.2s
+    => [builder 14/16] RUN flutter channel stable                                                                     87.1s 
+    => [builder 15/16] RUN flutter upgrade                                                                            70.6s
+    => [builder 16/16] RUN flutter doctor                                                                             16.6s 
+    => [test 1/3] ADD https://api.github.com/repos/hypha-dao/hashed-wallet/commits?per_page=1 latest_commit            0.0s 
+    => [test 2/3] RUN git clone https://github.com/hypha-dao/hashed-wallet.git                                        22.0s 
+    => [test 3/3] RUN cd hashed-wallet && flutter test                                                                50.7s 
+    => exporting to image                                                                                              3.2s 
+    => => exporting layers                                                                                             3.2s 
+    => => writing image sha256:cfde87760c72a7e34f4747daadd06b66751306b7587f89abddefb5b1a78a61f8                        0.0s 
+    => => naming to docker.io/library/flutterdocker    
     ```
 
 - the flutter build passes (`flutter run`)
