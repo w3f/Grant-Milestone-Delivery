@@ -30,7 +30,7 @@ This Milestone adds proof verification capabilities, additions to the smart cont
 | ------ | ---------------------- | -------------------------------------------------------- | ----- |
 | 0a.    | License (MPL-2.0)      | https://github.com/4IRE-Labs/Slushie/blob/main/LICENSE   |       |
 | 0b.    | Documentation          | https://github.com/4IRE-Labs/Slushie/blob/main/README.md |       |
-| 0c.    | Tests                  | https://github.com/4IRE-Labs/Slushie/tree/main/tests, https://github.com/4IRE-Labs/Slushie/blob/main/plonk_prover_tool/src/main.rs         |       |
+| 0c.    | Tests                  | https://github.com/4IRE-Labs/Slushie/tree/main/tests, https://github.com/4IRE-Labs/Slushie/blob/main/plonk_prover_tool/src/main.rs , Slushie unit tests https://github.com/4IRE-Labs/Slushie/blob/main/slushie/lib.rs, Plonk prover unit tests https://github.com/4IRE-Labs/Slushie/blob/main/plonk_prover/src/lib.rs         |       |
 | 1.     | Plonk verifier            | https://github.com/4IRE-Labs/Slushie/blob/main/plonk_prover/src/proof_verification.rs           |  Provides two ways to verify proofs: with hardcoded public parameters and with variable public parameters     |
 | 2.     | Withdrawal contract logic | https://github.com/4IRE-Labs/Slushie/blob/0e0a5ccf7cc83448af7f5b8a184d26d092ddfe00/slushie/lib.rs#L167           |   Now performs the required checks.    |
 
