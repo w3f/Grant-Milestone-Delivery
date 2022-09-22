@@ -4,7 +4,7 @@
 The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
 has been filled out correctly for this milestone.**
 
-* **Application Document:** https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/escrow-milestone_1.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/escrow_pallet.md
 * **Milestone Number:** 1
 
 | Number | Deliverable              | Link                                                                                 							         | Notes |
