@@ -13,9 +13,10 @@ XBI Format is an XCM-based high-level interface that each Parachain can optional
 
 **Deliverables**
 
-| Number | Deliverable | Link | Notes                                                                                                                                    |
-| ------------- | ------------- |------|------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. | PSP-33 | https://github.com/w3f/PSPs/pull/53 | Milestone 1 of works on XBI resulted in producing PSP-33 in collaboration with Selected partners which sets requirements for XBI Format. | 
+| Number | Deliverable   | Link | Notes                                                                                                                                    |
+|--------|---------------|------|------------------------------------------------------------------------------------------------------------------------------------------|
+| 1a.    | PSP-33        | https://github.com/w3f/PSPs/pull/53 | Milestone 1 of works on XBI resulted in producing PSP-33 in collaboration with Selected partners which sets requirements for XBI Format. | 
+| 1b.    | Documentation | https://github.com/t3rn/xbi/pull/1 | Provide both inline documentation of the code and a basic tutorial in the form of tests that establishes XBI Format.                     | 
 
 **Additional Information**
 The work on XBI implementation, documentation, and testing continue as a set of crates, precompiles for EVM, and pallets - different means of enabling Parachains to exchange the cross-chain messages aligned with the XBI Format. This enriches XCM Transact primarily by notifications on execution status on remote Parachain as well as an extensible set of XBI Orders. We will likely submit further grant proposals to support the works on implementation as well as the adoption of XBI as a standard.
