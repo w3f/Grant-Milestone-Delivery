@@ -9,7 +9,11 @@
 
 | Number | Deliverable   | Link                                                                                 | Notes |
 |--------|---------------|--------------------------------------------------------------------------------------|-------|
-| 1.     | Source code   | https://github.com/gmajor-encrypt/scale-codec-comparator                             |       |
-| 2.     | License       | MIT license                                                                          | MIT   |
-| 3.     | Tests         | https://github.com/gmajor-encrypt/scale-codec-comparator#how-to-test                 |       |
-| 4.     | Github action | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows |       |
+| 0a.     | License   | MIT License                            |       |
+| 0b.     | Documentation       | https://github.com/gmajor-encrypt/scale-codec-comparator                                                                        | Documentation is minimal, but a description was added upon request.   |
+| 1.     | Tests         | https://github.com/gmajor-encrypt/scale-codec-comparator#how-to-test                 | Successful      |
+| 2.     | Github action | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows | Successful      |
+
+# General Notes
+
+All implementation comparisons run successfully. Scale.go only works with x86/64 processors. A lot of effort was put into the tests!
