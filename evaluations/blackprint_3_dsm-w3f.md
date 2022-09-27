@@ -2,7 +2,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** [Blackprint Application](https://github.com/w3f/Grants-Program/pull/774) 
+- **Application Document:** [Blackprint Application](https://github.com/w3f/Grants-Program/blob/master/applications/blackprint-js.md) 
 - **Milestone:** 3
 - **Kusama Identity:** Address
 - **Previously successfully merged evaluation:** https://github.com/w3f/Grant-Milestone-Delivery/pull/405

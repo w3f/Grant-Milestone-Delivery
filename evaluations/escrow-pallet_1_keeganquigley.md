@@ -8,7 +8,7 @@
 |--------|--------------------------|----------|------------------------------------------------------------------------------------------------------|----------------------|
 | 0a.     | License                  | <ul><li>[x] </li></ul>| https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/LICENSE  |Apache 2.0     |
 | 0b.     | Documentation & Tutorial | <ul><li>[x] </li></ul>| https://docs.google.com/document/d/1XpxfrG6Qd9AHJ7OUVv3L3D6ZcEyizGh68w7yZxN3p_A/edit?usp=sharing     |See my notes below on docs.        |
-| 0c.     | Tests                    | <ul><li>[x] </li></ul>| https://docs.google.com/document/d/1XpxfrG6Qd9AHJ7OUVv3L3D6ZcEyizGh68w7yZxN3p_A/edit?usp=sharing     |Unit tests pass successfully. Core functionality mostly covered, see my notes below.      |
+| 0c.     | Tests                    | <ul><li>[x] </li></ul>| https://docs.google.com/document/d/1XpxfrG6Qd9AHJ7OUVv3L3D6ZcEyizGh68w7yZxN3p_A/edit?usp=sharing     |Unit tests pass successfully. Core functionality for `sign_contract` is covered.     |
 | 0d.     | Docker                   | <ul><li>[x] </li></ul>| https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/docker-compose.yml    |  -     |
 | 0e.     | Article                  | <ul><li>[x] </li></ul>| https://medium.com/p/6f941c28b6fd/edit     							         |Looks good.       |
 | 0f.     | Benchmarking             | <ul><li>[x] </li></ul>| https://github.com/herou/EscrowPallet/blob/eljo-prifti/escrow/pallets/escrow/src/benchmarking.rs     |Benchmarking tests pass successfully.      |
@@ -22,4 +22,4 @@ Thanks for the quick communication! Errors were fixed upon request. The docs wer
 
 ## Testing Feedback
 
-Unit test was provided for `SameAddressError`, but none for `WrongExpiringDate` or `NoValueStored`. Please consider adding tests for these errors as well.
+Unit tests for `WrongExpiringDate` and `NoValueStored` will be added in the next milestone.
