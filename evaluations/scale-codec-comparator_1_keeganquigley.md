@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/scale-codec-comparator.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -16,4 +16,4 @@
 
 # General Notes
 
-All implementation comparisons run successfully. Scale.go only works with x86/64 processors. A lot of effort was put into the tests!
+All codec comparisons run successfully. Though scale.go only works with x86/64 processors. Github Actions run successfully upon commits. Tests perform as they should, and results compare successfully with `parity-scale-codec`
