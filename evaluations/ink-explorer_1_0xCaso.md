@@ -8,34 +8,57 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- | ----- |
-| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/LICENSE) | MIT License, Ok |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [English](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/README.md), [Spanish](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/README-es.md) | View **General Notes** |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | Inside [README](https://github.com/blockcoders/ink-substrate-explorer-api#test) | View **General Notes** |
-| 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/Dockerfile) | - |
-| 1. | Create database | <ul><li>[x] </li></ul> | Inside [docker-compose.yaml](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/docker-compose.yaml#L26-L38) file | - |
-| 2. | Backend service | <ul><li>[x] </li></ul> | [src](https://github.com/blockcoders/ink-substrate-explorer-api/tree/2923a524795489f0b884d3e90d5e4c5760d68e5c/src) Directory | - |
-| 3. | API | <ul><li>[ ] </li></ul> | [schema.graphql](https://github.com/blockcoders/ink-substrate-explorer-api/blob/2923a524795489f0b884d3e90d5e4c5760d68e5c/src/schema.graphql) File | View **General Notes** |
-| 4. | Testing | <ul><li>[ ] </li></ul> | Refer to Documentation, or use [GitHub Actions](https://github.com/blockcoders/ink-substrate-explorer-api/actions/runs/3070814266/jobs/4960918723) | View **General Notes** |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/LICENSE) | MIT License, Ok |
+| 0b. | Documentation | <ul><li>[ ] </li></ul> | [English](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/README.md), [Spanish](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/README-es.md) | View **General Notes** |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | Inside [README](https://github.com/blockcoders/ink-substrate-explorer-api#test) | View **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/Dockerfile) | - |
+| 1. | Create database | <ul><li>[x] </li></ul> | Inside [docker-compose.yaml](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/docker-compose.yaml#L26-L38) file | - |
+| 2. | Backend service | <ul><li>[x] </li></ul> | [src](https://github.com/blockcoders/ink-substrate-explorer-api/tree/e98a28d4283fbe37ab197419195043b0f2e4ce76/src) Directory | - |
+| 3. | API | <ul><li>[ ] </li></ul> | [schema.graphql](https://github.com/blockcoders/ink-substrate-explorer-api/blob/e98a28d4283fbe37ab197419195043b0f2e4ce76/src/schema.graphql) File | View **General Notes** |
+| 4. | Testing | <ul><li>[x] </li></ul> | Refer to Documentation, or use [GitHub Actions](https://github.com/blockcoders/ink-substrate-explorer-api/actions/runs/3070814266/jobs/4960918723) | View **General Notes** |
 
 ## General Notes
+- The **documentation** is well written and precise; the team has improved it since the first evaluation;
+- Same thing for the **testing guide**: it now contains a description for back-end test execution, database creation in pgAdmin, and API interaction through GraphQL queries.
+- **Test coverage** is really high, great job (>90% on every file, just ten uncovered lines in the whole project)! One test was skipped in the previous commit, but in [e98a28d](https://github.com/blockcoders/ink-substrate-explorer-api/commit/e98a28d4283fbe37ab197419195043b0f2e4ce76) team fixed it.
+- **API** will be accepted as soon as we manage to execute the back-end service (that opens the port ```5000``` for GraphQL interaction) 
+- In the [application document](https://github.com/w3f/Grants-Program/blob/75aab22ea225b0e58c53916d8b53f790e06ed9ae/applications/ink-explorer.md), **Deliverable 0e. Article** can be found (it is a Twitter post). It will be published [after this Grant will be completed](https://github.com/w3f/Grant-Milestone-Delivery/pull/570#issuecomment-1259426090).
 
-In the [application document](https://github.com/w3f/Grants-Program/blob/75aab22ea225b0e58c53916d8b53f790e06ed9ae/applications/ink-explorer.md), **Deliverable 0e. Article** can be found (it is a Twitter post). Maybe it hasn't been included because it's not been published yet. 
-Overall, the software and tests work fine. Documentation is well written, but it could be improved a bit more.
+The other services run correctly, which is visible also thanks to the help of pgAdmin (we can see blocks and transactions in the database if Rococo RPC is set).
 
 ### 0b. Documentation
-- In the **[Running the Back-end service Docker image](https://github.com/blockcoders/ink-substrate-explorer-api#running-the-back-end-service-docker-image)** section, I manage to pull the docker image, but when I run the docker, I get the error: ```docker: Error response from daemon: network ink-explorer-network not found.```, and I can't understand what I am missing (I correctly set the .env path);
-- When it is [stated](https://github.com/blockcoders/ink-substrate-explorer-api#start-a-postgres-db-using-docker-optional) how to run (optionally) the Postgres DB and the Substrate Node, and then start the project in ```dev``` or ```prod```, I'd reformulate a bit: maybe it would be better to define two subsections, "Run in Dev" (with optional things and the websocket endpoint) and "Run in Prod" (which just needs the ```docker-compose up -d``` command); this is just an idea, but I think it would be more precise (or, alternatively, try to clarify a bit this point without altering the structure);
+In the **[Running the Back-end service Docker image](https://github.com/blockcoders/ink-substrate-explorer-api#running-the-back-end-service-docker-image)** section, I manage to pull the docker image, but when I run the docker, I get the error: ```docker: Error response from daemon: network ink-explorer-network not found.```.
 
-Other than this, the documentation is well-written and clear. I managed to run the project in ```dev``` mode, changing the websocket (DB is empty in this case), and in ```prod``` mode (with Rococo RPC). In this last case, I could see the DB tables with the data (blocks, contracts, and so on).
+To fix this error, run the command ```docker network create ink-explorer-network```.
 
-### 0c. Testing Guide
-The two commands needed to run tests (```pnpm test``` and ```pnpm test:cov```) are reported; however, I'd add something to the guide:
-- how to setup the database on pgAdmin, and optionally how to see if DB is empty or not;
-- how to execute queries to test the API with GraphQL, using the example queries you provided in the documentation.
+After the fix, another error prevented the docker image from running:
+```
+> ink-substrate-explorer-api@1.0.0-alpha.1 start:prod
+> node dist/src/main
 
-### 3. API
-Before accepting the API delivery, I'd like to see a minimum guide on how to test it quickly.
-
-### 4. Testing
-- In file ```/src/events/events.service.spec.ts```, the test ```decodeEvents > should return decoded event``` (line 80) is skipped. If you confirm it is not relevant, Testing delivery will be accepted;
-- Test coverage is really high, great job (>90% on every file, just ten uncovered lines in the whole project)!
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+	cjs 10.1.6	node_modules/.pnpm/@polkadot+util@10.1.6/node_modules/@polkadot/util/cjs
+	cjs 10.1.2	node_modules/.pnpm/@polkadot+util@10.1.2/node_modules/@polkadot/util/cjs
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [NestFactory] Starting Nest application...
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] DBModule dependencies initialized +65ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] EnvModule dependencies initialized +1ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM     LOG [InstanceLoader] GraphQLSchemaBuilderModule dependencies initialized +0ms
+[Nest] 18  - 09/28/2022, 8:48:24 AM   ERROR [ExceptionHandler] unable to determine transport target for "pino-pretty"
+Error: unable to determine transport target for "pino-pretty"
+    at fixTarget (/usr/src/app/node_modules/.pnpm/pino@8.3.1/node_modules/pino/lib/transport.js:136:13)
+    at transport (/usr/src/app/node_modules/.pnpm/pino@8.3.1/node_modules/pino/lib/transport.js:110:22)
+    at normalizeArgs (/usr/src/app/node_modules/.pnpm/pino@8.3.1/node_modules/pino/lib/tools.js:291:16)
+    at pino (/usr/src/app/node_modules/.pnpm/pino@8.3.1/node_modules/pino/pino.js:84:28)
+    at new PinoLogger (/usr/src/app/node_modules/.pnpm/nestjs-pino@3.1.1_isil7xagyf5s32dueim4ljgsga/node_modules/nestjs-pino/PinoLogger.js:45:51)
+    at Injector.instantiateClass (/usr/src/app/node_modules/.pnpm/@nestjs+core@8.4.7_zyw32gfu5yv6lfoz64j5eiekme/node_modules/@nestjs/core/injector/injector.js:330:19)
+    at callback (/usr/src/app/node_modules/.pnpm/@nestjs+core@8.4.7_zyw32gfu5yv6lfoz64j5eiekme/node_modules/@nestjs/core/injector/injector.js:48:41)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Injector.resolveConstructorParams (/usr/src/app/node_modules/.pnpm/@nestjs+core@8.4.7_zyw32gfu5yv6lfoz64j5eiekme/node_modules/@nestjs/core/injector/injector.js:122:24)
+    at async Injector.loadInstance (/usr/src/app/node_modules/.pnpm/@nestjs+core@8.4.7_zyw32gfu5yv6lfoz64j5eiekme/node_modules/@nestjs/core/injector/injector.js:52:9)
+```
+The error is about **pino-pretty**, a logger for Node.js. I'm sure it's an error on my end, but I can't fix it and run the docker image.
