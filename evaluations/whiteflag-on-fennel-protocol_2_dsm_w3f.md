@@ -16,11 +16,11 @@ This milestone finishes the initial version of our Rust port of the Whiteflag pr
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/fennelLabs/Fennel-Protocol/blob/main/LICENSE | Unlicense - Ok | 
 | 0b. | Documentation | <ul><li>[ ] </li></ul>  | https://fennel-labs.notion.site/Grant-2-d6f134a5b65f4556823ae648e3b68e68, https://github.com/fennelLabs/Fennel-Protocol/wiki, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://fennellabs.com/fennel-lib/fennel_lib/index.html, https://fennellabs.com/fennel-cli/fennel_cli/, https://fennellabs.com/fennel-server/fennel_server/ | Needs improvement. | 
 | 0c.  | Testing Guide | <ul><li>[ ] </li></ul>  | https://fennel-labs.notion.site/Grant-2-Milestone-2-Testing-Guide-7c92ba9123c04f0cac7d00cbffc04a3b, https://fennel-labs.notion.site/Grant-2-Milestone-1-Testing-Guide-76b12a5e6e1149c2998d3e723cbaeb09, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-3 | Needs improvement. | 
-| 0d. | Docker | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/Fennel-Protocol/blob/main/Dockerfile, https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-cli/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-server/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile | Fennel-Protocol failed, API passed, CLI sometimes pass sometimes fail, App fail. | 
+| 0d. | Docker | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/Fennel-Protocol/blob/main/Dockerfile, https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-cli/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-server/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile | Fennel-Protocol and CLI containers run tests instead of the application. | 
 | 0e. | Article | <ul><li>[x] </li></ul>  | https://fennel-labs.notion.site/Whiteflag-on-Fennel-Protocol-f051965e700049fea452a3a5c1ed0f02 | Ok |
 | 1. | Implementation of Whiteflag Protocol | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/whiteflag-rust | Minor improvements. Upate: Some question not answered yet. |
-| 2. | Whiteflag Integration - fennel-cli | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-cli/blob/60128a34a3a1a68cc4ba2f541e8f5d75fdc2eda9/src/fennel_rpc/mod.rs#L143 | Sometime the tests pass sometime fail. |
-| 3. | IPFS Support | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-lib/blob/master/src/ipfs/mod.rs, https://github.com/fennelLabs/fennel-app/commit/37cc301f03ebd7eef83b589385fe566bfa777aa2#diff-299b25d6371add360dcaf87c6a21570765a9f5af351dfd10bb9ccaba5d5c8b6a | Fennel-Protocol App fail. Not evaluated yet. |
+| 2. | Whiteflag Integration - fennel-cli | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-cli/blob/60128a34a3a1a68cc4ba2f541e8f5d75fdc2eda9/src/fennel_rpc/mod.rs#L143 | Needs an example for testing. App failing. |
+| 3. | IPFS Support | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-lib/blob/master/src/ipfs/mod.rs, https://github.com/fennelLabs/fennel-app/commit/37cc301f03ebd7eef83b589385fe566bfa777aa2#diff-299b25d6371add360dcaf87c6a21570765a9f5af351dfd10bb9ccaba5d5c8b6a |  Needs an example for testing. App failing. |
 
 **Additional Information**
 Work from our last grant is included in the links provided in this submission. This is for full reference on all cooperating features, as most of our repositories were modified in some way to adjust for new architecture decisions.
@@ -121,6 +121,8 @@ Runs ok without docker. With docker we have the same error as before:
 
 ![image](https://user-images.githubusercontent.com/112647953/192286190-f3f54aa3-ea74-4b2b-a44d-3fff8d969e4a.png)
 
+Update: The error was fixed. Howerver the container does not actually run the system but instead run the tests of it. The expected behavior of that should run the system, expose ports, etc. This is also the behavior for the containers of fennel-cli project.
+
 ### Fennel API
 
 Runs ok with docker. 
@@ -181,6 +183,8 @@ dev_1  |   left: `[48, 0, 0, 0, 0, 0, 0, 0, 183, 150, 79, 50, 119, 190, 106, 168
 dev_1  |  right: `[48, 0, 0, 0, 0, 0, 0, 0, 78, 4, 87, 241, 153, 128, 163, 170, 162, 44, 76, 183, 10, 169, 246, 66, 217, 179, 97, 225, 34, 252, 196, 185, 110, 57, 88, 95, 223, 84, 199, 120, 6, 139, 20, 61, 240, 234, 222, 114, 11, 27, 246, 65, 187, 213, 151, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`', src/client/tests.rs:234:5
 ```
 
+update: It worked now.
+
 ### Fennel App
 
 The error bellow was presented with and without docker. This error is preventing me to move forward with the evaluation.
@@ -209,4 +213,23 @@ dev_1   | './src'.
 dev_1   | 💡 Did you mean './views/pages/NewFeedMessage'?
 dev_1   | 💡 Did you mean './views/pages/NewMessage'?
 ```
+update: I was able to run it, however I needed to run the command bellow in order to it works:
+
+`npm install --save-dev @parcel/css`
+
+Please fix the package.json and package-lock.json to include this missing dependency. 
+
+### Running the application
+
+I was able to run the application. However, it cannot connect to the wallet and the error bellow was presented by clicking in the Open RPC button. The rpc server was runnning locally when this error was presented. 
+
+Furthermore, can you provide a complete example for testing the Milestone 2 using the App?
+
+![image](https://user-images.githubusercontent.com/112647953/192579909-16310163-812b-4fc1-a06e-461a99079fd8.png)
+
+
+![image](https://user-images.githubusercontent.com/112647953/192579539-7b9d4deb-86f5-42f8-a524-87b9a45b9e45.png)
+
+![image](https://user-images.githubusercontent.com/112647953/192579639-721d1114-ed26-49ea-b9d2-f30b386ab91c.png)
+
 
