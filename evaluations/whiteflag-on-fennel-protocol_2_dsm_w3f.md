@@ -49,9 +49,9 @@ Sum of test cases of modules for whiteflag-rust
 In wf_account module no test ran, although it seems to have a test_impl.rs file. There is some special way of running those tests? Update: File renamed. 
 
 Regarding coverage:
- In the file whiteflag-rust/wf_field/src/types.rs, there are some types not covered by automated tests, they were implemented and tested? Update: Not answered yet.
+ In the file whiteflag-rust/wf_field/src/types.rs, there are some types not covered by automated tests, they were implemented and tested? Update: ok, answered.
 
-In the file whiteflag-rust/wf_crypto/src/encryption_method.rs, there are some encryption methods not covered by automated tests, they were tested? Update: Not answered yet.
+In the file whiteflag-rust/wf_crypto/src/encryption_method.rs, there are some encryption methods not covered by automated tests, they were tested? Update: ok, answered.
 
 Most of the modules are with good coverage. Only wf_validation and wf_account are with less than 70% of coverage. Update: is still the same. 
 
