@@ -1,7 +1,6 @@
 # Evaluation
 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines!
-> Lines starting with `>`, such as this one, can be removed.
+
 
 - **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Primis.md
@@ -9,19 +8,15 @@
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
 - **Previously successfully merged evaluation:** N/A
 
-| Number | Deliverable | Accepted | Link | 
-| ------ | ----------- | -------- | ---- |----------------- |
-| 1. | ... |<ul><li>[ ] </li></ul>|...| ...|
-| 2.  | ... |<ul><li>[ ] </li></ul>|...| ...|
-| ... | ... |<ul><li>[ ] </li></ul>|...| ...|
+
 
 | Number | Deliverable                    | Accepted | Link                                                             | Evaluation Notes                                            | 
 | -----: | ------------------------------ | -------- | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 |    0a. | License                        | Yes      | [MIT](https://github.com/Primis-Labs/client/blob/main/LICENSE)   | MIT                                                         |
-|    0b. | Documentation                  | No       | [Link](https://github.com/Primis-Labs/client)                    | See section 0b.                                             |
-|    0c. | Testing Guide                  | No       | [Link](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing) |See section 0c.  |
+|    0b. | Documentation                  | No       | [README](https://github.com/Primis-Labs/client)                    | See section 0b.                                             |
+|    0c. | Testing Guide                  | No       | [Tests](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing) |See section 0c.  |
 |    0d. | Docker                         | N/A      |                                                                  |Desktop application.                                         |
-|     1. | Build app structure            | Yes      | [Link](https://primis.cc/)                                       |See section 1.                                               | 
+|     1. | Build app structure            | Yes      | [Website](https://primis.cc/)                                       |See section 1.                                               | 
 |     2. | Implement wallet view          | No       |                                                                  |See section 2.                              |
 |     3. | Build Polkadot ECO wallet      | No       |                                                                  |See section 3.                              |
 |     4. | NFT assets management          | No       |                                                                  |See section 4.                              |
