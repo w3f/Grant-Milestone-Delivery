@@ -13,14 +13,14 @@
 | Number | Deliverable                    | Accepted | Link                                                             | Evaluation Notes                                            | 
 | -----: | ------------------------------ | -------- | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 |    0a. | License                        | Yes      | [MIT](https://github.com/Primis-Labs/client/blob/main/LICENSE)   | MIT                                                         |
-|    0b. | Documentation                  | No       | [README](https://github.com/Primis-Labs/client)                    | See section 0b.                                             |
-|    0c. | Testing Guide                  | No       | [Tests](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing) |See section 0c.  |
-|    0d. | Docker                         | N/A      |                                                                  |Desktop application.                                         |
-|     1. | Build app structure            | Yes      | [Website](https://primis.cc/)                                       |See section 1.                                               | 
-|     2. | Implement wallet view          | No       |                                                                  |See section 2.                              |
-|     3. | Build Polkadot ECO wallet      | No       |                                                                  |See section 3.                              |
-|     4. | NFT assets management          | No       |                                                                  |See section 4.                              |
-|     5. | Setup Primis NFT avatar        | Yes      |                                                                  |See section 5.                              |
+|    0b. | Documentation                  | No       | [README](https://github.com/Primis-Labs/client)                  | See section 0b.                                             |
+|    0c. | Testing Guide                  | No       | [Tests](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing) |See section 0c. |
+|    0d. | Docker                         | N/A      |                                                                  | Desktop application.                                        |
+|     1. | Build app structure            | Yes      | [Website](https://primis.cc/)                                    | See section 1.                                              | 
+|     2. | Implement wallet view          | No       |                                                                  | See section 2.                                              |
+|     3. | Build Polkadot ECO wallet      | No       |                                                                  | See section 3.                                              |
+|     4. | NFT assets management          | No       |                                                                  | See section 4.                                              |
+|     5. | Setup Primis NFT avatar        | Yes      |                                                                  | Looks good                                                  |
 
 
 
@@ -144,4 +144,23 @@ Tests:       6 failed, 2 passed, 8 total
 **Recommendation**
 - Clarify expectations for this iteration.
 - Show wallet transactions in the records log when they happened outside the app
+
+
+### 4. NFT assets management
+
+**Expectation**
+- NFT assets can be viewed, sent, and received under Primis.
+
+**Assessment**
+- Tested with a couple of NFTs in Kusama / RMRK2 :white_check_mark:
+- One NFT shows in the app but the image is missing, the other one shows the image :warning:
+- Sending NFTs is not implemented yet. :warning:
+
+**Recommendation**
+- Implement NFT sending.
+- Check the image display issue, I suspect it to be related to the collection art being stored in chain.
+- Would be nice if the NFT had a caption, like collection name and id, something to identify it beyond the simple image.
+
+
+
 
