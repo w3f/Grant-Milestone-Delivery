@@ -92,3 +92,34 @@ Tests:       6 failed, 2 passed, 8 total
 **Recommendation**
 - Include some documentation for the overall architecture and details about the key components. Router, API and Store in particular deserve more inline code comments and explanations so that new devs can be onboarded. Also, given the sensitivity and the critical responsibility of a wallet application, the documentation of the API and Store modules should include a note about the approach to safety.
 - The English texts are hard coded all over the code. Would be better if the app was internationalized with clean dictionary files for future languages.
+
+
+### 2. Basic Wallet Features
+
+**Expectation**
+- Create, import, view, and transfer functions will be provided by the integrated Polkadot wallet.
+
+
+**Assessment**
+- Create a new wallet [X]
+- Received DOT [X]
+- Received KSM [X]
+- Received ACA [X]
+- Send in different networks :warning: 
+  * works but failed transactions show as success.
+- Balances show in each network :warning:
+  * works but sometimes gets stuck until moving out and into the view.
+  * Acala network shows ACA balance but not other tokens owned in that network (tried with DOT and aUSD, and neither did show.)
+  * Balance doesn’t update automatically after receiving.
+- Export wallet [X]
+  * The generated json file worked in Primis
+  * Worked in PolkadotJS extension as well
+  * :warning: But I couldn’t import it in Metamask to interact with Moonbeam. 
+- Log out of a wallet [X]
+- Import a wallet [X]
+
+
+**Recommendation**
+- Clarify expectations about which assets should show when selecting networks.
+- Provide correct feedback about success or failure of transactions.
+- Provide a way to export the wallet in a way that works in Metamask.
