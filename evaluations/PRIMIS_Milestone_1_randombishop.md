@@ -40,9 +40,9 @@ As I am not calibrated yet to decide which issues are blocking vs ok to move for
 ### 0b. Documentation
 
 **Expectation** 
-inline document of code and tutorial docs that explain how users can install it.
+- Inline document of code and tutorial docs that explain how users can install it.
 
-**Assessment** 
+**Assessment**
 - Installing from source is straightforward with npm install or yarn install. 
 - But yarn didn’t work in my machine.
 - Warning: 
@@ -56,3 +56,23 @@ inline document of code and tutorial docs that explain how users can install it.
 - Keep either npm package lock or yarn’s lock file. By having both, it’s unclear which one is the source of truth. I recommend keeping only one and making sure it works in different environments.
 - See recommendations about documentation in the following sections of this evaluation.
 
+
+### 0c. Testing
+
+**Expectation**
+- Unit tests will cover all core functions to ensure functionality and viability. We will describe how to run the tests in the tutorial.
+
+**Assessment**
+- A manual testing guide is provided as a google spreadsheet:
+[doc](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing)
+- Running the tests with npm run test fails:
+```
+Test Suites: 4 failed, 4 total
+Tests:       6 failed, 2 passed, 8 total
+```
+
+**Recommendation**
+- It is generally hard to test front end applications, so I recommend providing a document that explains the testing approach and which modules can be unit tested. This should cover at least the services in `api` folder.
+- Move the google spreadsheet to a text file and include it in the GitHub repo so that we can keep track of changes and decentralize contributions.
+- Add edge case scenarios to the testing guide. Example: sending a transaction that will fail because of not enough gas or existential deposit issue.
+- Add “how to run tests” in the main README file.
