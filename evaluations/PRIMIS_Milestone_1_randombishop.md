@@ -106,7 +106,9 @@ Tests:       6 failed, 2 passed, 8 total
 - Receive DOT :white_check_mark:
 - Receive KSM :white_check_mark:
 - Receive ACA :white_check_mark:
-- Receive GLMR :warning: Could not copy address from the `receive` panel.
+- Receive GLMR :warning: 
+  * The `receive` panel only shows the substrate format, not the EVM format.
+  * Also, the copy button doesn't work
 - Receive ASTR :warning: Could not acquire ASTR to test.
 - Receive ROC :warning: Correct balance is showing but the token symbol is KSM instead of ROC, and in the receive panel it shows GLMR.
 - Send in different networks 
@@ -126,10 +128,11 @@ Tests:       6 failed, 2 passed, 8 total
 
 **Recommendation**
 - Clarify expectations about which assets should show when selecting networks.
+- Provide EVM formatted address for Moonbeam network and fix copy button.
 - Provide correct feedback about success or failure of transactions.
 - Investigate why balance fetching sometimes gets stuck.
 - Auto-refresh account balance or provide a refresh button?
-- Optional: Provide a way to export the wallet in a way that works in Metamask.
+
 
 
 ### 3. Ecosystem features
