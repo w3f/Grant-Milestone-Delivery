@@ -73,7 +73,7 @@ Tests:       6 failed, 2 passed, 8 total
 ```
 
 **Recommendation**
-- It is generally hard to automate the testing of front end applications, so I recommend providing a document that explains the testing approach and which modules can be automatically unit tested. This should cover at least the services in `api` folder.
+- It is generally hard to automate the testing of front end applications, so I recommend providing a document that explains the testing approach and which modules can be automatically unit tested. Automated unit tests should cover at least the services in `api` and `store` source folders.
 - Move the google spreadsheet to a text file and include it in the GitHub repo so that we can keep track of changes, decentralize contributions, and enrich the test suite over time as we discover bugs and edge cases.
 - Add edge case scenarios to the testing guide. Example: sending a transaction that will fail because of not enough gas or existential deposit issue.
 - Add “how to run tests” in the main README file.
@@ -123,6 +123,7 @@ Tests:       6 failed, 2 passed, 8 total
 **Recommendation**
 - Clarify expectations about which assets should show when selecting networks.
 - Provide correct feedback about success or failure of transactions.
+- Investigate why balance fetching sometimes gets stuck.
 - Optional: Provide a way to export the wallet in a way that works in Metamask.
 
 
@@ -135,9 +136,10 @@ Tests:       6 failed, 2 passed, 8 total
 - Kusama assets :white_check_mark:
   * NFTs in RMRK2 :warning: one of 2 NFTs I tested with doesn't show the image
   * NFTs in RMRK1 (Could not test because trading on RMRK1 is temporarily disabled)
-- Moonbeam assets: Not tested yet.
-- Acala assets :warning:
-  * Only ACA is showing
+- Moonbeam assets: didn't test, couldn't load the wallet in Metamask.
+- Acala assets 
+  * Only ACA is showing :white_check_mark:
+  * aUSD and DOT not showing :warning:
 - Sending and receiving the native tokens in the networks :white_check_mark:
 - it’s unclear which other assets are supported.
 - Transactions triggered from other places don’t show in the app.
@@ -160,7 +162,7 @@ Tests:       6 failed, 2 passed, 8 total
 **Recommendation**
 - Implement NFT sending.
 - Check the image display issue, I suspect it to be related to the collection art being stored in chain.
-- Would be nice if the NFT had a caption, like collection name and id, something to identify it beyond the simple image.
+- Would be nice if the NFT had a caption, like collection name and id, something to identify it when image is not enough.
 
 
 
