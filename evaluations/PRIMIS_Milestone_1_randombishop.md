@@ -103,11 +103,15 @@ Tests:       6 failed, 2 passed, 8 total
 
 **Assessment**
 - Create a new wallet :white_check_mark:
-- Received DOT :white_check_mark:
-- Received KSM :white_check_mark:
-- Received ACA :white_check_mark:
-- Send in different networks :warning: 
-  * works but failed transactions show as success.
+- Receive DOT :white_check_mark:
+- Receive KSM :white_check_mark:
+- Receive ACA :white_check_mark:
+- Receive GLMR :warning: Could not copy address from the `receive` panel.
+- Receive ASTR :warning: Could not acquire ASTR to test.
+- Receive ROC :warning: Correct balance is showing but the token symbol is KSM instead of ROC, and in the receive panel it shows GLMR.
+- Send in different networks 
+  * Tested on DOT, KSM, ACA and ROC :white_check_mark:
+  * Failed transactions show as success. :warning: 
 - Balances show in each network :warning:
   * works but sometimes gets stuck until moving out and into the view.
   * Acala network shows ACA balance but not other tokens owned in that network (tried with DOT and aUSD, and neither did show.)
@@ -115,7 +119,7 @@ Tests:       6 failed, 2 passed, 8 total
 - Export wallet :white_check_mark:
   * The generated json file worked in Primis
   * Worked in PolkadotJS extension as well
-  * :warning: But I couldn’t import it in Metamask to interact with Moonbeam. 
+  * But I couldn’t import it in Metamask to interact with Moonbeam. :warning:
 - Log out of a wallet :white_check_mark:
 - Import a wallet :white_check_mark:
 
@@ -124,6 +128,7 @@ Tests:       6 failed, 2 passed, 8 total
 - Clarify expectations about which assets should show when selecting networks.
 - Provide correct feedback about success or failure of transactions.
 - Investigate why balance fetching sometimes gets stuck.
+- Auto-refresh account balance or provide a refresh button?
 - Optional: Provide a way to export the wallet in a way that works in Metamask.
 
 
