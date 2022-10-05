@@ -14,13 +14,13 @@ This milestone finishes the initial version of our Rust port of the Whiteflag pr
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/fennelLabs/Fennel-Protocol/blob/main/LICENSE | Unlicense - Ok | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>  | https://fennel-labs.notion.site/Grant-2-d6f134a5b65f4556823ae648e3b68e68, https://github.com/fennelLabs/Fennel-Protocol/wiki, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://fennellabs.com/fennel-lib/fennel_lib/index.html, https://fennellabs.com/fennel-cli/fennel_cli/, https://fennellabs.com/fennel-server/fennel_server/ | Needs improvement. | 
-| 0c.  | Testing Guide | <ul><li>[ ] </li></ul>  | https://fennel-labs.notion.site/Grant-2-Milestone-2-Testing-Guide-7c92ba9123c04f0cac7d00cbffc04a3b, https://fennel-labs.notion.site/Grant-2-Milestone-1-Testing-Guide-76b12a5e6e1149c2998d3e723cbaeb09, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-3 | Needs improvement. | 
-| 0d. | Docker | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/Fennel-Protocol/blob/main/Dockerfile, https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-cli/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-server/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile | Fennel-Protocol and CLI containers run tests instead of the application. | 
+| 0b. | Documentation | <ul><li>[x] </li></ul>  | https://fennel-labs.notion.site/Grant-2-d6f134a5b65f4556823ae648e3b68e68, https://github.com/fennelLabs/Fennel-Protocol/wiki, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://fennellabs.com/fennel-lib/fennel_lib/index.html, https://fennellabs.com/fennel-cli/fennel_cli/, https://fennellabs.com/fennel-server/fennel_server/ | Ok. | 
+| 0c.  | Testing Guide | <ul><li>[ ] </li></ul>  | https://fennel-labs.notion.site/Grant-2-Milestone-2-Testing-Guide-7c92ba9123c04f0cac7d00cbffc04a3b, https://fennel-labs.notion.site/Grant-2-Milestone-1-Testing-Guide-76b12a5e6e1149c2998d3e723cbaeb09, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-3 | Ok. Needs examples for testing CLI. | 
+| 0d. | Docker | <ul><li>[x] </li></ul>  | https://github.com/fennelLabs/Fennel-Protocol/blob/main/Dockerfile, https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-cli/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-server/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile | Ok | 
 | 0e. | Article | <ul><li>[x] </li></ul>  | https://fennel-labs.notion.site/Whiteflag-on-Fennel-Protocol-f051965e700049fea452a3a5c1ed0f02 | Ok |
-| 1. | Implementation of Whiteflag Protocol | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/whiteflag-rust | Minor improvements. Upate: Some question not answered yet. |
-| 2. | Whiteflag Integration - fennel-cli | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-cli/blob/60128a34a3a1a68cc4ba2f541e8f5d75fdc2eda9/src/fennel_rpc/mod.rs#L143 | Needs an example for testing. App failing. |
-| 3. | IPFS Support | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-lib/blob/master/src/ipfs/mod.rs, https://github.com/fennelLabs/fennel-app/commit/37cc301f03ebd7eef83b589385fe566bfa777aa2#diff-299b25d6371add360dcaf87c6a21570765a9f5af351dfd10bb9ccaba5d5c8b6a |  Needs an example for testing. App failing. |
+| 1. | Implementation of Whiteflag Protocol | <ul><li>[x] </li></ul>  | https://github.com/fennelLabs/whiteflag-rust | Ok |
+| 2. | Whiteflag Integration - fennel-cli | <ul><li>[ ] </li></ul>  | https://github.com/fennelLabs/fennel-cli/blob/60128a34a3a1a68cc4ba2f541e8f5d75fdc2eda9/src/fennel_rpc/mod.rs#L143 | App working, needs examples for testing. |
+| 3. | IPFS Support | <ul><li>[x] </li></ul>  | https://github.com/fennelLabs/fennel-lib/blob/master/src/ipfs/mod.rs, https://github.com/fennelLabs/fennel-app/commit/37cc301f03ebd7eef83b589385fe566bfa777aa2#diff-299b25d6371add360dcaf87c6a21570765a9f5af351dfd10bb9ccaba5d5c8b6a |  ok |
 
 **Additional Information**
 Work from our last grant is included in the links provided in this submission. This is for full reference on all cooperating features, as most of our repositories were modified in some way to adjust for new architecture decisions.
@@ -115,6 +115,8 @@ In the testing guide (milestone 1, which is needed for running milestone 2), for
 
 Update: The system was updated and the new results of testing are presented bellow:
 
+Update: The 
+
 ### Fennel Protocol
 
 Runs ok without docker. With docker we have the same error as before:
@@ -185,6 +187,8 @@ dev_1  |  right: `[48, 0, 0, 0, 0, 0, 0, 0, 78, 4, 87, 241, 153, 128, 163, 170, 
 
 update: It worked now.
 
+update: I cannot test CLI without examples of instructions to use in the console.
+
 ### Fennel App
 
 The error bellow was presented with and without docker. This error is preventing me to move forward with the evaluation.
@@ -231,5 +235,51 @@ Furthermore, can you provide a complete example for testing the Milestone 2 usin
 ![image](https://user-images.githubusercontent.com/112647953/192579539-7b9d4deb-86f5-42f8-a524-87b9a45b9e45.png)
 
 ![image](https://user-images.githubusercontent.com/112647953/192579639-721d1114-ed26-49ea-b9d2-f30b386ab91c.png)
+
+Update: With fennel-dist repository, all parts of the system start up and I can use it with the GUI. However, there are no examples to use CLI.
+
+Some small improvements that could be performed with fennel-dist and related repositorues:
+
+To be able to download the submodules I needed to make this change:
+
+```
+diff --git a/.gitmodules b/.gitmodules
+index dc3909d..98c920f 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -1,12 +1,12 @@
+ [submodule "fennel-app"]
+        path = fennel-app
+-       url = git@github.com:fennelLabs/fennel-app.git
++       url = https://github.com/fennelLabs/fennel-app.git
+ [submodule "fennel-api"]
+        path = fennel-api
+-       url = git@github.com:fennelLabs/fennel-api.git
++       url = https://github.com/fennelLabs/fennel-api.git
+ [submodule "fennel-cli"]
+        path = fennel-cli
+-       url = git@github.com:fennelLabs/fennel-cli.git
++       url = https://github.com/fennelLabs/fennel-cli.git
+ [submodule "fennel-protocol"]
+        path = fennel-protocol
+-       url = git@github.com:fennelLabs/fennel-protocol.git
++       url = https://github.com/fennelLabs/fennel-protocol.git
+
+```
+
+I order to be able to run the system in a host other than localhost without CORS problems I also had to make some changes:
+
+Add the host to the following variables in `fennelapi/settings.py`: ALLOWED_HOSTS, CORS_ORIGIN_WHITELIST and CORS_ALLOWED_ORIGINS.
+
+Change urls in the following places:
+
+`fennel-app/.env` variables (this is expected and good practice).
+
+`fennel-app/src/services/MessageAPI/index.js` lines 66 and 88, hardcoded localhost in a url.
+
+`fennel-app/src/services/MessageEncryptionIndicatorsManager.service.js` line 10, hardcoded localhost in a url.
+
+Would be nice to at least explain that those modifications are needed in some wiki or manual of the system or improve some of them.
+
 
 
