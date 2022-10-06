@@ -4,20 +4,57 @@
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Faucet.md
 - **Milestone:** 1
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
-- **Previously successfully merged evaluation:** N/A
+- **Previously successfully merged evaluation:** [Ink Explorer M1](https://github.com/w3f/Grant-Milestone-Delivery/pull/578)
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/LICENSE) | Apache 2.0, Ok |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md) | View **General Notes** |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md#testing) | View **General Notes** |
+| 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/LICENSE) | Apache 2.0, Ok |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/README.md) | - |
+| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/README.md#testing) | **General Notes v2** |
 | 0d. | Article |<ul><li>[x] </li></ul>| [Google Docs link](https://docs.google.com/document/d/1PKMPsfVBZx7TPq0IIS6fWd15Fs8d8HgUAaFHuA18Pao) | - |
-| 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/index.tsx) | - |  
-| 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/auth/%5B...nextauth%5D.ts) | - |  
-| 3. | User status |<ul><li>[x] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/status.ts) | - |  
-| 4. | Faucet drip |<ul><li>[ ] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/new.ts) | View **General Notes** |
+| 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.tsx```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/index.tsx) | - |  
+| 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/auth/%5B...nextauth%5D.ts) | - |  
+| 3. | User status |<ul><li>[x] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/claim/status.ts) | - |  
+| 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/claim/new.ts) | - |
 
-## General Notes
+## General Notes v2 - Oct 6, 2022
+After the changes, everything noted in **General Notes v1** have been fixed:
+- **0b. Documentation** has been improved:
+  - **Getting Started *section*** has been improved: added installation command and a *note* about the importance of setting all the environment variables;
+  - Inside **Configuration *section***, the callback URL for GitHub has been specified; also the fact that the Redis instance is mocked has been added (so ```REDIS_ENDPOINT``` can be empty);
+- **0c. Testing Guide**, specifically the tests suite has been improved:
+  - all the files are now tested, and coverage is high (everywhere above 90%, most 100%);
+  - tests are now divided into *frontend*, *backend* and *e2e*;
+- The error in **4. Faucet drip** has been fixed.
+- Inside ```.env.sample```, default Twitter and GitHub OAuth have been set, so local development configuration is now even easier; also, Twitter OAuth credentials are v1.0, so can be used to work locally, avoiding problems cited inside **General Notes v1**.
+- Now it is not possible to claim more than once per email or address, thing that was possible before, and noted by @dsm-w3f in his [evaluation document](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/Faucet_1_dsm-w3f.md).
+
+Overall this is almost perfect, I've just found a minor problem in the test suite:
+
+### 0c. Testing Guide
+The testing guide is fine, but if I run the ```e2e``` tests, I get an error:
+```
+Test timeout of 30000ms exceeded.
+locator.fill: Target closed
+=========================== logs ===========================
+waiting for selector "[data-testid="wallet-input"]"
+============================================================
+
+  42 |   const walletInput = page.locator('[data-testid="wallet-input"]');
+  43 |
+> 44 |   await walletInput.fill("incorrect-address");
+     |                     ^
+  45 |   await expect(claimBtn).toHaveText("Claim");
+  46 |   await claimBtn.click();
+  47 |
+
+    at /home/matteo/Desktop/GitHub/sybil-resistant-substrate-faucet/tests/e2e/index.spec.ts:44:
+```
+Specifically, the error is at [```/e2e/index.spec.ts:44```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/tests/e2e/index.spec.ts#L44), maybe there is a syncronization issue? However, all the other tests are passing.
+<br>
+<br>
+<br>
+## General Notes v1 - Oct 1, 2022
 
 The application works smoothly in *local* and [*online*](https://sybil-resistant-substrate-faucet.vercel.app/) versions. The documentation is well-curated and precise, especially the *Configuration* section. All the automated tests are passing.
 
