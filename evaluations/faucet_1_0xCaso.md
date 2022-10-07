@@ -18,18 +18,20 @@
 | 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/claim/new.ts) | - |
 
 ## General Notes v2 - Oct 6, 2022
-After the changes, everything noted in **General Notes v1** have been fixed:
+After the changes, everything noted in **General Notes v1** has been fixed:
 - **0b. Documentation** has been improved:
-  - **Getting Started *section*** has been improved: added installation command and a *note* about the importance of setting all the environment variables;
-  - Inside **Configuration *section***, the callback URL for GitHub has been specified; also the fact that the Redis instance is mocked has been added (so ```REDIS_ENDPOINT``` can be empty);
-- **0c. Testing Guide**, specifically the tests suite has been improved:
-  - all the files are now tested, and coverage is high (everywhere above 90%, most 100%);
-  - tests are now divided into *frontend*, *backend* and *e2e*;
+  - **Getting Started *section*** has been improved: added an installation command and a *note* about the importance of setting all the environment variables;
+  - Inside **Configuration *section***, the callback URL for GitHub has been specified; also, the fact that the Redis instance is mocked has been added (so ```REDIS_ENDPOINT``` can be empty);
+- **0c. Testing Guide**, specifically the tests suite, has been improved:
+  - All the files are now tested, and coverage is high (everywhere above 90%, most 100%);
+  - Tests are now divided into *frontend*, *backend* and *e2e*;
 - The error in **4. Faucet drip** has been fixed.
-- Inside ```.env.sample```, default Twitter and GitHub OAuth have been set, so local development configuration is now even easier; also, Twitter OAuth credentials are v1.0, so can be used to work locally, avoiding problems cited inside **General Notes v1**.
-- Now it is not possible to claim more than once per email or address, thing that was possible before, and noted by @dsm-w3f in his [evaluation document](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/Faucet_1_dsm-w3f.md).
+- Inside ```.env.sample```, default Twitter and GitHub OAuth have been set, so local development configuration is now even easier; also, Twitter OAuth credentials are v1.0, so they can be used to work locally, avoiding problems cited inside **General Notes v1**.
+- Now it is impossible to claim more than once per email or address, which was possible before and noted by @dsm-w3f in his [evaluation document](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/Faucet_1_dsm-w3f.md).
 
-Overall this is almost perfect, I've just found a minor problem in the test suite:
+Other improvements can be found in this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/573#issuecomment-1268528110).
+
+Overall this is almost perfect; I've just found a minor problem in the test suite:
 
 ### 0c. Testing Guide
 The testing guide is fine, but if I run the ```e2e``` tests, I get an error:
@@ -50,7 +52,9 @@ waiting for selector "[data-testid="wallet-input"]"
 
     at /home/matteo/Desktop/GitHub/sybil-resistant-substrate-faucet/tests/e2e/index.spec.ts:44:
 ```
-Specifically, the error is at [```/e2e/index.spec.ts:44```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/tests/e2e/index.spec.ts#L44), maybe there is a syncronization issue? However, all the other tests are passing.
+I have configured the environment variables, as stated in the docs
+
+Specifically, the error is at [```/e2e/index.spec.ts:44```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/tests/e2e/index.spec.ts#L44); maybe there is a synchronization issue? However, all the other tests are passing.
 <br>
 <br>
 <br>
