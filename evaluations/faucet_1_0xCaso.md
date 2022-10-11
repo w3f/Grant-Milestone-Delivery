@@ -1,22 +1,27 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Faucet.md
 - **Milestone:** 1
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
 - **Previously successfully merged evaluation:** [Ink Explorer M1](https://github.com/w3f/Grant-Milestone-Delivery/pull/578)
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
-| ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/LICENSE) | Apache 2.0, Ok |
-| 0b. | Documentation |<ul><li>[x] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/README.md) | - |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/README.md#testing) | **General Notes v2** |
+| ------ | ----------- | -------- | ---- | ---------------- |
+| 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/LICENSE) | Apache 2.0, Ok |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/README.md) | - |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/README.md#testing) | - |
 | 0d. | Article |<ul><li>[x] </li></ul>| [Google Docs link](https://docs.google.com/document/d/1PKMPsfVBZx7TPq0IIS6fWd15Fs8d8HgUAaFHuA18Pao) | - |
-| 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.tsx```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/index.tsx) | - |  
-| 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/auth/%5B...nextauth%5D.ts) | - |  
-| 3. | User status |<ul><li>[x] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/claim/status.ts) | - |  
-| 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/pages/api/claim/new.ts) | - |
+| 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.tsx```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/pages/index.tsx) | - |  
+| 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/pages/api/auth/%5B...nextauth%5D.ts) | - |  
+| 3. | User status |<ul><li>[x] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/pages/api/claim/status.ts) | - |  
+| 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/pages/api/claim/new.ts) | - |
+<br/>
 
+## General Notes v3 - Oct 11, 2022
+After a minor change inside [```/tests/e2e/index.spec.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/18073a60fd96f5ff01e01ce527830c6e1d3b9133/tests/e2e/index.spec.ts#L26) (from ```domain: "localhost"``` to ```domain: "127.0.0.1"```), the last e2e test correctly passes, so everything is now set for the evaluation to be accepted.
+<br/>
+<br/>
 ## General Notes v2 - Oct 6, 2022
 After the changes, everything noted in **General Notes v1** has been fixed:
 - **0b. Documentation** has been improved:
@@ -55,9 +60,8 @@ waiting for selector "[data-testid="wallet-input"]"
 I have configured the environment variables, as stated in the docs
 
 Specifically, the error is at [```/e2e/index.spec.ts:44```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/1ca52e21edea3445d91d5c316340419662987452/tests/e2e/index.spec.ts#L44); maybe there is a synchronization issue? However, all the other tests are passing.
-<br>
-<br>
-<br>
+<br/>
+<br/>
 ## General Notes v1 - Oct 1, 2022
 
 The application works smoothly in *local* and [*online*](https://sybil-resistant-substrate-faucet.vercel.app/) versions. The documentation is well-curated and precise, especially the *Configuration* section. All the automated tests are passing.
