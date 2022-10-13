@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Faucet.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/LICENSE) | Apache 2.0, Ok |
 | 0b. | Documentation |<ul><li>[x] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md) | Problems with Twitter autentication locally - fixed. Other minor improvements - done. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md#testing) | One test case failing. |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md#testing) | One test case failing. Now passing. |
 | 0d. | Article |<ul><li>[x] </li></ul>| [Google Docs link](https://docs.google.com/document/d/1PKMPsfVBZx7TPq0IIS6fWd15Fs8d8HgUAaFHuA18Pao) | - |
 | 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/index.tsx) | Documentation improvements. Done. |  
 | 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/auth/%5B...nextauth%5D.ts) | Documentation improvements. Possible bug. Not a bug, done. |  
@@ -18,6 +18,10 @@
 | 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/new.ts) | Bug, testing and documentation improvements. Now ok. |
 
 ## General Notes
+
+### Update V3
+
+The e2e tests are passing. The latest commit hash evaluated was: a9c7b2fc87df5c0213595fef27d2f262774c4240. 
 
 ### Update V2
 
