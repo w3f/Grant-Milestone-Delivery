@@ -15,15 +15,54 @@
 | 0a. | License | <ul><li> [x] </li></ul> | [Link](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/LICENSE) | Ok |
 | 0b. | Documentation | <ul><li> [x] </li></ul> | [Wiki](https://github.com/Qrucial/QRUCIAL-DAO/wiki) and [Whitepaper](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docs/QRUCIAL_DAO_Whitepaper.pdf) | Ok |
 | 0c. | Testing Guide | <ul><li> [ ] </li></ul> | [Development and testing guide](https://github.com/Qrucial/QRUCIAL-DAO/wiki/Development-and-testing-guide) | Needs better instructions for exploratory testing. |
-| 0d. | Docker | <ul><li> [ ] </li></ul> | [Docker](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docker/files/dockerfile) and [node-setup.sh](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/node-setup.sh) | Minor improvements for running without docker. With docker, build with success but cannot start the services. |
-| 1. | Substrate runtime | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/runtime) | Not tested yet. |
-| 2. | Substrate pallet: ExoSys | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/exo-pallet) | Not tested yet. |
-| 3. | Substrate pallet: AuditorRep | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/audit-pallet) | Not tested yet. |
-| 4. | Substrate report storage | <ul><li> [ ] </li></ul> | [Part of ExoTool](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/exotools/lar.py) | Not tested yet. |
-| 5. | Substrate pallet: governance | <ul><li> [ ] </li></ul> | [Sudo](https://github.com/Qrucial/QRUCIAL-DAO/blob/167d856b87f6ea21c86dd3f3c556ab8e70bb6f35/qdao-node/runtime/src/lib.rs#L306) | Not tested yet. |
+| 0d. | Docker | <ul><li> [ ] </li></ul> | [Docker](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docker/files/dockerfile) and [node-setup.sh](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/node-setup.sh) | With docker, build with success but cannot start the services. |
+| 1. | Substrate runtime | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/runtime) | Not tested yet. Needs better instructions for exploratory testing. |
+| 2. | Substrate pallet: ExoSys | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/exo-pallet) | Not tested yet. Needs better instructions for exploratory testing. |
+| 3. | Substrate pallet: AuditorRep | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/audit-pallet) | Not tested yet. Needs better instructions for exploratory testing. |
+| 4. | Substrate report storage | <ul><li> [ ] </li></ul> | [Part of ExoTool](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/exotools/lar.py) | Not tested yet. Needs better instructions for exploratory testing. |
+| 5. | Substrate pallet: governance | <ul><li> [ ] </li></ul> | [Sudo](https://github.com/Qrucial/QRUCIAL-DAO/blob/167d856b87f6ea21c86dd3f3c556ab8e70bb6f35/qdao-node/runtime/src/lib.rs#L306) | Not tested yet. Needs better instructions for exploratory testing. |
 
 
 ## General Notes
+
+## Update V2: October 6.
+
+1. Problems with Docker
+Commands. The build commands and folders are with some problems in the manual. The commands that worked for me were:
+
+```
+cd QRUCIAL-DAO/docker/files
+docker build .  -t "qdao:V0.3"
+```
+
+  - dependencies
+    - I needed to add `RUN apt-get install -y python3-setuptools` to line 11 of the docker file to fulfill a missing dependency problem.
+  - expose ports
+    - After the container start, there is no port exposed by the container. In this way, the services are not available outside of the container. Please export the ports needed to access the application from outside of the container.
+  - service not running. After checking the services running inside the container the `tmux a -t qdao-api` was not running.
+
+
+2. Clippy (ok)
+
+- Ok. Most of the warnings were fixed.
+
+3. Tests are not running. The pipeline in the repository is also showing that the tests are broken.
+
+https://github.com/Qrucial/QRUCIAL-DAO/actions/runs/3161906474/jobs/5147991781
+
+4. Docs
+
+Ok. Improved.
+
+5. Running the software.
+
+I tried to guess some order and way to run the pallets extrinsic, however, when I started the auditor part I cannot get an authorized auditor.
+Please, help me with a tutorial to run the full process of QDAO using the available methods. A complete example should be enough to fulfill this requirement of the evaluation.
+
+
+
+----
+## Evaluation V1
 
 LICENSE – Ok.
 
