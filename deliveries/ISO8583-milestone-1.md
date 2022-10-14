@@ -7,7 +7,7 @@
 
 **Context** (optional)
 
-This is the associated deliverable for milestone 1, a well-detailed analysis and implementation plan for incorporating ISO8583 with Substrate based blockchains. ISO8583 is the worldwide payment card standard, however due to the fact that it encodes sensative financial information such as personal information and card numbers in plain-text, it is a non-trivial matter to support it on any public blockchain. This presentation highlights the major challenges and reccomends an oracle based implementation to comply with payment card network's terms of service as well as payment card regulations. Note: All sources are cited in the notes section of the PowerPoint under each slide, our exported PDF contains only the final slide data.
+This is the associated deliverable for milestone 1, a well-detailed analysis and implementation plan for incorporating ISO8583 with Substrate based blockchains. ISO8583 is the worldwide payment card standard, however, due to the fact that it encodes sensitive financial information such as personal information and card numbers in plain text, it is a non-trivial matter to support it on any public blockchain. This presentation highlights the major challenges and recommends an oracle based implementation to comply with payment card network's terms of service as well as payment card regulations. Note: All sources are cited in the notes section of the PowerPoint under each slide, our exported PDF contains only the final slide data.
 
 **Deliverables**
 
