@@ -1,5 +1,4 @@
 # Milestone Delivery :mailbox:
-
 **
 The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
 has been filled out correctly for this milestone.**
