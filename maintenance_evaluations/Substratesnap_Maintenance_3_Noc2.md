@@ -15,4 +15,4 @@
 
 ## General Notes
 
-Previous invoice was update. They worked more on it compared to the previous month. 
+Previous invoice was updated. They put more work into it compared to the previous month. 
