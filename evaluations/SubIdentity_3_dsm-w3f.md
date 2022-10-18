@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** [SubIdentity Application](https://github.com/w3f/Grants-Program/blob/master/applications/SubIdentity.md) 
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -10,15 +10,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| [package](https://github.com/TDSoftware/subidentity-package/blob/main/LICENSE) [webapp](https://github.com/TDSoftware/subidentity-webapp/blob/main/LICENSE) [backend](https://github.com/TDSoftware/subidentity-backend/blob/main/LICENSE) | Apache 2.0 |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/README.md https://github.com/TDSoftware/subidentity-webapp/blob/main/docs/Tutorial.md https://github.com/TDSoftware/subidentity-package/blob/main/README.md https://github.com/TDSoftware/subidentity-backend/blob/main/readme.md | Needs more detailed tutorial for running locally. Code documentation is missing in some parts of the software. |
-| 0c. | Testing |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/README.md	https://github.com/TDSoftware/subidentity-package/blob/main/README.md https://github.com/TDSoftware/subidentity-backend/blob/main/readme.md | Minor improvements are needed on unit tests. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/README.md https://github.com/TDSoftware/subidentity-webapp/blob/main/docs/Tutorial.md https://github.com/TDSoftware/subidentity-package/blob/main/README.md https://github.com/TDSoftware/subidentity-backend/blob/main/readme.md | ok. |
+| 0c. | Testing |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/README.md	https://github.com/TDSoftware/subidentity-package/blob/main/README.md https://github.com/TDSoftware/subidentity-backend/blob/main/readme.md | ok |
 | 0d. | Article | <ul><li>[x] </li></ul>| [SubIdentity Medium Article](https://medium.com/@s.dobschal/subidentity-a-search-tool-for-identities-on-substrate-blockchains-8f9858e206e) | |
-| 1a. | Implement logic for default plugins - backend |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-backend/blob/main/src/api.ts https://github.com/TDSoftware/subidentity-backend/blob/main/src/indexer.ts | I was not able to run it locally.  |
-| 1b. | Implement logic for default plugins - frontend |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/views/IdentityView.vue | I was not able to run it locally. |
-| 2. | Implement components for displaying default plugins |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/views/IdentityView.vue | I was not able to run it locally. |
-| 3. | Implement logic for sending tokens |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/components/partials/profile/SendTokenModal.vue | I was not able to run it locally. |
-| 4. | Implement UI for sending tokens |<ul><li>[ ] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/components/partials/profile/SendTokenModal.vue | I was not able to run it locally. | 
-| 5. | Quality Assurance |<ul><li>[ ] </li></ul>| Manual and automated QA | I was not able to find any e2e automated testing as stated that will be performed in the grant application. |
+| 1a. | Implement logic for default plugins - backend |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-backend/blob/main/src/api.ts https://github.com/TDSoftware/subidentity-backend/blob/main/src/indexer.ts | ok  |
+| 1b. | Implement logic for default plugins - frontend |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/views/IdentityView.vue | ok |
+| 2. | Implement components for displaying default plugins |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/views/IdentityView.vue | ok |
+| 3. | Implement logic for sending tokens |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/components/partials/profile/SendTokenModal.vue | ok |
+| 4. | Implement UI for sending tokens |<ul><li>[x] </li></ul>| https://github.com/TDSoftware/subidentity-webapp/blob/main/src/components/partials/profile/SendTokenModal.vue | ok | 
+| 5. | Quality Assurance |<ul><li>[x] </li></ul>| Manual and automated QA | ok |
 
 
 ## General Notes
@@ -32,7 +32,92 @@
 
 ----------------------
 
-# Findings :
+# Evaluation V2 :
+
+### subidentity-package
+
+No changes from the previous evaluation.
+
+### subidentity-backend
+
+Increased the testing coverage, now:
+
+```
+---------------------------------|---------|----------|---------|---------|---------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s   
+---------------------------------|---------|----------|---------|---------|---------------------
+All files                        |   68.91 |     46.8 |   52.54 |   71.12 |                     
+```
+
+Some lint problems are fixed, now:
+
+```
+81 problems (4 errors, 77 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.
+```
+
+### subidentity-webapp
+
+Coverage improved, now:
+
+```
+----------------------------------------|---------|----------|---------|---------|------------------------------------------
+File                                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                        
+----------------------------------------|---------|----------|---------|---------|------------------------------------------
+All files                               |   62.22 |    54.92 |   63.72 |      60 |                                          
+```
+
+Some code documentation was added.
+
+There are e2e tests and they are passing. There are some synchronization problem with the tests, which may fail if the network (Polkadot) take some time to respond. This is not a big problem. 
+
+There are a few lint errors:
+
+```
+✖ 6 problems (0 errors, 6 warnings)
+```
+
+### Running the software
+
+The build ran without problems generating the minified scripts.
+
+All services worked well. Just for `npm run dev-indexer` if I don't fill the --from and --to parameters the initialization of the service fail with the message below. Would be nice to explain that these parameters are mandatory.
+
+```
+diogo@diogo-note:~/workspace/w3f/subidentity/subidentity-backend$ npm run dev-indexer 
+
+> subidentity-backend@0.3.1 dev-indexer
+> nodemon src/indexer.ts --endpoint=wss://rpc.polkadot.io --from= --to=
+
+[nodemon] 2.0.19
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node src/indexer.ts --endpoint=wss://rpc.polkadot.io --from= --to=`
+2022-10-17 18:26:07        RPC-CORE: getBlock(hash?: BlockHash): SignedBlock:: Unable to retrieve header and parent from supplied hash
+/home/diogo/workspace/w3f/subidentity/subidentity-backend/node_modules/@polkadot/util/cjs/assert.js:37
+    throw new Error((0, _function.isFunction)(message) ? message() : message);
+          ^
+Error: Unable to retrieve header and parent from supplied hash
+    at assert (/home/diogo/workspace/w3f/subidentity/subidentity-backend/node_modules/@polkadot/util/cjs/assert.js:37:11)
+    at ApiPromise._getBlockRegistryViaHash (/home/diogo/workspace/w3f/subidentity/subidentity-backend/node_modules/@polkadot/api/cjs/base/Init.js:234:22)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[nodemon] app crashed - waiting for file changes before starting...
+```
+
+### Accessing the API
+
+The API is working. However, the default path for the API in the .env.template file is /api and in the examples is /. This may confuse you when testing the API, would be better if the paths are the same.
+
+
+### Exploratory testing
+
+I sent 1 WND to Gavin without problems in Westend (https://westend.subscan.io/extrinsic/12934139-2).
+
+The governance tab seems to be working and added to the tutorial. 
+
+
+# Evaluation V1 :
 
 ## Hosted website (https://subidentity.tdsoftware.de) - Exploratory testing (performed by Lucas)
 
