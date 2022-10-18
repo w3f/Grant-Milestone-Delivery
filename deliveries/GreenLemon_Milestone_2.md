@@ -28,4 +28,4 @@
 | 2.     | (Node.js)Relayer service	            | [Link](https://github.com/GreenLemonProtocol/ink/blob/main/http/index.js)              | Relayer service should start before testing the client tool
  
 **Additional Information**
-> At present, it is relatively slow to verify zero-knowledge proof on-chain. I think if the API related to zero-knowledge proof can be integrated into substrate, the execution speed of the transaction can be greatly improved.
+> At present, it is relatively slow to verify zero-knowledge proof on-chain. We are planning to integrate APIs related to zero-knowledge proof into the substrate, to improve the execution speed of the transaction.
