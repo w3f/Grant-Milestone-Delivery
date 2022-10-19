@@ -16,7 +16,7 @@ Milestone delivered fully working ParaSpell release, all features were implement
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License |[Lincense](https://github.com/dudo50/ParaSpell/blob/main/LICENCE)| MIT| 
 | 0b.  | Documentation |[Readme.md](https://github.com/dudo50/ParaSpell/blob/main/README.md) <br >[Inline documentation commit](https://github.com/dudo50/ParaSpell/commit/2fb7b9c2a4bf6bf9602abced3f5662be96f2bc65)| Inline documentation of code, as well as startup  configuration with all necessary commands, included in repository| 
-| 0c.  | Testing guide |[Readme.md](https://github.com/dudo50/ParaSpell/blob/main/README.md)| Core functionality & user guide will be covered in repository documentation| 
+| 0c.  | Testing guide |[SDK UNIT TESTS Commit](https://github.com/paraspell/sdk/commit/b4fd9b609c6f299309a4b27450f69cd2445fb1db), [Readme.md](https://github.com/dudo50/ParaSpell/blob/main/README.md)| Core functionality & user guide will be covered in repository documentation as well as SDK UNIT tests for core functionality| 
 | 0d.  | Docker |[Dockerfile](https://github.com/dudo50/ParaSpell/blob/main/Dockerfile) [Docker commit](https://github.com/dudo50/ParaSpell/commit/cbb8a0a50a38825dd844336d24fd74ad8b223501)| Frontend Docker file will be ready| 
 | 0e.  | Article |[Medium article sketch](https://medium.com/@dudo50/66f32b6fe9eb)| Medium article about development of ParaSpell| 
 | 1.  | Wallet login |[Wallet login commit](https://github.com/dudo50/ParaSpell/commit/116e0eef5a64d904d6224eb1e49eff72040faf4e)| Developers can use their Polkadot js extension wallets to execute transactions XCM from their accounts.| 
