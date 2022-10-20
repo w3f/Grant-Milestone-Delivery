@@ -20,3 +20,4 @@
 
 ## General Notes
 
+Clean and well commented code, with proper Apache 2.0 licensing. Unit tests all passed successfully. Nice easy-to-follow demo instructions. Pallets work nicely, as well as contract deployment.
