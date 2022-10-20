@@ -2,7 +2,7 @@
 
 
 
-- **Status:** In Progress
+- **Status:** ACCEPTED
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Primis.md
 - **Milestone:** 1
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
