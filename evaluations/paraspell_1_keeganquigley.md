@@ -7,7 +7,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- |------------- | ------------- |
-| 0a. | License |[Lincense](https://github.com/dudo50/ParaSpell/blob/main/LICENCE)| MIT| 
+| 0a. | License |[License](https://github.com/dudo50/ParaSpell/blob/main/LICENCE)| MIT| 
 | 0b.  | Documentation | <ul><li>[ ] </li></ul> |[Readme.md](https://github.com/dudo50/ParaSpell/blob/main/README.md) <br >[Inline documentation commit](https://github.com/dudo50/ParaSpell/commit/2fb7b9c2a4bf6bf9602abced3f5662be96f2bc65)| Good inline documentation.| 
 | 0c.  | Testing guide | <ul><li>[ ] </li></ul> |[SDK UNIT TESTS Commit](https://github.com/paraspell/sdk/commit/b4fd9b609c6f299309a4b27450f69cd2445fb1db), [Readme.md](https://github.com/dudo50/ParaSpell/blob/main/README.md)| Unit tests cover sdk core functionalities. Was able to spin up both `dev` and `prod` versions on Ubuntu.| 
 | 0d.  | Docker | <ul><li>[ ] </li></ul> |[Dockerfile](https://github.com/dudo50/ParaSpell/blob/main/Dockerfile) [Docker commit](https://github.com/dudo50/ParaSpell/commit/cbb8a0a50a38825dd844336d24fd74ad8b223501)| `paraspell-network-config.yml` file spins up all necessary nodes.| 
@@ -23,4 +23,18 @@
 
 # General Notes
 
-This is a very decent delivery. Team put a lot of effort into the project and the UI looks great. Unit tests were added upon recommendation. 
+This is a very decent delivery. Team put a lot of effort into the project and the UI looks great. Unit tests were added upon recommendation. Works out of the box for `Rococo`, `BiFrost`, `Pichiu`, `Karura` networks. This tool is very needed and will be handy for developers and users alike.
+
+## Docs & Testing
+
+Wiki guide is well written and covers:
+- Adding assets to XCM calls
+- Registering new assets on node
+- Adding a new node into the network
+- Understanding calls used in ParaSpell
+
+One recommendation for the [Adding Nodes](https://github.com/paraspell/ui/wiki/Adding-new-node-into-the-network#2-adding-a-node-to-the-application) section would be to include the `.vue` applicable filenames above the screenshots, which will make them easier to search for.
+
+Project has no unit tests. Please consider adding some. UPDATE: Unit tests were added for core functionalites.
+
+Project has issues running on ARM64 (Apple M1) architecture but works fine on x86/64 Ubuntu.
