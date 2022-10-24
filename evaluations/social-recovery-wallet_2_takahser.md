@@ -2,7 +2,7 @@
 
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/social_recovery_wallet.md
-- **Milestone:** 1
+- **Milestone:** 2
 - **Kusama Identity:** Address
 - **Previously successfully merged evaluation:** All by takahser
 
