@@ -30,9 +30,9 @@ We recorded a [video demonstration](https://us02web.zoom.us/rec/share/E4aqWkYK7n
 | -----: | ----------- | ------- |
 | Pallet | [Hashed Substrate](https://github.com/hashed-io/hashed-substrate/tree/main/pallets/bitcoin-vaults) | Rust
 | Bitcoin Services | [BDK Services](https://github.com/hashed-io/bdk-services) | Rust |
-| Client | [Web App](https://github.com/hashed-io/hashed-network-portal-ui) | Quasar/Vuejs |
+| Portal Client | [Web App](https://github.com/hashed-io/hashed-network-portal-ui) | Quasar/Vuejs |
+| NBV Client Library | [JS Library for NBV](https://github.com/hashed-io/nbv-client-api) | Javascript |
 | QR Codec | [QR Encoding Package](https://github.com/hashed-io/nbv-ur-codec) | Javascript |
-
 
 **Additional Information**
 
