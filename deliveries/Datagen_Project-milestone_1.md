@@ -3,7 +3,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this delivery**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Datagen_Project.md
-* **Delivery Number:** 1
+* **Milestone Number:** 1
 * **Delivery Date:** 21 October 2022
 
 **Context**
