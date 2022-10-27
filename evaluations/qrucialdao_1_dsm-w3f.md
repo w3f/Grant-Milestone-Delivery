@@ -25,6 +25,30 @@
 
 ## General Notes
 
+## Update V3: October 27.
+
+I still having problems with docker. When I tried to build the image the step below failed:
+
+```
+Step 12/23 : ADD ./data /opt/data
+ADD failed: file not found in build context or excluded by .dockerignore: stat data: file does not exist
+```
+
+The automated tests are now passing. 
+
+Now it was provided a tutorial for testing the application. The steps of the tutorial provided worked. However, from the list of features of the software only two were effectively tested in the tutorial (sign_up and approve_auditor). Please, complete the tutorial in order to test all functions provided. The functions below are missing in the tutorial:
+
+```
+        pub fn tool_exec_req
+        pub fn tool_exec_cancel_invalid
+        pub fn tool_exec_auto_report
+        pub fn challenge_report
+
+        pub fn update_profile
+        pub fn cancel_account
+        pub fn game_result
+```
+
 ## Update V2: October 6.
 
 1. Problems with Docker
