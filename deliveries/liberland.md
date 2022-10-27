@@ -20,7 +20,7 @@
 | ------------- | ------------- | ------------- |------------- |
 |   0a.            |   License MIT   |  [LICENSE-MIT](https://github.com/liberland/liberland_substrate/blob/main/LICENSE-MIT)   |  All contributed code is MIT  |
 |    0b.          | Documentation  | [liberland/liberland.github.io](https://github.com/liberland/liberland.github.io/tree/main/docs)  | Documentation	Inline code documentation can be found in our main node repo: https://github.com/liberland/liberland_substrate , Documentation and guides can be found here: https://github.com/liberland/liberland_substrate  |
-|   0c.            |     Testing Guide  | ttps://github.com/liberland/liberland.github.io/blob/main/docs/testing_guide.md    |  Testing guide in the docs   |
+|   0c.            |     Testing Guide  | https://github.com/liberland/liberland.github.io/blob/main/docs/testing_guide.md    |  Testing guide in the docs   |
 |   0d.          |     Docker     |        https://hub.docker.com/r/laissezfaire/liberland-node       |    docker pull laissezfaire/liberland-node |
 |   0e.         |  Article            |    TODO   |  TODO            |
 | 1. | LLM Pallet | [https://github.com/liberland/liberland_substrate/blob/main/frame/llm/Readme.md](https://github.com/liberland/liberland_substrate/blob/main/frame/llm/Readme.md) | Manage distribution, voting and custom logic with the on-chain asset LLM | 
