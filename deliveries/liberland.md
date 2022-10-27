@@ -18,6 +18,12 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
+|   0a.            |   License MIT   |  [LICENSE-MIT](https://github.com/liberland/liberland_substrate/blob/main/LICENSE-MIT)   |  All contributed code is MIT  |
+|    0b.          | Documentation  | [liberland/liberland.github.io](https://github.com/liberland/liberland.github.io/tree/main/docs)  | Documentation	Inline code documentation can be found in our main node repo: https://github.com/liberland/liberland_substrate , Documentation and guides can be found here: https://github.com/liberland/liberland_substrate  |
+|   0c.            |     Testing Guide  | ttps://github.com/liberland/liberland.github.io/blob/main/docs/testing_guide.md    |  Testing guide in the docs   |
+|   0d.          |     Docker     |        https://hub.docker.com/r/laissezfaire/liberland-node       |    docker pull laissezfaire/liberland-node
+          |
+|   0e.         |  Article            |    TODO   |  TODO            |
 | 1. | LLM Pallet | [https://github.com/liberland/liberland_substrate/blob/main/frame/llm/Readme.md](https://github.com/liberland/liberland_substrate/blob/main/frame/llm/Readme.md) | Manage distribution, voting and custom logic with the on-chain asset LLM | 
 | 2.  | Congress Pallet | [elections phragment](https://github.com/liberland/liberland_substrate/tree/main/frame/elections-phragmen) | We allow voting with on-chain assets | 
 | 3. | Voting with on-chain assets | Pallet [democracy](https://github.com/liberland/liberland_substrate/blob/main/frame/democracy/README.md) and [elections phragment](https://github.com/liberland/liberland_substrate/tree/main/frame/elections-phragmen) | Pallet democracy and elections have been modified to support voting with LLM on-chain asset |
