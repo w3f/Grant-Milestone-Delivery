@@ -37,4 +37,6 @@ I'm able to successfully use `storeMessage(message, time, convoId, recipient)` t
 
 I'm able to successfully `register` a username to an `AccountId` and query it from chain state. Correctly maps active convos to `StorageMap` for both participants.
 
+`cargo clippy` originally generated 13 warnings about redundant clones, but they have been fixed.
+
 **Please Note:** No security audit(s) have been conducted as a part of this evaluation.
