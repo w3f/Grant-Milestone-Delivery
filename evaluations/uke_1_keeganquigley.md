@@ -23,7 +23,7 @@ This was implemented slightly different from the original proposal. However, the
 
 # General Notes
 
-Nice app! I can't wait to see what the front end looks like. 
+Nice app! I can already see the PoC coming together here. Great delivery overall, and I think that p2p messaging systems like this are very necessary. I can't wait to see what the front end looks like. 
 
 ## Documentation & Testing
 
@@ -35,6 +35,6 @@ I'm able to successfully use `storeMessage(message, time, convoId, recipient)` t
 
 **Uke Pallet - Basic Identiy Scheme**
 
-I'm able to successfully `register` a username to an `AccountId` and query it from chain state. Correctly maps active convos to StorageMap for both participants.
+I'm able to successfully `register` a username to an `AccountId` and query it from chain state. Correctly maps active convos to `StorageMap` for both participants.
 
 **Please Note:** No security audit(s) have been conducted as a part of this evaluation.
