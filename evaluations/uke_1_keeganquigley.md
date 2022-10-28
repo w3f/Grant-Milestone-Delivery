@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** [link](https://github.com/w3f/Grants-Program/blob/master/applications/uke-protocol.md)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
