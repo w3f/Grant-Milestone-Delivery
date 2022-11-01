@@ -27,7 +27,7 @@ This milestone focuses on  the implementation of our Trusted Transaction Validat
 | 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/M4.html#code-documentation  ) | Please read first Garbled Circuit Factory (GCF) and Trusted Transaction Validation Protocol (TTVP) [overviews](https://book.interstellar.gg/M4.html#garbled-circuit-factory-gcf-overview)   |
 | 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/M4.html#testing-guide) | Core functions due to the specificity of the architecture are mainly covered with integration tests |
 | 0d. | Dockers | [Docker compose demo](https://github.com/Interstellar-Network/Interstellar-Book/blob/docker-compose/docker-compose.yml) | [How to launch docker compose demo]( https://book.interstellar.gg/M4_demo_tutorial.html)   |
-| 0e. | Article | [article](https://book.interstellar.gg/M3.html#article)  |   links in Mx Interstellar Book  |  
+| 0e. | Article | [article](https://book.interstellar.gg/M4.html#article)  |   links in Mx Interstellar Book  |  
 | 1. |  Integritee Worker |   [integritee-worker](https://github.com/Interstellar-Network/integritee-worker)           |
 | 2. |  Integritee Node |   [node](https://github.com/Interstellar-Network/integritee-node)           |
 | 3. | Pallet ocw-garble ported in Integritee Worker(TEE)| [ocw-garble](https://github.com/Interstellar-Network/pallets/tree/main/pallets/ocw-garble) |        | 
