@@ -8,9 +8,9 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.    | License           |<ul><li>[ ] </li></ul>| [LICENSE](https://github.com/daos-org/daos#license)                                                                                                                              | Two licenses | 
+| 0a.    | License           |<ul><li>[x] </li></ul>| [LICENSE](https://github.com/daos-org/daos#license)                                                                                                                              | ok | 
 | 0b.    | Documentation        |<ul><li>[x] </li></ul>| [document](https://github.com/daos-org/daos/tree/main/document)                                                                                                                  | ok | 
-|0c.| Testing |<ul><li>[ ] </li></ul>| tests.rs file under each module                                                                                                                                                  | See coverage report |
+|0c.| Testing |<ul><li>[x] </li></ul>| tests.rs file under each module                                                                                                                                                  | ok |
 |0d. | Example |<ul><li>[ ] </li></ul>| [VC DAO template](https://github.com/DICO-TEAM/dico-chain/tree/main/pallets/vc), [use daos for VC DAO](https://github.com/DICO-TEAM/dico-chain/blob/main/runtime/tico/src/vc.rs) | Need a tutorial for manual testing |
 |0e. | Comment |<ul><li>[x] </li></ul>|                                                                                                                                                                                  | Code Documentation ok. |
 |0f.| Benchmarking |<ul><li>[ ] </li></ul>| benchmarking.rs.rs file under each module                                                                                                                                        | Need instructions for run |
@@ -22,13 +22,48 @@
 
 ## General Notes
 
-### License
+### Evaluation V2
+
+#### License
+
+Ok, now only one license Apache 2.0.
+
+#### Testing Guides
+
+Please, refer to our deliverable [Milestone Deliverable Guideline](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md). We need a testing guide and integration tests. I understand that you have unit tests in each pallet but I need to access and verify if what was proposed in the milestone works as a system. How can I check that on a system level (not unit) your delivery works? If you don't want to provide a guide to manually test the system you can opt to use automated e2e testing, as some grants delivery does. The code provided as example, how can I run it?
+
+#### Tests Coverage
+
+All pallets has good coverage.
+
+Agency pallet
+lib.rs	194 / 262 (74.05%) (+29.23%)
+
+Create Dao
+lib.rs	40 / 45 (88.89%) (+8.45%)
+
+Doas
+lib.rs	14 / 17 (82.35%) (+5.88%)
+
+Square
+lib.rs	232 / 271 (85.61%) (+17.38%)
+
+Sudo
+lib.rs	30 / 34 (88.24%) (+0.74%)
+
+#### Static Analysis
+
+All warnings were fixed.
+
+
+### Evaluation V1
+
+#### License
 
 There are two licence files in the repository, one APACHE 2.0 and other MIT. Which is the licence of the software? Why two licenses? Usually we distribute software under just one license.
 
 
-
-### Testing Guides
+#### Testing Guides
 
 We need a tutorial for performing system tests on the software. Something like [this one](https://github.com/Popular-Coding/ventur/blob/main/pallets/escrow/README.md). 
 
@@ -36,7 +71,7 @@ We also need instructions for running the benchmarks mentioned.
 
 The lack of these tutorials prevented me to test the pallets delivered. 
 
-### Tests Coverage
+#### Tests Coverage
 
 Agency pallet
 lib.rs	- 121 / 270 (44.81%)
@@ -59,7 +94,7 @@ lib.rs	28 / 32 (87.50%)
 Good coverage.
 
 
-### Static Analysis
+#### Static Analysis
 
 cargo clippy generated these warnings:
 
@@ -316,7 +351,7 @@ error: could not compile `daos-agency` due to previous error; 4 warnings emitted
 ```
 
 
-### Code documentation
+#### Code documentation
 
 The folowing warning was presented while generating the html documentation from the source code:
 
@@ -333,8 +368,6 @@ warning: unresolved link to `AccountId`
 warning: `daos-primitives` (lib doc) generated 1 warning
 
 ```
-
-### Code Documentation
 
 Good code documentation.
 
