@@ -2,10 +2,10 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-**Application Document:** [Rubeus_Keeper](https://github.com/w3f/Grants-Program/pull/1124). 
+**Application Document:** [Rubeus Keeper](https://github.com/w3f/Grants-Program/pull/1124/). 
 **Milestone Number:** 1
 
-**Context** (optional)
+**Context**
 In this milestone we've developed an Ink! smart contract for password storage and a test page for running functional tests.
 
 **Deliverables**
