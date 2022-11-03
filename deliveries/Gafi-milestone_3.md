@@ -3,6 +3,7 @@
 * **The Invoice:** filled
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md
 * **Milestone Number:** 3
+* **Delivered Commit Hash** 264f0fc0747ab488ba37705787579a85f529842f
 
 
 **Context** (optional)
