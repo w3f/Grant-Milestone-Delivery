@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [DotPulse.md](https://github.com/w3f/Grants-Program/blob/e0c7bff710ac0f102b4699229a4a85fdf147ec89/applications/DotPulse.md)
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/DotPulse.md
 * **Milestone Number:** 1
 
 **Context**
