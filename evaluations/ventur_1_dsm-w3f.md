@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** [Ventur Application](https://github.com/w3f/Grants-Program/blob/master/applications/ventur.md)
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,7 +11,7 @@
 | 0a.| License |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/blob/main/LICENSE |  | 
 | 0b.| Documentation |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#run-tests |  | 
 | 0c.| Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#run-tests |   | 
-| 0d.| Docker |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur#running-a-ventur-node-docker | Fail to run | 
+| 0d.| Docker |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#running-a-ventur-node-docker |  | 
 | 0e.| Article |<ul><li>[x] </li></ul>| https://docs.google.com/document/d/1aQOTNwcOgZ5_8VDloDmaGEs6si9hm5dCMSDXFHwo4LY/edit?usp=sharing | | 
 | 1. | Substrate module: escrow |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/escrow |  | 
 | 2. | Substrate module: contracted-payment-process |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/payments |  |
@@ -25,68 +25,7 @@
 
 ## Docker
 
-I saw that you have pipelines in which the docker-compose and docker-build are running. However, when I tried to run it with docker-compose I got the following problems. Maybe the Rust version of the image is incompatible to build the node/pallets.
-
-Docker compose command failed with the following msg:
-
-```
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/registry/src/github.com-1ecc6299db9ec823/parity-db-0.3.17/src/column.rs:553:34
-    |
-553 |         let stats = self.collect_stats.then_some(&self.stats);
-    |                                        ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-For more information about this error, try `rustc --explain E0658`.
-error: could not compile `parity-db` due to previous error
-warning: build failed, waiting for other jobs to finish...
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/git/checkouts/substrate-7e08433d4c370a21/7c4ac35/frame/support/procedural/src/construct_runtime/mod.rs:373:48
-    |
-373 |         let test_cfg = feature_set.remove(&&&"test").then_some(quote!(test)).into_iter();
-    |                                                      ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/git/checkouts/substrate-7e08433d4c370a21/7c4ac35/frame/support/procedural/src/construct_runtime/mod.rs:387:48
-    |
-387 |         let test_cfg = feature_set.remove(&&&"test").then_some(quote!(test)).into_iter();
-    |                                                      ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/git/checkouts/substrate-7e08433d4c370a21/7c4ac35/frame/support/procedural/src/construct_runtime/mod.rs:400:49
-    |
-400 |             let test_cfg = feature_set.remove(&&&"test").then_some(quote!(test)).into_iter();
-    |                                                          ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/git/checkouts/substrate-7e08433d4c370a21/7c4ac35/frame/support/procedural/src/construct_runtime/mod.rs:416:48
-    |
-416 |         let test_cfg = feature_set.remove(&&&"test").then_some(quote!(test)).into_iter();
-    |                                                      ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-error[E0658]: use of unstable library feature 'bool_to_option'
-   --> /var/www/ventur-node/.cargo/git/checkouts/substrate-7e08433d4c370a21/7c4ac35/frame/support/procedural/src/construct_runtime/mod.rs:444:49
-    |
-444 |             let test_cfg = feature_set.remove(&&&"test").then_some(quote!(test)).into_iter();
-    |                                                          ^^^^^^^^^
-    |
-    = note: see issue #80967 <https://github.com/rust-lang/rust/issues/80967> for more information
-
-error: build failed
-ERROR: 101
-
-```
-
-Docker build worked well.
+The docker-compose and docker-build are running well. The problem with docker-compose was a old image in our test server. 
 
 ## Code Quality
 
