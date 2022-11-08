@@ -25,3 +25,4 @@
 - You could also run `cargo doc --open` in the repository root and it will open the documentation locally.
 - I made all tests into Rust unit test. Simply run `cargo test` in the repository root, then check the results.
 - I improve the **3.** It's possible to modify any chain state.
+- I realize that it is much easier for you to test this with a simple `cargo test` command. So, I decide to use cargo instead of docker for **4.**.
