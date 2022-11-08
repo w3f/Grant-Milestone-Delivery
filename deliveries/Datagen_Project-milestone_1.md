@@ -16,7 +16,7 @@ The project is build on two blockchains (heavy_blockchain and fast_blockchain), 
 | ------------- | ------------- | ------------- |------------- |
 | 0b | Inline Documentation | | Check the files| 
 | 0c  | Testing Guide |[fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/README.md), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/README.md)| |
-| 0d | Docker | [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/docker-compose.yml), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/docker-compose.yml)| This delivery is only pallet, so docker file is not so necessary. | 
+| 0d | Docker | [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/Dockerfile), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/Dockerfile)| Please follow the instructions of the testing guide | 
 | 0e | Medium Article | [link](https://medium.com/@viacc/datagen-project-dev-blog-web3-fundation-milestone-1-b3ec2bdb1a95) |
 | 1 | Pallet  | [random-node-selector](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/heavy_blockchain/pallets/random_node_selector) | |
 | 2 | Pallet | [computational-work](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/fast_blockchain/pallets/computational-work) | |
