@@ -2,7 +2,8 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-**Application Document:** [Rubeus Keeper](https://github.com/w3f/Grants-Program/pull/1124/). 
+**Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/RubeusKeeper.md
+
 **Milestone Number:** 1
 
 **Context**
