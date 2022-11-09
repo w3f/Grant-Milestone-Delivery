@@ -27,7 +27,6 @@ A running instance of the code can be found [here](http://34.107.153.230/)
 (all MIT licensed)
 | Component | Repo | Language |
 | -----: | ----------- | ------- |
-| Afloat Client API | https://github.com/hashed-io/afloat-client-api | Javascript |
 | Marketplace UI | https://github.com/hashed-io/hashed-marketplaces-ui | Quasar/Vue |
 | Marketplace pallets | https://github.com/hashed-io/hashed-substrate | Rust |
 | Confidential Documents Server | https://github.com/hashed-io/hashed-private-server | Javascript |
