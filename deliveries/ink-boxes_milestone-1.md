@@ -39,5 +39,4 @@ This milestone focuses on the creation of Ink boxes.
 | 0. | Creation of Boxes | We will create boxes in a GitHub repo like NFT-Marketplace, Decentralized Ecommerce platform, ERC-721 with UI functionalities, ERC-20 with UI functionalities. Complete list will be provided in the GitHub repo README and coming soon section of the website. |
 
 
-
 Note: We will continue to create more and more useful ink boxes and expect the same from the community.
