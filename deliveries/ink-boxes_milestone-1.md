@@ -7,7 +7,7 @@
 > As W3F does not anymore offer payments in ETH, we switched to payment in USD in the submitted invoice
 
 
-* **Application Document:** https://github.com/w3f/Grants-Program/pull/1243/
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-boxes.md
 
 * **Milestone Number:**  1
 
