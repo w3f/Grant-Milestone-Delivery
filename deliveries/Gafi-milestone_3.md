@@ -3,7 +3,7 @@
 * **The Invoice:** filled
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Gafi.md
 * **Milestone Number:** 3
-* **Delivered Commit Hash** 264f0fc0747ab488ba37705787579a85f529842f
+* **Delivered Commit Hash** 7468fffe75eb79b1ebcda1e62b241ee1118dc0b0
 
 
 **Context** (optional)
@@ -20,13 +20,17 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0. | Documentation | https://wiki.gafi.network/ | Documentation is merge with Wiki | 
-| 0a. | Pallets Testing Guide | https://github.com/grindytech/gafi#test | The pallets functionality unit-test | 
-| 0b. | Client Testing Guide | https://github.com/grindytech/gafi/tree/master/tests | The client unit-test | 
-| 0c. | Docker | https://github.com/grindytech/gafi#run-in-docker | Docker | 
-| 0d. | Demo | [https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward](https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward) | Demo Game Creator | 
-| 0e. | Benchmarking | https://github.com/grindytech/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
+| 0a. | Apache 2.0 |  | 
+| 0b. | Documentation | https://wiki.gafi.network/ | Documentation is merge with Wiki | 
+| 0c. | Pallets Testing Guide | https://github.com/grindytech/gafi#test | The pallets functionality unit-test | 
+| 0c. | Client Testing Guide | https://github.com/grindytech/gafi/tree/master/tests | The client unit-test | 
+| 0d. | Docker | https://github.com/grindytech/gafi#run-in-docker | Docker | 
+| 0e. | Article | https://gafi.network/GafiPaper.pdf | Gafi Paper | 
 | 1.  | pallet game-creator | https://github.com/grindytech/gafi/tree/master/pallets/game-creator | [Wiki](https://wiki.gafi.network/learn/game-creator)| 
+| 2.  | DAO | https://github.com/grindytech/hne-station-gov-contracts | https://gov.heroesempires.com/ | 
+| 3. | Weights/Benchmarking | https://github.com/grindytech/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
+| 4. | Demo | [https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward](https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward) | Demo Game Creator | 
+
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
