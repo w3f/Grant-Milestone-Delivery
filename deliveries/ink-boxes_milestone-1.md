@@ -5,11 +5,13 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
 > As W3F does not anymore offer payments in ETH, we switched to payment in USD in the submitted invoice
+
+
 * **Application Document:** https://github.com/w3f/Grants-Program/pull/1243/
 
-* **Code repository:** https://github.com/nerdsince98/ink-boxes
-
 * **Milestone Number:**  1
+
+* **Code repository:** https://github.com/nerdsince98/ink-boxes
 
 **Context** (optional)
 
