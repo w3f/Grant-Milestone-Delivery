@@ -17,7 +17,7 @@
 |  3. | Core, CLI: rpc | <ul><li>[x] </li></ul> | [`rpc` command](https://github.com/hack-ink/subalfred/blob/09f14e1099379a7d3327de55328642e26f1a007a/bin/subalfred/src/command/rpc.rs) | See [CLI Testruns](#test-logs) |
 |  4. | CLI: JSON output | <ul><li>[x] </li></ul> | [`key` command](https://github.com/hack-ink/subalfred/blob/09f14e1099379a7d3327de55328642e26f1a007a/bin/subalfred/src/command/key.rs) | See [CLI Testruns](#test-logs) |
 |  5. | CLI: stable Rust toolchain | <ul><li>[x] </li></ul> | [merged PR](https://github.com/hack-ink/subalfred/pull/195) | - |
-|  6. | CLI: `--at` accept block number | <ul><li>[ ] </li></ul> | [merged PR](https://github.com/hack-ink/subalfred/pull/259) | Not sure how to test this, I didn't find instructions. Original description from grantee: _I'll make the `--at` arg accept block number input, instead of a block hash only. Any command with `--at` arg will be updated._ |
+|  6. | CLI: `--at` accept block number | <ul><li>[x] </li></ul> | [merged PR](https://github.com/hack-ink/subalfred/pull/259), [docs](https://subalfred.hack.ink/user/cli/state.html) | - |
 |  7. | Releases | <ul><li>[x] </li></ul> | [v0.9.0-rc14 GitHub release](https://github.com/hack-ink/subalfred/releases/tag/v0.9.0-rc14), [crate](https://crates.io/crates/subalfred) | - |
 
 
@@ -26,7 +26,9 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- High-quality delivery, functionality works well, code is very clean and well documented.
+- The docs are very helpful.
+- Initially, 1 unit test failed but it was quickly fixed by the grantee. This happened because it was mistakenly interpreted as a test by the testing framework.
 
 ### Testing guide feedback
 
