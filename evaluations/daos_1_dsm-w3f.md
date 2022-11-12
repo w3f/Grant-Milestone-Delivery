@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/daos.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,16 +11,20 @@
 | 0a.    | License           |<ul><li>[x] </li></ul>| [LICENSE](https://github.com/daos-org/daos#license)                                                                                                                              | ok | 
 | 0b.    | Documentation        |<ul><li>[x] </li></ul>| [document](https://github.com/daos-org/daos/tree/main/document)                                                                                                                  | ok | 
 |0c.| Testing |<ul><li>[x] </li></ul>| tests.rs file under each module                                                                                                                                                  | ok |
-|0d. | Example |<ul><li>[ ] </li></ul>| [VC DAO template](https://github.com/DICO-TEAM/dico-chain/tree/main/pallets/vc), [use daos for VC DAO](https://github.com/DICO-TEAM/dico-chain/blob/main/runtime/tico/src/vc.rs) | Need a tutorial for manual testing |
+|0d. | Example |<ul><li>[x] </li></ul>| [VC DAO template](https://github.com/DICO-TEAM/dico-chain/tree/main/pallets/vc), [use daos for VC DAO](https://github.com/DICO-TEAM/dico-chain/blob/main/runtime/tico/src/vc.rs) |  |
 |0e. | Comment |<ul><li>[x] </li></ul>|                                                                                                                                                                                  | Code Documentation ok. |
-|0f.| Benchmarking |<ul><li>[ ] </li></ul>| benchmarking.rs.rs file under each module                                                                                                                                        | Need instructions for run |
-|1. | create-dao pallet |<ul><li>[ ] </li></ul>| [crate dao](https://github.com/daos-org/daos/tree/main/create-dao)                                                                                                               | Not tested yet |
-|2. | agency pallet |<ul><li>[ ] </li></ul>| [agency](https://github.com/daos-org/daos/tree/main/agency)                                                                                                                      | Not tested yet |
-|3. | doas pallet |<ul><li>[ ] </li></ul>| [doas](https://github.com/daos-org/daos/tree/main/doas)                                                                                                                          | Not tested yet |
-|4. | square pallet |<ul><li>[ ] </li></ul>| [square](https://github.com/daos-org/daos/tree/main/square)                                                                                                                      | Not tested yet |
-|5. | sudo pallet |<ul><li>[ ] </li></ul>| [sudo](https://github.com/daos-org/daos/tree/main/sudo)                                                                                                                          | Not tested yet |
+|0f.| Benchmarking |<ul><li>[x] </li></ul>| benchmarking.rs.rs file under each module                                                                                                                                        |  |
+|1. | create-dao pallet |<ul><li>[x] </li></ul>| [crate dao](https://github.com/daos-org/daos/tree/main/create-dao)                                                                                                               |  |
+|2. | agency pallet |<ul><li>[x] </li></ul>| [agency](https://github.com/daos-org/daos/tree/main/agency)                                                                                                                      |  |
+|3. | doas pallet |<ul><li>[x] </li></ul>| [doas](https://github.com/daos-org/daos/tree/main/doas)                                                                                                                          |  |
+|4. | square pallet |<ul><li>[x] </li></ul>| [square](https://github.com/daos-org/daos/tree/main/square)                                                                                                                      |  |
+|5. | sudo pallet |<ul><li>[x] </li></ul>| [sudo](https://github.com/daos-org/daos/tree/main/sudo)                                                                                                                          |  |
 
 ## General Notes
+
+### Evaluation V3
+
+The testing guide cases ran ok. All benchmarks also ran ok.
 
 ### Evaluation V2
 
