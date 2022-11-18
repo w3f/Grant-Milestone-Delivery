@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** [Ventur Application](https://github.com/w3f/Grants-Program/blob/master/applications/ventur.md)
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,15 +10,50 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.| License |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/blob/main/LICENSE |  | 
 | 0b.| Documentation |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#run-tests |  | 
-| 0c.| Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur#run-tests | Some cases missing  | 
-| 0d.| Docker |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur#running-a-ventur-node-docker | Fail to run | 
+| 0c.| Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#run-tests |   | 
+| 0d.| Docker |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur#running-a-ventur-node-docker |  | 
 | 0e.| Article |<ul><li>[x] </li></ul>| https://docs.google.com/document/d/1aQOTNwcOgZ5_8VDloDmaGEs6si9hm5dCMSDXFHwo4LY/edit?usp=sharing | | 
-| 1. | Substrate module: escrow |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/escrow | Requirement doubt. Possible improvements in code quality | 
-| 2. | Substrate module: contracted-payment-process |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/payments | Possible improvements in code quality |
-| 3. | Substrate chain: Ventur |<ul><li>[ ] </li></ul>| https://github.com/Popular-Coding/ventur | Need examples for testing |
+| 1. | Substrate module: escrow |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/escrow |  | 
+| 2. | Substrate module: contracted-payment-process |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur/tree/main/pallets/payments |  |
+| 3. | Substrate chain: Ventur |<ul><li>[x] </li></ul>| https://github.com/Popular-Coding/ventur |  |
 
 
 # General Notes
+
+# Evaluation V2
+
+
+## Docker
+
+The docker-compose and docker-build are running well. The problem with docker-compose was a old image in our test server. 
+
+## Code Quality
+
+### Escrow Pallet
+
+Test coverage increased.
+
+lib.rs	219 / 255 (85.88%) (+32.64%)
+
+All clippy warnings were fixed.
+
+### Payments Pallet
+
+Test coverage decreased.
+
+lib.rs	95 / 124 (76.61%) (-5.00%)
+
+All clippy warnings were fixed.
+
+## Testing Guides
+
+The requirement to lock more than the available balance was set up to not allow this case and the software is working as expected.
+
+
+The payment using an escrow account worked well.
+
+
+# Evaluation V1
 
 ## Docker
 

@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Datagen_Project.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,14 +10,41 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0b | Inline Documentation |<ul><li>[x] </li></ul>|  |  | 
-| 0c  | Testing Guide |<ul><li>[ ] </li></ul>| [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/README.md), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/README.md)| some doubts. |
-| 0d | Docker |<ul><li>[ ] </li></ul>| [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/docker-compose.yml), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/docker-compose.yml)| Failed to run | 
+| 0c  | Testing Guide |<ul><li>[x] </li></ul>| [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/README.md), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/README.md)|  |
+| 0d | Docker |<ul><li>[x] </li></ul>| [fast_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/heavy_blockchain/docker-compose.yml), [heavy_blockchain](https://github.com/Datagen-Project/Datagen-Substrate-Grant/blob/main/fast_blockchain/docker-compose.yml)|  | 
 | 0e | Medium Article |<ul><li>[x] </li></ul>| [link](https://medium.com/@viacc/datagen-project-dev-blog-web3-fundation-milestone-1-b3ec2bdb1a95) |
 | 1 | Pallet  |<ul><li>[x] </li></ul>| [random-node-selector](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/heavy_blockchain/pallets/random_node_selector) | |
 | 2 | Pallet |<ul><li>[x] </li></ul>| [computational-work](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/fast_blockchain/pallets/computational-work) | |
-| 3 | Pallet |<ul><li>[ ] </li></ul>| [check-computational-work](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/fast_blockchain/pallets/check-node-computational-work) | See doubt in testing guide |
+| 3 | Pallet |<ul><li>[x] </li></ul>| [check-computational-work](https://github.com/Datagen-Project/Datagen-Substrate-Grant/tree/main/fast_blockchain/pallets/check-node-computational-work) | See doubt in testing guide |
 
 ## General Comments
+
+## Evaluation V2
+
+### Testing guides
+
+All tests worked now. 
+
+### Docker
+
+The build and run worked well. However, please notice that is expected that docker instructions run the software and not only build the environment. A docker-compose file that could spin up all containers and expose the proper ports would be a better way to provide a setup for system testing and user experimentation.
+
+### Tests coverage
+
+- random_node_selector - lib.rs	99 / 127 (77.95%) (+20.14%) - Good Coverage.
+
+### Static Analysis
+
+The alerts remain but they were justified.
+
+### Code Documentation
+
+The problems were fixed.
+
+
+
+
+## Evaluation V1
 
 ### Testing guides
 

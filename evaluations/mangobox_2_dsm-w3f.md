@@ -9,24 +9,666 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    |        License         |<ul><li>[x] </li></ul>|[License](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/LICENSE) | Apache 2.0                  |
-| 0b-01.    |     Documentation01      |<ul><li>[ ] </li></ul>|[Documentation01](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md) | Not fully evaluated yet. |
-| 0b-02.    |     Documentation02      |<ul><li>[ ] </li></ul>|[Documentation02](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/Frontend/README.md) | Not fully evaluated yet. |
+| 0b-01.    |     Documentation01      |<ul><li>[x] </li></ul>|[Documentation01](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md) |  |
+| 0b-02.    |     Documentation02      |<ul><li>[x] </li></ul>|[Documentation02](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/Frontend/README.md) |  |
 | 0c.    |     Testing Guide      |<ul><li>[ ] </li></ul>|[ Testing Guide ](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md#testing) | Need a complete example. |
-| 0d.    |         Docker         |<ul><li>[ ] </li></ul>| [Docker](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/docker) | Fail to run. |
+| 0d.    |         Docker         |<ul><li>[x] </li></ul>| [Docker](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/docker) |  |
 | 0e.    |        Article         |<ul><li>[x] </li></ul>| [Article](https://medium.com/@mangoboxlabs/introduction-to-mongobox-5fab08bd1b57) |  |
-| 1.     |     Front-end File     |<ul><li>[ ] </li></ul>| [Front-end File](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/Frontend) | Not fully evaluated yet. |
+| 1.     |     Front-end File     |<ul><li>[ ] </li></ul>| [Front-end File](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/Frontend) | Possible quality improvements. |
 | 2.     |           UI           |<ul><li>[x] </li></ul>|  [UI](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/UIs)   |  |
 | 3.     | Functional Testnet URL |<ul><li>[ ] </li></ul>|                  https://app.mangobox.xyz/                   | Not fully evaluated yet. |
-| 4.     |     Ink! Contract 6     |<ul><li>[ ] </li></ul>| [MBSplitsStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSplitsStore) | Compilation Error. |
-| 5.     |     Ink! Contract 7     |<ul><li>[ ] </li></ul>| [MBOperatorStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBOperatorStore) | Compilation Error. |
-| 6.     |     Ink! Contract 8    |<ul><li>[ ] </li></ul>| [MBDirectory](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBDirectory) | Compilation Error. |
-| 7.     |     Ink! Contract 9     |<ul><li>[ ] </li></ul>|[MBController](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBController) | Compilation Error. |
-| 8.     |     Ink! Contract 10     |<ul><li>[ ] </li></ul>| [MBSingleTokenPaymentTerminalStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSingleTokenPaymentTerminalStore) | Compilation Error. |
-| 9.     |     Ink! Contract 11    |<ul><li>[ ] </li></ul>| [MBPrices](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBPrices) | Tests passing. Not fully evaluated yet. |
+| 4.     |     Ink! Contract 6     |<ul><li>[ ] </li></ul>| [MBSplitsStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSplitsStore) | Possible quality improvements. |
+| 5.     |     Ink! Contract 7     |<ul><li>[ ] </li></ul>| [MBOperatorStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBOperatorStore) | Possible quality improvements. |
+| 6.     |     Ink! Contract 8    |<ul><li>[ ] </li></ul>| [MBDirectory](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBDirectory) | Possible quality improvements. |
+| 7.     |     Ink! Contract 9     |<ul><li>[ ] </li></ul>|[MBController](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBController) | Possible quality improvements. |
+| 8.     |     Ink! Contract 10     |<ul><li>[ ] </li></ul>| [MBSingleTokenPaymentTerminalStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSingleTokenPaymentTerminalStore) | Possible quality improvements. |
+| 9.     |     Ink! Contract 11    |<ul><li>[ ] </li></ul>| [MBPrices](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBPrices) | Possible quality improvements. |
 
 
 ## General Notes
 
+## Evaluation V2
+
+### Testing guide
+
+The deployment process for the contracts is complicated. The parameters in the constructors should be clarified to be possible to deploy the application locally. Ideally, we need the order of contract deployment and an example or script for doing the contract deployments.
+
+Is still missing examples in the testing guide to support exploratory testing of the software to check the system behavior. Could you please provide a sequence of steps to verify the system using the GUI? 
+
+### Docker
+
+Worked well.
+
+### Code Quality
+
+#### Front-end File
+
+There is no automated test. Please see if make sense to your project to have it.
+
+No static analysis warnings were generated by eslint.
+
+There is no code documentation. Some comments in code in other languages than English.
+
+#### MBSplitsStore
+
+All tests are passing. 90.48% coverage, 57/63 lines covered. Good coverage.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: this lifetime isn't used in the impl
+ --> lib.rs:9:1
+  |
+9 | #[ink::contract]
+  | ^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+  = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unneeded `return` statement
+   --> lib.rs:100:13
+    |
+100 |             return self._getStructsFor(_projectId, _group);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `self._getStructsFor(_projectId, _group)`                                                                                                      
+    |
+    = note: `#[warn(clippy::needless_return)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: the loop variable `i` is only used to index `_groupedSplits`
+   --> lib.rs:117:22
+    |
+117 |             for i in 0.._groupedSplitsLength {
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(clippy::needless_range_loop)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_range_loop
+help: consider using an iterator
+    |
+117 |             for <item> in _groupedSplits.iter().take(_groupedSplitsLength) {
+    |                 ~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+warning: the variable `_i` is used as a loop counter
+   --> lib.rs:142:13
+    |
+142 |             for _split in _splits.iter() {
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: consider using: `for (_i, _split) in _splits.iter().enumerate()`                                                                                                                   
+    |
+    = note: `#[warn(clippy::explicit_counter_loop)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_counter_loop
+
+warning: manual implementation of an assign operation
+   --> lib.rs:144:17
+    |
+144 |                 _percentTotal = _percentTotal + _split.percent;
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_percentTotal += _split.percent`                                                                                                           
+    |
+    = note: `#[warn(clippy::assign_op_pattern)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: using `clone` on type `u64` which implements the `Copy` trait
+   --> lib.rs:159:32
+    |
+159 |              let _splitCount = self._splitCountOf.get(&(_projectId,_group)).unwrap_or(&0).clone();
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._splitCountOf.get(&(_projectId,_group)).unwrap_or(&0)`                                       
+    |
+    = note: `#[warn(clippy::clone_on_copy)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: using `clone` on type `u64` which implements the `Copy` trait
+   --> lib.rs:162:41
+    |
+162 |                 let _packedSplitPart1 = self._packedSplitParts1Of.get(&(_projectId,_group,i)).unwrap_or(&0).clone();
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._packedSplitParts1Of.get(&(_projectId,_group,i)).unwrap_or(&0)`            
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: using `clone` on type `u64` which implements the `Copy` trait
+   --> lib.rs:177:43
+    |
+177 |                  let _packedSplitPart2 =  self._packedSplitParts2Of.get(&(_projectId,_group,i)).unwrap_or(&0).clone();
+    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._packedSplitParts2Of.get(&(_projectId,_group,i)).unwrap_or(&0)`          
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: `mbsplitsstore` (lib) generated 8 warnings
+```
+
+#### MBOperatorStore
+
+All tests are passing. 85.19% coverage, 23/27 lines covered. Good coverage.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: this lifetime isn't used in the impl
+ --> lib.rs:9:1
+  |
+9 | #[ink::contract]
+  | ^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+  = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: you should consider adding a `Default` implementation for `MBOperatorStore`
+  --> lib.rs:33:9
+   |
+33 |         pub fn new(
+   |         ^^^
+   |
+   = note: `#[warn(clippy::new_without_default)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#new_without_default
+help: try adding this
+   |
+31 ~     impl Default for MBOperatorStore {
+32 +         fn default() -> Self {
+33 +             Self::new()
+34 +         }
+35 +     }
+36 + 
+37 ~     impl MBOperatorStore {
+   |
+
+warning: unneeded `return` statement
+  --> lib.rs:56:13
+   |
+56 |             return ((permission >> _permissionIndex) & 1) == 1;
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `((permission >> _permissionIndex) & 1) == 1`                                                                                               
+   |
+   = note: `#[warn(clippy::needless_return)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `u64` which implements the `Copy` trait
+  --> lib.rs:55:30
+   |
+55 |             let permission = self.permissionsOf.get(&(_operator,_account)).unwrap_or(&0).clone();
+   |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.permissionsOf.get(&(_operator,_account)).unwrap_or(&0)`                                        
+   |
+   = note: `#[warn(clippy::clone_on_copy)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: `mb_operatorstore` (lib) generated 4 warnings
+```
+
+-----
+
+#### MBDirectory
+
+All testing passing. 80.28% coverage, 57/71 lines covered. Good code coverage.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: this lifetime isn't used in the impl
+  --> lib.rs:11:1
+   |
+11 | #[ink::contract]
+   | ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+   = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unneeded `return` statement
+  --> lib.rs:93:13
+   |
+93 |             return AccountId::default();
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `AccountId::default()`
+   |
+   = note: `#[warn(clippy::needless_return)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `ink_env::AccountId` which implements the `Copy` trait
+  --> lib.rs:88:28
+   |
+88 |             let terminal = self._primaryTerminalOf.get(&(_projectId, _token)).unwrap_or(&AccountId::default()).clone();
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._primaryTerminalOf.get(&(_projectId, _token)).unwrap_or(&AccountId::default())`                                                                                                              
+   |
+   = note: `#[warn(clippy::clone_on_copy)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: unneeded `return` statement
+   --> lib.rs:117:17
+    |
+117 |                 return false;
+    |                 ^^^^^^^^^^^^^ help: remove `return`: `false`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: `mbdirectory` (lib) generated 4 warnings
+```
+
+#### MBController
+
+All tests are passing. 58.99% coverage, 82/139 lines covered. Some paths and full methods not covered.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: this lifetime isn't used in the impl
+  --> lib.rs:10:1
+   |
+10 | #[ink::contract]
+   | ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+   = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: this function has too many arguments (10/7)
+   --> lib.rs:205:9
+    |
+205 | / ...   /**
+206 | | ...      @notice
+207 | | ...      Creates a project. This will mint an ERC-721 into the specified owner's account, configure a first funding cycle, and set up any...
+208 | | ...
+...   |
+232 | | ...       _memo: String,
+233 | | ...   ) -> u64 {
+    | |______________^
+    |
+    = note: `#[warn(clippy::too_many_arguments)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments
+
+warning: unneeded `return` statement
+   --> lib.rs:253:13
+    |
+253 |             return projectId;
+    |             ^^^^^^^^^^^^^^^^^ help: remove `return`: `projectId`
+    |
+    = note: `#[warn(clippy::needless_return)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: length comparison to zero
+   --> lib.rs:249:16
+    |
+249 |             if _terminals.len() > 0 { let _ret = directory.setTerminalsOf(projectId, _terminals); }
+    |                ^^^^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!_terminals.is_empty()`                                                                                                                
+    |
+    = note: `#[warn(clippy::len_zero)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
+
+warning: unneeded `return` statement
+   --> lib.rs:285:13
+    |
+285 |             return tokenStore.issueFor(_projectId, _name, _symbol);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `tokenStore.issueFor(_projectId, _name, _symbol)`                                                                                      
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: unneeded `return` statement
+   --> lib.rs:318:13
+    |
+318 |             return beneficiaryTokenCount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `beneficiaryTokenCount`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:314:47
+    |
+314 |             let mut processedTokenTrackerOf = self._processedTokenTrackerOf.get(&_projectId).unwrap_or(&0).clone();
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._processedTokenTrackerOf.get(&_projectId).unwrap_or(&0)`                    
+    |
+    = note: `#[warn(clippy::clone_on_copy)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: returning the result of a `let` binding from a block
+   --> lib.rs:347:13
+    |
+346 |             let ret = tokenStore.burnFrom(_holder, _projectId, _tokenCount, _preferClaimedTokens);
+    |             -------------------------------------------------------------------------------------- unnecessary `let` binding                                                                                                      
+347 |             ret
+    |             ^^^
+    |
+    = note: `#[warn(clippy::let_and_return)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#let_and_return
+help: return the expression directly
+    |
+346 ~             
+347 ~             tokenStore.burnFrom(_holder, _projectId, _tokenCount, _preferClaimedTokens)
+    |
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:342:47
+    |
+342 |             let mut processedTokenTrackerOf = self._processedTokenTrackerOf.get(&_projectId).unwrap_or(&0).clone();
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self._processedTokenTrackerOf.get(&_projectId).unwrap_or(&0)`                    
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: unneeded `return` statement
+   --> lib.rs:363:13
+    |
+363 |             return self._distributeReservedTokensOf(_projectId, _memo);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `self._distributeReservedTokensOf(_projectId, _memo)`                                                                              
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: `mb_controller` (lib) generated 10 warnings
+```
+
+#### MBSingleTokenPaymentTerminalStore
+
+All tests are passing. 66.32% coverage, 63/95 lines covered. Some paths and full methods not covered.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: this lifetime isn't used in the impl
+  --> lib.rs:11:1
+   |
+11 | #[ink::contract]
+   | ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+   = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unneeded `return` statement
+   --> lib.rs:119:13
+    |
+119 | /             return
+120 | |                 self._overflowDuring(
+121 | |                     _terminal,
+122 | |                     _projectId,
+123 | |                     100,
+124 | |                 );
+    | |__________________^
+    |
+    = note: `#[warn(clippy::needless_return)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+help: remove `return`
+    |
+119 ~             self._overflowDuring(
+120 +                     _terminal,
+121 +                     _projectId,
+122 +                     100,
+123 +                 )
+    |
+
+warning: unneeded `return` statement
+   --> lib.rs:143:13
+    |
+143 |             return self._currentTotalOverflowOf(_projectId, _decimals, _currency);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `self._currentTotalOverflowOf(_projectId, _decimals, _currency)`                                                        
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: this function has too many arguments (8/7)
+   --> lib.rs:145:9
+    |
+145 | /         /**
+146 | |         @notice
+147 | |         Records newly contributed tokens to a project.
+148 | |         @param _payer The original address that sent the payment to the terminal.
+...   |
+170 | |             _metadata: String,
+171 | |         ) -> (MBFundingCycle, u128, AccountId, String) {
+    | |______________________________________________________^
+    |
+    = note: `#[warn(clippy::too_many_arguments)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments
+
+warning: unneeded `return` statement
+   --> lib.rs:191:13
+    |
+191 |             return (fundingCycle, _amount * _weight  / 1000000000000000000, AccountId::default(), _memo);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `(fundingCycle, _amount * _weight  / 1000000000000000000, AccountId::default(), _memo)`          
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:188:34
+    |
+188 |             let mut _balanceOf = self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0).clone();
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0)`
+    |
+    = note: `#[warn(clippy::clone_on_copy)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: manual implementation of an assign operation
+   --> lib.rs:189:13
+    |
+189 |             _balanceOf = _balanceOf + _amount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_balanceOf += _amount`
+    |
+    = note: `#[warn(clippy::assign_op_pattern)]` on by default
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:201:13
+    |
+201 |             self.balanceOf.get(&(_account, _projectId)).unwrap_or(&0).clone()
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(_account, _projectId)).unwrap_or(&0)`                                                            
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: unneeded `return` statement
+   --> lib.rs:239:13
+    |
+239 |             return (fundingCycle, 100, AccountId::default(), _memo);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `(fundingCycle, 100, AccountId::default(), _memo)`                                                                                    
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:236:34
+    |
+236 |             let mut _balanceOf = self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0).clone();
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0)`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: manual implementation of an assign operation
+   --> lib.rs:237:13
+    |
+237 |             _balanceOf = _balanceOf + 100;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_balanceOf += 100`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:273:51
+    |
+273 | ...imitOf = self.usedDistributionLimitOf.get(&(Self::env().caller(), _projectId, fundingCycle.number)).unwrap_or(&0).clone();
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.usedDistributionLimitOf.get(&(Self::env().caller(), _projectId, fundingCycle.number)).unwrap_or(&0)`                                                                                  
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:277:34
+    |
+277 |             let mut _balanceOf = self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0).clone();
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0)`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: manual implementation of an assign operation
+   --> lib.rs:278:13
+    |
+278 |             _balanceOf = _balanceOf + 100;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_balanceOf += 100`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:312:51
+    |
+312 | ...Of = self.usedOverflowAllowanceOf.get(&(Self::env().caller(), _projectId, fundingCycle.configuration)).unwrap_or(&0).clone();
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.usedOverflowAllowanceOf.get(&(Self::env().caller(), _projectId, fundingCycle.configuration)).unwrap_or(&0)`                                                                        
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:315:34
+    |
+315 |             let mut _balanceOf = self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0).clone();
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0)`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: manual implementation of an assign operation
+   --> lib.rs:316:13
+    |
+316 |             _balanceOf = _balanceOf + 100;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_balanceOf += 100`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:334:34
+    |
+334 |             let mut _balanceOf = self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0).clone();
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(Self::env().caller(), _projectId)).unwrap_or(&0)`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: manual implementation of an assign operation
+   --> lib.rs:335:13
+    |
+335 |             _balanceOf = _balanceOf + _amount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `_balanceOf += _amount`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#assign_op_pattern
+
+warning: unneeded `return` statement
+   --> lib.rs:346:13
+    |
+346 |             return 0;
+    |             ^^^^^^^^^ help: remove `return`: `0`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: unneeded `return` statement
+   --> lib.rs:367:59
+    |
+367 |             if _balanceOf > _distributionLimitRemaining { return _balanceOf - _distributionLimitRemaining; } else { return 0; };
+    |                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `_balanceOf - _distributionLimitRemaining`                                                      
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: unneeded `return` statement
+   --> lib.rs:367:117
+    |
+367 |             if _balanceOf > _distributionLimitRemaining { return _balanceOf - _distributionLimitRemaining; } else { return 0; };
+    |                                                                                                                     ^^^^^^^^^ help: remove `return`: `0`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:354:30
+    |
+354 |             let _balanceOf = self.balanceOf.get(&(_terminal, _projectId)).unwrap_or(&0).clone();
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.balanceOf.get(&(_terminal, _projectId)).unwrap_or(&0)`                                         
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: using `clone` on type `u128` which implements the `Copy` trait
+   --> lib.rs:362:44
+    |
+362 |             let _usedDistributionLimitOf = self.usedDistributionLimitOf.get(&(_terminal, _projectId, 1)).unwrap_or(&0).clone();
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.usedDistributionLimitOf.get(&(_terminal, _projectId, 1)).unwrap_or(&0)`                                                                                                             
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: `mb_singletokenpaymentterminalstore` (lib) generated 24 warnings
+
+```
+
+#### MBPrices
+
+All tests are passing. 70.59% coverage, 12/17 lines covered. Good testing coverage.
+
+Good code documentation. However, when I generated the HTML docs with cargo doc the functions documentation didn't show up. Worthwhile to double-check.
+
+Some static analysis alerts generated by cargo clippy:
+
+```
+warning: by not having a space between `*` and `*` it looks like `**` is a single operator
+  --> lib.rs:53:22
+   |
+53 |             return 10 ** &_decimals;
+   |                      ^^^^
+   |
+   = note: `#[warn(clippy::suspicious_unary_op_formatting)]` on by default
+   = help: put a space between `*` and `*` and remove the space after `*`
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#suspicious_unary_op_formatting
+
+warning: immediately dereferencing a reference
+  --> lib.rs:53:24
+   |
+53 |             return 10 ** &_decimals;
+   |                        ^^^^^^^^^^^^ help: try this: `_decimals`
+   |
+   = note: `#[warn(clippy::deref_addrof)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#deref_addrof
+
+warning: this lifetime isn't used in the impl
+  --> lib.rs:11:1
+   |
+11 | #[ink::contract]
+   | ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes
+   = note: this warning originates in the attribute macro `ink::contract` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: you should consider adding a `Default` implementation for `MBPrices`
+  --> lib.rs:33:9
+   |
+33 |         pub fn new(
+   |         ^^^
+   |
+   = note: `#[warn(clippy::new_without_default)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#new_without_default
+help: try adding this
+   |
+31 ~     impl Default for MBPrices {
+32 +         fn default() -> Self {
+33 +             Self::new()
+34 +         }
+35 +     }
+36 + 
+37 ~     impl MBPrices {
+   |
+
+warning: unneeded `return` statement
+  --> lib.rs:53:13
+   |
+53 |             return 10 ** &_decimals;
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^ help: remove `return`: `10 ** &_decimals`
+   |
+   = note: `#[warn(clippy::needless_return)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+
+warning: using `clone` on type `ink_env::AccountId` which implements the `Copy` trait
+  --> lib.rs:80:24
+   |
+80 |             let feed = self.feedFor.get(&(_currency,_base)).unwrap_or(&AccountId::default()).clone();
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try dereferencing it: `*self.feedFor.get(&(_currency,_base)).unwrap_or(&AccountId::default())`                          
+   |
+   = note: `#[warn(clippy::clone_on_copy)]` on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: `mb_prices` (lib) generated 6 warnings
+```
+
+
+----
+
+## Evaluation V1
 
 ### Testing guide
 
