@@ -19,7 +19,7 @@ Ink Explorer is an application that provides Ink contracts related information o
 | 0d. | Docker | https://github.com/blockcoders/ink-substrate-explorer-frontend/blob/main/Dockerfile | A Dockerfile will be provided that will be able to start the node |
 | 0e. | Article | https://docs.google.com/document/d/1jFJZGC26lBJbEEJUmJeQKEbOeXz9w4CypohX23npOaI/edit?usp=sharing | A Draft for the medium article. |
 | 1. | Create App | https://github.com/blockcoders/ink-substrate-explorer-frontend/tree/main/pages | Frontend application that follows the proposed design. |
-| 2. | Support for Spanish speakers community | | Translate the app to spanish and add support to switch languages. |  
+| 2. | Support for Spanish speakers community | https://github.com/blockcoders/ink-substrate-explorer-frontend/tree/v1.0.2/i18n | Translate the app to spanish and add support to switch languages. |  
 | 4. | Testing | https://coveralls.io/github/blockcoders/ink-substrate-explorer-frontend?branch=main | Achieve a testing coverage of the functionalities above 90% |
 | 4. | Final setups | https://hub.docker.com/repository/docker/blockcoders/ink-substrate-explorer-frontend | Deal with all production issues/configuration requirements such as creating the final docker image, reviewing the documentation and verifying everything works fine. |
 | 5. | Deploy the app | https://ink-explorer.blockcoders.io/contracts | Define the final domain and deploy the app. |
