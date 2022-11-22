@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress.
+- **Status:** Accepted.
 - **Application Document:** [Green Lemon Protocol](https://github.com/w3f/Grants-Program/blob/master/applications/GreenLemon.md) 
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -46,12 +46,17 @@ UPDATE: Issue fixed.
 
 3. Every time there is a system change (such as a reboot) I have to re-add Zokrates to my path with `export PATH=$PATH:/Users/keeganquigley/.zokrates/bin`; I would suggest adding this to the testing instructions, otherwise the scripts will fail.
 
+UPDATE: Issue fixed.
+
 4. Unit tests are successful for all functions, however I noticed that there isn't one for `transfer_from` in the `ERC721` contract. Consider adding it if it makes sense.
+
+UPDATE: Issue explained/fixed.
 
 5. Minor improvement suggestion for Step 2: take out "baseUri" so that it's clear that just the string needs to be entered:
 ```rust
 https://raw.githubusercontent.com/GreenLemonProtocol/assets/main/nft
 ```
+UPDATE: fixed.
 ### Scripts
 
 All js scripts run successfully. Index service starts successfully.
@@ -63,6 +68,8 @@ All js scripts run successfully. Index service starts successfully.
 `cargo doc --open` works to generate all HTML docs.
 
 `cargo +nightly clippy –fix`
+
+UPDATE: cargo warnings fixed.
 
 ### Relayer
 
