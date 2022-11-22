@@ -25,11 +25,10 @@
 | 0c. | Pallets Testing Guide | https://github.com/grindytech/gafi#test | The pallets functionality unit-test | 
 | 0c. | Client Testing Guide | https://github.com/grindytech/gafi/tree/master/tests | The client unit-test | 
 | 0d. | Docker | https://github.com/grindytech/gafi#run-in-docker | Docker | 
-| 0e. | Article | https://gafi.network/GafiPaper.pdf | Gafi Paper | 
+| 0e. | Article | [Milestone 3 Roundup](https://docs.google.com/document/d/1pIV22jNlyyOXzrAOAorNqAyGIshQA3kt_XP9xQyTOdA/edit?usp=sharing) | Milestone 3 Roundup | 
 | 1.  | pallet game-creator | https://github.com/grindytech/gafi/tree/master/pallets/game-creator | [Wiki](https://wiki.gafi.network/learn/game-creator)| 
-| 2.  | DAO | https://github.com/grindytech/hne-station-gov-contracts | https://gov.heroesempires.com/ | 
-| 3. | Weights/Benchmarking | https://github.com/grindytech/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
-| 4. | Demo | [https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward](https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward) | Demo Game Creator | 
+| 2. | Weights/Benchmarking | https://github.com/grindytech/gafi#benchmarking | Benchmarking for pallets to determine appropriate weights | 
+| 3. | Demo | [https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward](https://wiki.gafi.network/how-to-guides/how-to-claim-developer-onchain-reward) | Demo Game Creator | 
 
 
 **Additional Information**
