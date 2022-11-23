@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MangoBOX-Protocol.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,16 +10,46 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                  |<ul><li>[x] </li></ul>|[License](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/LICENSE) | Apache 2.0 |
 | 0b.    | Documentation            |<ul><li>[x] </li></ul>|[Documentation](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md)|  |
-| 0c.    | Testing Guide            |<ul><li>[ ] </li></ul>|[Testing Guide](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md#testing)| Need a complete example. |
+| 0c.    | Testing Guide            |<ul><li>[x] </li></ul>|[Testing Guide](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md#testing)|  |
 | 0d.    | Docker         |<ul><li>[x] </li></ul>| [Docker](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/docker) |  |
-| 1.     | Ink! Contract 1           |<ul><li>[ ] </li></ul>|[MBProjects](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBProjects) | Possible quality improvements. |
-| 2.     | Ink! Contract 2           |<ul><li>[ ] </li></ul>|[MBFundingCycleStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBFundingCycleStore) | Possible quality improvements. |
-| 3.     | Ink! Contract 3           |<ul><li>[ ] </li></ul>|[MBToken](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBToken) | Possible quality improvements. |
-| 4.     | Ink! Contract 4           |<ul><li>[ ] </li></ul>| [MBTokenStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBTokenStore) | Possible quality improvements. |
-| 5.     | Ink! Contract 5           |<ul><li>[ ] </li></ul>|[MBERC20PaymentTerminal](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBERC20PaymentTerminal) | Possible quality improvements. |
+| 1.     | Ink! Contract 1           |<ul><li>[x] </li></ul>|[MBProjects](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBProjects) |  |
+| 2.     | Ink! Contract 2           |<ul><li>[x] </li></ul>|[MBFundingCycleStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBFundingCycleStore) |  |
+| 3.     | Ink! Contract 3           |<ul><li>[x] </li></ul>|[MBToken](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBToken) |  |
+| 4.     | Ink! Contract 4           |<ul><li>[x] </li></ul>| [MBTokenStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBTokenStore) |  |
+| 5.     | Ink! Contract 5           |<ul><li>[x] </li></ul>|[MBERC20PaymentTerminal](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBERC20PaymentTerminal) |  |
 
 ## General Notes
 
+## Evaluation V3
+
+### Testing guide
+
+Now we have examples and they worked well.
+
+### Code Quality
+
+#### MBProjects:
+
+All static analysis alerts were fixed.
+
+#### MBFundingCycleStore
+
+All static analysis alerts were fixed.
+
+#### MBToken
+
+All static analysis alerts were fixed.
+
+#### MBTokenStore
+
+All static analysis alerts were fixed.
+
+##### MBERC20PaymentTerminal
+
+All static analysis alerts were fixed.
+
+
+----
 ## Evaluation V2
 
 ### Testing guide
