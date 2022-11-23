@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MangoBOX-Protocol.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -11,21 +11,56 @@
 | 0a.    |        License         |<ul><li>[x] </li></ul>|[License](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/LICENSE) | Apache 2.0                  |
 | 0b-01.    |     Documentation01      |<ul><li>[x] </li></ul>|[Documentation01](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md) |  |
 | 0b-02.    |     Documentation02      |<ul><li>[x] </li></ul>|[Documentation02](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/Frontend/README.md) |  |
-| 0c.    |     Testing Guide      |<ul><li>[ ] </li></ul>|[ Testing Guide ](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md#testing) | Need a complete example. |
+| 0c.    |     Testing Guide      |<ul><li>[x] </li></ul>|[ Testing Guide ](https://github.com/Mangoboxlabs/Mangoboxink/blob/main/contract/README.md#testing) |  |
 | 0d.    |         Docker         |<ul><li>[x] </li></ul>| [Docker](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/docker) |  |
 | 0e.    |        Article         |<ul><li>[x] </li></ul>| [Article](https://medium.com/@mangoboxlabs/introduction-to-mongobox-5fab08bd1b57) |  |
-| 1.     |     Front-end File     |<ul><li>[ ] </li></ul>| [Front-end File](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/Frontend) | Possible quality improvements. |
+| 1.     |     Front-end File     |<ul><li>[x] </li></ul>| [Front-end File](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/Frontend) |  |
 | 2.     |           UI           |<ul><li>[x] </li></ul>|  [UI](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/UIs)   |  |
-| 3.     | Functional Testnet URL |<ul><li>[ ] </li></ul>|                  https://app.mangobox.xyz/                   | Not fully evaluated yet. |
-| 4.     |     Ink! Contract 6     |<ul><li>[ ] </li></ul>| [MBSplitsStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSplitsStore) | Possible quality improvements. |
-| 5.     |     Ink! Contract 7     |<ul><li>[ ] </li></ul>| [MBOperatorStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBOperatorStore) | Possible quality improvements. |
-| 6.     |     Ink! Contract 8    |<ul><li>[ ] </li></ul>| [MBDirectory](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBDirectory) | Possible quality improvements. |
-| 7.     |     Ink! Contract 9     |<ul><li>[ ] </li></ul>|[MBController](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBController) | Possible quality improvements. |
-| 8.     |     Ink! Contract 10     |<ul><li>[ ] </li></ul>| [MBSingleTokenPaymentTerminalStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSingleTokenPaymentTerminalStore) | Possible quality improvements. |
-| 9.     |     Ink! Contract 11    |<ul><li>[ ] </li></ul>| [MBPrices](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBPrices) | Possible quality improvements. |
+| 3.     | Functional Testnet URL |<ul><li>[x] </li></ul>|                  https://app.mangobox.xyz/                   |  |
+| 4.     |     Ink! Contract 6     |<ul><li>[x] </li></ul>| [MBSplitsStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSplitsStore) |  |
+| 5.     |     Ink! Contract 7     |<ul><li>[x] </li></ul>| [MBOperatorStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBOperatorStore) |  |
+| 6.     |     Ink! Contract 8    |<ul><li>[x] </li></ul>| [MBDirectory](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBDirectory) |  |
+| 7.     |     Ink! Contract 9     |<ul><li>[x] </li></ul>|[MBController](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBController) | |
+| 8.     |     Ink! Contract 10     |<ul><li>[x] </li></ul>| [MBSingleTokenPaymentTerminalStore](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBSingleTokenPaymentTerminalStore)  |
+| 9.     |     Ink! Contract 11    |<ul><li>[x] </li></ul>| [MBPrices](https://github.com/Mangoboxlabs/Mangoboxink/tree/main/contract/MBPrices) | |
 
 
 ## General Notes
+
+## Evaluation V3
+
+### Testing guide
+
+Now we have examples and they worked well.
+
+#### Front-end File
+
+Comments were improved. 
+
+#### MBSplitsStore
+
+All static analysis alerts were fixed.
+
+#### MBOperatorStore
+
+All static analysis alerts were fixed.
+
+#### MBDirectory
+
+All static analysis alerts were fixed.
+
+#### MBController
+
+All static analysis alerts were fixed.
+
+#### MBSingleTokenPaymentTerminalStore
+
+All static analysis alerts were fixed.
+
+#### MBPrices
+
+All static analysis alerts were fixed.
+
 
 ## Evaluation V2
 
