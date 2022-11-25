@@ -10,7 +10,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | -----: | ----------- | -------- | ---- | ---------------- |
-| 0a. | License | Yes | [License]([GitHub repo link](https://github.com/sctllabs/societal-grant-submission/blob/main/LICENSE)) | Apache 2.0 |
+| 0a. | License | Yes | [License](https://github.com/sctllabs/societal-grant-submission/blob/main/LICENSE) | Apache 2.0 |
 | 0b. | Documentation | Yes | [Readme](https://github.com/sctllabs/societal-grant-submission/blob/main/README.md) | OK |
 | 0c. | Testing Guide | Yes | [Testing guide](https://github.com/sctllabs/societal-grant-submission/blob/main/docs/TestingGuide.md) | Nice bonus would be to add some context and explanations to the guide to make each step easier to understand. Like what is actually happening under the hood at each step. |
 | 0d. | Docker | Yes | [Docker Image](https://hub.docker.com/layers/societal/societal-node/v67af404/images/sha256-a4de91a608c221c7e025df1311c9eccd9c10b90e4d0e1920dae32bd1097685c3?context=explore) | OK |
