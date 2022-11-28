@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/uke-protocol.md
 - **Milestone:** 2
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -8,15 +8,24 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
- 0a. | License | <ul><li>[x] </li></ul> | [LICENSE.md](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/LICENSE.md) | - |
-| 0b.  | Documentation | <ul><li>[ ] </li></ul> | [README.md](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/README.md) | See **General Notes** | 
-| 0c.  | Testing Guide | <ul><li>[x] </li></ul> | [README.md#testing](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/README.md#testing) | - | 
-| 0d.  | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/Dockerfile) | - | 
+ 0a. | License | <ul><li>[x] </li></ul> | [LICENSE.md](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/LICENSE.md) | - |
+| 0b.  | Documentation | <ul><li>[x] </li></ul> | [README.md](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/README.md) | See **General Notes** | 
+| 0c.  | Testing Guide | <ul><li>[x] </li></ul> | [README.md#testing](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/README.md#testing) | - | 
+| 0d.  | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/Dockerfile) | - | 
 | 0e.  | Article | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@muchbader/breaking-web3-the-first-walletless-purely-blockchain-chat-app-introducing-the-uke-alpha-8c2297f2af68) | - | 
-| 1a.  | Uke Ionic Application: Data Models | <ul><li>[x] </li></ul> | [/src/app/model](https://github.com/Uke-Messaging/uke/tree/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/src/app/model) | - | 
-| 1b.  |  Uke Ionic Application: Login and Signup Service | <ul><li>[ ] </li></ul> | [/src/app/services/keyring.service.ts](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/src/app/services/keyring.service.ts) | See **General Notes** | 
-| 1c.  | Uke Ionic Application: Message Delivery & Configuration | <ul><li>[x] </li></ul> | [/src/app/services/ukepallet.service.ts](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/src/app/services/ukepallet.service.ts) | - | 
-| 1d.  | Uke Ionic Application: In-App Notification System | <ul><li>[x] </li></ul> | [/src/app/services/notif.service.ts](https://github.com/Uke-Messaging/uke/blob/d98105e129875c1e2f99ab9ab9f1b29b5077d22e/src/app/services/notif.service.ts) | See **General Notes** |
+| 1a.  | Uke Ionic Application: Data Models | <ul><li>[x] </li></ul> | [/src/app/model](https://github.com/Uke-Messaging/uke/tree/43f061398bac16569a2b76f87693fd86de93c701/src/app/model) | - | 
+| 1b.  |  Uke Ionic Application: Login and Signup Service | <ul><li>[x] </li></ul> | [/src/app/services/keyring.service.ts](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/src/app/services/keyring.service.ts) | See **General Notes** | 
+| 1c.  | Uke Ionic Application: Message Delivery & Configuration | <ul><li>[x] </li></ul> | [/src/app/services/ukepallet.service.ts](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/src/app/services/ukepallet.service.ts) | - | 
+| 1d.  | Uke Ionic Application: In-App Notification System | <ul><li>[x] </li></ul> | [/src/app/services/notif.service.ts](https://github.com/Uke-Messaging/uke/blob/43f061398bac16569a2b76f87693fd86de93c701/src/app/services/notif.service.ts) | See **General Notes** |
+<br/>
+
+## General Notes v2 - Nov 28, 2022
+
+All the issues mentioned in **General Notes v1** have been fixed:
+- Documentation has been improved in [this commit](https://github.com/Uke-Messaging/uke/commit/0cccdb444ade4bcab55cf842205aabf4a130a940)
+- The login issue has been fixed in [this commit](https://github.com/Uke-Messaging/uke/commit/43f061398bac16569a2b76f87693fd86de93c701), and now one must login with both the right credentials
+- The developer [said](https://github.com/w3f/Grant-Milestone-Delivery/pull/634#issuecomment-1327943508) the notification system will probably be reworked, so that minor issue will be considered further on.
+
 <br/>
 
 ## General Notes v1 - Nov 25, 2022
