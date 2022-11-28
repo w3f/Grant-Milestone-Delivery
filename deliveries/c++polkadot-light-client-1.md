@@ -19,6 +19,7 @@
 |    3. | Multichain support | use cases for cross-chain communication |[Requirements](https://github.com/eqlabs/polkadot-light-client-spec/blob/master/src/requirements.md#functionality)|-
 |    4. | JSON-RPC APIs | minimal run-time access interface |[Requirements](https://github.com/eqlabs/polkadot-light-client-spec/blob/master/src/requirements.md#functionality)|-
 |    5. | Dependencies | libraries for cryptography, networking, build | [Implementation](https://github.com/eqlabs/polkadot-light-client-spec/blob/master/src/implementation.md) and [Stages](https://github.com/eqlabs/polkadot-light-client-spec/blob/master/src/stages.md)|-
+|    6. | Implementation repos | implemented: grandpa and light2 protocols, reading chain spec, json-rpc server; currently ongoing: block events, /dot/sync/2, host and runtime API implementation | [polkadot-light-client](https://github.com/eqlabs/polkadot-light-client), [cpp-libp2p](https://github.com/eqlabs/cpp-libp2p), [scale-codec-cpp](https://github.com/eqlabs/scale-codec-cpp), [soralog](https://github.com/eqlabs/soralog), [libp2p-sqlite-modern-cpp](https://github.com/eqlabs/libp2p-sqlite-modern-cpp) |
 
 **Additional Information**
 We will submit the application for phase 1 (implementation of this spec) the soonest.
