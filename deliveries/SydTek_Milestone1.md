@@ -10,7 +10,7 @@
 * **Milestone Number:** 1
 
 **Context** (optional)
-> The GitHub Wiki page contains an iterative document that will track all of the research and information used for this study. For the first milestone, the preliminary outline can found on the Outline tab. Additionally, per milestone one deliverables, the following topics can be found on the Lit Matrix Master tab.
+> The GitHub Wiki page contains an iterative document that will track all of the research and information used for this study. For the first milestone, the preliminary outline can found on the Outline tab. Additionally, per the milestone one deliverables, the following topics can be found on the Lit Matrix Master tab.
 - Content centered around the Social recovery pallet.
 - Initial research performed on the current legal landscape on digital assets and digital inheritance. Phase two will include an interview with an estate
 lawyer, Charlotte McCurdy, to address gaps in the research regarding digital inheritance.
