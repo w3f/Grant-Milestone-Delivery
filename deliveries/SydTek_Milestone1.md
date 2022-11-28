@@ -10,7 +10,15 @@
 * **Milestone Number:** 1
 
 **Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+> The GitHub Wiki page contains an iterative document that will track all of the research and information used for this study. For the first milestone, the preliminary outline can found on the Outline tab. Additionally, per milestone one deliverables, the following topics can be found on the Lit Matrix Master tab.
+- Content centered around the Social recovery pallet.
+- Initial research performed on the current legal landscape on digital assets and digital inheritance. Phase two will include an interview with an estate
+lawyer, Charlotte McCurdy, to address gaps in the research regarding digital inheritance.
+- The concept of soulbound tokens as discussed by Vitalik Buterin and others.
+- Research centered around social recovery wallets in the Polkadot ecosystem.
+- Research centered around social recovery wallets on the Ethereum ecosystem such as Argent and LoopringWallet 
+- Research on digital inheritance-specific projects including SafeHaven, PassOn, DigiPulse, Vault12, and TrustVerse.  
+
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
@@ -19,8 +27,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| 0. | Rights |https://github.com/jgophd/Developed-Materials-and-Raw-Data/wiki| All developed materials and raw data will be publicly accessible and public domain via a GitHub repository. Milestone 1 is research oriented and as such there is no code to test.| 
+| 1.  | Overview of SBTs |https://github.com/jgophd/Developed-Materials-and-Raw-Data/wiki| We will provide an overview of the current state of the soulbound tokens throughout a number of blockchain ecosystems, along with service providers of Web3 digital inheritance offerings such as Safe Haven’s Inheriti solution. The outline for the journal article can be found on the Outline tab of the spreadsheet. The detailed overview and notes on SBTs can be found on the Lit Matrix Master tab.| 
+| 2.  | Specific Coverage |https://github.com/jgophd/Developed-Materials-and-Raw-Data/wiki| Coverage will span historical information regarding soulbound tokens, information regarding the theoretical application of the Social Recovery Pallet for digital inheretance, academic sources, and recent developments. The bibliography that covers the topics previously mentioned can be found on the Lit Matrix Master tab.|
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
