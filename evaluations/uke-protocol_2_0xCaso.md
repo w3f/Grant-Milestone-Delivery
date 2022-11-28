@@ -22,8 +22,8 @@
 ## General Notes v2 - Nov 28, 2022
 
 All the issues mentioned in **General Notes v1** have been fixed:
-- Documentation has been improved
-- The login issue has been fixed, and now one must login with both the right credentials
+- Documentation has been improved in [this commit](https://github.com/Uke-Messaging/uke/commit/0cccdb444ade4bcab55cf842205aabf4a130a940)
+- The login issue has been fixed in [this commit](https://github.com/Uke-Messaging/uke/commit/43f061398bac16569a2b76f87693fd86de93c701), and now one must login with both the right credentials
 - The developer [said](https://github.com/w3f/Grant-Milestone-Delivery/pull/634#issuecomment-1327943508) the notification system will probably be reworked, so that minor issue will be considered further on.
 
 <br/>
