@@ -8,12 +8,40 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | Apache License 2.0 | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [/erc20/README.md](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc20/README.md), [/erc721/README.md](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc721/README.md), [/flipper/README.md](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/flipper/README.md) | ... |
-| 0c. | Testing and its Guide | <ul><li>[ ] </li></ul> | [/erc20/ui/tests](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc20/ui/tests), [/erc721/ui/tests](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc721/ui/tests), [/flipper/ui/tests](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/flipper/ui/tests) | ... |
-| 0d. | Docker | <ul><li>[x] </li></ul> | [/erc20/ui/Dockerfile](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc20/ui/Dockerfile), [/erc721/ui/Dockerfile](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/erc721/ui/Dockerfile), [/flipper/ui/Dockerfile](https://github.com/nerdsince98/ink-boxes/blob/a31e714b6fd04e60b04c66189360d77d64108029/flipper/ui/Dockerfile) | ... |
-| 0e. | Articles | <ul><li>[ ] </li></ul> | - | ... |
-| 0. | Creation of Boxes | <ul><li>[ ] </li></ul> | [/erc20](https://github.com/nerdsince98/ink-boxes/tree/a31e714b6fd04e60b04c66189360d77d64108029/erc20), [/erc721](https://github.com/nerdsince98/ink-boxes/tree/a31e714b6fd04e60b04c66189360d77d64108029/erc721), [/flipper](https://github.com/nerdsince98/ink-boxes/tree/a31e714b6fd04e60b04c66189360d77d64108029/flipper) | ... |
+| 0a. | Apache License 2.0 | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/LICENSE) | - |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [/erc20/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/README.md), [/erc721/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/README.md), [/flipper/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/README.md) | - |
+| 0c. | Testing and its Guide | <ul><li>[ ] </li></ul> | [/erc20/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/tests), [/erc721/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/ui/tests), [/flipper/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/ui/tests) | See **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [/erc20/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/Dockerfile), [/erc721/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/ui/Dockerfile), [/flipper/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/ui/Dockerfile) | - |
+| 0e. | Articles | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@avirajkhare00/introducing-ink-boxes-277b54ed23c9) | - |
+| 0. | Creation of Boxes | <ul><li>[ ] </li></ul> | [/erc20](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20), [/erc721](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721), [/flipper](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper) | See **General Notes** |
+<br/>
+
+## General Notes v2 - Nov 29, 2022
+The repository has changed from [/nerdsince98/ink-boxes](https://github.com/nerdsince98/ink-boxes) to [/avirajkhare00/ink-boxes](https://github.com/avirajkhare00/ink-boxes), [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/621#issuecomment-1328050579) is the explanation.
+
+### Improvements
+Here there are the **improvements** since the last evaluation:
+- the documentation has been improved with the suggested additions;
+- an article has been written;
+- little change of style for the UI, also if it's always super minimal and just an interface;
+- tests added for the UI, but they actually don't test the functionalities, example from [ERC20 UI test](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/tests/index.test.tsx#L38):
+```
+it("should click Enter Smart Contract submit Button", async () => {
+    const submitAddress = jest.fn();
+    render(<Button color='primary' onClick={submitAddress}>Submit</Button>);
+    await userEvent.click(screen.getByText("Submit"));
+    expect(submitAddress).toHaveBeenCalled();
+});
+```
+Instead, for this specific example, I'd check if the state variable [addressSubmitted](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/pages/index.tsx#L24) gets correctly updated with the new value. This methodology applies to the other tests too, otherwise you cannot prove the UI correctly works (the function submitAddress gets called, but what is the effect?).
+
+### What's missing
+Here there is what has **not been fixed** since the last evaluation:
+- as already mentioned, I'd write some more meaningful tests;
+- basically all the UI issues cited in the last evaluation, in the section **0. Creation of boxes** (with tests that actually prove functionalities work, you can check if these issues are there or not).
+
+I'd add also add an "output" field for the "Enter Smart Contract Address" action, so one knows if something went wrong or not. Also, it is not clear what's the address that is interacting with the contract (thanks to Substrate Contracts UI this is visible, but I think this should be also visible in the boxes as they should be a replacement for that UI, at least for the interacting part).
+
 <br/>
 
 ## General Notes v1 - Nov 21, 2022
