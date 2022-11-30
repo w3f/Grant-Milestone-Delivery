@@ -1,31 +1,83 @@
 4. A New Use Case for Non-Fungible Tokens
 
 Non-fungible tokens (NFTs) are digital assets that can be used to represent ownership of real or virtual items. NFTs are unique, meaning that each 
-token is distinct and cannot be replaced with another token. This makes NFTs different from traditional digital assets such as Bitcoin, Ethereum, and Polkadot tokens, which are interchangeable and divisible. NFTs became popular in 2021 and 2022 due to their ability to enable the monetization of digital items such as art, music, and gaming assets (Kharitonova, 2021). With blockchain infrastructure technology underlying it, an NFT guarantees a secure and immutable record of ownership for the asset being represented. NFTs can be viewed as a use case for blockchain that has enabled digital assets to be monetized and traded in a secure and transparent way, paving the way for a new form of digital asset ownership.
+token is distinct and cannot be replaced with another token. This makes NFTs different from traditional digital assets such as Bitcoin, Ethereum, 
+and Polkadot tokens, which are interchangeable and divisible. NFTs became popular in 2021 and 2022 due to their ability to enable the monetization 
+of digital items such as art, music, and gaming assets (Kharitonova, 2021). With blockchain infrastructure technology underlying it, an NFT 
+guarantees a secure and immutable record of ownership for the asset being represented. NFTs can be viewed as a use case for blockchain 
+that has enabled digital assets to be monetized and traded in a secure and transparent way, paving the way for a new form of digital asset ownership.
 
-As cryptocurrencies, decentralized finance, and NFTs have allowed users to amass wealth due to the ability to transfer digital assets, there may also be a use case for non-transferrable assets within the Web3 space. Within the Web2 gaming space, namely in World of Warcraft (WoW), soulbound items are items that can be collected in-game, but cannot be transferred to another player. Soulbound items are valuable because they give players access to exclusive items and provide additional benefits such as increased experience or bonuses when used in certain activities. With WoW continuing to bring in over a million daily active users (DAUs) in 2022 (Fluger et al., 2022), how can the concept of soulbound items transfer over to the Web3 world?
+As cryptocurrencies, decentralized finance, and NFTs have allowed users to amass wealth due to the ability to transfer digital assets, there may 
+also be a use case for non-transferrable assets within the Web3 space. Within the Web2 gaming space, namely in World of Warcraft (WoW), 
+soulbound items are items that can be collected in-game, but cannot be transferred to another player. Soulbound items are valuable because they 
+give players access to exclusive items and provide additional benefits such as increased experience or bonuses when used in certain activities. 
+With WoW continuing to bring in over a million daily active users (DAUs) in 2022 (Fluger et al., 2022), how can the concept of soulbound items 
+transfer over to the Web3 world?
 
-In an article effectively titled Soulbound, Buterin (2022) introduced the concept of soulbound tokens (SBTs) for governance mechanisms across blockchain protocols. Current state, because users can go onto centralized exchanges (CEXs) or decentralized exchanges (DEXs) to purchase governance tokens, parties that are driven by purposes potentially detrimental to the protocol could concentrate interests away from the ecosystem’s community, defeating the purpose of the decentralized nature of blockchain and Web3. With the introduction of SBTs, similar to soulbound items in Web2 gaming, SBTs would be non-transferable. While it can be argued that a user could sell an entire wallet to another user, the concept of making governance tokens as SBTs may be a topic for further research. 
+In an article effectively titled Soulbound, Buterin (2022) introduced the concept of soulbound tokens (SBTs) for governance mechanisms across 
+blockchain protocols. Current state, because users can go onto centralized exchanges (CEXs) or decentralized exchanges (DEXs) to purchase governance
+tokens, parties that are driven by purposes potentially detrimental to the protocol could concentrate interests away from the ecosystem’s community,
+defeating the purpose of the decentralized nature of blockchain and Web3. With the introduction of SBTs, similar to soulbound items in Web2 gaming, 
+SBTs would be non-transferable. While it can be argued that a user could sell an entire wallet to another user, the concept of making governance 
+tokens as SBTs may be a topic for further research. 
 
-With governance tokens providing one use case for SBTs, another use case for non-cryptocurrency users may be for proof of identity. Two projects using a de-facto soulbound framework within the Ethereum ecosystem are BrightID and Proof of Humanity (Sun et al., 2022). In an effort to prove that the owners of accounts are indeed actual individuals, in an SBT model, the token identifiers are not transferrable given that on-chain assets are soulbound to each verified individual (Buterin, 2022). As Web3 looks to introduce self-sovereign identity (SSI) to the masses, virtual asset service providers (VASPs) of these tools may consider an SBT framework. 
+With governance tokens providing one use case for SBTs, another use case for non-cryptocurrency users may be for proof of identity. Two projects using a
+de-facto soulbound framework within the Ethereum ecosystem are BrightID and Proof of Humanity (Sun et al., 2022). In an effort to prove that the owners 
+of accounts are indeed actual individuals, in an SBT model, the token identifiers are not transferrable given that on-chain assets are soulbound to each
+verified individual (Buterin, 2022). As Web3 looks to introduce self-sovereign identity (SSI) to the masses, virtual asset service providers (VASPs) of
+these tools may consider an SBT framework. 
 
-Self-sovereign identity (SSI), also known as decentralized identity, is a foundational tenant of Web3 that allows users to have complete control over their digital identities. SSI provides a secure way for individuals and organizations to store, manage, and share personal data without relying on a third-party provider or centralized authority (Ferdous et al., 2019). By leveraging blockchain technology, SSI can provide access to services and applications in a more efficient manner, as well as enable improved trust between people, organizations, and governments around the world. Similar to how NFTs onboarded new users into the blockchain and Web3 spaces, the combination of SSI with SBTs could potentially encourage more users to enter into various blockchain ecosystems.
+Self-sovereign identity (SSI), also known as decentralized identity, is a foundational tenant of Web3 that allows users to have complete control over 
+their digital identities. SSI provides a secure way for individuals and organizations to store, manage, and share personal data without relying on a 
+third- party provider or centralized authority (Ferdous et al., 2019). By leveraging blockchain technology, SSI can provide access to services and
+applications in a more efficient manner, as well as enable improved trust between people, organizations, and governments around the world. Similar to how
+NFTs onboarded new users into the blockchain and Web3 spaces, the combination of SSI with SBTs could potentially encourage more users to enter into
+various blockchain ecosystems.
 
 4.1 Additional Use Cases for Soulbound Tokens
 
-Upon the release of Buterin’s article Soulbound, projects across Ethereum and other blockchain protocols began to develop solutions for SBTs. Within the United States, Wyoming recognized decentralized autonomous organizations (DAOs) as separate, legal entities through a supplement to the law governing limited liability companies (LLCs) in 2021 (Chun et al., 2022). This led to a number of projects registering as DAOs in 2021 and 2022. DAOs such as Reputation DAO leveraged SBTs as reputation systems for utilities such as credit scores, proof of identity in the play-and-earn space, as well as proof of identity for council members across various ecosystems (Sun et al., 2022). In taking this approach with SBTs, blockchain can potentially provide further transparency to the on-chain behavior of users.
+Upon the release of Buterin’s article Soulbound, projects across Ethereum and other blockchain protocols began to develop solutions for SBTs. Within the
+United States, Wyoming recognized decentralized autonomous organizations (DAOs) as separate, legal entities through a supplement to the law governing 
+limited liability companies (LLCs) in 2021 (Chun et al., 2022). This led to a number of projects registering as DAOs in 2021 and 2022. DAOs such as 
+Reputation DAO leveraged SBTs as reputation systems for utilities such as credit scores, proof of identity in the play-and-earn space, as well as proof of 
+identity for council members across various ecosystems (Sun et al., 2022). In taking this approach with SBTs, blockchain can potentially provide further 
+transparency to the on-chain behavior of users.
 
-In another example of how SBTs can cross over into the Web3 space, RMRK, a project within the Polkadot and Kusama ecosystems, created an SBT referred to as Soulbound 2.0 (SBT2). Developed with the metaverse and GameFi in mind, RMRK is another project that created a reputation-based SBT (Oli, 2022). As RMRK’s SBT2 will gain attributes based on how long a user plays a blockchain-based game or stays in a metaverse, SBT2s can be viewed as dynamic SBTs. Phala Network, another project within the Polkadot and Kusama ecosystems, leveraged RMRK’s SBT2 to create an SBT within their PhalaWorld metaverse. Through the use of a Spirit, any user can obtain an SBT that can only be leveled up by performing activities throughout the Phala ecosystem. By demonstrating behaviors such as participating in on-chain activities, being a community advocate on Web2 social media platforms, contributing to the community from a technical perspective, or by staking PHA - the native token for the Phala ecosystem, the SBTs can only evolve with user interaction.
+In another example of how SBTs can cross over into the Web3 space, RMRK, a project within the Polkadot and Kusama ecosystems, created an SBT referred to
+as Soulbound 2.0 (SBT2). Developed with the metaverse and GameFi in mind, RMRK is another project that created a reputation-based SBT (Oli, 2022). As
+RMRK’s SBT2 will gain attributes based on how long a user plays a blockchain-based game or stays in a metaverse, SBT2s can be viewed as dynamic SBTs.
+Phala Network, another project within the Polkadot and Kusama ecosystems, leveraged RMRK’s SBT2 to create an SBT within their PhalaWorld metaverse.
+Through the  use of a Spirit, any user can obtain an SBT that can only be leveled up by performing activities throughout the Phala ecosystem. By
+demonstrating behaviors such as participating in on-chain activities, being a community advocate on Web2 social media platforms, contributing to the
+community from a technical perspective, or by staking PHA - the native token for the Phala ecosystem, the SBTs can only evolve with user interaction.
 
-Within the Binance ecosystem, the Binance Account Bound (BAB) soulbound token was created for Binance users that completed their know your customer (KYC) verification (Sun et al., 2022). Given Binance is a CEX that holds a number of assets across a number of wallets, could SBTs provide a use case for know your exchange (KYX) verification? With the collapse of FTX in 2022, users were able to track the suspicious activity of a wallet holding large amounts of FTT tokens - the native token of the FTX exchange. If CEXs such as Binance leverage the BAB soulbound token they created to provide increased transparency, other CEXs, DAOs, and protocols may have to follow similar processes to develop standards across the Web3 landscape.
+Within the Binance ecosystem, the Binance Account Bound (BAB) soulbound token was created for Binance users that completed their know your customer (KYC) 
+verification (Sun et al., 2022). Given Binance is a CEX that holds a number of assets across a number of wallets, could SBTs provide a use case for know 
+your exchange (KYX) verification? With the collapse of FTX in 2022, users were able to track the suspicious activity of a wallet holding large amounts of 
+FTT tokens - the native token of the FTX exchange. If CEXs such as Binance leverage the BAB soulbound token they created to provide increased
+transparency, other CEXs, DAOs, and protocols may have to follow similar processes to develop standards across the Web3 landscape.
 
 4.2 A Decentralized Society with Soulbound Tokens
 
-In considering use cases for a number of industries, Weyl et al. (2022) proposed that SBTs could potentially create the foundation for a decentralized society (DeSoc). Referred to as an extended resume, if users leveraged wallets as SBTs, these tools could provide the credentials and commitments to conduct a variety of activities in a decentralized fashion. Although decentralized finance activities are currently performed across a number of blockchain ecosystems, methods to track a user’s credit score or repayment history do not currently exist. SBTs could provide a way to unlock lending opportunities for individuals and organizations that do not have the financial history or assets traditional financial institutions recognize. For example, if a user owns cryptocurrencies or NFTs, if they hold those assets in an SBT-based wallet, with the user's permission, the wallet could show the payment history and the ‘crypto credit score’ to the lender. 
+In considering use cases for a number of industries, Weyl et al. (2022) proposed that SBTs could potentially create the foundation for a decentralized 
+society (DeSoc). Referred to as an extended resume, if users leveraged wallets as SBTs, these tools could provide the credentials and commitments to 
+conduct a variety of activities in a decentralized fashion. Although decentralized finance activities are currently performed across a number of
+blockchain ecosystems, methods to track a user’s credit score or repayment history do not currently exist. SBTs could provide a way to unlock lending
+opportunities for individuals and organizations that do not have the financial history or assets traditional financial institutions recognize. For
+example, if a user owns cryptocurrencies or NFTs, if they hold those assets in an SBT-based wallet, with the user's permission, the wallet could show the
+payment history and the ‘crypto credit score’ to the lender. 
 
-Tying SBTs back to extended resumes, college degrees, certifications, and transcripts could also be on-chain as SBTs. Given degrees, certifications, and transcripts are soulbound in the Web2 world, employers and academic institutions could leverage SBTs to confirm the contents of an applicant's resume are indeed valid. Additionally, if an employer would want to conduct a reference check, the reference’s addresses could be included in the SBT where attestations could be performed on-chain.
+Tying SBTs back to extended resumes, college degrees, certifications, and transcripts could also be on-chain as SBTs. Given degrees, certifications, and
+transcripts are soulbound in the Web2 world, employers and academic institutions could leverage SBTs to confirm the contents of an applicant's resume are
+indeed valid. Additionally, if an employer would want to conduct a reference check, the reference’s addresses could be included in the SBT where
+attestations could be performed on-chain.
 
-While SBTs could provide a number of use cases, users may not want all of their information to be published on-chain. Zero-knowledge proofs could be a potential solution for one party to prove information to another party without revealing any sensitive content. Natively, zero-knowledge proofs can be used to verify the correctness of transactions in distributed ledgers and smart contracts, helping to ensure that no one is able to manipulate the system (Xue & Wang, 2022). By providing an additional layer of security while maintaining privacy, zero-knowledge proofs are becoming increasingly important in digital applications today and are being implemented by a number of blockchain protocols. In combining SBTs with zero-knowledge proofs, many blockchain ecosystems could potentially move closer to a trustless decentralized society.
+While SBTs could provide a number of use cases, users may not want all of their information to be published on-chain. Zero-knowledge proofs could be a
+potential solution for one party to prove information to another party without revealing any sensitive content. Natively, zero-knowledge proofs can be 
+used to verify the correctness of transactions in distributed ledgers and smart contracts, helping to ensure that no one is able to manipulate the system
+(Xue & Wang, 2022). By providing an additional layer of security while maintaining privacy, zero-knowledge proofs are becoming increasingly important in
+digital applications today and are being implemented by a number of blockchain protocols. In combining SBTs with zero-knowledge proofs, many blockchain
+ecosystems could potentially move closer to a trustless decentralized society.
 
 References
 
@@ -45,7 +97,7 @@ Goldston, J.L., Chaffer, T. J., & Martinez, G. (2022). The metaverse as the digi
 Kharitonova, J. S. (2021). Digital assets and digital inheritance. Law & Digital 	
 	Technologies, 1(1), 19-26.
 
-Oli. (2022, Aug, 29). DeQuest Goes into Partnership with RMRK. Retrieved from https://medium.com/dequest/dequest-goes-into-partnership-with-rmrk-6746a4ac8108			
+Oli. (2022, Aug, 29). DeQuest Goes into Partnership with RMRK. Retrieved from https://medium.com/dequest/dequest-goes-into-partnership-with-rmrk-		6746a4ac8108			
 
 Sun, N., Zhang, Y., & Liu, Y. (2022). A Privacy-Preserving KYC-Compliant Identity Scheme for Accounts on All Public Blockchains. Sustainability, 14(21), 	14584.
 
