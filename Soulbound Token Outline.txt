@@ -81,8 +81,7 @@ ecosystems could potentially move closer to a trustless decentralized society.
 
 References
 
-Buterin, V. (26, January 2022). Soulbound. Retrieved November 2022 from 
-	https://vitalik.ca/general/2022/01/26/soulbound.html 
+Buterin, V. (26, January 2022). Soulbound. Retrieved November 2022 from https://vitalik.ca/general/2022/01/26/soulbound.html 
 
 Chun, K. N., Park, S. Y., & Kim, M. S. (2022). Understanding Decentralized Autonomous 	Organizations (DAOs) as a Reaction to Corporate Governance 		Problems. Smatoos Business Review, 1-12.
 
