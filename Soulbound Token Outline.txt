@@ -1,6 +1,7 @@
 4. A New Use Case for Non-Fungible Tokens
 
-Non-fungible tokens (NFTs) are digital assets that can be used to represent ownership of real or virtual items. NFTs are unique, meaning that each token is distinct and cannot be replaced with another token. This makes NFTs different from traditional digital assets such as Bitcoin, Ethereum, and Polkadot tokens, which are interchangeable and divisible. NFTs became popular in 2021 and 2022 due to their ability to enable the monetization of digital items such as art, music, and gaming assets (Kharitonova, 2021). With blockchain infrastructure technology underlying it, an NFT guarantees a secure and immutable record of ownership for the asset being represented. NFTs can be viewed as a use case for blockchain that has enabled digital assets to be monetized and traded in a secure and transparent way, paving the way for a new form of digital asset ownership.
+Non-fungible tokens (NFTs) are digital assets that can be used to represent ownership of real or virtual items. NFTs are unique, meaning that each 
+token is distinct and cannot be replaced with another token. This makes NFTs different from traditional digital assets such as Bitcoin, Ethereum, and Polkadot tokens, which are interchangeable and divisible. NFTs became popular in 2021 and 2022 due to their ability to enable the monetization of digital items such as art, music, and gaming assets (Kharitonova, 2021). With blockchain infrastructure technology underlying it, an NFT guarantees a secure and immutable record of ownership for the asset being represented. NFTs can be viewed as a use case for blockchain that has enabled digital assets to be monetized and traded in a secure and transparent way, paving the way for a new form of digital asset ownership.
 
 As cryptocurrencies, decentralized finance, and NFTs have allowed users to amass wealth due to the ability to transfer digital assets, there may also be a use case for non-transferrable assets within the Web3 space. Within the Web2 gaming space, namely in World of Warcraft (WoW), soulbound items are items that can be collected in-game, but cannot be transferred to another player. Soulbound items are valuable because they give players access to exclusive items and provide additional benefits such as increased experience or bonuses when used in certain activities. With WoW continuing to bring in over a million daily active users (DAUs) in 2022 (Fluger et al., 2022), how can the concept of soulbound items transfer over to the Web3 world?
 
@@ -31,29 +32,24 @@ References
 Buterin, V. (26, January 2022). Soulbound. Retrieved November 2022 from 
 	https://vitalik.ca/general/2022/01/26/soulbound.html 
 
-Chun, K. N., Park, S. Y., & Kim, M. S. (2022). Understanding Decentralized Autonomous 	Organizations (DAOs) as a Reaction to Corporate Governance 		
-	Problems. Smatoos Business Review, 1-12.
+Chun, K. N., Park, S. Y., & Kim, M. S. (2022). Understanding Decentralized Autonomous 	Organizations (DAOs) as a Reaction to Corporate Governance 		Problems. Smatoos Business Review, 1-12.
 
-Ferdous, M. S., Chowdhury, F., & Alassafi, M. O. (2019). In search of self-sovereign 	
-	identity leveraging blockchain technology. IEEE Access, 7, 103059-103079.
+Ferdous, M. S., Chowdhury, F., & Alassafi, M. O. (2019). In search of self-sovereign identity leveraging blockchain technology. 
+	IEEE Access, 7, 103059-103079.
 
-Flunger, R., Mladenow, A., & Strauss, C. (2022). Game Analytics—Business 
-	Impact, Methods and Tools. In Developments in Information & Knowledge 	
+Flunger, R., Mladenow, A., & Strauss, C. (2022). Game Analytics—Business Impact, Methods and Tools. In Developments in Information & Knowledge 	
 	Management for Business Applications (pp. 601-617). Springer, Cham.
 
-Goldston, J.L., Chaffer, T. J., & Martinez, G. (2022). The metaverse as the digital 				leviathan: A case study of Bit.Country. Journal of Applied Business & Economics, 			24(2), 40-59. 
+Goldston, J.L., Chaffer, T. J., & Martinez, G. (2022). The metaverse as the digital leviathan: A case study of Bit.Country. Journal of Applied Business & 	Economics, 24(2), 40-59. 
+
 Kharitonova, J. S. (2021). Digital assets and digital inheritance. Law & Digital 	
 	Technologies, 1(1), 19-26.
 
-Oli. (2022, Aug, 29). DeQuest Goes into Partnership with RMRK. Retrieved from 
-	https://medium.com/dequest/dequest-goes-into-partnership-with-rmrk-6746a4ac8108			
+Oli. (2022, Aug, 29). DeQuest Goes into Partnership with RMRK. Retrieved from https://medium.com/dequest/dequest-goes-into-partnership-with-rmrk-6746a4ac8108			
 
-Sun, N., Zhang, Y., & Liu, Y. (2022). A Privacy-Preserving KYC-Compliant Identity 	
-	Scheme for Accounts on All Public Blockchains. Sustainability, 14(21), 14584.
+Sun, N., Zhang, Y., & Liu, Y. (2022). A Privacy-Preserving KYC-Compliant Identity Scheme for Accounts on All Public Blockchains. Sustainability, 14(21), 	14584.
 
-Weyl, E. G., Ohlhaver, P., & Buterin, V. (2022). Decentralized Society: Finding Web3's 	
-	Soul. Available at SSRN 4105763.
+Weyl, E. G., Ohlhaver, P., & Buterin, V. (2022). Decentralized Society: Finding Web3's Soul. Available at SSRN 4105763.
 
-Xue, Y., & Wang, J. (2022). Design of a Blockchain-Based Traceability System with a 	
-	Privacy-Preserving Scheme of Zero-Knowledge Proof. Security and 	
+Xue, Y., & Wang, J. (2022). Design of a Blockchain-Based Traceability System with a Privacy-Preserving Scheme of Zero-Knowledge Proof. Security and 	
 	Communication Networks, 2022,1-12.
