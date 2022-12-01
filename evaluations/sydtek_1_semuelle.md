@@ -8,13 +8,12 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
-|0. | Rights| <ul><li>[ ] </li></ul> | [jgophd/Developed-Materials-and-Raw-Data/wiki](https://github.com/jgophd/Developed-Materials-and-Raw-Data/wiki/Developed-Materials-and-Raw-Data) | All developed materials and raw data will be publicly accessible and public domain via a GitHub repository. Milestone 1 is research oriented and as such there is no code to test. |
-|**1.** | Overview of SBTs | <ul><li>[ ] </li></ul> | [docs.google.com](https://docs.google.com/spreadsheets/d/1ZDY8oWUoJibP8qOKqsOx33gNbGTsC-JE/edit?usp=sharing&ouid=100912578517062621282&rtpof=true&sd=true) | We will provide an overview of the current state of the soulbound tokens throughout a number of blockchain ecosystems, along with service providers of Web3 digital inheritance offerings such as Safe Haven’s Inheriti solution. |
-| **1a.** | Specific Coverage | <ul><li>[ ] </li></ul> | [docs.google.com](https://docs.google.com/spreadsheets/d/1ZDY8oWUoJibP8qOKqsOx33gNbGTsC-JE/edit?usp=sharing&ouid=100912578517062621282&rtpof=true&sd=true) | Coverage will span [historical information regarding soulbound tokens](https://wrenchinthegears.com/wp-content/uploads/2022/05/Vitalek-Buterin-Soulbound-Token-Paper-May-2022.pdf), [information regarding the theoretical application of the Social Recovery Pallet for digital inheretance](https://polkawallet.medium.com/the-guidance-of-social-recovery-in-polkawallet-4dea03e8b07b), [academic sources](https://bit.ly/3RnCmMy), and [recent developments](https://cryptoslate.com/press-releases/phala-network-releases-first-soulbound-token-use-case-with-phalaworld/). |
+|0. | Rights| <ul><li>[ ] </li></ul> | [jgophd/Developed-Materials-and-Raw-Data/wiki](https://github.com/jgophd/Developed-Materials-and-Raw-Data/wiki/Developed-Materials-and-Raw-Data) | No license currently. |
+|**1.** | Overview of SBTs | <ul><li>[x] </li></ul> | [jgophd/Developed-Materials-and-Raw-Data](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/bc176edbce88e1551a5d97c5f5b4b0e9c44a2236/Soulbound%20Token%20Outline.txt) | Brief overview of history and current state of soulbound tokens across blockchain ecosystems. |
+| **1a.** | Specific Coverage | <ul><li>[x] </li></ul> | [jgophd/Developed-Materials-and-Raw-Data](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/bc176edbce88e1551a5d97c5f5b4b0e9c44a2236/Lit%20Matrix%20Master-Table%201.csv) | Literature survey |
 
 
 ## General Notes
 
-- Currently all data in a Google Sheet
-- Material is a list of citations, but no overview
-- List seems unfinished
+- Data moved from Google Sheets to Github on request
+- Overview text provided on request
