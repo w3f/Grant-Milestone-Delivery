@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/anagolay-project-idiyanale-multi-token-community-contributions-for-verified-creators.md
 - **Milestone:** 1
 - **Kusama Identity:** N/A
@@ -13,17 +13,21 @@
 | 0c.    | Testing and Testing Guide        | <ul><li>[x] </li></ul> | In root of the repo run `makers ci-flow-light`                                                                                    |  |
 | 0d.    | Docker                           | <ul><li>[x] </li></ul> | registry.gitlab.com/anagolay/anagolay/idiyanale:3b7f3e2a                                                                          |                                           |
 | 0e.    | Demo video tutorial              | <ul><li>[x] </li></ul> | https://www.youtube.com/watch?v=j5__j3Km8ho                                                                                       |                                                      |
-| 1.     | Substrate module: verification   | <ul><li>[ ] </li></ul> | [Pallet source code](https://github.com/anagolay/anagolay-chain/tree/main/pallets/verification)                                   | Possible code quality improvements                   |
-| 2.     | Statement pallet update          | <ul><li>[ ] </li></ul> | [Commit id where this is implemented](https://github.com/anagolay/anagolay-chain/commit/3bfaa83146555ffe6e4203b4d21d80b73ae0a0d8) | Possible code quality improvements                   |
-| 3.     | UI for claiming domain ownership | <ul><li>[ ] </li></ul> | [Anagolay App](https://bafybeiexksyj76zmsnsm6ew4eumidi75sigc2vchqqoeh2d3edxmorslxu.ipfs.anagolay.network/verify-your-domain/)     | Possible code quality improvements     |
+| 1.     | Substrate module: verification   | <ul><li>[x] </li></ul> | [Pallet source code](https://github.com/anagolay/anagolay-chain/tree/main/pallets/verification)                                   | Possible code quality improvements                   |
+| 2.     | Statement pallet update          | <ul><li>[x] </li></ul> | [Commit id where this is implemented](https://github.com/anagolay/anagolay-chain/commit/3bfaa83146555ffe6e4203b4d21d80b73ae0a0d8) | Possible code quality improvements                   |
+| 3.     | UI for claiming domain ownership | <ul><li>[x] </li></ul> | [Anagolay App](https://bafybeiexksyj76zmsnsm6ew4eumidi75sigc2vchqqoeh2d3edxmorslxu.ipfs.anagolay.network/verify-your-domain/)     | Possible code quality improvements     |
 
 # General Notes
+
+
 
 ## Front-end and application testing
 
 Worked well as in the video tutorial. 
 
 ## Code Quality and Tests
+
+Update: The possible code quality improvements could be handled in the next milestone delivery.
 
 ### Security
 
