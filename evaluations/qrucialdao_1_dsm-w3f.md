@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [Application](https://github.com/w3f/Grants-Program/blob/master/applications/QRUCIAL_DAO.md)
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -14,16 +14,20 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li> [x] </li></ul> | [Link](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/LICENSE) | Ok |
 | 0b. | Documentation | <ul><li> [x] </li></ul> | [Wiki](https://github.com/Qrucial/QRUCIAL-DAO/wiki) and [Whitepaper](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docs/QRUCIAL_DAO_Whitepaper.pdf) | Ok |
-| 0c. | Testing Guide | <ul><li> [ ] </li></ul> | [Development and testing guide](https://github.com/Qrucial/QRUCIAL-DAO/wiki/Development-and-testing-guide) | Needs better instructions for exploratory testing. |
-| 0d. | Docker | <ul><li> [ ] </li></ul> | [Docker](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docker/files/dockerfile) and [node-setup.sh](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/node-setup.sh) | With docker, build with success but cannot start the services. |
-| 1. | Substrate runtime | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/runtime) | Not tested yet. Needs better instructions for exploratory testing. |
-| 2. | Substrate pallet: ExoSys | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/exo-pallet) | Not tested yet. Needs better instructions for exploratory testing. |
-| 3. | Substrate pallet: AuditorRep | <ul><li> [ ] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/audit-pallet) | Not tested yet. Needs better instructions for exploratory testing. |
-| 4. | Substrate report storage | <ul><li> [ ] </li></ul> | [Part of ExoTool](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/exotools/lar.py) | Not tested yet. Needs better instructions for exploratory testing. |
-| 5. | Substrate pallet: governance | <ul><li> [ ] </li></ul> | [Sudo](https://github.com/Qrucial/QRUCIAL-DAO/blob/167d856b87f6ea21c86dd3f3c556ab8e70bb6f35/qdao-node/runtime/src/lib.rs#L306) | Not tested yet. Needs better instructions for exploratory testing. |
+| 0c. | Testing Guide | <ul><li> [x] </li></ul> | [Development and testing guide](https://github.com/Qrucial/QRUCIAL-DAO/wiki/Development-and-testing-guide) |  |
+| 0d. | Docker | <ul><li> [x] </li></ul> | [Docker](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/docker/files/dockerfile) and [node-setup.sh](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/node-setup.sh) |  |
+| 1. | Substrate runtime | <ul><li> [x] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/runtime) |  |
+| 2. | Substrate pallet: ExoSys | <ul><li> [x] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/exo-pallet) |  |
+| 3. | Substrate pallet: AuditorRep | <ul><li> [x] </li></ul> | [Crate source](https://github.com/Qrucial/QRUCIAL-DAO/tree/milestone1/qdao-node/audit-pallet) |  |
+| 4. | Substrate report storage | <ul><li> [x] </li></ul> | [Part of ExoTool](https://github.com/Qrucial/QRUCIAL-DAO/blob/milestone1/exotools/lar.py) |  |
+| 5. | Substrate pallet: governance | <ul><li> [x] </li></ul> | [Sudo](https://github.com/Qrucial/QRUCIAL-DAO/blob/167d856b87f6ea21c86dd3f3c556ab8e70bb6f35/qdao-node/runtime/src/lib.rs#L306) |  |
 
 
 ## General Notes
+
+## Update V4: December 2.
+
+After a meeting with Six, the main flow of the application worked well. There are some extrinsics in alternative paths that need improvements that will be handled for the next delivery (challenge_report, game_result).
 
 ## Update V3: October 27.
 
