@@ -16,6 +16,19 @@
 | 0. | Creation of Boxes | <ul><li>[ ] </li></ul> | [/erc20](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20), [/erc721](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721), [/flipper](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper) | See **General Notes** |
 <br/>
 
+## General Notes v3 - Dec 2, 2022
+E2E tests (with Cypress) have been added, also if not required. By the way, these new tests do not prove (again) the functionalities work. To do so, it's important to use [assertions](https://docs.cypress.io/guides/references/assertions#TDD-Assertions). For example: call the `mint` function to mint an NFT, then check if the minter address owns the new token, and if its balance (with `balanceOf`) has been modified (this flow do not match the "from top to bottom" testing flow, which is used in the current tests): this would be easy to do using assertions to check the outcome's correctness.
+
+Also, in the provided [youtube video](https://www.youtube.com/watch?v=ga2sBYMNDDY) (which is only for the ERC20 tests), it is visible that the last function doesn't work. Also, at least in my local environment, the `transfer` function works from the 2nd attempt because, as I've already said in the v1 evaluation (section **0. Creation of Boxes**), an error occurs the first time that function gets called.
+
+READMEs of each UI folder have been updated well, there is only a minor problem (all have the same title - Flipper UI) but I've already fixed it in a [pull request](https://github.com/avirajkhare00/ink-boxes/pull/1/files).
+
+In the mentioned pull request, I also suggest to change the structure of the tests, making a variable for each parameter (like for the `smart contract address`), so it's easier for the developer to change them. Also, usually it's better to use [`dotenv`](https://www.npmjs.com/package/dotenv) for the environment variables like smart contract addresses, but this is just a tip and not saying it has to be implemented.
+
+So, to conclude, I'd say at least **all the UI functions should work** to make the milestone acceptable. Again, these functions have been mentioned in the section **0. Creation of Boxes** of General Notes v1.
+
+<br/>
+
 ## General Notes v2 - Nov 29, 2022
 The repository has changed from [/nerdsince98/ink-boxes](https://github.com/nerdsince98/ink-boxes) to [/avirajkhare00/ink-boxes](https://github.com/avirajkhare00/ink-boxes), [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/621#issuecomment-1328050579) is the explanation.
 
