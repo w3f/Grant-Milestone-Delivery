@@ -2,7 +2,7 @@
 
 
 
-- **Status:** In Progress
+- **Status:** ACCEPTED
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Primis.md
 - **Milestone:** 1
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
@@ -13,14 +13,14 @@
 | Number | Deliverable                    | Accepted | Link                                                             | Evaluation Notes                                            | 
 | -----: | ------------------------------ | -------- | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 |    0a. | License                        | Yes      | [MIT](https://github.com/Primis-Labs/client/blob/main/LICENSE)   | MIT                                                         |
-|    0b. | Documentation                  | No       | [README](https://github.com/Primis-Labs/client)                  | See section 0b.                                             |
-|    0c. | Testing Guide                  | No       | [Tests](https://docs.google.com/spreadsheets/d/1DccCJUEu7HLUpQYrh6QBfJ1wuRyPeMBWoAsppco-nEU/edit?usp=sharing) |See section 0c. |
+|    0b. | Documentation                  | Yes      | [README](https://github.com/Primis-Labs/client)                  | See section 0b.                                             |
+|    0c. | Testing Guide                  | Yes      | [Tests](https://github.com/Primis-Labs/client/blob/main/doc/Primis%20Web3%20Desktop%20Testing%20Guide.md) |See section 0c.     |
 |    0d. | Docker                         | N/A      |                                                                  | Desktop application.                                        |
-|     1. | Build app structure            | Yes      | [Website](https://primis.cc/)                                    | See section 1.                                              | 
-|     2. | Implement wallet view          | No       |                                                                  | See section 2.                                              |
-|     3. | Build Polkadot ECO wallet      | No       |                                                                  | See section 3.                                              |
-|     4. | NFT assets management          | No       |                                                                  | See section 4.                                              |
-|     5. | Setup Primis NFT avatar        | Yes      |                                                                  | Looks good                                                  |
+|     1. | Build app structure            | Yes      | [Website](https://primis.cc/)                                    |                                                             | 
+|     2. | Implement wallet view          | Yes      |                                                                  |                                                             |
+|     3. | Build Polkadot ECO wallet      | Yes      |                                                                  |                                                             |
+|     4. | NFT assets management          | Yes      |                                                                  |                                                             |
+|     5. | Setup Primis NFT avatar        | Yes      |                                                                  |                                                             |
 
 
 
@@ -35,7 +35,7 @@ All issues reported in this evaluation can be summarized into a documentation bu
 As I am not calibrated yet to decide which issues are blocking vs ok to move forward, I will defer to a W3F officer to decide how to proceed.
 
 
-## Detailed Evaluation
+## First Evaluation
 
 ### 0b. Documentation
 
@@ -174,4 +174,16 @@ Tests:       6 failed, 2 passed, 8 total
 
 
 
+
+# Final evaluation
+
+- The fixes and recommendation implementations can be tracked [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/587)
+
+- The most important issues were resolved and delivered.
+
+- A couple of optional issues will be kept in the backlog for future iterations:
+* The English texts are hard coded all over the code. Would be better if the app was internationalized with clean dictionary files for future languages.
+* Show wallet transactions in the records log when they happened outside the app.
+
+- Milestone 1 accepted.
 

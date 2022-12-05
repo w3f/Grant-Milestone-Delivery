@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Faucet.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,17 +9,69 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| [LICENCE](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/LICENSE) | Apache 2.0, Ok |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md) | Problems with Twitter autentication locally. Other minor improvements. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md#testing) | Problems with Twitter autentication locally. Other minor improvements. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md) | Problems with Twitter autentication locally - fixed. Other minor improvements - done. |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| Inside [README.md](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/README.md#testing) | One test case failing. Now passing. |
 | 0d. | Article |<ul><li>[x] </li></ul>| [Google Docs link](https://docs.google.com/document/d/1PKMPsfVBZx7TPq0IIS6fWd15Fs8d8HgUAaFHuA18Pao) | - |
-| 1. | User Interface |<ul><li>[ ] </li></ul>| [```/pages/index.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/index.tsx) | Documentation improvements. |  
-| 2. | Authentication |<ul><li>[ ] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/auth/%5B...nextauth%5D.ts) | Documentation improvements. Possible bug.|  
-| 3. | User status |<ul><li>[ ] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/status.ts) | Documentation improvements. |  
-| 4. | Faucet drip |<ul><li>[ ] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/new.ts) | Bug, testing and documentation improvements. |
+| 1. | User Interface |<ul><li>[x] </li></ul>| [```/pages/index.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/index.tsx) | Documentation improvements. Done. |  
+| 2. | Authentication |<ul><li>[x] </li></ul>| [```/pages/api/auth/[...nextauth].ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/auth/%5B...nextauth%5D.ts) | Documentation improvements. Possible bug. Not a bug, done. |  
+| 3. | User status |<ul><li>[x] </li></ul>| [```/pages/api/claim/status.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/status.ts) | Documentation improvements. Done. |  
+| 4. | Faucet drip |<ul><li>[x] </li></ul>| [```/pages/api/claim/new.ts```](https://github.com/karooolis/sybil-resistant-substrate-faucet/blob/b7142070f2333d8d2aa3455a9cefae5d92e8d6be/pages/api/claim/new.ts) | Bug, testing and documentation improvements. Now ok. |
 
 ## General Notes
 
-### Documentation and Tutorial
+### Update V3
+
+The e2e tests are passing. The latest commit hash evaluated was: a9c7b2fc87df5c0213595fef27d2f262774c4240. 
+
+### Update V2
+
+#### Documentation and Tutorial
+
+The documentation and tutorial were improved with more detailed instructions and with a new .env.sample that works very well without modifications.
+
+The env variable name bug was fixed.
+
+I could test Twitter authentication locally without problems.
+
+One e2e test case failing:
+
+```
+1) [chromium] › index.spec.ts:13:1 › Authenticated - claim =======================================
+
+    Test timeout of 30000ms exceeded.
+
+    locator.fill: Target closed
+    =========================== logs ===========================
+    waiting for selector "[data-testid="wallet-input"]"
+    ============================================================
+
+      42 |   const walletInput = page.locator('[data-testid="wallet-input"]');
+      43 |
+    > 44 |   await walletInput.fill("incorrect-address");
+         |                     ^
+      45 |   await expect(claimBtn).toHaveText("Claim");
+      46 |   await claimBtn.click();
+      47 |
+
+        at /home/diogo/workspace/w3f/sybil-resistant-substrate-faucet/tests/e2e/index.spec.ts:44:21
+
+
+  1 failed
+    [chromium] › index.spec.ts:13:1 › Authenticated - claim
+```
+#### Code quality
+
+Testing coverage increased, eslint warnings were fixed and JSDocs included.
+
+#### Exploratory testing
+
+All the cases reported were fixed or improved. 
+
+
+
+### Evaluation V1.
+
+#### Documentation and Tutorial
 
 Please specify the node version needed to run compilation/development env, otherwise, users could have installation problems. I used yarn to run with node 16 and worked well. Would be nice to add `npm i` or `yarn install` to the instructions for running the system. I also needed to install Playwright to run e2e tests. The instruction to install Playwright is not in the tutorial.
 
@@ -54,7 +106,7 @@ I also notice the difference in the name of env variables FAUCET_MNEMONIC to FAU
 I was not able to authenticate using Twitter locally, please provide proper instructions to configure Twitter authentication for this part to be tested.
 
 
-### Code quality and code documentation
+#### Code quality and code documentation
 
 Some files are not covered by unit/integration tests at all: `/pages/api/claim/new.tx`, `utils/encode.ts`, `utils/getDerivedEncryptionKey.ts`. Please improve.
 
@@ -67,7 +119,7 @@ Eslint generated 42 problems (41 errors, 1 warning). Most of them seem to be fal
 1:10  warning  'string' is defined but never used  @typescript-eslint/no-unused-vars
 ```
 
-### Exploratory testing
+#### Exploratory testing
 
 Testing online I was able to request some funds using the faucet authenticated with Twitter and GitHub. Locally, I was only able to authenticate using GitHub.
 

@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Contract Link:** https://github.com/w3f/Grants-Program/blob/master/applications/xbi-format-psp-t3rn.md
 * **Milestone:** 1
 * **Kusama Identity:** Address
@@ -9,10 +9,20 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 1a.    | PSP-33        | <ul><li>[ ] </li></ul> | https://github.com/w3f/PSPs/pull/53 | Checking the process.  | 
-| 1b.    | Documentation |  <ul><li>[ ] </li></ul> | https://github.com/t3rn/xbi/pull/1 | Improvements in the tutorial. | 
+| 1a.    | PSP-33        | <ul><li>[x] </li></ul> | https://github.com/w3f/PSPs/pull/53 | ok  | 
+| 1b.    | Documentation |  <ul><li>[x] </li></ul> | https://github.com/t3rn/xbi/pull/1 | ok | 
 
 ## General Notes
+
+### PSP-33 
+
+The discussions were held in private. No problem since the process currently allows it, but in the future probably this discussions will need to be held in public. 
+
+### Documentation
+
+The coverage of the tutorial was improved. 
+
+## Evaluation V1
 
 ### PSP-33 
 
