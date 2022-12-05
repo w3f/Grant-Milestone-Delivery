@@ -6,7 +6,7 @@
 * **Milestone Number:** 4
 
 **Context** 
-We have delivered the asset-management pallet, finalizer-pallet and representative role/module. Simulating finalizing a sale through the eyes of the current lawful proces. Further we have added the management of on-chain acquired assets with democracy pallet and asset-pallet as voting weight.
+We have delivered the asset-management pallet, finalizer-pallet and representative role/module. Simulating finalizing a sale through the eyes of the current lawful process. Further we have added the management of on-chain acquired assets with democracy pallet and asset-pallet as voting weight.
 
 **Deliverables**
 
@@ -19,8 +19,8 @@ We have delivered the asset-management pallet, finalizer-pallet and representati
 | 0e.  | Article |[Link](https://docs.google.com/document/d/101Rpnn907J0F4xrVlYNCAsT1fCYRenL6qUdZrSOdCdc/edit?usp=sharing)| The article will be published once the milestone is approved. | 
 | 1.  | finalizer-pallet |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/finalizerg)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
 | 2.  | asset_management-pallet |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/asset_management)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
-| 2.  | representative role |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/types.rs#L174-L213)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
-| 3.  | fs-node M4 |[Link](https://github.com/Fair-Squares/fair-squares)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
+| 3.  | representative role |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/roles/src/types.rs#L174-L213)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
+| 4.  | fs-node M4 |[Link](https://github.com/Fair-Squares/fair-squares)| **tag**: v0.0.8.0-m4 </br> **commit**:`ccf045329d1a6ba617dd6c0d42b5613aa6986d4d`|
 
 **Additional Information**
 We have amendment [PR](https://github.com/w3f/Grants-Program/pull/1330) in the grants repository, the content of this delivery is the same as the amendment.
