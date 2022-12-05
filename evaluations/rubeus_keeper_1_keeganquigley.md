@@ -53,3 +53,5 @@ This happens both when using `new(owner: AccountId)` using Alice as the account,
 The contract still instantiates successfully so I could get through the evaluation, but please take a look to see what is causing this `constructor` to fail.
 
 2. In the testing guide, I would suggest mentioning that `substrate-contracts-node` needs to be running before changing into `example` directory and running the tests, just to make it clear that otherwise it will fail to connect to the node.
+
+**Please note:** No security audits have been conducted as part of this evaluation.
