@@ -54,4 +54,51 @@ The contract still instantiates successfully so I could get through the evaluati
 
 2. In the testing guide, I would suggest mentioning that `substrate-contracts-node` needs to be running before changing into `example` directory and running the tests, just to make it clear that otherwise it will fail to connect to the node.
 
+3. Cargo clippy generates the following warnings:
+```rust
+warning: called `is_none()` after searching an `Iterator` with `find`
+  --> lib.rs:84:13
+   |
+84 | /             credentials
+85 | |                 .iter()
+86 | |                 .find(|c| c.id == id)
+87 | |                 .is_none()
+   | |__________________________^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#search_is_some
+   = note: `#[warn(clippy::search_is_some)]` on by default
+help: use `!_.any()` instead
+   |
+84 ~             !credentials
+85 +                 .iter().any(|c| c.id == id)
+   |
+
+warning: returning the result of a `let` binding from a block
+   --> lib.rs:169:13
+    |
+164 | /             let filtered = credentials
+165 | |                 .into_iter()
+166 | |                 .filter(|credential| credential.group.contains(&*group))
+167 | |                 .collect::<Vec<Credential>>();
+    | |______________________________________________- unnecessary `let` binding
+168 |
+169 |               filtered
+    |               ^^^^^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#let_and_return
+    = note: `#[warn(clippy::let_and_return)]` on by default
+help: return the expression directly
+    |
+164 ~
+165 |
+166 ~             credentials
+167 +                 .into_iter()
+168 +                 .filter(|credential| credential.group.contains(&*group))
+169 +                 .collect::<Vec<Credential>>()
+    |
+
+warning: `rubeus` (lib) generated 2 warnings (run `cargo fix --lib -p rubeus` to apply 2 suggestions)
+    Finished dev [unoptimized + debuginfo] target(s) in 15.36s
+```
+
 **Please note:** No security audits have been conducted as part of this evaluation.
