@@ -8,10 +8,10 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LICENSE](https://github.com/bsn-si/rubeus-smartcontract/blob/main/LICENSE) | Ok |
-| 0b. | Documentation | [Readme.md](https://github.com/bsn-si/rubeus-smartcontract/blob/main/README.md) |  |
-| 0c. | Testing Guide | [Readme.md](https://github.com/bsn-si/rubeus-smartcontract/blob/main/README.md#how-to) |  |
-| 1.  | Ink! smart-contract | [See contract](https://github.com/bsn-si/rubeus-smartcontract/blob/main/lib.rs) |  | 
-| 2.  | Testing page | [Test page URL](https://bsn-si.github.io/rubeus/) |  |
+| 0b. | Documentation | [Readme.md](https://github.com/bsn-si/rubeus-smartcontract/blob/main/README.md) | Looks good. |
+| 0c. | Testing Guide | [Readme.md](https://github.com/bsn-si/rubeus-smartcontract/blob/main/README.md#how-to) | All steps work after requested changes. All tests pass. E2E automated test also passes now. See notes below. |
+| 1.  | Ink! smart-contract | [See contract](https://github.com/bsn-si/rubeus-smartcontract/blob/main/lib.rs) | Successfully deployed `rubeus` contract to manually call functions. See notes below.| 
+| 2.  | Testing page | [Test page URL](https://bsn-si.github.io/rubeus/) | Manual testing works on the front-end test page. |
 
 # General Notes
 
@@ -37,7 +37,13 @@ I was able to get all the way through the testing guide and manually test all co
 
 **UPDATE:** FIXED. Tests now include `create_credential`, `transfer_ownership`, `delete_credential`, `update_credential`, `list_of_credentials`. All tests pass.
 
-5. After instantiating the contract, this error appears on the `substrate-contracts-node` itself:
+## Smart Contract
+
+`addCredential`, `deleteCredential`, `transferOwnership`, `updateCredential`, functions all work manually and with automated E2E test.
+
+`getCredentials`, `getCredentialsByGroup` queries work successfully.
+
+1. After instantiating the contract, this error appears on the `substrate-contracts-node` itself:
 
 ```rust
 2022-12-05 12:28:00.188 DEBUG tokio-runtime-worker runtime::contracts: Execution finished with debug buffer: panicked at 'dispatching ink! constructor failed: could not read input', /Users/keeganquigley/rubeus-smartcontract/lib.rs:11:5
@@ -46,4 +52,4 @@ This happens both when using `new(owner: AccountId)` using Alice as the account,
 
 The contract still instantiates successfully so I could get through the evaluation, but please take a look to see what is causing this `constructor` to fail.
 
-6. In the testing guide, I would suggest mentioning that `substrate-contracts-node` needs to be running before changing into `example` directory and running the tests, just to make it clear that otherwise it will fail to connect to the node.
+2. In the testing guide, I would suggest mentioning that `substrate-contracts-node` needs to be running before changing into `example` directory and running the tests, just to make it clear that otherwise it will fail to connect to the node.
