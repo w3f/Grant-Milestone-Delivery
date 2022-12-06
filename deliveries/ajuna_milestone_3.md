@@ -26,8 +26,8 @@
 | 2d.    | Video Tutorial      | [Integration Guide](https://github.com/ajuna-network/Open-Grants-Program/issues/54)                                            | Done                                                 
 | 2e.    | Video Tutorial      | [Template Wallet](https://github.com/ajuna-network/Open-Grants-Program/issues/47)                                              | Done                                                 
 | 2e.    | Video Tutorial      | [Event, Balance and sending Extrinsics](https://github.com/ajuna-network/Open-Grants-Program/issues/49)                        | Done                                                 
-| 2g.    | **? Template ?**    | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48)                            | Done                                                 
-| 2h.    | **? Unity Entry ?** | [Asset Documentation](https://github.com/ajuna-network/Open-Grants-Program/issues/51)                                          | Done                                                 
+| 2g.    | Template            | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48)                            | Done                                                 
+| 2h.    | Unity Entry         | [Asset Documentation](https://github.com/ajuna-network/Open-Grants-Program/issues/51)                                          | Done                                                 
 
 
 # Ajuna.NetApi & Ajuna.SDK
