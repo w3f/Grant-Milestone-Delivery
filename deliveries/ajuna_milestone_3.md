@@ -17,7 +17,7 @@
 |--------|---------------------|--------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | 1a.    | License             | [Apache 2.0 / MIT / Unlicense](https://github.com/ajuna-network/Open-Grants-Program/issues/43)                                 | Done                                                                    |
 | 1b.    | Documentation       | [Ducumentation](https://github.com/ajuna-network/Open-Grants-Program/issues/44)                                                | This an ongoing proccess and we are working on it. |
-| 1c.    | Testing Guide       | [Implement testing code coverage min 70%](https://github.com/ajuna-network/Open-Grants-Program/issues/45)                      | **PENDING**                                                             |
+| 1c.    | Testing Guide       | [Implement testing code coverage min 70%](https://github.com/ajuna-network/Open-Grants-Program/issues/45)                      | Done                                                            |
 | 1d.    | Article/Tutorial    | [Article/Tutorial: Write article about the work in this grant](https://github.com/ajuna-network/Open-Grants-Program/issues/46) | We keep adding videos and tutorials as we go.                           |
 | 2.     | Unity               |
 | 2a.    | Video Tutorial      | [Implementing a new chain and accessing it with unity](https://github.com/ajuna-network/Open-Grants-Program/issues/52)         | Done                                                                    
@@ -26,7 +26,7 @@
 | 2d.    | Video Tutorial      | [Integration Guide](https://github.com/ajuna-network/Open-Grants-Program/issues/54)                                            | Done
 | 2e.    | Video Tutorial      | [Template Wallet](https://github.com/ajuna-network/Open-Grants-Program/issues/47)                                              | Done
 | 2e.    | Video Tutorial      | [Event, Balance and sending Extrinsics](https://github.com/ajuna-network/Open-Grants-Program/issues/49)                        | Done
-| 2g.    | **? Template ?**    | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48)                            | **PENDING**
+| 2g.    | **? Template ?**    | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48)                            | Done
 | 2h.    | **? Unity Entry ?** | [Asset Documentation](https://github.com/ajuna-network/Open-Grants-Program/issues/51)                                          | **PENDING**
 
 
