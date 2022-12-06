@@ -2,9 +2,9 @@
 
 
 
-- **Status:** pending
+- **Status:** Accepted
 - **Application Document:** [Libra](https://github.com/atscaletech/Grants-Program/blob/master/applications/Libra.md)
-- **Milestone:** 1
+- **Milestone:** 3
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
 - **Previously successfully merged evaluation:** [Milestone 2](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/Libra_2.md)
 
