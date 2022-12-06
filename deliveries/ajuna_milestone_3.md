@@ -15,20 +15,23 @@
 
 | Number | Deliverable         | Link                                                                                                                           | Notes                                                |
 |--------|---------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| 1a.    | License             | [Apache 2.0 / MIT / Unlicense](https://github.com/ajuna-network/Open-Grants-Program/issues/43)                                 | Done                                                 |
-| 1b.    | Documentation       | [Ducumentation](https://github.com/ajuna-network/Open-Grants-Program/issues/44)                                                | This an ongoing proccess and we are working on it.   |
-| 1c.    | Testing Guide       | [Implement testing code coverage min 70%](https://github.com/ajuna-network/Open-Grants-Program/issues/45)                      | Done                                                 |
-| 1d.    | Article/Tutorial    | [Article/Tutorial: Write article about the work in this grant](https://github.com/ajuna-network/Open-Grants-Program/issues/46) | Done (We keep adding videos and tutorials as we go.) |
-| 2.     | Unity               |
-| 2a.    | Video Tutorial      | [Implementing a new chain and accessing it with unity](https://github.com/ajuna-network/Open-Grants-Program/issues/52)         | Done                                                 
-| 2b.    | Video Tutorial      | [Adding a custom pallet and accessing it in unity](https://github.com/ajuna-network/Open-Grants-Program/issues/53)             | Done                                                 |
-| 2c.    | Video Tutorial      | [Building and connecting with Unity](https://github.com/ajuna-network/Open-Grants-Program/issues/50)                           | Done                                                 |
-| 2d.    | Video Tutorial      | [Integration Guide](https://github.com/ajuna-network/Open-Grants-Program/issues/54)                                            | Done                                                 
-| 2e.    | Video Tutorial      | [Template Wallet](https://github.com/ajuna-network/Open-Grants-Program/issues/47)                                              | Done                                                 
-| 2e.    | Video Tutorial      | [Event, Balance and sending Extrinsics](https://github.com/ajuna-network/Open-Grants-Program/issues/49)                        | Done                                                 
-| 2g.    | Template            | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48)                            | Done                                                 
-| 2h.    | Unity Entry         | [Asset Documentation](https://github.com/ajuna-network/Open-Grants-Program/issues/51)                                          | Done                                                 
+| 0a.    | License             | [Apache 2.0 / MIT / Unlicense](https://github.com/ajuna-network/Open-Grants-Program/issues/43)                                 | Done                                                 |
+| 0b.    | Documentation       | [Ducumentation](https://github.com/ajuna-network/Open-Grants-Program/issues/44)                                                | This an ongoing proccess and we are working on it.   |
+| 0c. | Testing Guide | [Implement testing code coverage min 70%](https://github.com/ajuna-network/Open-Grants-Program/issues/45) | Done |
+| 0d. | Article/Tutorial | [Article/Tutorial: Write article about the work in this grant](https://github.com/ajuna-network/Open-Grants-Program/issues/46) | Done (We keep adding videos and tutorials as we go.) |
+| 1. | Unity | Free Substrate SDK for Unity in the Asset store |
+| 1a. | Video Tutorial | [Template Wallet](https://github.com/ajuna-network/Open-Grants-Program/issues/47) | Done |
+| 1b. | Video Tutorial | [Template GameEvent and Matchmaker](https://github.com/ajuna-network/Open-Grants-Program/issues/48) | Done |
+| 1c. | Video Tutorial | [Event, Balance and sending Extrinsics](https://github.com/ajuna-network/Open-Grants-Program/issues/49) | Done |
+| 2. | Unity | Tutorial for [Building and connecting with Unity](https://github.com/ajuna-network/Open-Grants-Program/issues/50) | Done |
+| 3. | Asset | [Asset Documentation](https://github.com/ajuna-network/Open-Grants-Program/issues/51) | Done |
+| 3a. | Asset | [Implementing a new chain and accessing it with unity](https://github.com/ajuna-network/Open-Grants-Program/issues/52) | Done |
+| 3b. | Asset | [Adding a custom pallet and accessing it in unity](https://github.com/ajuna-network/Open-Grants-Program/issues/53) | Done |
+| 3c. | Asset | [Integration Guide](https://github.com/ajuna-network/Open-Grants-Program/issues/54) | Done |                                             
 
+# Substrate Gaming SDK (queued in Unity Asset Store)
+
+![UnitAssetStore](https://user-images.githubusercontent.com/17710198/206007310-a415349b-c879-4df9-81ea-2349ded09a3d.png)
 
 # Ajuna.NetApi & Ajuna.SDK
 | Project | Description                                                                                                                                                                                                                                                                               | NuGet 
