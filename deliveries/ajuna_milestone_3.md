@@ -29,7 +29,7 @@
 | 3b. | Asset | [Adding a custom pallet and accessing it in unity](https://github.com/ajuna-network/Open-Grants-Program/issues/53) | Done |
 | 3c. | Asset | [Integration Guide](https://github.com/ajuna-network/Open-Grants-Program/issues/54) | Done |                                             
 
-# Substrate Gaming SDK (queued in Unity Asset Store)
+# Substrate Gaming SDK (Unity Asset Store) [in review]
 
 ![UnitAssetStore](https://user-images.githubusercontent.com/17710198/206007310-a415349b-c879-4df9-81ea-2349ded09a3d.png)
 
