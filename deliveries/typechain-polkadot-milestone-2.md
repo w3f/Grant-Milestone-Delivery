@@ -16,14 +16,14 @@
 
 | Number | Deliverable                                                                          | Link                                                                      | Notes                                                                                                           |
 |-------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| 0a    | License                                                                              | https://github.com/Supercolony-net/typechain-polkadot/blob/master/LICENSE | MIT                                                                                                             |
- | 0b    | Documentation | https://github.com/Supercolony-net/typechain-polkadot/tree/master/docs    | We added docs for functions, and also auto-generated docs                                                       |
-| 1     | Investigation | https://github.com/Supercolony-net/typechain-polkadot                     | We investigated how polkadot.js works under the hood and fixed bugs with new versions of polkadot               |
-| 2     | Parser & generators modules | https://github.com/Supercolony-net/typechain-polkadot/tree/master/packages | We separated parser and typechain into two separate packages, and added Handlebars templates for generating code |
-| 3     | Contract deployment | https://github.com/Supercolony-net/typechain-polkadot/blob/master/packages/typechain-polkadot/src/templates/constructors.hbs | We added a constructors namespace for contract deployment                                                       |
-| 4a    | Contract classes extension | https://github.com/Supercolony-net/typechain-polkadot/blob/master/packages/typechain-polkadot/src/templates/contract.hbs | We added a new methods to Contract class for contract interaction                       | 
-| 4b    | Methods' names | https://github.com/Supercolony-net/typechain-polkadot/blob/master/packages/typechain-polkadot/src/output-generators/_utils.ts | Formatting of methods names is done in preprocessAbi function |
-| 5 | Testing | https://github.com/Supercolony-net/typechain-polkadot/tree/master/packages/typechain-polkadot/tests | PSP22 is covered with typechain-polkadot
+| 0a    | License                                                                              | https://github.com/727-Ventures/typechain-polkadot/blob/master/LICENSE | MIT                                                                                                             |
+ | 0b    | Documentation | https://github.com/727-Ventures/typechain-polkadot/tree/master/docs    | We added docs for functions, and also auto-generated docs                                                       |
+| 1     | Investigation | https://github.com/727-Ventures/typechain-polkadot                     | We investigated how polkadot.js works under the hood and fixed bugs with new versions of polkadot               |
+| 2     | Parser & generators modules | https://github.com/727-Ventures/typechain-polkadot/tree/master/packages | We separated parser and typechain into two separate packages, and added Handlebars templates for generating code |
+| 3     | Contract deployment | https://github.com/727-Ventures/typechain-polkadot/blob/master/packages/typechain-polkadot/src/templates/constructors.hbs | We added a constructors namespace for contract deployment                                                       |
+| 4a    | Contract classes extension | https://github.com/727-Ventures/typechain-polkadot/blob/master/packages/typechain-polkadot/src/templates/contract.hbs | We added a new methods to Contract class for contract interaction                       | 
+| 4b    | Methods' names | https://github.com/727-Ventures/typechain-polkadot/blob/master/packages/typechain-polkadot/src/output-generators/_utils.ts | Formatting of methods names is done in preprocessAbi function |
+| 5 | Testing | https://github.com/727-Ventures/typechain-polkadot/tree/master/packages/typechain-polkadot/tests | PSP22 is covered with typechain-polkadot
 | 6 | Article | https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f | An article about typechain-polkadot | 
 | 7 | Branding | https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f | We have created logotype for typechain-polkadot |
  
