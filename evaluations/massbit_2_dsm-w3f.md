@@ -272,7 +272,6 @@ To http://git.massbitroute.net/massbitroute/gatewaydeploy.git
 Branch 'shamu' set up to track remote branch 'shamu' from 'origin'.
 start_env.sh: line 12: git/data/env/api.env: Permission denied
 start_env.sh: line 13: git/data/env/api.env: Permission denied
-http://massbit:tP-VbhEoC5bxVEbU-JtLYcmVu1Pf3zrK@git.massbitroute.net
 ERROR: Couldn't find env file: /home/massbit/massbit/massbitroute_test/end2end/.secret
 Error response from daemon: No such container: mbr_portal_api_43
 start_env.sh: line 24: cd: stat/docker-compose: No such file or directory
