@@ -15,28 +15,18 @@ Polywrap is the technology behind the Substrate wrapper. Polywrap wrappers are d
 
 **Deliverables**
 
-Bootstrap polywrapper project using w3/cli
-Write graphql schemas:
-* Substrate-signer-provider - Low-level interface for accessing the application's configurable signer / provider.
-* Substrate-core - Higher-level interface for interacting with a substrate based chain. This depends upon on an implementation of the substrate-signer-provider interface above.
-`substrate-signer-provider` Typescript Plugin for signing messages. Example: Near plugin 
-Implement graphql schema methods in Rust using Polywrap http plugin
-Deploy polywrapper to ipfs
-
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
+* `rpc-wrapper` Wasm Wrapper - Higher-level interface for interacting with a substrate based chain. This depends upon on an implementation of the `signer-provider` plugin below.
+* `signer-provider` Plugin - Low-level interface for accessing the application's configurable signer / provider.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/LICENSE.md) | |
-| 0b. | Documentation | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/rpc-wrapper/README.md) | |
-| 0c. | Testing | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/rpc-wrapper/tests/e2e.spec.ts) | Note one test case is commented out with an explanation for when it can be re-included |
-| 1. | Bootstrap polywrapper project using w3/cli | [Link](https://github.com/ChainSafe/integrations/tree/substrate-integration/protocol/substrate/rpc-wrapper) | Wrapper project was initialized and follows best practices as set up by the CLI | 
-| 2. | Graphql schemas for substrate-signer-provider  | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/signer-provider-js/src/schema.graphql) | The API is kept small and almost identical to the API exposed by the polkadot-js plugin. Allows signing raw and transaction payloads. |
-| 3. | Graphql schemas for substrate-core  | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/rpc-wrapper/schema.graphql) | Allows querying all relevant data about the connected chain as well as the ability to sign (via the wrapper) and submit transactions. There is still some API refinement to be done in the future. |
-| 4. | `substrate-signer-provider` Typescript Plugin  | [Link](https://github.com/ChainSafe/integrations/tree/substrate-integration/protocol/substrate/signer-provider-js) | Currently supports wrappers running in the browser context only. Allows wrappers to request signing via the polkadot-js browser extension |
-| 5. | graphql schema methods in Rust using Polywrap http plugin | [Link](https://github.com/ChainSafe/integrations/blob/substrate-integration/protocol/substrate/rpc-wrapper/src/lib.rs) | Implementions of all functionality defined in the graphQL API. Uses the signer-provider plugin for signing and the http plugin for requesting from the node RPC. |
-| 6. | Deploy polywrapper to ipfs | N/A | Wrapper is not yet ready for deployment |
+| 0a. | License | [Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/LICENSE.md) | |
+| 0b. | Documentation | [Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/README.md) | |
+| 0c. | Testing | [Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/src/__tests__/e2e.spec.ts) | Note one test case is commented out with an explanation for when it can be re-included |
+| 0d. | Article | [Link](https://docs.google.com/document/d/1G7l0sgyEI_X9ucnEkJMUcD_bYo-FeCm9Ot_ETR7giiM/edit#heading=h.uzkbekb348bf) | |
+| 1. | Schema Definitions  | [Signer-Provider Plugin Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/signer-provider-js/src/schema.graphql), [RPC Wrapper Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/schema.graphql) | The plugin's schema is kept small and almost identical to the API exposed by the polkadot-js plugin. Allows signing raw and transaction payloads. The RPC wrapper's schema allows the querying of all relevant data about the connected chain as well as the ability to sign (via the wrapper) and submit transactions. There is still some API refinement to be done in the future. |
+| 2. | `signer-provider` TypeScript Plugin  | [Link](https://github.com/polywrap/integrations/tree/main/protocol/substrate/signer-provider-js) | |
+| 3. | `rpc-wrapper` Wasm Wrapper | [Link](https://github.com/polywrap/integrations/tree/main/protocol/substrate/rpc-wrapper) | Implementions of all functionality defined in the graphQL API. Uses the signer-provider plugin for signing and the http plugin for requesting from the node RPC. |
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
