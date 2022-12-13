@@ -1,23 +1,26 @@
 # Milestone Delivery :mailbox:
 
-> Only the GitHub account, which is responsible for the pull request of the accepted application is allowed to submit milestones. Don't remove any of the mandatory parts presented in bold letters or as headlines!
+> ⚡ Only the GitHub account that submitted the application is allowed to submit milestones. 
+> 
+> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
 
-**The [invoice form :pencil:](https://forms.gle/LSRr7PCjBpEbKGh89) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/General-Grants-Program/blob/master/grants/milestone-deliverables-guidelines.md).**  
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/HeisenbergLin22/Grants-Program/blob/master/faceless.md
+* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
+* **Milestone Number:** e.g. 1
 
-* **Milestone Number:** 2
+**Context** (optional)
+> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
 
-Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which should be used for testing.
+**Deliverables**
+> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
+> 
+> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 1. | ... |...| ...| 
+| 2.  | ... |...| ...| 
 
-
-| **Number** | **Deliverable**                          | Link                                                         | Notes                                                        |
-| ---------- | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 0a.        | License                                  |                                                          | Apache License 2.0                                           |
-| 0b.        | Documentation                            | https://github.com/HeisenbergLin22/Faceless_milestone2_delivery/blob/main/README.md |  This tutorial illustrates how to set up the substrate node.         |
-| 0c.        | Testing Guide                            |  https://github.com/HeisenbergLin22/Faceless_milestone2_delivery/blob/main/README.md |  Please follow the instruction in the link to perform the tests.          |
-| 0d.        | Tutorial                            |  https://github.com/HeisenbergLin22/Faceless_milestone2_delivery/blob/main/README.md |  It explains the functionality of the proposed client and UI delivered in this milestone.          |
-| 1        | Client modules | https://github.com/HeisenbergLin22/Faceless_milestone2_delivery | This work implements the client algorithms that can trigger the aforementioned cryptographic modules, i.e., all the user algorithms including CreateAccount, CreateFundTx, CreateTransferTx, CreateBurnTx, ReadBalance. It also provides a basic UI to take inputs from the users for all these algorithms and receive the outputs.|
-| 2        | Benchmark | https://github.com/HeisenbergLin22/Faceless_milestone2_delivery/blob/main/README.md | The benchmark on the latency and usability of the proposed client functionalities.|
-| 3        | Docker | https://github.com/HeisenbergLin22/Faceless_milestone2_delivery/blob/main/Dockerfile | The dockerfile demonstrates the usage of our modules.|
+**Additional Information**
+> Any further comments on the milestone that you would like to share with us.
