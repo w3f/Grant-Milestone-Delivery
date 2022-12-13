@@ -21,7 +21,7 @@ This milestone focuses on the creation of UI for Ink boxes.
 **Deliverables**
 
 
-### Milestone - 2: Creation of Ink boxes
+### Milestone - 2: Creation of Ink boxes UI
 
 
 **Estimated Duration:** 2 weeks
