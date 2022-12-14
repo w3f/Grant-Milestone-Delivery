@@ -10,14 +10,86 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                 |<ul><li>[X] </li></ul>|                                                              | Apache 2.0                         |
 | 0b.    | Documentation           |<ul><li>[ ] </li></ul>| [README.md](https://github.com/CESSProject/substats/blob/master/README.md) | Not fully evaluated yet. |
-| 0c.    | Testing Guide           |<ul><li>[ ] </li></ul>| [testing-guide.md](https://github.com/CESSProject/substats/blob/master/documents/testing-guide.md) | Automated tests failing |
+| 0c.    | Testing Guide           |<ul><li>[x] </li></ul>| [testing-guide.md](https://github.com/CESSProject/substats/blob/master/documents/testing-guide.md) |  |
 | 1a.    | Develop the webservice  |<ul><li>[x] </li></ul>| [about-framework.md](https://github.com/CESSProject/substats/blob/master/documents/about-framework.md) |  |
-| 1b.    | Develop the polkadot.js |<ul><li>[ ] </li></ul>| Connect to the RPC node<br /> [https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22](https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22)<br /><br />Get block info and transfer<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44)<br /><br />Get block events by block hash<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52)<br /><br />Account query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Miner query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-miners.js#L32](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Subscribe new block header<br />[https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19](https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19) | Not fully evaluated yet |
+| 1b.    | Develop the polkadot.js |<ul><li>[ ] </li></ul>| Connect to the RPC node<br /> [https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22](https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22)<br /><br />Get block info and transfer<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44)<br /><br />Get block events by block hash<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52)<br /><br />Account query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Miner query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-miners.js#L32](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Subscribe new block header<br />[https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19](https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19) | Not fully evaluated yet. Possible quality improvements. |
 | 1c.    | Develop the API         |<ul><li>[ ] </li></ul>| [api-docs.md](https://github.com/CESSProject/substats/blob/master/documents/api-docs.md) | Some calls with problems |
 | 1d.    | Create the database     |<ul><li>[x] </li></ul>| [about-database.md](https://github.com/CESSProject/substats/blob/master/documents/about-database.md) | Ran ok using docker |
 
 
 **General Notes** 
+
+## Evaluation V2
+
+### API Testing 
+
+The API calls are still having the same behavior of evaluation V1. Please notice that I'm using the docker compose file provided to spin up the system, which should properly configure it for execution/testing. The command to start substats container alreay contains the mysql file as a parameter `command: ["npm", "start", "/substats/config/mysql-config.json"]`. Please provide proper instructions or fix to perform the tests of the API.
+
+
+### Automated Tests
+
+The tests are now running. However, the code coverage of automated tests is low. 
+
+```
+--------------------------|---------|----------|---------|---------|-------------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
+--------------------------|---------|----------|---------|---------|-------------------------
+All files                 |   11.17 |     3.78 |   12.65 |   11.54 |                         
+ bll                      |   45.19 |    16.66 |   52.38 |   44.66 |                         
+  init-database-config.js |       0 |        0 |       0 |       0 | 1-13                    
+  init-polkadot-api.js    |      60 |    16.66 |   33.33 |      60 | 20,32-38,41-47,50,54,63 
+  init.js                 |     100 |      100 |     100 |     100 |                         
+  keyring.js              |   77.77 |      100 |      80 |      75 | 17-18                   
+  mysql-config-loader.js  |       0 |        0 |       0 |       0 | 9-26                    
+  sub.js                  |       0 |      100 |       0 |       0 | 10-40                   
+  ws-helper.js            |   44.44 |       50 |      50 |   44.44 | 6-12                    
+ controls                 |       0 |        0 |       0 |       0 |                         
+  param-helper.js         |       0 |        0 |       0 |       0 | 2-20                    
+ controls/action-helper   |    6.93 |     1.78 |    5.55 |    7.36 |                         
+  batch-update.js         |    2.22 |        0 |       0 |    2.22 | 9-67                    
+  column.js               |      10 |        0 |       0 |      10 | 3-15                    
+  copy.js                 |    5.26 |        0 |       0 |    5.55 | 10-32                   
+  create.js               |    5.55 |        0 |       0 |    5.55 | 9-33                    
+  del.js                  |     3.7 |        0 |       0 |     3.7 | 11-54                   
+  detail.js               |    1.56 |        0 |       0 |    1.78 | 4-77                    
+  export.js               |    3.55 |        0 |       0 |    3.84 | 10-262                  
+  list-page.js            |   28.12 |    12.19 |   28.57 |    29.5 | 20,26-50,61-92,97-101   
+  update.js               |    3.22 |        0 |       0 |    3.33 | 3-42                    
+ controls/chain-state     |   73.33 |       50 |     100 |   73.33 |                         
+  constants.js            |   73.33 |       50 |     100 |   73.33 | 16,19,23,26             
+ controls/public          |       0 |        0 |       0 |       0 |                         
+  index.js                |       0 |        0 |       0 |       0 | 11-101                  
+ controls/queryDB         |    82.5 |    66.66 |   71.42 |   82.05 |                         
+  common.js               |   80.55 |    66.66 |   66.66 |      80 | 45,51-52,68-73          
+  dics.js                 |     100 |      100 |     100 |     100 |                         
+ controls/storage         |   54.83 |       45 |   33.33 |   54.83 |                         
+  index.js                |   54.83 |       45 |   33.33 |   54.83 | 19,22,27,30,37-48,53    
+ util                     |    0.35 |        0 |       0 |    0.36 |                         
+  add-functions.js        |       0 |        0 |       0 |       0 | 5-37                    
+  cache.js                |       0 |        0 |       0 |       0 | 2-85                    
+  chain-helper.js         |       0 |        0 |       0 |       0 | 10-103                  
+  checkhost.js            |       0 |        0 |       0 |       0 | 9-20                    
+  common.js               |       0 |        0 |       0 |       0 | 5-435                   
+  crypto.js               |       0 |        0 |       0 |       0 | 2-27                    
+  format.js               |       0 |      100 |       0 |       0 | 10-21                   
+  host-helper.js          |       0 |        0 |       0 |       0 | 2-19                    
+  iphelper.js             |       0 |        0 |       0 |       0 | 2-40                    
+  json-db.js              |       0 |        0 |       0 |       0 | 2-101                   
+  moment-helper.js        |       0 |        0 |       0 |       0 | 1-98                    
+  mylog.js                |       0 |        0 |       0 |       0 | 10-17                   
+  session-helper.js       |       0 |      100 |       0 |       0 | 9-12                    
+  sql-safe.js             |      25 |        0 |       0 |   28.57 | 17-24                   
+  urlparse.js             |       0 |        0 |       0 |       0 | 2-28                    
+--------------------------|---------|----------|---------|---------|-------------------------
+
+Test Suites: 7 passed, 7 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        11.3 s
+Ran all test suites.
+```
+
+## Evaluation V1
 
 ### Running the system
 
