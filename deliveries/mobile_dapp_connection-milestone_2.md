@@ -14,7 +14,7 @@ To achieve the above, we had to build three separate parts:
 * [iOS IPC transport](https://github.com/tesseract-one/Tesseract.swift)
 * [Substrate protocol support](https://github.com/tesseract-one/Tesseract.rs/tree/master/protocols/substrate)
 
-All the parts go with the examples. The examples are the best starting point to understand how it works. The testing guide contains instructions on how to build and run the apps and a detailed explanation of how to work with Tesseract.
+All the parts go with the examples. The examples are the best starting point to understand how it works. The testing guide contains instructions on building and running the apps and a detailed explanation of how to work with Tesseract.
 
 **Deliverables**
 
@@ -33,4 +33,11 @@ All the parts go with the examples. The examples are the best starting point to 
 
 **Additional Information**
 
-This deliverable allows dApp and Wallet developers to integrate on mobile platforms. We understand, though, that doing it by integrating Rust in your application is not for everyone, so the next step for us is to build native language wrappers on top of this, which will make Tesseract work just as any other Kotlin or Swift library.
+This deliverable allows dApp and Wallet developers to integrate on mobile platforms.
+
+In the next milestone (number 3), we are building the ultimate integration test (in the form of demo apps) to make sure that all the grant deliverables work perfectly together:
+* Tesseract Shared Core
+* Tesseract Substrate integration
+* iOS and Android IPCs
+
+We understand, though, that using Tesseract by integrating Rust in your application is not for everyone, so the next step after finishing this grant is to build native language wrappers on top, which will make Tesseract work just as any other Kotlin or Swift library.
