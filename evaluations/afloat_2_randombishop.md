@@ -2,9 +2,9 @@
 
 
 
-- **Status:** Pending
+- **Status:** Accepted
 - **Application Document:** [Afloat](https://github.com/w3f/Grants-Program/blob/master/applications/Afloat.md)
-- **Milestone:** 3
+- **Milestone:** 2
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
 - **Previously successfully merged evaluation:** [Milestone 1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/Afloat_Milestone1.md)
 
@@ -15,7 +15,7 @@
 |    0c. | Testing                       | Yes      | [Github repository](https://github.com/hashed-io/hashed-substrate/blob/main/pallets/gated-marketplace/src/tests.rs)                                                                                                                                                                                                      | gated-marketplace OK, fund-admin OK, rbac OK, other pallets don't have tests, fruniques fail                                                                                                   |
 |    0d. | Video                         | Yes      | [Video](https://drive.google.com/file/d/1yvCiuJ7P5xTPtTwCLZyNWCSez4NBUGfP/view)                                                                                                                                                                                                                                          | OK                                                                                                                                                                                             |                
 |    0e. | Article                       | Yes      | [English](https://docs.google.com/document/d/1bDswb619nkdL0xt41GEJEtyLcCOc3LO-M-dB2RdDr9s/edit?usp=sharing) and [Spanish](https://docs.google.com/document/d/1DNHgONQrZfpG4f0f79n6pS9h9jUQQDW52OlWCw1TiJA/edit?usp=sharing) versions                                                                                     | Not really relevant for this delivery                                                                                                                                                          |
-|     1. | Originate Tax Credit          | ?        | [Portal](https://github.com/hashed-io/hashed-network-portal-ui) [Pallet](https://github.com/hashed-io/hashed-substrate/blob/develop/pallets/fruniques/src/lib.rs)                                                                                                                                                        | The functions are available in the pallets and work as expected, but the frontend and user experience is cumbersome. I managed to test a canonical process but the UX is still to be polished. |
+|     1. | Originate Tax Credit          | Yes      | [Portal](https://github.com/hashed-io/hashed-network-portal-ui) [Pallet](https://github.com/hashed-io/hashed-substrate/blob/develop/pallets/fruniques/src/lib.rs)                                                                                                                                                        | The functions are available in the pallets and work as expected, but the frontend and user experience is cumbersome. I managed to test a canonical process but the UX is still to be polished. |
 |     2. | Upload Confidential Documents | Yes      | [JS library](https://github.com/hashed-io/hashed-confidential-docs-client-api/blob/015b59837eb8c0117fecb0c6323053d605a6f5fd/src/model/OwnedData.js#L57)                                                                                                                                                                  | OK (I tested through the frontend only - didn't audit the encryption itself)                                                                                                                   |
 |     3. | Tax Credit verification       | Yes      | [video](https://drive.google.com/file/d/1yvCiuJ7P5xTPtTwCLZyNWCSez4NBUGfP/view?usp=sharing)                                                                                                                                                                                                                              | OK                                                                                                                                                                                             |                                                                                                                                                                                                                                                                 |
 |     4. | List for Sale                 | Yes      | [Enlist NFT for sale](https://github.com/hashed-io/hashed-substrate/blob/00135e71f7bed81cf9f8dbd902b989bd19393f7e/pallets/gated-marketplace/src/lib.rs#L549)                                                                                                                                                             | OK                                                                                                                                                                                             |
@@ -36,8 +36,19 @@
 
 ## General Notes
 
-Excellent real life application
+Excellent real life application of blockchain technology. 
+The repos are well documented and the codebase is a great foundation so far.
 
 
 ## Improvement suggestions
 
+* Provide a general architecture guide that describes the different repos and how they interact with each other.
+
+* Provide a doc that describes how to deploy and configure a full system locally.
+
+* The UX still doesn't make sense from an end-to-end perspective. 
+The marketplace creation and participation process works. 
+Sharing documents and access rules work.
+Creating Tax credits collections and NFTs work as well.
+But it's unclear how the different aspects are connected.
+Hopefully, this gets implemented and clarified at next milestone delivery along with NFT trading in a marketplace.
