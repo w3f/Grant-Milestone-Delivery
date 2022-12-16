@@ -46,6 +46,8 @@ The repos are well documented and the codebase is a great foundation so far.
 
 * Provide a doc that describes how to deploy and configure a full system locally.
 
+* Fix unused tests in some pallets, and add tests to the ones not covered yet.
+
 * The UX still doesn't make sense from an end-to-end perspective. 
 The marketplace creation and participation process works. 
 Sharing documents and access rules work.
