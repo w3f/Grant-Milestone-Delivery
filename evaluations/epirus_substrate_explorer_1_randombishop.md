@@ -2,7 +2,7 @@
 
 
 
-- **Status:** Pending
+- **Status:** Accepted
 - **Application Document:** [Epirus Phase II](https://github.com/web3labs/Grants-Program/blob/master/applications/epirus_substrate_phase_2.md)
 - **Milestone:** 1
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
@@ -24,7 +24,3 @@
 
 Impressive codebase, very well documented, tests pass from first try, and nice end-to-end product.
 
-
-## Improvement suggestions
-
-The process seems to be very sensitive to the ink! version. I am not sure how I could use it to verify a contract deployed with a different version of ink!; or without using the tool beforehand.
