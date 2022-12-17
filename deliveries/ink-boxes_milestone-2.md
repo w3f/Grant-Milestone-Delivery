@@ -11,7 +11,7 @@
 
 * **Milestone Number:**  2
 
-* **Code repository:** https://github.com/avirajkhare00/ink-boxes
+* **Code repository:** https://github.com/avirajkhare00/ink-boxes-ui
 
 **Context** (optional)
 
