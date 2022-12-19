@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
+* **Application Document:** https://github.com/ideal-lab5/Grants-Program/blob/iris_followup/applications/iris_followup.md
 * **Milestone Number:** 2
 
 **Context**
@@ -35,3 +35,5 @@ See the medium article, tech docs, and demo video for deeper context and more in
 | 8. | User Interface | https://github.com/ideal-lab5/ui | |
 
 **Additional Information**
+
+In general, as part of the test setup we rely on a small three-validator testnet that we setup on AWS using t2.micro instances. Full access to these instances can be provided to whoever is performing the testing on this milestone. We'll provide a .pem that you can use to ssh into each instance. To setup your own testnet, you can see the hosted node setup guide linked in deliverable number 7. There is a script that can be run in any linux distro that will install iris and dependencies, and from there it's only a matter of running three validators to get block finalization to start.
