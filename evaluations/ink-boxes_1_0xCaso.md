@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-boxes.md
 - **Milestone:** 1
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -8,12 +8,17 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | Apache License 2.0 | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [/erc20/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/README.md), [/erc721/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/README.md), [/flipper/README.md](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/README.md) | - |
-| 0c. | Testing and its Guide | <ul><li>[ ] </li></ul> | [/erc20/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/tests), [/erc721/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/ui/tests), [/flipper/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/ui/tests) | See **General Notes** |
-| 0d. | Docker | <ul><li>[x] </li></ul> | [/erc20/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20/ui/Dockerfile), [/erc721/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721/ui/Dockerfile), [/flipper/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper/ui/Dockerfile) | - |
+| 0a. | Apache License 2.0 | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/LICENSE) | - |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [/erc20/README.md](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc20/README.md), [/erc721/README.md](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc721/README.md), [/flipper/README.md](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/flipper/README.md) | - |
+| 0c. | Testing and its Guide | <ul><li>[x] </li></ul> | [/erc20/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc20/ui/tests), [erc20 cypress](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc20/ui/cypress/e2e/spec.cy.ts), [/erc721/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc721/ui/tests), [erc721 cypress](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc721/ui/cypress/e2e/spec.cy.ts), [/flipper/ui/tests](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/flipper/ui/tests), [flipper cypress](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/flipper/ui/cypress/e2e/spec.cy.ts) | See **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [/erc20/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc20/ui/Dockerfile), [/erc721/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/erc721/ui/Dockerfile), [/flipper/ui/Dockerfile](https://github.com/avirajkhare00/ink-boxes/blob/e020015b5d061a2efe8a88d79baf8ec298d46666/flipper/ui/Dockerfile) | - |
 | 0e. | Articles | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@avirajkhare00/introducing-ink-boxes-277b54ed23c9) | - |
-| 0. | Creation of Boxes | <ul><li>[ ] </li></ul> | [/erc20](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc20), [/erc721](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/erc721), [/flipper](https://github.com/avirajkhare00/ink-boxes/tree/0d66758fcd3f71f44a46cdedae839b19282cd0bf/flipper) | See **General Notes** |
+| 0. | Creation of Boxes | <ul><li>[x] </li></ul> | [/erc20](https://github.com/avirajkhare00/ink-boxes/tree/e020015b5d061a2efe8a88d79baf8ec298d46666/erc20), [/erc721](https://github.com/avirajkhare00/ink-boxes/tree/e020015b5d061a2efe8a88d79baf8ec298d46666/erc721), [/flipper](https://github.com/avirajkhare00/ink-boxes/tree/e020015b5d061a2efe8a88d79baf8ec298d46666/flipper) | See **General Notes** |
+<br/>
+
+## General Notes v4 - Dec 12, 2022
+Assertion have been added to the E2E tests, now they are more useful. There are again some minor issues in the UI (the `mint` function, for example, works if called but gives a wrong output to the user, suggesting something is going wrong). The milestone can be accepted, but I warmly suggest to fix these issues, as UI is really important for this project.
+
 <br/>
 
 ## General Notes v3 - Dec 2, 2022
