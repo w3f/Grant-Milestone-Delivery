@@ -106,8 +106,8 @@ jobs:
                     "${{ steps.date.outputs.date }}",
                     "",
                     "",
-                    "=IF(E777="Done",VLOOKUP(B778,Milestones!B:BE,SWITCH(C778,1,19,2,23,3,27,4,31,5,35,6,39,7,43,8,47,9,51,10,55),FALSE),"")",
-                    "=IF(E777="Done",VLOOKUP(B777,Milestones!B:BE,SWITCH(C777,1,20,2,24,3,28,4,32,5,36,6,40,7,44,8,48,9,52,10,56),FALSE),"")"
+                    "=IF(E777=\"Done\",VLOOKUP(B778,Milestones!B:BE,SWITCH(C778,1,19,2,23,3,27,4,31,5,35,6,39,7,43,8,47,9,51,10,55),FALSE),\"\")",
+                    "=IF(E777=\"Done\",VLOOKUP(B777,Milestones!B:BE,SWITCH(C777,1,20,2,24,3,28,4,32,5,36,6,40,7,44,8,48,9,52,10,56),FALSE),\"\")"
                   ]],
                   "worksheetTitle": "Evaluation",
                   "minCol": 1,
