@@ -5,7 +5,7 @@
 
 
 * **Application Document:** [Societal Application](https://github.com/w3f/Grants-Program/blob/master/applications/Societal.md) 
-* **Milestone Number:** Milestone 2
+* **Milestone Number:** 2
 
 
 
