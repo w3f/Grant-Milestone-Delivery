@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/slonigiraf.md
 - **Milestone:** 1
 - **Kusama Identity:** -
@@ -12,7 +12,7 @@
 | 0a.    | License          |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter/LICENSE](https://github.com/slonigiraf/recommendation-letter/blob/9bfc5ead6213b99568b21cbce25cba2a04f50d57/LICENSE) |  The Unlicense                                                                             |
 | 0b.    | Documentation    |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter](https://github.com/slonigiraf/recommendation-letter/tree/9bfc5ead6213b99568b21cbce25cba2a04f50d57)  | Code level documentation is provided inline. |
 | 0c.    | Test Guide       |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter-example-ui/README.md](https://github.com/slonigiraf/recommendation-letter-example-ui/blob/8d7e3a19cd5656051530c7370887a7f97a4fc7cb/README.md) | The main use-case via the provided example UI.                                                                                      |
-| 0d.    | Docker           |<ul><li>[ ] </li></ul>| [/slonigiraf/recommendation-letter-example-node/docker-compose.yml](https://github.com/slonigiraf/recommendation-letter-example-node/blob/258139bf1e9077e725674d6520472fe0df173b71/docker-compose.yml)                                                              | Compilation issue, requested a fix.                                                                                     | 
+| 0d.    | Docker           |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter-example-node/docker-compose.yml](https://github.com/slonigiraf/recommendation-letter-example-node/blob/258139bf1e9077e725674d6520472fe0df173b71/docker-compose.yml)                                                              | Compilation issue, requested a fix.                                                                                     | 
 | 0e.    | Article          |<ul><li>[x] </li></ul>| [SLON - digital reputation for responsible recommendation creation](https://github.com/slonigiraf/slon-whitepaper/blob/c684e0fc8b656a082cbae6f505472b2c010a1c05/ENG.md)                                                              | The whitepaper on the concept behind Slonigiraf                                                                 |
 | 1.     | Substrate pallet |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter](https://github.com/slonigiraf/recommendation-letter/commit/9bfc5ead6213b99568b21cbce25cba2a04f50d57) | see General Notes                                                                                     |
 | 2a.    | Example node     |<ul><li>[x] </li></ul>| [/slonigiraf/recommendation-letter-example-node](https://github.com/slonigiraf/recommendation-letter-example-node/blob/a5558a158e2cec1f88f606767f0cc245d09af6ca/docker-compose.yml) | see General Notes                                                                                      |

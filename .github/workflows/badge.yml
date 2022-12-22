@@ -70,12 +70,12 @@ jobs:
           message: >
             Congratulations on completing the first milestone of this grant!
             As part of the Grants Program, we want to help grant recipients acknowledge their grants publicly.
-            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/grant-badge-guidelines.md)
+            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/grant-badge-guidelines.md)
             that successfully deliver their first milestone. 
             Note that it must only be used within the context of the delivered work, so please do not display it on
             your team or project's homepage unless accompanied by a short description of the grant.<br/><br/>
             Furthermore, you're now welcome to announce the grant publicly. Please remember to observe the
-            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/announcement-guidelines.md) in doing so.
+            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
             In case you haven't done so yet, you may also reach out to grantsPR@web3.foundation for feedback on your announcement and cross-promotion.<br/><br/>
             Thank you for your contribution and good luck with the remaining milestones, if any!
             As usual, please let us know if you run into any delays by leaving a comment on the application PR, or directly submitting an
