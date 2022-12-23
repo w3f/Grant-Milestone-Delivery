@@ -1,3 +1,8 @@
+> :christmas_tree: Please note that the review process might take longer than usual until January 6, 2023. Merry Christmas and Happy New Year!  :christmas_tree:
+
+___
+
+
 # W3F Grant Milestone Delivery <!-- omit in toc -->
 
 > **:loudspeaker:** This repository is only for submitting finished milestones for the [Web3 Foundation Grants Program](https://github.com/w3f/Grants-Program).
