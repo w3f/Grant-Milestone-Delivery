@@ -25,6 +25,25 @@
 
 **General Notes** 
 
+## Evaluation v2
+
+The license problem remains.
+
+The automated tests for the backend are now passing and the coverage is reasonable.
+65.70% coverage, 3006/4575 lines covered
+
+Most of cargo clippy warnings were fixed.
+
+Cargo audit problem remains.
+
+Automated tests in the front end will be handled in other milestones. 
+
+The ESLint warnings were fixed.
+
+Still need better instructions or automation to spin up all services and test the system behavior.
+
+## Evaluation v1
+
 ### License 
 
 There are more than one license file. Please specify which one is the valid for the software.
