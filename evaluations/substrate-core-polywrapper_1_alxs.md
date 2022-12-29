@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Accepted
+- **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/substrate_core_polywrapper.md
 - **Milestone:** 1
 
