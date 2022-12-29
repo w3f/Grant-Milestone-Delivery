@@ -13,12 +13,136 @@
 | 0a. | License |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission-2/blob/main/LICENSE)|  |
 | 0b. | Documentation |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission-2/blob/main/README.md) |  |
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md)|  |
-| 0d. | Docker |<ul><li>[ ] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-client/vcc6652b/images/sha256-417c09f0b6356c7675d9c4ee0fc2995ef3b66a2a0a11b7708e38dbf969063052?context=explore)| please include the instruction for proper run the image. |
-| 0e. | Article |<ul><li>[ ] </li></ul>|[Testing Article](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md) | Article is not the same as testing tutorial. |
-| 1. | Client Modules |<ul><li>[ ] </li></ul>| [Societal UI](https://github.com/sctllabs/societal-grant-submission-2) | Tests are not running. Possible quality improvements. |
+| 0d. | Docker |<ul><li>[x] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-client/vcc6652b/images/sha256-417c09f0b6356c7675d9c4ee0fc2995ef3b66a2a0a11b7708e38dbf969063052?context=explore)|  |
+| 0e. | Article |<ul><li>[ ] </li></ul>|[Testing Article](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md) | Article is not the same as testing tutorial. Waiting for it. |
+| 1. | Client Modules |<ul><li>[x] </li></ul>| [Societal UI](https://github.com/sctllabs/societal-grant-submission-2) |  |
 | 2. | Substrate module: DAO Factory |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission) |   |  
 
 ## General Notes
+
+## Evaluation V2
+
+Docker is running ok. Would be nice to have a way to start all services using docker-compose. You have one docker file for the frontend and one for the backend but not one to spin up all the system services. 
+
+Some automated tests were included. The coverage is low.
+
+```
+------------------------------------|---------|----------|---------|---------|---------------------------
+File                                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s         
+------------------------------------|---------|----------|---------|---------|---------------------------
+All files                           |   18.44 |     6.97 |   13.26 |   19.58 |                           
+ components/About                   |   83.33 |      100 |      50 |    90.9 |                           
+  About.tsx                         |   83.33 |      100 |      50 |    90.9 | 22                        
+ components/Account                 |   51.61 |    11.11 |      25 |   51.61 |                           
+  Account.tsx                       |   51.61 |    11.11 |      25 |   51.61 | 26-36,40-72               
+ components/Balance                 |   70.83 |       50 |   33.33 |   73.91 |                           
+  Balance.tsx                       |   70.83 |       50 |   33.33 |   73.91 | 34-46                     
+ components/Countdown               |     100 |      100 |     100 |     100 |                           
+  Countdown.tsx                     |     100 |      100 |     100 |     100 |                           
+ components/CreateDAO               |       0 |        0 |       0 |       0 |                           
+  CreateDAO.tsx                     |       0 |        0 |       0 |       0 | 9-458                     
+ components/CreateProposal          |       0 |        0 |       0 |       0 |                           
+  CreateProposal.tsx                |       0 |        0 |       0 |       0 | 9-381                     
+ components/Header                  |       0 |      100 |       0 |       0 |                           
+  Header.tsx                        |       0 |      100 |       0 |       0 | 1-7                       
+ components/Hero                    |     100 |      100 |     100 |     100 |                           
+  Hero.tsx                          |     100 |      100 |     100 |     100 |                           
+ components/Layout                  |       0 |      100 |       0 |       0 |                           
+  Layout.tsx                        |       0 |      100 |       0 |       0 | 3-13                      
+ components/Link                    |     100 |      100 |     100 |     100 |                           
+  Link.tsx                          |     100 |      100 |     100 |     100 |                           
+ components/MainLoader              |     100 |      100 |     100 |     100 |                           
+  MainLoader.tsx                    |     100 |      100 |     100 |     100 |                           
+ components/Members                 |   66.66 |        0 |   33.33 |   66.66 |                           
+  Members.tsx                       |   66.66 |        0 |   33.33 |   66.66 | 32-43,50,56-74            
+ components/MembersDropdown         |       0 |        0 |       0 |       0 |                           
+  MembersDropdown.tsx               |       0 |        0 |       0 |       0 | 3-43                      
+ components/Overview                |     100 |      100 |     100 |     100 |                           
+  Overview.tsx                      |     100 |      100 |     100 |     100 |                           
+ components/Preloader               |       0 |        0 |       0 |       0 |                           
+  Preloader.tsx                     |       0 |        0 |       0 |       0 | 1-114                     
+ components/ProposalCard            |       0 |        0 |       0 |       0 |                           
+  ProposalCard.tsx                  |       0 |        0 |       0 |       0 | 1-153                     
+ components/Proposals               |       0 |        0 |       0 |       0 |                           
+  Proposals.tsx                     |       0 |        0 |       0 |       0 | 1-190                     
+ components/Queue                   |      50 |       20 |      25 |   53.33 |                           
+  Queue.tsx                         |      50 |       20 |      25 |   53.33 | 25-45,61-78               
+ components/Search                  |   83.33 |      100 |      50 |   83.33 |                           
+  Search.tsx                        |   83.33 |      100 |      50 |   83.33 | 17-18                     
+ components/Sidebar                 |       0 |        0 |       0 |       0 |                           
+  Sidebar.tsx                       |       0 |        0 |       0 |       0 | 1-74                      
+ components/Subheader               |       0 |        0 |       0 |       0 |                           
+  Subheader.tsx                     |       0 |        0 |       0 |       0 | 1-21                      
+ components/Token                   |   59.25 |       40 |   33.33 |   61.53 |                           
+  Token.tsx                         |   59.25 |       40 |   33.33 |   61.53 | 32-64                     
+ components/TxButton                |       0 |        0 |       0 |       0 |                           
+  TxButton.tsx                      |       0 |        0 |       0 |       0 | 9-155                     
+ components/ui-kit/Avatar           |       0 |      100 |       0 |       0 |                           
+  Avatar.tsx                        |       0 |      100 |       0 |       0 | 2-12                      
+ components/ui-kit/Button           |     100 |     87.5 |     100 |     100 |                           
+  Button.tsx                        |     100 |     87.5 |     100 |     100 | 51                        
+ components/ui-kit/Card             |     100 |      100 |     100 |     100 |                           
+  Card.tsx                          |     100 |      100 |     100 |     100 |                           
+ components/ui-kit/Checkbox         |       0 |        0 |       0 |       0 |                           
+  Checkbox.tsx                      |       0 |        0 |       0 |       0 | 1-36                      
+ components/ui-kit/Chip             |     100 |        0 |     100 |     100 |                           
+  Chip.tsx                          |     100 |        0 |     100 |     100 | 19-20                     
+ components/ui-kit/Dropdown         |   51.11 |    33.33 |   30.76 |   51.16 |                           
+  Dropdown.tsx                      |   51.11 |    33.33 |   30.76 |   51.16 | 52-64,84,89-93,98,104-126 
+ components/ui-kit/Icon             |     100 |      100 |     100 |     100 |                           
+  Icon.tsx                          |     100 |      100 |     100 |     100 |                           
+ components/ui-kit/Input            |      25 |        0 |       0 |   26.66 |                           
+  Input.tsx                         |      25 |        0 |       0 |   26.66 | 51-73                     
+ components/ui-kit/Radio/Radio      |       0 |        0 |       0 |       0 |                           
+  Radio.tsx                         |       0 |        0 |       0 |       0 | 7-49                      
+ components/ui-kit/Radio/RadioGroup |       0 |        0 |       0 |       0 |                           
+  RadioGroup.tsx                    |       0 |        0 |       0 |       0 | 1-43                      
+ components/ui-kit/Switch           |       0 |        0 |       0 |       0 |                           
+  Switch.tsx                        |       0 |        0 |       0 |       0 | 1-54                      
+ components/ui-kit/Typography       |     100 |    66.66 |     100 |     100 |                           
+  Typography.tsx                    |     100 |    66.66 |     100 |     100 | 85                        
+ context                            |   66.66 |      100 |       0 |     100 |                           
+  radioContext.ts                   |   66.66 |      100 |       0 |     100 |                           
+ hooks                              |   51.06 |    11.11 |   53.33 |   51.11 |                           
+  useControlled.ts                  |    5.88 |        0 |       0 |    5.88 | 28-82                     
+  useCountdown.ts                   |      90 |       50 |   77.77 |   94.44 | 31                        
+  useIsomorphicLayoutEffect.ts      |     100 |       50 |     100 |     100 | 4                         
+  useRadioContext.ts                |   28.57 |        0 |       0 |   28.57 | 5-14                      
+ pages                              |       0 |        0 |       0 |       0 |                           
+  _app.tsx                          |       0 |        0 |       0 |       0 | 2-18                      
+  index.tsx                         |       0 |        0 |       0 |       0 | 1-22                      
+ pages/create-dao                   |       0 |        0 |       0 |       0 |                           
+  index.tsx                         |       0 |        0 |       0 |       0 | 1-18                      
+ pages/daos/[id]                    |       0 |        0 |       0 |       0 |                           
+  index.tsx                         |       0 |        0 |       0 |       0 | 1-43                      
+ pages/daos/[id]/create-proposal    |       0 |        0 |       0 |       0 |                           
+  index.tsx                         |       0 |        0 |       0 |       0 | 1-33                      
+ utils                              |    4.16 |        0 |    7.14 |    4.37 |                           
+  accountSigner.ts                  |       0 |        0 |       0 |       0 | 5-35                      
+  filters.ts                        |       0 |      100 |       0 |       0 | 1-2                       
+  keyHandler.ts                     |   45.45 |        0 |   42.85 |   45.45 | 8,10-12,23-26             
+  paramConversion.ts                |       0 |      100 |       0 |       0 | 1                         
+  queue.ts                          |       0 |        0 |       0 |       0 | 19-294                    
+  retrieveChainInfo.ts              |   14.28 |        0 |       0 |      20 | 5-15                      
+  stringAvatar.ts                   |       0 |        0 |       0 |       0 | 2-40                      
+------------------------------------|---------|----------|---------|---------|---------------------------
+
+Test Suites: 12 passed, 12 total
+Tests:       12 passed, 12 total
+Snapshots:   12 passed, 12 total
+Time:        4.399 s
+Done in 5.20s.
+
+```
+
+Now the tests are compiling and passing. The coverage is reasonable:
+56.35% coverage, 1526/2708 lines covered.
+
+Most of cargo clippy warnings were fixed.
+
+Cargo audit problems remain. 
+
+## Evaluation V1
 
 ### Docker
 
