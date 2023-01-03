@@ -2,7 +2,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Societal.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -14,11 +14,15 @@
 | 0b. | Documentation |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission-2/blob/main/README.md) |  |
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md)|  |
 | 0d. | Docker |<ul><li>[x] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-client/vcc6652b/images/sha256-417c09f0b6356c7675d9c4ee0fc2995ef3b66a2a0a11b7708e38dbf969063052?context=explore)|  |
-| 0e. | Article |<ul><li>[ ] </li></ul>|[Testing Article](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md) | Article is not the same as testing tutorial. Waiting for it. |
+| 0e. | Article |<ul><li>[x] </li></ul>|[Testing Article](https://github.com/sctllabs/societal-grant-submission-2/blob/main/docs/TestingGuide.md) |  |
 | 1. | Client Modules |<ul><li>[x] </li></ul>| [Societal UI](https://github.com/sctllabs/societal-grant-submission-2) |  |
 | 2. | Substrate module: DAO Factory |<ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-submission) |   |  
 
 ## General Notes
+
+## Evaluation V3
+
+The article was delivered in [this link](https://medium.com/@societal.xyz/societals-web3-foundation-grant-e74d760c4f27). 
 
 ## Evaluation V2
 
