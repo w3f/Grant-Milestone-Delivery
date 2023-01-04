@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/iris_followup.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,21 +9,31 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License |<ul><li>[ ] </li></ul>| https://github.com/ideal-lab5/iris |  Two Licenses | 
-| 0b.  | Documentation|<ul><li>[ ] </li></ul> | https://ideal-lab5.github.io | Not fully evaluated yet | 
-| 0c.  | Testing Guide|<ul><li>[ ] </li></ul> | https://docs.google.com/document/d/1GYizRCtMYxfZEdpaB8_VBwSaZdG3kZQAhRJI3OGmZqA/edit?usp=sharing | Not fully evaluated yet |
+| 0a. | License |<ul><li>[x] </li></ul>| https://github.com/ideal-lab5/iris |   | 
+| 0b.  | Documentation|<ul><li>[x] </li></ul> | https://ideal-lab5.github.io |  | 
+| 0c.  | Testing Guide|<ul><li>[x] </li></ul> | https://docs.google.com/document/d/1GYizRCtMYxfZEdpaB8_VBwSaZdG3kZQAhRJI3OGmZqA/edit?usp=sharing | |
 | 0d.  | Docker|<ul><li>[x] </li></ul> |  Iris node: https://hub.docker.com/repository/docker/ideallabs/iris, Iris UI:  https://hub.docker.com/repository/docker/ideallabs/iris-ui | |
 | 0e.  | Article|<ul><li>[x] </li></ul> | https://medium.com/ideal-labs/iris-update-milestone-2-29dcd8b79134 | |
-| 1.  | Substrate Module: IrisProxy|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/iris-proxy | Not fully evaluated yet |
-| 2.  | Substrate Module: IPFS|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/ipfs | Not fully evaluated yet |
-| 3.  | Substrate Module: Gateway|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/gateway | Not fully evaluated yet |
-| 4.  | Encryption Mechanism|<ul><li>[ ] </li></ul> | Key fragment generation starts here: https://github.com/ideal-lab5/iris/blob/73735046ddf1776b912859daeab789a769130e72/pallets/iris-proxy/src/lib.rs#L584, see the whitepaper as well: https://github.com/ideal-lab5/whitepaper/blob/main/IRIS_PROTOCOL_DRAFT_0.0.1.pdf | Not fully evaluated yet |
-| 5.  | RPC: Encryption RPC|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/iris/blob/ff95f2e811386f6231c441fafe3a1204ed82676b/pallets/iris-proxy/src/lib.rs#L518 | Not fully evaluated yet |
-| 6.  | RPC: Decryption RPC|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/iris/blob/ff95f2e811386f6231c441fafe3a1204ed82676b/pallets/iris-proxy/src/lib.rs#L390 | Not fully evaluated yet |
-| 7. | Testnet Setup|<ul><li>[ ] </li></ul> | Documentation of hosted node setup: https://ideal-lab5.github.io/developers/nodes/ec2_setup.html | Not fully evaluated yet |
-| 8. | User Interface|<ul><li>[ ] </li></ul> | https://github.com/ideal-lab5/ui | Not fully evaluated yet |
+| 1.  | Substrate Module: IrisProxy|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/iris-proxy |  |
+| 2.  | Substrate Module: IPFS|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/ipfs |  |
+| 3.  | Substrate Module: Gateway|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/iris/tree/main/pallets/gateway |  |
+| 4.  | Encryption Mechanism|<ul><li>[x] </li></ul> | Key fragment generation starts here: https://github.com/ideal-lab5/iris/blob/73735046ddf1776b912859daeab789a769130e72/pallets/iris-proxy/src/lib.rs#L584, see the whitepaper as well: https://github.com/ideal-lab5/whitepaper/blob/main/IRIS_PROTOCOL_DRAFT_0.0.1.pdf | Needs improvement in further milestone. |
+| 5.  | RPC: Encryption RPC|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/iris/blob/ff95f2e811386f6231c441fafe3a1204ed82676b/pallets/iris-proxy/src/lib.rs#L518 |  |
+| 6.  | RPC: Decryption RPC|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/iris/blob/ff95f2e811386f6231c441fafe3a1204ed82676b/pallets/iris-proxy/src/lib.rs#L390 |  |
+| 7. | Testnet Setup|<ul><li>[x] </li></ul> | Documentation of hosted node setup: https://ideal-lab5.github.io/developers/nodes/ec2_setup.html | Needs improvement in the next milestone. |
+| 8. | User Interface|<ul><li>[x] </li></ul> | https://github.com/ideal-lab5/ui |  |
 
 **General Notes** 
+
+## Evaluation V3
+
+The license problem was fixed, and now GPL3 only.
+
+Testnet setup was not enough to spin up all nodes and parts of the system. However, a test session was held with the grantee that showed up the network working in AWS instances with a local node connected. In the next milestone delivery, the grantee should present a better way to spin up all parts of the system enabling the evaluation of the system locally.
+
+In the current setup for the threshold encryption (2-out-of-3), the recipient can get all parts of the encryption (3-out-of-3) and reassemble the file private key. This is a vulnerability that should be fixed before the system goes to production.
+
+
 
 ## Evaluation v2
 
