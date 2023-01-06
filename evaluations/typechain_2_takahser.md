@@ -9,15 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/Supercolony-net/typechain-polkadot/blob/3445db875d08a08a8d4ac60bbca40505e915a52c/LICENSE) | - |
-| 0b | Documentation | <ul><li>[ ] </li></ul> | [Docs](https://github.com/Supercolony-net/typechain-polkadot/blob/3445db875d08a08a8d4ac60bbca40505e915a52c/docs/tech-specs.md) | See [Documentation Feedback](#documentation-feedback) |
-| 1 | Investigation | <ul><li>[ ] </li></ul> | ? | At this point it's unclear which bugs with new versions of polkadot have been fixed. Please explain, as this might be of interest for other projects as well. |
+| 0b | Documentation | <ul><li>[x] </li></ul> | [Docs](https://github.com/Supercolony-net/typechain-polkadot/blob/3445db875d08a08a8d4ac60bbca40505e915a52c/docs/tech-specs.md) | See [Documentation Feedback](#documentation-feedback) |
+| 1 | Investigation | <ul><li>[ ] </li></ul> | ? | At this point it's unclear which bugs with new versions of polkadot have been fixed. Please explain, as this might be of interest for other projects as well. In the newest delivery report, you mentioned such "problems with gasLimits" but you didn't give any more information. Could you elaborate and maybe show us the PR or code that fixed it? |
 | 2 | Parser & generators modules | <ul><li>[x] </li></ul> | [typechain-polkadot package](https://github.com/727-Ventures/typechain-polkadot/tree/master/packages/typechain-polkadot), [typechain-polkadot-parser package](https://github.com/727-Ventures/typechain-polkadot/tree/master/packages/typechain-polkadot-parser) | It would be nice if you could add some more information to your docs or article on how you leveraged handlebars in your [templates](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates) and what role they play in the stack of your solution. |
 | 3 | Contract deployment | <ul><li>[ ] </li></ul> | [constructors template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/constructors.hbs) | It's not clear to me how a contract can be deployed using `typechain-polkadot`. |
-| 4a | Contract classes extension | <ul><li>[ ] </li></ul> | [contract handlebars template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/contract.hbs) | - |
+| 4a | Contract classes extension | <ul><li>[x] </li></ul> | [contract handlebars template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/contract.hbs) | - |
 | 4b | Methods' names | <ul><li>[x] </li></ul> | [`preprocessABI` function](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/output-generators/_utils.ts#L88-L139) | - |
 | 5 | Testing | <ul><li>[ ] </li></ul> | [Unit Tests](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot) | See [Testing Feedback](#testing-feedback) |
-| 6 | Article | <ul><li>[ ] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
-| 7 | Branding | <ul><li>[ ] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
+| 6 | Article | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
+| 7 | Branding | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
@@ -28,13 +28,13 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Documentation Feedback
 
-- there is currently no README present in the [typechain-polkadot package](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot)
+- ~~there is currently no README present in the [typechain-polkadot package](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot)~~ a README was [added](https://github.com/727-Ventures/typechain-polkadot/tree/bcc848a1613902930863f8b791231042ceed4dda/packages/typechain-polkadot)
 - currently the code is copyrighted to _Supercolony_, feel free to update these to the new name of your organisation (note that this is not mandatory for the acceptance of the grant)
 
 ### Testing Feedback
 
 - smoke testing succeeded thanks to the support of the grantee (see [convo](https://github.com/w3f/Grant-Milestone-Delivery/pull/623) in the delivery PR), however, it would be nice to see this information incorporated into the docs, incl. compiling an example ink! contract (generating the `.contract` and `.json` artifacts) before generating the TypeScript files
-- tests are currently failing:
+- tests are still failing:
 
     ```bash
     ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm i
@@ -50,101 +50,166 @@ Summarizes the overall performance plus additional feedback/comments
     npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.2.0
     npm notice Run npm install -g npm@9.2.0 to update!
     npm notice 
+
+    ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm run gen-test-ts # transcompile ts -> js files
+
     ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm run test
 
-    > @727-ventures/typechain-polkadot@0.1.2 test
-    > jest --no-cache --maxWorkers 1
+        (...)
 
-    FAIL  tests/psp22/general.test.ts
+        console.error
+        2023-01-05 07:28:04          API-WS: disconnected from ws://127.0.0.1:9944: 1006:: connection failed
+
+        at apply (../../node_modules/@polkadot/util/cjs/logger.js:81:22)
+        at Object.error (../../node_modules/@polkadot/util/cjs/logger.js:146:14)
+        at W3CWebSocket.value [as onclose] (../../node_modules/@polkadot/rpc-provider/cjs/ws/index.js:181:13)
+        at W3CWebSocket._dispatchEvent [as dispatchEvent] (../../node_modules/yaeti/lib/EventTarget.js:107:17)
+        at W3CWebSocket.onConnectFailed (../../node_modules/websocket/lib/W3CWebSocket.js:219:14)
+        at WebSocketClient.<anonymous> (../../node_modules/websocket/lib/W3CWebSocket.js:59:25)
+        at ClientRequest.handleRequestError (../../node_modules/websocket/lib/WebSocketClient.js:227:14)
+
+    ●  › `PSP22::total_supply`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `PSP22::balance_of`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `mint_to`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `PSP22Mintable::mint`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `PSP22::allowance`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `PSP22::increase_allowance` & `PSP22::decrease_allowance`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+    ●  › `PSP22::transfer`
+
+        thrown: "Exceeded timeout of 10000 ms for a hook.
+        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
+        13 |
+        > 14 |      beforeAll(async () => {
+            |      ^
+        15 |              api = await ApiPromise.create();
+        16 |
+        17 |              const accounts = GetAccounts();
+
+        at tests/psp22/tx.test.ts:14:2
+        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
+
+
     ● Test suite failed to run
 
-        tests/psp22/general.test.ts:1:22 - error TS2307: Cannot find module '../generated/contracts/my_psp22' or its corresponding type declarations.
+        TypeError: Cannot read properties of undefined (reading 'disconnect')
 
-        1 import Contract from '../generated/contracts/my_psp22';
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp22/general.test.ts:2:26 - error TS2307: Cannot find module '../generated/constructors/my_psp22' or its corresponding type declarations.
+        32 |
+        33 |      afterAll(async () => {
+        > 34 |              await api.disconnect();
+            |                        ^
+        35 |      });
+        36 |
+        37 |      jest.setTimeout(10000);
 
-        2 import Constructors from '../generated/constructors/my_psp22';
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        at Object.<anonymous> (tests/psp22/tx.test.ts:34:13)
 
-    FAIL  tests/psp34/query.test.ts
-    ● Test suite failed to run
 
-        tests/psp34/query.test.ts:2:22 - error TS2307: Cannot find module '../generated/contracts/my_psp34' or its corresponding type declarations.
+    ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+        Attempted to log "2023-01-05 07:28:08          API-WS: disconnected from ws://127.0.0.1:9944: 1006:: connection failed".
 
-        2 import Contract from "../generated/contracts/my_psp34";
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp34/query.test.ts:3:25 - error TS2307: Cannot find module '../generated/types-arguments/my_psp34' or its corresponding type declarations.
-
-        3 import {IdBuilder} from "../generated/types-arguments/my_psp34";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp34/query.test.ts:4:26 - error TS2307: Cannot find module '../generated/constructors/my_psp34' or its corresponding type declarations.
-
-        4 import Constructors from "../generated/constructors/my_psp34";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    FAIL  tests/psp22/query.test.ts
-    ● Test suite failed to run
-
-        tests/psp22/query.test.ts:1:22 - error TS2307: Cannot find module '../generated/contracts/my_psp22' or its corresponding type declarations.
-
-        1 import Contract from '../generated/contracts/my_psp22';
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp22/query.test.ts:2:26 - error TS2307: Cannot find module '../generated/constructors/my_psp22' or its corresponding type declarations.
-
-        2 import Constructors from '../generated/constructors/my_psp22';
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    FAIL  tests/psp34/tx.test.ts
-    ● Test suite failed to run
-
-        tests/psp34/tx.test.ts:2:22 - error TS2307: Cannot find module '../generated/contracts/my_psp34' or its corresponding type declarations.
-
-        2 import Contract from "../generated/contracts/my_psp34";
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp34/tx.test.ts:3:25 - error TS2307: Cannot find module '../generated/types-arguments/my_psp34' or its corresponding type declarations.
-
-        3 import {IdBuilder} from "../generated/types-arguments/my_psp34";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp34/tx.test.ts:4:26 - error TS2307: Cannot find module '../generated/constructors/my_psp34' or its corresponding type declarations.
-
-        4 import Constructors from "../generated/constructors/my_psp34";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    FAIL  tests/psp22/tx.test.ts
-    ● Test suite failed to run
-
-        tests/psp22/tx.test.ts:1:22 - error TS2307: Cannot find module '../generated/contracts/my_psp22' or its corresponding type declarations.
-
-        1 import Contract from '../generated/contracts/my_psp22';
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/psp22/tx.test.ts:5:26 - error TS2307: Cannot find module '../generated/constructors/my_psp22' or its corresponding type declarations.
-
-        5 import Constructors from "../generated/constructors/my_psp22";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    FAIL  tests/enums/general.test.ts
-    ● Test suite failed to run
-
-        tests/enums/general.test.ts:2:22 - error TS2307: Cannot find module '../generated/contracts/contract_with_enums' or its corresponding type declarations.
-
-        2 import Contract from "../generated/contracts/contract_with_enums";
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/enums/general.test.ts:3:54 - error TS2307: Cannot find module '../generated/types-arguments/contract_with_enums' or its corresponding type declarations.
-
-        3 import {AnotherEnumBuilder, EnumExampleBuilder} from "../generated/types-arguments/contract_with_enums";
-                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        tests/enums/general.test.ts:4:26 - error TS2307: Cannot find module '../generated/constructors/contract_with_enums' or its corresponding type declarations.
-
-        4 import Constructors from "../generated/constructors/contract_with_enums";
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    Test Suites: 6 failed, 6 total
-    Tests:       0 total
-    Snapshots:   0 total
-    Time:        2.411 s
-    Ran all test suites.
+        at console.error (../../node_modules/@jest/console/build/BufferedConsole.js:151:10)
+        at apply (../../node_modules/@polkadot/util/cjs/logger.js:81:22)
+        at Object.error (../../node_modules/@polkadot/util/cjs/logger.js:146:14)
+        at W3CWebSocket.value [as onclose] (../../node_modules/@polkadot/rpc-provider/cjs/ws/index.js:181:13)
+        at W3CWebSocket._dispatchEvent [as dispatchEvent] (../../node_modules/yaeti/lib/EventTarget.js:107:17)
+        at W3CWebSocket.onConnectFailed (../../node_modules/websocket/lib/W3CWebSocket.js:219:14)
+        at WebSocketClient.<anonymous> (../../node_modules/websocket/lib/W3CWebSocket.js:59:25)
+        at ClientRequest.handleRequestError (../../node_modules/websocket/lib/WebSocketClient.js:227:14)
     ```
+
+- In general, I think it's bad design that we need to run 2 scripts to run the tests. This dependency is not obvious any imho unneccessary. It would be better if the files were transcompilated as part of the `npm run test` script, ahead of running the tests.
 
 - there are currently a lot of lint issues:
 
@@ -270,5 +335,5 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Article Feedback
 
-- Currently, the link to the repo is [broken](https://github.com/Supercolony-net/typechain-polkadot,) due to the comma at the end
-- It would be nice to link to some example contract(s) so the reader could test it right away, even if they are not familiar with ink! smart contracts yet
+- ~~Currently, the link to the repo is [broken](https://github.com/Supercolony-net/typechain-polkadot,) due to the comma at the end~~ (fixed)
+- ~~It would be nice to link to some example contract(s) so the reader could test it right away, even if they are not familiar with ink! smart contracts yet~~ (fixed)
