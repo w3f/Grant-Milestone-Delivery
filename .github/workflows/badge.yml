@@ -4,40 +4,78 @@ on:
     types: [closed]
 
 jobs:
-  badge:
-    if: github.event.pull_request.merged == true
+  get-delivery-files:
     runs-on: ubuntu-latest
+    outputs:
+      filenames: ${{ steps.files.outputs.added }}
+    
+    steps:
+      - name: Get filenames of any deliveries being added
+        id: files
+        uses: Ana06/get-changed-files@v2.0.0
+        with:
+          format: 'json'
+          filter: |
+            deliveries/*.md
+            maintenance_deliveries/*.md
+          
+  check-needs-badge:
+    runs-on: ubuntu-latest
+    needs: get-delivery-files
+    if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
+    outputs:
+      needs_badge: ${{ steps.badge-check.outputs.check }} 
+
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        filename: ${{ fromJson(needs.get-delivery-files.outputs.filenames) }}
+ 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Parse delivery file
-        id: delivery
-        uses: ./.github/workflows/composite/get_delivery
+      - name: Parse delivery file 
+        id: parse-delivery
+        uses: w3f/parse-milestone-delivery-action@v3
+        with:
+          path: "${{ github.workspace }}/${{ matrix.filename }}"
 
       - name: Get application file
-        if: steps.delivery.outputs.filenames
-        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.delivery.outputs.application-filename }}"
+        run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.parse-delivery.outputs.application_document }}"
 
       - name: Parse application file
         id: parse-grant
-        if: steps.delivery.outputs.filenames
         uses: w3f/parse-grant-application-action@v1
         with:
-          path: "${{ steps.delivery.outputs.application-filename }}"
+          path: "${{ steps.parse-delivery.outputs.application_document }}"
 
+      - name: Check if this PR needs a badge comment
+        id: badge-check
+        # A matrix strategy overwrites outputs, meaning `needs_badge` will be `true` if atleast one of the files matches the following condition.
+        # This way, there'll only be max 1 comment left per PR
+        if: steps.parse-delivery.outputs.milestone_number == 1 && steps.parse-grant.outputs.level != 1
+        run: echo "::set-output name=check::true"
+
+  comment-badge:
+    runs-on: ubuntu-latest
+    needs: check-needs-badge
+    if: needs.check-needs-badge.outputs.needs_badge
+    steps:
       - name: Leave badge comment if applicable
-        if: steps.delivery.outputs.filenames && steps.delivery.outputs.milestone-number == 1 && steps.parse-grant.outputs.level != 1
         uses: thollander/actions-comment-pull-request@1.0.1
         with:
           message: >
             Congratulations on completing the first milestone of this grant!
             As part of the Grants Program, we want to help grant recipients acknowledge their grants publicly.
-            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/grant-badge-guidelines.md)
+            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/grant-badge-guidelines.md)
             that successfully deliver their first milestone. 
             Note that it must only be used within the context of the delivered work, so please do not display it on
             your team or project's homepage unless accompanied by a short description of the grant.<br/><br/>
             Furthermore, you're now welcome to announce the grant publicly. Please remember to observe the
-            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/announcement-guidelines.md) in doing so.
+            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
             In case you haven't done so yet, you may also reach out to grantsPR@web3.foundation for feedback on your announcement and cross-promotion.<br/><br/>
             Thank you for your contribution and good luck with the remaining milestones, if any!
             As usual, please let us know if you run into any delays by leaving a comment on the application PR, or directly submitting an

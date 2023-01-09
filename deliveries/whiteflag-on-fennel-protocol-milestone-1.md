@@ -1,0 +1,29 @@
+# Milestone Delivery :mailbox:
+
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Whiteflag-on-Fennel.md
+* **Milestone Number:** 1
+
+**Context**
+This milestone creates the basis for mutable, trait-based identities and active creation of webs of trust between accounts. The resulting trait-based identity and trust actions can be used to build on top of existing identity infrastructure and leverage the decentralized nature of the protocol to generate more complex decision-making, authentication, sharing, and resource management logic at the application level.
+
+**Deliverables**
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0a. | License | https://github.com/fennelLabs/Fennel-Protocol/blob/main/LICENSE | Unlicense. All of our repositories include the same default UNLICENSE file. | 
+| 0b. | Documentation | https://fennel-labs.notion.site/Grant-2-d6f134a5b65f4556823ae648e3b68e68, https://github.com/fennelLabs/Fennel-Protocol/wiki, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://fennellabs.com/fennel-lib/fennel_lib/index.html, https://fennellabs.com/fennel-cli/fennel_cli/, https://fennellabs.com/fennel-server/fennel_server/ | Documentation is provided both as generated inline documentation and a wiki. We've begun migrating the wiki over to Notion, so some content may be subject to change. | 
+| 0c.  | Testing Guide | https://fennel-labs.notion.site/Grant-2-Milestone-1-Testing-Guide-76b12a5e6e1149c2998d3e723cbaeb09, https://fennellabs.com/Fennel-Protocol/doc/fennel_protocol_runtime/index.html, https://github.com/fennelLabs/Fennel-Protocol/wiki/Testing-Milestone-3 | Both automated testing and extrinsics calls are outlined. | 
+| 0d. | Docker | https://github.com/fennelLabs/Fennel-Protocol/blob/main/Dockerfile, https://github.com/fennelLabs/fennel-lib/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-cli/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-server/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile, https://github.com/fennelLabs/fennel-api/blob/master/Dockerfile | Docker Compose is used to run tests, benchmarks, and documentation. | 
+| 0e. | Article | https://fennel-labs.notion.site/Fennel-Platform-ac95115aea7542c8bae06a168e314042 | Self-hosted announcement article describing the purpose of the material included in this milestone. This will be published after the milestone is accepted. |
+| 0f. | User-Facing Article | https://fennel-labs.notion.site/User-Guide-064b8c8de58f4e2a8206b3c5229fecc9 | A self-hosted user-facing article describing what these tools are _for_ and how you might use them, with slightly more ergonomic links to our setup documentation. |
+| 1. | Encryption and Message Tie-Ins | https://github.com/fennelLabs/fennel-app, https://github.com/fennelLabs/fennel-api, https://github.com/fennelLabs/fennel-app/blob/master/src/services/rpc.service.js#L201, https://github.com/fennelLabs/fennel-app/blob/master/src/services/MessageAPI/index.js, https://github.com/fennelLabs/fennel-app/blob/master/src/services/ContactsManager.service.js, https://github.com/fennelLabs/fennel-app/blob/master/src/services/MessageEncryptionIndicatorsManager.service.js | Identity creation, key generation, and unencrypted message send/receive are all supported by our frontend. fennel-api provides an interface for a single message server to maintain a list of known identities so that messages may be exchanged. RSA encryption is fully supported by the new WebSocket JSON RPC exposed by fennel-cli, with Diffie-Hellman-based AES ciphers planned for the next expansion. |
+| 2. | Fennel Protocol Tie-Ins | https://github.com/fennelLabs/Fennel-Protocol, https://github.com/fennelLabs/fennel-app/blob/master/src/services/Node/index.js, https://github.com/fennelLabs/fennel-app/blob/master/src/services/KeyManager/index.js | We used components of the polkadot.js API to construct a Node class wrapping Fennel Protocol to provide an interface we can implement extrinsics handlers through. |
+| 3. | Whiteflag Message Support | https://github.com/fennelLabs/whiteflag-rust, https://github.com/fennelLabs/fennel-cli/blob/5886d6297307624c89fc258c3dd75c64b08ef712/src/fennel_rpc/mod.rs#L86, https://github.com/fennelLabs/fennel-cli/blob/5886d6297307624c89fc258c3dd75c64b08ef712/src/fennel_rpc/mod.rs#L92, https://github.com/fennelLabs/fennel-app/blob/c09e42656bb6f906c8493307b49b0dcdc4526b58/src/services/rpc.service.js#L191, https://github.com/fennelLabs/fennel-app/blob/c09e42656bb6f906c8493307b49b0dcdc4526b58/src/services/rpc.service.js#L201 | The aforementioned JSON RPC includes a basic encode/decode featureset for Whiteflag's Authentication messages. Visiting the Whiteflag tab on our main interface will show an example of encode/decode in action. |
+
+
+**Additional Information**
+The scope of this milestone expanded somewhat to include improved integration for our message and identity management system. This component, fennel-api, cooperates with our blockchain to act as a sort of cache layer for identities, and a more secure HTTPS-compatible interface for message exchange.
+
+Work from our last grant is included in the links provided in this submission. This is for full reference on all cooperating features, as most of our repositories were modified in some way to adjust for new architecture decisions.
