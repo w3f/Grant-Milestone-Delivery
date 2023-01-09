@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/typechain-polkadot-follow-up.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,12 +10,12 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/Supercolony-net/typechain-polkadot/blob/3445db875d08a08a8d4ac60bbca40505e915a52c/LICENSE) | - |
 | 0b | Documentation | <ul><li>[x] </li></ul> | [Docs](https://github.com/Supercolony-net/typechain-polkadot/blob/3445db875d08a08a8d4ac60bbca40505e915a52c/docs/tech-specs.md) | See [Documentation Feedback](#documentation-feedback) |
-| 1 | Investigation | <ul><li>[ ] </li></ul> | ? | At this point it's unclear which bugs with new versions of polkadot have been fixed. Please explain, as this might be of interest for other projects as well. In the newest delivery report, you mentioned such "problems with gasLimits" but you didn't give any more information. Could you elaborate and maybe show us the PR or code that fixed it? |
+| 1 | Investigation | <ul><li>[x] </li></ul> | [Delivery](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/typechain-polkadot-milestone-2.md) | See [Investigation Feedback](#investigation-feedback) |
 | 2 | Parser & generators modules | <ul><li>[x] </li></ul> | [typechain-polkadot package](https://github.com/727-Ventures/typechain-polkadot/tree/master/packages/typechain-polkadot), [typechain-polkadot-parser package](https://github.com/727-Ventures/typechain-polkadot/tree/master/packages/typechain-polkadot-parser) | It would be nice if you could add some more information to your docs or article on how you leveraged handlebars in your [templates](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates) and what role they play in the stack of your solution. |
-| 3 | Contract deployment | <ul><li>[ ] </li></ul> | [constructors template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/constructors.hbs) | It's not clear to me how a contract can be deployed using `typechain-polkadot`. |
+| 3 | Contract deployment | <ul><li>[x] </li></ul> | [constructors template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/constructors.hbs) | ~~It's not clear to me how a contract can be deployed using `typechain-polkadot`.~~ Update: Instructions on how to deploy a contract using typechain [have been added](https://github.com/727-Ventures/typechain-polkadot/blob/ca4d8900935eca6a4bb1df2e3beec7214239d7a6/packages/typechain-polkadot/README.md#constructors). |
 | 4a | Contract classes extension | <ul><li>[x] </li></ul> | [contract handlebars template](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/templates/contract.hbs) | - |
 | 4b | Methods' names | <ul><li>[x] </li></ul> | [`preprocessABI` function](https://github.com/727-Ventures/typechain-polkadot/blob/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot/src/output-generators/_utils.ts#L88-L139) | - |
-| 5 | Testing | <ul><li>[ ] </li></ul> | [Unit Tests](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot) | See [Testing Feedback](#testing-feedback) |
+| 5 | Testing | <ul><li>[x] </li></ul> | [Unit Tests](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot) | See [Testing Feedback](#testing-feedback) |
 | 6 | Article | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
 | 7 | Branding | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/727-ventures/typechain-polkadot-overview-7c184067523f) | See [Article Feedback](#article-feedback) |
 
@@ -31,187 +31,50 @@ Summarizes the overall performance plus additional feedback/comments
 - ~~there is currently no README present in the [typechain-polkadot package](https://github.com/727-Ventures/typechain-polkadot/tree/b8ea970b10325d96b0f6953e25023e3e0798c52c/packages/typechain-polkadot)~~ a README was [added](https://github.com/727-Ventures/typechain-polkadot/tree/bcc848a1613902930863f8b791231042ceed4dda/packages/typechain-polkadot)
 - currently the code is copyrighted to _Supercolony_, feel free to update these to the new name of your organisation (note that this is not mandatory for the acceptance of the grant)
 
+### Investigation Feedback
+
+- ~~At this point it's unclear which bugs with new versions of polkadot have been fixed. Please explain, as this might be of interest for other projects as well. In the newest delivery report, you mentioned such "problems with gasLimits" but you didn't give any more information. Could you elaborate and maybe show us the PR or code that fixed it?~~
+- Quoting from the current version of the delivery:
+
+    > Due to the lack of documentation we had to investigate how polkadot.js works under the hood directly in the source code and fixed bugs with new versions of substrate and polkadot.js, such as problems with gasLimits. We had some problems with new versions of substrate-contracts-node, before we used default gasLimit as -1 and now we are using just big number, feel free to check out our commit https://github.com/727-Ventures/typechain-polkadot/commit/710896c7b9f2677a97f7b84cbf035c5c8fb1996d in file packages/typechain-polkadot/src/output-generators/raw/_sdk/query.ts. We have created preprocessAbi function and added _ before each type’ display name, it was done because of polkadot-js can optimize usage of known types such as Balance, and change it interface that can break typechain-polkadot-parser. We figured out with ink! 4 update abi changed a little bit, and in some places we used raw abi (mainly in preprocessABI function) so we created __getV3 function that gets everything we need no matter which ink version we are using. You can check that here https://github.com/727-Ventures/typechain-polkadot/blob/master/packages/typechain-polkadot/src/output-generators/_utils.ts#L88. All types are covered, thanks to parser-module, and we've refactored our structure to monorepo
+
 ### Testing Feedback
 
 - smoke testing succeeded thanks to the support of the grantee (see [convo](https://github.com/w3f/Grant-Milestone-Delivery/pull/623) in the delivery PR), however, it would be nice to see this information incorporated into the docs, incl. compiling an example ink! contract (generating the `.contract` and `.json` artifacts) before generating the TypeScript files
-- tests are still failing:
+- ~~tests are still failing~~
+- tests are passing after the substrate node has been started before running the tests, as described in the [latest version](https://github.com/727-Ventures/typechain-polkadot/commit/443e5c3f56947762199b40590c94d3c4c2e542d9) of their _tests README_:
 
     ```bash
-    ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm i
+    $ git clone https://github.com/paritytech/
+    $ substrate-contracts-node
+    $ git checkout v0.19.0
+    $ cargo +stable build --release
+    $ ./target/release/substrate-contracts-node --dev --tmp
+    $ cd .. && cd typechain-polkadot/packages/typechain-polkadot
+    $ npm run test
+    > @727-ventures/typechain-polkadot@0.1.2 test
+    > jest --no-cache --maxWorkers 1
 
-    added 598 packages, and audited 599 packages in 30s
+    PASS  tests/psp22/general.test.ts
+    PASS  tests/psp34/query.test.ts
+    PASS  tests/psp22/query.test.ts
+    PASS  tests/psp34/tx.test.ts
+    PASS  tests/psp22/tx.test.ts
+    PASS  tests/enums/general.test.ts
 
-    105 packages are looking for funding
-    run `npm fund` for details
+    Test Suites: 6 passed, 6 total
+    Tests:       35 passed, 35 total
+    Snapshots:   0 total
+    Time:        7.976 s
+    Ran all test suites.
+    Jest did not exit one second after the test run has completed.
 
-    found 0 vulnerabilities
-    npm notice 
-    npm notice New major version of npm available! 8.1.2 -> 9.2.0
-    npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.2.0
-    npm notice Run npm install -g npm@9.2.0 to update!
-    npm notice 
-
-    ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm run gen-test-ts # transcompile ts -> js files
-
-    ~/repos/typechain-polkadot/packages/typechain-polkadot$ npm run test
-
-        (...)
-
-        console.error
-        2023-01-05 07:28:04          API-WS: disconnected from ws://127.0.0.1:9944: 1006:: connection failed
-
-        at apply (../../node_modules/@polkadot/util/cjs/logger.js:81:22)
-        at Object.error (../../node_modules/@polkadot/util/cjs/logger.js:146:14)
-        at W3CWebSocket.value [as onclose] (../../node_modules/@polkadot/rpc-provider/cjs/ws/index.js:181:13)
-        at W3CWebSocket._dispatchEvent [as dispatchEvent] (../../node_modules/yaeti/lib/EventTarget.js:107:17)
-        at W3CWebSocket.onConnectFailed (../../node_modules/websocket/lib/W3CWebSocket.js:219:14)
-        at WebSocketClient.<anonymous> (../../node_modules/websocket/lib/W3CWebSocket.js:59:25)
-        at ClientRequest.handleRequestError (../../node_modules/websocket/lib/WebSocketClient.js:227:14)
-
-    ●  › `PSP22::total_supply`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `PSP22::balance_of`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `mint_to`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `PSP22Mintable::mint`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `PSP22::allowance`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `PSP22::increase_allowance` & `PSP22::decrease_allowance`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-    ●  › `PSP22::transfer`
-
-        thrown: "Exceeded timeout of 10000 ms for a hook.
-        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-
-        12 |      let UserAlice: KeyringPair, UserBob: KeyringPair, UserCharlie : KeyringPair;
-        13 |
-        > 14 |      beforeAll(async () => {
-            |      ^
-        15 |              api = await ApiPromise.create();
-        16 |
-        17 |              const accounts = GetAccounts();
-
-        at tests/psp22/tx.test.ts:14:2
-        at Object.<anonymous> (tests/psp22/tx.test.ts:9:1)
-
-
-    ● Test suite failed to run
-
-        TypeError: Cannot read properties of undefined (reading 'disconnect')
-
-        32 |
-        33 |      afterAll(async () => {
-        > 34 |              await api.disconnect();
-            |                        ^
-        35 |      });
-        36 |
-        37 |      jest.setTimeout(10000);
-
-        at Object.<anonymous> (tests/psp22/tx.test.ts:34:13)
-
-
-    ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
-        Attempted to log "2023-01-05 07:28:08          API-WS: disconnected from ws://127.0.0.1:9944: 1006:: connection failed".
-
-        at console.error (../../node_modules/@jest/console/build/BufferedConsole.js:151:10)
-        at apply (../../node_modules/@polkadot/util/cjs/logger.js:81:22)
-        at Object.error (../../node_modules/@polkadot/util/cjs/logger.js:146:14)
-        at W3CWebSocket.value [as onclose] (../../node_modules/@polkadot/rpc-provider/cjs/ws/index.js:181:13)
-        at W3CWebSocket._dispatchEvent [as dispatchEvent] (../../node_modules/yaeti/lib/EventTarget.js:107:17)
-        at W3CWebSocket.onConnectFailed (../../node_modules/websocket/lib/W3CWebSocket.js:219:14)
-        at WebSocketClient.<anonymous> (../../node_modules/websocket/lib/W3CWebSocket.js:59:25)
-        at ClientRequest.handleRequestError (../../node_modules/websocket/lib/WebSocketClient.js:227:14)
+    This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
     ```
 
-- In general, I think it's bad design that we need to run 2 scripts to run the tests. This dependency is not obvious any imho unneccessary. It would be better if the files were transcompilated as part of the `npm run test` script, ahead of running the tests.
+- ~~In general, I think it's bad design that we need to run 2 scripts to run the tests. This dependency is not obvious any imho unneccessary. It would be better if the files were transcompilated as part of the `npm run test` script, ahead of running the tests.~~ Update: this has been fixed
 
-- there are currently a lot of lint issues:
+- there are currently still a lot of lint issues. I'm willing to accept the delivery, since it's the only outstanding issue and more of a code style thing. However, it'd be good if this would be fixed:
 
     ```bash
     ~/repos/typechain-polkadot$ npm run lint
