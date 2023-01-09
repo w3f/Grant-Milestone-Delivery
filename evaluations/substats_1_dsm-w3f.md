@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/substats.md  
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,15 +9,82 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                 |<ul><li>[X] </li></ul>|                                                              | Apache 2.0                         |
-| 0b.    | Documentation           |<ul><li>[ ] </li></ul>| [README.md](https://github.com/CESSProject/substats/blob/master/README.md) | Not fully evaluated yet. |
+| 0b.    | Documentation           |<ul><li>[x] </li></ul>| [README.md](https://github.com/CESSProject/substats/blob/master/README.md) |  |
 | 0c.    | Testing Guide           |<ul><li>[x] </li></ul>| [testing-guide.md](https://github.com/CESSProject/substats/blob/master/documents/testing-guide.md) |  |
 | 1a.    | Develop the webservice  |<ul><li>[x] </li></ul>| [about-framework.md](https://github.com/CESSProject/substats/blob/master/documents/about-framework.md) |  |
-| 1b.    | Develop the polkadot.js |<ul><li>[ ] </li></ul>| Connect to the RPC node<br /> [https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22](https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22)<br /><br />Get block info and transfer<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44)<br /><br />Get block events by block hash<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52)<br /><br />Account query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Miner query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-miners.js#L32](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Subscribe new block header<br />[https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19](https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19) | Not fully evaluated yet. Possible quality improvements. |
-| 1c.    | Develop the API         |<ul><li>[ ] </li></ul>| [api-docs.md](https://github.com/CESSProject/substats/blob/master/documents/api-docs.md) | Some calls with problems |
+| 1b.    | Develop the polkadot.js |<ul><li>[x] </li></ul>| Connect to the RPC node<br /> [https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22](https://github.com/CESSProject/substats/blob/master/bll/init-polkadot-api.js#L22)<br /><br />Get block info and transfer<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L44)<br /><br />Get block events by block hash<br />[https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52](https://github.com/CESSProject/substats/blob/master/app/sync-block/index.js#L52)<br /><br />Account query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Miner query<br />[https://github.com/CESSProject/substats/blob/master/app/timer/get-miners.js#L32](https://github.com/CESSProject/substats/blob/master/app/timer/get-accounts.js#L38)<br /><br />Subscribe new block header<br />[https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19](https://github.com/CESSProject/substats/blob/master/bll/sub.js#L19) | |
+| 1c.    | Develop the API         |<ul><li>[x] </li></ul>| [api-docs.md](https://github.com/CESSProject/substats/blob/master/documents/api-docs.md) |  |
 | 1d.    | Create the database     |<ul><li>[x] </li></ul>| [about-database.md](https://github.com/CESSProject/substats/blob/master/documents/about-database.md) | Ran ok using docker |
 
 
 **General Notes** 
+
+## Evaluaion V3
+
+### API Testing 
+
+Now I can spin up the node using docker compose and check the API calls. Some of them are still returning no data, miners for example, but I expect that in the next milestone delivery we can check all of them with data since more data will be gathered there.
+
+### Automated Tests
+
+The coverage of the automated tests increased. 
+
+```
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                       
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------
+All files                        |   63.82 |    43.14 |   73.78 |   64.15 |                                                                                                         
+ substats                        |     100 |      100 |     100 |     100 |                                                                                                         
+  webconfig.js                   |     100 |      100 |     100 |     100 |                                                                                                         
+ substats/bll                    |   70.23 |       50 |   73.68 |   69.87 |                                                                                                         
+  init-polkadot-api.js           |   59.52 |    16.66 |   42.85 |   59.52 | 23-24,40-46,49-55,58,62-67                                                                              
+  init.js                        |     100 |      100 |     100 |     100 |                                                                                                         
+  keyring.js                     |   77.77 |      100 |      80 |      75 | 16-17                                                                                                   
+  mysql-config-loader.js         |   58.33 |       50 |     100 |   58.33 | 15,18-19,25-26                                                                                          
+  ws-helper.js                   |   88.88 |      100 |     100 |   88.88 | 12                                                                                                      
+ substats/controls               |   86.66 |    73.07 |     100 |   86.66 |                                                                                                         
+  param-helper.js                |   86.66 |    73.07 |     100 |   86.66 | 10,15                                                                                                   
+ substats/controls/action-helper |   54.14 |    37.68 |   72.22 |   54.66 |                                                                                                         
+  batch-update.js                |   71.11 |       50 |     100 |   71.11 | 11-13,26,29-31,40,49,56,61-62,65                                                                        
+  column.js                      |      60 |       50 |     100 |      60 | 5,9-10,13                                                                                               
+  copy.js                        |   73.68 |    54.54 |     100 |   72.22 | 19,23-27,30                                                                                             
+  create.js                      |   76.47 |       50 |     100 |   76.47 | 13,24-25,28                                                                                             
+  del.js                         |   33.33 |       15 |     100 |   33.33 | 14-16,19-37,43-44,47                                                                                    
+  detail.js                      |   56.25 |       60 |     100 |   56.25 | 6-8,13,17-18,21                                                                                         
+  list-page.js                   |   33.33 |    21.95 |   28.57 |      35 | 20,28,42-44,48,61-92,97-101                                                                             
+  update.js                      |    62.5 |       50 |     100 |    62.5 | 4-6,10,13-15,24,33,38-39,42                                                                             
+ substats/controls/chain-state   |   73.33 |       50 |     100 |   73.33 |                                                                                                         
+  constants.js                   |   73.33 |       50 |     100 |   73.33 | 16,19,23,26                                                                                             
+ substats/controls/public        |   48.71 |    34.61 |     100 |   48.71 |                                                                                                         
+  index.js                       |   48.71 |    34.61 |     100 |   48.71 | 50-54,59-63,67-72,76-95,100-101                                                                         
+ substats/controls/queryDB       |   82.05 |    66.66 |   71.42 |   81.57 |                                                                                                         
+  common.js                      |      80 |    66.66 |   66.66 |   79.41 | 43,49-50,66-71                                                                                          
+  dics.js                        |     100 |      100 |     100 |     100 |                                                                                                         
+ substats/controls/storage       |   54.83 |       45 |   33.33 |   54.83 |                                                                                                         
+  index.js                       |   54.83 |       45 |   33.33 |   54.83 | 19,22,27,30,37-48,53                                                                                    
+ substats/dal                    |   76.92 |       50 |     100 |   76.92 |                                                                                                         
+  dal-common.js                  |   76.92 |       50 |     100 |   76.92 | 7,12-13                                                                                                 
+ substats/routes                 |   33.89 |        0 |   14.28 |   35.08 |                                                                                                         
+  api.js                         |     100 |      100 |     100 |     100 |                                                                                                         
+  index.js                       |   71.42 |      100 |       0 |   71.42 | 15,19                                                                                                   
+  ws.js                          |   21.27 |        0 |      20 |   22.22 | 22-25,28-73                                                                                             
+ substats/util                   |    73.2 |     48.2 |   84.44 |   73.88 |                                                                                                         
+  add-functions.js               |     100 |      100 |     100 |     100 |                                                                                                         
+  chain-helper.js                |   83.72 |    65.21 |     100 |   83.72 | 20,81-88,99-100                                                                                         
+  common.js                      |   63.93 |     42.1 |   81.48 |   65.11 | 35,45,63,74,78-93,97-98,107,121,157-175,212,233-244,252,260-263,268-269,272,275,277-279,290-291,300-307 
+  crypto.js                      |     100 |       50 |     100 |     100 | 12-21                                                                                                   
+  format.js                      |   42.85 |      100 |   33.33 |   42.85 | 16-21                                                                                                   
+  mylog.js                       |   85.71 |       50 |     100 |   85.71 | 14                                                                                                      
+  sql-safe.js                    |      75 |       25 |     100 |   71.42 | 19-20                                                                                                   
+  urlparse.js                    |   88.23 |    57.14 |     100 |   88.23 | 18,25                                                                                                   
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------
+
+Test Suites: 32 passed, 32 total
+Tests:       62 passed, 62 total
+Snapshots:   0 total
+Time:        16.749 s
+```
+
 
 ## Evaluation V2
 
