@@ -33,4 +33,4 @@ Mismatched section [headers](https://subalfred.hack.ink/user/cli/workspace.html#
 
 `cargo install subalfred` still fails, but the team noted that they will fix the rc version for the next milestone.
 
-I am able to run commands such as `subalfred check`. One unit test still fails due to the `GITHUB_TOKEN` variable. I'm also not sure that any of the docs were updated.
+I am able to run commands such as `subalfred check`. One unit test still fails due to the `GITHUB_TOKEN` variable. Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
