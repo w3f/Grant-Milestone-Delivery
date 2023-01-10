@@ -3,11 +3,12 @@
 - **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subalfred.md
 - **Milestone:** 2
+- **Evaluation by:** Alxs, Keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/hack-ink/subalfred/blob/main/LICENSE) | GPLv3 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> || Documentation not accessible under docs.rs ("subalfred-0.9.0-rc19 is not a library.") as provided in the delivery. Minimal user documentation.
+| 0b. | Documentation | <ul><li>[ ] </li></ul> || Minimal user documentation.
 | 0c. | Testing guide | <ul><li>[ ] </li></ul> || One test (`github::test::track_update_should_work`) doesn't work, probably because it depends on the `GITHUB_TOKEN` local variable.
 | 1. | License | <ul><li>[x] </li></ul> | 
 | 2. | Core, CLI: track-updates | <ul><li>[ ] </li></ul> | [code](https://github.com/hack-ink/subalfred/blob/main/bin/subalfred/src/command/track_update.rs) | See comments below
@@ -27,3 +28,9 @@ Unclear how the `track-updates` command "lists the companions that you need to d
 
 Documentation is very sparse, for example in the case of the `workspace` command only the tool's CLI help is replicaded in the user guide.
 Mismatched section [headers](https://subalfred.hack.ink/user/cli/workspace.html#command-workspace-update-1), no explanation of what the different options are (what options can I provide to the `--targets` flag) or the concepts used in the tool (what exactly is a workspace? what are workspace "members"?).
+
+### General Notes v2
+
+`cargo install subalfred` still fails, but the team noted that they will fix the rc version for the next milestone.
+
+I am able to run commands such as `subalfred check`. One unit test still fails due to the `GITHUB_TOKEN` variable. I'm also not sure that any of the docs were updated.
