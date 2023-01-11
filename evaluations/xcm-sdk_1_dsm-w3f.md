@@ -13,9 +13,30 @@
 | 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk#testing | Not fully evaluated yet |
 | 1. | Create Messages Types |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/interfaces/index.ts | Not fully evaluated yet |
 | 2. | Send XCM messages |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/provider.ts | Not fully evaluated yet |
-| 3. | Testing |<ul><li>[ ] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | Connection failed msg on unit tests. No scripts for system testing. |
+| 3. | Testing |<ul><li>[ ] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | Incomplete and failing scripts for system testing. |
 
 **General Notes**
+
+## Evaluation V2
+
+The warnings in the unit tests and from ESLint were solved. 
+
+Regarding the system tests: 
+
+* Only the limited version of the methods were used in the system tests. Please include system tests for the other functions available.
+
+- rococo-to-rockmine - worked, the assets were transfered. tx: 0x7aac9818bc7ce4f91a94ac4ca48798b68450a7a45d3693c45c6b401f917ace39
+- rococo-to-dali - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0xf73f0408b2a5fd5f060a01a22eef6ce96dd4cac3cc448f62c8b3e29893cc6e45
+- rockmine-to-rococo - worked, the assets were transfered. tx: 0x44ccd0a55079683146b5fb9c32e891346824d410f44b899333a01d27b29dc750
+- rockmine-to-dali-roc.ts - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0x41a008489fce5bcb43c33be579481ffb36f328f4b61b989bee23058958f87550
+- rockmine-to-dali-asset.ts - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0x8d15e12be2cc7fbfdfb42aa5584555871f40a0ae0c7dfa198a73f943582d6dc2
+
+The XCM transactions which uses limitedReserveTransferAssets function are returning FailedToTransactAsset as showed below: 
+
+![screen](https://user-images.githubusercontent.com/112647953/211804995-75fabf14-01a0-4820-86de-22c5c00532ee.jpg)
+
+
+## Evaluation V1
 
 ### Testing
 
