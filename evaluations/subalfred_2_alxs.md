@@ -34,3 +34,40 @@ Mismatched section [headers](https://subalfred.hack.ink/user/cli/workspace.html#
 `cargo install subalfred` still fails, but the team noted that they will fix the rc version for the next milestone.
 
 I am able to run commands such as `subalfred check`. One unit test still fails due to the `GITHUB_TOKEN` variable. Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
+
+**Tests**
+
+One unit test still fails:
+
+```
+running 15 tests
+test ss58::test::all_should_work ... ok
+test system::test::swap_file_path_should_work ... ok
+test ss58::test::recover_public_key_should_fail ... ok
+test cargo::test::align_version_should_work ... ok
+test ss58::test::recover_public_key_should_work ... ok
+test ss58::test::of_should_fail ... ok
+test ss58::test::of_should_work ... ok
+test state::test::state_insert_should_work ... ok
+test cargo::test::replace_member_versions_should_work ... ok
+test cargo::test::replace_target_versions_should_work ... ok
+test github::test::track_updates_should_work ... FAILED
+test check::features::test::check_mock_runtime_should_work ... ok
+test cargo::test::members_manifests_should_work ... ok
+test jsonrpc::http::test::send_jsonrpc_should_work ... ok
+test node::test::runtime_version_should_work ... ok
+
+failures:
+
+---- github::test::track_updates_should_work stdout ----
+thread 'github::test::track_updates_should_work' panicked at 'called `Result::unwrap()` on an `Err` value: Github(NoTokenFound(NotPresent))', lib/core/src/github/test.rs:7:94
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    github::test::track_updates_should_work
+
+test result: FAILED. 14 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.75s
+
+error: test failed, to rerun pass `-p subalfred-core --lib`
+```
