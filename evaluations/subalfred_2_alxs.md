@@ -33,7 +33,7 @@ Mismatched section [headers](https://subalfred.hack.ink/user/cli/workspace.html#
 
 `cargo install subalfred` still fails, but the team noted that they will fix the rc version for the next milestone.
 
-I am able to use Subalfred and run commands such as `subalfred check`. Very useful tool! Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
+I am able to use Subalfred and run commands such as `subalfred check` and `subalfred features`. Very useful tool! Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
 
 **Tests**
 
