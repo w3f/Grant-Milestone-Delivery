@@ -39,7 +39,7 @@ I am able to run commands such as `subalfred check`. One unit test still fails d
 
 One unit test still fails:
 
-```
+```rust
 running 15 tests
 test ss58::test::all_should_work ... ok
 test system::test::swap_file_path_should_work ... ok
