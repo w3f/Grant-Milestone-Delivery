@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subalfred.md
 - **Milestone:** 2
 - **Evaluation by:** Alxs, Keeganquigley
@@ -8,11 +8,11 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/hack-ink/subalfred/blob/main/LICENSE) | GPLv3 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> || Minimal user documentation.
-| 0c. | Testing guide | <ul><li>[ ] </li></ul> || One test (`github::test::track_update_should_work`) doesn't work, probably because it depends on the `GITHUB_TOKEN` local variable.
+| 0b. | Documentation | <ul><li>[x] </li></ul> || Minimal user documentation. Consider adding more detail since substrate newbies may be using it.
+| 0c. | Testing guide | <ul><li>[x] </li></ul> || One test (`github::test::track_update_should_work`) doesn't work because it depends on the `GITHUB_TOKEN` local variable.
 | 1. | License | <ul><li>[x] </li></ul> | 
-| 2. | Core, CLI: track-updates | <ul><li>[ ] </li></ul> | [code](https://github.com/hack-ink/subalfred/blob/main/bin/subalfred/src/command/track_update.rs) | See comments below
-| 3. | Core, CLI: update-subdeps | <ul><li>[ ] </li></ul> | [code](https://github.com/hack-ink/subalfred/blob/main/bin/subalfred/src/command/workspace/update_deps.rs) | See comments below
+| 2. | Core, CLI: track-updates | <ul><li>[x] </li></ul> | [code](https://github.com/hack-ink/subalfred/blob/main/bin/subalfred/src/command/track_update.rs) | See comments below.
+| 3. | Core, CLI: update-subdeps | <ul><li>[x] </li></ul> | [code](https://github.com/hack-ink/subalfred/blob/main/bin/subalfred/src/command/workspace/update_deps.rs) | See comments below.
 | 4. | Releases | <ul><li>[x] </li></ul> | [GH](https://github.com/hack-ink/subalfred/releases), [crates.io](https://crates.io/crates/subalfred)
 
 ## General Notes
@@ -33,11 +33,11 @@ Mismatched section [headers](https://subalfred.hack.ink/user/cli/workspace.html#
 
 `cargo install subalfred` still fails, but the team noted that they will fix the rc version for the next milestone.
 
-I am able to run commands such as `subalfred check`. One unit test still fails due to the `GITHUB_TOKEN` variable. Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
+I am able to use Subalfred and run commands such as `subalfred check`. Very useful tool! Some docs were updated. I agree with my colleague that the documentation could improve. The "episodes" help, but it would be nice to see an introductory paragraph as well for each page. 
 
 **Tests**
 
-One unit test still fails:
+One unit test still fails due to the `GITHUB_TOKEN` variable:
 
 ```rust
 running 15 tests
@@ -71,3 +71,4 @@ test result: FAILED. 14 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out;
 
 error: test failed, to rerun pass `-p subalfred-core --lib`
 ```
+Team has addressed this [here](https://subalfred.hack.ink/user/cli/track-updates.html#example). Omitting the token works for now as a workaround.
