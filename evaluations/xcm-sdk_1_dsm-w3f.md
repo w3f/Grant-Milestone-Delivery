@@ -17,6 +17,19 @@
 
 **General Notes**
 
+## Evaluation V3
+
+I minted a new asset (Id: 1985) tried the XCM asset transaction and didn't worked: tx: 0x39ed3b0ae3e9d79e47265e257dba8e7e19c5eef4d5a60492d92e10fd20bd6026
+
+Result:
+
+
+![screen-failing-xcm-asset](https://user-images.githubusercontent.com/112647953/212341567-068af424-e367-434b-b5c4-be0ec9f31b52.jpg)
+
+There is anything else that I should do to this transaction work?
+
+All other transactions worked. 
+
 ## Evaluation V2
 
 The warnings in the unit tests and from ESLint were solved. 
