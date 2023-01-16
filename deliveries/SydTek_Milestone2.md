@@ -19,9 +19,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-|      0. | Rights            | All developed materials and raw data will be publicly accessible and public domain via a GitHub repository. Milestone 2 is research oriented and as such there is no code to test.                                                                                                                                                                                                                                                          |
-|  **1.** | Interviews | The SydTek team will interview members of Phala Network, RMRK and Parity Technologies to identify ways users can leverage SBTs and the Social Recovery pallet within the Polkadot and Kusama ecosystems for digital inheritance.         |
-| **1a.** | Specific Coverage | Specific deep dives will propose models and approaches users can leverage to develop proposed solutions of SBT wallets, as well as additional use cases for the Social Recovery pallet.
+|      0. | Rights            |[https://github.com/jgophd/Grant-Milestone-Delivery/blob/3a56b9855707e1065a520e8c2103070237bceb86/Lit%20Matrix%20Master-Table%201.csv](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/bc176edbce88e1551a5d97c5f5b4b0e9c44a2236/Lit%20Matrix%20Master-Table%201.csv)  | All developed materials and raw data will be publicly accessible and public domain via a GitHub repository. Milestone 2 is research oriented and as such there is no code to test.                                                                                                                                                                                                                                                          |
+|  **1.** | Interviews |  | The SydTek team will interview members of Phala Network, RMRK and Parity Technologies to identify ways users can leverage SBTs and the Social Recovery pallet within the Polkadot and Kusama ecosystems for digital inheritance.         |
+| **1a.** | Specific Coverage |  | Specific deep dives will propose models and approaches users can leverage to develop proposed solutions of SBT wallets, as well as additional use cases for the Social Recovery pallet.
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
