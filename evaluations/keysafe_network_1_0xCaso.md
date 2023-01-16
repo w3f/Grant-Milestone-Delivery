@@ -19,7 +19,7 @@
 | 5. | Support Polkadot.js | <ul><li>[x] </li></ul> | [keysafe-front/commit/80ced2f](https://github.com/keysafe-protocol/keysafe-front/commit/80ced2f0bc9a9c0f6f6f0b3e5aaf7b647a08d8d5) | - |
 <br/>
 
-## General Notes v1 - Jan 6, 2022
+## General Notes v2 - Jan 16, 2022
 - The license has been fixed;
 - For the tests, the team said that they would prefer adding other ones in the next milestone;
 - The smart contract tests have been added;
