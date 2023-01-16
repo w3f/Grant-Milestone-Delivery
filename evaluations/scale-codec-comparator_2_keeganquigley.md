@@ -63,3 +63,53 @@ running 1 test
 test codec ... ok
 ```
 `cargo clippy` generates a number of errors. Please consider checking these to see if they can be fixed.
+
+1 test fails when running `polkadot-js` test inside of /scale-codec-comparator/polkadot-js:
+
+```js
+ FAIL  test/base.spec.ts
+  base ffi codec
+    ✓ encodes compact<u32> (36 ms)
+    ✓ decode compact<u32> (2 ms)
+    ✕ encodes option<bool> (3 ms)
+    ✓ decode option<bool> (40 ms)
+    ✓ encodes bool (11 ms)
+    ✓ decode bool (1 ms)
+    ✓ encode result<u32,string> (4 ms)
+    ✓ decode result<u32,string> (65 ms)
+    ✓ encode struct (9 ms)
+    ✓ decode struct (2 ms)
+    ✓ encode enum (2 ms)
+    ✓ decode enum (3 ms)
+    ✓ encode (u32,u32) (3 ms)
+    ✓ decode (u32,u32) (3 ms)
+    ✓ encodes string (2 ms)
+    ✓ decode string (3 ms)
+    ✓ encode [u32;6] (3 ms)
+    ✓ decode [u32;6] (1 ms)
+    ✓ encode vec<u32> (30 ms)
+    ✓ decode <u32> (2 ms)
+
+  ● base ffi codec › encodes option<bool>
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "01"
+    Received: "0101"
+
+      80 |     it('encodes option<bool>', (): void => {
+      81 |         expect(tohex(new Option(registry, bool, null).toU8a())).toEqual(libm.option_bool_encode("NONE"));
+    > 82 |         expect(tohex(new Option(registry, bool, true).toU8a())).toEqual(libm.option_bool_encode("true"));
+         |                                                                 ^
+      83 |         expect(tohex(new Option(registry, bool, false).toU8a())).toEqual(libm.option_bool_encode("false"));
+      84 |     });
+      85 |     it('decode option<bool>', (): void => {
+
+      at Object.<anonymous> (test/base.spec.ts:82:65)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 19 passed, 20 total
+Snapshots:   0 total
+Time:        2.751 s
+Ran all test suites.
+```
