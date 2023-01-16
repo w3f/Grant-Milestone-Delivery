@@ -19,8 +19,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+|      0. | Rights            | All developed materials and raw data will be publicly accessible and public domain via a GitHub repository. Milestone 2 is research oriented and as such there is no code to test.                                                                                                                                                                                                                                                          |
+|  **1.** | Interviews | The SydTek team will interview members of Phala Network, RMRK and Parity Technologies to identify ways users can leverage SBTs and the Social Recovery pallet within the Polkadot and Kusama ecosystems for digital inheritance.         |
+| **1a.** | Specific Coverage | Specific deep dives will propose models and approaches users can leverage to develop proposed solutions of SBT wallets, as well as additional use cases for the Social Recovery pallet.
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
