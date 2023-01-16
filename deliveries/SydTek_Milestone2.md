@@ -10,7 +10,9 @@
 * **Milestone Number:** 2
 
 **Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+This deliverable has for the interviews with individuals from the Polkadot and Kusama ecosystems on how the social recovery pallet could be integrated into their projects. The transcripts from those interviews, along with interviews from Joe Petrowski and Shawn Tabrizi of Parity and Tyler Doussan of SafeHaven are included in Deliverable 1 below. Additionally, after speaking with Jûrgen Schouppe - the CEO and Founder of SafeHaven and reviewing the case study with him, he is looking to take the proposed recommendations highlighted in the study and develop a digital inheritance solution on Kusama. As SafeHaven currently offers a digital inheritance solution on VeChain - https://safehaven.io/ - once Milestone 3 is completed and the journal article is submitted to IEEE, we look to submit a follow-up grant to develop this proposed solution.
+
+The initial pass for the journal article (1a) has been added to the Developed Materials folder in GitHub, and the IEEE-formatted version can be found here: https://docs.google.com/document/d/1ULAgya391V04YvbEJeY4zESm08ifCFX2/edit
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
