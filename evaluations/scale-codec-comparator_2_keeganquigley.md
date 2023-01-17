@@ -16,6 +16,8 @@
 
 # General Notes
 
+Inline code comments could be improved overall. 
+
 `make` builds successfully but generates the following warnings:
 
 ```rust
