@@ -8,12 +8,12 @@ has been filled out correctly for this milestone.**
 * **Milestone Number:** 2
 
 
-| Number | Deliverable   | Link                                                                                 | Notes |
-|--------|---------------|--------------------------------------------------------------------------------------|-------|
-| 1.     | Source code   | https://github.com/gmajor-encrypt/scale-codec-comparator                             |       |
-| 2.     | License       | MIT license                                                                          | MIT   |
-| 3.     | Tests         | https://github.com/gmajor-encrypt/scale-codec-comparator#how-to-test                 |       |
-| 4.     | Github action | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows |       |
+| Number | Deliverable      | Link                                                                                 | Notes |
+|--------|------------------|--------------------------------------------------------------------------------------|-------|
+| 0a.    | License          | MIT license                                                                          | MIT   |
+| 0b.    | Documentation    | https://github.com/gmajor-encrypt/scale-codec-comparator                             |       |
+| 1.     | Enable Unit Test | https://github.com/gmajor-encrypt/scale-codec-comparator#how-to-test                 |       |
+| 2.     | Github action    | https://github.com/gmajor-encrypt/scale-codec-comparator/tree/main/.github/workflows |       |
 
 **Additional Information**
 This milestone completes the comparison test of as-scale-codec, cScale, scale-codec-cpp, scale-codec-js-library, go-substrate-rpc-client,scale-ts.
