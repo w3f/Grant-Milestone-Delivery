@@ -19,7 +19,7 @@
 
 ### Tests
 
-`./test.sh` runs python tests successfully. Works in Docker as well. However the contracts themselves don't contain cargo tests as far as I can tell.
+1. `./test.sh` runs python tests successfully. Works in Docker as well. However the contracts themselves don't contain cargo tests as far as I can tell.
 
 ```
 ./test.sh
@@ -72,7 +72,7 @@ Ran 1 test in 0.004s
 
 OK
 ```
-Despite no Rust unit tests being present, some errors still occur when running `cargo +nightly test` some I think are due to me not specifying certain parameters. I believe the "conflicting implementations of trait" errors are occuring due to a naming conflict between the cargo.toml file and the contract name that is input by the user. Can you check to see if these can be resolved?
+2. Despite no Rust unit tests being present, some errors still occur when running `cargo +nightly test` some I think are due to me not specifying certain parameters. I believe the "conflicting implementations of trait" errors are occuring due to a naming conflict between the cargo.toml file and the contract name that is input by the user. Can you check to see if these can be resolved?
 ```rust
 error[E0119]: conflicting implementations of trait `TraitCallForwarderFor<[const error]>` for type `my_psp22::_::CallBuilder`
  --> lib.rs:4:1
