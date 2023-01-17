@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/scale-codec-comparator.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
