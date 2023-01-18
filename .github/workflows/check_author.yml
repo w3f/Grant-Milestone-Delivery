@@ -15,7 +15,9 @@ jobs:
           uses: Ana06/get-changed-files@v2.0.0
           with:
             format: 'json'
-            filter: 'deliveries/*.md'
+            filter: |
+              deliveries/*.md
+              maintenance_deliveries/*.md
             
   check_author:
     runs-on: ubuntu-latest 
