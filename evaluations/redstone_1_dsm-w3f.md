@@ -9,16 +9,51 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                         |<ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/redstone-network/redstone-node/blob/main/LICENSE) |                                                              |
-| 0b.    | Documentation                   |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#run-the-rsn-node](https://github.com/redstone-network/redstone-node#run-the-rsn-node) |  |
-| 0c.    | Testing Guide                   |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#run-tests](https://github.com/redstone-network/redstone-node#run-tests) | Tests are not running. |
+| 0b.    | Documentation                   |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#run-the-rsn-node](https://github.com/redstone-network/redstone-node#run-the-rsn-node) | Not fully evaluated yet.  |
+| 0c.    | Testing Guide                   |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#run-tests](https://github.com/redstone-network/redstone-node#run-tests) |  |
 | 0d.    | Article/Tutorial                |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#module-documentation](https://github.com/redstone-network/redstone-node#module-documentation) | Need beter tutorial/article |
-| 1a.    | Substrate module: Defense    |<ul><li>[ ] </li></ul>| [	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense](	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense) | Not evaluated yet. |
-| 1b.    | Substrate module: Notification     |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/notification](https://github.com/redstone-network/redstone-node/tree/main/pallets/notification) | Not evaluated yet. |
-| 1c.    | Substrate module: Permission-capture |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture](https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture) | Not evaluated yet. |
-| 2.     | Docker                          |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#run-in-docker](https://github.com/redstone-network/redstone-node#run-in-docker) | Problem to access the service |
+| 1a.    | Substrate module: Defense    |<ul><li>[ ] </li></ul>| [	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense](	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense) | Not fully evaluated yet. |
+| 1b.    | Substrate module: Notification     |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/notification](https://github.com/redstone-network/redstone-node/tree/main/pallets/notification) | Not fully evaluated yet. |
+| 1c.    | Substrate module: Permission-capture |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture](https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture) | Not fully evaluated yet. |
+| 2.     | Docker                          |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#run-in-docker](https://github.com/redstone-network/redstone-node#run-in-docker) |  |
+
+## Evaluation V2
+
+`cargo test --release` is still failing with the msg below:
+
+```
+error[E0046]: not all trait items implemented, missing: `TransferProtectInterface`
+  --> open-runtime-module-library/currencies/src/mock.rs:76:1
+   |
+76 | impl orml_tokens::Config for Runtime {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ missing `TransferProtectInterface` in implementation
+   |
+   = help: implement the missing item: `type TransferProtectInterface = Type;`
+
+   Compiling pallet-mmr-rpc v3.0.0 (https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#814752f6)
+   Compiling pallet-transaction-payment-rpc v4.0.0-dev (https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#814752f6)
+For more information about this error, try `rustc --explain E0046`.
+error: could not compile `orml-currencies` due to previous error
+
+```
+
+However, as instructed the following commands can be used for running the automated tests on the pallets and they are working. 
+
+```
+cargo test -p pallet-permission-capture
+cargo test -p pallet-defense
+cargo test -p pallet-notification
+```
+
+The coverage of the stated pallets are:
+- pallet-permission-capture lib.rs - 151 / 189 (79.89%)
+- pallet-defense - lib.rs	177 / 548 (32.30%) - could be improved.
+- pallet-notification - lib.rs	7 / 66 (10.61%) (+10.61%) - could be improved.
+
+I was able to run the system using docker and connect to it. However, I still need the tutorial/article to execute system tests and finish the evaluation.
 
 
-## General Notes
+## Evaluation V1
 
 ### Testing Guide
 
