@@ -4,7 +4,7 @@
 The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
 has been filled out correctly for this milestone.**
 
-* **Application Document:** https://github.com/herou/Grants-Program/blob/96faafe75dfb1b322e2a4d55e7fe2480dc6ec7c2/applications/decentralized_invoice.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/decentralized_invoice.md
 * **Milestone Number:** 1
 
 | Number | Deliverable              | Link                                                                                 							                                                    | Notes                                                                                                                                                     |
