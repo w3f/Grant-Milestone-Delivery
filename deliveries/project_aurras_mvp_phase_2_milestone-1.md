@@ -5,18 +5,20 @@
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_2.md
 * **Milestone Number:** 1
 
-**Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
-
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
-
-**Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+| 0a. | License | | |
+| 0b. | Documentation | | |
+| 0c. | Testing Guide | | |
+| 1a. | Workflow Composer: Rust OpenWhisk Client Library | https://github.com/HugoByte/openwhisk-client-rust | |
+| 1b. | Workflow Composer: Composer | https://github.com/HugoByte/aurras/tree/next/workflow/composer | |
+| 1c. | Workflow Composer: Pipe | https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 | |
+| 1d. | Workflow Composer: structured YAML file | https://github.com/HugoByte/aurras/blob/next/workflow/examples/STRUCTURED_YAML.yaml | |
+| 1e. | Workflow Composer: Concat Operator | https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L362 | |
+| 1f. | Workflow Composer: Map Operator | https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L538 | |
+| 2.  | Predefined boiler plate | https://github.com/HugoByte/aurras/tree/next/workflow/boilerplate | |
+| 3a. | Flow Provider | https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/flow.py | |
+| 3b. | Task Provider | https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py | |
+| 3c. | Workflow Provider | https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py | |
