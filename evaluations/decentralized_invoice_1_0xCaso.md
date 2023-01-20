@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/decentralized_invoice.md
 - **Milestone:** 1
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -8,12 +8,21 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/gertt/Invoice/blob/ae07f6918e3d236fc2e634682120c07d83e7503a/LICENSE) | See **General Notes** |
-| 0b. | Documentation & Tutorial | <ul><li>[ ] </li></ul> | [Google Docs](https://docs.google.com/document/d/1NfbCE32XxGJFXaEI4YEcOV7F_3nVmSFDAG8BaM1BXlE/edit?usp=sharing) | See **General Notes** |
-| 0c. | Tests | <ul><li>[ ] </li></ul> | [Google Docs](https://docs.google.com/document/d/1NfbCE32XxGJFXaEI4YEcOV7F_3nVmSFDAG8BaM1BXlE/edit?usp=sharing) | See **General Notes** |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/gertt/Invoice/blob/cc525d664297a5773f22c4859f49d380489296f9/LICENSE) | See **General Notes** |
+| 0b. | Documentation & Tutorial | <ul><li>[x] </li></ul> | [Google Docs](https://docs.google.com/document/d/1NfbCE32XxGJFXaEI4YEcOV7F_3nVmSFDAG8BaM1BXlE/edit?usp=sharing) | See **General Notes** |
+| 0c. | Tests | <ul><li>[x] </li></ul> | [Google Docs](https://docs.google.com/document/d/1NfbCE32XxGJFXaEI4YEcOV7F_3nVmSFDAG8BaM1BXlE/edit?usp=sharing) | See **General Notes** |
 | 0d. | Article | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@gertiprifti/invoice-pallet-built-on-top-of-substrate-framework-bb87ca92392b) |  |
-| 0e. | Benchmarking | <ul><li>[ ] </li></ul> | [`benchmarking.rs`](https://github.com/gertt/Invoice/blob/ae07f6918e3d236fc2e634682120c07d83e7503a/pallets/invoice/src/benchmarking.rs) | See **General Notes** |
-| 1. | invoice_pallet | <ul><li>[x] </li></ul> | [`invoice`](https://github.com/gertt/Invoice/blob/ae07f6918e3d236fc2e634682120c07d83e7503a/pallets/invoice/src/lib.rs) |  |
+| 0e. | Benchmarking | <ul><li>[x] </li></ul> | [`benchmarking.rs`](https://github.com/gertt/Invoice/blob/cc525d664297a5773f22c4859f49d380489296f9/pallets/invoice/src/benchmarking.rs) | See **General Notes** |
+| 1. | invoice_pallet | <ul><li>[x] </li></ul> | [`invoice`](https://github.com/gertt/Invoice/blob/cc525d664297a5773f22c4859f49d380489296f9/pallets/invoice/src/lib.rs) |  |
+
+<br/>
+
+## General Notes v2 - Jan 19, 2023
+The README has been updated with the following changes:
+- The two mentioned commands have been added;
+- All the documentation has been moved to the README;
+- Additional documentation about the **Substrate Node Template** has been added.
+
 
 <br/>
 

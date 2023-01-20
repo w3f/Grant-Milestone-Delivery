@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-smart-contract-wizard.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -103,6 +103,7 @@ error[E0119]: conflicting implementations of trait `openbrush::openbrush_contrac
    = note: upstream crates may add a new impl of trait `parity_scale_codec::WrapperTypeDecode` for type `ink_storage_traits::impls::ResolverKey<_, ink_storage_traits::impls::ManualKey<3064586736, ink_storage_traits::impls::ManualKey<1117114132>>>` in future versions
    ```
 
+**UPDATE:** The team made changes to fix the build issues. Also, to deploy them without error I needed to switch to `cargo-contract v2.0.0-beta`.
 ## Other
 
 Minor note: Using `ink-wizard new psp22` and the like still bring up the menu to choose. Would be cool to see it shortcut directly to the appropriate contract.
