@@ -18,8 +18,10 @@ This milestone was focused on distributed key management research. Throughout th
 | 1. | Documentation |https://www.kryptik.app/blog| Same as the third deliverable.| 
 | 2.  | Article | https://www.kryptik.app/developer/recovery | A brief overview of distributed key management with a focus on account recovery. Developers are the target audience.| 
 | 3. | Formal Investigation |https://www.kryptik.app/blog| A series of blogs created during the research period (shared via Twitter, HN, etc).| 
-| 1. | Research Paper |https://www.kryptik.app/blog/wallets| An open source research paper on distributed key management.| 
+| 1. | Research Paper |https://github.com/KryptikApp/sword/blob/main/research/SWORD.md| An open source research paper on distributed key management.| 
 
 **Additional Information**
 
 The research process has been a fantastic opportunity to explore and improve wallet security. I have also received a lot of positive feedback from Web3 builders and reserachers. Looking forward to phase two!
+
+Note: In response to milestone feedback, I have modified the original research paper draft. Thanks for the feedback; you have inspired a number of different ideas.
