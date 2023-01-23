@@ -1,3 +1,24 @@
+
+# Evaluation
+
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/validators_selection.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+
+| Number | Deliverable   | Accepted | Link                                                                                 | Notes |
+|--------|---------------|----------|----------------------------------------------------------------------------|-------|
+| 0a.     | License   | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/LICENSE                            | Apache 2.0    |
+| 0b.     | Documentation       | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md                                                                        | Could be improved.   |
+| 0c.     | Tests         | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests                 | Currently failing.      |
+| 0d.     | Docker | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/Dockerfile | Currently failing. 
+| 0e.     | Article | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md |
+| 1.      | Next Pair | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
+| 2.      | Ranking Calculation | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
+| 3.      | New data | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
+| 4.      | Internal testing | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests |
+
 ## General Notes
 
 Running `docker build -t "validators_selection:Dockerfile" .` fails with the following:
