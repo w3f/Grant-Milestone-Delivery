@@ -25,6 +25,7 @@ jobs:
     if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
     outputs:
       needs_badge: ${{ steps.badge-check.outputs.check }} 
+      was_last_milestone: ${{ steps.last-milestone.outputs.check }}
 
     strategy:
       max-parallel: 1
@@ -58,6 +59,11 @@ jobs:
         # This way, there'll only be max 1 comment left per PR
         if: steps.parse-delivery.outputs.milestone_number == 1 && steps.parse-grant.outputs.level != 1
         run: echo "::set-output name=check::true"
+      
+      - name: Check if this was the last milestone
+        id: last-milestone
+        if: steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones
+        run: echo "::set-output name=check::true"
 
   comment-badge:
     runs-on: ubuntu-latest
@@ -80,4 +86,27 @@ jobs:
             Thank you for your contribution and good luck with the remaining milestones, if any!
             As usual, please let us know if you run into any delays by leaving a comment on the application PR, or directly submitting an
             [amendment](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+  comment-last-milestone:
+    runs-on: ubuntu-latest
+    needs: check-needs-badge
+    if: needs.check-needs-badge.outputs.was_last_milestone
+    steps:
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@1.0.2
+        with:
+          message: > 
+            We noticed that this is the last milestone of your project, so what are the potential next steps?<br/>
+            
+            While you can always apply for a follow-up grant, the grants program might not be the best tool for your future growth. 
+            Our main goal is to support research as well as early-stage technical projects. Below are a couple of other options in our ecosystem 
+            that might be better suited as the next step: <br/> 
+
+            Project with a Business Case/Token: [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) 
+            or [VC Funding](https://parachains.info/investors) <br/> 
+
+            Common Good Projects: [Treasury Funding](https://github.com/w3f/Grants-Program#treasury) <br/> 
+
+            Let us know if you have any questions regarding the above. We are more than happy to help you with it. 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
