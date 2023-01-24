@@ -4,7 +4,7 @@
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/SydTek.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** N/A
+- **Previously successfully merged evaluation:** [M1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/sydtek_1_semuelle.md)
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
