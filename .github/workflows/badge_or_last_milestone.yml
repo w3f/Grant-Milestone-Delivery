@@ -1,4 +1,4 @@
-name: Award Badge
+name: Award badge or comment on last milestone
 on:
   pull_request_target:
     types: [closed]
