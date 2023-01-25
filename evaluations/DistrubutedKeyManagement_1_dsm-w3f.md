@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/DistributedKeyManagement.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -8,13 +8,17 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. |  License | <ul><li>[ ] </li></ul>| | No license for the paper |
+| 0a. |  License | <ul><li>[x] </li></ul>| | Apache 2.0 |
 | 1. | Documentation |<ul><li>[x] </li></ul>|https://www.kryptik.app/blog|  | 
 | 2.  | Article |<ul><li>[x] </li></ul>| https://www.kryptik.app/developer/recovery |  | 
 | 3. | Formal Investigation |<ul><li>[x] </li></ul>|https://www.kryptik.app/blog|  | 
 | 1. | Research Paper |<ul><li>[x] </li></ul>|https://www.kryptik.app/blog/wallets|  | 
 
 **General Notes**
+
+## Evaluation V3
+
+The Apache 2.0 license was added to the repository. Other mandatory deliverables don't make sense for this milestone.
 
 ## Evaluation V2
 
