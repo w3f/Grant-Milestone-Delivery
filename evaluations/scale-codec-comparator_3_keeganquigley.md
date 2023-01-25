@@ -15,6 +15,8 @@
 
 # General Notes
 
+Relatively straight forward delivery adding Dependabot to bump updates for maintenance and testing with GitHub actions.
+
 [Dependabot](https://github.com/gmajor-encrypt/scale-codec-comparator/blob/main/.github/dependabot.yml) .yml file works. Looks like latest couple bumps from the Dependabot [failed](https://github.com/gmajor-encrypt/scale-codec-comparator/actions/runs/3982725063/jobs/6827425214)?
 
 **UPDATE:** Github action issues were resolved. It is now working as expected.
