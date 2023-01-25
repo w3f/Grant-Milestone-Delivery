@@ -8,7 +8,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [MIT](https://github.com/Acurast/acurast-substrate/tree/7eed45b5a9b90d32a76e1702501bd00570177417) | - |
+| 0a. | License | <ul><li>[x] </li></ul> | [Unlicense](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/LICENSE) | - |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [repo](https://github.com/Acurast/acurast-docs/tree/78c344025e78b67840651ef87c3ab2a4b0238f45), [deployed docs](https://docs.acurast.com/) | Inline comments are quite brief in some cases, but overall sufficient and helpful. The deployed docs are quite extensive. |
 | 0c. | Tests | <ul><li>[x] </li></ul> | [test instructions](https://github.com/Acurast/acurast-core/tree/705d0b85c0c75d664f415052d70df7eed98ba95b#build--tests) | See [tests feedback](#tests-feedback) |
 | 0d. | Docker Container | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Acurast/acurast-core/blob/705d0b85c0c75d664f415052d70df7eed98ba95b/Dockerfile) | See [docker feedback](#docker-feedback) |
