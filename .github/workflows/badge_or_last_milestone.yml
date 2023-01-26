@@ -108,5 +108,5 @@ jobs:
 
             Common Good Projects: [Treasury Funding](https://github.com/w3f/Grants-Program#treasury) <br/> 
 
-            Let us know if you have any questions regarding the above. We are more than happy to help you with it. 
+            Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
