@@ -37,15 +37,15 @@
 
 **Milestone 3 - Parachain and Oracle Client PoC Deployment**
 
-| Number | Deliverable                     | Link                                                                                 | Notes                                                                                                 |
-| ------ | ------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| 0a.    | License                         | https://github.com/Acurast/acurast-substrate/tree/develop                            |                                                                                                       |
-| 0b.    | Documentation                   | https://github.com/Acurast/acurast-docs                                              |                                                                                                       |
-| 0c.    | Tests                           | https://github.com/Acurast/acurast-core                                              |                                                                                                       |
-| 0d.    | Testing Guide                   | https://github.com/Acurast/acurast-processor                                         | The documentation contains step-by-step guides for testing                                            |
-| 1.     | Deployment of testnet           | https://polkadot.js.org/apps/?rpc=wss://wss.collator-1.acurast.papers.tech#/explorer |                                                                                                       |
-| 2.     | Job Scheduler Module            | https://github.com/Acurast/acurast-substrate/tree/develop                            | Module used to schedule and parametrize jobs with time, interval, script and fulfill endpoint.        |
-| 3.     | Consumable Attested Data Module | https://github.com/Acurast/acurast-substrate/tree/develop                            | Module used to make the data provided on-chain formatted in a consumable format for other parachains. |
+| Number | Deliverable                     | Link                                                                                      | Notes                                                                                                 |
+| ------ | ------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 0a.    | License                         | https://github.com/Acurast/acurast-substrate/tree/develop                                 |                                                                                                       |
+| 0b.    | Documentation                   | https://github.com/Acurast/acurast-docs                                                   |                                                                                                       |
+| 0c.    | Tests                           | https://github.com/Acurast/acurast-core                                                   |                                                                                                       |
+| 0d.    | Testing Guide                   | https://github.com/Acurast/acurast-processor                                              | The documentation contains step-by-step guides for testing                                            |
+| 1.     | Deployment of testnet           | https://polkadot.js.org/apps/?rpc=wss://wss.collator-1.acurast.papers.tech#/explorer      |                                                                                                       |
+| 2.     | Job Scheduler Module            | https://github.com/Acurast/acurast-core/tree/develop/pallets/marketplace                  | Module used to schedule and parametrize jobs with time, interval, script and fulfill endpoint.        |
+| 3.     | Consumable Attested Data Module | https://github.com/Acurast/acurast-core/tree/develop/pallets/acurast-fulfillment-receiver | Module used to make the data provided on-chain formatted in a consumable format for other parachains. |
 
 **Additional Information**
 
