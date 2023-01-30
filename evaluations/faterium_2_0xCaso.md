@@ -18,6 +18,25 @@
 | 3. | All web pages for dApp | <ul><li>[ ] </li></ul> | https://dapp.faterium.com | See **General Notes** |
 <br/>
 
+## General Notes v2 - Jan 30, 2023
+In **General Notes v1** please ignore:
+- (in **0c. Testing Guide**) the testing errors, as they didn't appear in another testing machine;
+- (in **3. All web pages for dApp**) I managed to see the created asset in polkadot.js. I didn't see it because the dApp redirected me to https://dapp-apps.faterium.com/#/assets, which of course won't show me the asset as that is the hosted node, and I'm working in local (the other comments about this are still valid).
+
+Finally, I add a comment about the [`docker-compose.yml`](https://github.com/faterium/faterium-server/blob/7eab035357e6bd2bd3f9fc1ed4e3183874b7f953/infra/local/docker-compose.yml) file, related to the server.
+Be aware that if you run this, you open the ports to the entire internet and not just "locally". To do so, you should replace each `port:` config like this:
+from
+```
+port:
+    XXXX:XXXX
+```
+to
+```
+port:
+    127.0.0.1:XXXX:XXXX
+```
+<br/>
+
 ## General Notes v1 - Jan 30, 2023
 From the last milestone, the team added some functionalities to the dApp (both on-chain and off-chain), they did a good job in my opinion.
 
