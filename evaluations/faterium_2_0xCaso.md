@@ -8,14 +8,35 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/faterium/faterium-dapp/blob/0509df4b49a8bee0bbc6a897fd6f62b80669766b/LICENSE) |  |
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [faterium-dapp/README.md](https://github.com/faterium/faterium-dapp/blob/0509df4b49a8bee0bbc6a897fd6f62b80669766b/README.md) |  |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [faterium-dapp/README.md#local-testing-setup](https://github.com/faterium/faterium-dapp/blob/0509df4b49a8bee0bbc6a897fd6f62b80669766b/README.md#local-testing-setup) | See **General Notes** |
-| 0d. | Docker | <ul><li>[x] </li></ul> | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/7eab035357e6bd2bd3f9fc1ed4e3183874b7f953/Dockerfile) |  |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/LICENSE) |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [faterium-dapp/README.md](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/README.md) |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [faterium-dapp/README.md#local-testing-setup](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/README.md#local-testing-setup) | See **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/9ef9f0aae522ed03aa04cff87223d676fb1a819c/Dockerfile) |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@dodorare/power-of-voting-why-does-the-world-need-a-universal-voting-platform-e98cf64e06c9) | |
 | 1. | Create design for Faterium dApp | <ul><li>[x] </li></ul> | https://dapp.faterium.com |  |
-| 2. | Extend Faterium server | <ul><li>[x] </li></ul> | [faterium-server](https://github.com/faterium/faterium-server/tree/7eab035357e6bd2bd3f9fc1ed4e3183874b7f953) |  |
+| 2. | Extend Faterium server | <ul><li>[x] </li></ul> | [faterium-server](https://github.com/faterium/faterium-server/tree/9ef9f0aae522ed03aa04cff87223d676fb1a819c) |  |
 | 3. | All web pages for dApp | <ul><li>[ ] </li></ul> | https://dapp.faterium.com | See **General Notes** |
+<br/>
+
+## General Notes v3 - Jan 31, 2023
+The team improved a lot of things (you can see in the PR conversation):
+>1. **Added categories creation**;
+>2. **Improved docker** (thanks for mentioning the docker-compose ports issue, I fixed it and added the same file to the `faterium-dapp` repository to enhance developer experience);
+>3. **Better error handling** (now errors look better for PocketBase issues and create a link for a specific block for Substrate errors);
+>4. **Tests** (now it's possible to run against `testnet` and `local`);
+>5. **Issue with minimum balance** (I fixed it by checking the correct amount on the frontend side because I think it should be more than 0 by design).
+
+So now everything from the evaluations v1 and v2 is fixed.
+
+Then, I had problems with the local setup becuase of a browser's cache problem. Deleting the cache worked, but they also added in the code the cache reset.
+
+Finally, I comment the last three things that I noticed:
+1. One should be able to link a community to a category (during its creation);
+2. Polls that are not made in a community should have a default "non-community" image (or no community image) and the “@” removed, examples (**POLL 1** and **Test**):
+   - screenshot
+3. Polls that have not the banner are cut:
+   - screenshot
+
 <br/>
 
 ## General Notes v2 - Jan 30, 2023
