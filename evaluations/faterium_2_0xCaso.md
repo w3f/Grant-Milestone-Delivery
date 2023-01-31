@@ -33,9 +33,11 @@ Then, I had problems with the local setup becuase of a browser's cache problem. 
 Finally, I comment the last three things that I noticed:
 1. One should be able to link a community to a category (during its creation);
 2. Polls that are not made in a community should have a default "non-community" image (or no community image) and the “@” removed, examples (**POLL 1** and **Test**):
-   - screenshot
+
+   ![Screenshot 2023-01-31 at 16 56 55](https://user-images.githubusercontent.com/22419450/215819719-d634fefd-7b99-468f-87e4-0c789ea86a35.png)
 3. Polls that have not the banner are cut:
-   - screenshot
+
+   ![Screenshot 2023-01-31 at 16 55 08](https://user-images.githubusercontent.com/22419450/215819776-512ce15d-8c70-4c71-b693-2a2201b24023.png)
 
 <br/>
 
