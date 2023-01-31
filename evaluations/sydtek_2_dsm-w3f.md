@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/SydTek.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,11 +9,19 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 |      0. | Rights  |<ul><li>[x] </li></ul>|https://github.com/jgophd/Developed-Materials-and-Raw-Data | |
-|  **1.** | Interviews |<ul><li>[ ] </li></ul>| [link](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/main/Interview%20Transcripts%20Transcribed%20by%20Otter.ai)  | One interview, other transcripts extracted from youtube |
-| **1a.** | Specific Coverage |<ul><li>[ ] </li></ul>| [link](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/main/Digital%20Inheritance%20in%20Web3:%20A%20Case%20Study%20of%20Soulbound%20Tokens%20and%20the%20Social%20Recovery%20Pallet%20within%20the%20Polkadot%20and%20Kusama%20Ecosystems) | Some changes requested |
+|  **1.** | Interviews |<ul><li>[x] </li></ul>| [link](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/main/Interview%20Transcripts%20Transcribed%20by%20Otter.ai)  |  |
+| **1a.** | Specific Coverage |<ul><li>[x] </li></ul>| [link](https://github.com/jgophd/Developed-Materials-and-Raw-Data/blob/main/Digital%20Inheritance%20in%20Web3:%20A%20Case%20Study%20of%20Soulbound%20Tokens%20and%20the%20Social%20Recovery%20Pallet%20within%20the%20Polkadot%20and%20Kusama%20Ecosystems) |  |
 
 **General Notes**
 
+## Evaluation V2
+
+The author [justified](https://github.com/w3f/Grant-Milestone-Delivery/pull/689#issuecomment-1405315863) why he didn't conduct more interviews, the reasons are ok in my opinion. Doing more interviews possibly would not add more content to the article. 
+
+My questions and requests were all fulfilled, including the publishing of [the preprint](https://arxiv.org/abs/2301.11074).
+
+
+## Evaluation V1
 
 Iterviews:
 
