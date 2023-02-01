@@ -116,7 +116,7 @@ jobs:
                     "FALSE",
                     "FALSE",
                     "FALSE",
-                    "FALSE",
+                    "FALSE"
                   ]],
                   "worksheetTitle": "Evaluation",
                   "minCol": 1,
