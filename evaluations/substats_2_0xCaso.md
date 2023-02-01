@@ -22,3 +22,5 @@
 The delivery is very good. The documentation and guide is well written. In fact, thanks to it, I managed to test the backend through the developed API. Both the setups with docker and without docker are straightforward.
 
 During the tests, I found an issue: the rows in the database were duplicated (see [my comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/716#pullrequestreview-1277499859) in the pull request). The team fixed immediately the issue, and I didn't find any other problem.
+
+If there are any other bugs, probably they'll be more visible with the frontend, which will be delivered in the next milestone.
