@@ -17,10 +17,10 @@ Also, we will prepare and publish and Article, that will explain a new concept o
 
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
-| 0a. | License | https://github.com/faterium/faterium-dapp/blob/v0.2.2/LICENSE | Apache License 2.0 |
-| 0b. | Documentation | https://github.com/faterium/faterium-dapp/blob/v0.2.2/README.md | [faterium-dapp/README](https://github.com/faterium/faterium-dapp/blob/v0.2.2/README.md) |
-| 0c. | Testing Guide | https://github.com/faterium/faterium-dapp/tree/v0.2.1#local-testing-setup | Documentation on how to run PlayWright E2E tests for Faterium dApp (we implemented E2E tests for UI as it's makes sense more than Unit). And added [docker-compose file](https://github.com/faterium/faterium-dapp/blob/v0.2.2/docker-compose.yml) for better testing experience. |
-| 0d. | Docker | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/v0.2.1/Dockerfile) | Dockerfiles for [server](https://github.com/faterium/faterium-server/blob/v0.2.1/Dockerfile) and [docker-compose for web tests](https://github.com/faterium/faterium-dapp/blob/v0.2.2/docker-compose.yml). |
+| 0a. | License | https://github.com/faterium/faterium-dapp/blob/v0.2.3/LICENSE | Apache License 2.0 |
+| 0b. | Documentation | https://github.com/faterium/faterium-dapp/blob/v0.2.3/README.md | [faterium-dapp/README](https://github.com/faterium/faterium-dapp/blob/v0.2.3/README.md) |
+| 0c. | Testing Guide | https://github.com/faterium/faterium-dapp/tree/v0.2.1#local-testing-setup | Documentation on how to run PlayWright E2E tests for Faterium dApp (we implemented E2E tests for UI as it's makes sense more than Unit). And added [docker-compose file](https://github.com/faterium/faterium-dapp/blob/v0.2.3/docker-compose.yml) for better testing experience. |
+| 0d. | Docker | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/v0.2.3/Dockerfile) | Dockerfiles for [server](https://github.com/faterium/faterium-server/blob/v0.2.3/Dockerfile) and [docker-compose for web tests](https://github.com/faterium/faterium-dapp/blob/v0.2.3/docker-compose.yml). |
 | 0e. | Article | https://medium.com/@dodorare/power-of-voting-why-does-the-world-need-a-universal-voting-platform-e98cf64e06c9 | We wrote an article that explains Faterium goals, Crowdfunding Polls, and future plans. [Published on Medium](https://medium.com/@dodorare/power-of-voting-why-does-the-world-need-a-universal-voting-platform-e98cf64e06c9). |
 | 1. | Create design for Faterium dApp | https://dapp.faterium.com | We designed minimalistic Faterium UI that already available on https://dapp.faterium.com. |
 | 2. | Extend Faterium server | https://github.com/faterium/faterium-server/tree/v0.2.1/ | We updated server collections for new features like: Communities, User Profiles, Categories, Assets. |
