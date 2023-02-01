@@ -1,8 +1,8 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/new_bls12_hash_function.md
-- **Milestone:** 1
+- **Milestone:** 2
 - **Kusama Identity:** N/A
 - **Previously successfully merged evaluation:** N/A
 
