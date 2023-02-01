@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/faterium.md
 - **Milestone:** 2
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -8,14 +8,23 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/LICENSE) |  |
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [faterium-dapp/README.md](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/README.md) |  |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [faterium-dapp/README.md#local-testing-setup](https://github.com/faterium/faterium-dapp/blob/abc90464081379d84780a87a99ec08e318321b02/README.md#local-testing-setup) | See **General Notes** |
-| 0d. | Docker | <ul><li>[x] </li></ul> | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/9ef9f0aae522ed03aa04cff87223d676fb1a819c/Dockerfile) |  |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/faterium/faterium-dapp/blob/5014c05958a16f9a69af917a38461091b7843cc7/LICENSE) |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [faterium-dapp/README.md](https://github.com/faterium/faterium-dapp/blob/5014c05958a16f9a69af917a38461091b7843cc7/README.md) |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [faterium-dapp/README.md#local-testing-setup](https://github.com/faterium/faterium-dapp/blob/5014c05958a16f9a69af917a38461091b7843cc7/README.md#local-testing-setup) | See **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Faterium Server Dockerfile](https://github.com/faterium/faterium-server/blob/173d021ad574388a58e685493138bea224abb854/Dockerfile) |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Medium article](https://medium.com/@dodorare/power-of-voting-why-does-the-world-need-a-universal-voting-platform-e98cf64e06c9) | |
 | 1. | Create design for Faterium dApp | <ul><li>[x] </li></ul> | https://dapp.faterium.com |  |
-| 2. | Extend Faterium server | <ul><li>[x] </li></ul> | [faterium-server](https://github.com/faterium/faterium-server/tree/9ef9f0aae522ed03aa04cff87223d676fb1a819c) |  |
-| 3. | All web pages for dApp | <ul><li>[ ] </li></ul> | https://dapp.faterium.com | See **General Notes** |
+| 2. | Extend Faterium server | <ul><li>[x] </li></ul> | [faterium-server](https://github.com/faterium/faterium-server/tree/173d021ad574388a58e685493138bea224abb854) |  |
+| 3. | All web pages for dApp | <ul><li>[x] </li></ul> | https://dapp.faterium.com | See **General Notes** |
+<br/>
+
+## General Notes v4 - Feb 1, 2023
+The three minor issues from **General Notes v3** have been fixed.
+
+Then, a problem with the **Create Profile** page appeared, but the team fixed it.
+
+Now everything looks very good.
+
 <br/>
 
 ## General Notes v3 - Jan 31, 2023
