@@ -107,16 +107,7 @@ jobs:
                     "",
                     "=IF(ISNUMBER(INDIRECT(ADDRESS(ROW(),11))),INDIRECT(ADDRESS(ROW(),11))-INDIRECT(ADDRESS(ROW(),10)),\"\")",
                     "=IF(INDIRECT(ADDRESS(ROW(),5))=\"Done\",VLOOKUP(INDIRECT(ADDRESS(ROW(),2)),Milestones!B:BE,SWITCH(INDIRECT(ADDRESS(ROW(),3)),1,19,2,23,3,27,4,31,5,35,6,39,7,43,8,47,9,51,10,55),FALSE),\"\")",
-                    "=IF(INDIRECT(ADDRESS(ROW(),5))=\"Done\",VLOOKUP(INDIRECT(ADDRESS(ROW(),2)),Milestones!B:BE,SWITCH(INDIRECT(ADDRESS(ROW(),3)),1,20,2,24,3,28,4,32,5,36,6,40,7,44,8,48,9,52,10,56),FALSE),\"\")",
-                    "",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE",
-                    "FALSE"
+                    "=IF(INDIRECT(ADDRESS(ROW(),5))=\"Done\",VLOOKUP(INDIRECT(ADDRESS(ROW(),2)),Milestones!B:BE,SWITCH(INDIRECT(ADDRESS(ROW(),3)),1,20,2,24,3,28,4,32,5,36,6,40,7,44,8,48,9,52,10,56),FALSE),\"\")"
                   ]],
                   "worksheetTitle": "Evaluation",
                   "minCol": 1,
