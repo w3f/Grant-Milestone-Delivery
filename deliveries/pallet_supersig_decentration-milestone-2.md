@@ -37,7 +37,7 @@ Milestone 2 is about adding user interface within the "apps" frontend environmen
 | 0e. | Article  | https://decentration.medium.com/supersig-like-multisig-but-with-superpowers-86b9ce0412f6,   https://www.loom.com/share/dbcaa6319b1a4644aacb709aa0e38783 | Article and video for reviewers |
 | 1. | Substrate module: pallet_supersig |  pallet_supersig https://github.com/kabocha-network/pallet_supersig/blob/polkadot-v0.9.28/src/lib.rs | |
 | 2. | Substrate-supersig template Chain | node-template containing pallet supersig and rpc functions https://github.com/decentration/substrate-supersig-template | |
-| 3. | Polkadot JS Apps UI Fork | https://github.com/decentration/apps/tree/page-supersig-m2  | be sure to follow this guide with simple steps to install everything https://decentration.medium.com/setup-for-testing-supersig-ui-m2-fac2f7ab20a3 | |
+| 3. | Polkadot JS Apps UI Fork | https://github.com/decentration/apps/tree/page-supersig-m2-new  | be sure to follow this guide with simple steps to install everything https://decentration.medium.com/setup-for-testing-supersig-ui-m2-fac2f7ab20a3 | |
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
