@@ -10,17 +10,40 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[MIT SDK](https://github.com/paraspell/sdk/blob/main/LICENSE), [MIT UI-V2](https://github.com/paraspell/ui-v2/blob/main/LICENSE)| MIT| 
 | 0b.  | Documentation|<ul><li>[x] </li></ul> |[Usage guide file](https://github.com/paraspell/ui-v2/blob/main/README.md)| 
-| 0c.  | Testing guide|<ul><li>[ ] </li></ul> |[Testing guide SDK](https://github.com/paraspell/xcm-sdk/tree/main#-development),[Testing guide UI-V2](https://github.com/paraspell/ui-v2#31-prerequisites)| Need examples to test the user interface | 
-| 0d.  | Docker|<ul><li>[ ] </li></ul> |[Update UI to newest version of SDK](https://github.com/paraspell/ui-v1/commit/5dea10c4e814b7f0123441858c907c31fca0b081), [Guide on launching dockerized version](https://github.com/paraspell/ui-v2#start-application-in-docker-container) | Run but the app presents 404 | 
+| 0c.  | Testing guide|<ul><li>[ ] </li></ul> |[Testing guide SDK](https://github.com/paraspell/xcm-sdk/tree/main#-development),[Testing guide UI-V2](https://github.com/paraspell/ui-v2#31-prerequisites)| Some examples provided fail | 
+| 0d.  | Docker|<ul><li>[x] </li></ul> |[Update UI to newest version of SDK](https://github.com/paraspell/ui-v1/commit/5dea10c4e814b7f0123441858c907c31fca0b081), [Guide on launching dockerized version](https://github.com/paraspell/ui-v2#start-application-in-docker-container) |  | 
 | 0e. | Article|<ul><li>[x] </li></ul> | [Medium article](https://medium.com/@dudo50/sdk-meant-to-unify-cross-chain-experience-on-polkadot-paraspell-xcm-sdk-ec8a781f4f57)|  |
 | 1.  | Release new functionality|<ul><li>[x] </li></ul> |[NPM Commit](https://github.com/paraspell/xcm-sdk/commit/51de81fc0a060a3fdeec004de8c4ddee71c70c6a)|  | 
 | 2.a | Update ParaSpell UI I|<ul><li>[x] </li></ul> |[Update UI-V1 to Builder commit](https://github.com/paraspell/ui-v1/commit/2d67280b334f9f18d40c2ce68d831c1d61e6c80f)| | 
 | 2.b  | Update ParaSpell UI II|<ul><li>[x] </li></ul> |[Update UI-V1 to Builder commit](https://github.com/paraspell/ui-v1/commit/2d67280b334f9f18d40c2ce68d831c1d61e6c80f)| | 
 | 2.c  | Update ParaSpell UI III|<ul><li>[x] </li></ul> |[Update UI-V1 to Builder commit](https://github.com/paraspell/ui-v1/commit/2d67280b334f9f18d40c2ce68d831c1d61e6c80f)| | 
-| 3.  | Add comprehensive Wiki guide|<ul><li>[ ] </li></ul> |[Wiki guide for UI & SDK](https://paraspell.github.io/docs/)| Need examples to test the user interface | 
-| 4.  | Use scaffold template from Milestone 1 to update UI|<ul><li>[ ] </li></ul> |[UI-V2](https://github.com/paraspell/ui-v2)| Need examples to test the user interface | 
+| 3.  | Add comprehensive Wiki guide|<ul><li>[x] </li></ul> |[Wiki guide for UI & SDK](https://paraspell.github.io/docs/)|  | 
+| 4.  | Use scaffold template from Milestone 1 to update UI|<ul><li>[ ] </li></ul> |[UI-V2](https://github.com/paraspell/ui-v2)| Some examples provided fail | 
 | 5.  | Integrate suggestions from [evaluation](https://github.com/w3f/Grant-Milestone-Delivery/blob/1343c66d74a1078b2a30972463a614737ed8aa92/evaluations/paraspell_1_keeganquigley.md)|<ul><li>[x] </li></ul> |[Features added in UI-V2](https://github.com/paraspell/ui-v2)|  | 
 
+## Evaluation V2
+
+Using UI-V2 most of the examples provided for manual testing worked well. However, in the transaction from Parachain to Relay Chain and Parachain to Parachain the the events were not emitted and seems that the values were not transferred. The application shows a msg that the transaction was successful. Could you assist with that? 
+
+Parachain to Relay chain
+ 
+![image](https://user-images.githubusercontent.com/112647953/216694744-b49071d5-7a76-4a6b-ad2d-d0502d950207.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216694758-951346dd-de4c-44be-8928-daf91b77419c.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216694779-a35850d8-ecef-4a34-bb3b-7c53db78682e.png)
+
+
+Parachain to Parachain
+
+![image](https://user-images.githubusercontent.com/112647953/216694800-05f99678-841d-415d-912c-4c5b1e80da51.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216694807-ef9345fb-90a6-45df-91e9-b5d9963bb1ae.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216694820-c1b614d1-d8c8-439b-9edb-928b21516495.png)
+
+
+## Evaluation V1
 
 ### System tests
 
