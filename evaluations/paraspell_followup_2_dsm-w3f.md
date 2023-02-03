@@ -10,12 +10,27 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>|[MIT](https://github.com/paraspell/sdk/blob/main/LICENSE)| MIT| 
 | 0b.  | Documentation | <ul><li>[ ] </li></ul> |[Usage guide file](https://github.com/paraspell/xcm-sdk/blob/main/README.md)| Not fully evaluated yet| 
-| 0c.  | Testing guide | <ul><li>[ ] </li></ul> |[Added tests PR](https://github.com/paraspell/xcm-sdk/pull/19), [Testing guide](https://github.com/paraspell/xcm-sdk/tree/main/#-development)| Unit tests are running ok, lack of complete examples for system test. | 
+| 0c.  | Testing guide | <ul><li>[ ] </li></ul> |[Added tests PR](https://github.com/paraspell/xcm-sdk/pull/19), [Testing guide](https://github.com/paraspell/xcm-sdk/tree/main/#-development)| Some examples provided fail | 
 | 0d.  | Docker | <ul><li>[x] </li></ul> |[Commit updating UI to newest version](https://github.com/paraspell/ui-v1/commit/5dea10c4e814b7f0123441858c907c31fca0b081), [Guide on launching dockerized version](https://github.com/paraspell/ui#start-application-in-docker-container) | | 
 | 1.  | Add support for checking data that does not change | <ul><li>[x] </li></ul> |[Implementing constants that do not change like node id and asset decimals](https://github.com/paraspell/sdk/commit/aea02541f7168d7a7f566b7311fcf70f6a977115)|  | 
-| 2 | Rewrite SDK to builder pattern | <ul><li>[ ] </li></ul> |[Builder pattern commit](https://github.com/paraspell/sdk/commit/74fba22522449a75ecdc82a394ff2336d9c1ec05), [Builder pattern usage guide](https://github.com/paraspell/xcm-sdk/tree/main#currently-implemented-pallets)| Lack complete executable example for testing. | 
-| 3.  | Make a map of compatible <chain, pallet> | <ul><li>[ ] </li></ul> |[xcmPallet map feature](https://github.com/paraspell/xcm-sdk/commit/8faa6ffb4e3e8640dd4a59008d2d456a1be0cefd), [usage guide for testing](https://github.com/paraspell/xcm-sdk/commit/c6f4bfa810444eab9f101dcdc2062ff7d7ca86b0)| Lack complete executable example for testing.| 
+| 2 | Rewrite SDK to builder pattern | <ul><li>[ ] </li></ul> |[Builder pattern commit](https://github.com/paraspell/sdk/commit/74fba22522449a75ecdc82a394ff2336d9c1ec05), [Builder pattern usage guide](https://github.com/paraspell/xcm-sdk/tree/main#currently-implemented-pallets)| Some examples provided fail | 
+| 3.  | Make a map of compatible <chain, pallet> | <ul><li>[ ] </li></ul> |[xcmPallet map feature](https://github.com/paraspell/xcm-sdk/commit/8faa6ffb4e3e8640dd4a59008d2d456a1be0cefd), [usage guide for testing](https://github.com/paraspell/xcm-sdk/commit/c6f4bfa810444eab9f101dcdc2062ff7d7ca86b0)| Some examples provided fail | 
 | 4.  | Use [turborepo](https://turbo.build/) | <ul><li>[x] </li></ul> |[Monorepo branch](https://github.com/paraspell/xcm-sdk/tree/beta-monorepo)| | 
+
+## Evaluation V2
+
+Using UI-V1 most of the examples provided for manual testing worked well. However, in the transaction from Parachain to Relay Chain the the events were not emitted and seems that the values were not transferred. The application shows a msg that the transaction was successful. Could you assist with that? 
+
+![image](https://user-images.githubusercontent.com/112647953/216679088-15ac65c0-e18a-431d-9e4d-70f01ad9aa11.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216679348-62de240e-f900-4cfe-a743-f3a9d0a97c51.png)
+
+![image](https://user-images.githubusercontent.com/112647953/216679430-e5dadfbb-2c83-45d9-aba0-165c3a424b57.png)
+
+
+The automated test coverage is still the same. (Not mandatory to fix)
+
+## Evaluation V1
 
 ### System tests
 
