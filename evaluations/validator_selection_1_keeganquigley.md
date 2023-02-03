@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/validators_selection.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -10,14 +10,14 @@
 | Number | Deliverable   | Accepted | Link                                                                                 | Notes |
 |--------|---------------|----------|----------------------------------------------------------------------------|-------|
 | 0a.     | License   | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/LICENSE                            | Apache 2.0    |
-| 0b.     | Documentation       | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md                                                                        | Could be improved.   |
-| 0c.     | Tests         | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests                 | Currently failing.      |
+| 0b.     | Documentation       | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md                                                                        | Docs were somewhat improved upon request.   |
+| 0c.     | Tests         | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests                 | Unittests pass successfully.      |
 | 0d.     | Docker | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/Dockerfile | Builds/runs successfully. 
-| 0e.     | Article | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md |
-| 1.      | Next Pair | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
-| 2.      | Ranking Calculation | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
-| 3.      | New data | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py |
-| 4.      | Internal testing | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests |
+| 0e.     | Article | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/README.md | Looks good.
+| 1.      | Next Pair | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py | Looks good.
+| 2.      | Ranking Calculation | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py | Looks good.
+| 3.      | New data | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/blob/main/src/polkadot.py | Looks good.
+| 4.      | Internal testing | <ul><li>[x] </li></ul> | https://github.com/miepsik/validators_selection/tree/main/tests | Looks good.
 
 ## General Notes
 
@@ -484,3 +484,25 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://172.17.0.2:14237
 Press CTRL+C to quit
 ```
+
+## V3
+
+API commands: Curl works to talk with the server locally. All calls/responses work as intended.
+
+All issues have been resolved. Unittests now pass both manually and via Docker.
+```js
+n:  34   mi: 93   me: 0   z: 250
+n:  34   mi: 93   me: 0   z: 250
+n:  34   mi: 93   me: 0   z: 250
+n:  34   mi: 92   me: 0   z: 250
+n:  34   mi: 93   me: 0   z: 250
+n:  34   mi: 92   me: 0   z: 250
+n:  34   mi: 93   me: 0   z: 250
+.
+----------------------------------------------------------------------
+Ran 8 tests in 60.920s
+
+OK
+```
+
+Would be nice if you could include this command `pip3 install -r requirements.txt` in the guide as well.
