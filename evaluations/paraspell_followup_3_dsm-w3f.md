@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ParaSpell_follow-up.md
 - **Milestone:** 3 
 - **Kusama Identity:** Address
@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[MIT SDK](https://github.com/paraspell/sdk/blob/main/LICENSE), [MIT UI-V2](https://github.com/paraspell/ui-v2/blob/main/LICENSE)| MIT| 
 | 0b.  | Documentation|<ul><li>[x] </li></ul> |[Usage guide file](https://github.com/paraspell/ui-v2/blob/main/README.md)| 
-| 0c.  | Testing guide|<ul><li>[ ] </li></ul> |[Testing guide SDK](https://github.com/paraspell/xcm-sdk/tree/main#-development),[Testing guide UI-V2](https://github.com/paraspell/ui-v2#31-prerequisites)| Some examples provided fail | 
+| 0c.  | Testing guide|<ul><li>[x] </li></ul> |[Testing guide SDK](https://github.com/paraspell/xcm-sdk/tree/main#-development),[Testing guide UI-V2](https://github.com/paraspell/ui-v2#31-prerequisites)|  | 
 | 0d.  | Docker|<ul><li>[x] </li></ul> |[Update UI to newest version of SDK](https://github.com/paraspell/ui-v1/commit/5dea10c4e814b7f0123441858c907c31fca0b081), [Guide on launching dockerized version](https://github.com/paraspell/ui-v2#start-application-in-docker-container) |  | 
 | 0e. | Article|<ul><li>[x] </li></ul> | [Medium article](https://medium.com/@dudo50/sdk-meant-to-unify-cross-chain-experience-on-polkadot-paraspell-xcm-sdk-ec8a781f4f57)|  |
 | 1.  | Release new functionality|<ul><li>[x] </li></ul> |[NPM Commit](https://github.com/paraspell/xcm-sdk/commit/51de81fc0a060a3fdeec004de8c4ddee71c70c6a)|  | 
@@ -18,8 +18,13 @@
 | 2.b  | Update ParaSpell UI II|<ul><li>[x] </li></ul> |[Update UI-V1 to Builder commit](https://github.com/paraspell/ui-v1/commit/2d67280b334f9f18d40c2ce68d831c1d61e6c80f)| | 
 | 2.c  | Update ParaSpell UI III|<ul><li>[x] </li></ul> |[Update UI-V1 to Builder commit](https://github.com/paraspell/ui-v1/commit/2d67280b334f9f18d40c2ce68d831c1d61e6c80f)| | 
 | 3.  | Add comprehensive Wiki guide|<ul><li>[x] </li></ul> |[Wiki guide for UI & SDK](https://paraspell.github.io/docs/)|  | 
-| 4.  | Use scaffold template from Milestone 1 to update UI|<ul><li>[ ] </li></ul> |[UI-V2](https://github.com/paraspell/ui-v2)| Some examples provided fail | 
+| 4.  | Use scaffold template from Milestone 1 to update UI|<ul><li>[x] </li></ul> |[UI-V2](https://github.com/paraspell/ui-v2)|  | 
 | 5.  | Integrate suggestions from [evaluation](https://github.com/w3f/Grant-Milestone-Delivery/blob/1343c66d74a1078b2a30972463a614737ed8aa92/evaluations/paraspell_1_keeganquigley.md)|<ul><li>[x] </li></ul> |[Features added in UI-V2](https://github.com/paraspell/ui-v2)|  | 
+
+## Evaluation V3
+
+After considering the balance constraints explained [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/715#issuecomment-1416347119) the transaction worked and the events were shown after the finalization of the transaction. As an improvement, please consider adding the balance observation in the tutorial of the software. Please consider either to report this possible bug with XCM. If it is not a bug, at least someone can help to identify how to identify the case when the XCM transaction is not completed (the balance is not transferred).
+
 
 ## Evaluation V2
 
