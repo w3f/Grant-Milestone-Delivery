@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ParaSpell_follow-up.md
 - **Milestone:** 2 
 - **Kusama Identity:** Address
@@ -9,13 +9,18 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>|[MIT](https://github.com/paraspell/sdk/blob/main/LICENSE)| MIT| 
-| 0b.  | Documentation | <ul><li>[ ] </li></ul> |[Usage guide file](https://github.com/paraspell/xcm-sdk/blob/main/README.md)| Not fully evaluated yet| 
-| 0c.  | Testing guide | <ul><li>[ ] </li></ul> |[Added tests PR](https://github.com/paraspell/xcm-sdk/pull/19), [Testing guide](https://github.com/paraspell/xcm-sdk/tree/main/#-development)| Some examples provided fail | 
+| 0b.  | Documentation | <ul><li>[x] </li></ul> |[Usage guide file](https://github.com/paraspell/xcm-sdk/blob/main/README.md)| | 
+| 0c.  | Testing guide | <ul><li>[x] </li></ul> |[Added tests PR](https://github.com/paraspell/xcm-sdk/pull/19), [Testing guide](https://github.com/paraspell/xcm-sdk/tree/main/#-development)| | 
 | 0d.  | Docker | <ul><li>[x] </li></ul> |[Commit updating UI to newest version](https://github.com/paraspell/ui-v1/commit/5dea10c4e814b7f0123441858c907c31fca0b081), [Guide on launching dockerized version](https://github.com/paraspell/ui#start-application-in-docker-container) | | 
 | 1.  | Add support for checking data that does not change | <ul><li>[x] </li></ul> |[Implementing constants that do not change like node id and asset decimals](https://github.com/paraspell/sdk/commit/aea02541f7168d7a7f566b7311fcf70f6a977115)|  | 
-| 2 | Rewrite SDK to builder pattern | <ul><li>[ ] </li></ul> |[Builder pattern commit](https://github.com/paraspell/sdk/commit/74fba22522449a75ecdc82a394ff2336d9c1ec05), [Builder pattern usage guide](https://github.com/paraspell/xcm-sdk/tree/main#currently-implemented-pallets)| Some examples provided fail | 
-| 3.  | Make a map of compatible <chain, pallet> | <ul><li>[ ] </li></ul> |[xcmPallet map feature](https://github.com/paraspell/xcm-sdk/commit/8faa6ffb4e3e8640dd4a59008d2d456a1be0cefd), [usage guide for testing](https://github.com/paraspell/xcm-sdk/commit/c6f4bfa810444eab9f101dcdc2062ff7d7ca86b0)| Some examples provided fail | 
+| 2 | Rewrite SDK to builder pattern | <ul><li>[x] </li></ul> |[Builder pattern commit](https://github.com/paraspell/sdk/commit/74fba22522449a75ecdc82a394ff2336d9c1ec05), [Builder pattern usage guide](https://github.com/paraspell/xcm-sdk/tree/main#currently-implemented-pallets)|  | 
+| 3.  | Make a map of compatible <chain, pallet> | <ul><li>[x] </li></ul> |[xcmPallet map feature](https://github.com/paraspell/xcm-sdk/commit/8faa6ffb4e3e8640dd4a59008d2d456a1be0cefd), [usage guide for testing](https://github.com/paraspell/xcm-sdk/commit/c6f4bfa810444eab9f101dcdc2062ff7d7ca86b0)|  | 
 | 4.  | Use [turborepo](https://turbo.build/) | <ul><li>[x] </li></ul> |[Monorepo branch](https://github.com/paraspell/xcm-sdk/tree/beta-monorepo)| | 
+
+## Evaluation V3
+
+After considering the balance constraints explained [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/715#issuecomment-1416347119) the transaction worked and the events were shown after the finalization of the transaction. As an improvement, please consider adding the balance observation in the tutorial of the software. Please consider either to report this possible bug with XCM. If it is not a bug, at least someone can help to identify how to identify the case when the XCM transaction is not completed (the balance is not transferred).
+
 
 ## Evaluation V2
 
