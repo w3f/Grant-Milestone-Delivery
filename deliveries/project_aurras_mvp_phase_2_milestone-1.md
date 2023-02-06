@@ -9,9 +9,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | | |
-| 0b. | Documentation | | |
-| 0c. | Testing Guide | | |
+| 0a. | License | https://github.com/HugoByte/aurras/blob/master/LICENSE | |
+| 0b. | Documentation | https://github.com/HugoByte/openwhisk-client-rust#usage <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#usage | |
+| 0c. | Testing Guide | https://github.com/HugoByte/openwhisk-client-rust#test <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#test | |
 | 1a. | Workflow Composer: Rust OpenWhisk Client Library | https://github.com/HugoByte/openwhisk-client-rust | |
 | 1b. | Workflow Composer: Composer | https://github.com/HugoByte/aurras/tree/next/workflow/composer | |
 | 1c. | Workflow Composer: Pipe | https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 | |
