@@ -3,7 +3,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this delivery**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/maintenance/wasm-opt-for-rust.md
-* **Delivery Number:** 2 - January 2023
+* **Delivery Number:** 2
 * **Delivery Date:** 2023/02/01
 
 
