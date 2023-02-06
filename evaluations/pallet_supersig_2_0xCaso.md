@@ -27,8 +27,7 @@ I note the following things:
 
 ### 0c. Testing Guide
 - In the Medium tutorial, there is a misformatting in the code snippets: sometimes there is only a "-" instead of "--", like in the `docker run ...` command or in `cargo build - release`. Finally, the command `/target/release/node-template - dev` should have a `.` as first character (other than the `-` issue).
-<br/>
-As I said, this is minor but it would be perfect to fix it.
+This is really minor but it would be perfect to fix it.
 - Also, I've seen that `pallet_supersig/rpc/src/lib.rs` is not tested, so you could add tests for that (if you believe they're useful).
 - May you add some super-quick example of how to test the functions that you didn't mention in the tutorial (like `deleteSupersig` and `leaveSupersig`)?
 
