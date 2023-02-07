@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/pallet_supersig.md
 - **Milestone:** 2
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -10,12 +10,20 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/kabocha-network/pallet_supersig/blob/4b1e349e9d76750d7fd025056cdb5ef5fef85996/LICENSE) |  |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Medium tutorial](https://decentration.medium.com/setup-for-testing-supersig-ui-m2-fac2f7ab20a3), [docs](https://wiki.kabocha.network/docs/Supersig/introduction) |  |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [`pallet_supersig/README#test`](https://github.com/kabocha-network/pallet_supersig/blob/f3b4842b971df00287f1ec6e2dcc41c431bce799/README.md#test),<br/>[`pallet_supersig/src/tests`](https://github.com/kabocha-network/pallet_supersig/tree/polkadot-v0.9.28/src/tests) | See **General Notes** |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [`pallet_supersig/README#test`](https://github.com/kabocha-network/pallet_supersig/blob/f3b4842b971df00287f1ec6e2dcc41c431bce799/README.md#test),<br/>[`pallet_supersig/src/tests`](https://github.com/kabocha-network/pallet_supersig/tree/polkadot-v0.9.28/src/tests) | See **General Notes** |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Docker guide](https://github.com/decentration/substrate-supersig-template/tree/6fbce881471ef6b5730bb8bf4b68f2ee20f58025#run-in-docker) |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Medium article](https://decentration.medium.com/supersig-like-multisig-but-with-superpowers-86b9ce0412f6), [Supersig video tutorial](https://www.loom.com/share/dbcaa6319b1a4644aacb709aa0e38783) |  |
-| 1. | Substrate module: pallet_supersig | <ul><li>[ ] </li></ul> | [`pallet_supersig/src/lib.rs`](https://github.com/kabocha-network/pallet_supersig/blob/f3b4842b971df00287f1ec6e2dcc41c431bce799/src/lib.rs) | See **General Notes** |
+| 1. | Substrate module: pallet_supersig | <ul><li>[x] </li></ul> | [`pallet_supersig/src/lib.rs`](https://github.com/kabocha-network/pallet_supersig/blob/f3b4842b971df00287f1ec6e2dcc41c431bce799/src/lib.rs) | See **General Notes** |
 | 2. | Substrate-supersig template Chain | <ul><li>[x] </li></ul> | [`substrate-supersig-template`](https://github.com/decentration/substrate-supersig-template/tree/6fbce881471ef6b5730bb8bf4b68f2ee20f58025) |  |
 | 3. | Polkadot JS Apps UI Fork | <ul><li>[x] </li></ul> | [`apps`](https://github.com/decentration/apps/blob/492fd2e01e5c34f046a2fc71433d29779f4b2f57/README.md) |  |
+<br/>
+
+## General Notes v2 - Feb 7, 2023
+- The Medium article minor issues have been fixed;
+- The tests for `pallet_supersig/rpc/src/lib.rs` will be added in the next milestone;
+- In the [PR discussion](https://github.com/w3f/Grant-Milestone-Delivery/pull/719) they explained how to test the functions, and I managed to test them successfully;
+- In the next milestone they will add a way to see the failure of the tx if the Supersig is not funded, and generally improve UX.
+
 <br/>
 
 ## General Notes v1 - Feb 6, 2023
