@@ -17,4 +17,4 @@
 
 ## General Notes
 
-The delivery and the invoiced hours is according to the contract. It's nice that he replies to parity on GitHub directly
+The delivery and the invoiced hours are according to the contract. It's nice that he replies to parity on GitHub directly
