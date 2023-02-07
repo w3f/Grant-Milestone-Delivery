@@ -12,12 +12,9 @@
 - **Milestone Number:** 1
 
 **Context** (optional)
+This milestone delivery consists of 3 main documents: Research Outcome, Java Light Client Design and Java Host Design. Each of the deliverables below are part of one of the three documents. We recommend reading the 3 main documents to have better context for each deliverable
 
 > **Deliverables**
-
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
-
-The 'research' deliverables below link to specific parts of either the research outcome, the light client design or the full node design documents. We recommend reading the 3 documents in order to have better context for each deliverable.
 
 | Number | Deliverable   | Description                                                                                                                                                                                                 | Link                                                                                                                                                                                                                                                                                                                                                                                   | Notes              |
 | ------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
