@@ -13,9 +13,10 @@ There are a couple UX improvements to be made in the very short term, notably fo
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0.b | Documentation | [Multix repo](https://github.com/ChainSafe/Multix) | The code is commented in line and the flows should be self explanatory for users. | 
-| 0.d  | Docker | [Multix indexer](https://github.com/ChainSafe/Multix/tree/main/squid) | The docker of the indexer is available in the repo | 
-| 0.e  | Article | [Medium article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d) | An article explaining what Multix brings and educating about proxies has been published| 
+| 0a. | License | [LICENSE](https://github.com/ChainSafe/Multix/blob/main/LICENSE) | Apache 2.0 | 
+| 0b. | Documentation | [Multix repo](https://github.com/ChainSafe/Multix) | The code is commented in line and the flows should be self explanatory for users. | 
+| 0d.  | Docker | [Multix indexer](https://github.com/ChainSafe/Multix/tree/main/squid) | The docker of the indexer is available in the repo | 
+| 0e.  | Article | [Medium article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d) | An article explaining what Multix brings and educating about proxies has been published| 
 | 1. | creation screen | [Multix](https://multix.chainsafe.io/) | Users can create multisigs very easiely. They can even give names, and this will be stored locally| 
 | 2. | indexer | [Multix indexer](https://api.multix.chainsafe.io/) | The indexer is currently running on Rococo and the code is available in the repo| 
 | 3. | home screen | [Multix](https://multix.chainsafe.io/) | The home screen asks to either connect to an extension, or if done already will directly show the multisigs available for the accounts of the extension| 
