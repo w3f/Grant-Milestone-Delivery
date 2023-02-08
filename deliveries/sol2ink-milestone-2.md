@@ -18,15 +18,15 @@ Second Milestone for Sol2Ink improves the output of Sol2Ink. Sol2Ink can now tra
 | 0c | Testing and Testing guide | https://github.com/727-Ventures/sol2ink/tree/main/tests | Added unit tests which test if new changes to the application change the output. Testing guide is provided with the delivery. |
 | 0d | Docker | https://github.com/727-Ventures/sol2ink/blob/main/.github/workflows/ci.yml | We added a docker file which runs the tests on PR to main and develop branches. |
 | 1 | Website with guides	 | https://727-ventures.github.io/sol2ink/ | Website was updated to describe how Sol2Ink works after updates. |
-| 2 | Split contract into traits	 |  | Parsing a contract or a folder will now produce a comprehensive file structure and contract will be divided into trait definition, implementation of the trait and a contract definition |
+| 2 | Split contract into traits	 | https://github.com/727-Ventures/sol2ink/blob/main/src/main.rs#L129 | Parsing a contract or a folder will now produce a comprehensive file structure and contract will be divided into trait definition, implementation of the trait and a contract definition |
 | 3 | Sol2Ink transpiler update |  | Sol2Ink is now able to parse any valid Solidity code |
 | 3a. | Functions with value | https://github.com/727-Ventures/sol2ink/commit/bc014edcbb738a66c0bbbe2e063d5c93d9df75b4 | Fixed |
-| 3b. | Chained selectors |  | Fixed |
-| 3c. | Updating structs inside of a mapping |  | Fixed |
-| 3d. | Modifiers |  | Fixed |
+| 3b. | Chained selectors | [Example](https://github.com/727-Ventures/sol2ink/blob/main/uniwap_v2/solidity/core/UniswapV2Pair.sol#L79) (`a.b.c`) which was parsed incorrectly in the previous version, [new output](https://github.com/727-Ventures/sol2ink/blob/main/uniwap_v2/generated/src/impls/uniswap_v_2_pair.rs#L363), [The fix](https://github.com/727-Ventures/sol2ink/blob/main/src/assembler.rs#L1427) | Fixed |
+| 3c. | Updating structs inside of a mapping | [Fixed here](https://github.com/727-Ventures/sol2ink/commit/7bb959e4eabd5f9a922a26424e864dbf06036cff) | Fixed |
+| 3d. | Modifiers | Calling functions inside of a modifier will now be parsed without the modifier, see [identifying such modifier](https://github.com/727-Ventures/sol2ink/blob/main/src/parser.rs#L723) and [assembling it](https://github.com/727-Ventures/sol2ink/blob/main/src/assembler.rs#L805) | Fixed |
 | 3e. | Fix bugs | https://github.com/727-Ventures/sol2ink/tree/main/uniwap_v2 | Here is the code of Uniswap V2 parsed by Sol2Ink |
-| 4. | Handling dependencies and generalization |  | Sol2Ink can parse base of a contract |
-| 5. | Multi-file project parsing |  | Sol2Ink can parse whole directories and creates a project-like structure based on the files parsed. |
+| 4. | Handling dependencies and generalization | Implmented [here](https://github.com/727-Ventures/sol2ink/pull/19) | Sol2Ink can parse base of a contract |
+| 5. | Multi-file project parsing | Implemented [here](https://github.com/727-Ventures/sol2ink/blob/6533e9eaad2307f50c82f3e1fc0f9c1f9e619819/src/main.rs#L134) | Sol2Ink can parse whole directories and creates a project-like structure based on the files parsed. |
 
 **Additional Information**
 
