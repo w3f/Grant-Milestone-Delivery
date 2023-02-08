@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-sdk.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,13 +9,18 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/LICENSE |  |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/README.md, https://github.com/blockcoders/xcm-sdk/blob/main/README-es.md | Not fully evaluated yet |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk#testing | Not fully evaluated yet |
-| 1. | Create Messages Types |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/interfaces/index.ts | Not fully evaluated yet |
-| 2. | Send XCM messages |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/provider.ts | Not fully evaluated yet |
-| 3. | Testing |<ul><li>[ ] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | Incomplete and failing scripts for system testing. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/README.md, https://github.com/blockcoders/xcm-sdk/blob/main/README-es.md |  |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk#testing |  |
+| 1. | Create Messages Types |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/interfaces/index.ts |  |
+| 2. | Send XCM messages |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/provider.ts |  |
+| 3. | Testing |<ul><li>[x] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | |
 
 **General Notes**
+
+## Evaluation V4
+
+After setting up the Zombienet provided, the example of the script src/examples/local-network/reserveAssets-statemine-to-trappist.ts worked doing a limitedReserveTransferAssets operation.
+
 
 ## Evaluation V3
 

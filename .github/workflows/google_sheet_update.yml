@@ -66,7 +66,7 @@ jobs:
 
       - name: Parse delivery file 
         id: parse-delivery
-        uses: w3f/parse-milestone-delivery-action@v3
+        uses: w3f/parse-milestone-delivery-action@master
         with:
           path: "${{ github.workspace }}/${{ matrix.filename }}"
 
@@ -75,7 +75,7 @@ jobs:
 
       - name: Parse application file
         id: parse-grant
-        uses: w3f/parse-grant-application-action@v1
+        uses: w3f/parse-grant-application-action@master
         with:
           path: "${{ steps.parse-delivery.outputs.application_document }}"
       
