@@ -139,11 +139,11 @@ warning: `pallet-dao-democracy-precompile` (lib) generated 2 warnings (run `carg
 
 The application works fine, but in the testing guide in [Proposal Volting](https://github.com/sctllabs/societal-grant-2-submission/blob/main/docs/AssetsTestingGuide.md#proposal-voting) proposalWeightBound there is only one field and for me there are two fields refTime and proofSize. See the images below:
 
-System:
+Tutorial:
 ![image (4)](https://user-images.githubusercontent.com/112647953/217795447-de759222-abe2-4b51-af2c-1ab49ec45469.png)
 
 
-Tutorial:
+System:
 ![image (3)](https://user-images.githubusercontent.com/112647953/217795417-b0b105de-410f-4f80-8fda-c38caa393c78.png)
 
 
