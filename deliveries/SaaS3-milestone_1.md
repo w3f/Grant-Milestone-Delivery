@@ -19,8 +19,13 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| 1. | Documentation |https://docs.saas3.io/dapi/get-started| | 
+| 2.  | Testing Guide |https://github.com/SaaS3-Foundation/dRuntime-fat#test| | 
+| 3. | Article/Tutorial | https://docs.saas3.io/demo-case | |
+| 4. | dRuntime-fat| https://github.com/SaaS3-Foundation/dRuntime-fat | dRuntime implementation in Phat Contract which is a superset of ink!. |
+| 4.a | Functions | https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L418 </br> https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L100 | `pub fn handle_rollup()` Entry point for Phat Rollup Anchor</br>`pub fn config(rpc, anchor)` Configure the rollup target. |
+| 4.b | Structs | https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L45 | |
+| 4.c | Storage | https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L34 | |
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
