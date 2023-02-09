@@ -16,7 +16,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | Licence | n/a | All repositories have a LICENSE.md file at their repo root. | 
-| 0b. | Documentation | n/a | All repositories have a README.md file at their repo root, that is the entry point to the documentation | 
+| 0b. | Documentation | n/a | All repositories have a README.md file at their repo root, that is the entry point to the documentation. | 
 | 0c. | Testing and Testing Guid | ... | ... |
 | 0d. | Docker | n/a | All repositories are dockerized. Enter the repo via command-line and run `docker compose up -d`
 | 1. | Parachain setup | https://github.com/deep-ink-ventures/genesis-dao-node | This is the genesis dao blockchain. |
