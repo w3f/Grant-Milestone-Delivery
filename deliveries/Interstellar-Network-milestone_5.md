@@ -33,7 +33,7 @@ As a result, we will have two optimized garbling schemes; one for two-party comp
 | Number | Deliverable | Link | Notes  |
 | -----: | ----------- | -----------|------------ |
 | 0a. | Licence  |  APACHE 2.0, MIT | | no more GPL licence |
-| 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/M4.html#code-documentation  ) | Please read first Garbled Circuit Factory (GCF) and Trusted Transaction Validation Protocol (TTVP) [overviews](https://book.interstellar.gg/M5.html#garbled-circuit-factory-gcf-overview)   |
+| 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/M5.html#code-documentation  ) | Please read first Garbled Circuit Factory (GCF) and Trusted Transaction Validation Protocol (TTVP) [overviews](https://book.interstellar.gg/M5.html#garbled-circuit-factory-gcf-overview)   |
 | 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/M5.html#testing-guide) | Core functions due to the specificity of the architecture are mainly covered with integration tests |
 | 0d. | Dockers | [Docker compose demo](https://github.com/Interstellar-Network/Interstellar-Book/blob/docker-compose/docker-compose.yml) | [How to launch docker compose demo]( https://book.interstellar.gg/M5_demo_tutorial.html)   |
 | 0e. | Article | [article](https://book.interstellar.gg/M5.html#article)  |   link in M5 Interstellar Book  - (not officially publish as we are still in stealth mode) |  
