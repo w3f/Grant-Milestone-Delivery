@@ -23,11 +23,11 @@ This update is expected to improve performance beyond our M3 results. In additio
 to aim a user experience close to our simulations.
 
 As a result, we will have two optimized garbling schemes; one for two-party computation and the other for single-use garbled circuits.
-> note: the circuit garbling scheme for two-party compution can be useful for the setting-up of a security framework that enables real-time targetted attacks detection with an ML model
+> Note: the circuit garbling scheme for two-party compution can be useful for the setting-up of a security framework that enables real-time targetted attacks detection with an ML model
 
 **Deliverables**
 
-### Milestone 5 — GCF Garbling service part in TEE nodes (amended)
+### Milestone 5 — GCF Garbling service part in TEE nodes
 
 
 | Number | Deliverable | Link | Notes  |
@@ -38,5 +38,5 @@ As a result, we will have two optimized garbling schemes; one for two-party comp
 | 0d. | Dockers | [Docker compose demo](https://github.com/Interstellar-Network/Interstellar-Book/blob/docker-compose/docker-compose.yml) | [How to launch docker compose demo]( https://book.interstellar.gg/M5_demo_tutorial.html)   |
 | 0e. | Article | [article](https://book.interstellar.gg/M5.html#article)  |   link in M5 Interstellar Book  - (not officially publish as we are still in stealth mode) |  
 | 1. | Replacement of JustGarble (GPL) with Swanky/Fancy-Garbling (MIT)| https://github.com/Interstellar-Network/lib-garble-rs/ |In order to use a TEE framework we need a non-GPL garbling scheme code | 
-| 2. | Circuit Garbling in substrate TEE nodes | https://github.com/Interstellar-Network/pallets/tree/main/pallets/ocw-garble| the generation of Garbled Circuits is now in TEE pallet | 
-| 3. | Android client garbled circuit evaluation updated with Fancy garblinge | [APK](https://github.com/Interstellar-Network/wallet-app/releases/tag/milestone5) | as explain in the amendment, current performance of fancy garbling is not adapted to display circuits, we still include it in the client to demonstrate integration of this GC evalaution scheme in the mobile client for future use, potentially with two-party computation| |
+| 2. | Circuit Garbling in substrate TEE nodes | https://github.com/Interstellar-Network/pallets/tree/main/pallets/ocw-garble| The generation of Garbled Circuits is now in TEE pallet | 
+| 3. | Android client garbled circuit evaluation updated with Fancy garblinge | [APK](https://github.com/Interstellar-Network/wallet-app/releases/tag/milestone5) | As explain in the amendment, current performance of fancy garbling is not adapted to display circuits, we still include it in the client to demonstrate integration of this GC evalaution scheme in the mobile client for future use, potentially with two-party computation| |
