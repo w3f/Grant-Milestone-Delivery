@@ -23,7 +23,7 @@ This update is expected to improve performance beyond our M3 results. In additio
 to aim a user experience close to our simulations.
 
 As a result, we will have two optimized garbling schemes; one for two-party computation and the other for single-use garbled circuits.
-> note: the circuit garbling scheme for two-party compution can be useful for the stting-up of a security framework that enables real-time targetted attacks detection with an ML model
+> note: the circuit garbling scheme for two-party compution can be useful for the setting-up of a security framework that enables real-time targetted attacks detection with an ML model
 
 **Deliverables**
 
