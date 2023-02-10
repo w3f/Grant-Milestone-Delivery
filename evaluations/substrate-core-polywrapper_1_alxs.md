@@ -171,5 +171,5 @@ console.warn
       9 |   injectExtension(
 
 ```
-Docker compose file build and tests successfully with `yarn build` and `yarn test`. 
+For `rpc-wrapper`, Docker compose file build and tests successfully with `yarn build` and `yarn test`. 
 
