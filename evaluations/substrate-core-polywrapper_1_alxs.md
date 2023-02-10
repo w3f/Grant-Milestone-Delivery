@@ -1,14 +1,15 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/substrate_core_polywrapper.md
 - **Milestone:** 1
+- **Previously successfully merged evaluation:** Alxs, keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [rpc-wrapper](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/LICENSE.md), [signer-provider-js](https://github.com/polywrap/integrations/blob/main/protocol/substrate/signer-provider-js/LICENSE.md) | GPL v3 |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/README.md) | |
-| 0c. | Testing | <ul><li>[x] </li></ul> | [rpc-wrapper](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/src/__tests__/e2e.spec.ts), [signer-provider-js](https://github.com/polywrap/integrations/blob/main/protocol/substrate/signer-provider-js/src/__tests__/e2e.spec.ts) | No "polywrap recipes json tests" as described in the application but Jest integration tests (which should be fine)
+| 0c. | Testing | <ul><li>[x] </li></ul> | [rpc-wrapper](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/src/__tests__/e2e.spec.ts), [signer-provider-js](https://github.com/polywrap/integrations/blob/main/protocol/substrate/signer-provider-js/src/__tests__/e2e.spec.ts) | Looks good.
 | 0d. | Article | <ul><li>[x] </li></ul> | [GDoc](https://docs.google.com/document/d/1G7l0sgyEI_X9ucnEkJMUcD_bYo-FeCm9Ot_ETR7giiM/edit#heading=h.uzkbekb348bf) | sent to grantsPR for review |
 | 1. | Schema Definitions | <ul><li>[x] </li></ul> | [Signer-Provider Plugin Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/signer-provider-js/src/schema.graphql), [RPC Wrapper Link](https://github.com/polywrap/integrations/blob/main/protocol/substrate/rpc-wrapper/schema.graphql) | looks good.
 | 2. | `signer-provider` TypeScript Plugin | <ul><li>[x] </li></ul>  | [signer-provider-js](https://github.com/polywrap/integrations/tree/main/protocol/substrate/signer-provider-js) | implemented.
@@ -129,3 +130,46 @@ Time:        7.984 s
 Ran all test suites.
 ```
 The only remaining issue is the skipped test. Can this be fixed or refactored?
+**UPDATE:** Test was fixed.
+
+### General Notes v3 (by keegan quigley)
+
+`yarn test` runs 5 tests successfully for `signer-provider`
+
+```js
+ PASS  src/__tests__/e2e.spec.ts (8.624 s)
+  e2e
+    ✓ getAccounts returns Alice (52 ms)
+    ✓ signRaw produces a valid signature from test account (6 ms)
+    ✓ signRaw throws if an unmanaged account address is requested (1 ms)
+    ✓ signPayload produces a valid signature from test account (12 ms)
+    ✓ signPayload throws if an unmanaged account address is requested (1 ms)
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        8.897 s
+Ran all test suites.
+✨  Done in 9.44s.
+```
+Although there are a number of conflicting packages warnings:
+```js
+console.warn
+    @polkadot/util has multiple versions, ensure that there is only one installed.
+    Either remove and explicitly install matching versions or dedupe using your package manager.
+    The following conflicting packages were found:
+    	cjs 10.2.1	node_modules/@polkadot/util/cjs
+    	cjs 10.3.1	node_modules/@polkadot/util/cjs
+    	cjs 10.2.1	node_modules/@polkadot/util-crypto/node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/util/cjs
+    	cjs 10.3.1	node_modules/@polkadot/extension-dapp/node_modules/@polkadot/util/cjs
+    	cjs 10.3.1	node_modules/@polkadot/ui-keyring/node_modules/@polkadot/util/cjs
+      4 | import { Injected, InjectedAccount } from "@polkadot/extension-inject/types";
+      5 | import { cryptoWaitReady } from "@polkadot/util-crypto";
+    > 6 | import { Keyring } from "@polkadot/ui-keyring";
+        | ^
+      7 |
+      8 | export function mockExtension(): void {
+      9 |   injectExtension(
+
+```
+Docker compose file build and tests successfully.
+
