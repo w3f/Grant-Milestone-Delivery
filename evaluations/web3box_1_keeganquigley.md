@@ -1,3 +1,20 @@
+# Evaluation
+
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Web3Box.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+
+| Number | Deliverable   | Accepted | Link                                                                                 | Notes |
+|--------|---------------|----------|----------------------------------------------------------------------------|-------|
+| 0a.    | License   | <ul><li>[x] </li></ul> | MIT            |       |
+| 0b.    | Documentation       | <ul><li>[ ] </li></ul> | https://github.com/web3box-labs/apps/blob/main/README.md |    |
+| 0c.    | Testing Guide      | <ul><li>[ ] </li></ul> | https://github.com/web3box-labs/apps/tree/main/doc |  |
+| 0d.    | Article         | <ul><li>[ ] </li></ul> | https://twitter.com/w3b_official/status/1623649936364703744                 |       |
+| 1.     | Implementations of APIs from third parties | <ul><li>[ ] </li></ul> |  |       |
+| 2.     | Dashboard | <ul><li>[ ] </li></ul> |   |
+
 # General Notes
 
 The app runs successfully with yarn however generates a lot of warnings about unused variables. Can you check to see if any of these can be addressed?
