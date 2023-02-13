@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [IPFS Utilities application](https://github.com/w3f/Grants-Program/pull/1187/files?short_path=abcff88#diff-abcff881021fa7b4a94dd848604fd46a3a07dcff623619e0b83e6d65842d85e9)
+* **Application Document:** [IPFS Utilities application](https://github.com/w3f/Grants-Program/blob/master/applications/ipfs_utilities.md)
 * **Milestone Number:** 1
 
 **Context**
