@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** (private application)
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -8,8 +8,8 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[ ] </li></ul> | [acurast-docs (MIT)](https://github.com/Acurast/acurast-docs/blob/8b73070d5235fc98e3efa8ff539c3b21720e60f3/LICENSE.md), [acurast-core (MIT)](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/LICENSE.md), [acurast-substrate (Unlincense)](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/LICENSE) | The [acurast-processor](https://github.com/Acurast/acurast-processor) is currently missing the LICENSE file. |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [docusaurus docs](https://github.com/Acurast/acurast-docs) | See [Documentation Feedback](#documentation-feedback) |
+| 0a. | License | <ul><li>[x] </li></ul> | [acurast-docs (MIT)](https://github.com/Acurast/acurast-docs/blob/8b73070d5235fc98e3efa8ff539c3b21720e60f3/LICENSE.md), [acurast-core (MIT)](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/LICENSE.md), [acurast-substrate (Unlincense)](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/LICENSE), [acurast-processor (GPLv3)](https://github.com/Acurast/acurast-processor/blob/28d0b7aeb57e1e0963d50520c598b425ea30e607/LICENSE) | - |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [docusaurus docs](https://github.com/Acurast/acurast-docs) | See [Documentation Feedback](#documentation-feedback) |
 | 0c. | Tests | <ul><li>[x] </li></ul> | [testing instructions](https://github.com/Acurast/acurast-core/tree/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444#build--tests) | See [Testing Feedback](#testing-feedback) |
 | 0d. | Docker Container | <ul><li>[x] </li></ul> | [devcontainer](https://github.com/Acurast/acurast-core/tree/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/.devcontainer) | See [Docker Container Feedback](#docker-container-feedback) |
 | 1. | Deployment of testnet | <ul><li>[x] </li></ul> | https://polkadot.js.org/apps/?rpc=wss://wss.collator-1.acurast.papers.tech#/explorer | - |
@@ -28,10 +28,10 @@ Summarizes the overall performance plus additional feedback/comments
 
 As this milestone involves work in multiple repositories, I'm going to provide my feedback seperately for each of them.
 
-- [ ] [acurast-processor repo](https://github.com/Acurast/acurast-processor): See M2 evaluation
+- [x] [acurast-processor repo](https://github.com/Acurast/acurast-processor): See M2 evaluation
 - [x] [acurast-docs](https://github.com/Acurast/acurast-docs)
-- [ ] [acurast-substrate](https://github.com/Acurast/acurast-substrate/tree/develop): There are a lot of functions that have no explanatory inline comments, for example [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/runtime/src/lib.rs#L343-L1009), [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/runtime/src/xcm_adapters.rs#L33-L99), [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/node/src/chain_spec.rs#L316-L327) or [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/node/src/command.rs#L316-L450)
-- [ ] [acurast-core](https://github.com/Acurast/acurast-core): similarly to the acurast-substrate repo, I think more inline comments would make the code easier to understand for other devs. For some examples, see [here](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/pallets/acurast/src/lib.rs#L294-L317) or [here](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/pallets/acurast/p384/ecdsa/src/lib.rs#L233-L404). Please note that this is not a complete list.
+- [x] [acurast-substrate](https://github.com/Acurast/acurast-substrate/tree/develop): ~~There are a lot of functions that have no explanatory inline comments, for example [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/runtime/src/lib.rs#L343-L1009), [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/runtime/src/xcm_adapters.rs#L33-L99), [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/node/src/chain_spec.rs#L316-L327) or [here](https://github.com/Acurast/acurast-substrate/blob/7eed45b5a9b90d32a76e1702501bd00570177417/node/src/command.rs#L316-L450)~~ -> inline comments have been added
+- [x] ~~[acurast-core](https://github.com/Acurast/acurast-core): similarly to the acurast-substrate repo, I think more inline comments would make the code easier to understand for other devs. For some examples, see [here](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/pallets/acurast/src/lib.rs#L294-L317) or [here](https://github.com/Acurast/acurast-core/blob/130e3abfbb6a1c4ef85c595e72c5ff00f6c7d444/pallets/acurast/p384/ecdsa/src/lib.rs#L233-L404). Please note that this is not a complete list.~~ -> inline comments have been added
 
 ### Testing Feedback
 
