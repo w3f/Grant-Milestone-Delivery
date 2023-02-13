@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/sol2ink-follow-up.md
 - **Milestone:** 2
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -10,7 +10,7 @@
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/727-Ventures/sol2ink/blob/6533e9eaad2307f50c82f3e1fc0f9c1f9e619819/LICENSE) | MIT |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [/docs](https://github.com/727-Ventures/sol2ink/tree/6533e9eaad2307f50c82f3e1fc0f9c1f9e619819/docs) | Docs deployed [here](https://727-ventures.github.io/sol2ink). Little inline documentation. |
-| 0c. | Testing and Testing guide | <ul><li>[ ] </li></ul> | [w3f/Grant-Milestone-Delivery/pull/729](https://github.com/w3f/Grant-Milestone-Delivery/pull/729/files#diff-e3658381a6cdf9387fa211cee44900fdf905421145d70d4c606ab27ee441a22bR35) | Unit tests will be provided. Tutorial worked well with `nightly` toolchain. |
+| 0c. | Testing and Testing guide | <ul><li>[x] </li></ul> | [parser.rs](https://github.com/727-Ventures/sol2ink/blob/0575f53cc17d19a703dfcd4812e3b81f1941ce17/src/parser.rs#L1681-L1682) | Unit tests provided on request. Tutorial worked well with `nightly` toolchain. Testing guide under [delivery PR](https://github.com/w3f/Grant-Milestone-Delivery/pull/729/files#diff-e3658381a6cdf9387fa211cee44900fdf905421145d70d4c606ab27ee441a22bR35). |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [.github/workflows/ci.yml](https://github.com/727-Ventures/sol2ink/blob/6533e9eaad2307f50c82f3e1fc0f9c1f9e619819/.github/workflows/ci.yml) | Not technically Docker, but easy enough to run tests. |
 | 1. | Website with guides | <ul><li>[x] </li></ul> | https://727-ventures.github.io/sol2ink/ | Updated on request. |
 | 2. | Split contract into traits | <ul><li>[x] </li></ul> | [main.rs](https://github.com/727-Ventures/sol2ink/blob/main/src/main.rs#L135-L175) | — |
@@ -26,4 +26,4 @@
 
 ## General Notes
 
-- —
+Inline docs and unit tests aren't comprehensive, but enough to get started. Some manual edits are still required to transpile an ERC20, but the tool now takes care of the most important bits, like imports. I would love to see a tutorial for transpiling Uniswap down the road.
