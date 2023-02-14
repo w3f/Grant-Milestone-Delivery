@@ -97,16 +97,18 @@ jobs:
         uses: thollander/actions-comment-pull-request@1.0.2
         with:
           message: > 
-            We noticed that this is the last milestone of your project, so what are the potential next steps?<br/>
+            We noticed that this is the last milestone of your project. Congratulations on completing your grant!<br/>
             
-            While you can always apply for a follow-up grant, the grants program might not be the best tool for your future growth. 
-            Our main goal is to support research as well as early-stage technical projects. Below are a couple of other options in our ecosystem 
-            that might be better suited as the next step, depending on your goals: <br/> 
+            So, where to from here? The main goal of the W3F grants program is to support research as well as early-stage technical projects. So, if your project
+            still falls under one of those categories, you might want to apply for a follow-up grant. Depending on your goals and project status, there are 
+            other support programs in our ecosystem that might be better suited as the next step, for example: <br/> 
 
             Project with a Business Case/Token: [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) 
             or [VC Funding](https://parachains.info/investors) <br/> 
 
             Common Good Projects: [Treasury Funding](https://github.com/w3f/Grants-Program#treasury) <br/> 
 
+            For a more comprehensive list, see our [Alternative Funding page](https://w3f.github.io/Grants-Program/funding).
+            
             Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
