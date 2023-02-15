@@ -8,15 +8,73 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.    | License            |<ul><li>[ ] </li></ul>| Apache License 2.0 | Link to the licenses is missing |
+| 0a.    | License            |<ul><li>[x] </li></ul>| Apache License 2.0 | There are Apache 2.0 license in all repos. |
 | 0b.    | Documentation      |<ul><li>[ ] </li></ul>| Official Document is at https://docs.inkwhale.net/ Technical documents are at https://github.com/InkWhale-net/backend/blob/main/docs/apis.md and https://github.com/InkWhale-net/contracts/blob/main/inkwhale_contract/docs/technical_doc.md | Not fully evaluated yet |
-| 0c.    | Testing Guide      |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/contracts/tree/main/inkwhale_contract/tests | Some files reported in the link are missing |
+| 0c.    | Testing Guide      |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/contracts/blob/main/tests/readme.md | The tests are passing pointing to an external test network. |
 | 0d.    | Article/Tutorial   |<ul><li>[ ] </li></ul>| https://medium.com/@artzero_io/aztzeros-nft-yield-farming-pool-guide-for-creators-c20057fa0d89 | Not fully evaluated yet |
 | 1. | Smart Contract Development |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/contracts Completed following functions: create PSP22 token, create a staking pool, create NFT yield farm, create token yield farm, add rewards to pool, remove rewards from pool, claim reward from pool. We have to create 9 different contracts; INW token contract that allows public minting and fixed total supply; General psp22 token contract and psp22 token generator contract; Pool Contract and Pool Generator Contract; NFT Farming Contract and NFT Farming Generator Contract; LP Farming Contract and LP Farming Generator Contract. | Need better instructions how to deploy and run. |
-| 2. | Backend |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/backend | Need better instructions how to run. |
-| 3. | Frontend | <ul><li>[ ] </li></ul>|The front-end demo can be seen at https://testnet.inkwhale.net The code repo is at https://github.com/InkWhale-net/frontend This front-end uses our latest design. | Need better instructions how to run. |
+| 2. | Backend |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/backend | Not fully evaluated yet. |
+| 3. | Frontend | <ul><li>[ ] </li></ul>|The front-end demo can be seen at https://testnet.inkwhale.net The code repo is at https://github.com/InkWhale-net/frontend This front-end uses our latest design. | Fail to run. |
 | 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | The deliverable is missing.
 
+## Evaluation V2
+
+### Contracts
+
+All tests passed. They are using an external test network. When we can spin up the network locally we will run the tests again with local integration.
+
+### Frontend
+
+Frontend failed to compile with `yarn start`.
+
+```
+Failed to compile.
+
+Attempted import error: 'addressShortener' is not exported from 'utils' (imported as 'addressShortener').
+assets by path static/ 9.65 MiB
+  asset static/js/bundle.js 9.64 MiB [emitted] (name: main) 1 related asset
+  asset static/media/SubWalletLogo.637b860fce4059c3a3b6b7c876a13601.svg 4.42 KiB [emitted] (auxiliary name: main)
+  asset static/media/PolkadotjsLogo.8492330aac9d174faa4886cab4cb5b93.svg 1.09 KiB [emitted] (auxiliary name: main)
+asset index.html 3.33 KiB [emitted]
+asset asset-manifest.json 404 bytes [emitted]
+orphan modules 602 KiB [orphan] 600 modules
+runtime modules 29.7 KiB 16 modules
+modules by path ./node_modules/ 6.37 MiB 1401 modules
+modules by path ./src/ 966 KiB
+  modules by path ./src/components/ 187 KiB 24 modules
+  modules by path ./src/theme/ 36 KiB 16 modules
+  modules by path ./src/pages/ 260 KiB 13 modules
+  modules by path ./src/utils/contracts/*.js 413 KiB 12 modules
+  modules by path ./src/assets/ 14.6 KiB 4 modules
+  modules by path ./src/redux/ 17.4 KiB 4 modules
+  modules by path ./src/*.js 21.2 KiB 3 modules
+  + 5 modules
+buffer (ignored) 15 bytes [optional] [built] [code generated]
+crypto (ignored) 15 bytes [built] [code generated]
+
+ERROR in ./src/components/address-copier/AddressCopier.js 30:27-43
+export 'addressShortener' (imported as 'addressShortener') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
+ @ ./src/components/card/Card.js 7:0-68 294:43-56
+ @ ./src/pages/faucet/index.jsx 6:0-42 210:39-45 214:41-47 332:39-45 336:41-47
+ @ ./src/index.js 18:0-38 157:41-51 285:41-51
+
+ERROR in ./src/components/table/IWTable.js 260:21-40
+export 'formatNumDynDecimal' (imported as 'formatNumDynDecimal') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
+ @ ./src/pages/pools/index.jsx 10:0-51 239:37-44
+ @ ./src/index.js 19:0-36 185:41-50
+
+ERROR in ./src/components/table/IWTable.js 284:20-39
+export 'formatNumDynDecimal' (imported as 'formatNumDynDecimal') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
+ @ ./src/pages/pools/index.jsx 10:0-51 239:37-44
+ @ ./src/index.js 19:0-36 185:41-50
+```
+### Backend
+
+It runs, but was not tested yet because frontend failed to compile.
+
+### Code Quality
+
+All warnings from clippy were removed.
 ## Evaluation V1
 
 ### Testing Guide
