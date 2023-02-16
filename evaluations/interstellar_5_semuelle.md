@@ -15,8 +15,7 @@
 | 0e. | Article | <ul><li>[x] </li></ul> | [medium.com](https://medium.com/@jlleleu/b4003a64e927) | — |  
 | 1. | replacement of JustGarble (GPL) with Swanky/Fancy-Garbling (MIT) | <ul><li>[ ] </li></ul> | link | In order to use a TEE framework we need a non-GPL garbling scheme code |
 | 2. | part of GCF external service in TEE | <ul><li>[ ] </li></ul> | link | We will migrate the circuit garbling service part in TEE/Intel SGX|
-| 3. | android client garbled circuit evaluation updated | <ul><li>[ ] </li></ul> | link | we will update the evaluator on android with the Fancy-Garbling scheme|
-| X. | ... | <ul><li>[ ] </li></ul> | link | see [General Notes](#general-notes) |
+| 3. | android client garbled circuit evaluation updated | <ul><li>[x] </li></ul> | [link](https://github.com/Interstellar-Network/wallet-app/Interstellar-Network/wallet-app/5cd330ec082960714be8ce840f4b8047a7efd092) | — |
 
 
 ## General Notes
