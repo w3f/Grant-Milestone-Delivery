@@ -14,9 +14,99 @@
 | 1.  | Feature: Authentication by PolkadotJs wallet |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/welcome | Not fully evaluated yet |
 | 2.  | Feature: Create a new workflow |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/editor/new-flow/trigger | Not fully evaluated yet | 
 | 3.  | Feature: List of workflows |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/home/workflows | Not fully evaluated yet | 
-| 4.  | Feature: Executions of workflows |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/home/history | Does not display the history | 
+| 4.  | Feature: Executions of workflows |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/home/history | Not fully evaluated yet | 
 | 5.  | API |<ul><li>[ ] </li></ul>| https://api.subrelay.xyz/api | Fail to start | 
 | 6.  | Integration |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz | Not fully evaluated yet | 
+
+## Evaluation V2
+
+### Documentation
+
+A quick start guide was provided. However, it is not enough to run the system properly. See the problems below.
+
+
+Docker compose is still failing to start some services. The api and event service is restarting due to the lack of some dist files. See the traces below:
+
+```
+docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS                          PORTS                                            NAMES
+098a3496ee76   subrelay-api_api         "docker-entrypoint.s…"   16 minutes ago   Restarting (1) 59 seconds ago                                                    subrelay-api_api_1
+e2035ae2771f   subrelay-event-service   "docker-entrypoint.s…"   16 minutes ago   Restarting (1) 55 seconds ago                                                    subrelay-api_event-service_1
+93d06cf0dfcb   dpage/pgadmin4           "/entrypoint.sh"         16 minutes ago   Up 16 minutes                   443/tcp, 0.0.0.0:5050->80/tcp, :::5050->80/tcp   subrelay-api_pgadmin_1
+5a8edece279f   postgres                 "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes                   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp        subrelay-api_postgres_1
+4643bf06c5f8   redis                    "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes                   6379/tcp                                         subrelay-api_redis_1
+
+```
+Inspecting the logs of the api service:
+```
+docker logs subrelay-api_api_1
+node:internal/modules/cjs/loader:1050
+  throw err;
+  ^                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                             
+Error: Cannot find module '/app/dist/main'                                                                                                                                                                                                                   
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1047:15)                                                                                                                                                                                    
+    at Module._load (node:internal/modules/cjs/loader:893:27)                                                                                                                                                                                                
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)                                                                                                                                                                    
+    at node:internal/main/run_main_module:23:47 {                                                                                                                                                                                                            
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v18.14.0
+```
+Inspecting the logs of the event service. In this case seem that the database tables are not created only with the quickstart instructions.
+
+```
+docker logs subrelay-api_event-service_1
+
+> event-service@0.0.1 start
+> nest start
+
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [NestFactory] Starting Nest application...
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +43ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] DiscoveryModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] BullModule dependencies initialized +0ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] ScheduleModule dependencies initialized +0ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] EventEmitterModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] BullModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] DbModule dependencies initialized +0ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] AppModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] BullModule dependencies initialized +6ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] SubstrateModule dependencies initialized +1ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [InstanceLoader] JobModule dependencies initialized +0ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [RoutesResolver] AppController {/}: +8ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [RouterExplorer] Mapped {/, GET} route +4ms
+[Nest] 31  - 02/16/2023, 8:07:03 PM   DEBUG [DbService] Created a connection to DB
+[Nest] 31  - 02/16/2023, 8:07:03 PM   DEBUG [DbService] Monitoring workflow . . .
+[Nest] 31  - 02/16/2023, 8:07:03 PM     LOG [NestApplication] Nest application successfully started +12ms
+
+/app/node_modules/pg-protocol/src/parser.ts:369
+      name === 'notice' ? new NoticeMessage(length, messageValue) : new DatabaseError(messageValue, length, name)
+                                                                    ^
+error: relation "workflow_version" does not exist
+    at Parser.parseErrorMessage (/app/node_modules/pg-protocol/src/parser.ts:369:69)
+    at Parser.handlePacket (/app/node_modules/pg-protocol/src/parser.ts:188:21)
+    at Parser.parse (/app/node_modules/pg-protocol/src/parser.ts:103:30)
+    at Socket.<anonymous> (/app/node_modules/pg-protocol/src/index.ts:7:48)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Socket.Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+
+
+```
+
+### Code Quality
+The problems reported by EsLint have been fixed.
+
+### System Test
+
+It seems that the history is now working (testes with the on-line app). We will test again when all parts are available for testing locally.
+
 
 ## Evaluation V1
 
