@@ -24,6 +24,7 @@ I managed to follow the testing guide, which explains how to setup the local env
 It's not been straightforward (but I think it's because that I've used a Macbook to test).
 
 I report the following notes:
+- Could you please add tests for the Solidity contracts?
 - To make the command 
   
     ```bash
