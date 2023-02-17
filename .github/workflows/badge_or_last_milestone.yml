@@ -62,7 +62,7 @@ jobs:
       
       - name: Check if this PR needs a "last milestone" comment
         id: last-milestone
-        if: steps.parse-delivery.is_maintenance && steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones
+        if: ${{ steps.parse-delivery.is_maintenance != 'true' && steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones }}
         run: echo "::set-output name=check::true"
 
   comment-badge:
