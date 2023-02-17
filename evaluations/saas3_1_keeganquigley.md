@@ -19,7 +19,7 @@
 
 # General Notes
 
-1. Both `cargo clippy` and `cargo +nightly test` commands generate this error:
+1. Both `cargo clippy` and `cargo +nightly test` commands generate this error. Do I need to get an ABI file from somewhere?
 
 ```rust
 error: failed to get `abi` as a dependency of package `druntime v2.0.9 (/Users/keeganquigley/dRuntime-fat)`
