@@ -25,7 +25,7 @@ jobs:
     if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
     outputs:
       needs_badge: ${{ steps.badge-check.outputs.check }} 
-      was_last_milestone: ${{ steps.last-milestone.outputs.check }}
+      needs_last_milestone_comment: ${{ steps.last-milestone.outputs.check }}
 
     strategy:
       max-parallel: 1
@@ -60,9 +60,9 @@ jobs:
         if: steps.parse-delivery.outputs.milestone_number == 1 && steps.parse-grant.outputs.level != 1
         run: echo "::set-output name=check::true"
       
-      - name: Check if this was the last milestone
+      - name: Check if this PR needs a "last milestone" comment
         id: last-milestone
-        if: steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones
+        if: ${{ !steps.parse-delivery.is_maintenance && steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones }}
         run: echo "::set-output name=check::true"
 
   comment-badge:
@@ -83,15 +83,15 @@ jobs:
             Furthermore, you're now welcome to announce the grant publicly. Please remember to observe the
             [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
             If you haven't already, reach out to grantsPR@web3.foundation for feedback on your announcement and cross-promotion.<br/><br/>
-            Thank you for your contribution, and good luck with the remaining milestones, if any!
-            As usual, let us know if you encounter any delays during your remaining milestones, by leaving a comment on the application PR
+            Thank you for your contribution, and good luck!
+            If you have any remaining milestone, let us know if you encounter any delays by leaving a comment on the application PR
             or submitting an [amendment](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval).
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
   comment-last-milestone:
     runs-on: ubuntu-latest
-    needs: check-needs-badge
-    if: needs.check-needs-badge.outputs.was_last_milestone
+    needs: comment-badge
+    if: jobs.check-needs-badge.outputs.needs_last_milestone_comment
     steps:
       - name: Last milestone comment
         uses: thollander/actions-comment-pull-request@1.0.2
