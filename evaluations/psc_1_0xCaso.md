@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/psc.md
 - **Milestone:** 1
 - **Kusama Identity:** [HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu](https://kusama.subscan.io/account/HC8pZ53SejB9YALHn2qXea6XMFFNgxpdXhVvtF7uU5dTSqu)
@@ -8,14 +8,21 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | [`LICENSE`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/LICENSE) |  | 
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [`README.md`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/README.md) |  |
-| 0c. | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [`/docs/test_guide.md`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/docs/test_guide.md) | See **General Notes** |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | [`/zombienet/psc-small-network.toml`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/zombienet/psc-small-network.toml) | See **General Notes** |
-| 0e. | Article | <ul><li>[x] </li></ul> | [`/docs/substrate_and_evm_address_on_psc.md`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/docs/substrate_and_evm_address_on_psc.md) |  |
-| 1. | Substrate module: pallet-assets-bridge | <ul><li>[x] </li></ul> | [`/pallets/assets-bridge`](https://github.com/OmniBTC/PSC/tree/da10743ae93948b54c92e6779496bce3c4120a88/pallets/assets-bridge) |  |
-| 2. | Polkadot Smart Chain | <ul><li>[x] </li></ul> | [PSC repo](https://github.com/OmniBTC/PSC/tree/da10743ae93948b54c92e6779496bce3c4120a88) |  |
-| 3. | Smart contracts: AssetsBridgeErc20 | <ul><li>[x] </li></ul> | [`/contracts`](https://github.com/OmniBTC/PSC/blob/da10743ae93948b54c92e6779496bce3c4120a88/contracts) |  |
+| 0a. | License | <ul><li>[x] </li></ul> | [`LICENSE`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/LICENSE) |  | 
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [`README.md`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/README.md) |  |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | [`/docs/test_guide.md`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/docs/test_guide.md) | See **General Notes** |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [`/zombienet/psc-small-network.toml`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/zombienet/psc-small-network.toml) | See **General Notes** |
+| 0e. | Article | <ul><li>[x] </li></ul> | [`/docs/substrate_and_evm_address_on_psc.md`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/docs/substrate_and_evm_address_on_psc.md) |  |
+| 1. | Substrate module: pallet-assets-bridge | <ul><li>[x] </li></ul> | [`/pallets/assets-bridge`](https://github.com/OmniBTC/PSC/tree/a143c2da535d0969f6a0a5e682b24f9eb43c0873/pallets/assets-bridge) |  |
+| 2. | Polkadot Smart Chain | <ul><li>[x] </li></ul> | [PSC repo](https://github.com/OmniBTC/PSC/tree/a143c2da535d0969f6a0a5e682b24f9eb43c0873) |  |
+| 3. | Smart contracts: AssetsBridgeErc20 | <ul><li>[x] </li></ul> | [`/contracts`](https://github.com/OmniBTC/PSC/blob/a143c2da535d0969f6a0a5e682b24f9eb43c0873/contracts) |  |
+
+<br/>
+
+## General Notes v2 - Feb 20, 2023
+- The team improved and fixed the testing guide, and now it's even more clear and easy to follow;
+- The `remix.sh` script has been added;
+- The other comments have been discussed in the PR discussion from [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/745#issuecomment-1434160305).
 
 <br/>
 
