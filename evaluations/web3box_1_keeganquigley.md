@@ -498,3 +498,10 @@ When running `yarn test --detectOpenHandles` it shows that there is an issue wit
       at Object.tokenPrice (src/substrate/polkadot.test.js:99:6)
 ```
 
+## V2 
+
+**UPDATE: Tests have been resolved. Code comments have been somewhat improved. 
+
+I would also recommend adding functionality for Westend (testnet) so that users (as well as yourself) can use it for testing purposes.
+
+ESlint: Still a lot of unused variables and assigned declarations that are never used. This dead code could bloat software performance and possibly even effect security; I would recommend cleaning up the code more.
