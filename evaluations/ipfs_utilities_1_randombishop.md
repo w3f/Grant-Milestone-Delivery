@@ -29,7 +29,7 @@
 
 
 
-## General Notes
+## Logs
 
 * Testing frame/tds-ipfs-core:
 ```
@@ -151,6 +151,12 @@ Returned file for 5GEgj9K2D4n8SbUFTLnqBJM1TXdPhTiSALYow1EWycvaBYwq in: : 3.983s
 Returned file for 5FsLUdJXhBSGmXfCjNRriyqfKjSgexjqiuLZXbrNmqiJbWKm in: : 4.031s
 Returned file for 5H47invpYUKCiQyQtnLeiEEgJZYYCs5ktUmfa8razhe2aMhP in: : 4.081s
 ```
+
+
+## General notes
+
+Everything works as expected and the code provides solid utilities for IPFS use cases.
+
 
 ## Improvement suggestions
 
