@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Web3Box.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -8,12 +8,12 @@
 
 | Number | Deliverable   | Accepted | Link                                                                                 | Notes |
 |--------|---------------|----------|----------------------------------------------------------------------------|-------|
-| 0a.    | License   | <ul><li>[x] </li></ul> | MIT            |       |
-| 0b.    | Documentation       | <ul><li>[ ] </li></ul> | https://github.com/web3box-labs/apps/blob/main/README.md |    |
-| 0c.    | Testing Guide      | <ul><li>[ ] </li></ul> | https://github.com/web3box-labs/apps/tree/main/doc |  |
-| 0d.    | Article         | <ul><li>[ ] </li></ul> | https://twitter.com/w3b_official/status/1623649936364703744                 |       |
-| 1.     | Implementations of APIs from third parties | <ul><li>[ ] </li></ul> |  |       |
-| 2.     | Dashboard | <ul><li>[ ] </li></ul> |   |
+| 0a.    | License   | <ul><li>[x] </li></ul> | MIT            | Okay.      |
+| 0b.    | Documentation       | <ul><li>[x] </li></ul> | https://github.com/web3box-labs/apps/blob/main/README.md | Okay.   |
+| 0c.    | Testing Guide      | <ul><li>[x] </li></ul> | https://github.com/web3box-labs/apps/tree/main/doc | Okay. |
+| 0d.    | Article         | <ul><li>[x] </li></ul> | https://twitter.com/w3b_official/status/1623649936364703744                 | Okay.      |
+| 1.     | Implementations of APIs from third parties | <ul><li>[x] </li></ul> | https://github.com/web3box-labs/apps/blob/main/src/substrate/polkadot.js | Okay.      |
+| 2 - 6.     | Dashboard | <ul><li>[x] </li></ul> | https://github.com/web3box-labs/apps#readme | Okay. |
 
 # General Notes
 
@@ -505,3 +505,5 @@ When running `yarn test --detectOpenHandles` it shows that there is an issue wit
 I would also recommend adding functionality for Westend (testnet) so that users (as well as yourself) can use it for testing purposes.
 
 ESlint: Still a lot of unused variables and assigned declarations that are never used. This dead code could bloat software performance and possibly even effect security; I would recommend cleaning up the code more.
+
+PLEASE NOTE: No security audits were performed as a part of this evaluation.
