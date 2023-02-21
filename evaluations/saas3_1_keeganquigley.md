@@ -59,4 +59,5 @@ Was able to upload contract to POC-5 testnet and play around with it.
 It would be nice if you could include some docs for how to use the contract. 
 - For example, what `url` and `path` am I entering for the `test_run_js`?
 - Do I still need to configure the oracle to test it?
-- What are the `anchor_contract_addr` and `js_engine_code_hash` fields for?
+- What is the `js_engine_code_hash` field for?
+- Where can I get the contract address for `anchor_contract_addr`?
