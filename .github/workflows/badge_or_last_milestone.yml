@@ -90,10 +90,14 @@ jobs:
     
   comment-last-milestone:
     runs-on: ubuntu-latest
+    # "comment-badge" in needs so we establish the correct messages order
     needs: [comment-badge, check-needs-badge]
-    if: needs.check-needs-badge.outputs.needs_last_milestone_comment
+    # "always()" will make this job run also if one of the needs is not completed;
+    # in this way, the last_milestone comment will be sent also if the badge comment wasn't
+    if: always()
     steps:
       - name: Last milestone comment
+        if: needs.check-needs-badge.outputs.needs_last_milestone_comment
         uses: thollander/actions-comment-pull-request@1.0.2
         with:
           message: > 
