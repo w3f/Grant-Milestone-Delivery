@@ -16,7 +16,7 @@ Consolidated backend API and swap UI: This component is the web interface for th
 | 0b. | Documentation | https://github.com/kapilsinha/privadex-swap-ui/blob/main/README.md | 
 | 0c. | Testing and Testing Guide | https://github.com/kapilsinha/privadex-swap-ui/blob/main/README.md | The specified README indicates how to install the dependencies and start the UI.
 | 0d. | Docker | N/A | Specified in the grant application that Docker is not applicable for this milestone and will be skipped
-| 0e. | Article | Skip | I am reordering milestone 3 (not yet submitted) to be after milestone 4. I will publish the article alongside that submission.
+| 0e. | Article | https://medium.com/@kaprivadex/privadex-launch-ab7d6b6ad9db | 
 | 1. | S3 API for executor | https://github.com/kapilsinha/privadex/blob/milestone_submission_1_2/dex_aggregator/common/src/utils/s3_api.rs |
 | 2. | Executor module scheduler | https://github.com/kapilsinha/privadex-swap-ui/blob/phat-contract-driver/drive_privadex_phat_contract.js |
 | 3. | QuoteGetter API | https://github.com/kapilsinha/privadex-swap-ui/blob/main/src/phat_api/privadex_phat_contract_api.js | See the `quote(...)` function in this file.
