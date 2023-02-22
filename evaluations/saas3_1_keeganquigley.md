@@ -61,3 +61,11 @@ It would be nice if you could include some docs for how to use the contract.
 - Do I still need to configure the oracle to test it?
 - What is the `js_engine_code_hash` field for?
 - Where can I get the contract address for `anchor_contract_addr`?
+
+# V3
+
+**UPDATE:** Feedback was addressed.
+
+I was able to upload and instantiate the oracle and configure it with the params used in the [docs](https://docs.saas3.io/demo-case#deploy-saas3-druntime). `test_run_js` doesn't work yet due to the feature not being live on Phala POC-5 testnet. See [these comments](https://github.com/w3f/Grant-Milestone-Delivery/pull/740#issuecomment-1439512515).
+
+For the next milestone, please be sure to include unit tests for both the phat contracts and the UI. It would be great to see a comprehensive guide for the UI as well.
