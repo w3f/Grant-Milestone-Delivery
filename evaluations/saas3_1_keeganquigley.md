@@ -49,3 +49,15 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 3. Running `cargo +nightly contract build --release` displays this:
 
 ERROR: Error invoking `cargo metadata`
+
+# Smart Contract
+
+Was able to upload contract to POC-5 testnet and play around with it.
+
+![save](https://user-images.githubusercontent.com/35080151/220463276-349d9baf-d6f8-4b0f-a837-ec0005fe11de.png)
+
+It would be nice if you could include some docs for how to use the contract. 
+- For example, what `url` and `path` am I entering for the `test_run_js`?
+- Do I still need to configure the oracle to test it?
+- What is the `js_engine_code_hash` field for?
+- Where can I get the contract address for `anchor_contract_addr`?
