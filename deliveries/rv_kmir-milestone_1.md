@@ -1,26 +1,28 @@
 # Milestone Delivery :mailbox:
 
-> ⚡ Only the GitHub account that submitted the application is allowed to submit milestones. 
-> 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
-
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
-* **Milestone Number:** e.g. 1
+* **Application Document:** https://github.com/runtimeverification/web3-grants-program/blob/rv-kmir-grant/applications/rv-kmir.md
 
-**Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+* **Milestone Number:** 1
 
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| **0a.** | License | [BSD-3](https://github.com/runtimeverification/mir-semantics/blob/master/LICENSE) | 
+| **0b.** | Documentation | [README](https://github.com/runtimeverification/mir-semantics/blob/master/README.md) |
+| **0c.** | Testing and Testing Guide | [Makefile](https://github.com/runtimeverification/mir-semantics/blob/master/kmir/Makefile), [README](https://github.com/runtimeverification/mir-semantics/blob/master/kmir/README.md) | `miri` is replaced by `rustc`, the latter is more suitable.
+| **0d.** | Docker | [Dockerfile](https://github.com/runtimeverification/mir-semantics/blob/master/Dockerfile) |
+| 1. | MIR code snippets | `.mir` tests in [Parsing](https://github.com/runtimeverification/mir-semantics/tree/master/kmir/src/tests/integration/test-data/parsing), [Compiletest-ui](https://github.com/runtimeverification/mir-semantics-compiletest/tree/9251b00e38504a6f1279b0ca9f81b90b4964080d/ui) | 
+| 2. | Generate output from **miri** |`.stderr` and `.stdout` files in [Compiletest-ui](https://github.com/runtimeverification/mir-semantics-compiletest/tree/9251b00e38504a6f1279b0ca9f81b90b4964080d/ui) | `miri` is replaced by `rustc`
+| 3. | **kmir** executable stub | [`kmir.py`](https://github.com/runtimeverification/mir-semantics/blob/master/kmir/src/kmir/kmir.py) |
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+
+- For item number 1, the initial goal was to write `.mir` test cases manually. However, we dicovered later that `rustc` provides a comprehensive test suits [`compiletest`](https://rustc-dev-guide.rust-lang.org/tests/compiletest.html), in particular the test cases in suite
+`ui` best suits our purpose, of providing the best coverage of MIR syntax.
+
+- For item number 0c, 2, 3, `rustc` fits our purpose better than `miri`(who wraps on `rustc`) by emitting MIR file in each steps. 
+
+- In the repo provided, we have implemented part of the MIR syntax which belongs to milestone 2. The **kmir** executable stub could be used to parse actual MIR programs. 
