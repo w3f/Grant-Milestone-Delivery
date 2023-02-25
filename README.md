@@ -30,13 +30,13 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
    1. The [operations team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted. Payments are usually processed within 14 days.
-   2. Payment is made to the Bitcoin or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
+   2. Payment is made to the Bitcoin, Polkadot, Kusama or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
 Grant applications can be [amended](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 5 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
 
 ### Requirements
 
@@ -50,7 +50,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 2. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
 3. Name the file `project-name_milestone-number_your-github-username.md`.
 4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
-5. Once you have completed the evaluation, create a pull request.
+5. Once you have completed the evaluation, create a pull request in the [W3F Grants Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
 7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 

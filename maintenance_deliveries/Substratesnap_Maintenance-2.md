@@ -4,8 +4,7 @@
 [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform)
 has been filled out correctly for this delivery**
 
-- **Application Document**:
-  [`Substratesnap_Maintenance`](https://github.com/w3f/Grants-Program/blob/master/maintenance/Substratesnap_Maintenance.md)
+- **Application Document:** [`Substratesnap_Maintenance`](https://github.com/w3f/Grants-Program/blob/master/maintenance/Substratesnap_Maintenance.md)
 - **Delivery Number:** 2
 - **Delivery Date:** 30 June 2022
 
