@@ -9,14 +9,26 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/subrelay/subrelay-api/blob/main/LICENSE https://github.com/subrelay/interface/blob/main/LICENSE | | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>| https://github.com/subrelay/interface#readme https://github.com/subrelay/subrelay-api#readme  https://api.subrelay.xyz/api | Not fully evaluated yet | 
-| 0c. | Docker file |<ul><li>[ ] </li></ul>| https://github.com/subrelay/subrelay-api#self-hosting | Fail to start | 
-| 1.  | Feature: Authentication by PolkadotJs wallet |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/welcome | Not fully evaluated yet |
-| 2.  | Feature: Create a new workflow |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/editor/new-flow/trigger | Not fully evaluated yet | 
-| 3.  | Feature: List of workflows |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/home/workflows | Not fully evaluated yet | 
-| 4.  | Feature: Executions of workflows |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz/#/home/history | Not fully evaluated yet | 
-| 5.  | API |<ul><li>[ ] </li></ul>| https://api.subrelay.xyz/api | Fail to start | 
-| 6.  | Integration |<ul><li>[ ] </li></ul>| https://app.subrelay.xyz | Not fully evaluated yet | 
+| 0b.  | Documentation |<ul><li>[ ] </li></ul>| https://github.com/subrelay/interface#readme https://github.com/subrelay/subrelay-api#readme  https://api.subrelay.xyz/api | Migration step missing | 
+| 0c. | Docker file |<ul><li>[x] </li></ul>| https://github.com/subrelay/subrelay-api#self-hosting |  | 
+| 1.  | Feature: Authentication by PolkadotJs wallet |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/welcome |  |
+| 2.  | Feature: Create a new workflow |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/editor/new-flow/trigger |  | 
+| 3.  | Feature: List of workflows |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/home/workflows |  | 
+| 4.  | Feature: Executions of workflows |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/home/history |  | 
+| 5.  | API |<ul><li>[x] </li></ul>| https://api.subrelay.xyz/api |  | 
+| 6.  | Integration |<ul><li>[x] </li></ul>| https://app.subrelay.xyz |  | 
+
+## Evaluation V3
+
+I was able to run the system locally and it worked well. However, I need to perform more steps than the ones listed in the quick start guide in order to properly run the system. I'll explain below the steps that I performed. Please either fix the docker / docker compose files or adjust the quick start guide to include these steps.
+
+1. Run all steps of the [quick start guide](https://docs.subrelay.xyz/self-hosting/quick-start). The application will spin up but there is no table available in the database.
+2. On the API project, change the DB_HOST .env variable to 'localhost'.
+3. Run the migration script `npm run typeorm migration:run` as explained in [this page](https://github.com/subrelay/subrelay-api#migration).
+4. On the API project, change the DB_HOST .env variable back to 'postgres'.
+5. Use the system.
+
+
 
 ## Evaluation V2
 
