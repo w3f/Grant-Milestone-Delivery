@@ -2,7 +2,7 @@
 
 
 
-- **Status:** Pending
+- **Status:** ACCEPTED
 - **Application Document:** [Afloat](https://github.com/w3f/Grants-Program/blob/master/applications/Afloat.md)
 - **Milestone:** 4
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
@@ -19,7 +19,7 @@
 |     2. | Request Redemption             | Yes      | [Documentation](https://github.com/hashed-io/hashed-substrate/blob/develop/docs/pallets-review/gated-marketplace.md#request-redemption)                                                                      | OK               |  
 |     3. | View materials and Redeem      | Yes      |                                                                                                                                                                                                              | OK               |   
 |     4. | Asset Manager                  | Yes      | [Documentation](https://github.com/hashed-io/hashed-substrate/blob/develop/docs/pallets-review/gated-marketplace.md#asset-manager)                                                                           | OK               |  
-|     5. | Launch Materials               |          |                                                                                                                                                                                                              | OK               |
+|     5. | Launch Materials               | -        |                                                                                                                                                                                                              | See comment      |
 
 
 ## Repositories
@@ -43,5 +43,7 @@
 * The milestone articles are not very useful imo. Probably better if there was one nice introduction to Afloat in Medium, similar to the videos and material proposed by Louise Reed on other topics.
 
 * As mentioned in previous deliveries, the frontend works as expected but it feels like a testing tool rather than a website that can actually be used by an end-user.
+
+* The links provided in 'Launch Materials' were not specifically made for Afloat project. 
 
 * Overall, this project looks very good and I am very happy to see a real life application with concrete value deployed using blockchain technology. Looking forward to next steps and seeing this adopted in the US accounting community.
