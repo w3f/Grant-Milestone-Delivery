@@ -2,7 +2,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/maintenance/Substratesnap_Maintenance.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/Substratesnap_Maintenance.md
 - **Delivery Number:** 3
 - **Delivery Date:** 24.08.22
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)
