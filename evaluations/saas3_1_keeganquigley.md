@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/SaaS3.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -9,13 +9,13 @@
 | Number | Deliverable   | Accepted | Link                                                                                 | Notes |
 |--------|---------------|----------|----------------------------------------------------------------------------|-------|
 | 0a.    | License   | <ul><li>[x] </li></ul> | MIT            |               |
-| 0b.    | Documentation       | <ul><li>[ ] </li></ul> | https://docs.saas3.io/dapi/get-started |    |
-| 0c.    | Testing Guide      | <ul><li>[ ] </li></ul> | https://github.com/SaaS3-Foundation/dRuntime-fat#test |  |
-| 0d.    | Article/Tutorial        | <ul><li>[ ] </li></ul> | https://docs.saas3.io/demo-case
-| 1.     | dRuntime-fat | <ul><li>[ ] </li></ul> | https://github.com/SaaS3-Foundation/dRuntime-fat |       |
-| 1a.    | Functions | <ul><li>[ ] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L418) [Link 2](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L100)  |
-| 1b.    | Structs | <ul><li>[ ] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L45)
-| 1c.    | Storage | <ul><li>[ ] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L34)
+| 0b.    | Documentation       | <ul><li>[x] </li></ul> | https://docs.saas3.io/dapi/get-started | OK.   |
+| 0c.    | Testing Guide      | <ul><li>[x] </li></ul> | https://github.com/SaaS3-Foundation/dRuntime-fat#test | OK. |
+| 0d.    | Article/Tutorial        | <ul><li>[x] </li></ul> | https://docs.saas3.io/demo-case | OK.
+| 1.     | dRuntime-fat | <ul><li>[x] </li></ul> | https://github.com/SaaS3-Foundation/dRuntime-fat | OK.      |
+| 1a.    | Functions | <ul><li>[x] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L418) [Link 2](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L100)  | OK.
+| 1b.    | Structs | <ul><li>[x] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L45) | OK.
+| 1c.    | Storage | <ul><li>[x] </li></ul> | [Link](https://github.com/SaaS3-Foundation/dRuntime-fat/blob/fb213ec6974739f9495a4fb3c37b8f1e7026c6cb/src/lib.rs#L34) | OK.
 
 # General Notes
 
@@ -61,3 +61,11 @@ It would be nice if you could include some docs for how to use the contract.
 - Do I still need to configure the oracle to test it?
 - What is the `js_engine_code_hash` field for?
 - Where can I get the contract address for `anchor_contract_addr`?
+
+# V3
+
+**UPDATE:** Feedback was addressed.
+
+I was able to upload and instantiate the oracle and configure it with the params used in the [docs](https://docs.saas3.io/demo-case#deploy-saas3-druntime). `test_run_js` doesn't work yet due to the feature not being live on Phala POC-5 testnet. See [these comments](https://github.com/w3f/Grant-Milestone-Delivery/pull/740#issuecomment-1439512515).
+
+For the next milestone, please be sure to include unit tests for both the phat contracts and the UI. It would be great to see a comprehensive guide for the UI as well.
