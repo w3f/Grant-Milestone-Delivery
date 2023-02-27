@@ -19,10 +19,10 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License	| Unlicense/Apache 2.0
-| 0b. |	Documentation |  | Inline documentation has been provided and the why part has been explained in the README as well. |
-| 0c. | Testing Guide |  | The Ink! smart contract comes with tests and as planned and mentioned, we've reused and extended the already tested frame-benchmarking-cli. |
-| 0e. | Article |  | Since Milestone 1 only targets two implementation approaches, we will publish an article that explains how each of the four implementation techniques perform, and when to choose which at the end of Milestone 2. |
+| 0a. | License	| Unlicense
+| 0b. |	Documentation |  | Inline documentation has been provided and the same has been explained in great detail in the README as well. |
+| 0c. | Testing Guide |  | The Ink! smart contract comes with tests and as mentioned, we've reused and extended the already tested frame-benchmarking-cli. |
+| 0e. | Article | https://talenticaall-my.sharepoint.com/:w:/g/personal/nikhil_desai_talentica_com/EcPSsxTWE5dBnOZS81uspkwBIIHoGI1RvAs6E0ETBsGiDg?e=NEtqmT | Since Milestone 1 only targets two implementation approaches, we have covered only those and will extend it to include the rest at the end of Milestone 2. |
 | 1. | Performance metrics |  | As already mentioned in the grant application, we are using weight as a metric to analyse performance. | 
 | 2. | Pallet: Basic Read & Write | https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/tree/contracts-benchmarking/pallets/template | Developed a sample pallet with read and write functionality. |
 | 3. | Ink Smart Contract: Basic Read & Write | https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/tree/contracts-benchmarking/test | Developed a sample Ink! smartcontract with read and write functionality implemented for the same basic types as the aforementioned pallet. |
@@ -30,5 +30,6 @@
 
 **Additional Information**
 The README explains in detail how to benchmark custom pallets and Ink! smartcontracts.
-Both the implementations cover a single i64 basic type, as opoosed to all variants of uint, int, bool and char as we believe the weights will be within the range and String(vec<u8>) compound type for now.
-
+Both the implementations cover a single i64 basic type and String(vec<u8>) compound type for now, as opoosed to all variants of uint, int, bool and char as we believe the weights will fall within the same range .
+An article that presents a comparison of benchmark results as calculated on a t2.medium EC2 instance has also been delivered.
+We aim to work on and improve the CLI in Milestone-2.
