@@ -14,7 +14,7 @@ In this first milestone we have created a unique dashboard design sketch for Cyc
 | -----: | ----------- | ------------- | ------------- |
 | **0a.** | License | [link](https://github.com/ArthurHoeke/cyclops/blob/main/LICENSE) |
 | **0b.** | Documentation | [link](https://github.com/ArthurHoeke/cyclops/blob/main/README.md)  |
-| **0c.** | Testing and Testing Guide | Serve Angular built following documentation instructions | Note that some design elements such as charts will look different from Figma due to library restricts and changing design choices et cetera. Figma is meant to help pre-plan the design, not to be a one to one mock-up. |
+| **0c.** | Testing and Testing Guide | Serve Angular following documentation instructions | Note that some design elements such as charts will look different from Figma due to library restricts and changing design choices et cetera. Figma is meant to help pre-plan the design / not a one to one mock-up. |
 | 1. | Figma design | [Figma file](https://github.com/ArthurHoeke/cyclops/tree/main/front-end/figma) |
 | 2. | HTML / SCSS | [link](https://github.com/ArthurHoeke/cyclops/tree/main/front-end) |
 | 3. | Angular setup | [link](https://github.com/ArthurHoeke/cyclops/tree/main/front-end) |
