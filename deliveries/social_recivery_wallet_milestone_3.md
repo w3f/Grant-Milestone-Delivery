@@ -37,15 +37,15 @@ Please contact me for demo accounts with a balance in Hashed tokens.
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | 0a. | License | [MIT License](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/LICENSE) | 
-| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/tutorial.md) <BR> [Code](https://github.com/hypha-dao/hashed-wallet/tree/v1.0.0_M3/)  <BR> [Architecture Overview](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/architecture.md) <BR> [Substrate Signing Request (SSR) Spec](https://github.com/hypha-dao/hashed-wallet/wiki/Substrate-Signing-Request-Specification) | Install instructions <BR> Source code <BR> Architecture <BR> Substrate Signing Request Spec
+| 0b. | Documentation | [Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/tutorial.md) / [Code](https://github.com/hypha-dao/hashed-wallet/tree/v1.0.0_M3/)  / [Architecture Overview](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/architecture.md) / [Substrate Signing Request (SSR) Spec](https://github.com/hypha-dao/hashed-wallet/wiki/Substrate-Signing-Request-Specification) | Install instructions / Source code / Architecture / Substrate Signing Request Spec
 | 0c. | Testing Guide | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/testing_guide.md) | Note: Contact me for demo account with a token balance to test the recovery API calls. 
-| 0d. | App Binaries | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/tag/1.0.0_M2) <BR> [Android Testing Track](https://play.google.com/apps/internaltest/4701631300800602818) <BR> [iOS Testflight App](https://testflight.apple.com/join/NKhGqqxE) |
+| 0d. | App Binaries | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/tag/v1.0.0_M3_build_16) / [Android Testing Track](https://play.google.com/apps/internaltest/4701631300800602818) / [iOS Testflight App](https://testflight.apple.com/join/NKhGqqxE) |
 | 0e. | Video | [Video Presentation](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/videos/milestone_3_delivery.md) |
 | 0f. | Screen Designs | [All Screens M3 PDF](https://github.com/hypha-dao/hashed-wallet/raw/v1.0.0_M3/documentation/Milestone%203%20Screens.pdf) | Not part of M3 but for completeness
-| 1. | QR Code Format | Flutter library for scanning polkadot.{js} QR codes |  
-| 2. | Node Selector | User can configure which network they are connecting to |  
-| 3. | Sign and Broadcast | Integrate Sign and Broadcast for Flutter |  
-| 4. | Deployment | Wallet deployed to iOS and Android app stores |  
+| 1. | QR Code Format | [Flutter library for scanning polkadot.{js} QR codes](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/lib/datasource/local/signing_request_repository.dart) |  
+| 2. | Node Selector | [User can configure which network they are connecting to](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/screenshots/network_switcher_1.png) |  
+| 3. | Sign and Broadcast | [Integrate Sign and Broadcast for Flutter](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/screenshots/sign_and_send.png) |  
+| 4. | Deployment | Wallet deployed to [iOS](https://testflight.apple.com/join/NKhGqqxE) and [Android](https://play.google.com/apps/internaltest/4701631300800602818) app stores |  
 
 **Additional Information**
 
