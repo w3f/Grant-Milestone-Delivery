@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subrelay.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/subrelay/subrelay-api/blob/main/LICENSE https://github.com/subrelay/interface/blob/main/LICENSE | | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>| https://github.com/subrelay/interface#readme https://github.com/subrelay/subrelay-api#readme  https://api.subrelay.xyz/api | Migration step missing | 
+| 0b.  | Documentation |<ul><li>[x] </li></ul>| https://github.com/subrelay/interface#readme https://github.com/subrelay/subrelay-api#readme  https://api.subrelay.xyz/api |  | 
 | 0c. | Docker file |<ul><li>[x] </li></ul>| https://github.com/subrelay/subrelay-api#self-hosting |  | 
 | 1.  | Feature: Authentication by PolkadotJs wallet |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/welcome |  |
 | 2.  | Feature: Create a new workflow |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/editor/new-flow/trigger |  | 
@@ -17,6 +17,10 @@
 | 4.  | Feature: Executions of workflows |<ul><li>[x] </li></ul>| https://app.subrelay.xyz/#/home/history |  | 
 | 5.  | API |<ul><li>[x] </li></ul>| https://api.subrelay.xyz/api |  | 
 | 6.  | Integration |<ul><li>[x] </li></ul>| https://app.subrelay.xyz |  | 
+
+## Evaluation V4
+
+A troubleshooting section was added to the quick start guide explaining how to run the migrations if they didn't run properly during the system initialization (https://docs.subrelay.xyz/self-hosting/quick-start#troubleshooting).
 
 ## Evaluation V3
 
