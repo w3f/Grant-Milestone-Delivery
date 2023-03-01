@@ -27,10 +27,25 @@ That said, I identified some minor problems, and I have some suggestions for (UI
 ### Possible problems
 - The `Transactions trend` chart seems to not work properly, both in the Kusama and Moonbeam demos you provided and locally. Also, days go from right to the left in the x axis.
 - I tried other RPCs (Rococo Contracts and Statemint) and the first 127 blocks have 0 txs and `1970-01-01 01:00:00` as time. Do you know if it's a problem on your end or on the RPCs? For those blocks, I see this in the console:
-- If I go to the `Blocks` page, which are the first blocks shown? Because if I order those by number, I get the following result:
+
+  <img width="1230" alt="Screenshot 2023-03-01 at 11 52 35" src="https://user-images.githubusercontent.com/22419450/222134266-aa61ef22-8611-4159-bec2-89dede7a9c0f.png">
+
+- If I go to the `Blocks` page, which are the first blocks shown?
 - There are accounts with millions of coins and no transactions, is it something on your end or the RPC data is wrong / they're some edge cases?
+
+  ![Screenshot 2023-03-01 at 11 04 19](https://user-images.githubusercontent.com/22419450/222134147-61039c49-c130-4316-b9a1-d152a235a678.png)
+
 - While the server is retrieving the blocks, I try to search for a one that has just been found, but I get the error:
+
+  ![Screenshot 2023-03-01 at 12 51 49](https://user-images.githubusercontent.com/22419450/222133475-86fce356-796a-4969-869c-0d54f58895f7.png)
   
+  Note: this is the block I'm looking for, maybe the blocknumber is 516 instead of 3316885 and I misinterpreted the logs?
+  
+  <img width="692" alt="Screenshot 2023-03-01 at 12 02 40" src="https://user-images.githubusercontent.com/22419450/222134060-5fabdff0-3fd8-41f3-aee7-1c1c13e73dad.png"/>
+
+
+
+
 ### Suggestions (feel free to ignore them)
 - In the sidebar, I'd rename "Transfers" to "Transactions", as it's more general;
 - I'd make possible to zoom in/out the `Transactions trend` chart;
