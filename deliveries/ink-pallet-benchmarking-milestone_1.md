@@ -29,6 +29,7 @@
 | 4. | Library: Benchmarking | https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/blob/contracts-benchmarking/node/src/benchmarking.rs | The frame-benchmarking-cli has been extended to support custom pallets and Ink! smartcontracts, and this will be further refined by Milestone 2. |
 
 **Additional Information**
+The code is on the branch `contracts-benchmarking`. All the links to deliverables point to artifacts on that branch.
 The README explains in detail how to benchmark custom pallets and Ink! smartcontracts.
 Both the implementations cover a single i64 basic type and String(vec<u8>) compound type for now, as opoosed to all variants of uint, int, bool and char as we believe the weights will fall within the same range .
 An article that presents a comparison of benchmark results as calculated on a t2.medium EC2 instance has also been delivered.
