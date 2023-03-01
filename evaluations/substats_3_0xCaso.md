@@ -47,7 +47,7 @@ That said, I identified some minor problems, and I have some suggestions for (UI
 
 
 ### UI suggestions (feel free to ignore them)
-- In the sidebar, I'd rename "Transfers" to "Transactions", as it's more general;
+- I'd rename "Transfers" to "Transactions", as it's more general;
 - I'd make possible to zoom in/out the `Transactions trend` chart;
 - If I input something in the research bar and search and then I change page, I'd remove the input value;
 - In the `Account` page, I'd make the txs shrinkable (and already shrinked if I open the page), so that I can see more txs at once;
