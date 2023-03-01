@@ -46,7 +46,7 @@ That said, I identified some minor problems, and I have some suggestions for (UI
 
 
 
-### Suggestions (feel free to ignore them)
+### UI suggestions (feel free to ignore them)
 - In the sidebar, I'd rename "Transfers" to "Transactions", as it's more general;
 - I'd make possible to zoom in/out the `Transactions trend` chart;
 - If I input something in the research bar and search and then I change page, I'd remove the input value;
