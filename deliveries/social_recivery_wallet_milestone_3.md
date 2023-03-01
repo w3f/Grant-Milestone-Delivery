@@ -43,8 +43,8 @@ Please contact me for demo accounts with a balance in Hashed tokens.
 | 0e. | Video | [Video Presentation](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/videos/milestone_3_delivery.md) |
 | 0f. | Screen Designs | [All Screens M3 PDF](https://github.com/hypha-dao/hashed-wallet/raw/v1.0.0_M3/documentation/Milestone%203%20Screens.pdf) | Not part of M3 but for completeness
 | 1. | QR Code Format | [Flutter library for scanning polkadot.{js} QR codes](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/lib/datasource/local/signing_request_repository.dart) |  
-| 2. | Node Selector | [User can configure which network they are connecting to](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/screenshots/network_switcher_1.png) |  
-| 3. | Sign and Broadcast | [Integrate Sign and Broadcast for Flutter](https://github.com/hypha-dao/hashed-wallet/blob/v1.0.0_M3/documentation/screenshots/sign_and_send.png) |  
+| 2. | Node Selector | [User can configure which network they are connecting to](https://github.com/hypha-dao/hashed-wallet/tree/main/lib/screens/profile_screens/switch_network) |  
+| 3. | Sign and Broadcast | [Integrate Sign and Broadcast for Flutter](https://github.com/hypha-dao/hashed-wallet/tree/main/lib/screens/transfer/scan) |  
 | 4. | Deployment | Wallet deployed to [iOS](https://testflight.apple.com/join/NKhGqqxE) and [Android](https://play.google.com/apps/internaltest/4701631300800602818) app stores |  
 
 **Additional Information**
