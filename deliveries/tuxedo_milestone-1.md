@@ -26,4 +26,4 @@ We have also put together a minimal PoC "wallet" for spending coins, but this wa
 | Bonus  | Other Example Pieces | [Amoeba](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/amoeba.rs), [PoE](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/poe.rs), [Runtime Upgrade](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/runtime_upgrade.rs) | We found it useful to write a few more example tuxedo pieces while we were designing the core. Maybe you want to see them too. These pieces were not required by the grant, so they are not all tested or completed up to grant standards (although some of them are). |
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+Thanks for the opportunity to work on this. We look forward to the next two milestones and beyond.
