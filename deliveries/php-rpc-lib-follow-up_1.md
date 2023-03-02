@@ -10,7 +10,7 @@ has been filled out correctly for this milestone.**
 
 | Number | Deliverable    | Link                                                                                         | Notes |
 |--------|----------------|----------------------------------------------------------------------------------------------|-------|
-| 0a.    | License        | MIT license                                                                                  | MIT   |
+| 0a.    | License        | https://github.com/gmajor-encrypt/php-substrate-api/blob/master/LICENSE
 | 0b.    | Documentation  | https://github.com/gmajor-encrypt/php-substrate-api/blob/master/README.md                    |       |
 | 0c.    | source code 1  | https://github.com/gmajor-encrypt/php-substrate-api                                          |       |
 | 0d.    | source code 2  | https://github.com/gmajor-encrypt/php-scale-codec/tree/master/src/Codec/interfaces/contracts |       |
