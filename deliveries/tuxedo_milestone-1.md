@@ -13,14 +13,17 @@ In this milestone we have written focused primarily on the on-chain aspects. Thi
 We have also put together a minimal PoC "wallet" for spending coins, but this wallet is nowhere near production ready; the real wallet will be developed in milestone two. Similarly, the project's [readme](https://github.com/Off-Narrative-Labs/Tuxedo/#readme) contains instructions to test the code both through unit tests and manually with the PoC wallet, but this is not the final tutorial; a detailed written tutorial and accompanying video tutorial will be developed in milestone 3.
 
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
-| Number | Deliverable | Link | Notes |
-| ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| Number | Deliverable | Link(s)       | Notes |
+| ------ | ----------- | ------------- |------------- |
+| 0a.    | License     | [LICENSE file](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/LICENSE) | Apache 2.0 as recommended | 
+| 0b.    | Documentation | [Hosted Rustdocs](TODO), [Readme](TODO) | We have detailed rustdocs throughout the project; they also hosted. Instructions for using Tuxedo are in the Readme. | 
+| 0c.    | Testing     | [Readme Section](TODO) | We have good unit test coverage throughout the project. The tests are run in CI and instructions for running them locally are in the readme. Instructions for testing the node manually with the PoC wallet in the Readme. |
+| 0d.    | Docker      | [Node Dockerfile](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/Dockerfile), [PoC Wallet Dockerfile](TODO), [Readme Section](TODO) | We provide docker images for both the template node and the PoC wallet as well as instructions for how to test the node with them. |
+| 1.     | Tuxedo Core | [Core Rustdocs](TODO), [Core Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/main/tuxedo-core) | |
+| 2.     | Money Piece | [Money Rustdocs](TODO), [Money Code](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/money.rs) | |
+| 3.     | Tuxedo Template | [Node Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/main/node), [Runtime Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/main/frameless-runtime), [Runtime Rustdocs](TODO) | There is not much to see in the node code, it is 95% copied from the Substrate node template. We recommend spending your time on the Runtime |
+| Bonus  | Other Example Pieces | [Amoeba](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/amoeba.rs), [PoE](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/poe.rs), [Runtime Upgrade](https://github.com/Off-Narrative-Labs/Tuxedo/blob/main/frameless-runtime/src/runtime_upgrade.rs) | We found it useful to write a few more example tuxedo pieces while we were designing the core. Maybe you want to see them too. These pieces were not required by the grant, so they are not all tested or completed up to grant standards (although some of them are). |
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
