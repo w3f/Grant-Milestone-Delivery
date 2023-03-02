@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/social_recovery_wallet.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -13,10 +13,10 @@
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/hypha-dao/hashed-wallet/blob/c734af03d6a24e4e3d385a106a1ab385b3daacaf/documentation/testing_guide.md) | see [Testing Guide Feedback](#testing-guide-feedback) |
 | 0d. | App Binaries | <ul><li>[x] </li></ul> | [APK for Android](https://github.com/hypha-dao/hashed-wallet/releases/tag/1.0.0_M2), [Android Testing Track](https://play.google.com/apps/internaltest/4701631300800602818), [iOS Testflight App](https://testflight.apple.com/join/NKhGqqxE) | All delivered functions were successfully tested on iOS. |
 | 0e. | Video | <ul><li>[x] </li></ul> | [Video Tutorial](https://github.com/hypha-dao/hashed-wallet/blob/c734af03d6a24e4e3d385a106a1ab385b3daacaf/documentation/videos/milestone_3_delivery.md) | - |
-| 1. | QR Code Format  | <ul><li>[ ] </li></ul> | (pending) | Spec: Flutter library for scanning polkadot.{js} QR codes |  
-| 2. | Node Selector  | <ul><li>[ ] </li></ul> | (pending) | Spec: User can configure which network they are connecting to |  
-| 3. | Sign and Broadcast  | <ul><li>[ ] </li></ul> | (pending) | Spec: Integrate Sign and Broadcast for Flutter |  
-| 4. | Deployment  | <ul><li>[ ] </li></ul> | (pending) | Spec: Wallet deployed to iOS and Android app stores |  
+| 1. | QR Code Format  | <ul><li>[x] </li></ul> | [signing_request_repository.dart](https://github.com/hypha-dao/hashed-wallet/blob/b79d0a142f1566b04f6201683fa5b75e1d902693/lib/datasource/local/signing_request_repository.dart) | - |  
+| 2. | Node Selector  | <ul><li>[x] </li></ul> | ['switch_network' package](https://github.com/hypha-dao/hashed-wallet/tree/fca1fcb28d54b2c59f990e0cb540e60229eb7002/lib/screens/profile_screens/switch_network) | - |  
+| 3. | Sign and Broadcast  | <ul><li>[x] </li></ul> | ['scan' package](https://github.com/hypha-dao/hashed-wallet/tree/fca1fcb28d54b2c59f990e0cb540e60229eb7002/lib/screens/transfer/scan) | - |  
+| 4. | Deployment  | <ul><li>[x] </li></ul> | [iOS](https://testflight.apple.com/join/NKhGqqxE), [Google Play store](https://play.google.com/apps/internaltest/4701631300800602818) | - |  
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
