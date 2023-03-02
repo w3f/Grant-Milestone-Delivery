@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/LICENSE| | 
-| 0b. |Documentation|<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish#readme|  Some commands failing | 
+| 0b. |Documentation|<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish#readme|   | 
 | 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/unit_tests.md| Need a more complete testing guide for system tests | 
 | 0d.  | Docker |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/Dockerfile| Need improvements | 
 | 0e. | Article |<ul><li>[ ] </li></ul>|https://medium.com/@daogangtang/eightfish-milestone-1-81ef32e4bbf2| Not fully evaluated yet | 
@@ -19,6 +19,64 @@
 | 4. | Upgrade utilities |<ul><li>[ ] </li></ul>| 1. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/bin/upload_wasm.rs <br/> 2. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/main.rs <br/> 3.  https://github.com/eightfish-org/eightfish/blob/master/upgrade/nodemon.sh | Not fully evaluated yet| 
 | 5. | A set of rust derive procedural macro |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/eightfish-derive | Not fully evaluated yet| 
 | 6. | Framework SDK interface |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/src | Not fully evaluated yet| 
+
+## Evaluation V3
+
+### Flow Test
+
+All commands in this test work, but all services need to be running in the same docker container and the HTTP requests need to be made in the same docker container. Ideally, the HTTP request should be able to be done outside the container. Adding a docker-compose file to spin up the services and connect them is highly recommended for this project.
+
+
+### Unit Test
+
+The 2 tests ignored in Evaluation V2 were removed.
+
+```
+ 	Running unittests src/lib.rs (target/debug/deps/eightfish_derive-22462dc7dd8fc507)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+ 	Running tests/integration_test.rs (target/debug/deps/integration_test-3e63434866144fa5)
+
+running 19 tests
+test test_build_delete_sql_and_params ... ok
+test test_build_get_one_sql_and_params ... ok
+test test_build_insert_sql_and_params ... ok
+test test_build_struct_from_row ... ok
+test test_build_update_sql_and_params ... ok
+test test_build_update_param ... ok
+test test_build_insert_param_mix_type ... ok
+test test_get_id ... ok
+test test_delete_sql ... ok
+test test_build_insert_param ... ok
+test test_get_list_sql ... ok
+test test_calc_hash ... ok
+test test_insert_sql ... ok
+test test_get_one_sql ... ok
+test test_model_names ... ok
+test test_struct_names ... ok
+test test_struct_names_placeholder ... ok
+test test_struct_names_update_placeholder ... ok
+test test_update_sql ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eightfish-derive
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00
+```
+
+### Code Quality
+
+Warnings from the subnode folder were fixed except substrate-node-template which doesn't need to be fixed. 
+
+### System test
+
+Need a system testing guide to test all functions from derivable, with the step-by-step and expected output. This includes all deliverables from 1 to 6. We should be able to run either manually or using e2e automated tests the system with all parts integrated and check the results.
 
 ## Evaluation V2
 
@@ -49,7 +107,6 @@ error[E0308]: mismatched types
    |
    = note: expected struct `http::Method`
        	found reference `&_`
-
 For more information about this error, try `rustc --explain E0308`.
 error: could not compile `http-gate` due to previous error
 Error: Build command for component http-gate failed with status Exited(101)
@@ -70,13 +127,9 @@ warning: skipping duplicate package `env` found at `/home/user/.cargo/git/checko
 warning: skipping duplicate package `http-rust-outbound-mysql` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/outbound-mysql/http-rust-outbound-mysql`
 	Finished test [unoptimized + debuginfo] target(s) in 0.04s
  	Running unittests src/lib.rs (target/debug/deps/eightfish_derive-22462dc7dd8fc507)
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
  	Running tests/integration_test.rs (target/debug/deps/integration_test-3e63434866144fa5)
-
 running 19 tests
 test test_build_get_one_sql_and_params ... ok
 test test_build_delete_sql_and_params ... ok
@@ -97,15 +150,11 @@ test test_struct_names ... ok
 test test_struct_names_placeholder ... ok
 test test_update_sql ... ok
 test test_struct_names_update_placeholder ... ok
-
 test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
    Doc-tests eightfish-derive
-
 running 2 tests
 test src/lib.rs - eight_fish_model (line 10) ... ignored
 test src/lib.rs - eight_fish_model (line 22) ... ignored
-
 test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
 
@@ -131,9 +180,7 @@ note: this value is dropped without further use
    |                                          	^^^^
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
    = note: `#[warn(clippy::redundant_clone)]` on by default
-
 ...
-
 warning: redundant clone
   --> node/src/rpc.rs:50:47
    |
@@ -146,17 +193,14 @@ note: this value is dropped without further use
 50 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
    |                                          	^^^^
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: `eightfish-subnode` (bin "eightfish-subnode") generated 7 warnings (3 duplicates)
 	Finished dev [unoptimized + debuginfo] target(s) in 8.66s
-
 ```
 
 The coverage in the folder `eightfish/subnode/pallets/eightfish` was improved
 
 ```
 test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
-
 Feb 27 12:44:27.786  INFO cargo_tarpaulin::report: Coverage Results:
 || Tested/Total Lines:
 || node/src/chain_spec.rs: 0/2
