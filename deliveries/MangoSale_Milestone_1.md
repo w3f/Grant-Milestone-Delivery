@@ -20,6 +20,7 @@
 | 0b.    | Documentation            |     [Documentation](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md)     | Documentation .                                                   |
 | 0c.    | Testing Guide            | [Testing Guide](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md#testing) | All test instructions are in the contract code document.          |
 | 0d.    | Docker         |              [Docker](https://github.com/Mangoboxlabs/MangoSale/tree/main/docker)               | Dockerfile.                                                       |
+| 0e.    | Article         |              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)               |We will publish an article that explains how to use our product.                                                       |
 | 1.     | Ink! Contract 1           |   [mango_airdrop](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_airdrop)   | 1.MangoAirdrop:MangoAirdrop can implement different types of token airdrops. |
 | 2.     | Ink! Contract 2           |      [mango_lock](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_lock)      | 2.MangoLock:MangoLock can realize the lock-up and linear release of Token. |
 | 3.     | Ink! Contract 3           |   [token_factory](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/token_factory)   | 3.TokenFactory: TokenFactory can create ERC20 tokens with tax functions. |
