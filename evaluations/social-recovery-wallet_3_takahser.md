@@ -25,7 +25,6 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 - during testing, there were a couple of bugs that were reported to the grantee
 - the grantee created tickets and fixed the bugs promptly
-- for deliverable 1-4 I'm currently waiting for the grantee to include the links
 
 ### Testing Guide Feedback
 
