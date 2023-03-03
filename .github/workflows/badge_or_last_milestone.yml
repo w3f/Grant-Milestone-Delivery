@@ -101,18 +101,13 @@ jobs:
         uses: thollander/actions-comment-pull-request@1.0.2
         with:
           message: > 
-            We noticed that this is the last milestone of your project. Congratulations on completing your grant!<br/>
-            
-            So, where to from here? The main goal of the W3F grants program is to support research as well as early-stage technical projects. So, if your project
-            still falls under one of those categories, you might want to apply for a follow-up grant. Depending on your goals and project status, there are 
-            other support programs in our ecosystem that might be better suited as the next step, for example: <br/> 
+            We noticed that this is the last milestone of your project. Congratulations on completing your grant! 🎊<br/>
 
-            Project with a Business Case/Token: [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) 
-            or [VC Funding](https://parachains.info/investors) <br/> 
+            So, where to from here? First of all, you should join our [Grants Community chat](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation&via=matrix.org), if you haven't already, so we can stay in touch.
 
-            Common Good Projects: [Treasury Funding](https://github.com/w3f/Grants-Program#treasury) <br/> 
+            If you are looking for continuative support for your project, there are quite a few options. The main goal of the W3F grants program is to support research as well as early-stage technical projects. If your project still falls under one of those categories, you might want to apply for a follow-up grant. However, depending on your goals and project status, there are other support programs in our ecosystem that might be better suited as the next step. For example, projects with a Business Case/Token should look into the [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) or [VC Funding](https://parachains.info/investors). Common Good projects have a good chance of receiving [Treasury Funding](https://github.com/w3f/Grants-Program#treasury).<br/> 
 
-            For a more comprehensive list, see our [Alternative Funding page](https://w3f.github.io/Grants-Program/funding).
-            
-            Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
+            For a more comprehensive list, see our [Alternative Funding page](https://w3f.github.io/Grants-Program/funding). Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
+
+            Lastly, we hope your W3F grant was a success and we want to thank you for being part of the journey!
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
