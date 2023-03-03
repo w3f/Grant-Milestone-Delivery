@@ -9,9 +9,9 @@
 
 Tuxedo is a runtime framework for writing Substrate runtimes in the UTXO model. It is analogous (and an alternative) to FRAME which uses the accounts model. This is the first of three milestones in the grant.
 
-In this milestone we have written focused primarily on the on-chain aspects. This includes the **core of the Tuxedo system**, the first and most important "piece" (analogous to a pallet) which we call the **money piece** that represents a bitcoin-like cryptocurrency, several other **example pieces**, and a **template** node and runtime using the Tuxedo system.
+In this milestone we have focused on the on-chain aspects. This includes the **core of the Tuxedo system**, the first and most important "piece" (analogous to a pallet) which we call the **money piece** that represents a bitcoin-like cryptocurrency, several other **example pieces**, and a **template** node and runtime using the Tuxedo system.
 
-We have also put together a minimal PoC "wallet" for spending coins, but this wallet is nowhere near production ready; the real wallet will be developed in milestone two. Similarly, the project's [readme](https://github.com/Off-Narrative-Labs/Tuxedo/#readme) contains instructions to test the code both through unit tests and manually with the PoC wallet, but this is not the final tutorial; a detailed written tutorial and accompanying video tutorial will be developed in milestone 3.
+We have also put together a minimal PoC wallet for spending coins, but this wallet is nowhere near production ready; the real wallet will be developed in milestone two. Similarly, the project's [readme](https://github.com/Off-Narrative-Labs/Tuxedo/#readme) contains instructions to test the code both through unit tests and manually with the PoC wallet, but this is not the final tutorial; a detailed written tutorial and accompanying video tutorial will be developed in milestone 3.
 
 **Deliverables**
 
