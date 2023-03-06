@@ -7,7 +7,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** [https://github.com/w3f/Grants-Program/blob/master/applications/solidity-trie-verifier.md](https://github.com/w3f/Grants-Program/blob/master/applications/solidity-trie-verifier.md) 
-* 
+
 * **Milestone Number:** 1
 
 **Context**
@@ -22,8 +22,14 @@
 | 0c | Testing and Testing Guide | Test coverage include; [unit test](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/forge/src/merkle_patricia.rs), [Solidity](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol) and [Fuzz Test](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/forge/fuzz/src/lib.rs) | |
 | 0d | Article |  [https://docs.google.com/document/d/1ZWzVbbYk4Yal4t_cBmoyPfDjSmS8egV9nnrOJq7DOII/edit](https://docs.google.com/document/d/1ZWzVbbYk4Yal4t_cBmoyPfDjSmS8egV9nnrOJq7DOII/edit) | |
 | 1 | Solidity Scale Codec | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/ScaleCodec.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/ScaleCodec.sol) | This includes functionality to decode the [`Nodekind`](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Node.sol#L9) enums using [`decodeNodeKind`](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/substrate/SubstrateTrieDB.sol#L25), the [`ByteSlice`](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Bytes.sol#L7) can be utilized for decoding `Vec<Vec<u8>>` as earlier [discussed](https://github.com/w3f/Grants-Program/pull/1481#issuecomment-1409013021). |
-| 2 | Trie Verifier | [`VerifySubstrateProof`](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L31) | Along with it's sub-implementations(i.e [Node](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/Node.sol), [NibbleSlice](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/NibbleSlice.sol) etc.)|
-
-**Additional Information**
-
-The sub implementations highlighted as separate deliverables in the application provided contextual information of the scope of work needed to implement the verifier.
+| 2 | KeySpacedDB | [https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L99](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L99) | Optimized as [https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L106](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L106) in `ReadChildProofCheck`   |
+| 3 | MemoryDB | | Swapped for byte array, MemoryDB uses a hashmap internally and solidity mappings only support storage. |
+| 4 | NodeCodec | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol) | |
+| 5 | Node | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/Node.sol#L9](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/Node.sol#L9) | |
+| 6 | NodePlan | [https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Node.sol#L26](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Node.sol#L26) | |
+| 7 | NodeHeader | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/Node.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/Node.sol) | |
+| 8 | NibbleSlicePlan | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/NibbleSlice.sol#L10](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/NibbleSlice.sol#L10) | |
+| 9 | NibbleSlice | [https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/NibbleSlice.sol#L5](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/NibbleSlice.sol#L5)| |
+| 10 | Layoutv01 | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol) | |
+| 11 | Layoutv02 | [https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/src/trie/substrate/SubstrateTrieDB.sol) | |
+| 12 | Trie Verifier | [`VerifySubstrateProof`](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L31) | |
