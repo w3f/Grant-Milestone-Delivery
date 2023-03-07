@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/php-rpc-lib-follow-up.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,7 +9,7 @@
 | Number | Deliverable    | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License        |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/LICENSE                      | MIT   |
-| 0b.    | Documentation  |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/README.md                    | Need improvements in the installation steps.      |
+| 0b.    | Documentation  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/README.md                    |       |
 | 0c.    | source code 1  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api                                          |        |
 | 0d.    | source code 2  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-scale-codec/tree/master/src/Codec/interfaces/contracts |        |
 | 1.     | ABI            |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/tree/master/src/Rpc/Contract/Abi         |        |
