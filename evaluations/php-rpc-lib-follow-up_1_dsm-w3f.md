@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/php-rpc-lib-follow-up.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,17 +9,33 @@
 | Number | Deliverable    | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License        |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/LICENSE                      | MIT   |
-| 0b.    | Documentation  |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/README.md                    | Need improvements in the installation steps.      |
-| 0c.    | source code 1  |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api                                          |  Not fully evaluated yet      |
-| 0d.    | source code 2  |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-scale-codec/tree/master/src/Codec/interfaces/contracts | Not fully evaluated yet       |
-| 1.     | ABI            |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/tree/master/src/Rpc/Contract/Abi         |  Not fully evaluated yet      |
-| 2.     | Deploy         |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract.php         |  Not fully evaluated yet      |
-| 3.     | Read contract  |<ul><li>[ ] </li></ul>|https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract/State.php    | Not fully evaluated yet       |
-| 4.     | Write contract |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract/Call.php    |  Not fully evaluated yet      |
-| 5.     | Example        |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api#contract                                 | Not fully evaluated yet       |
-| 6.     | Test           |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/test/Rpc/ContractTest.php    | Need some extra cases and better assertions.  |
-| 7.     | Packagist      |<ul><li>[ ] </li></ul>| https://packagist.org/packages/gmajor/php-substrate-api                                      | Not fully evaluated yet       |
-| 8.     | Github action  |<ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/tree/master/.github                      |  Not fully evaluated yet      |
+| 0b.    | Documentation  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/README.md                    |       |
+| 0c.    | source code 1  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api                                          |        |
+| 0d.    | source code 2  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-scale-codec/tree/master/src/Codec/interfaces/contracts |        |
+| 1.     | ABI            |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/tree/master/src/Rpc/Contract/Abi         |        |
+| 2.     | Deploy         |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract.php         |        |
+| 3.     | Read contract  |<ul><li>[x] </li></ul>|https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract/State.php    |        |
+| 4.     | Write contract |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/src/Rpc/Contract/Call.php    |        |
+| 5.     | Example        |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api#contract                                 |        |
+| 6.     | Test           |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/blob/master/test/Rpc/ContractTest.php    |   |
+| 7.     | Packagist      |<ul><li>[x] </li></ul>| https://packagist.org/packages/gmajor/php-substrate-api                                      |        |
+| 8.     | Github action  |<ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/php-substrate-api/tree/master/.github                      |        |
+
+## Evaluation V3
+
+### Documentation
+
+Some extensions installation instructions were added. However, I still need to install dom and mbstring for running the system and there is no instruction in the tutorial for that. Please notice that dom is not a default extension in all operational systems and mbstring is not a default extension. Please see and add those links to the tutorial:
+
+https://www.php.net/manual/en/dom.installation.php
+
+
+https://www.php.net/manual/en/mbstring.installation.php
+
+
+### Testing
+
+The remainder of the problems and improvement requests from Evaluation V2 were properly addressed.
 
 ## Evaluation V2
 
@@ -31,16 +47,13 @@ I tried again with php 8.1, and the extensions gmp, dom, curl and mbstring weren
 user@localhost:~/Documents/php-rcp-lib flow up/php-substrate-api$ composer require gmajor/php-substrate-api
 Info from https://repo.packagist.org: #StandWithUkraine
 Cannot use gmajor/php-substrate-api's latest version 9999999-dev as it requires ext-curl * which is missing from your platform.
-
 In PackageDiscoveryTrait.php line 317:
                                                                                                                          	 
   Package gmajor/php-substrate-api has requirements incompatible with your PHP version, PHP extensions and Composer version:  
 	- gmajor/php-substrate-api dev-master requires ext-curl * but it is not present.                                     	 
 	- gmajor/php-substrate-api dev-master requires ext-gmp * but it is not present.                                      	 
                                                                                                                          	 
-
 require [--dev] [--dry-run] [--prefer-source] [--prefer-dist] [--prefer-install PREFER-INSTALL] [--fixed] [--no-suggest] [--no-progress] [--no-update] [--no-install] [--no-audit] [--audit-format AUDIT-FORMAT] [--update-no-dev] [-w|--update-with-dependencies] [-W|--update-with-all-dependencies] [--with-dependencies] [--with-all-dependencies] [--ignore-platform-req IGNORE-PLATFORM-REQ] [--ignore-platform-reqs] [--prefer-stable] [--prefer-lowest] [--sort-packages] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--apcu-autoloader-prefix APCU-AUTOLOADER-PREFIX] [--] [<packages>...]
-
 user@localhost:~/Documents/php-rcp-lib flow up/php-substrate-api$ php -v
 PHP 8.1.16 (cli) (built: Feb 14 2023 18:28:06) (NTS)
 Copyright (c) The PHP Group
@@ -66,14 +79,9 @@ The test error was fixed and the automated tests have good coverage. However, th
 ```
 user@localhost:~/Documents/php-rcp-lib flow up/php-substrate-api$ phpunit --coverage-text --coverage-filter ./src
 PHPUnit 9.5.2 by Sebastian Bergmann and contributors.
-
 .....................                                         	21 / 21 (100%)
-
 Time: 01:56.761, Memory: 104.01 MB
-
 OK (21 tests, 146 assertions)
-
-
 Code Coverage Report: 	 
   2023-03-02 14:06:33 	 
                       	 
