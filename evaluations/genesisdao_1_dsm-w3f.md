@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/GenesisDAO.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,11 +11,28 @@
 | 0a. | Licence | <ul><li>[x] </li></ul>| All repositories have a LICENSE.md file at their repo root. | Both Apache 2.0 | 
 | 0b. | Documentation | <ul><li>[x] </li></ul>| All repositories have a README.md file at their repo root, that is the entry point to the documentation. |  | 
 | 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md |  |
-| 0d. | Docker | <ul><li>[ ] </li></ul>| All repositories are dockerized. Enter the repo via command-line and run docker compose up -d | Docker fail to build the frontend. 
+| 0d. | Docker | <ul><li>[x] </li></ul>| All repositories are dockerized. Enter the repo via command-line and run docker compose up -d |  | 
 | 1. | Parachain setup | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node |  |
 | 2. | pallet_dao_core | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-core | | 
 | 3. | Frontend Infrastructure | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend |  |
 | 4. | Design and Product Flow | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/design.pdf |  |
+
+## Evaluation V4
+
+### Docker 
+
+Docker works fine. Would be nice if you provide an example of the `.env` needed to run the system in the repository and mention how to use it in the Testing Guide.
+
+```
+user@localhost:~/Documents/GenesisDao/pre-feedback/genesis-dao-frontend$ docker compose up
+[+] Running 1/0
+ ⠿ Container genesis-dao-frontend  Recreated                                                                                                                                                                  0.0s
+Attaching to genesis-dao-frontend
+genesis-dao-frontend  | yarn run v1.22.19
+genesis-dao-frontend  | $ next start
+genesis-dao-frontend  | ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+genesis-dao-frontend  | info  - Loaded env from /usr/src/app/.env
+```
 
 ## Evaluation V3
 

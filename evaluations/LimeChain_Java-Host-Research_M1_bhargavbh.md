@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Process
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/research-feasibiliy-java-host.md 
 - **Milestone:** 1
 
@@ -8,9 +8,9 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0.a | License |<ul><li>[x] </li></ul>|[Included](https://github.com/LimeChain/java-host-research/blob/main/LICENSE)| Apache License V2.0
 | 0.b | Outcome Summary |<ul><li>[x] </li></ul>| https://github.com/LimeChain/java-host-research/blob/main/research/java-host-research-outcome.md | Structured Overview Doc delivered with clear findings of research.
-| 1.a | PoC |<ul><li>[] </li></ul>|...| TODO
-| 1.b | Testing Guide |<ul><li>[] </li></ul>|...| TODO
-| 1.a | Docker |<ul><li>[] </li></ul>|...| TODO
+| 1.a | PoC |<ul><li>[x] </li></ul>| [Examples](https://github.com/LimeChain/wasmer-java/tree/master/examples)| According to contract some initial examples regarding wasmer-java. Could have tested potentially a little bit more, but this is fine 
+| 1.b | Testing Guide |<ul><li>[x] </li></ul>| [Proof of Concept Demo](https://github.com/LimeChain/java-host-research/blob/e0d673177aec21dbc0ffe05bd249e54bb9ceef56/README.md#proof-of-concept-demo)| Small but enough
+| 1.a | Docker |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/LimeChain/wasmer-java/blob/3c6ca0ed4d4882a62d5950fd506ab3d5bd287a37/Dockerfile) | Works
 | 2. | Research reusing PolkaJ |<ul><li>[x] </li></ul>|[Crypto Primitives](https://github.com/LimeChain/java-host-research/blob/main/research/java-host-research-outcome.md#cryptographic-primitives)| Compared PolkaJ, Polkadot-java, and Schnorrkel-java for crypto primitives. Suggest using Schnorrkel-java due to its native implementation and feature-rich library. PolkaJ is usable with minor extensions for SCALE.
 | 2. | Research p2p Networking  |<ul><li>[x] </li></ul>|[Networking](https://github.com/LimeChain/java-host-research/blob/main/research/java-host-research-outcome.md#networking)| This is the biggest missing component. jvm-libp2p stack contains Noise, PeerID, however misses critical components like Kademlia and Yamux. Provide a Scope and Estimation report for [Kademlia](https://github.com/LimeChain/java-host-research/blob/main/research/libp2p-kademlia-for-jvm-scope-estimation.md) and [Yamux](https://github.com/LimeChain/java-host-research/blob/main/research/libp2p-yamux-jvm-scope-estimation.md) jvm-implementations, as these are major road-blocks. 
 | 3. | Research Storage |<ul><li>[x] </li></ul>|[Full Node Storage](https://github.com/LimeChain/java-host-research/blob/main/research/java-polkadot-host-high-level-design.md#storage)| discuss state-trie storage and persistence. 

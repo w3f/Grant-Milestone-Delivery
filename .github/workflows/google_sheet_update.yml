@@ -79,10 +79,12 @@ jobs:
         with:
           path: "${{ steps.parse-delivery.outputs.application_document }}"
       
-      - name: Get current date
+      - name: Get delivery date
         id: date
-        run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
-
+        run: |
+          delivery_date=${{ github.event.pull_request.created_at }}        
+          echo "::set-output name=date::$(date -d "$delivery_date" +%d/%m/%Y)"
+  
       - name: Write data to sheet
         uses: jroehl/gsheet.action@v1.1.1
         with:
