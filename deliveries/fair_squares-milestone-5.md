@@ -15,7 +15,7 @@ We also forked and customized a front-end that can be used to interact with the 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License: Apache 2.0 |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/LICENSE)| | 
-| 0b.  | Documentation & Guide |[Link](https://docs.google.com/document/d/1M98KXcTvXFI75U4JnqlHuoa03x_YZQ0ZKLWWYDGAUl8/edit?usp=sharing)| The inline documentation is the lib.rs files of [tenancy-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/tenancy/src/lib.rs), [payment-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/payment/src/lib.rs) and the updated[asset_management-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/asset_management/src/lib.rs). All of the FS docs can also be found on the [published docs page](https://fair-squares.github.io/fair-squares/fs_node/index.html) The basic tutorial is in the G-doc it will be published once the milestone is approved| 
+| 0b.  | Documentation & Guide |[Link](https://docs.google.com/document/d/1M98KXcTvXFI75U4JnqlHuoa03x_YZQ0ZKLWWYDGAUl8/edit?usp=sharing)| The inline documentation is in the lib.rs files of [tenancy-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/tenancy/src/lib.rs), [payment-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/payment/src/lib.rs) and the updated [asset_management-pallet](https://github.com/Fair-Squares/fair-squares/blob/main/pallets/asset_management/src/lib.rs). All of the FS docs can also be found on the [published docs page](https://fair-squares.github.io/fair-squares/fs_node/index.html). The basic tutorial is in the G-doc it will be published once the milestone is approved| 
 | 0c. | Testing Guide |[Link](https://github.com/Fair-Squares/fair-squares#run-all-tests) || 
 | 0d. | Dockerfile |[Link](https://github.com/Fair-Squares/fair-squares/blob/main/Dockerfile) | | 
 | 0e.  | Article |[Link](https://docs.google.com/document/d/1DQeoj0VDqoFjVu3lGxe--iD6OmyWnh6cO4lbiHhZXQ4/edit?usp=sharing)| The article will be published once the milestone is approved. | 
@@ -27,5 +27,7 @@ We also forked and customized a front-end that can be used to interact with the 
 
 **Additional Information**
 
-We are truly ecstatic to have reached this milestone. We have been working hard to get to this point and we are very happy with the results. There is still much work ahead, but this grant has been a great help to kick starting our journey! Thank you W3F!
+We are truly ecstatic to have reached this milestone. We have been working hard to get to this point and we are very happy with the results. 
+
+There is still much work ahead, but this grant has been a great help to kick starting our journey! Thank you W3F!
 
