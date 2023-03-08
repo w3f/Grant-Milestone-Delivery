@@ -16,7 +16,7 @@
 
 # General Notes
 
-I was able to build and run the node both manually and via Docker. Thanks for such detailed instructions! I was able to get all the way through the test guide. I could:
+I was able to build and run the node both manually and via Docker. Thanks for such detailed instructions! Regarding the test guide, I could:
 
 - Start a DAO
 ```rust
@@ -62,13 +62,16 @@ I was able to build and run the node both manually and via Docker. Thanks for su
   }
 ]
 ```
-I did have trouble here:
+I had trouble after that:
 - Apply funds for project with sudo:
 <img width="327" alt="dao" src="https://user-images.githubusercontent.com/35080151/223846777-fe356a0c-ce16-4301-95b9-e9a2386dce20.png">
 
 - I also had trouble with creating a task:
 <img width="327" alt="403" src="https://user-images.githubusercontent.com/35080151/223849119-239d95c6-8fcb-4b18-8499-7fe2b83088d3.png">
 
+- When "joining the project task as reviewer" it gives an invalid error, probably because the task doesn't exist.
+
+## Unit Tests
 Unit tests all pass.
 ```rust
 cargo test
