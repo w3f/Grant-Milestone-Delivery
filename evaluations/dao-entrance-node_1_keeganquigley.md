@@ -230,3 +230,8 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+### Cargo Clippy
+
+There are a number of warnings when running `cargo clippy` such as redundant clones and useless conversions. Please check these out to see if you can fix them for the next milestone.
+
+PLEASE NOTE: No security audits were performed as a part of this evaluation.
