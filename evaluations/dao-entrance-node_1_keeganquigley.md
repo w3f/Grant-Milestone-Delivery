@@ -71,6 +71,10 @@ I had trouble after that:
 
 - When "joining the project task as reviewer" it gives an invalid error, probably because the task doesn't exist.
 
+## V2
+
+Thanks for the changes in the testing guide, I was able to successfully test and complete all module examples.
+
 ## Unit Tests
 Unit tests all pass.
 ```rust
