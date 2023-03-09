@@ -1,5 +1,78 @@
-Tests all pass.
+# Evaluation
 
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dao-entrance-phase-1.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+
+| Number | Deliverable   | Accepted | Link                                                                                 | Notes |
+|--------|---------------|----------|----------------------------------------------------------------------------|-------|
+| 0a.    | License   | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/dao-entrance/dao-entrance-node/blob/main/LICENSE)            | Okay.      
+| 0b.    | Documentation       | <ul><li>[x] </li></ul> | https://github.com/dao-entrance/dao-entrance-node/blob/main/README.md | Okay.   |
+| 0c.    | Testing Guide      | <ul><li>[x] </li></ul> | https://github.com/dao-entrance/dao-entrance-node/blob/main/docs/testing-guide.md | Okay. |
+| 0d.    | Docker         | <ul><li>[x] </li></ul> | https://hub.docker.com/layers/asyoume/dao-entrance-node/dev.2023-02-18-17_39/images/sha256-03d54c3ff0ba0d2394987603de13f8147a7159213cdf0c7aefa8fd6c74ca5b8d?context=repo | Okay.      |
+| 1.     | Substrate module: DAO-Entrance | <ul><li>[x] </li></ul> | https://github.com/dao-entrance/dao-entrance-node/tree/main/apps/pallets | Okay.      |
+
+# General Notes
+
+I was able to build and run the node both manually and via Docker. Thanks for such detailed instructions! Regarding the test guide, I could:
+
+- Start a DAO
+```rust
+{
+  creator: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+  startBlock: 114
+  daoAccountId: 5EYCAe5gXPgoV2W3s4EjZg3E96qDSpthV951dmqeQjZfXxmF
+  purpose: test
+  metaData: {desc:test}
+  status: Active
+}
+```
+
+- Create an asset
+```rust
+{
+  owner: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+  metadata: {
+    name: mytoken
+    symbol: ME
+    decimals: 100
+  }
+}
+```
+- Create guilds:
+```rust
+[
+  {
+    creator: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+    startBlock: 114
+    name: core team
+    desc: 
+    metaData: {}
+    status: Active
+  }
+  {
+    creator: 5EYCAe5gXPgoV2W3s4EjZg3E96qDSpthV951dmqeQjZfXxmF
+    startBlock: 204
+    name: rust
+    desc: desc
+    metaData: {}
+    status: Active
+  }
+]
+```
+I had trouble after that:
+- Apply funds for project with sudo:
+<img width="327" alt="dao" src="https://user-images.githubusercontent.com/35080151/223846777-fe356a0c-ce16-4301-95b9-e9a2386dce20.png">
+
+- I also had trouble with creating a task:
+<img width="327" alt="403" src="https://user-images.githubusercontent.com/35080151/223849119-239d95c6-8fcb-4b18-8499-7fe2b83088d3.png">
+
+- When "joining the project task as reviewer" it gives an invalid error, probably because the task doesn't exist.
+
+## Unit Tests
+Unit tests all pass.
 ```rust
 cargo test
    Compiling node-template-runtime v1.0.0 (/Users/keeganquigley/dao-entrance-node/apps/node-pos/runtime)
