@@ -18,8 +18,8 @@ This information will be then used in the 2nd milestone to allow decoding of any
 | 1.     | License         | https://github.com/centrifuge/go-substrate-rpc-client/blob/events-parsing-v2-milestone-1/LICENSE | Apache License v2                                                                            | 
 | 2.     | Documentation   | https://github.com/centrifuge/go-substrate-rpc-client/blob/events-parsing-v2-milestone-1/README.md  | -                                                                                            |
 | 3.     | PR with changes | https://github.com/centrifuge/go-substrate-rpc-client/pull/327  | -                                                                                            |
-| 4a.    | Tests           | https://github.com/centrifuge/go-substrate-rpc-client/blob/9db17f723cf63481fa73c7f9b0916cbd7c0b3eea/events/registry_test.go  | Tested using metadata information from - Centrifuge, Acala, Moonbeam, Polkadot and Statemint |
-| 4b.    | Test execution  | https://github.com/centrifuge/go-substrate-rpc-client/blob/9db17f723cf63481fa73c7f9b0916cbd7c0b3eea/Makefile#L49  | Done in Docker image.                                                                        |
+| 4a.    | Tests           | https://github.com/centrifuge/go-substrate-rpc-client/blob/19aa30067543bd77becbc2cee55d755fd689aa12/registry/registry_test.go  | Tested using metadata information from - Centrifuge, Acala, Moonbeam, Polkadot and Statemint |
+| 4b.    | Test execution  | https://github.com/centrifuge/go-substrate-rpc-client/blob/19aa30067543bd77becbc2cee55d755fd689aa12/Makefile#L49  | Done in Docker image.                                                                        |
 
 **Additional Information**
 
