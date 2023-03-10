@@ -1,0 +1,26 @@
+# Evaluation
+
+- **Status:** Accepted
+- **Application Document:**  private
+- **Milestone:** 2
+- **Kusama Identity:** [randombishop](https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
+- **Previously successfully merged evaluation:** [M1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/Cogency-Milestone_1.md)
+
+| Number | Deliverable | Accepted | Link                                                                                                                                          | Evaluation Notes                                                                                                                                                                                                                               |
+|--------|-------------|:--------:|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2a.1.  | Sprint 1    |   Yes    | [Sprint & Technology Introduction](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a1.md)           | Develop a common understanding (DeFi, DAO, NFT, Parachains, Wallets, etc.) and get to know one another. Discuss the technology including interoperability, attribution of ownership, PoW vs. PoS, smart contracts, etc.                        |
+| 2a.2.  | Sprint 2    |   Yes    | [Defining the Problem](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a2.md)                       | Opportunity analysis and definition of the problem we are trying to solve.                                                                                                                                                                     |
+| 2a.3.  | Sprint 3    |   Yes    | [Defining the Opportunity (1/2)](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a3.md)             | Follow on from Week 2, review the variety of options to solve the problem. Continue analysis of opportunities.                                                                                                                                 |
+| 2a.4.  | Sprint 4    |   Yes    | [Defining the Opportunity (2/2)](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a4.md)             | Follow up from the previous week, where the analysis will be completed.                                                                                                                                                                        |
+| 2a.5.  | Sprint 5    |   Yes    | [Solution Selection](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a5.md)                         | Define the criteria for the radar chart for solution selection. Select the solution based on the radar chart, and get an assessment on current progress from Web3 Foundation.                                                                  |
+| 2a.6.  | Sprint 6    |   Yes    | [Solution Assessment](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a6.md)                        | Assess the suitability of the proposed solution: does it really address the problem in a way that makes sense? Is it scalable? Other considerations?                                                                                           |
+| 2a.7.  | Sprint 7    |   Yes    | [Expert feedback and Solution Refinement](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a7.md)    | Further insights gathering from experts to outline the proposed solution. Risk assessment and solution feasibility in the market. Continuation of the previous session to refine the solution.                                                 |
+| 2a.8.  | Sprint 8    |   Yes    | [Present Solution with a draft blueprint](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2a8.md)    | A draft blueprint should be presented, and the last round of feedback will be gathered.                                                                                                                                                        |
+| 2b.    | Blueprint   |   Yes    | [Final Blueprint including the Business Plan](https://github.com/CogencyWeb3/Web3MediaPilot/blob/main/Deliverables/Cogency-Deliverable_2b.md) | The last two weeks of the project (Week 9 and 10)  will be dedicated to refine the Blueprint which will include a Business Plan, and they will be also used to gather extra feedback from stakeholders and schedule any extra workshop needed. |
+
+
+## General Notes
+
+— So far Cogency is evolving from the research phase and they’re aiming to start with the phase two of the project in April/ May with the tech integration.
+
+- What they have now is a conglomerate of media organizations along with WANIFRA, one of the largest press association of the world.
