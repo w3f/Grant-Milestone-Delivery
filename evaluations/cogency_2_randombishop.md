@@ -21,6 +21,6 @@
 
 ## General Notes
 
-— So far Cogency is evolving from the research phase and they’re aiming to start with the phase two of the project in April/ May with the tech integration.
+- So far Cogency is evolving from the research phase and they’re aiming to start with the phase two of the project in April/ May with the tech integration.
 
 - What they have now is a conglomerate of media organizations along with WANIFRA, one of the largest press association of the world.
