@@ -1,3 +1,4 @@
+
 # Evaluation
 
 - **Status:** In Progress
@@ -17,6 +18,81 @@
 | 3. | Frontend | <ul><li>[ ] </li></ul>| Our front-end demo can be seen at https://alephzero.artzero.io/ for AlephZero network. The git repo is at https://github.com/ArtZero-io/frontend-react branch ink4-upgrade | Not full evaluated yet |
 | 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | Some tests are failing.
 
+## Evaluation V3
+
+I evaluated both frontend and backend using the testnet provided. I still need to test both using a local substrate node. Please provide more detailed instructions for contract deployment and update the contract addresses and abi in the frontend application. Also, provide any config update instructions to point the backend and frontend to a local substrate node instead of the testnet provided. 
+
+I also notice that there are no instructions on how to set the admin profile for testing.
+
+### Backend
+
+In Run Backend Job, needs to change `node az_bids_monitors` to `node az_bids_monitor` to match the name of the file.
+The error in Az_events_collector seems to be fixed.
+
+### API 
+
+Some requests returned with success, but with an empty return. Here is a list of the requests:
+
+- getBidsByBidderAddress
+- getCollectionsByVolume
+- getNFTsByOwnerAndCollection
+- getNFTsByCollectionAddress
+- getNewListEvents
+- getUnlistEvents
+- getPurchaseEvents
+- getBidWinEvents
+- getOwnershipHistory
+- getAddRewardHistory
+- getClaimRewardHistory
+
+I tried getJSON and getCollectionContract requests using the API page provided and got:
+
+```
+TypeError: Windown.fetch: HEAD or GET Request cannot have a body.
+```
+
+I put `/ipfs/QmSdgNQ2zvJvaw8kP8oCJnmuFQUxVDBYrThYvV1C8k5bXU/131.json` in the input for getJson and nothing in getCollectionContract.
+
+The other requests work fine.
+
+### Frontend
+
+I tested some features following the test plan.
+
+In the part of Marketplace, I tested the collections creating one inactive collection and an NFT that doesn't appear in My NFTs. Because of that, I couldn't test other features related to NFT, excluding creating and editing the NFT.
+
+In the part of LauchPad, I created a project and tried to update the project info the transaction was complete, but the project wasn't changing. When I tried to Update the art location, the transaction success but I don't view anything changing. I don't find the button Withdraw_Balance and couldn't test Owner mint, Mint an NFT, and Update project phases.
+
+I couldn't test the Admin features, how to log in with admin?
+
+In the MyAccount I haven't tested My NFTs and My Stake and the Mint NFT in My Project.
+
+### Code Quality
+
+`cargo +nightly clippy` in Azero_Contracts now finish to compile but still returning some warnings, for example:
+
+```
+...
+warning: casting integer literal to `u8` is unnecessary
+  --> traits/collection_manager.rs:19:5
+   |
+19 | 	Reserved2   	= 6,
+   | 	^^^^^^^^^^^^^^^^^^^ help: try: `6_u8`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
+
+warning: casting integer literal to `u8` is unnecessary
+  --> traits/collection_manager.rs:13:5
+   |
+13 | 	Unknown     	= 0,
+   | 	^^^^^^^^^^^^^^^^^^^ help: try: `0_u8`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
+
+warning: `artzero_project` (lib) generated 32 warnings (6 duplicates) (run `cargo clippy --fix --lib -p artzero_project` to apply 16 suggestions)
+	Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+```
+
 ## Evaluation V2
 
 ### Contract
@@ -35,7 +111,6 @@ Event from Collection Manager Contract...
 /home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:4913
   const castError = new CastError();
                 	^
-
 CastError: Cast to Number failed for value "Psp34Manual" (type string) at path "contractType" for model "CollectionEvent"
 	at model.Query.exec (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:4913:21)
 	at Query.then (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:5012:15)
@@ -67,7 +142,6 @@ CastError: Cast to Number failed for value "Psp34Manual" (type string) at path "
   },
   valueType: 'string'
 }
-
 Node.js v18.14.0
 ```
 
