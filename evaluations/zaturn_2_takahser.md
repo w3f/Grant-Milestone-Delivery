@@ -39,7 +39,7 @@ Summarizes the overall performance plus additional feedback/comments
 - ~~Android APK can be built successfully, however, there are quite a few warnings~~ => fixed
 
     ```bash
-    acurast-processor % ./gradlew assemble 
+    data-processor % ./gradlew assemble 
     
     BUILD SUCCESSFUL in 6s
     160 actionable tasks: 2 executed, 158 up-to-date
