@@ -22,7 +22,7 @@ We also forked and customized a front-end that can be used to interact with the 
 | 1.  | tenancy-pallet |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/tenancy)| **tag**: v0.1-1 </br> **commit**:`2fc888271b84f05d465db282f07d9a05ff966347`|
 | 2.  | payment-pallet |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/payment)| **tag**: v0.1-1 </br> **commit**:`2fc888271b84f05d465db282f07d9a05ff966347`|
 | 3.  | asset_management-pallet |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/asset_management)| **tag**: v0.1-1 </br> **commit**:`2fc888271b84f05d465db282f07d9a05ff966347`|
-| 4.  | fs-app |[Link](https://github.com/Fair-Squares/fs-dapp)| **tag**: v0.0.1 </br> **commit**:`4cd2387` </br> [live-link](https://fair-squares.github.io/fs-dapp/#/dashboard)|
+| 4.  | fs-app |[Link](https://github.com/Fair-Squares/fs-dapp)| **tag**: v0.0.1-1 </br> **commit**:`ae2dad3` </br> [live-link](https://fair-squares.github.io/fs-dapp/#/dashboard)|
 | 4.  | fs-node M5 |[Link](https://github.com/Fair-Squares/fair-squares)| **tag**: v0.1-1 </br> **commit**:`2fc888271b84f05d465db282f07d9a05ff966347`|
 
 **Additional Information**
