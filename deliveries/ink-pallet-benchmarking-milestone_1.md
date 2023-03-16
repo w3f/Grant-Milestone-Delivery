@@ -20,7 +20,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License	| Unlicense
-| 0b. |	Documentation |  | Inline documentation has been provided and the same has been explained in great detail in the README as well. |
+| 0b. |	Documentation | [demo](https://talenticaall-my.sharepoint.com/:v:/g/personal/nikhil_desai_talentica_com/EYVokFUwPwRIpZhDTguanT0B_kageVj7HfjFzWh47IeTCA?e=s8bsY5) | Inline documentation has been provided and the same has been explained in great detail in the README as well. A demo video has been recorded describing the benchmarking process. |
 | 0c. | Testing Guide |  | The Ink! smart contract comes with tests and as mentioned, we've reused and extended the already tested frame-benchmarking-cli. |
 | 0e. | Article | https://talenticaall-my.sharepoint.com/:w:/g/personal/nikhil_desai_talentica_com/EcPSsxTWE5dBnOZS81uspkwBIIHoGI1RvAs6E0ETBsGiDg?e=NEtqmT | Since Milestone 1 only targets two implementation approaches, we have covered only those and will extend it to include the rest at the end of Milestone 2. |
 | 1. | Performance metrics |  | As already mentioned in the grant application, we are using weight as a metric to analyse performance. | 
