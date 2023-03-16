@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polket_toearnfun.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -275,5 +275,7 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
 Many warnings in `cargo clippy`
+
+**UPDATE:** All warnings were resolved.
 
 PLEASE NOTE: No security audits have been performed as a part of this evaluation.
