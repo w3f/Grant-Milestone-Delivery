@@ -8,7 +8,7 @@
 
 * **Application Document:** [Omniverse DLT](https://github.com/w3f/Grants-Program/blob/master/applications/Omniverse%20DLT.md).
 * **PR Link:** [Application Proposal](https://github.com/w3f/Grants-Program/pull/1431)
-* **Milestone Number:** 2
+* **Milestone Number:** 1
 
 **Context** (optional)
 > Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
@@ -26,9 +26,9 @@
 
 | Number | Deliverable |     Link      | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | [GPLv3](https://github.com/dantenetwork/protocol-stack-for-ink/blob/feature-evaluation/LICENSE) | GPLv3  |
+| 0a. | License | [GPLv3](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/web3-grant/LICENSE) | GPLv3  |
 | 0b. | Documentation | - [A high-level Introduction](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/README.md) <br/> - [How to build in `pallet` tech stack](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/web3-grant/README.md) <br/> - [Tutorial of how to use](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/README.md) | - Besides the `substrate pallets` tech stack, we also provided an implementation example in [EVM tech stacks](https://github.com/Omniverse-Web3-Labs/omniverse-evm/tree/web3-grant) <br/> - Although the off-chain synchronizers are not included in this mileston, we still provided an [introduction](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/Deployment.md#synchronizer) of how to deploy it <br/> - The *Tutorial about how to use* is so detailed that it may be difficult to get an overview at a glance and we recommend you read the *test guide for milestone 1* first. |
-| 0c. | Testing Guide | [The test guide for milestone 1]() | Actually, the details of how to try `O-DLT` protocol are provided in [How to use it](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/README.md), and we also provided a detailed introduction of how to test the functionalities step by step. |
+| 0c. | Testing Guide | [The test guide for milestone 1](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/test-guide/m1-test-guide.md) | Actually, the details of how to try `O-DLT` protocol are provided in [How to use it](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/README.md), and we also provided a detailed introduction of how to test the functionalities step by step. |
 | 0d. | Article | [link](https://medium.com/@xiyuzheng1984/omniverse-decentralized-ledger-technology-has-finished-the-first-milestone-66bbcd6546fa) | We presented an interesting analogy for `O-DLT` in this article |
 | 1. | Substrate module: omniverse assets | - [pallet for Omniverse FT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/assets) <br/> -[pallet for Omniverse NFT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/uniques) | We made out both Omniverse FT and NFT based on the templates of built-in pallets, which makes it compatible to current token protocols. |
 | 2. | Substrate module: omniverse protocol | - [the basic operations](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/omni-protocol) | The basic operations and data structures are provided by one pallet, which makes it more convenient for developers to extend their own demands. |  
