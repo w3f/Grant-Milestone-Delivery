@@ -15,7 +15,7 @@
 | 2. | EVM/WASM accounts | <ul><li>[x] </li></ul> | [src/accounts](https://github.com/blockcoders/kuma-wallet/blob/8ab34f8af7e0d4a314bbf4d63784b3d4aa39776d/src/accounts/AccountManager.ts) | — |
 | 3. | Switch between networks | <ul><li>[x] </li></ul> | [src/providers/networkProvider](https://github.com/blockcoders/kuma-wallet/blob/8ab34f8af7e0d4a314bbf4d63784b3d4aa39776d/src/providers/networkProvider/NetworkProvider.tsx) | 11 networks currently. |
 | 4. | Display accounts | <ul><li>[x] </li></ul> | [src/providers/accountProvider](https://github.com/blockcoders/kuma-wallet/blob/8ab34f8af7e0d4a314bbf4d63784b3d4aa39776d/src/providers/accountProvider/AccountProvider.tsx) | — |
-| 5. | Balances | <ul><li>[ ] </li></ul> | link | 0.01 KSM don't show in the $ total. I suggest adding decimals for small amounts. |
+| 5. | Balances | <ul><li>[x] </li></ul> | [src/providers/accountProvider](https://github.com/blockcoders/kuma-wallet/blob/8ab34f8af7e0d4a314bbf4d63784b3d4aa39776d/src/providers/accountProvider/AccountProvider.tsx) | 0.01 KSM don't show in the $ total. I suggest adding decimals for small amounts. |
 
 
 ## General Notes
