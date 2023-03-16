@@ -13,11 +13,58 @@
 | 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md#testing) |  |
 | 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSale/tree/main/docker)               |                                                     |
 | 0e.    | Article         | <ul><li>[x] </li></ul>|              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)               | |
-| 1.     | Ink! Contract 1           | <ul><li>[ ] </li></ul>|   [mango_airdrop](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_airdrop)   | Not fully evaluated yet. |
-| 2.     | Ink! Contract 2           | <ul><li>[ ] </li></ul>|      [mango_lock](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_lock)      | Not fully evaluated yet. |
-| 3.     | Ink! Contract 3           | <ul><li>[ ] </li></ul>|   [token_factory](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/token_factory)   | Not fully evaluated yet. |
-| 4.     | Front-end UI	         | <ul><li>[ ] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend)           |                      Not fully evaluated yet. Improve ipfs/pinata config instructions.           |
-| 5.     | Front-end integration (e2e) test	         | <ul><li>[ ] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#cypress-e2e-test)       |      Some tests are failing.                  |
+| 1.     | Ink! Contract 1           | <ul><li>[x] </li></ul>|   [mango_airdrop](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_airdrop)   |  |
+| 2.     | Ink! Contract 2           | <ul><li>[x] </li></ul>|      [mango_lock](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_lock)      |  |
+| 3.     | Ink! Contract 3           | <ul><li>[x] </li></ul>|   [token_factory](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/token_factory)   |  |
+| 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend)           |                      |
+| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#cypress-e2e-test)       |      The sync of test instructions could be improved since some tests sometimes fails.                  |
+
+## Evaluation V3
+
+### Documentation
+
+The documentation can be improved. 
+
+In the [building](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract#building) part, you can have a troubleshooting part to indicate the use of `--optimization-passes=0` parameter when building to fix the error CodeRejected from deploying the contracts. 
+
+In the [Frontend instructions to set up the Local Node Test](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#way-2-local-node-test) needs to explain to copy the abi of the compiled contracts to frontend/src/abi since they are not updated in the frontend repository.
+
+In the [application document](https://github.com/w3f/Grants-Program/blob/master/applications/MangoSale_Protocol.md), there are some prototype images missing. Please restore them since they are under your github account and are part of the software specification. 
+
+### Test
+
+All tests from e2e passed, but sometimes the CreatToken fails with this error:
+
+![image (10)](https://user-images.githubusercontent.com/112647953/225697207-ba522564-0def-45bd-b6ea-e3dc78e9c43e.png)
+
+
+
+### Code Quality
+
+The warnings from Eslint have been fixed and the test coverage in ERC20 was improved but wasn't improved in the other tests.
+
+from ERC20
+```
+running 7 tests
+test erc20::tests::allowance_must_not_change_on_failed_transfer ... ok
+test erc20::tests::balance_of_works ... ok
+test erc20::tests::new_works ... ok
+test erc20::tests::invalid_transfer_should_fail ... ok
+test erc20::tests::total_supply_works ... ok
+test erc20::tests::transfer_works ... ok
+test erc20::tests::transfer_from_works ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+Mar 16 10:38:45.202  INFO cargo_tarpaulin::report: Coverage Results:
+|| Uncovered Lines:
+|| lib.rs: 156, 158-162, 167, 175-179, 184-185, 290, 293-296, 299-302, 308, 346-354, 356, 367-372, 374-379, 385-389, 391-392, 394-395
+|| Tested/Total Lines:
+|| lib.rs: 78/133 +0.00%
+|| 
+58.65% coverage, 78/133 lines covered, +0.00% change in coverage
+```
+These tests still have low coverage, but it is something that isn't mandatory to be improved.
 
 ## Evaluation V2
 
@@ -60,7 +107,6 @@ All warnings from `cargo +nightly clippy` have been fixed. I ran `cargo tarpauli
 ```
 Mar 08 10:46:23.580  INFO cargo_tarpaulin::process_handling::linux: Launching test
 Mar 08 10:46:23.581  INFO cargo_tarpaulin::process_handling: running /home/user/Documents/MangoSale/contract/erc20/target/debug/deps/erc20-a90fdf17bf81539c
-
 running 7 tests
 test erc20::tests::allowance_must_not_change_on_failed_transfer ... ok
 test erc20::tests::invalid_transfer_should_fail ... ok
@@ -69,9 +115,7 @@ test erc20::tests::new_works ... ok
 test erc20::tests::transfer_from_works ... ok
 test erc20::tests::balance_of_works ... ok
 test erc20::tests::total_supply_works ... ok
-
 test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
-
 Mar 08 10:46:24.326  INFO cargo_tarpaulin::report: Coverage Results:
 || Uncovered Lines:
 || lib.rs: 156, 158-162, 167, 175-179, 184-185, 290, 293-296, 299-302, 308, 346-349, 352-357, 359-361, 364-366, 368-376, 378, 381-382, 385-393, 395, 406-411, 413-418, 424-428, 430-431, 433-434
