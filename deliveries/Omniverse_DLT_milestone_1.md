@@ -42,9 +42,9 @@
 
 Currently, we have finished the basic functions of `O-DLT` protocol, and provided three tech stack implementations:  
 
-- [Ethereum (EVMs)](https://github.com/Omniverse-Web3-Labs/omniverse-evm)
+- [Ethereum (EVMs)](https://github.com/Omniverse-Web3-Labs/omniverse-evm/tree/web3-grant)
 - Polkadot
-  - [Pallet](https://github.com/Omniverse-Web3-Labs/omniverse-swap)
+  - [Pallet](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant)
   - `Ink!`: Next milestone
  - [Flow](https://github.com/Omniverse-Web3-Labs/omniverse-flow)
 
