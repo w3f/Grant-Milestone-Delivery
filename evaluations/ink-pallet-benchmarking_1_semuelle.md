@@ -1,6 +1,6 @@
 # Evaluation
 
-- Status: In Progress
+- Status: Accepted
 - Application Document:  https://github.com/w3f/Grants-Program/blob/master/applications/ink-pallet-benchmarking.md
 - Milestone: 1
 - Kusama Identity: [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,9 +9,9 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/blob/17be56bb0b3d3e209c97877854b7c2b8ed103513/LICENSE) | Unlicense |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [README](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/blob/3d3614768695af687fe2e0cf931a6bd5af7472e6/README.md) | "We will provide [...] a live demo." |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/blob/3d3614768695af687fe2e0cf931a6bd5af7472e6/README.md), [video demo](https://talenticaall-my.sharepoint.com/personal/nikhil_desai_talentica_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fnikhil%5Fdesai%5Ftalentica%5Fcom%2FDocuments%2FBenchmarking%2DDemo%2Emov&ga=1) | Demo provided on request. |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [README](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/tree/3d3614768695af687fe2e0cf931a6bd5af7472e6#pallet-extrinsic-benchmarking) | No unit tests here. But good description of usage and examples included. |
-| 0e. | Article | <ul><li>[ ] </li></ul> | [sharepoint.com](https://talenticaall-my.sharepoint.com/:w:/g/personal/nikhil_desai_talentica_com/EcPSsxTWE5dBnOZS81uspkwBIIHoGI1RvAs6E0ETBsGiDg?e=NEtqmT) | Article contains project abstract and sample results. No interpretation or replication instructions. Graph missing axis descriptions. |
+| 0e. | Article | <ul><li>[x] </li></ul> | [sharepoint.com](https://talenticaall-my.sharepoint.com/:w:/g/personal/nikhil_desai_talentica_com/EcPSsxTWE5dBnOZS81uspkwBIIHoGI1RvAs6E0ETBsGiDg?e=NEtqmT) | Article updated on request. |
 | 1.  | Performance metrics | <ul><li>[x] </li></ul> | — | Nothing to deliver here. |
 | 2.  | Pallet: Basic Read & Write | <ul><li>[x] </li></ul> | [pallets/template](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/tree/3d3614768695af687fe2e0cf931a6bd5af7472e6/pallets/template) | — |
 | 3.  | Ink Smart Contract: Basic Read & Write | <ul><li>[x] </li></ul> | [test](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking/tree/3d3614768695af687fe2e0cf931a6bd5af7472e6/test) | — |
