@@ -18,6 +18,15 @@
 | 3.  | asset_management-pallet | <ul><li>[x] </li></ul> |[Link](https://github.com/Fair-Squares/fair-squares/tree/main/pallets/asset_management)| **tag**: v0.1-m5 </br> **commit**:`3f59df53b51183622aa34b9d4ee767a1ab4563b1`|
 | 4.  | fs-app | <ul><li>[ ] </li></ul> |[Link](https://github.com/Fair-Squares/fs-dapp)| Testing guide for the frontend is missing|
 | 4.  | fs-node M5 |<ul><li>[x] </li></ul>|[Link](https://github.com/Fair-Squares/fair-squares)| **tag**: v0.1-m5 </br> **commit**:`3f59df53b51183622aa34b9d4ee767a1ab4563b1`|
+
+## Evaluation V2
+
+The testing guide for testing the application using the frontend is still missing.
+
+### Code Quality
+
+Most of the warnings where fixed. The testing coverage was improved where it was asked for.
+
 ## Evaluation V1
 
 ### Documentation
