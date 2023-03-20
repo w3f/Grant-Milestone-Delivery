@@ -20,7 +20,7 @@
 | 0c. | Testing Guide | [https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md](https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md) [https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md](https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md) | | |
 | 0d. | Docker |[https://github.com/ff13dfly/Anchor/tree/main/docker](https://github.com/ff13dfly/Anchor/tree/main/docker)| |
 | 0e. | Anchor pallet |[https://github.com/ff13dfly/Anchor](https://github.com/ff13dfly/Anchor)| Bug fix and code improvement |
-| 0f. | Anchor.js | [https://github.com/ff13dfly/Anchor/tree/main/js/playground](https://github.com/ff13dfly/Anchor/tree/main/js/playground)| There is also a live playground here [https://playground.metanchor.net](https://playground.metanchor.net). | |
+| 0f. | Anchor.js | [https://github.com/ff13dfly/Anchor/tree/main/js/playground](https://github.com/ff13dfly/Anchor/tree/main/js/playground) [https://github.com/ff13dfly/Anchor/tree/main/js/test](https://github.com/ff13dfly/Anchor/tree/main/js/test)| There is also a live playground here [https://playground.metanchor.net](https://playground.metanchor.net). | |
 
 **Additional Information**
 
