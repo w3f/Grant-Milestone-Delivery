@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MangoSale_Protocol.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                  | <ul><li>[x] </li></ul>|             [License](https://github.com/Mangoboxlabs/MangoSale/blob/main/LICENSE)              | Apache 2.0                                                        |
-| 0b.    | Documentation            | <ul><li>[ ] </li></ul>|     [Documentation](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md)     | Need fix the instructions how to build the contracts.                                                   |
+| 0b.    | Documentation            | <ul><li>[x] </li></ul>|     [Documentation](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md)     |                                                    |
 | 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md#testing) |  |
 | 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSale/tree/main/docker)               |                                                     |
 | 0e.    | Article         | <ul><li>[x] </li></ul>|              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)               | |
@@ -17,7 +17,11 @@
 | 2.     | Ink! Contract 2           | <ul><li>[x] </li></ul>|      [mango_lock](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_lock)      |  |
 | 3.     | Ink! Contract 3           | <ul><li>[x] </li></ul>|   [token_factory](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/token_factory)   |  |
 | 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend)           |                      |
-| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#cypress-e2e-test)       |      The sync of test instructions could be improved since some tests sometimes fails.                  |
+| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#cypress-e2e-test)       |                       |
+
+## Evaluation V4
+
+The remainder improvements and fixes in the documentation were performed.
 
 ## Evaluation V3
 
