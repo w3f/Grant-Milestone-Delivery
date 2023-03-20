@@ -9,7 +9,7 @@
 
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
-| ------ | ----------- | -------- | ---- |----------------- |
+| ------ | ------- | ------- | -- |------------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| https://github.com/web3go-xyz/web3go-xyz-v2/blob/develop/LICENSE | Uses Correct License. Please add year and copyright owner on line 189 of your license.|
 | 0b. | Documentation |<ul><li>[x] </li></ul>|https://web3go.notion.site/M2-Delivery-Web3Go-V2-0f083900301a451a8e60042a3755a03a| Easy to follow tutorials regarding basic functionality. Inline documentation could be further improved and README documentation could be extended as well.|
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>|https://web3go.notion.site/Run-Local-Environment-By-Docker-Image-5426f050eb534b8f97318ba1b089e5b2| Testing guide usually refers to a guide on how to run unit/e2e tests. What you are currently doing is manually testing the functionality. See point 3 in General Notes for more details.|
@@ -22,7 +22,7 @@
 ## General Notes
 
 1. You are exposing database passwords in plain text here: https://github.com/web3go-xyz/web3go-xyz-v2/blob/develop/v2-mvp/api-service-extend/ecosystem.config.js. Please consider using [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) to hide infromation that should not be publicly available.
-2. Many of your npm packages have vurnabilities that could be resolved. See below.
+2. Many of your npm packages have variabilities that could be resolved. See below.
 
 ```
 25 vulnerabilities (4 moderate, 18 high, 3 critical)
