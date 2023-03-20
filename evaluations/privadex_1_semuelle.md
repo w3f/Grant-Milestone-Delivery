@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [root](https://github.com/kapilsinha/privadex/blob/c3e1b00c3e18fb86b5e0b1c0538db06a505d1aa9/LICENSE), [indexer](https://github.com/kapilsinha/privadex/blob/62dfcf6a0ad78f9d2930915bef8069ec9d32cb38/dex_indexer/LICENSE) | SSPL, GPL3 |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/kapilsinha/privadex/blob/c3e1b00c3e18fb86b5e0b1c0538db06a505d1aa9/README.md), [execution plan example](https://github.com/kapilsinha/privadex/blob/62dfcf6a0ad78f9d2930915bef8069ec9d32cb38/dex_aggregator/execution_plan/examples/compute_execution_plan.rs) | Inline docs sporadic. |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/kapilsinha/privadex/blob/c3e1b00c3e18fb86b5e0b1c0538db06a505d1aa9/README.md), [graph generation example](https://github.com/kapilsinha/privadex/blob/62dfcf6a0ad78f9d2930915bef8069ec9d32cb38/dex_aggregator/routing/README.md#running-examples) | Inline docs sporadic. |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [/dex_aggregator](https://github.com/kapilsinha/privadex/tree/c3e1b00c3e18fb86b5e0b1c0538db06a505d1aa9/dex_aggregator) | See READMEs in subfolders. |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/kapilsinha/privadex/blob/c3e1b00c3e18fb86b5e0b1c0538db06a505d1aa9/Dockerfile) | — |
 | 1. | Price feed for ArthSwap | <ul><li>[x] </li></ul> | [dex_indexer](https://github.com/kapilsinha/privadex/tree/62dfcf6a0ad78f9d2930915bef8069ec9d32cb38/dex_indexer) | Good documentation and tooling; very easy to set up and use. |

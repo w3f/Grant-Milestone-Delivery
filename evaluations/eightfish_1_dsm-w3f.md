@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/LICENSE| | 
-| 0b. |Documentation|<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish#readme|  Some commands failing | 
+| 0b. |Documentation|<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish#readme|   | 
 | 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/unit_tests.md| Need a more complete testing guide for system tests | 
 | 0d.  | Docker |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/Dockerfile| Need improvements | 
 | 0e. | Article |<ul><li>[ ] </li></ul>|https://medium.com/@daogangtang/eightfish-milestone-1-81ef32e4bbf2| Not fully evaluated yet | 
@@ -19,6 +19,199 @@
 | 4. | Upgrade utilities |<ul><li>[ ] </li></ul>| 1. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/bin/upload_wasm.rs <br/> 2. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/main.rs <br/> 3.  https://github.com/eightfish-org/eightfish/blob/master/upgrade/nodemon.sh | Not fully evaluated yet| 
 | 5. | A set of rust derive procedural macro |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/eightfish-derive | Not fully evaluated yet| 
 | 6. | Framework SDK interface |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/src | Not fully evaluated yet| 
+
+## Evaluation V3
+
+### Flow Test
+
+All commands in this test work, but all services need to be running in the same docker container and the HTTP requests need to be made in the same docker container. Ideally, the HTTP request should be able to be done outside the container. Adding a docker-compose file to spin up the services and connect them is highly recommended for this project.
+
+
+### Unit Test
+
+The 2 tests ignored in Evaluation V2 were removed.
+
+```
+ 	Running unittests src/lib.rs (target/debug/deps/eightfish_derive-22462dc7dd8fc507)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+ 	Running tests/integration_test.rs (target/debug/deps/integration_test-3e63434866144fa5)
+
+running 19 tests
+test test_build_delete_sql_and_params ... ok
+test test_build_get_one_sql_and_params ... ok
+test test_build_insert_sql_and_params ... ok
+test test_build_struct_from_row ... ok
+test test_build_update_sql_and_params ... ok
+test test_build_update_param ... ok
+test test_build_insert_param_mix_type ... ok
+test test_get_id ... ok
+test test_delete_sql ... ok
+test test_build_insert_param ... ok
+test test_get_list_sql ... ok
+test test_calc_hash ... ok
+test test_insert_sql ... ok
+test test_get_one_sql ... ok
+test test_model_names ... ok
+test test_struct_names ... ok
+test test_struct_names_placeholder ... ok
+test test_struct_names_update_placeholder ... ok
+test test_update_sql ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eightfish-derive
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00
+```
+
+### Code Quality
+
+Warnings from the subnode folder were fixed except substrate-node-template which doesn't need to be fixed. 
+
+### System test
+
+Need a system testing guide to test all functions from derivable, with the step-by-step and expected output. This includes all deliverables from 1 to 6. We should be able to run either manually or using e2e automated tests the system with all parts integrated and check the results.
+
+## Evaluation V2
+
+### Documentation
+
+Docker commands work fine.
+
+### Flow Test
+
+The command `cd http_gate && spin build --up --follow-all` in `run services` returns this error:
+
+```
+root@28399e1f2ae3:~/eightfish# cd http_gate && spin build --up --follow-all
+Executing the build command for component http-gate: cargo build --target wasm32-wasi --release
+warning: skipping duplicate package `env` found at `/usr/local/cargo/git/checkouts/spin-91500438ac5656d2/7cbcd4f/tests/testcases/headers-dynamic-env-test`
+warning: skipping duplicate package `simple-spin-rust` found at `/usr/local/cargo/git/checkouts/spin-91500438ac5656d2/7cbcd4f/tests/testcases/simple-spin-rust-test`
+warning: skipping duplicate package `env` found at `/usr/local/cargo/git/checkouts/spin-91500438ac5656d2/7cbcd4f/tests/testcases/headers-env-routes-test`
+warning: skipping duplicate package `http-rust-outbound-mysql` found at `/usr/local/cargo/git/checkouts/spin-91500438ac5656d2/7cbcd4f/tests/outbound-mysql/http-rust-outbound-mysql`
+   Compiling http-gate v0.1.0 (/root/eightfish/http_gate)
+error[E0308]: mismatched types
+  --> src/lib.rs:48:9
+   |
+27 | 	match *req.method() {
+   |       	------------- this expression has type `http::Method`
+...
+48 |     	&Method::OPTIONS => {
+   |     	^^^^^^^^^^^^^^^^ expected struct `http::Method`, found reference
+   |
+   = note: expected struct `http::Method`
+       	found reference `&_`
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `http-gate` due to previous error
+Error: Build command for component http-gate failed with status Exited(101)
+```
+
+Because of that, I haven't tried to make the http requests. The other commands seem to be working. 
+
+### Unit Test
+
+The tests in `eightfish-derive` is now work, but two tests were ignored.
+
+```
+user@localhost:~/Documents/eightfish/eightfish-derive$ cargo test
+warning: skipping duplicate package `spin-key-value` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/http/key-value`
+warning: skipping duplicate package `env` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/testcases/headers-dynamic-env-test`
+warning: skipping duplicate package `simple-spin-rust` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/testcases/simple-spin-rust-test`
+warning: skipping duplicate package `env` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/testcases/headers-env-routes-test`
+warning: skipping duplicate package `http-rust-outbound-mysql` found at `/home/user/.cargo/git/checkouts/spin-91500438ac5656d2/e2f4fac/tests/outbound-mysql/http-rust-outbound-mysql`
+	Finished test [unoptimized + debuginfo] target(s) in 0.04s
+ 	Running unittests src/lib.rs (target/debug/deps/eightfish_derive-22462dc7dd8fc507)
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ 	Running tests/integration_test.rs (target/debug/deps/integration_test-3e63434866144fa5)
+running 19 tests
+test test_build_get_one_sql_and_params ... ok
+test test_build_delete_sql_and_params ... ok
+test test_build_insert_sql_and_params ... ok
+test test_build_insert_param ... ok
+test test_build_insert_param_mix_type ... ok
+test test_build_struct_from_row ... ok
+test test_build_update_sql_and_params ... ok
+test test_delete_sql ... ok
+test test_build_update_param ... ok
+test test_get_id ... ok
+test test_calc_hash ... ok
+test test_get_list_sql ... ok
+test test_get_one_sql ... ok
+test test_insert_sql ... ok
+test test_model_names ... ok
+test test_struct_names ... ok
+test test_struct_names_placeholder ... ok
+test test_update_sql ... ok
+test test_struct_names_update_placeholder ... ok
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+   Doc-tests eightfish-derive
+running 2 tests
+test src/lib.rs - eight_fish_model (line 10) ... ignored
+test src/lib.rs - eight_fish_model (line 22) ... ignored
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+### Code Quality
+
+`cargo clippy` only returned warnings in the subnode folder.
+
+```
+user@localhost:~/Documents/eightfish/subnode$ cargo clippy
+   Compiling eightfish-runtime v4.0.0-dev (/home/user/Documents/eightfish/subnode/runtime)
+	Checking pallet-eightfish v4.0.0-dev (/home/user/Documents/eightfish/subnode/pallets/eightfish)
+	Checking eightfish-subnode v4.0.0-dev (/home/user/Documents/eightfish/subnode/node)
+warning: redundant clone
+  --> node/src/rpc.rs:50:47
+   |
+50 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
+   |                                              	^^^^^^^^ help: remove this
+   |
+note: this value is dropped without further use
+  --> node/src/rpc.rs:50:43
+   |
+50 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
+   |                                          	^^^^
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
+   = note: `#[warn(clippy::redundant_clone)]` on by default
+...
+warning: redundant clone
+  --> node/src/rpc.rs:50:47
+   |
+50 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
+   |                                              	^^^^^^^^ help: remove this
+   |
+note: this value is dropped without further use
+  --> node/src/rpc.rs:50:43
+   |
+50 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
+   |                                          	^^^^
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
+warning: `eightfish-subnode` (bin "eightfish-subnode") generated 7 warnings (3 duplicates)
+	Finished dev [unoptimized + debuginfo] target(s) in 8.66s
+```
+
+The coverage in the folder `eightfish/subnode/pallets/eightfish` was improved
+
+```
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+Feb 27 12:44:27.786  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| node/src/chain_spec.rs: 0/2
+|| node/src/rpc.rs: 0/6
+|| pallets/eightfish/rpc/src/lib.rs: 0/12
+|| pallets/eightfish/src/lib.rs: 48/52
+||
+66.67% coverage, 48/72 lines covered
+```
+
+And in the folder `subnode` the coverage wasn't improved but isn't necessary to improve.
 
 
 ## Evaluation V1
@@ -44,13 +237,11 @@ warning: unused import: `std::fmt`
   | 	^^^^^^^^
   |
   = note: `#[warn(unused_imports)]` on by default
-
 warning: unused import: `SubstrateConfig`
   --> src/main.rs:10:5
    |
 10 | 	SubstrateConfig,
    | 	^^^^^^^^^^^^^^^
-
 warning: unused variable: `time`
    --> src/main.rs:109:21
 	|
@@ -58,7 +249,6 @@ warning: unused variable: `time`
 	|                 	^^^^ help: if this is intentional, prefix it with an underscore: `_time`
 	|
 	= note: `#[warn(unused_variables)]` on by default
-
 warning: fields `time`, `nonce`, and `randomvec` are never read
   --> src/main.rs:40:5
    |
@@ -73,7 +263,6 @@ warning: fields `time`, `nonce`, and `randomvec` are never read
    |
    = note: `ExtPayload` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
    = note: `#[warn(dead_code)]` on by default
-
 warning: `subxtproxy` (bin "subxtproxy") generated 4 warnings
 	Finished release [optimized] target(s) in 0.16s
 user@localhost:~/Documents/eightfish/subxtproxy$ target/release/subxtproxy
@@ -88,19 +277,16 @@ error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this 
  	|
 2147 |     	_ => Err(Errno(ret as u16)),
  	|          	^^^ not found in this scope
-
 error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
 	--> /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/wasi-0.11.0+wasi-snapshot-preview1/src/lib_generated.rs:2160:14
  	|
 2160 |     	0 => Ok(()),
  	|          	^^ not found in this scope
-
 error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
 	--> /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/wasi-0.11.0+wasi-snapshot-preview1/src/lib_generated.rs:2161:14
  	|
 2161 |     	_ => Err(Errno(ret as u16)),
  	|          	^^^ not found in this scope
-
 Some errors have detailed explanations: E0412, E0425, E0463.
 For more information about an error, try `rustc --explain E0412`.
 error: could not compile `wasi` due to 204 previous errors
@@ -117,16 +303,12 @@ The test in `eightfish/eightfish-derive` failed to get `spin-sdk`
 user@localhost:~/Documents/eightfish/eightfish-derive$ cargo test
 warning: unused manifest key: worksapce
 error: failed to get `spin-sdk` as a dependency of package `eightfish-derive v0.1.0 (/home/user/Documents/eightfish/eightfish-derive)`
-
 Caused by:
   failed to load source for dependency `spin-sdk`
-
 Caused by:
   Unable to update /home/user/Documents/spin/sdk/rust
-
 Caused by:
   failed to read `/home/user/Documents/spin/sdk/rust/Cargo.toml`
-
 Caused by:
   No such file or directory (os error 2)
 ```
@@ -158,7 +340,6 @@ help: try adding this
 16 + 	}
 17 + }
    |
-
 warning: you should consider adding a `Default` implementation for `Router`
   --> src/router_m/router.rs:21:5
    |
@@ -179,7 +360,6 @@ help: try adding this
 23 + 	}
 24 + }
    |
-
 warning: `eightfish` (lib) generated 45 warnings
 error: could not compile `eightfish` due to previous error; 45 warnings emitted
 ```
@@ -232,4 +412,4 @@ Feb 17 10:51:27.729  INFO cargo_tarpaulin::report: Coverage Results:
 || runtime/src/lib.rs: 2/66
 || 
 10.19% coverage, 53/520 lines covered
-```
+``` 

@@ -6,7 +6,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this delivery**  
 
-* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory).
+* **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications/maintenance](https://github.com/w3f/Grants-Program/tree/master/applications/maintenance) directory).
 * **Delivery Number:** e.g. 1
 * **Delivery Date:** e.g. 9 January 2009
 

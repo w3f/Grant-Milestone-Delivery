@@ -1,3 +1,4 @@
+
 # Evaluation
 
 - **Status:** In Progress
@@ -12,10 +13,193 @@
 | 0b.    | Documentation      | <ul><li>[ ] </li></ul>| Official document is at https://docs.artzero.io/ Technical documents are at https://docs.google.com/document/d/1QWJW2YAFXcD_X-xvwcTee_W9Gfn2GXNdKYdoe0m7iv8/edit# and https://docs.google.com/document/d/1bPq9aFMaaVgKgsYWG3K4APubRK33OloY4_gHM3c8wo0/edit | Not fully evaluated yet. |
 | 0c.    | Testing      | <ul><li>[ ] </li></ul>| Tests can be found at https://github.com/ArtZero-io/Contracts/tree/feature/ink-4-version/Azero_Contracts/tests | Some tests are failing. |
 | 0d.    | Article/Tutorial   | <ul><li>[ ] </li></ul>| Several articles are published at https://medium.com/@artzero_io | Not full evaluated yet |
-| 1. | Smart contract Development | <ul><li>[ ] </li></ul>| Code can be found in https://github.com/ArtZero-io/Contracts branch feature/ink-4-version | Not fully evaluated yet. One contract failing to build. |
-| 2. | Backend | <ul><li>[ ] </li></ul>| Backend code is at https://github.com/ArtZero-io/backend and handles the following tasks: Monitor NFT bids in the queue and update Bid table in the database; Cache Images from IPFS to CloudFlare Image; Cache NFT Metadata to local database; Monitor NFT Collection changes and update the database; Monitor NFT Information and update the database; Telegram bot to alert system operators: queue length and access attempt and work load. | Source code is missing |
+| 1. | Smart contract Development | <ul><li>[ ] </li></ul>| Code can be found in https://github.com/ArtZero-io/Contracts branch feature/ink-4-version | Not fully evaluated yet.  |
+| 2. | Backend | <ul><li>[ ] </li></ul>| Backend code is at https://github.com/ArtZero-io/backend and handles the following tasks: Monitor NFT bids in the queue and update Bid table in the database; Cache Images from IPFS to CloudFlare Image; Cache NFT Metadata to local database; Monitor NFT Collection changes and update the database; Monitor NFT Information and update the database; Telegram bot to alert system operators: queue length and access attempt and work load. | Not fully evaluated yet. |
 | 3. | Frontend | <ul><li>[ ] </li></ul>| Our front-end demo can be seen at https://alephzero.artzero.io/ for AlephZero network. The git repo is at https://github.com/ArtZero-io/frontend-react branch ink4-upgrade | Not full evaluated yet |
-| 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | The deliverable is missing.
+| 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | Some tests are failing.
+
+## Evaluation V3
+
+I evaluated both frontend and backend using the testnet provided. I still need to test both using a local substrate node. Please provide more detailed instructions for contract deployment and update the contract addresses and abi in the frontend application. Also, provide any config update instructions to point the backend and frontend to a local substrate node instead of the testnet provided. 
+
+I also notice that there are no instructions on how to set the admin profile for testing.
+
+### Backend
+
+In Run Backend Job, needs to change `node az_bids_monitors` to `node az_bids_monitor` to match the name of the file.
+The error in Az_events_collector seems to be fixed.
+
+### API 
+
+Some requests returned with success, but with an empty return. Here is a list of the requests:
+
+- getBidsByBidderAddress
+- getCollectionsByVolume
+- getNFTsByOwnerAndCollection
+- getNFTsByCollectionAddress
+- getNewListEvents
+- getUnlistEvents
+- getPurchaseEvents
+- getBidWinEvents
+- getOwnershipHistory
+- getAddRewardHistory
+- getClaimRewardHistory
+
+I tried getJSON and getCollectionContract requests using the API page provided and got:
+
+```
+TypeError: Windown.fetch: HEAD or GET Request cannot have a body.
+```
+
+I put `/ipfs/QmSdgNQ2zvJvaw8kP8oCJnmuFQUxVDBYrThYvV1C8k5bXU/131.json` in the input for getJson and nothing in getCollectionContract.
+
+The other requests work fine.
+
+### Frontend
+
+I tested some features following the test plan.
+
+In the part of Marketplace, I tested the collections creating one inactive collection and an NFT that doesn't appear in My NFTs. Because of that, I couldn't test other features related to NFT, excluding creating and editing the NFT.
+
+In the part of LauchPad, I created a project and tried to update the project info the transaction was complete, but the project wasn't changing. When I tried to Update the art location, the transaction success but I don't view anything changing. I don't find the button Withdraw_Balance and couldn't test Owner mint, Mint an NFT, and Update project phases.
+
+I couldn't test the Admin features, how to log in with admin?
+
+In the MyAccount I haven't tested My NFTs and My Stake and the Mint NFT in My Project.
+
+### Code Quality
+
+`cargo +nightly clippy` in Azero_Contracts now finish to compile but still returning some warnings, for example:
+
+```
+...
+warning: casting integer literal to `u8` is unnecessary
+  --> traits/collection_manager.rs:19:5
+   |
+19 | 	Reserved2   	= 6,
+   | 	^^^^^^^^^^^^^^^^^^^ help: try: `6_u8`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
+
+warning: casting integer literal to `u8` is unnecessary
+  --> traits/collection_manager.rs:13:5
+   |
+13 | 	Unknown     	= 0,
+   | 	^^^^^^^^^^^^^^^^^^^ help: try: `0_u8`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
+
+warning: `artzero_project` (lib) generated 32 warnings (6 duplicates) (run `cargo clippy --fix --lib -p artzero_project` to apply 16 suggestions)
+	Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+```
+
+## Evaluation V2
+
+### Contract
+
+All contracts build without problems and passed all tests.
+
+### Backend
+
+Az_events_collector got this error after some time running during the API testing.
+
+```
+Process latest block 24400590
+Scanning block 24400587
+Process latest block 24400591
+Event from Collection Manager Contract...
+/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:4913
+  const castError = new CastError();
+                	^
+CastError: Cast to Number failed for value "Psp34Manual" (type string) at path "contractType" for model "CollectionEvent"
+	at model.Query.exec (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:4913:21)
+	at Query.then (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:5012:15)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"Psp34Manual"',
+  kind: 'Number',
+  value: 'Psp34Manual',
+  path: 'contractType',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+ 
+	assert.ok(!isNaN(val))
+ 
+  	at castNumber (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/cast/number.js:27:10)
+  	at SchemaNumber.cast (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/schema/number.js:376:12)
+  	at SchemaType.applySetters (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/schematype.js:1201:12)
+  	at SchemaType._castForQuery (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/schematype.js:1648:15)
+  	at SchemaNumber.castForQuery (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/schema/number.js:430:14)
+  	at SchemaType.castForQueryWrapper (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/schematype.js:1612:20)
+  	at cast (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/cast.js:349:32)
+  	at Query.cast (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:5341:12)
+  	at Query._castConditions (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:2214:10)
+  	at model.Query.<anonymous> (/home/user/Documents/ArtZero/backend/node_modules/mongoose/lib/query.js:2517:8) {
+	generatedMessage: true,
+	code: 'ERR_ASSERTION',
+	actual: false,
+	expected: true,
+	operator: '=='
+  },
+  valueType: 'string'
+}
+Node.js v18.14.0
+```
+
+### API
+
+API starts, but I only tested the first 5 tests in the testing guide, because 4 of them failed. I used the same inputs in the guide.
+
+UpdateCollection
+```
+{
+    "status": "FAILED",
+    "message: "Not Exist Address"
+}
+```
+
+UpdateAdress
+```
+{
+    "status": "FAILED",
+    "message: "Invalid Address"
+}
+```
+
+newMintingEvent
+```
+{
+    "status": "OK",
+    "message: "SUCCESS"
+}
+```
+
+UpdateNFT
+```
+{
+    "status": "FAILED",
+    "message: "Not Exist Address"
+}
+```
+
+UpdateBids
+```
+{
+    "status": "FAILED",
+    "message: "Not Exist Collection Address"
+}
+```
+
+### Frontend
+
+It starts fine, but when I was testing, I got the error `Could not upload your image!!!.` when trying to create a collection or project. Because of that, I could only test the dashboard and my profile, it works fine.
+
+Some features still use external API `https://api.artzero.io`. The ideal scenario for testing is to run all services locally.
+
+### Code Quality
+
+Problems returned from `cargo +nightly clippy` in Azero_Contracts aren't fixed.
+
+The EsLint in the frontend now returns no problems.
 
 ## Evaluation V1
 
@@ -44,7 +228,6 @@ I built all contracts, however, the proxy contract presented an error.
 ```
 user@localhost:~/Documents/Contracts/Azero_Contracts/contracts/proxy$ cargo +nightly contract build --release
 warning: nothing to print.
-
 To find dependencies that require specific target platforms, try to use option `--target all` first, and then narrow your search scope accordingly.
  [1/5] Building cargo project
 	Updating crates.io index
@@ -59,7 +242,6 @@ To find dependencies that require specific target platforms, try to use option `
  [2/5] Post processing wasm file
  [3/5] Optimizing wasm file
 ERROR: ink dependency not found
-
 ```
 
 The contract tests seem to be system tests and not unit ones as declared in the grant application. Furthermore, all test scripts fail. Please provide proper configuration or instructions to run these tests. 
@@ -69,7 +251,6 @@ The collection_manager_test.ts returned some problems. For example:
 
 ```
 ...
-
 ts-node collection_manager_test.ts 
 @polkadot/util has multiple versions, ensure that there is only one installed.
 Either remove and explicitly install matching versions or dedupe using your package manager.
@@ -96,7 +277,6 @@ Account 2 has address: 5C4sQWd8SEu8JB1hSHy9rsnU229bH57tr9NAHDAMj2FtLX8v and bala
 [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "#<Object>".] {
   code: 'ERR_UNHANDLED_REJECTION'
 }
-
 ```
 
 The launchpad_ts.ts returned few problems. 
@@ -128,14 +308,12 @@ Account 2 has address: 5C4sQWd8SEu8JB1hSHy9rsnU229bH57tr9NAHDAMj2FtLX8v and bala
 [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "#<Object>".] {
   code: 'ERR_UNHANDLED_REJECTION'
 }
-
 ```
 
 And the psp34_standard_test.ts returned some problems too. For example:
 
 ```
 ...
-
 ts-node psp34_standard_test.ts 
 @polkadot/util has multiple versions, ensure that there is only one installed.
 Either remove and explicitly install matching versions or dedupe using your package manager.
@@ -189,7 +367,6 @@ error: use of `#[inline]` on trait method `is_locked_nft_builder` which has no b
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
    = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_locked_token_count` which has no body
   --> traits/psp34_standard.rs:17:1
    |
@@ -198,7 +375,6 @@ error: use of `#[inline]` on trait method `get_locked_token_count` which has no 
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
    = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_locked_token_count_builder` which has no body
   --> traits/psp34_standard.rs:17:1
    |
@@ -207,7 +383,6 @@ error: use of `#[inline]` on trait method `get_locked_token_count_builder` which
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
    = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_total_staked_by_account` which has no body
  --> traits/staking.rs:6:1
   |
@@ -216,7 +391,6 @@ error: use of `#[inline]` on trait method `get_total_staked_by_account` which ha
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_total_staked_by_account_builder` which has no body
  --> traits/staking.rs:6:1
   |
@@ -225,7 +399,6 @@ error: use of `#[inline]` on trait method `get_total_staked_by_account_builder` 
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_total_pending_unstaked_by_account` which has no body
  --> traits/staking.rs:6:1
   |
@@ -234,7 +407,6 @@ error: use of `#[inline]` on trait method `get_total_pending_unstaked_by_account
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `get_total_pending_unstaked_by_account_builder` which has no body
  --> traits/staking.rs:6:1
   |
@@ -243,7 +415,6 @@ error: use of `#[inline]` on trait method `get_total_pending_unstaked_by_account
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `set_code` which has no body
  --> traits/upgradable.rs:6:1
   |
@@ -252,7 +423,6 @@ error: use of `#[inline]` on trait method `set_code` which has no body
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: use of `#[inline]` on trait method `set_code_builder` which has no body
  --> traits/upgradable.rs:6:1
   |
@@ -261,7 +431,6 @@ error: use of `#[inline]` on trait method `set_code_builder` which has no body
   |
   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inline_fn_without_body
   = note: this error originates in the attribute macro `openbrush::trait_definition` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 warning: `artzero_project` (lib) generated 35 warnings (6 duplicates)
 error: could not compile `artzero_project` due to 46 previous errors; 35 warnings emitted
 ```
@@ -272,7 +441,6 @@ For the Frontend I ran `npm run eslint:check` and got some problems:
 ...
 /home/user/Documents/frontend-react/src/pages/collections/components/_AdvancedERC721Form.js
   43:15  warning  Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
-
 useEffect(() => {
   async function fetchData() {
 	// You can await here
@@ -281,13 +449,10 @@ useEffect(() => {
   }
   fetchData();
 }, [someId]); // Or [] if effect doesn't need props or state
-
 Learn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching  react-hooks/exhaustive-deps
   48:8   warning  React Hook useEffect has a missing dependency: 'currentAccount'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                          	react-hooks/exhaustive-deps
-
 /home/user/Documents/frontend-react/src/pages/collections/components/_MyCollectionLising.js
   36:15  warning  Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
-
 useEffect(() => {
   async function fetchData() {
 	// You can await here
@@ -296,14 +461,11 @@ useEffect(() => {
   }
   fetchData();
 }, [someId]); // Or [] if effect doesn't need props or state
-
 Learn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching  react-hooks/exhaustive-deps
   38:8   warning  React Hook useEffect has a missing dependency: 'onRefresh'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                               	react-hooks/exhaustive-deps
   38:9   warning  React Hook useEffect has a complex expression in the dependency array. Extract it to a separate variable so it can be statically checked                                                                                                                                                                                                                                                                   	react-hooks/exhaustive-deps
-
 /home/user/Documents/frontend-react/src/pages/collections/components/_NewNFTForm.js
   20:15  warning  Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
-
 useEffect(() => {
   async function fetchData() {
 	// You can await here
@@ -312,13 +474,10 @@ useEffect(() => {
   }
   fetchData();
 }, [someId]); // Or [] if effect doesn't need props or state
-
 Learn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching  react-hooks/exhaustive-deps
   32:8   warning  React Hook useEffect has missing dependencies: 'api' and 'props.nftAddress'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                            	react-hooks/exhaustive-deps
-
 /home/user/Documents/frontend-react/src/pages/collections/components/_SimpleERC721Form.js
   46:15  warning  Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
-
 useEffect(() => {
   async function fetchData() {
 	// You can await here
@@ -327,16 +486,13 @@ useEffect(() => {
   }
   fetchData();
 }, [someId]); // Or [] if effect doesn't need props or state
-
 Learn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching  react-hooks/exhaustive-deps
   51:8   warning  React Hook useEffect has a missing dependency: 'currentAccount'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                          	react-hooks/exhaustive-deps
-
 /home/user/Documents/frontend-react/src/pages/home/index.js
   33:60   warning  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
   33:124  warning  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
   33:205  warning  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
   35:99   warning  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
-
 ✖ 126 problems (33 errors, 93 warnings)
   0 errors and 4 warnings potentially fixable with the `--fix` option.
 ```
