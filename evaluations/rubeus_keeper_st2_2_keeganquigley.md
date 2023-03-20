@@ -19,4 +19,4 @@
 
 Everything works as expected. I was able to generate passwords for multiple websites and use the autofill feature.
 
-All unit tests pass, though I am not finding any new ones since the last delivery.
+All unit tests pass. Pretty straight-forward review of new features.
