@@ -69,6 +69,7 @@ jobs:
         uses: w3f/parse-milestone-delivery-action@master
         with:
           path: "${{ github.workspace }}/${{ matrix.filename }}"
+          strict: "false"
 
       - name: Get application file
         run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.parse-delivery.outputs.application_document }}"
@@ -78,6 +79,7 @@ jobs:
         uses: w3f/parse-grant-application-action@master
         with:
           path: "${{ steps.parse-delivery.outputs.application_document }}"
+          strict: "false"
       
       - name: Get delivery date
         id: date
