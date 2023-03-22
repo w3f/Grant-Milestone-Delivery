@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Accepted
+- **Status:** In progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Polkadart.md
 - **Milestone:** 2
 - **Evaluation by:** keeganquigley
