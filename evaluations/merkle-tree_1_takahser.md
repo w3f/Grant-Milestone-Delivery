@@ -29,9 +29,9 @@ Summarizes the overall performance plus additional feedback/comments
 
     ```bash
     examples % cargo run --example keyed_tree --features executable
-    Compiling merkle-tree-db v0.0.1 (/Users/seraya/repos/merkle-tree-db)
+    Compiling merkle-tree-db v0.0.1 (/Users/xxx/repos/merkle-tree-db)
         Finished dev [unoptimized + debuginfo] target(s) in 2.87s
-        Running `/Users/seraya/repos/merkle-tree-db/target/debug/examples/keyed_tree`
+        Running `/Users/xxx/repos/merkle-tree-db/target/debug/examples/keyed_tree`
     root hash: [182, 208, 95, 221, 109, 135, 155, 122, 20, 207, 117, 81, 97, 38, 237, 204, 166, 90, 134, 84, 157, 34, 255, 123, 6, 28, 216, 128, 155, 118, 72, 222]
     root hash: [240, 225, 75, 73, 152, 248, 32, 187, 79, 144, 25, 125, 88, 130, 108, 31, 218, 174, 5, 81, 56, 115, 41, 99, 190, 134, 171, 211, 156, 196, 87, 123]
     data: None
@@ -40,9 +40,9 @@ Summarizes the overall performance plus additional feedback/comments
     data: None
 
     examples % cargo run --example index_tree --features executable
-    Compiling merkle-tree-db v0.0.1 (/Users/seraya/repos/merkle-tree-db)
+    Compiling merkle-tree-db v0.0.1 (/Users/xxx/repos/merkle-tree-db)
         Finished dev [unoptimized + debuginfo] target(s) in 0.85s
-        Running `/Users/seraya/repos/merkle-tree-db/target/debug/examples/index_tree`
+        Running `/Users/xxx/repos/merkle-tree-db/target/debug/examples/index_tree`
     root hash: [182, 208, 95, 221, 109, 135, 155, 122, 20, 207, 117, 81, 97, 38, 237, 204, 166, 90, 134, 84, 157, 34, 255, 123, 6, 28, 216, 128, 155, 118, 72, 222]
     root hash: [240, 225, 75, 73, 152, 248, 32, 187, 79, 144, 25, 125, 88, 130, 108, 31, 218, 174, 5, 81, 56, 115, 41, 99, 190, 134, 171, 211, 156, 196, 87, 123]
     data: None
@@ -51,9 +51,9 @@ Summarizes the overall performance plus additional feedback/comments
     data: None
 
     examples % cargo run --example recorder --features executable
-    Compiling merkle-tree-db v0.0.1 (/Users/seraya/repos/merkle-tree-db)
+    Compiling merkle-tree-db v0.0.1 (/Users/xxx/repos/merkle-tree-db)
         Finished dev [unoptimized + debuginfo] target(s) in 0.41s
-        Running `/Users/seraya/repos/merkle-tree-db/target/debug/examples/recorder`
+        Running `/Users/xxx/repos/merkle-tree-db/target/debug/examples/recorder`
     data: "flip"
     data: "flop"
     data: "flap"
