@@ -10,13 +10,13 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ------- | ------- | -- |------------------- |
-| 0a. | License | <ul><li>[x] </li></ul>| https://github.com/web3go-xyz/web3go-xyz-v2/blob/develop/LICENSE | Uses Correct License. Please add year and copyright owner on line 189 of your license.|
-| 0b. | Documentation |<ul><li>[x] </li></ul>|https://web3go.notion.site/M2-Delivery-Web3Go-V2-0f083900301a451a8e60042a3755a03a| Easy to follow tutorials regarding basic functionality. Inline documentation could be further improved and README documentation could be extended as well.|
-| 0c. | Testing Guide |<ul><li>[x] </li></ul>|https://web3go.notion.site/Run-Local-Environment-By-Docker-Image-5426f050eb534b8f97318ba1b089e5b2| Testing guide usually refers to a guide on how to run unit/e2e tests. What you are currently doing is manually testing the functionality. See point 3 in General Notes for more details.|
-| 0d. | Docker |<ul><li>[x] </li></ul>|https://hub.docker.com/layers/web3go/web3go/v2-alpha-0.3/images/sha256-b16a63f497936cf17a8d3f6ab5a6200854f5be957720715e82052b56c936ba99?context=explore| Good. The only thing that perhaps can be improved is the large size of the docker image (1.67GB). This could be improved by using a different base image perhaps.|
-| 0e. | Article |<ul><li>[ ] </li></ul>|...| No Article available. The only missing part from your committed deliverables is the article. Consider publishing a Medium post regarding the the features you have build on top of metabase-v0.44.  |
-| 1. | UI Module:support more charts in semi-automatic chart generation |<ul><li>[x] </li></ul>|https://dev-v2.web3go.xyz| Good. However, there can be many configurable options to graphs so perhaps the generation of these charts should be made more intuitive.|  
-| 2. | UI Module:fully-automatic chart generation|<ul><li>[x] </li></ul>|https://dev-v2.web3go.xyz| It works. See point 6 below. |
+| 0a. | License | <ul><li>[x] </li></ul>| [link](https://github.com/web3go-xyz/web3go-xyz-v2/blob/develop/LICENSE) | Uses Correct License. Please add year and copyright owner on line 189 of your license.|
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [link](https://web3go.notion.site/M2-Delivery-Web3Go-V2-0f083900301a451a8e60042a3755a03a)| Easy to follow tutorials regarding basic functionality. Inline documentation could be further improved and README documentation could be extended as well.|
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| [link](https://web3go.notion.site/End-to-End-Testing-for-local-build-c544ecd080e6462ab423f3c2778fe8b1)| Testing guide usually refers to a guide on how to run unit/e2e tests. What you are currently doing is manually testing the functionality. See point 3 in General Notes for more details.|
+| 0d. | Docker |<ul><li>[x] </li></ul>| [link](https://hub.docker.com/layers/web3go/web3go/v2-alpha-0.3/images/sha256-b16a63f497936cf17a8d3f6ab5a6200854f5be957720715e82052b56c936ba99?context=explore)| Good. The only thing that perhaps can be improved is the large size of the docker image. This could be improved by using a different base image perhaps.|
+| 0e. | Article |<ul><li>[x] </li></ul>|[link](https://web3go.medium.com/web3go-delivered-milestone-2-for-our-web3-foundation-grant-a5d03f6f26e1)| Article available on Medium |
+| 1. | UI Module:support more charts in semi-automatic chart generation |<ul><li>[x] </li></ul>|[link](https://dev-v2.web3go.xyz)| Good. However, there can be many configurable options to graphs so perhaps the generation of these charts should be made more intuitive.|  
+| 2. | UI Module:fully-automatic chart generation|<ul><li>[x] </li></ul>| [link](https://dev-v2.web3go.xyz) | It works. See point 6 below. |
 
 
 ## General Notes
@@ -36,7 +36,7 @@ To address all issues possible (including breaking changes), run:
 Some issues need review, and may require choosing
 a different dependency.
 ```
-3.  You are not using automated tests in your code. Consider improving on this:
+1.  You are not using automated tests in your code. Consider improving on this. What you are doing is manual tests. In the original application, you are not stating if the tests should be made automated or manual, so I will accept the delivery from my side.  In the future, consider using automated testing tools such as [Cypress](https://www.cypress.io/). If you are not familiar with automated tests, please read this [article](https://www.browserstack.com/guide/manual-vs-automated-testing-differences) that goes over the benefits of automated testing. Your current testing guide explains how to run a single e2e test, that can be automated.  
 ```
 No tests found, exiting with code 1
 Run with `--passWithNoTests` to exit with code 0
