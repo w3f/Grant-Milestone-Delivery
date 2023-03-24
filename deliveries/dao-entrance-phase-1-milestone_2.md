@@ -16,3 +16,6 @@
 | **0d.** | Docker |-| Especially sorry, because this is a flutter ui project, we cannot provide docker with it. |
 | 1. | DAO desktop and app|[link](https://github.com/dao-entrance/app)| We will develop a window/mac/list/ios/android client based on flutter, which includes the following functions: 1. polkadot wallet login. 2. messaging. 3. end-to-end encryption. 4. voice and video calls. 5. matrix node server. |
 | 2. | Matrix node server |[link](https://github.com/dao-entrance/org-node)| matrix fork node server with sr25519 account. |
+| 3. | [Tests link](https://github.com/dao-entrance/app/blob/main/docs/install_and_run.md#run-e2e-%E6%B5%8B%E8%AF%95) | End to end testing of window/mac/list/ios/android full platform to ensure application security and stability |
+
+
