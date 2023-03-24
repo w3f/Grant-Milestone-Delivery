@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/Anchor.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -8,12 +8,34 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |     
-| 0a. | License | <ul><li>[ ] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/LICENSE-APACHE2](https://github.com/ff13dfly/Anchor/blob/main/LICENSE-APACHE2) [https://github.com/ff13dfly/Anchor/blob/main/LICENSE-GPL3](https://github.com/ff13dfly/Anchor/blob/main/LICENSE-GPL3) | Two licenses |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/README.md](https://github.com/ff13dfly/Anchor/blob/main/README.md) [https://github.com/ff13dfly/Anchor/blob/main/js/README.md](https://github.com/ff13dfly/Anchor/blob/main/js/README.md) | Needs some improvements |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md](https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md) [https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md](https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md) | Need examples with expected results |  |
-| 0d. | Docker | <ul><li>[ ] </li></ul>|[https://github.com/ff13dfly/Anchor/tree/main/docker](https://github.com/ff13dfly/Anchor/tree/main/docker)| Fail to build |
-| 0e. | Anchor pallet | <ul><li>[ ] </li></ul>|[https://github.com/ff13dfly/Anchor](https://github.com/ff13dfly/Anchor)| Bug fix and code improvement. |
-| 0f. | Anchor.js | <ul><li>[ ] </li></ul>| [https://github.com/ff13dfly/Anchor/tree/main/js/playground](https://github.com/ff13dfly/Anchor/tree/main/js/playground)| Need code examples with expected results | |
+| 0a. | License | <ul><li>[x] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/LICENSE-APACHE2](https://github.com/ff13dfly/Anchor/blob/main/LICENSE-APACHE2) [https://github.com/ff13dfly/Anchor/blob/main/LICENSE-GPL3](https://github.com/ff13dfly/Anchor/blob/main/LICENSE-GPL3) |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/README.md](https://github.com/ff13dfly/Anchor/blob/main/README.md) [https://github.com/ff13dfly/Anchor/blob/main/js/README.md](https://github.com/ff13dfly/Anchor/blob/main/js/README.md) |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>| [https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md](https://github.com/ff13dfly/Anchor/blob/main/frame/anchor/README.md) [https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md](https://github.com/ff13dfly/Anchor/blob/main/js/playground/README.md) |  |  |
+| 0d. | Docker | <ul><li>[x] </li></ul>|[https://github.com/ff13dfly/Anchor/tree/main/docker](https://github.com/ff13dfly/Anchor/tree/main/docker)|  |
+| 0e. | Anchor pallet | <ul><li>[x] </li></ul>|[https://github.com/ff13dfly/Anchor](https://github.com/ff13dfly/Anchor)| |
+| 0f. | Anchor.js | <ul><li>[x] </li></ul>| [https://github.com/ff13dfly/Anchor/tree/main/js/playground](https://github.com/ff13dfly/Anchor/tree/main/js/playground)|  | |
+
+## Evaluation V2
+
+### License
+
+Now have only the Apache2 license.
+
+### Documentation
+
+The documentation has been improved.
+
+### Docker
+
+Docker now works fine following the guide.
+
+### System Test
+
+Some automated system test was provided, and they work fine.
+
+### Code Quality
+
+The warnings from cargo clippy were fixed.
 
 ## Evaluation V1
 
@@ -51,8 +73,6 @@ error: this comparison involving the minimum or maximum element for this type co
     = help: because `0` is the minimum value for this type, this comparison is always true
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#absurd_extreme_comparisons
     = note: `-D clippy::absurd-extreme-comparisons` implied by `-D clippy::correctness`
-
-
 ```
 
 Fixing this error, I got some warnings from anchor, for example:
@@ -63,25 +83,21 @@ warning: use of deprecated associated function `frame_support::dispatch::Weight:
    |
 45 |             .saturating_add(Weight::from_ref_time(1_000_000_000 as u64).saturating_mul(x as u64))
    |                                     ^^^^^^^^^^^^^
-
 warning: use of deprecated associated function `frame_support::dispatch::Weight::from_ref_time`: Will be removed soon; use `from_parts` instead.
   --> frame/anchor/src/weights.rs:49:11
    |
 49 |         Weight::from_ref_time(1_000_000_000 as u64)
    |                 ^^^^^^^^^^^^^
-
 warning: use of deprecated associated function `frame_support::dispatch::Weight::from_ref_time`: Will be removed soon; use `from_parts` instead.
   --> frame/anchor/src/weights.rs:54:11
    |
 54 |         Weight::from_ref_time(1_000_000_000 as u64)
    |                 ^^^^^^^^^^^^^
-
 warning: use of deprecated associated function `frame_support::dispatch::Weight::from_ref_time`: Will be removed soon; use `from_parts` instead.
   --> frame/anchor/src/weights.rs:59:11
    |
 59 |         Weight::from_ref_time(1_000_000_000 as u64)
    |                 ^^^^^^^^^^^^^
-
 warning: `pallet-anchor` (lib) generated 11 warnings
     Finished release [optimized] target(s) in 21.43s
 ```
