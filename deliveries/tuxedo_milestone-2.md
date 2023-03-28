@@ -1,0 +1,29 @@
+# Milestone Delivery :mailbox:
+
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo.md
+* **Milestone Number:** 2 
+
+**Context**
+
+Tuxedo is a runtime framework for writing Substrate runtimes in the UTXO model. It is analogous (and an alternative) to FRAME which uses the accounts model. This is the first of three milestones in the grant.
+
+In this milestone we focused on improving the robustness of the framework. Thinking of edge cases and improving the functionality of the user experience for a Tuxedo based chain via the wallet feature. We added in a concept of a `ThresholdMultiSignature` to allow for more secure signing schemes. A major core change was that we changed the terminology to fall in line with the IOHK naming. `Redeemer` -> `Verifier`, `Verifier -> ConstraintChecker`, `Witness -> Redeemer`. We also allowed for a more powerful `ConstraintChecker` which can not only have access to the `DynamicallyTypedData` from the `Inputs` and `Outputs` of a transaction but also to actually have the ability to be passed the full `Outputs` of a transaction for the future implementation of coupling between Tuxedo pieces.  
+
+**Deliverables**
+
+| Number | Deliverable | Link(s)       | Notes |
+| ------ | ----------- | ------------- |------------- |
+| 0a.    | License     | [LICENSE file](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-1/LICENSE) | Apache 2.0, as recommended | 
+| 0b.    | Documentation | [Hosted Rustdocs](https://off-narrative-labs.github.io/Tuxedo), [Readme](https://github.com/Off-Narrative-Labs/Tuxedo/tree/milestone-1#readme) | We have detailed rustdocs throughout the project; they are also hosted. Instructions for using Tuxedo are in the Readme. | 
+| 0c.    | Testing     | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo#testing-and-code-quality) | We have good unit test coverage throughout the project. The tests are run in CI and instructions for running them locally are in the readme. Instructions for testing the node manually with the PoC wallet in the Readme. |
+| 0d.    | Docker      | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo#docker), [Published Images](https://github.com/orgs/Off-Narrative-Labs/packages) | We provide docker images for both the template node and the PoC wallet as well as instructions for how to test the node with them. |
+| 1.     | User Wallet | [Wallet Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_template_wallet/index.html), [Wallet Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/milestone-2/wallet) | |
+| 2.     | MultiSig Piece | [MultiSig Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/verifier/index.html), [MultiSig Code](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-2/tuxedo-core/src/verifier.rs) | |
+
+**Additional Information**
+
+Both the github repository and the published docker images have a `milestone-2` tag. This is what we are officially submitting. (Although reviewing anything that comes in later should also be fine.)
+
+Thanks for the opportunity to work on this. We look forward to the next milestone and beyond.
