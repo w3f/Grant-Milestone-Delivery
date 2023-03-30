@@ -13,4 +13,10 @@
 | 0d. | Docker | <ul><li>[x] </li></ul> |https://www.kryptik.app/blog|  | 
 | 0e. | Article | <ul><li>[x] </li></ul> |https://www.kryptik.app/blog/wallets|  | 
 | 1.  | Vault Module | <ul><li>[x] </li></ul> | https://github.com/KryptikApp/swordExample/blob/main/src/handlers/wallet/vaultHandler.ts | 
+| 2.  | Encryption Module | <ul><li>[x] </li></ul> | https://github.com/KryptikApp/swordExample/blob/main/components/wallet/LockWalletCard.tsx#L30 |
+| 3.  | Share Module | <ul><li>[x] </li></ul> | https://github.com/KryptikApp/swordExample/blob/7626b1c049480ea6fdf74acb58e3b58ef4e761b7/src/helpers/wallet/index.ts#L52 |
+| 4.  | Sync Module | <ul><li>[x] </li></ul> | https://github.com/KryptikApp/swordExample/blob/main/src/handlers/sync/index.ts |
+| 5.  | Web Deployment | <ul><li>[x] </li></ul> | https://sword.kryptik.app/ |
+
 # General Notes
+
