@@ -13,7 +13,7 @@ In this delivery we provide a curated list of smart contract vulnerabilities in 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://github.com/CoinFabrik/web3-grant/blob/main/LICENSE | MIT | 
-| 0b. | Documentation |...| We provide a report, listing relevant security issues introduced in smart contracts developed with ink!. This will include a summary of findings and how the results were procured, a detailed description of each vulnerability/best practice, and links to the code that exemplifies them. | 
+| 0b. | Documentation | https://docs.google.com/document/d/1AaieAwr_d-xJeExbUER5cC4Erbdi1OoRTBGwV_l21dY/edit?usp=sharing | We provide a report, listing relevant security issues introduced in smart contracts developed with ink!. This will include a summary of findings and how the results were procured, a detailed description of each vulnerability/best practice, and links to the code that exemplifies them. | 
 | 0c. | Testing and Testing Guide | - |No tests for our PoC where produced at this stage. |
 | 0d. | Docker | - | Does not apply at this stage. |
 | 0e. | Article | ... | We uploaded to our blog a report summary.|
