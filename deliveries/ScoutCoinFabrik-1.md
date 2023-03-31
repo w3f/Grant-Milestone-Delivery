@@ -10,14 +10,19 @@ In this delivery we provide a curated list of smart contract vulnerabilities in 
 
 **Deliverables**
 
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
-
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| 0a. | License | https://github.com/CoinFabrik/web3-grant/blob/main/LICENSE | MIT | 
+| 0b. | Documentation |...| We provide a report, listing relevant security issues introduced in smart contracts developed with ink!. This will include a summary of findings and how the results were procured, a detailed description of each vulnerability/best practice, and links to the code that exemplifies them. | 
+| 0c. | Testing and Testing Guide | - |No tests for our PoC where produced at this stage. |
+| 0d. | Docker | - | Does not apply at this stage. |
+| 0e. | Article | ... | We uploaded to our blog a report summary.|
+| **1** | Research | https://github.com/CoinFabrik/web3-grant/tree/main/curated-list-of-vulnerabilities | We produced a curated list of vulnerabilities, best practices, and enhancements related to smart contracts written in ink!, considering the list of [analysis categories](https://blog.coinfabrik.com/analysis-categories/) currently used for our manual smart contract audits. |
+| **2** | Development | https://github.com/CoinFabrik/web3-grant/tree/main/vulnerabilities | We produced code examples and snippets of smart contracts written in ink! for each type of vulnerability from the list mentioned in 1. Research. |
+| **3** | Development | https://github.com/CoinFabrik/web3-grant/tree/main/detectors| Proof of concept code detecting some (relevant) issues included in the list of vulnerabilities and best practices. |
+
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+
+Find our projects' repo at:
+https://github.com/CoinFabrik/web3-grant
