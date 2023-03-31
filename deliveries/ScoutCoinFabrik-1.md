@@ -6,6 +6,7 @@
 * **Milestone Number:** 1
 
 **Context** (optional)
+
 In this delivery we provide a curated list of smart contract vulnerabilities in substrate ink!, code snippets and examples for these vulnerabilities and Proof of Concept detectors showing the feasibility of our security analysis tool.
 
 **Deliverables**
