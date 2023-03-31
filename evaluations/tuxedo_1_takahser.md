@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -12,16 +12,20 @@
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | [deployed docs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/index.html), [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/README.md) | see [documentation feedback](#documentation-feedback) |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [testing instructions](https://github.com/Off-Narrative-Labs/Tuxedo#testing-and-code-quality), [inline tests](https://github.com/Off-Narrative-Labs/Tuxedo/blob/afc6035e6c07f83df883619786facd40ecef7fa5/tuxedo-core/src/dynamic_typing.rs#L139) | see [testing feedback](#testing-feedback) |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [published packages](https://github.com/orgs/Off-Narrative-Labs/packages) | see [docker feedback](#docker-feedback) |
-| 1. | Tuxedo Core | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create the core of the Tuxedo System, analogous to FRAME Executive and FRAME System* |
-| 2. | Token Piece | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create the first Tuxedo piece that serves as a cryptocurrency, analogous to Pallet Balances* |
-| 3. | Tuxedo Node Template | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create a Substrate node with the runtime built with Tuxedo and including the Token piece. Together this will represent a bitcoin-like token (not PoW though, only the token logic is bitcoin-like)* |
+| 1. | Tuxedo Core | <ul><li>[x] </li></ul> | [code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-core), [published Crate](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/index.html) | - |
+| 2. | Token Piece | <ul><li>[x] </li></ul> | [Money Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_template_runtime/money/index.html), [Money Code](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/money.rs) | - |
+| 3. | Tuxedo Node Template | <ul><li>[x] </li></ul> | [Runtime Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime), [Runtime Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_template_runtime/index.html), [Node Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/node) | - |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- although it wasn't part of their m1, they delivered some [instructions](https://github.com/w3f/Grant-Milestone-Delivery/pull/785#issuecomment-1482208466) to send UTXOs to accounts different than the one that owns the genesis utxos
+- they provided a bunch of examples that use the utxo library (not part of the grant):
+  - [simple example Tuxedo piece that tracks amoeba populations](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/amoeba.rs)
+  - [simple Proof of Existence application](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/poe.rs)
+  - [small pallet that handles runtime upgrades](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/runtime_upgrade.rs)
 
 ### Documentation Feedback
 
