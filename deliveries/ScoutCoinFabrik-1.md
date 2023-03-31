@@ -6,11 +6,12 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
-* **Milestone Number:** e.g. 1
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ScoutCoinFabrik.md 
+* **Milestone Number:** 1
 
 **Context** (optional)
 > Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+In this delivery we provide a curated list of smart contract vulnerabilities in substrate ink!, code snippets and examples for these vulnerabilities and Proof of Concept detectors showing the feasibility of our security analysis tool.
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
