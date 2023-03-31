@@ -24,5 +24,5 @@ In this delivery we provide a curated list of smart contract vulnerabilities in 
 
 **Additional Information**
 
-Find our projects' repo at:
+Find our project's repo at:
 https://github.com/CoinFabrik/web3-grant
