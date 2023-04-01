@@ -29,3 +29,36 @@ Caused by:
   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 warning: build failed, waiting for other jobs to finish...
 ```
+
+**UPDATE:** Works when using `nightly-2022-12-30` toolchain. I am able to run all the available benchmarking tests:
+```rust
+2023-04-01 20:24:33 🔨 Initializing Genesis block/state (state: 0x025c…0dec, header-hash: 0x2ec5…5346)    
+2023-04-01 20:24:33 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+5Fan4r49ckuMk9SKivhoRyDX3T7KnJ9o9ouLUo4EkmkiiUYS
+
+2023-04-01 20:24:35 Running 10 warmups...    
+2023-04-01 20:24:35 Executing block 100 times    
+2023-04-01 20:24:35 Building block, this takes some time...    
+2023-04-01 20:24:39 Extrinsics per block: 1869    
+2023-04-01 20:24:39 Running 10 warmups...    
+2023-04-01 20:24:43 Executing block 100 times    
+2023-04-01 20:25:21 Executing a contract-test::get_num extrinsic takes[ns]:
+Total: 20310808
+Min: 195696, Max: 263040
+Average: 203108, Median: 199061, Stddev: 12145.57
+Percentiles 99th, 95th, 75th: 240891, 234942, 200436
+```
