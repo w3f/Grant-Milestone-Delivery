@@ -64,4 +64,6 @@ Percentiles 99th, 95th, 75th: 240891, 234942, 200436
 ```
 ## Solidity
 
-Solidity benchmarking works both for `solang` compiled contracts as well as native. Would be cool to see more complex logic added in the future such as for cross-contract calls.
+Solidity benchmarking works both for `solang` compiled contracts as well as native. I'm able to build and run the Frontier node with `cargo build --release --features=runtime-benchmarks`. Everything works as intended. Would be cool to see more complex logic added in the future such as for cross-contract calls.
+
+**Please Note:** No security audits were performed as part of this evaluation.
