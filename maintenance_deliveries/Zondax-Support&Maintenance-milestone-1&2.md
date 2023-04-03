@@ -10,7 +10,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this delivery**  
 
-* **Application Document:** [Open Grant Proposal](https://github.com/Zondax/Open-Grants-Program/blob/6e257aabeef6b14ea3217fbd10da9d7c3bb89b2b/applications/Zondax-Support.md#open-grant-proposal)
+* **Application Document:** [Zondax Support & Maintenance](https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/Zondax-Support.md)
 
 **Deliverables**
 

@@ -1,7 +1,7 @@
 name: Google Sheet Update
 on:
   pull_request_target:
-    types: [opened, synchronize]
+    types: [opened]
 
 jobs:
   get-delivery-files:
@@ -66,23 +66,27 @@ jobs:
 
       - name: Parse delivery file 
         id: parse-delivery
-        uses: w3f/parse-milestone-delivery-action@v3
+        uses: w3f/parse-milestone-delivery-action@master
         with:
           path: "${{ github.workspace }}/${{ matrix.filename }}"
+          strict: "false"
 
       - name: Get application file
         run: wget "https://raw.githubusercontent.com/w3f/Grants-Program/master/applications/${{ steps.parse-delivery.outputs.application_document }}"
 
       - name: Parse application file
         id: parse-grant
-        uses: w3f/parse-grant-application-action@v1
+        uses: w3f/parse-grant-application-action@master
         with:
           path: "${{ steps.parse-delivery.outputs.application_document }}"
+          strict: "false"
       
-      - name: Get current date
+      - name: Get delivery date
         id: date
-        run: echo "::set-output name=date::$(date +'%d/%m/%Y')"
-
+        run: |
+          delivery_date=${{ github.event.pull_request.created_at }}        
+          echo "::set-output name=date::$(date -d "$delivery_date" +%d/%m/%Y)"
+  
       - name: Write data to sheet
         uses: jroehl/gsheet.action@v1.1.1
         with:
@@ -103,7 +107,11 @@ jobs:
                     "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ github.event.pull_request.html_url }}",
                     "",
-                    "${{ steps.date.outputs.date }}"
+                    "${{ steps.date.outputs.date }}",
+                    "",
+                    "=IF(ISNUMBER(INDIRECT(ADDRESS(ROW(),11))),INDIRECT(ADDRESS(ROW(),11))-INDIRECT(ADDRESS(ROW(),10)),\"\")",
+                    "=IF(INDIRECT(ADDRESS(ROW(),5))=\"Done\",VLOOKUP(INDIRECT(ADDRESS(ROW(),2)),Milestones!B:BE,SWITCH(INDIRECT(ADDRESS(ROW(),3)),1,19,2,23,3,27,4,31,5,35,6,39,7,43,8,47,9,51,10,55),FALSE),\"\")",
+                    "=IF(INDIRECT(ADDRESS(ROW(),5))=\"Done\",VLOOKUP(INDIRECT(ADDRESS(ROW(),2)),Milestones!B:BE,SWITCH(INDIRECT(ADDRESS(ROW(),3)),1,20,2,24,3,28,4,32,5,36,6,40,7,44,8,48,9,52,10,56),FALSE),\"\")"
                   ]],
                   "worksheetTitle": "Evaluation",
                   "minCol": 1,
