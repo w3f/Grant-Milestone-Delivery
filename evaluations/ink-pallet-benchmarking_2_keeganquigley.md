@@ -30,7 +30,7 @@ Caused by:
 warning: build failed, waiting for other jobs to finish...
 ```
 
-**UPDATE:** Works when using `nightly-2022-12-30` toolchain. I am able to run all the available benchmarking tests:
+**UPDATE:** Works when using `nightly-2022-12-30` toolchain. I am able to run all the available benchmarking tests (sample):
 ```rust
 2023-04-01 20:24:33 🔨 Initializing Genesis block/state (state: 0x025c…0dec, header-hash: 0x2ec5…5346)    
 2023-04-01 20:24:33 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
@@ -62,3 +62,6 @@ Min: 195696, Max: 263040
 Average: 203108, Median: 199061, Stddev: 12145.57
 Percentiles 99th, 95th, 75th: 240891, 234942, 200436
 ```
+## Solidity
+
+Solidity benchmarking works both for `solang` compiled contracts as well as native. Would be cool to see more complex logic added in the future such as for cross-contract calls.
