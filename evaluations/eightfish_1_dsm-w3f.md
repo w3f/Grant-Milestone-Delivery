@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/eightfish.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,15 +10,33 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/LICENSE| | 
 | 0b. |Documentation|<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish#readme|   | 
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/unit_tests.md| Need a more complete testing guide for system tests | 
-| 0d.  | Docker |<ul><li>[ ] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/Dockerfile| Need improvements | 
-| 0e. | Article |<ul><li>[ ] </li></ul>|https://medium.com/@daogangtang/eightfish-milestone-1-81ef32e4bbf2| Not fully evaluated yet | 
-| 1. | Substrate module: eightfish |<ul><li>[ ] </li></ul>| 1. record the coming requests; https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L96 <br/> 2. record the coming model indexes; https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L117 <br/> 3. update the on-chain wasm code for the off-chain worker. https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L143 | Not fully evaluated yet |
-| 2. | Subxt proxy |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/subxtproxy| Not fully evaluated yet| 
-| 3. | Off-chain wasm worker |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/spin_worker | Not fully evaluated yet| 
-| 4. | Upgrade utilities |<ul><li>[ ] </li></ul>| 1. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/bin/upload_wasm.rs <br/> 2. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/main.rs <br/> 3.  https://github.com/eightfish-org/eightfish/blob/master/upgrade/nodemon.sh | Not fully evaluated yet| 
-| 5. | A set of rust derive procedural macro |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/eightfish-derive | Not fully evaluated yet| 
-| 6. | Framework SDK interface |<ul><li>[ ] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/src | Not fully evaluated yet| 
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/unit_tests.md|  | 
+| 0d.  | Docker |<ul><li>[x] </li></ul>|https://github.com/eightfish-org/eightfish/blob/master/Dockerfile|  | 
+| 0e. | Article |<ul><li>[x] </li></ul>|https://medium.com/@daogangtang/eightfish-milestone-1-81ef32e4bbf2|  | 
+| 1. | Substrate module: eightfish |<ul><li>[x] </li></ul>| 1. record the coming requests; https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L96 <br/> 2. record the coming model indexes; https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L117 <br/> 3. update the on-chain wasm code for the off-chain worker. https://github.com/eightfish-org/eightfish/blob/master/subnode/pallets/eightfish/src/lib.rs#L143 |  |
+| 2. | Subxt proxy |<ul><li>[x] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/subxtproxy| | 
+| 3. | Off-chain wasm worker |<ul><li>[x] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/spin_worker | | 
+| 4. | Upgrade utilities |<ul><li>[x] </li></ul>| 1. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/bin/upload_wasm.rs <br/> 2. https://github.com/eightfish-org/eightfish/blob/master/upgrade/src/main.rs <br/> 3.  https://github.com/eightfish-org/eightfish/blob/master/upgrade/nodemon.sh | | 
+| 5. | A set of rust derive procedural macro |<ul><li>[x] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/eightfish-derive | | 
+| 6. | Framework SDK interface |<ul><li>[x] </li></ul>| https://github.com/eightfish-org/eightfish/tree/master/src | | 
+
+## Evaluation V4
+
+### Documentation
+
+[This explanation of the logs](https://gist.github.com/miketang84/7ae8bb7998c67c64513df480d91e93ac) was provided to help to understand the process, and [this introduction to EightFish framework SDK](https://github.com/eightfish-org/eightfish/blob/dev/docs/eightfish_app_tutorial.md) explains the framework. When I tested, I was able to view the same logs.
+
+### Testing
+
+They provided me [this example-todo](https://github.com/eightfish-org/eightfish-example-todo) application and [this upgraded flow test](https://github.com/eightfish-org/eightfish/blob/master/docs/upgrade.md). Both worked fine. 
+
+When I tested the upgraded flow test, I needed to run these commands 
+`sudo npm install -g nodemon` and `rustup target add wasm32-wasi` to set up for other commands, and needed to run `spin build` before `spin up` in http_gate.
+
+For the next milestone delivery, I suggest using docker-compose to make easier to run the system.
+
+
+###
 
 ## Evaluation V3
 
@@ -33,13 +51,9 @@ The 2 tests ignored in Evaluation V2 were removed.
 
 ```
  	Running unittests src/lib.rs (target/debug/deps/eightfish_derive-22462dc7dd8fc507)
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
  	Running tests/integration_test.rs (target/debug/deps/integration_test-3e63434866144fa5)
-
 running 19 tests
 test test_build_delete_sql_and_params ... ok
 test test_build_get_one_sql_and_params ... ok
@@ -60,13 +74,9 @@ test test_struct_names ... ok
 test test_struct_names_placeholder ... ok
 test test_struct_names_update_placeholder ... ok
 test test_update_sql ... ok
-
 test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
    Doc-tests eightfish-derive
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00
 ```
 
