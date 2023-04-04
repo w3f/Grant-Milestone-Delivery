@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/societal_grant2.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -11,10 +11,14 @@
 | 0a. | License | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-client/blob/main/LICENSE)|  |
 | 0b. | Documentation | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-client/blob/main/README.md) | |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-client/blob/main/docs/DemocracyTestingGuide.md)|  |
-| 0d. | Docker | <ul><li>[ ] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-client/da970f384c893cbac9f537b52535f7b5880e609b/images/sha256-2634da97a130abe3ce0ae3db18c73061f6374c7b0b889781d7d4d15ef8dc17be?context=explore)| Small problem to fix  |
+| 0d. | Docker | <ul><li>[x] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-client/da970f384c893cbac9f537b52535f7b5880e609b/images/sha256-2634da97a130abe3ce0ae3db18c73061f6374c7b0b889781d7d4d15ef8dc17be?context=explore)|   |
 | 0e. | Article | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission) |   |  
 | 1. | Client Modules | <ul><li>[x] </li></ul>| [Societal Client Web Application](https://client.dev.sctl.link) |   |
 | Note | Substrate Module: Reservable & Lockable Asset Pallet | <ul><li>[x] </li></ul>| |   |  
+
+## Evaluation V4
+
+The problem with docker was fixed.
 
 ## Evaluation V3
 
