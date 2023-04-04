@@ -23,7 +23,7 @@ Visit it at ...
 | 0a. | Licence | n/a | All repositories have a LICENSE.md file at their repo root. | 
 | 0b. | Documentation | n/a | All repositories have a README.md file at their repo root, that is the entry point to the documentation. | 
 | 0c. | Testing and Testing Guide | https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | We have unit and integration testing alongside with some information for manual testing. |
-| 0d. | Docker | n/a | All repositories are dockerized. |
+| 0d. | Docker | [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) | All repositories are dockerized. |
 | 1. | Substrate module: pallet_dao_asset | [pallet](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-assets) with [checkpoint functionality](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/pallets/dao-assets/src/functions.rs#L56-L130) | The assets pallet for the DAO |
 | 2. | Substrate module: pallet_dao_vote	| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes | The vote pallet with the full proposal lifecycle implementation | 
 | 3. | Frontend Implementation	 | https://genesis-dao.org | The entire dao creation process within the UI. |
