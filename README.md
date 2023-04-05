@@ -50,7 +50,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 2. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
 3. Name the file `project-name_milestone-number_your-github-username.md`.
 4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
-5. Once you have completed the evaluation, create a pull request.
+5. Once you have completed the evaluation, create a pull request in the [W3F Grants Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
 7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 

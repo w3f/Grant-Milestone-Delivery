@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved.
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/RedStone%20Network.md 
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,13 +9,28 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                         |<ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/redstone-network/redstone-node/blob/main/LICENSE) |                                                              |
-| 0b.    | Documentation                   |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#run-the-rsn-node](https://github.com/redstone-network/redstone-node#run-the-rsn-node) | Not fully evaluated yet.  |
+| 0b.    | Documentation                   |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#run-the-rsn-node](https://github.com/redstone-network/redstone-node#run-the-rsn-node) |  |
 | 0c.    | Testing Guide                   |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#run-tests](https://github.com/redstone-network/redstone-node#run-tests) |  |
-| 0d.    | Article/Tutorial                |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node#module-documentation](https://github.com/redstone-network/redstone-node#module-documentation) | Need beter tutorial/article |
-| 1a.    | Substrate module: Defense    |<ul><li>[ ] </li></ul>| [	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense](	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense) | Not fully evaluated yet. |
-| 1b.    | Substrate module: Notification     |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/notification](https://github.com/redstone-network/redstone-node/tree/main/pallets/notification) | Not fully evaluated yet. |
-| 1c.    | Substrate module: Permission-capture |<ul><li>[ ] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture](https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture) | Not fully evaluated yet. |
+| 0d.    | Article/Tutorial                |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#module-documentation](https://github.com/redstone-network/redstone-node#module-documentation) |  |
+| 1a.    | Substrate module: Defense    |<ul><li>[x] </li></ul>| [	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense](	https://github.com/redstone-network/redstone-node/tree/main/pallets/defense) |  |
+| 1b.    | Substrate module: Notification     |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/notification](https://github.com/redstone-network/redstone-node/tree/main/pallets/notification) |  |
+| 1c.    | Substrate module: Permission-capture |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture](https://github.com/redstone-network/redstone-node/tree/main/pallets/permission-capture) |  |
 | 2.     | Docker                          |<ul><li>[x] </li></ul>| [https://github.com/redstone-network/redstone-node#run-in-docker](https://github.com/redstone-network/redstone-node#run-in-docker) |  |
+
+## Evaluation V4
+
+Now the command to spin up the network in the documentation is working.
+
+## Evaluation V3
+
+The steps in [the tutorial](https://github.com/redstone-network/grant-test-tutorial/blob/main/RedStone-Milestone-1-test-tutorial.md) worked well assuming that the notification events were emitted and with a proper infrastructure they would be sent. 
+
+![image](https://user-images.githubusercontent.com/112647953/214831144-41e51147-81f1-4a68-a2fa-4eb954ca125f.png)
+
+I tested the network using docker. In the documentation the following command is failing as showed in the image, please review.
+
+![image](https://user-images.githubusercontent.com/112647953/214831374-7934801a-bd32-44b3-b264-34643ae1ed4b.png)
+
 
 ## Evaluation V2
 
