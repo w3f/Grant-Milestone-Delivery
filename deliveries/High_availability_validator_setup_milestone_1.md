@@ -15,6 +15,8 @@ The goal of the first milestone will be adding a switch to the substrate codebas
 
 **Deliverables**
 
+Milestone 1 deliverables can be found in the repository under the following link: https://github.com/bright/substrate-raft/tree/m1
+
 | Number | Deliverable | Testing | Notes 
 | ------------- | ------------- | ------------- | ------------- |
 | **0a.** | License | License can be found under: [substrate-raft](https://github.com/bright/substrate-raft/blob/m1/LICENSE-GPL3)| Apache 2.0 / GPLv3 / MIT / Unlicense | |
