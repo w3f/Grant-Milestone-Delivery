@@ -15,15 +15,14 @@ The goal of the first milestone will be adding a switch to the substrate codebas
 
 **Deliverables**
 
-Milestone 1 deliverables can be found in the repository under the following link: https://github.com/bright/substrate-raft/tree/m1
+Milestone 1 is deliveried under the [milestone-1](https://github.com/bright/substrate-raft/tree/milestone-1) branch in our repository.
 
 | Number | Deliverable | Testing | Notes 
 | ------------- | ------------- | ------------- | ------------- |
-| **0a.** | License | License can be found under: [substrate-raft](https://github.com/bright/substrate-raft/blob/m1/LICENSE-GPL3)| Apache 2.0 / GPLv3 / MIT / Unlicense | |
+| **0a.** | License | License can be found under: [substrate-raft](https://github.com/bright/substrate-raft/blob/milestone-1/LICENSE-GPL3)| Apache 2.0 / GPLv3 / MIT / Unlicense | |
 | **0b.** | Documentation | | We will provide inline documentation.|
 | **0c.** | Testing and Testing Guide | Run `cargo test` in project’s root directory. | We will provide unit tests and the guidelines for running and testing it the scope. |
 | **0d.** | Docker | First run `bash docker/build.sh` in the project's root directory | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
 | 1. | Update substrate | In `docker-compose.yml`, we have setup Alice-1 with permission granted to produce blocks/votes for finalised blocks and `I'm online` messages. Alice-2 is setup with permission deny. By running `docker-compose up`, we can observe that only Alice-1 is producing/finalising bloks and sending `I'm online` messages.   | Modify the substrate code to conditionally submit blocks/votes for finalised blocks (GRANDPA)/`I'm online` messages. |
 | 2. | Update substrate client - cli | We can run node with the `--permission-resolver=never` / `--permission-resolver=always` option, which will prevent / allows block production / vote finalisation and sending `I'm online` messages. | Modify the substrate code to conditionally grant or permit permissions. There will be option to run node in permission granted or permission denied mode). It will be useful to prove that permissioning works by running two nodes with same auth keys but different modes (permission granted/denied) |
 | 3. | Integration test | Run `bash docker/build.sh` and `docker-compose up`| A dockerised setup that allows to run network in setup described above. |
-
