@@ -7,7 +7,7 @@
 
 **Context**
 
-Tuxedo is a runtime framework for writing Substrate runtimes in the UTXO model. It is analogous (and an alternative) to FRAME which uses the accounts model. This is the first of three milestones in the grant.
+Tuxedo is a runtime framework for writing Substrate runtimes in the UTXO model. It is analogous (and an alternative) to FRAME which uses the accounts model. This is the second of three milestones in the grant.
 
 In this milestone we focused on improving the robustness of the framework. Thinking of edge cases and improving the functionality of the user experience for a Tuxedo based chain via the wallet feature. We added in a concept of a `ThresholdMultiSignature` to allow for more secure signing schemes. A major core change was that we changed the terminology to fall in line with the IOHK naming. `Redeemer` -> `Verifier`, `Verifier -> ConstraintChecker`, `Witness -> Redeemer`. We also allowed for a more powerful `ConstraintChecker` which can not only have access to the `DynamicallyTypedData` from the `Inputs` and `Outputs` of a transaction but also to actually have the ability to be passed the full `Outputs` of a transaction for the future implementation of coupling between Tuxedo pieces.  
 
