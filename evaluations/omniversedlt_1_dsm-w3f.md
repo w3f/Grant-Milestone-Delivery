@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Omniverse%20DLT.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,14 +9,70 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul> | [GPLv3](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/web3-grant/LICENSE) |  |
-| 0b. | Documentation |<ul><li>[ ] </li></ul> |  - [A high-level Introduction](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/README.md) <br/> - [How to build in `pallet` tech stack](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/web3-grant/README.md) <br/> - [Tutorial of how to use](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/README.md)  | Not fully evaluated yet. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul> | [The test guide for milestone 1](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/test-guide/m1-test-guide.md) | Not fully evaluated yet. |
-| 0d. | Article |<ul><li>[ ] </li></ul> | [link](https://medium.com/@xiyuzheng1984/omniverse-decentralized-ledger-technology-has-finished-the-first-milestone-66bbcd6546fa) | Not fully evaluated yet. |
-| 1. | Substrate module: omniverse assets |<ul><li>[ ] </li></ul> | - [pallet for Omniverse FT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/assets) <br/> -[pallet for Omniverse NFT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/uniques) | Not fully evaluated yet. |
-| 2. | Substrate module: omniverse protocol |<ul><li>[ ] </li></ul> | - [the basic operations](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/omni-protocol) | Not fully evaluated yet. |  
-| 3. | Substrate chain |<ul><li>[ ] </li></ul> | - [parachain itself](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant) | Not fully evaluated yet. |
-| 4. | Off-Chain Tools: Operate the o-tokens |<ul><li>[ ] </li></ul> | [CLI Client](https://github.com/Omniverse-Web3-Labs/omniverse-swap-tools/tree/web3-grant) | Not fully evaluated yet. |
+| 0b. | Documentation |<ul><li>[x] </li></ul> |  - [A high-level Introduction](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/README.md) <br/> - [How to build in `pallet` tech stack](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/web3-grant/README.md) <br/> - [Tutorial of how to use](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/README.md)  |  |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul> | [The test guide for milestone 1](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/test-guide/m1-test-guide.md) |  |
+| 0d. | Article |<ul><li>[x] </li></ul> | [link](https://medium.com/@xiyuzheng1984/omniverse-decentralized-ledger-technology-has-finished-the-first-milestone-66bbcd6546fa) |  |
+| 1. | Substrate module: omniverse assets |<ul><li>[x] </li></ul> | - [pallet for Omniverse FT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/assets) <br/> -[pallet for Omniverse NFT](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/uniques) |  |
+| 2. | Substrate module: omniverse protocol |<ul><li>[x] </li></ul> | - [the basic operations](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant/pallets/omni-protocol) |  |  
+| 3. | Substrate chain |<ul><li>[x] </li></ul> | - [parachain itself](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant) |  |
+| 4. | Off-Chain Tools: Operate the o-tokens |<ul><li>[x] </li></ul> | [CLI Client](https://github.com/Omniverse-Web3-Labs/omniverse-swap-tools/tree/web3-grant) |  |
 
+## Evaluation V2
+
+### Testing
+
+I tested the system as presented in the videos below:
+
+* A full workflow of an [Omniverse Fungible Token named](https://omniversedlt.s3.amazonaws.com/FungibleToken-xyz-TestRecord.mp4) xyz
+* A full workflow of an [Omniverse NFT named](https://omniversedlt.s3.amazonaws.com/NFT-abc-TestRecord.mp4) abc
+
+
+The features for FT are working fine. 
+
+In the NFT part, I was able to check the collection in the substrate chain and in OpenSea testnet (Mumbai). I was able to transfer the NFT without problems.
+
+I had one problem with the ownership checking for NFT, which returned: 
+
+```
+$ node index.js -n abc,1
+secp256k1 unavailable, reverting to browser version
+Collection not exist.
+```
+Besides this small problem with the owner checking in the CLI, the application is working fine. I think this problem is not impeditive to approving the evaluation and could be fixed for the next milestone.
+
+### Code Quality
+
+I ran `cargo clippy` in the omniverse-swap again, and this time returned a few warnings, for example:
+
+```
+warning: use of `unwrap_or` followed by a call to `default`
+  --> pallets/omni-protocol/src/functions.rs:81:41
+   |
+81 |                         EvilRecorder::<T>::get(data.from).unwrap_or(Vec::<EvilTxData>::default());
+   |                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try this: `unwrap_or_default()`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#or_fun_call
+   = note: `#[warn(clippy::or_fun_call)]` on by default
+
+warning: writing `&Vec` instead of `&[_]` involves a new object where a slice will do
+ --> pallets/omni-protocol/src/traits.rs:6:16
+  |
+6 |         pallet_name: &Vec<u8>,
+  |                      ^^^^^^^^ help: change this to: `&[u8]`
+  |
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+  = note: `#[warn(clippy::ptr_arg)]` on by default
+
+warning: writing `&Vec` instead of `&[_]` involves a new object where a slice will do
+ --> pallets/omni-protocol/src/traits.rs:7:13
+  |
+7 |         token_id: &Vec<u8>,
+  |                   ^^^^^^^^ help: change this to: `&[u8]`
+  |
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+
+warning: `pallet-omniverse-protocol` (lib) generated 3 warnings (run `cargo fix --lib -p pallet-omniverse-protocol` to apply 1 suggestion)
+```
 
 ## Evaluation V1
 
@@ -29,7 +85,6 @@ When I tried to run the commands to test the operations, my token FT, which is i
 
 ```
 user@localhost:~/Documents/Omniverse/omniverse-swap-tools/omniverse-helper$ node index.js -c FT secp256k1 unavailable, reverting to browser version {"code":-2,"message":"Token id not exist"}
-
 user@localhost:~/Documents/Omniverse/omniverse-swap-tools/omniverse-helper$ node index.js -c skywalker secp256k1 unavailable, reverting to browser version {"code":0,"message":"Successfully"}
 ```
 
@@ -86,7 +141,6 @@ warning: the method `extend_from_slice` doesn't need a mutable reference
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_mut_passed
    = note: `#[warn(clippy::unnecessary_mut_passed)]` on by default
-
 warning: this expression creates a reference which is immediately dereferenced by the compiler
   --> pallets/omni-protocol/src/functions.rs:13:24
    |
@@ -95,7 +149,6 @@ warning: this expression creates a reference which is immediately dereferenced b
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
    = note: `#[warn(clippy::needless_borrow)]` on by default
-
 warning: the method `extend_from_slice` doesn't need a mutable reference
   --> pallets/omni-protocol/src/functions.rs:14:24
    |
@@ -103,7 +156,6 @@ warning: the method `extend_from_slice` doesn't need a mutable reference
    |                       	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_mut_passed
-
 warning: this expression creates a reference which is immediately dereferenced by the compiler
   --> pallets/omni-protocol/src/functions.rs:14:24
    |
@@ -111,5 +163,4 @@ warning: this expression creates a reference which is immediately dereferenced b
    |                       	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: change this to: `u32::to_be_bytes(data.chain_id).as_slice()`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
-
 ```
