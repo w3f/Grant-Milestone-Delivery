@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** [Asylum Follow Up](https://github.com/w3f/Grants-Program/blob/master/applications/asylum_follow_up_1.md). 
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -13,8 +13,8 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License | <ul><li>[x] </li></ul> |  [Asylum UI](https://gitlab.com/asylum-space/asylum-ui/-/blob/main/LICENSE), [Asylum Node](https://gitlab.com/asylum-space/asylum-item-nft/-/blob/main/LICENSE), [Asylum Unity SDK](https://gitlab.com/asylum-space/asylum-unity-sdk/-/blob/main/LICENSE) | ok. |
 | 0b.    |  Documentation | <ul><li>[x] </li></ul> | [Unity SDK](https://gitlab.com/asylum-space/asylum-unity-sdk/-/tree/main/Docs)| ok. |
-| 0c.    | Testing Guide | <ul><li>[ ] </li></ul> | [Testing Guide](https://gitlab.com/asylum-space/asylum-ui/-/blob/main/docs/testing-guide-patterns.md) | Minor problem with compilation erros and to run e2e tests. |
-| 0d.    | Docker | <ul><li>[ ] </li></ul> | - | Minor problem with compilation erros and to run e2e tests. |
+| 0c.    | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://gitlab.com/asylum-space/asylum-ui/-/blob/main/docs/testing-guide-patterns.md) | ok. |
+| 0d.    | Docker | <ul><li>[x] </li></ul> | - | ok. |
 | 0e.    | Article | <ul><li>[x] </li></ul> | - | ok. |
 | 1.     | Unity SDK | <ul><li>[x] </li></ul> | [Asylum Unity SDK Documentation](https://gitlab.com/asylum-space/asylum-unity-sdk/-/blob/main/README.md) | Ok |
 | 1.1    | Unity SDK | <ul><li>[x] </li></ul> | [Unity SDK](https://gitlab.com/asylum-space/asylum-unity-sdk/-/commit/dc5f18fbace0b6051e14b396a2191e851c8bcfa8), [Ajuna NetApi Extension for Asylum](https://gitlab.com/asylum-space/asylum-net-api)| Ok |
@@ -45,6 +45,20 @@ The third milestone covers:
  - implementation of a 3D game, which utilizes Asylum features;
  - Creators studio functionality was extended - blueprint patterns added.
 -----
+## Evaluation V3
+
+Now e2e and Unity SDK tests are all running and passing. The Typescript lint errors are still there but the system works besides that. Furthermore, it is easy to remove them. Just disable some typescript lint rules by adding the following configuration to .eslintrc.js. 
+
+```
+"rules": {
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
+}
+```
+
 ## Evaluation V2
 
 ### Testing Guide

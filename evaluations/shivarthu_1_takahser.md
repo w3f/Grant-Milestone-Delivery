@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Shivarthu.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,32 +9,38 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT License](https://github.com/amiyatulu/shivarthu/blob/239e63e350e848fdafbd1d0ffdb5aea0367e2345/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [Template Pallet](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/lib.rs), [Tutorial](https://github.com/amiyatulu/shivarthu_frontend/blob/0e67459fd341f2244c8c0e32e18594a397d4967f/docs/Tutorial.md) | See [Documentation Feedback](#documentation-feedback) |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Template Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/tests.rs), [Election Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/election/src/tests.rs) | See [Testing Feedback](#testing-guide-feedback) |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [Template Pallet](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/lib.rs), [README](https://github.com/amiyatulu/shivarthu/blob/0535df8a374ea66b0411c4c23fe8a0f67937e8ea/README.md), [Frontend Tutorial](https://github.com/amiyatulu/shivarthu_frontend/blob/0e67459fd341f2244c8c0e32e18594a397d4967f/docs/Tutorial.md) | See [Documentation Feedback](#documentation-feedback) |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Template Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/template/src/tests.rs), [Election Pallet Tests](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/pallets/election/src/tests.rs) | See [Testing Feedback](#testing-guide-feedback) |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [docker-compose.yml](https://github.com/amiyatulu/shivarthu/blob/a38ff3aa038474613427a3ee4af3ed8108f70941/docker-compose.yml), [Docker run instructions](https://github.com/amiyatulu/shivarthu/blob/47def508fb21f102935b3b45fe2dc45dc1846b68/README.md#run-in-docker) | See [Docker Feedback](#docker-feedback) |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Article](https://github.com/amiyatulu/shivarthu/blob/239e63e350e848fdafbd1d0ffdb5aea0367e2345/docs/Shivarthu.md) | - |
-| 1. | Substrate module: Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX |  Not tested yet (will test after 0b., 0c. are fixed). |
-| 2. | Substrate Module: Approval voting | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
-| 3.| Reactjs UI for Experience Evaluation | <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
-| 4.| Reactjs Approval Voting UI| <ul><li>[ ] </li></ul> | XXXX | Not tested yet (will test after 0b., 0c. are fixed). |
+| 1. | Substrate module: Experience Evaluation | <ul><li>[x] </li></ul> | [schelling game pallet](https://github.com/amiyatulu/shivarthu/blob/4b3ff7266d6aed648d5cc73328501a4b20b76a9e/pallets/schelling-game-shared/src/lib.rs), [sortition sum game pallet](https://github.com/amiyatulu/shivarthu/blob/4b3ff7266d6aed648d5cc73328501a4b20b76a9e/pallets/sortition-sum-game/src/lib.rs), [profile validation pallet](https://github.com/amiyatulu/shivarthu/blob/4b3ff7266d6aed648d5cc73328501a4b20b76a9e/pallets/profile-validation/src/lib.rs) |  Successfully smoke-tested. |
+| 2. | Substrate Module: Approval voting | <ul><li>[x] </li></ul> | [election pallet](https://github.com/amiyatulu/shivarthu/blob/4b3ff7266d6aed648d5cc73328501a4b20b76a9e/pallets/election/src/lib.rs) | Successfully smoke-tested. |
+| 3.| Reactjs UI for Experience Evaluation | <ul><li>[x] </li></ul> | [frontend components for profile validation](https://github.com/amiyatulu/shivarthu_frontend/tree/27293dc80974c17da9db2cc672bb41159d650e6c/src/components/profilevalidation), [frontend components for profile](https://github.com/amiyatulu/shivarthu_frontend/tree/27293dc80974c17da9db2cc672bb41159d650e6c/src/components/profile) | Successfully smoke-tested. |
+| 4.| Reactjs Approval Voting UI| <ul><li>[x] </li></ul> | [frontend for approval voting](https://github.com/amiyatulu/shivarthu_frontend/tree/27293dc80974c17da9db2cc672bb41159d650e6c/src/components/election) | Successfully smoke-tested. |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+Overall, there are some things that could be improved. As this is the first delivery, I'm now willing to accept it in the current state, but for M2 these issues should definitely be fixed. I'm referring to:
+
+- more useful inline comments on the pallet code that can be used to generate documentation using [rustdoc](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html)
+- removal of the application doc that is out of sync with the original
+- renaming of the template pallet to a more meaningful name
+- fixing of warnings during the build & tests
 
 ### Documentation Feedback
 
 - The inline comments are currently very sparse.
-- The tutorial has now been added.
+- The tutorial has now been added: https://github.com/amiyatulu/shivarthu_frontend/blob/main/docs/Tutorial.md
 - I'm confused about the reason for why a [light version of the grant application doc](https://github.com/amiyatulu/shivarthu/blob/main/docs/Shivarthu.md) was added to the repo which was also mentioned in the delivery doc.
 - The template pallet that seems to build on [parity's template pallet](https://paritytech.github.io/substrate/master/src/pallet_template/lib.rs.html#1-102) should be renamed to a more meaningful name.
 
 ### Testing Guide Feedback
 
-- There is (still) no test guide.
+- The test instructions were added: https://github.com/amiyatulu/shivarthu/tree/4b3ff7266d6aed648d5cc73328501a4b20b76a9e#test
+
 - When running the tests using `carco test`, they pass.
 
     ```bash
