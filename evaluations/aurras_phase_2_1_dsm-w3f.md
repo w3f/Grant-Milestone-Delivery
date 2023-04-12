@@ -22,6 +22,99 @@
 | 3b. | Task Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py | Not fully evaluated yet |
 | 3c. | Workflow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py | Not fully evaluated yet |
 
+## Evaluation V3
+
+### Testing
+
+I ran the tests in OpenWhisk Rust Client, and all tests passed.
+
+When I created the `output.wasm`, it didn't have anything inside, it was generated an empty file.
+
+I ran the tests from composer using `cat ./examples/NameOfFile.yaml | docker run -i --rm hugobyte/workflow-composer test`. All tests from CarMarketPlace passed, some tests from the others .yaml in aurras/workflow/examples are failing, and some tests from STRUCTURED_YAML got an error, for example.
+
+CarMarketPlaceMock
+
+```
+user@localhost:~/Documents/aurras/workflow$ cat ./examples/CarMarketPlaceMock.yaml | docker run -i --rm hugobyte/workflow-composer test
+go: downloading github.com/spf13/cobra v1.6.1
+go: downloading github.com/spf13/pflag v1.0.5
+Running Test ...
+........FF
+======================================================================
+FAIL: test_task_hook_data (tests.test_provider_workflow.TestWorkFlow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/src/composer/tmp2659588116/tests/test_provider_workflow.py", line 46, in test_task_hook_data
+    self.assertEqual(output['workflows']['tasks'], task_hook_data)
+AssertionError: Lists differ: [{'ta[211 chars]'http://127.0.0.1:8080', 'auth_token': '23bc46[1462 chars]t'}}] != [{'ta[211 chars]'https://65.20.70.146:31001', 'auth_token': '2[1482 chars]t'}}]
+
+First differing element 0:
+{'tas[210 chars]'http://127.0.0.1:8080', 'auth_token': '23bc46[135 chars]st'}}
+{'tas[210 chars]'https://65.20.70.146:31001', 'auth_token': '2[140 chars]st'}}
+
+Diff is 2831 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_worflow_hook_data (tests.test_provider_workflow.TestWorkFlow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/src/composer/tmp2659588116/tests/test_provider_workflow.py", line 61, in test_worflow_hook_data
+    self.assertEqual(output['workflows'], workflow_hook_data)
+AssertionError: {'wor[754 chars]'http://127.0.0.1:8080', 'auth_token': '23bc46[1463 chars]'}}]} != {'wor[754 chars]'https://65.20.70.146:31001', 'auth_token': '2[1483 chars]'}}]}
+Diff is 4220 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.760s
+
+FAILED (failures=2)
+```
+
+STRUCTURED_YAML
+
+```
+user@localhost:~/Documents/aurras/workflow$ cat ./examples/STRUCTURED_YAML.yaml | docker run -i --rm hugobyte/workflow-composer test
+go: downloading github.com/spf13/cobra v1.6.1
+go: downloading github.com/spf13/pflag v1.0.5
+Running Test ...
+.EEEEE.EEE
+======================================================================
+ERROR: test_code_generated (tests.test_provider_workflow.TestWorkFlow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/src/composer/tmp1812522108/tests/test_provider_workflow.py", line 65, in test_code_generated
+    output = tackle('config.yaml')
+  File "/usr/local/lib/python3.9/dist-packages/tackle/main.py", line 63, in tackle
+    update_source(context)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 1283, in update_source
+    run_source(context, args, kwargs, flags)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 943, in run_source
+    walk_sync(context, context.input_context.copy())
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 806, in walk_sync
+    walk_sync(context, v)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 751, in walk_sync
+    run_hook(context)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 606, in run_hook
+    parse_hook(hook_dict, Hook, context)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 422, in parse_hook
+    hook_output_value = run_hook_in_dir(hook)
+  File "/usr/local/lib/python3.9/dist-packages/tackle/parser.py", line 267, in run_hook_in_dir
+    return hook.exec()
+  File "/usr/src/composer/tmp1812522108/hooks/workflow.py", line 23, in exec
+    struct_generator(task_list)
+  File "/usr/src/composer/tmp1812522108/hooks/functions.py", line 76, in struct_generator
+    task_struct_impl += create_main_struct(
+  File "/usr/src/composer/tmp1812522108/hooks/functions.py", line 209, in create_main_struct
+    #[Chain="{properties['chain']}"]
+KeyError: 'chain'
+```
+The problem I had with `./deploy.sh` from Aurras remains. I think this problem is related to the building image `hugobyte/openwhisk-runtime-rust:v0.2`. Maybe it needs some changes. Did you test this using a local image? Maybe you are using a different version of the image provided in the scripts for building. Could you provide me the version of your rust toolchain?
+
+### Code Quality
+
+The warning that `cargo clippy` returned in Aurras was fixed. Now `cargo clippy` returns no warnings in Aurras and the OpenWhisk Rust Client. 
+
+I tried to check the test coverage of OpenWhisk Rust Clint using `cargo tarpaulin` and got an error.
+
 ## Evaluation V2
 
 ### Documentation
@@ -51,7 +144,6 @@ error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` 
   |
   = note: candidate #1: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-175f8bb05bc482a5.rlib
   = note: candidate #2: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-e46d9991a1646c8b.rlib
-
 error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` found
  --> tests/test_triggers.rs:1:5
   |
@@ -60,7 +152,6 @@ error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` 
   |
   = note: candidate #1: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-175f8bb05bc482a5.rlib
   = note: candidate #2: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-e46d9991a1646c8b.rlib
-
 error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` found
  --> tests/test_rules.rs:1:5
   |
@@ -69,7 +160,6 @@ error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` 
   |
   = note: candidate #1: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-175f8bb05bc482a5.rlib
   = note: candidate #2: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-e46d9991a1646c8b.rlib
-
 error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` found
  --> tests/test_namespace.rs:1:5
   |
@@ -78,7 +168,6 @@ error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` 
   |
   = note: candidate #1: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-175f8bb05bc482a5.rlib
   = note: candidate #2: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-e46d9991a1646c8b.rlib
-
 error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` found
  --> tests/test_actions.rs:3:5
   |
@@ -87,7 +176,6 @@ error[E0464]: multiple candidates for `rlib` dependency `openwhisk_client_rust` 
   |
   = note: candidate #1: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-175f8bb05bc482a5.rlib
   = note: candidate #2: /home/user/Documents/openwhisk-client-rust/target/debug/deps/libopenwhisk_client_rust-e46d9991a1646c8b.rlib
-
 For more information about this error, try `rustc --explain E0464`.
 error: could not compile `openwhisk-client-rust` due to previous error
 warning: build failed, waiting for other jobs to finish...
@@ -101,17 +189,14 @@ All tests in Aurras using `cargo test --all-features` passed.
 
 I couldn't find the way to start [the tests of the workflow](https://github.com/HugoByte/aurras/tree/next/workflow/composer#test). Could you explain in more details how to do this?
 
-
 The docker builds the image and creates the output.wasm without problems.
 
 When I ran `./deploy.sh` got this error:
 
 ```
 error: failed to parse manifest at `/usr/local/cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.3/Cargo.toml`
-
 Caused by:
   feature `edition2021` is required
-
   this Cargo does not support nightly features, but if you
   switch to nightly channel you can add
   `cargo-features = ["edition2021"]` to enable this feature
