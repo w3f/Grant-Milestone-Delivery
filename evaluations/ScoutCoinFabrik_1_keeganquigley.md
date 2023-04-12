@@ -23,3 +23,7 @@ I'm no security expert, but as far as I can tell this is some excellent research
 ## Detectors
 
 Regarding the detectors, a minor correction for `cargo-fuzz` I believe Step 3 has a typo: `cargo fuzz run fuzz_add_overflows`. The correct command is with dashes instead of underscores `cargo fuzz run fuzz-add-overflows`
+
+[Semgrep](https://github.com/CoinFabrik/web3-grant/tree/main/detectors/semgrep) is pretty cool, especially the fact that the rules are written into yaml files. I was able to run the examples.
+
+Overall this is very useful work!
