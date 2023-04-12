@@ -15,14 +15,14 @@ In order to improve the developer experience a Node.js library for interacting w
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a.  | License |[Node.js library](https://github.com/appliedblockchain/silentdata-node-public/blob/main/LICENSE) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot-public/blob/main/LICENSE)%7C ...|
-| 0b. | Documentation |[Silent Data whitepaper](https://www.linkedin.com/smart-links/AQEE0cyaT_nw0g) <br/>[Node.js library](https://github.com/appliedblockchain/silentdata-node/blob/main/README.md) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/README.md)%7C ...|
-| 0c.  | Testing Guide |[Guide](https://docs.google.com/document/d/1B5woRIl_ZNuahx007V6nXmjW3_Ne4aQ4kVFB-I_Bu0M/edit?usp=sharing)%7C ...|
-| 0d.  | Docker |[Node.js library usage example](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/examples/Dockerfile) <br/>[Silent Data pallet](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/docker/Dockerfile.node)%7C ...|
-| 0e.  | Article |...| ...|
-| 1.  | Library |[silentdata-node](https://github.com/appliedblockchain/silentdata-node)%7C ...|
-| 2.  | Smart Contract |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot)%7C ...|
-| 3.  | Extension |[Secure enclave](https://github.com/appliedblockchain/silentdata-defi-core/compare/v0.4.0...v0.5.0-rc1) <br/>[Web application](https://github.com/appliedblockchain/silentdata-defi-app/compare/v0.4.0...v0.5.0-rc1)%7C Both private repositories |
+| 0a.  | License |[Node.js library](https://github.com/appliedblockchain/silentdata-node-public/blob/main/LICENSE) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot-public/blob/main/LICENSE) | ...|
+| 0b. | Documentation |[Silent Data whitepaper](https://www.linkedin.com/smart-links/AQEE0cyaT_nw0g) <br/>[Node.js library](https://github.com/appliedblockchain/silentdata-node/blob/main/README.md) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/README.md) | ...|
+| 0c.  | Testing Guide |[Guide](https://docs.google.com/document/d/1B5woRIl_ZNuahx007V6nXmjW3_Ne4aQ4kVFB-I_Bu0M/edit?usp=sharing) | ...|
+| 0d.  | Docker |[Node.js library usage example](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/examples/Dockerfile) <br/>[Silent Data pallet](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/docker/Dockerfile.node) | ...|
+| 0e.  | Article |[Polkadot Foundation Partnership Silent Data](https://www.linkedin.com/pulse/polkadot-foundation-partnership-silent-data-silentdata)| ...|
+| 1.  | Library |[silentdata-node](https://github.com/appliedblockchain/silentdata-node) | ...|
+| 2.  | Smart Contract |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot) | ...|
+| 3.  | Extension |[Secure enclave](https://github.com/appliedblockchain/silentdata-defi-core/compare/v0.4.0...v0.5.0-rc1) <br/>[Web application](https://github.com/appliedblockchain/silentdata-defi-app/compare/v0.4.0...v0.5.0-rc1) | Both private repositories |
 
 **Additional Information**
 
