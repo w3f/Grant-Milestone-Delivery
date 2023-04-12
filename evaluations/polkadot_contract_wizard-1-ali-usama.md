@@ -19,11 +19,8 @@
 
 ## General Notes
 
-The code and repo are well-structured and documented. However, there are some minor issues that I must point out:
-
-- It should be mentioned in the
-  documentation's [requirement](https://github.com/protofire/polkadot-contract-wizard/tree/milestone-1#b-local-stack)
-  section that it's also required to run a local substrate node for the app to function properly.
-- The import paths should be fixed in the `utils.test.ts` and `formatting.test.ts`, otherwise the 2 of the tests are
-  going to fail.
+- Deployed at https://polkadot-contract-wizard.vercel.app/
+- The code and repo are well-structured and documented. However, there are some minor issues that I must point out:
+  - It should be mentioned in the documentation's [requirement](https://github.com/protofire/polkadot-contract-wizard/tree/milestone-1#b-local-stack) section that it's also required to run a local substrate node for the app to function properly.
+  - The import paths should be fixed in the `utils.test.ts` and `formatting.test.ts`, otherwise the 2 of the tests are going to fail.
 
