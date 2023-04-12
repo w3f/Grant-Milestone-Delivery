@@ -26,4 +26,6 @@ Regarding the detectors, a minor correction for `cargo-fuzz` I believe Step 3 ha
 
 [Semgrep](https://github.com/CoinFabrik/web3-grant/tree/main/detectors/semgrep) is pretty cool, especially the fact that the rules are written into yaml files. I was able to run the examples.
 
-Overall this is very useful work!
+Overall this is very useful work! 
+
+Please note: No security audits have been performed as part of this evaluation.
