@@ -1,8 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:
-  ** [Polkadot Contract Wizard](https://github.com/w3f/Grants-Program/blob/master/applications/polkadot-contract-wizard.md)
+- **Application Document:** [Polkadot Contract Wizard](https://github.com/w3f/Grants-Program/blob/master/applications/polkadot-contract-wizard.md)
 - **Milestone:** 1
 - **Kusama Identity:** Eexv1mKLiCidz2gGh6vfowtXgSSc7mvD4xEb2ji998W4DPs
 - **Previously successfully merged evaluation:** [RV-KMIR](https://github.com/w3f/Grant-Milestone-Delivery/pull/820)
