@@ -16,6 +16,8 @@ Visit it at ...
 - [the backend service](https://service.genesis-dao.org/redoc/)
 - [the node](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fnode.genesis-dao.org#/)
 
+> Note: This is a testnet. It does not have real tokens, the alice/bob testaccounts are available for free use and we are resetting this testnet regularly. Do not use for production use cases and do not except data to remain.
+
 **Deliverables**
 
 | Number | Deliverable | Link | Notes |
