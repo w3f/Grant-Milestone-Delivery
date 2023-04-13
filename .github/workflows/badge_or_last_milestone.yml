@@ -25,7 +25,7 @@ jobs:
     if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
     outputs:
       needs_badge: ${{ steps.badge-check.outputs.check }} 
-      was_last_milestone: ${{ steps.last-milestone.outputs.check }}
+      needs_last_milestone_comment: ${{ steps.last-milestone.outputs.check }}
 
     strategy:
       max-parallel: 1
@@ -40,7 +40,7 @@ jobs:
 
       - name: Parse delivery file 
         id: parse-delivery
-        uses: w3f/parse-milestone-delivery-action@v3
+        uses: w3f/parse-milestone-delivery-action@master
         with:
           path: "${{ github.workspace }}/${{ matrix.filename }}"
 
@@ -60,9 +60,9 @@ jobs:
         if: steps.parse-delivery.outputs.milestone_number == 1 && steps.parse-grant.outputs.level != 1
         run: echo "::set-output name=check::true"
       
-      - name: Check if this was the last milestone
+      - name: Check if this PR needs a "last milestone" comment
         id: last-milestone
-        if: steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones
+        if: ${{ !steps.parse-delivery.is_maintenance && steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones }}
         run: echo "::set-output name=check::true"
 
   comment-badge:
@@ -83,30 +83,31 @@ jobs:
             Furthermore, you're now welcome to announce the grant publicly. Please remember to observe the
             [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
             If you haven't already, reach out to grantsPR@web3.foundation for feedback on your announcement and cross-promotion.<br/><br/>
-            Thank you for your contribution, and good luck with the remaining milestones, if any!
-            As usual, let us know if you encounter any delays during your remaining milestones, by leaving a comment on the application PR
+            Thank you for your contribution, and good luck!
+            If you have any remaining milestone, let us know if you encounter any delays by leaving a comment on the application PR
             or submitting an [amendment](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval).
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
   comment-last-milestone:
     runs-on: ubuntu-latest
-    needs: check-needs-badge
-    if: needs.check-needs-badge.outputs.was_last_milestone
+    # "comment-badge" in needs so we establish the correct messages order
+    needs: [comment-badge, check-needs-badge]
+    # "always()" will make this job run also if one of the needs is not completed;
+    # in this way, the last_milestone comment will be sent also if the badge comment wasn't
+    if: always()
     steps:
       - name: Last milestone comment
+        if: needs.check-needs-badge.outputs.needs_last_milestone_comment
         uses: thollander/actions-comment-pull-request@1.0.2
         with:
           message: > 
-            We noticed that this is the last milestone of your project, so what are the potential next steps?<br/>
-            
-            While you can always apply for a follow-up grant, the grants program might not be the best tool for your future growth. 
-            Our main goal is to support research as well as early-stage technical projects. Below are a couple of other options in our ecosystem 
-            that might be better suited as the next step, depending on your goals: <br/> 
+            We noticed that this is the last milestone of your project. Congratulations on completing your grant! 🎊<br/>
 
-            Project with a Business Case/Token: [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) 
-            or [VC Funding](https://parachains.info/investors) <br/> 
+            So, where to from here? First of all, you should join our [Grants Community chat](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation&via=matrix.org), if you haven't already, so we can stay in touch.
 
-            Common Good Projects: [Treasury Funding](https://github.com/w3f/Grants-Program#treasury) <br/> 
+            If you are looking for continuative support for your project, there are quite a few options. The main goal of the W3F grants program is to support research as well as early-stage technical projects. If your project still falls under one of those categories, you might want to apply for a follow-up grant. However, depending on your goals and project status, there are other support programs in our ecosystem that might be better suited as the next step. For example, projects with a Business Case/Token should look into the [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/) or [VC Funding](https://parachains.info/investors). Common Good projects have a good chance of receiving [Treasury Funding](https://github.com/w3f/Grants-Program#treasury).<br/> 
 
-            Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
+            For a more comprehensive list, see our [Alternative Funding page](https://w3f.github.io/Grants-Program/funding). Let us know if you have any questions regarding the above. We are more than happy to point you to additional resources and help you determine the best course of action. 
+
+            Lastly, we hope your W3F grant was a success and we want to thank you for being part of the journey!
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
