@@ -1,7 +1,6 @@
-
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ArtZero_InkWhale.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,13 +9,103 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License            | <ul><li>[x] </li></ul>| https://github.com/InkWhale-net/contracts/blob/main/LICENSE  | |
-| 0b.    | Documentation      | <ul><li>[ ] </li></ul>| Official document is at https://docs.artzero.io/ Technical documents are at https://docs.google.com/document/d/1QWJW2YAFXcD_X-xvwcTee_W9Gfn2GXNdKYdoe0m7iv8/edit# and https://docs.google.com/document/d/1bPq9aFMaaVgKgsYWG3K4APubRK33OloY4_gHM3c8wo0/edit | Not fully evaluated yet. |
-| 0c.    | Testing      | <ul><li>[ ] </li></ul>| Tests can be found at https://github.com/ArtZero-io/Contracts/tree/feature/ink-4-version/Azero_Contracts/tests | Some tests are failing. |
-| 0d.    | Article/Tutorial   | <ul><li>[ ] </li></ul>| Several articles are published at https://medium.com/@artzero_io | Not full evaluated yet |
-| 1. | Smart contract Development | <ul><li>[ ] </li></ul>| Code can be found in https://github.com/ArtZero-io/Contracts branch feature/ink-4-version | Not fully evaluated yet.  |
-| 2. | Backend | <ul><li>[ ] </li></ul>| Backend code is at https://github.com/ArtZero-io/backend and handles the following tasks: Monitor NFT bids in the queue and update Bid table in the database; Cache Images from IPFS to CloudFlare Image; Cache NFT Metadata to local database; Monitor NFT Collection changes and update the database; Monitor NFT Information and update the database; Telegram bot to alert system operators: queue length and access attempt and work load. | Not fully evaluated yet. |
-| 3. | Frontend | <ul><li>[ ] </li></ul>| Our front-end demo can be seen at https://alephzero.artzero.io/ for AlephZero network. The git repo is at https://github.com/ArtZero-io/frontend-react branch ink4-upgrade | Not full evaluated yet |
-| 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | Some tests are failing.
+| 0b.    | Documentation      | <ul><li>[X] </li></ul>| Official document is at https://docs.artzero.io/ Technical documents are at https://docs.google.com/document/d/1QWJW2YAFXcD_X-xvwcTee_W9Gfn2GXNdKYdoe0m7iv8/edit# and https://docs.google.com/document/d/1bPq9aFMaaVgKgsYWG3K4APubRK33OloY4_gHM3c8wo0/edit |  |
+| 0c.    | Testing      | <ul><li>[x] </li></ul>| Tests can be found at https://github.com/ArtZero-io/Contracts/tree/feature/ink-4-version/Azero_Contracts/tests |  |
+| 0d.    | Article/Tutorial   | <ul><li>[X] </li></ul>| Several articles are published at https://medium.com/@artzero_io |  |
+| 1. | Smart contract Development | <ul><li>[x] </li></ul>| Code can be found in https://github.com/ArtZero-io/Contracts branch feature/ink-4-version |   |
+| 2. | Backend | <ul><li>[x] </li></ul>| Backend code is at https://github.com/ArtZero-io/backend and handles the following tasks: Monitor NFT bids in the queue and update Bid table in the database; Cache Images from IPFS to CloudFlare Image; Cache NFT Metadata to local database; Monitor NFT Collection changes and update the database; Monitor NFT Information and update the database; Telegram bot to alert system operators: queue length and access attempt and work load. |  |
+| 3. | Frontend | <ul><li>[x] </li></ul>| Our front-end demo can be seen at https://alephzero.artzero.io/ for AlephZero network. The git repo is at https://github.com/ArtZero-io/frontend-react branch ink4-upgrade |  |
+| 4. | Testing | <ul><li>[X] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | 
+## Evaluation V5
+
+### Frontend
+
+This time I was able to create a simple collection, a simple NFT, activate the collection, view this NFT in My NFT, and Lock the NFT metadata, without any problem.
+
+### Automated Test
+
+I tested the automated tests again, and this time all passed.
+
+## Evaluation V4
+
+
+### Documentation
+
+[In this part of the deploying guide](https://docs.alephzero.org/aleph-zero/build/deploying-your-contract-to-aleph-zero-testnet), the instructions recommend using the Polkadot.js to deploy the contracts, but now it seems not to be working because the Polkadot.js doesn't support WeightV2 yet.
+
+### Frontend
+
+I followed [this tesing guide](https://github.com/ArtZero-io/Contracts/blob/feature/ink-4-version/contract_deployment_and_update_addresses_abis.md#cache-data-for-pmp-nft) to get the admin function, this guide is complex, but it works. 
+
+In the frontend, I tested all the features I couldn't test before, but I have some problems, for example, when I tried to activate the collections, I received this error:
+
+![image (12)](https://user-images.githubusercontent.com/112647953/227582457-9394ea09-a4a2-4bcb-9a43-aabddacdd0ad.png)
+
+After a minute the collection became active. When I tried to create a Collection in simple mode the same error appeared but this time no collection was created. Because of that, I couldn't create a simple NFT and lock the metadata. When I tested this function with the previously deployed contracts it was working.
+
+In My Collections, I couldn't find how to edit the royalty percentage. In MY NFT and MY Stakes test are mentioned a page with All NFT and Stakes, but I in the page there is no "All" filter. Are these features still in the project? 
+
+
+All other features are working fine.
+
+### API
+
+I tried again, and now the requests work fine.
+
+### Code Quality
+
+The warnings from Azero_Contracts were fixed.
+
+### Automated tests
+
+I tried to run the automated tests again and now all of them are failing. Could you assist with that?
+
+```
+0 passing (30s)
+  7 failing
+  1) Profile test
+       "before all" hook for "Can get set attributes":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/profile_manager.ts:48:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/profile_manager.ts:6:65)
+  2) Psp34 standard test
+       "before all" hook for "Can mint without attrs":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/psp34_nft.ts:54:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/psp34_nft.ts:6:65)
+  3) Launchpad manager test
+       "before all" hook for "Can add project":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/artzero_launchpad_psp34.ts:60:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/artzero_launchpad_psp34.ts:6:65)
+  4) Collection manager test
+       "before all" hook for "Creating collection in simple mode works":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/artzero_collection_manager.ts:58:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/artzero_collection_manager.ts:6:65)
+  5) Marketplace test
+       "before all" hook for "Can list NFT":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/psp34_nft.ts:54:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/psp34_nft.ts:6:65)
+  6) Psp34 launchpad standard test
+       "before all" hook for "Can add whitelist":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/artzero_launchpad_psp34.ts:60:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/artzero_launchpad_psp34.ts:6:65)
+  7) Staking test
+       "before all" hook for "When staking is locked, not allow staking NFT":
+     TypeError: Cannot read properties of undefined (reading 'result')
+      at Constructors.<anonymous> (typed_contracts/constructors/psp34_nft.ts:54:55)
+      at Generator.throw (<anonymous>)
+      at rejected (typed_contracts/constructors/psp34_nft.ts:6:65)
+```
 
 ## Evaluation V3
 
@@ -80,7 +169,6 @@ warning: casting integer literal to `u8` is unnecessary
    | 	^^^^^^^^^^^^^^^^^^^ help: try: `6_u8`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
-
 warning: casting integer literal to `u8` is unnecessary
   --> traits/collection_manager.rs:13:5
    |
@@ -88,7 +176,6 @@ warning: casting integer literal to `u8` is unnecessary
    | 	^^^^^^^^^^^^^^^^^^^ help: try: `0_u8`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast
-
 warning: `artzero_project` (lib) generated 32 warnings (6 duplicates) (run `cargo clippy --fix --lib -p artzero_project` to apply 16 suggestions)
 	Finished dev [unoptimized + debuginfo] target(s) in 0.08s
 ```

@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,19 +9,23 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/LICENSE) | - |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul> | [deployed docs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/index.html), [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/README.md) | see [documentation feedback](#documentation-feedback) |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [testing instructions](https://github.com/Off-Narrative-Labs/Tuxedo#testing-and-code-quality), [inline tests](https://github.com/Off-Narrative-Labs/Tuxedo/blob/afc6035e6c07f83df883619786facd40ecef7fa5/tuxedo-core/src/dynamic_typing.rs#L139) | see [testing feedback](#testing-feedback) |
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [published packages](https://github.com/orgs/Off-Narrative-Labs/packages) | see [docker feedback](#docker-feedback) |
-| 1. | Tuxedo Core | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create the core of the Tuxedo System, analogous to FRAME Executive and FRAME System* |
-| 2. | Token Piece | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create the first Tuxedo piece that serves as a cryptocurrency, analogous to Pallet Balances* |
-| 3. | Tuxedo Node Template | <ul><li>[ ] </li></ul> | (will be reviewed, once 0a.-0d. are fixed) | Spec: *We will create a Substrate node with the runtime built with Tuxedo and including the Token piece. Together this will represent a bitcoin-like token (not PoW though, only the token logic is bitcoin-like)* |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [deployed docs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/index.html), [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/README.md) | see [documentation feedback](#documentation-feedback) |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [testing instructions](https://github.com/Off-Narrative-Labs/Tuxedo#testing-and-code-quality), [inline tests](https://github.com/Off-Narrative-Labs/Tuxedo/blob/afc6035e6c07f83df883619786facd40ecef7fa5/tuxedo-core/src/dynamic_typing.rs#L139) | see [testing feedback](#testing-feedback) |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [published packages](https://github.com/orgs/Off-Narrative-Labs/packages) | see [docker feedback](#docker-feedback) |
+| 1. | Tuxedo Core | <ul><li>[x] </li></ul> | [code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-core), [published Crate](https://off-narrative-labs.github.io/Tuxedo/tuxedo_core/index.html) | - |
+| 2. | Token Piece | <ul><li>[x] </li></ul> | [Money Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_template_runtime/money/index.html), [Money Code](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/money.rs) | - |
+| 3. | Tuxedo Node Template | <ul><li>[x] </li></ul> | [Runtime Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime), [Runtime Rustdocs](https://off-narrative-labs.github.io/Tuxedo/tuxedo_template_runtime/index.html), [Node Code](https://github.com/Off-Narrative-Labs/Tuxedo/tree/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/node) | - |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- although it wasn't part of their m1, they delivered some [instructions](https://github.com/w3f/Grant-Milestone-Delivery/pull/785#issuecomment-1482208466) to send UTXOs to accounts different than the one that owns the genesis utxos
+- they provided a bunch of examples that use the utxo library (not part of the grant):
+  - [simple example Tuxedo piece that tracks amoeba populations](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/amoeba.rs)
+  - [simple Proof of Existence application](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/poe.rs)
+  - [small pallet that handles runtime upgrades](https://github.com/Off-Narrative-Labs/Tuxedo/blob/424ab4e73caa73b4434a7dc498b2f0ec70ef511d/tuxedo-template-runtime/src/runtime_upgrade.rs)
 
 ### Documentation Feedback
 
@@ -94,19 +98,12 @@ Summarizes the overall performance plus additional feedback/comments
     -V, --version              Print version
     ```
 
-- However, the alledged genesis utxo for `coin000000000000000000000000000000000000000000000000000000000000000000000000` doesn't exist:
+- ~~However, the alledged genesis utxo for `coin000000000000000000000000000000000000000000000000000000000000000000000000` doesn't exist~~ The previous command was wrong. `verify-coin` now works correctly and shows the genesis utxo:
 
     ```bash
-    Tuxedo % ./target/release/tuxedo-template-wallet verify-coin000000000000000000000000000000000000000000000000000000000000000000000000
+    Tuxedo % ./target/release/tuxedo-template-wallet verify-coin 000000000000000000000000000000000000000000000000000000000000000000000000
 
-    error: unrecognized subcommand 'verify-coin000000000000000000000000000000000000000000000000000000000000000000000000'
-
-    note: subcommand 'verify-coin' exists
-    note: to pass 'verify-coin000000000000000000000000000000000000000000000000000000000000000000000000' as a value, use 'tuxedo-template-wallet -- verify-coin000000000000000000000000000000000000000000000000000000000000000000000000'
-
-    Usage: tuxedo-template-wallet [OPTIONS] <COMMAND>
-
-    For more information, try '--help'.
+    000000000000000000000000000000000000000000000000000000000000000000000000: Found coin worth 100 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
     ```
 
 ### Testing Feedback
@@ -264,7 +261,7 @@ Summarizes the overall performance plus additional feedback/comments
         test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
     ```
 
-- However, clippy shows some warnings:
+- The [CI on GitHub](https://github.com/Off-Narrative-Labs/Tuxedo/actions/runs/4409652419/jobs/7726203651) doesn't show the clippy warnings that occur on my machine. ~~However, clippy shows some warnings:~~
 
     ```bash
     Tuxedo % cargo +nightly clippy
@@ -463,15 +460,55 @@ Summarizes the overall performance plus additional feedback/comments
     -V, --version              Print version
     ```
 
-- However, PoC wallet's alledged genesis utxo for `coin000000000000000000000000000000000000000000000000000000000000000000000000` doesn't exist (same problem as described in the [documentation feedback section](#documentation-feedback))
+- ~~However, PoC wallet's alledged genesis utxo for `coin000000000000000000000000000000000000000000000000000000000000000000000000` doesn't exist (same problem as described in the [documentation feedback section](#documentation-feedback))~~ Analogous to the previously existing problem described in [documentation feedback section](#documentation-feedback), with the correct command the genesis utxo is found:
 
     ```bash
-    Tuxedo % docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet verify-coin verify-coin 000000000000000000000000000000000000000000000000000000000000000000000000
-
+    Tuxedo % docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet verify-coin 000000000000000000000000000000000000000000000000000000000000000000000000            
     WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
-    error: unexpected argument '000000000000000000000000000000000000000000000000000000000000000000000000' found
+    000000000000000000000000000000000000000000000000000000000000000000000000: Found coin worth 100 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    ```
 
-    Usage: tuxedo-template-wallet verify-coin <REF_STRING>
+- Split the 100 tokens into two of values 20 and 25, burning the remaining 5
 
-    For more information, try '--help'.
+    ```bash
+    Tuxedo % docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet spend-coins \
+    --input 000000000000000000000000000000000000000000000000000000000000000000000000 \
+    --output-amount 20 \
+    --output-amount 25
+
+    The args are:: SpendArgs { seed: "news slush supreme milk chapter athlete soap sausage put clutch what kitten", input: ["000000000000000000000000000000000000000000000000000000000000000000000000"], recipient: "d2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67", output_amount: [20, 25] }
+    000000000000000000000000000000000000000000000000000000000000000000000000: Found coin worth 100 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    Node's response to spend transaction: Ok("0x9f7ab373e0179ce366c14a227765d0328a47d46e28ca50e987a6b5339a914253")
+    77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1500000000: Found coin worth 20 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1501000000: Found coin worth 25 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    ```
+
+- Further split the 25 token utxo into 10 and 5, burning the remaining 10
+
+    ```bash
+    Tuxedo % docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet spend-coins \
+    --input 77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1501000000 \   
+    --output-amount 10 \
+    --output-amount 5
+
+    The args are:: SpendArgs { seed: "news slush supreme milk chapter athlete soap sausage put clutch what kitten", input: ["77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1501000000"], recipient: "d2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67", output_amount: [10, 5] }
+    77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1501000000: Found coin worth 25 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    Node's response to spend transaction: Ok("0xa8a43f24f35b884b524284f4301dfe1deb08a21b75edee559a8d6e01f8c3fb81")
+    92c805dbaa88e20670aac3925e53726dc3b7e173a94ffc170b573f5e7213f96c00000000: Found coin worth 10 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    92c805dbaa88e20670aac3925e53726dc3b7e173a94ffc170b573f5e7213f96c01000000: Found coin worth 5 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    ```
+
+- Join the 20 token utxo and 10 token utxo back into a single 30 token utxo, burning nothing
+
+    ```bash
+    % docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet spend-coins \
+    --input 77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1500000000 \
+    --input 92c805dbaa88e20670aac3925e53726dc3b7e173a94ffc170b573f5e7213f96c00000000 \
+    --output-amount 30
+
+    The args are:: SpendArgs { seed: "news slush supreme milk chapter athlete soap sausage put clutch what kitten", input: ["77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1500000000", "92c805dbaa88e20670aac3925e53726dc3b7e173a94ffc170b573f5e7213f96c00000000"], recipient: "d2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67", output_amount: [30] }
+    77dbc3dacaf32779e14be6ac60b9f8347170703c95039cda016213f064054a1500000000: Found coin worth 20 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    92c805dbaa88e20670aac3925e53726dc3b7e173a94ffc170b573f5e7213f96c00000000: Found coin worth 10 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
+    Node's response to spend transaction: Ok("0x98369bb4ebe44cea83fe606b6910d75cc773a824d282a612eb1ce30829a4ecf1")
+    d09cabc07411f7e0d5277334e5ccfc90b0cf4377eddf4794a2081382e28749d500000000: Found coin worth 30 units owned by 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67
     ```

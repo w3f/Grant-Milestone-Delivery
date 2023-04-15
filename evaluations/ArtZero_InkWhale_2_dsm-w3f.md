@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ArtZero_InkWhale.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,13 +9,79 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License            |<ul><li>[x] </li></ul>| Apache License 2.0 | There are Apache 2.0 license in all repos. |
-| 0b.    | Documentation      |<ul><li>[ ] </li></ul>| Official Document is at https://docs.inkwhale.net/ Technical documents are at https://github.com/InkWhale-net/backend/blob/main/docs/apis.md and https://github.com/InkWhale-net/contracts/blob/main/inkwhale_contract/docs/technical_doc.md | Not fully evaluated yet |
-| 0c.    | Testing Guide      |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/contracts/blob/main/tests/readme.md | The tests are passing pointing to an external test network. |
-| 0d.    | Article/Tutorial   |<ul><li>[ ] </li></ul>| https://medium.com/@artzero_io/aztzeros-nft-yield-farming-pool-guide-for-creators-c20057fa0d89 | Not fully evaluated yet |
-| 1. | Smart Contract Development |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/contracts Completed following functions: create PSP22 token, create a staking pool, create NFT yield farm, create token yield farm, add rewards to pool, remove rewards from pool, claim reward from pool. We have to create 9 different contracts; INW token contract that allows public minting and fixed total supply; General psp22 token contract and psp22 token generator contract; Pool Contract and Pool Generator Contract; NFT Farming Contract and NFT Farming Generator Contract; LP Farming Contract and LP Farming Generator Contract. | Need better instructions how to deploy and run. |
-| 2. | Backend |<ul><li>[ ] </li></ul>| https://github.com/InkWhale-net/backend | Not fully evaluated yet. |
-| 3. | Frontend | <ul><li>[ ] </li></ul>|The front-end demo can be seen at https://testnet.inkwhale.net The code repo is at https://github.com/InkWhale-net/frontend This front-end uses our latest design. | Fail to run. |
-| 4. | Testing | <ul><li>[ ] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | The deliverable is missing.
+| 0b.    | Documentation      |<ul><li>[x] </li></ul>| Official Document is at https://docs.inkwhale.net/ Technical documents are at https://github.com/InkWhale-net/backend/blob/main/docs/apis.md and https://github.com/InkWhale-net/contracts/blob/main/inkwhale_contract/docs/technical_doc.md |  |
+| 0c.    | Testing Guide      |<ul><li>[x] </li></ul>| https://github.com/InkWhale-net/contracts/blob/main/tests/readme.md |  |
+| 0d.    | Article/Tutorial   |<ul><li>[x] </li></ul>| https://medium.com/@artzero_io/aztzeros-nft-yield-farming-pool-guide-for-creators-c20057fa0d89 |  |
+| 1. | Smart Contract Development |<ul><li>[x] </li></ul>| https://github.com/InkWhale-net/contracts Completed following functions: create PSP22 token, create a staking pool, create NFT yield farm, create token yield farm, add rewards to pool, remove rewards from pool, claim reward from pool. We have to create 9 different contracts; INW token contract that allows public minting and fixed total supply; General psp22 token contract and psp22 token generator contract; Pool Contract and Pool Generator Contract; NFT Farming Contract and NFT Farming Generator Contract; LP Farming Contract and LP Farming Generator Contract. |  |
+| 2. | Backend |<ul><li>[x] </li></ul>| https://github.com/InkWhale-net/backend |  |
+| 3. | Frontend | <ul><li>[x] </li></ul>|The front-end demo can be seen at https://testnet.inkwhale.net The code repo is at https://github.com/InkWhale-net/frontend This front-end uses our latest design. |  |
+| 4. | Testing | <ul><li>[x] </li></ul>| We will provide unit test for smart contracts. For Frontend and Backend testing we will provide Test Document with Plan and Test Cases for operating and using the NFT Marketplace | 
+
+## Evaluation V3
+
+### Documentation 
+
+There are instructions to run most of the parts of the software locally. It is still using the Aleph Zero Testnet, but this is ok. 
+
+### Contracts
+
+All tests passed, and now have some instructions to deploy these contracts and modify the files on the frontend and backend to run locally with new contracts.
+
+### Frontend
+
+I tested the frontend functions following [this guide](https://docs.inkwhale.net/), and all features are working fine. I only have some problems with the NFT Yield Farms, because I needed to have one NFT of any collection available in [ArtZero](https://a0-test.artzero.io/), so I bought one and tested the features of NFT Yield Farms. In this case, using the external environment isn't a problem for the application, because we can run the ArtZero from Milestone 1 to provide the NFT collections.
+
+### Backend
+
+I tested the backend testing the frontend, and I didn't find any problems.
+
+### Code Quality
+
+I ran `cargo clippy` and got these warnings.
+
+```
+user@localhost:~/Documents/InkWhale/contracts$ cargo clippy
+warning: unneeded `return` statement
+
+  --> impls/token_mint_cap/token_mint_cap.rs:69:13
+   |
+69 |         	return Ok(());
+   |         	^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+   = note: `#[warn(clippy::needless_return)]` on by default
+   = help: remove `return`
+
+warning: unneeded `return` statement
+  --> impls/token_mint_cap/token_mint_cap.rs:71:13
+   |
+71 |         	return Err(PSP22Error::Custom(String::from("Set cap < minting cap")));
+   |         	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+   = help: remove `return`
+
+warning: unneeded `return` statement
+  --> impls/token_mint_cap/token_mint_cap.rs:85:13
+   |
+85 |         	return Ok(());
+   |         	^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+   = help: remove `return`
+
+warning: unneeded `return` statement
+  --> impls/token_mint_cap/token_mint_cap.rs:87:13
+   |
+87 |         	return Err(PSP22Error::Custom(String::from("Set minting cap > cap")));
+   |         	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+   = help: remove `return`
+
+warning: `inkwhale_project` (lib) generated 4 warnings (run `cargo fix --lib -p inkwhale_project` to apply 4 suggestions)
+	Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+```
 
 ## Evaluation V2
 
@@ -29,7 +95,6 @@ Frontend failed to compile with `yarn start`.
 
 ```
 Failed to compile.
-
 Attempted import error: 'addressShortener' is not exported from 'utils' (imported as 'addressShortener').
 assets by path static/ 9.65 MiB
   asset static/js/bundle.js 9.64 MiB [emitted] (name: main) 1 related asset
@@ -51,18 +116,15 @@ modules by path ./src/ 966 KiB
   + 5 modules
 buffer (ignored) 15 bytes [optional] [built] [code generated]
 crypto (ignored) 15 bytes [built] [code generated]
-
 ERROR in ./src/components/address-copier/AddressCopier.js 30:27-43
 export 'addressShortener' (imported as 'addressShortener') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
  @ ./src/components/card/Card.js 7:0-68 294:43-56
  @ ./src/pages/faucet/index.jsx 6:0-42 210:39-45 214:41-47 332:39-45 336:41-47
  @ ./src/index.js 18:0-38 157:41-51 285:41-51
-
 ERROR in ./src/components/table/IWTable.js 260:21-40
 export 'formatNumDynDecimal' (imported as 'formatNumDynDecimal') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
  @ ./src/pages/pools/index.jsx 10:0-51 239:37-44
  @ ./src/index.js 19:0-36 185:41-50
-
 ERROR in ./src/components/table/IWTable.js 284:20-39
 export 'formatNumDynDecimal' (imported as 'formatNumDynDecimal') was not found in 'utils' (possible exports: IPFS_BASE_URL, convertStringToDateTime, convertStringToPrice, convertTimeStamp, convertTimeStampNoTime, delay, formatNumDynamicDecimal, getCloudFlareImage, isValidAddressPolkadotAddress, isValidImage, numberWithCommas, randomString, secondsToTime, secondsToTimeString, shortenNumber, truncateStr, twoDigit, twoDigitTime)
  @ ./src/pages/pools/index.jsx 10:0-51 239:37-44
@@ -75,6 +137,7 @@ It runs, but was not tested yet because frontend failed to compile.
 ### Code Quality
 
 All warnings from clippy were removed.
+
 ## Evaluation V1
 
 ### Testing Guide
@@ -111,7 +174,6 @@ npm ERR!
 npm ERR!
 npm ERR! For a full report see:
 npm ERR! /home/user/.npm/_logs/2023-02-10T13_42_52_894Z-eresolve-report.txt
-
 npm ERR! A complete log of this run can be found in:
 npm ERR! 	/home/user/.npm/_logs/2023-02-10T13_42_52_894Z-debug-0.log
 ```
@@ -132,23 +194,16 @@ npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.no
 npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
 npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
 npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
-
 added 2177 packages, and audited 2178 packages in 2m
-
 257 packages are looking for funding
   run `npm fund` for details
-
 17 vulnerabilities (2 low, 15 high)
-
 To address issues that do not require attention, run:
   npm audit fix
-
 To address all issues possible (including breaking changes), run:
   npm audit fix --force
-
 Some issues need review, and may require choosing
 a different dependency.
-
 Run `npm audit` for details.
 ```
 
@@ -167,7 +222,6 @@ warning: unused import: SpreadLayout
    |             ^^^^^^^^^^^^
    |
    = note: #[warn(unused_imports)] on by default
-
 warning: lp_pool_generator (lib) generated 1 warning (run cargo fix --lib -p lp_pool_generator to apply 1 suggestion)
     Finished release [optimized] target(s) in 0.16s
 ```
@@ -184,21 +238,17 @@ warning: unused import: `String`
    |     	^^^^^^
    |
    = note: `#[warn(unused_imports)]` on by default
-
 warning: unused import: `SpreadAllocate`
   --> impls/token_manager/data.rs:16:9
    |
 16 |     	SpreadAllocate,
    |     	^^^^^^^^^^^^^^
-
 warning: unused import: `String`
   --> impls/token_manager/token_manager.rs:25:9
    |
 25 |     	String
    |     	^^^^^^
-
 ...
-
 warning: this let-binding has unit value
   --> traits/generic_pool_contract.rs:58:43
    |
@@ -206,7 +256,6 @@ warning: this let-binding has unit value
    |                                       	^^^^^^^^^ help: omit the `let` binding: `AccountId;`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#let_unit_value
-
 warning: this let-binding has unit value
   --> traits/generic_pool_contract.rs:61:30
    |
@@ -214,7 +263,6 @@ warning: this let-binding has unit value
    |                          	^^^^^^^^^^^^^^^^^ help: omit the `let` binding: `staker: AccountId;`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#let_unit_value
-
 warning: this let-binding has unit value
   --> traits/generic_pool_contract.rs:61:52
    |
@@ -222,7 +270,6 @@ warning: this let-binding has unit value
    |                                                	^^^^^^^^^^^^^^^^^^^^^^^^ help: omit the `let` binding: `Option<StakeInformation>;`
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#let_unit_value
-
 warning: `inkwhale_project` (lib) generated 113 warnings
 error: could not compile `inkwhale_project` due to 98 previous errors; 113 warnings emitted
 ```
