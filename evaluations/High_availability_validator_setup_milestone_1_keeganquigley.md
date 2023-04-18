@@ -1,3 +1,20 @@
+# Evaluation
+
+- **Status:** In progress.
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/High_availability_validator_setup.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+| Number | Deliverable | Accepted | Link | Notes |
+| ------------- | ------------- | ------------- | ------------- |------------- |
+| 0a. | License | <ul><li>[x] </li></ul> | https://github.com/bright/substrate-raft/blob/milestone-1/LICENSE-GPL3 | MIT | 
+| 0b. | Documentation | <ul><li>[x] </li></ul> | Inline | Ok. | 
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | - | - |
+| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/bright/substrate-raft/tree/milestone-1/docker | - |
+| **1** | Update Substrate | <ul><li>[x] </li></ul> |  | Ok. |
+| **2** | Update Substrate client | <ul><li>[x] </li></ul> |  | Ok. |
+| **3** | Integration test |  <ul><li>[x] </li></ul> |  | Ok. |
+
 # General Notes
 
 Running `cargo test` currently fails. Building with Docker file also gives the same error:
@@ -20,3 +37,4 @@ error: `sp_trie::recorder::Recorder<H>::as_trie_recorder::{opaque#0}<'_>` does n
 error: could not compile `sp-state-machine` due to 2 previous errors
 warning: build failed, waiting for other jobs to finish...
 ```
+Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. I've tried on multiple machines with multiple different specs but `cargo test` still gets stuck and Docker build fails.
