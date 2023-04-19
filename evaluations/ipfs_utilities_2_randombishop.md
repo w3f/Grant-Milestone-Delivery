@@ -15,9 +15,9 @@
 |    0c. | Testing                         | Yes      | [Doc](https://github.com/TDSoftware/substrate-ipfs/blob/milestone-2/docs/IPFS.md)        | OK                            |
 |    0d. | Code                            | Yes      | [Milestone 2](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)             | OK                            |
 |    0e. | Article                         | Yes      | https://medium.com/p/6cfcb537f660                                                        | OK                            |
-|     1. | Fetch File Implementation       | Yes      |                                                                                          | OK                            |
-|     2. | Web3 Client Extension           | Yes      |                                                                                          | OK                            |
-|     3. | Local Node Fetch Implementation | Yes      |                                                                                          | OK                            |
+|     1. | Fetch File Implementation       | Yes      | [Node](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)                    | OK                            |
+|     2. | Web3 Client Extension           | No       |                                                                                          |                               |
+|     3. | Local Node Fetch Implementation | Yes      | [Node](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)                    | OK                            |
 
 
 ## Repositories
