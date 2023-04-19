@@ -1,4 +1,3 @@
-
 # Evaluation
 
 - **Status:** In Progress
@@ -9,7 +8,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | Licence |<ul><li>[ ] </li></ul>| n/a | Missing license in one repo | 
+| 0a. | Licence |<ul><li>[x] </li></ul>| n/a |  | 
 | 0b. | Documentation |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet | 
 | 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | There is no testing guide for the frontend  |
 | 0d. | Docker |<ul><li>[ ] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) | Some failures running docker. |
@@ -17,6 +16,121 @@
 | 2. | Substrate module: pallet_dao_vote	|<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes | Not fully evaluated yet | 
 | 3. | Frontend Implementation	 |<ul><li>[ ] </li></ul>| https://genesis-dao.org | Not fully evaluated yet |
 | 4. | Design and Product Flow |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/Proposal.pdf | Not fully evaluated yet |
+
+## Evaluation V2
+
+### Docker
+
+I still have the same problems with Docker for the node and service. This time, the `listener` service started but still have errors with `worker` one. I tried to visit `http://127.0.0.1:8000/redoc/` and got a blank page.
+
+```
+worker	| Operations to perform:
+worker	|   Apply all migrations: admin, auth, contenttypes, core, sessions
+worker	| Running migrations:
+worker	|   No migrations to apply.
+listener  | Syncing initial accounts...
+worker	| Traceback (most recent call last):
+worker	|   File "/usr/src/app/manage.py", line 22, in <module>
+worker	| 	main()
+worker	|   File "/usr/src/app/manage.py", line 18, in main
+worker	| 	execute_from_command_line(sys.argv)
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+worker	| 	utility.execute()
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/management/__init__.py", line 440, in execute
+worker	| 	self.fetch_command(subcommand).run_from_argv(self.argv)
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/management/base.py", line 402, in run_from_argv
+worker	| 	self.execute(*args, **cmd_options)
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/management/base.py", line 448, in execute
+worker	| 	output = self.handle(*args, **options)
+worker	|          	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker	|   File "/venv/lib/python3.11/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 209, in handle
+worker	| 	collected = self.collect()
+worker	|             	^^^^^^^^^^^^^^
+worker	|   File "/venv/lib/python3.11/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 135, in collect
+worker	| 	handler(path, prefixed_path, storage)
+worker	|   File "/venv/lib/python3.11/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 378, in copy_file
+worker	| 	self.storage.save(prefixed_path, source_file)
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/files/storage.py", line 56, in save
+worker	| 	name = self._save(name, content)
+worker	|        	^^^^^^^^^^^^^^^^^^^^^^^^^
+worker	|   File "/venv/lib/python3.11/site-packages/django/core/files/storage.py", line 295, in _save
+worker	| 	os.makedirs(directory, exist_ok=True)
+worker	|   File "<frozen os>", line 215, in makedirs
+worker	|   File "<frozen os>", line 215, in makedirs
+worker	|   File "<frozen os>", line 225, in makedirs
+worker	| PermissionError: [Errno 13] Permission denied: '/usr/src/app/static'
+worker exited with code 1
+listener  | Catching up | number: 0
+listener  | Catching up | number: 1
+listener  | Catching up | number: 2
+listener  | Catching up | number: 3
+```
+
+### Service
+
+I tried without Docker, and this time I received this error when I ran `make start-dev`:
+
+```
+(venv) user@localhost:~/Documents/genesisdao/genesis-dao-service$ make start-dev
+Traceback (most recent call last):
+  File "/home/user/Documents/genesisdao/genesis-dao-service/manage.py", line 22, in <module>
+    main()
+  File "/home/user/Documents/genesisdao/genesis-dao-service/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/base.py", line 448, in execute
+    output = self.handle(*args, **options)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/base.py", line 96, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/commands/migrate.py", line 97, in handle
+    self.check(databases=[database])
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/management/base.py", line 475, in check
+    all_issues = checks.run_checks(
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/urls/resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/urls/resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/django/urls/resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/user/Documents/genesisdao/genesis-dao-service/service/urls.py", line 22, in <module>
+    from core import urls as core_urls
+  File "/home/user/Documents/genesisdao/genesis-dao-service/core/urls.py", line 4, in <module>
+    from core import views
+  File "/home/user/Documents/genesisdao/genesis-dao-service/core/views.py", line 15, in <module>
+    from core import models, serializers
+  File "/home/user/Documents/genesisdao/genesis-dao-service/core/serializers.py", line 143
+    match vote.in_favor:
+          ^
+SyntaxError: invalid syntax
+make: *** [Makefile:17: run-migration] Error 1
+```
+
+### Frontend
+
+I was able to test the front end using the external node and service. The functions are working fine, I was able to create a DAO, Edit its metadata, and transfer some tokens. But I noticed the page with Review Details is missing. After the creation, the message "Congratulations!" was presented, and another message as well "Sorry, you are not the admin of [Dao Name]". This this last one I think should't be presented. 
 
 ## Evaluation V1
 
@@ -147,7 +261,6 @@ The Unit tests and the integration tests passed, some with good coverage and oth
 Dao-Core
 ```
 test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.80s
-
 Apr 14 08:18:37.661  INFO cargo_tarpaulin::report: Coverage Results:
 || Tested/Total Lines:
 || node/src/chain_spec.rs: 0/2
@@ -172,8 +285,6 @@ Apr 14 08:18:37.661  INFO cargo_tarpaulin::report: Coverage Results:
 Dao-Assets
 ```
 test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.30s
-
-
 Apr 14 08:22:21.111  INFO cargo_tarpaulin::report: Coverage Results:
 || Tested/Total Lines:
 || node/src/chain_spec.rs: 0/2
@@ -198,7 +309,6 @@ Apr 14 08:22:21.111  INFO cargo_tarpaulin::report: Coverage Results:
 Dao-Vote
 ```
 test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
-
 Apr 14 08:25:51.107  INFO cargo_tarpaulin::report: Coverage Results:
 || Tested/Total Lines:
 || node/src/chain_spec.rs: 0/2
@@ -223,7 +333,6 @@ Apr 14 08:25:51.107  INFO cargo_tarpaulin::report: Coverage Results:
 Integration Test
 ```
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 230.26s
-
 Apr 14 08:41:06.845  INFO cargo_tarpaulin::report: Coverage Results:
 || Tested/Total Lines:
 || integration-wrapper/src/lib.rs: 86/86
@@ -262,7 +371,6 @@ Running migrations:
   No migrations to apply.
 Watching for file changes with StatReloader
 Performing system checks...
-
 System check identified no issues (0 silenced).
 April 14, 2023 - 14:32:42
 Django version 4.1.7, using settings 'settings.settings'
@@ -281,9 +389,7 @@ Traceback (most recent call last):
   File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/redis/connection.py", line 769, in _connect
 	sock.connect(socket_address)
 ConnectionRefusedError: [Errno 111] Connection refused
-
 During handling of the above exception, another exception occurred:
-
 Traceback (most recent call last):
   File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/asgiref/sync.py", line 486, in thread_handler
 	raise exc_info[1]
@@ -327,9 +433,7 @@ Traceback (most recent call last):
   File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/redis/connection.py", line 769, in _connect
 	sock.connect(socket_address)
 ConnectionRefusedError: [Errno 111] Connection refused
-
 During handling of the above exception, another exception occurred:
-
 Traceback (most recent call last):
   File "/home/user/Documents/genesisdao/genesis-dao-service/venv/lib/python3.9/site-packages/asgiref/sync.py", line 486, in thread_handler
 	raise exc_info[1]
