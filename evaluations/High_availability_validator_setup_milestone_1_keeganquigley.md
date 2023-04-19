@@ -37,7 +37,28 @@ error: `sp_trie::recorder::Recorder<H>::as_trie_recorder::{opaque#0}<'_>` does n
 error: could not compile `sp-state-machine` due to 2 previous errors
 warning: build failed, waiting for other jobs to finish...
 ```
-Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. I've tried on multiple machines with multiple different specs but `cargo test` still gets stuck and Docker fails on Ubuntu. On mac it seems to get stuck while compiling the node:
-
-![docker build](https://user-images.githubusercontent.com/35080151/233128192-93c5cba5-b95d-4f67-9c8f-1c8519838957.png)
-
+Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. I've tried on multiple machines with multiple different specs but `cargo test` still gets fails and Docker fails on Ubuntu and Mac while compiling the node:
+```rust
+#12 2717.3 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2717.3 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2745.2    Compiling snow v0.9.0
+#12 2745.6 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2745.6 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2748.3    Compiling wasmtime-types v0.40.1
+#12 2748.6 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2748.6 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2756.7 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2756.7 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2759.9    Compiling wasmtime-jit-debug v0.40.1
+#12 2760.2 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2760.2 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2763.3 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2763.3 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2766.6 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2766.6 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2816.6 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#12 2816.6 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#12 2879.7 Killed
+------
+executor failed running [/bin/sh -c cargo build --locked --release]: exit code: 137
+```
