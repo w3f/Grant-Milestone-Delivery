@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_developer_experience_improvements.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -17,7 +17,12 @@
 
 # General Notes
 
-Relatively straight forward maintanance delivery. PRs checked and look good. I was able to install solang and play around with compiling .sol contracts. All unit tests pass except for one:
+Relatively straight forward maintanance delivery. PRs checked and look good. I was able to install Solang and compile example contracts to upload in Polkadot-JS. The software works well. Thanks for your hard work on keeping all the docs up to date. 
+
+I was able to run Solang locally as well as in the Solang container. I also played around with using the [usage](https://solang.readthedocs.io/en/latest/running.html#compiler-usage) tags and the documentation generation tool is pretty cool too.
+## Tests
+
+All unit tests pass except for one:
 ```rust
 test eth_builtins ... ok
 test selfdestruct ... ok
@@ -38,4 +43,6 @@ failures:
 
 test result: FAILED. 4 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
 ```
+I wonder if it's possibly panicking because I don't have necessary Ethereum dependencies on my machine. This test isn't part of this milestone, but consider looking into it. 
+
 `cargo clippy` returns null.
