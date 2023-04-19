@@ -11,7 +11,7 @@
 | -------| ----------- | ---- | ----- |
 | 0a. :heavy_check_mark: | License | [LICENSE](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/LICENSE) | Apache 2.0 | 
 | 0b. :heavy_check_mark: | Documentation | [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md) | | 
-| 0c. :heavy_check_mark: | Testing and Testing Guide | [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#tutorial) | | 
+| 0c. :heavy_check_mark: | Testing and Testing Guide | [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#testing-guide) | | 
 | 0d. :heavy_check_mark: | Docker | [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#docker) | | 
 | 1. :heavy_check_mark: | Connect to Substrate chains | [main.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/main.rs#L50) | | 
 | 2. :heavy_check_mark: | Block syncing | [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L283)| | 
