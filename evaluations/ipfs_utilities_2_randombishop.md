@@ -2,7 +2,7 @@
 
 
 
-- **Status:** ACCEPTED
+- **Status:** PENDING
 - **Application Document:** [IPFS Utilities](https://github.com/w3f/Grants-Program/blob/master/applications/ipfs_utilities.md)
 - **Milestone:** 2
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
