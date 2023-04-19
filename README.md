@@ -20,7 +20,7 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
 
 1. **Milestone Delivery:**
    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application (ignore if you applied privately).
-   2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**.  In the case of a maintenance application, use the ([`maintenance template`](maintenance_deliveries/maintenance-delivery-template.md)) instead.
+   2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**. In the case of a maintenance application, use the ([`maintenance template`](maintenance_deliveries/maintenance-delivery-template.md)) instead.
    5. Fill out the template with the details of your milestone, including all deliverables as listed in your application.
    4. Name the file `project_name-milestone_number.md` or in the case of maintenance agreement `project_name-delivery_number.md`
    5. Fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89).
@@ -36,7 +36,8 @@ Grant applications can be [amended](https://github.com/w3f/Grants-Program#change
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address. *You can evaluate as many deliveries as you like.*
+
 
 ### Requirements
 
@@ -54,8 +55,6 @@ As part of the grant program, we allow everyone to participate in the evaluation
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
 7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 
-*You can evaluate as many deliveries as you like. With each successful evaluation, the probability of being double-checked decreases and eventually you'll be added to the list of [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team) yourself.*
-
 ## :bulb: Help
 
 ### Additional information
@@ -66,10 +65,15 @@ As part of the grant program, we allow everyone to participate in the evaluation
 
 ### Real-time conversation
 
-We have Riot channels for real-time discussions on Web3 and Polkadot. Join the conversation.
+We have a Matrix channel for grant-related questions and activities. Head over there to ask grants-related questions, share your experience with other applications and grantees, or simply hang out:
 
-- [Web3 Foundation](https://app.element.io/#/room/#w3f:matrix.org)
-- [Polkadot Watercooler](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation)
+- [W3F Grants Community](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation&via=matrix.org)
+
+We also have Matrix/Element channels for real-time discussions on Web3 and Polkadot. Join the conversation!
+
+- [Web3 Foundation Chat](https://matrix.to/#/#w3f:matrix.org)
+- [Polkadot Space](https://matrix.to/#/#polkadot:web3.foundation)
+- [Kusama Space](https://matrix.to/#/#kusama:web3.foundation)
 
 ## :information_source: License <!-- omit in toc -->
 
