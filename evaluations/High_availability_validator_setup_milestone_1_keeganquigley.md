@@ -37,4 +37,7 @@ error: `sp_trie::recorder::Recorder<H>::as_trie_recorder::{opaque#0}<'_>` does n
 error: could not compile `sp-state-machine` due to 2 previous errors
 warning: build failed, waiting for other jobs to finish...
 ```
-Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. I've tried on multiple machines with multiple different specs but `cargo test` still gets stuck and Docker build fails.
+Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. I've tried on multiple machines with multiple different specs but `cargo test` still gets stuck and Docker fails on Ubuntu. On mac it seems to get stuck while compiling the node:
+
+![docker build](https://user-images.githubusercontent.com/35080151/233128192-93c5cba5-b95d-4f67-9c8f-1c8519838957.png)
+
