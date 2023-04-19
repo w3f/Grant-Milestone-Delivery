@@ -17,4 +17,25 @@
 
 # General Notes
 
-Relatively straight forward maintanance delivery. PRs checked and look good. I was able to install solang and play around with compiling .sol contracts. All unit tests pass.
+Relatively straight forward maintanance delivery. PRs checked and look good. I was able to install solang and play around with compiling .sol contracts. All unit tests pass except for one:
+```rust
+test eth_builtins ... ok
+test selfdestruct ... ok
+test address ... ok
+test try_catch ... ok
+test ethereum_solidity_tests ... FAILED
+
+failures:
+
+---- ethereum_solidity_tests stdout ----
+thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: Error { depth: 0, inner: Io { path: Some("/Users/keeganquigley/solang/testdata/solidity/test/libsolidity/semanticTests"), err: Os { code: 2, kind: NotFound, message: "No such file or directory" } } }', tests/evm.rs:192:27
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: Error { depth: 0, inner: Io { path: Some("/Users/keeganquigley/solang/testdata/solidity/test/libsolidity/syntaxTests"), err: Os { code: 2, kind: NotFound, message: "No such file or directory" } } }', tests/evm.rs:192:27
+
+
+failures:
+    ethereum_solidity_tests
+
+test result: FAILED. 4 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+```
+`cargo clippy` returns null.
