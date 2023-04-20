@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress.
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/High_availability_validator_setup.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
