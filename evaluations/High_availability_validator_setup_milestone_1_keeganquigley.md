@@ -142,6 +142,16 @@ validator-eve_1      | 2023-04-20 19:38:45 🔖 Pre-sealed block for proposal at
 validator-eve_1      | 2023-04-20 19:38:45 ✨ Imported #299 (0x9539…4fa2)    
 validator-alice-2_1  | 2023-04-20 19:38:45.001 DEBUG tokio-runtime-worker slots: Skipping proposal slot due to lack of permission.  
 ```
+The validators also gracefully stop:
+```rust
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping substrate-raft_validator-alice-2_1 ... done
+Stopping substrate-raft_validator-dave_1    ... done
+Stopping substrate-raft_validator-charlie_1 ... done
+Stopping substrate-raft_validator-alice-1_1 ... done
+Stopping substrate-raft_validator-bob_1     ... done
+Stopping substrate-raft_validator-eve_1     ... done
+```
 
 ## V1
 Running `cargo test` currently fails. Building with Docker file also gives the same error:
