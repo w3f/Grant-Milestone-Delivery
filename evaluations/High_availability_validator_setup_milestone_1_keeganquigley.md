@@ -62,3 +62,17 @@ Stack Exchange suggests `sudo apt install clang` but that doesn't do the trick. 
 ------
 executor failed running [/bin/sh -c cargo build --locked --release]: exit code: 137
 ```
+There is also one warning about dead code:
+```rust
+warning: associated function `project_ref` is never used
+  --> client/telemetry/src/transport.rs:80:1
+   |
+80 | #[pin_project::pin_project]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `sc-telemetry` (lib test) generated 1 warning (1 duplicate)
+   Compiling pallet-balances v4.0.0-dev (/home/ubuntu/substrate-raft/frame/balances)
+warning: `sc-telemetry` (lib) generated 1 warning
+```
