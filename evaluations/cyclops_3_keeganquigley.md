@@ -27,3 +27,5 @@
 # General Notes
 
 Dashboard works well and I can sign in, add validators, see stats and critical events.
+
++ Add Validator is greyed out for some reason but it still works. Also, I don't see a way to remove validators once they have been added.
