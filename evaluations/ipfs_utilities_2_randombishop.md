@@ -2,7 +2,7 @@
 
 
 
-- **Status:** PENDING
+- **Status:** ACCEPTED
 - **Application Document:** [IPFS Utilities](https://github.com/w3f/Grants-Program/blob/master/applications/ipfs_utilities.md)
 - **Milestone:** 2
 - **Kusama Identity:** randombishop (https://sub.id/5Gnixfp6vnznRkr91JgwkxYnCJCyHr8EaBzYfFsUKcTMzVYF)
@@ -16,17 +16,18 @@
 |    0d. | Code                            | Yes      | [Milestone 2](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)             | OK                            |
 |    0e. | Article                         | Yes      | https://medium.com/p/6cfcb537f660                                                        | OK                            |
 |     1. | Fetch File Implementation       | Yes      | [Node](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)                    | OK                            |
-|     2. | Web3 Client Extension           | No       |                                                                                          |                               |
+|     2. | Web3 Client Extension           | Yes      | [Example](https://github.com/TDSoftware/substrate-ipfs-example-ui)                       | OK                            |
 |     3. | Local Node Fetch Implementation | Yes      | [Node](https://github.com/TDSoftware/substrate-ipfs/tree/milestone-2)                    | OK                            |
 
 
 ## Repositories
 (Apache 2.0 licensed)
 
-|      Component | Repo                                            | Language |
-|---------------:|-------------------------------------------------|----------|
-| Substrate node | https://github.com/TDSoftware/substrate-ipfs    | Rust     |
-|       Frontend | https://github.com/TDSoftware/substrate-ipfs-ui | JS       |
+|      Component | Repo                                                    | Language |
+|---------------:|---------------------------------------------------------|----------|
+| Substrate node | https://github.com/TDSoftware/substrate-ipfs            | Rust     |
+|       Frontend | https://github.com/TDSoftware/substrate-ipfs-ui         | JS       |
+|   Demo example | https://github.com/TDSoftware/substrate-ipfs-example-ui | JS       |
 
 
 
