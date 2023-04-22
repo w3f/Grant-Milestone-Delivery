@@ -15,7 +15,7 @@
 | 0b.  | Documentation | [liberland/liberland.github.io](https://liberland-1.gitbook.io/wiki/v/public-documents/blockchain/for-developers-and-testers) | Inline code documentation can be found in our main [node repo](https://github.com/liberland/liberland_substrate) , Other documentation and guides can be found on [gitbook](https://liberland-1.gitbook.io/wiki/v/public-documents/blockchain/for-developers-and-testers) | 
 | 0c.  | Testing Guide | [Testing guide](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#) | ... | 
 | 0d.  | Docker |[Docker](https://hub.docker.com/r/liberland/blockchain-node)| Uses testnet chainspec | 
-| 0e.  | Article |...| ...| 
+| 0e.  | Article |(Draft)[https://docs.google.com/document/d/1IiOEka3eZOOyM7GuT5aVJYihdSz3qYbWqwcTNS_Pvqg]| Article draft| 
 | 1.  | Land owner Pallet |[Modified NFTs pallet](https://github.com/liberland/liberland_substrate/tree/main/frame/nfts)| Uses office pallet| 
 | 2.  | Metaverse integration pallet |[Test metaverse build](https://liberverse.net/win64-staging)| Not a pallet | 
 | 3.  | Company registration pallet |[Registry](https://github.com/liberland/liberland_substrate/tree/main/frame/registry)| Uses office pallet| 
