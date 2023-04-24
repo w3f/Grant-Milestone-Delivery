@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.| License |<ul><li>[x] </li></ul>| [LICENSE](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/LICENSE) | Apache 2.0 | 
 | 0b.| Documentation | <ul><li>[ ] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md) | Not fully evaluated yet | 
-| 0c.| Testing and Testing Guide | <ul><li>[ ] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#tutorial) | Need a manual testing guide | 
+| 0c.| Testing and Testing Guide | <ul><li>[x] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#tutorial) |  | 
 | 0d.| Docker | <ul><li>[x] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#docker) |  | 
 | 1.| Connect to Substrate chains | <ul><li>[ ] </li></ul>| [main.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/main.rs#L50) | Not fully evaluated yet | 
 | 2.| Block syncing | <ul><li>[ ] </li></ul>| [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L283)| Not fully evaluated yet | 
@@ -18,6 +18,16 @@
 | 4.| Status querying | <ul><li>[ ] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L83) | Not fully evaluated yet | 
 | 5.| Index querying | <ul><li>[ ] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L95) | Not fully evaluated yet | 
 | 6.| Dapp | <ul><li>[ ] </li></ul>| [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp/tree/milestone-1) | Not fully evaluated yet | 
+
+## Evaluation V3
+
+### Testing
+
+Thanks for providing the testing guide. During the tests, I only had one problem, in the case of the TipHash, in which the indexer indexed the block with the TipHash example, but the search returned nothing. All other cases worked without problems. I'm wondering if this is a bug or if there is some problem with the selected example for this case. Please provide an explanation or another example that works. 
+
+### Code Quality
+
+`cargo clippy` returned no warnings.
 
 ## Evaluation V2
 
@@ -69,7 +79,6 @@ test tests::test_process_msg_pool_id ... ok
 test tests::test_process_msg_proposal_hash ... ok
 test tests::test_process_msg_ref_index ... ok
 test tests::test_process_msg_registrar_index ... ok
-
 test result: ok. 42 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.97s
 ```
 
@@ -89,7 +98,6 @@ warning: use of `unwrap_or` followed by a function call
    |
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#or_fun_call
    = note: `#[warn(clippy::or_fun_call)]` on by default
-
 warning: `hybrid-indexer` (bin "hybrid-indexer") generated 1 warning
 	Finished dev [unoptimized + debuginfo] target(s) in 0.19s
 ```
