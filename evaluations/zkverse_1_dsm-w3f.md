@@ -1,3 +1,4 @@
+
 # Evaluation
 
 - **Status:** In Progress
@@ -15,6 +16,47 @@
 | 1.  |make groth16 compatible with substrate |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/bellman-verifier| Not fully evaluated yet |
 | 2.  |adapt snarkjs and bellman |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/snarkjs-bellman-adapter/tree/main| Not fully evaluated yet |
 | 3.  |ZKP education |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/zk-tutorials| Not fully evaluated yet |
+
+## Evaluation V2
+
+### Docker
+
+I tried running docker again and got this error.
+
+```
+node-template  | error: failed to run custom build command for `node-template-runtime v4.0.0-dev (/var/www/node-template/runtime)`
+node-template  |
+node-template  | Caused by:
+node-template  |   process didn't exit successfully: `/var/www/node-template/target/release/build/node-template-runtime-5b485e747cfc1397/build-script-build` (exit status: 1)
+node-template  |   --- stderr
+node-template  |   Rust WASM toolchain not installed, please install it!
+node-template  |
+node-template  |   Further error information:
+node-template  |   ------------------------------------------------------------
+node-template  |  	Compiling wasm-test v1.0.0 (/tmp/.tmpfb6rqv)
+node-template  |   error[E0463]: can't find crate for `std`
+node-template  | 	|
+node-template  | 	= note: the `wasm32-unknown-unknown` target may not be installed
+node-template  | 	= help: consider downloading the target with `rustup target add wasm32-unknown-unknown`
+node-template  | 	= help: consider building the standard library from source with `cargo build -Zbuild-std`
+node-template  |
+node-template  |   error: requires `sized` lang_item
+node-template  |
+node-template  |   For more information about this error, try `rustc --explain E0463`.
+node-template  |   error: could not compile `wasm-test` due to 2 previous errors
+node-template  |   warning: build failed, waiting for other jobs to finish...
+node-template  |   error: cannot find macro `println` in this scope
+node-template  |	--> src/main.rs:3:5
+node-template  | 	|
+node-template  |   3 |             	println!("{}", env!("RUSTC_VERSION"));
+node-template  | 	|             	^^^^^^^
+node-template  |
+node-template  |   error: could not compile `wasm-test` due to 3 previous errors
+node-template  |   ------------------------------------------------------------
+node-template  |
+node-template  | warning: build failed, waiting for other jobs to finish...
+node-template exited with code 101
+```
 
 ## Evaluation V1
 
@@ -72,7 +114,6 @@ note: this value is dropped without further use
 166 |     	runtime::Signature::Sr25519(signature.clone()),
 	|                                 	^^^^^^^^^
 	= help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: redundant clone
    --> node/src/benchmarking.rs:167:8
 	|
@@ -85,7 +126,6 @@ note: this value is dropped without further use
 167 |     	extra.clone(),
 	|     	^^^^^
 	= help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: redundant clone
   --> node/src/rpc.rs:48:47
    |
@@ -98,7 +138,6 @@ note: this value is dropped without further use
 48 | 	module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
    |                                          	^^^^
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: `node-template` (bin "node-template") generated 7 warnings (2 duplicates) (run `cargo fix --bin "node-template"` to apply 5 suggestions)
 	Finished dev [unoptimized + debuginfo] target(s) in 1.19s
 ```
