@@ -1,7 +1,6 @@
 # Evaluation
 
-
-- **Status:** In Progress
+- **Status:** Rejected
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/liberland.md
 - **Milestone:** 2
 - **Kusama Identity:** Ha27MB4gKH36ieRPa1T1ASqhUz4sVxMoVmK7o5CS6tXDqjW
@@ -12,10 +11,10 @@
 | 0a. | License |<ul><li>[x] </li></ul>|[Link](https://github.com/liberland/liberland_substrate/blob/main/LICENSE-MIT)| License is Ok. The MIT license is also referenced in their pallets.|
 | 0b.  | Documentation |<ul><li>[x] </li></ul>|[Link](https://liberland-1.gitbook.io/wiki/v/public-documents/blockchain/for-developers-and-testers)| Good inline documentation in pallets. It contains dispatchable functions, configs, etc. The Gitbook is also good, but can be further imrproved. See 1. in General Notes.|
 | 0c. | Testing Guide |<ul><li>[ ] </li></ul>|...|I can see you have created tests for your pallets. Please include a short guide on how to run these tests. Incude this guide in your README document.|
-| 0d.  | Docker |<ul><li>[x] </li></ul>|[Link](https://hub.docker.com/layers/liberland/blockchain-node/latest/images/sha256-e59f697c8df37b6c8c509e1c949cb23c052b4e95463f087abb044d4873a791b5?context=explore)| Image works. See 3. In General notes. |
-| 0e. | Article |<ul><li>[ ] </li></ul>|...| Missing article|
+| 0d.  | Docker |<ul><li>[x] </li></ul>|[Link](https://hub.docker.com/layers/liberland/blockchain-node/latest/images/sha256-e59f697c8df37b6c8c509e1c949cb23c052b4e95463f087abb044d4873a791b5?context=explore)|Docker Image works. See 3. In General notes. |
+| 0e. | Article |<ul><li>[x] </li></ul>|[Link](https://docs.google.com/document/d/1IiOEka3eZOOyM7GuT5aVJYihdSz3qYbWqwcTNS_Pvqg/edit#heading=h.gvgdsh4wfciv)| Draft is ok.|
 | 1.  | Land owner Pallet |<ul><li>[ ] </li></ul>|[Link](https://github.com/liberland/liberland_substrate/tree/main/frame/nfts)| Your pallet is almost exact fork from pallet-nfts. You have made small modificaiton to add citizenship information. In the original application you state you will use geo coordination but I don't see this reflected in code. Can you make the requirements for this pallet more explicit?|
-| 2 | Metaverse integration Pallet |<ul><li>[ ] </li></ul>|...| You don't have a pallet. It is unclear what this pallet aims to do. Can you provide more details?|
+| 2 | Metaverse integration Pallet |<ul><li>[ ] </li></ul>|...| Based on the submitted requirements in your application [document](https://github.com/w3f/Grants-Program/blob/master/applications/liberland.md), you have not provided a pallet implementation. I understand that requirements can change during development, but these changes have to be reflected back in the original requirements document.  |
 | 3 | Company Registration Pallet |<ul><li>[x] </li></ul>|[Link](https://github.com/liberland/liberland_substrate/blob/main/frame/registry/src/lib.rs)| Good. But it seems to be inspired from the original substrate [Registry pallet](https://github.com/liberland/liberland_substrate/blob/main/frame/registry/src/lib.rs)|
 
 
@@ -43,3 +42,12 @@
 2023-04-14 13:26:27 🔨 Initializing Genesis block/state (state: 0x12f5…4c6f, header-hash: 0x9f82…9441)    
 2023-04-14 13:26:27 👴 Loading GRANDPA authority set from genesis on what appears to be first startup. 
 ```
+
+###  Concluding Remarks
+
+Based on my evaluation, you have not provided all the deliverables as described in you application. Thus I have to reject this delivery. My advise is to update your initial application with the exact deliverables that you are delivering for this milestone, before it can be accepted. 
+
+Furthermore, a lot of your pallets are derivative work from already existing pallets (such as registry, nfts) and I would expect more original work for grant submission. 
+
+Note that this evaluation is not binding since I do not work of Web3 Foundation, so the Web3 team can accept your delivery in its current state.
+
