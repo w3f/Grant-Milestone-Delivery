@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** In progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/solidity-trie-verifier.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,21 +10,21 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/polytope-labs/solidity-merkle-trees/blob/ca8940f328c2fffdb720367e467e096e291dee32/LICENSE) | - |
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | [Docs](https://github.com/polytope-labs/solidity-merkle-trees/tree/ca8940f328c2fffdb720367e467e096e291dee32#merkle-patricia-trie) | Very brief - contains merely npm install instructions and a code sample for each merkle tree. |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [unit tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/ca8940f328c2fffdb720367e467e096e291dee32/forge/src/merkle_patricia.rs), [patricia tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol), [fuzz tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/ca8940f328c2fffdb720367e467e096e291dee32/forge/fuzz/src/lib.rs) | See [Testing Guide Feedback](#testing-guide-feedback) |
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [Dockerfile](https://github.com/polytope-labs/solidity-merkle-trees/blob/7b6a68e68a2628b33f51920992dc1a23112a5331/Dockerfile) | See [Docker Feedback](#docker-feedback) |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [unit tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/ca8940f328c2fffdb720367e467e096e291dee32/forge/src/merkle_patricia.rs), [patricia tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol), [fuzz tests](https://github.com/polytope-labs/solidity-merkle-trees/blob/ca8940f328c2fffdb720367e467e096e291dee32/forge/fuzz/src/lib.rs) | See [Testing Guide Feedback](#testing-guide-feedback) |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/polytope-labs/solidity-merkle-trees/blob/7b6a68e68a2628b33f51920992dc1a23112a5331/Dockerfile) | See [Docker Feedback](#docker-feedback) |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Article](https://docs.google.com/document/d/1ZWzVbbYk4Yal4t_cBmoyPfDjSmS8egV9nnrOJq7DOII/edit) | - |
-| 1 | Solidity SCALE Codec | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | This will include support for `enum{option/result}`, `Vec<Vec<u8>>` decoding and other types required for verifying state proofs as current implementations([Darwinia](https://github.com/darwinia-network/darwinia-messages-sol/blob/master/contracts/utils/contracts/ScaleCodec.sol), [Snowfork](https://github.com/Snowfork/snowbridge/blob/main/core/packages/contracts/contracts/ScaleCodec.sol)) don't support.
-| 2. | KeyspacedDB | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L426](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L426). |
-| 3. | MemoryDB | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L163](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L163). |
-| 4. |  NodeCodec | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide solidity implementation of the following; [https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_codec.rs#L81](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_codec.rs#L81). |
-| 5. | Node | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L184](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L184). |
-| 6. | NodePlan | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) |   Provide the solidity implementation of the following; [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L507](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L507). |
-| 7. | NodeHeader | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_header.rs#L26](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_header.rs#L26). |
-| 8. | NibbleSlicePlan | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L454](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L454). |
-| 9. | NibbleSlice | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the solidity implementation of the following; [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/nibble/mod.rs#L180](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/nibble/mod.rs#L180). |
-| 10. | Layoutv0 | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the Solidity implementation of following; [https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L60](https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L60). |  
-| 11. | Layoutv1 | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the Solidity implementation of the following; [https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L63](https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L63) . |
-| 12. | Trie Verifier | <ul><li>[ ] </li></ul> | (will evaluate after 0c., 0d. are fixed) | Provide the Solidity implementation of the following; [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/triedb.rs#L233](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/triedb.rs#L233). |
+| 1 | Solidity SCALE Codec | <ul><li>[x] </li></ul> | [Scale Codec contract](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/ScaleCodec.sol) | - |
+| 2. | KeyspacedDB | <ul><li>[x] </li></ul> | [`ReadChildProofCheck` function in MerklePatricia contract](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L99) | Solidity implementation of Substrate's [KeySpacedDB](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L426). |
+| 3. | MemoryDB | <ul><li>[x] </li></ul> | https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L37, https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/TrieDB.sol#L8 | Solidity implementation of Substrate's [MemoryDB](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/lib.rs#L163). |
+| 4. |  NodeCodec | <ul><li>[x] </li></ul> | [SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol) | Solidity implementation of Substrate's [`NodeCodec` with SCALE encoding](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_codec.rs#L81). |
+| 5. | Node | <ul><li>[x] </li></ul> | [`NodeKind` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/Node.sol#L9) | Solidity implementation of Substrate's [`Node` enum](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L184) that stores the type of node in the trie and essential information thereof. |
+| 6. | NodePlan | <ul><li>[x] </li></ul> | [`NodeHandle` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Node.sol#L26) | Solidity implementation of Substrate's [`NodePlan` enum](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L507). |
+| 7. | NodeHeader | <ul><li>[ ] </li></ul> | ? | Solidity implementation of Substrate's [`NodeHeader` enum](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_header.rs#L26). |
+| 8. | NibbleSlicePlan | <ul><li>[x] </li></ul> | [`NibbleSliceOps` library](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/NibbleSlice.sol#L10) | Solidity implementation of Substrate's [`NibbleSlicePlan` struct](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L454). |
+| 9. | NibbleSlice | <ul><li>[x] </li></ul> | [`NibbleSlice` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/NibbleSlice.sol#L5) | Solidity implementation of Substrate's [`NibbleSlice` struct](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/nibble/mod.rs#L180). |
+| 10. | Layoutv0 | <ul><li>[x] </li></ul> | [SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol) | Solidity implementation of Substrate's [`LayoutV0` struct](https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L60). |  
+| 11. | Layoutv1 | <ul><li>[x] </li></ul> |[SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol) | Solidity implementation of Substrate's [`LayoutV1` struct](https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L63) . |
+| 12. | Trie Verifier | <ul><li>[x] </li></ul> | [`VerifySubstrateProof` function](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/MerklePatricia.sol#L31) | Solidity implementation of the following: [https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/triedb.rs#L233](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/triedb.rs#L233). |
 
 
 Ideally all links inside the above table should include the commit hash,
@@ -32,7 +32,13 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- In the Solidity contracts, Solidity v0.8.17 is used while v0.8.19 is already available. 
+- In general, very few inline comments which makes it harder to understand, especially since this is code concerning the bridging of two ecosystems, hence the likelyhood that developers that use it are fluent in both ecosystem's programming languages is rather low, when compared to code that concerns a single ecosystem, examples:
+  - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/NibbleSlice.sol
+  - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/Node.sol
+  - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/TrieDB.sol
+  - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol
+- There are some incomplete TODO comments in the [EthereumTrieDB.sol contract](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/ethereum/EthereumTrieDB.sol). Please specify them or remove them if they're outdated.
 
 ### Testing Guide Feedback
 
@@ -42,7 +48,7 @@ Summarizes the overall performance plus additional feedback/comments
 - build:
 
   ```bash
-  forge % forge build                                                                                    
+  forge % forge build                                                                                
 
   Missing dependencies found. Installing now...
 
@@ -103,19 +109,20 @@ Summarizes the overall performance plus additional feedback/comments
   test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 8 filtered out; finished in 5.38s
   ```
 
-- [ ] 0 unit tests associated with the Merkle Mountain Range library were found:
+- [x] ~~0 unit tests associated with the Merkle Mountain Range library were found~~ update: command was fixed, now they pass:
 
   ```bash
-  forge % cargo test --lib merkle_mountain_proof
-
-      Finished test [unoptimized + debuginfo] target(s) in 1.01s
+  forge %  cargo test --lib merkle_mountain_range
+      Finished test [unoptimized + debuginfo] target(s) in 1.48s
   warning: the following packages contain code that will be rejected by a future version of Rust: lalrpop v0.19.8
   note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 3`
       Running unittests src/lib.rs (target/debug/deps/solidity_merkle_trees_test-d239cb8d0b4c4c4d)
 
-  running 0 tests
+  running 2 tests
+  test merkle_mountain_range::test_merkle_mountain_range ... ok
+  test merkle_mountain_range::test_mmr_utils ... ok
 
-  test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.00s
+  test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 5.71s
   ```
 
 - [x] 6 unit and fuzz tests associated with the Merkle Patricia Trie library all pass:
@@ -185,99 +192,109 @@ Summarizes the overall performance plus additional feedback/comments
   test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
   ```
 
-  - [x] build docker image for fuzz testing:
+- [x] docker image build for fuzz testing passes:
 
-  ```bash
-  solidity-merkle-trees % docker build -t test .
+    ```bash
+    solidity-merkle-trees % docker build -t test .
 
-  [+] Building 40.1s (6/6) FINISHED                                                                                                                                                                                                              
-  => [internal] load build definition from Dockerfile                                                                                                                                                                                      0.0s
-  => => transferring dockerfile: 36B                                                                                                                                                                                                       0.0s
-  => [internal] load .dockerignore                                                                                                                                                                                                         0.0s
-  => => transferring context: 2B                                                                                                                                                                                                           0.0s
-  => [internal] load metadata for docker.io/rustlang/rust:nightly                                                                                                                                                                          2.7s
-  => [1/2] FROM docker.io/rustlang/rust:nightly@sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e                                                                                                                   18.1s
-  => => resolve docker.io/rustlang/rust:nightly@sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e                                                                                                                    0.0s
-  => => sha256:1efadebfda1423d1b70a0e991e9ff8bb2e3fe0b08d55562359a004c265fc7c86 10.00MB / 10.00MB                                                                                                                                          1.4s
-  => => sha256:11dd8bc4df9f217c50c416015b7dc68bdffeec2b230d81d97e10a19d3122cf03 1.45kB / 1.45kB                                                                                                                                            0.0s
-  => => sha256:b4910c31031a0301ea4f8b7155269014925aeb17c71b869dea3ff907ba294b55 49.24MB / 49.24MB                                                                                                                                          1.8s
-  => => sha256:208fd617b499747daceba851b67da426c285d1e306b316a193f06968123f49da 7.73MB / 7.73MB                                                                                                                                            0.9s
-  => => sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e 1.61kB / 1.61kB                                                                                                                                            0.0s
-  => => sha256:216cdde76a665c27267e42b463c40a5ff895b9dc68e0d0c8dee943912585d9c8 4.58kB / 4.58kB                                                                                                                                            0.0s
-  => => sha256:efe7e7c438113f5e58417f97e7eb0a755b17ee63eebd85a7c3b86a2aad4c993e 52.19MB / 52.19MB                                                                                                                                          3.0s
-  => => sha256:33997ebd7335eb6f55d98725b5fb8e4899166098d6db119cd6f6bc7055ffa858 183.44MB / 183.44MB                                                                                                                                        8.9s
-  => => extracting sha256:b4910c31031a0301ea4f8b7155269014925aeb17c71b869dea3ff907ba294b55                                                                                                                                                 0.7s
-  => => sha256:90c09ef2a62fc78bb65ecfa276790dd34bddd3775207c57f4d8f48772a56f59e 323.14MB / 323.14MB                                                                                                                                       11.9s
-  => => extracting sha256:208fd617b499747daceba851b67da426c285d1e306b316a193f06968123f49da                                                                                                                                                 0.1s
-  => => extracting sha256:1efadebfda1423d1b70a0e991e9ff8bb2e3fe0b08d55562359a004c265fc7c86                                                                                                                                                 0.1s
-  => => extracting sha256:efe7e7c438113f5e58417f97e7eb0a755b17ee63eebd85a7c3b86a2aad4c993e                                                                                                                                                 0.9s
-  => => extracting sha256:33997ebd7335eb6f55d98725b5fb8e4899166098d6db119cd6f6bc7055ffa858                                                                                                                                                 2.5s
-  => => extracting sha256:90c09ef2a62fc78bb65ecfa276790dd34bddd3775207c57f4d8f48772a56f59e                                                                                                                                                 6.0s
-  => [2/2] RUN cargo install cargo-fuzz                                                                                                                                                                                                   19.1s
-  => exporting to image                                                                                                                                                                                                                    0.1s
-  => => exporting layers                                                                                                                                                                                                                   0.1s
-  => => writing image sha256:8f321e7a637d0ac38d0fdfcd0c5d7e9af12f0f61eac4cf902eb44030eef24c20                                                                                                                                              0.0s
-  => => naming to docker.io/library/test 
-  ```
+    [+] Building 40.1s (6/6) FINISHED                                                                                                                                                                                                              
+    => [internal] load build definition from Dockerfile                                                                                                                                                                                      0.0s
+    => => transferring dockerfile: 36B                                                                                                                                                                                                       0.0s
+    => [internal] load .dockerignore                                                                                                                                                                                                         0.0s
+    => => transferring context: 2B                                                                                                                                                                                                           0.0s
+    => [internal] load metadata for docker.io/rustlang/rust:nightly                                                                                                                                                                          2.7s
+    => [1/2] FROM docker.io/rustlang/rust:nightly@sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e                                                                                                                   18.1s
+    => => resolve docker.io/rustlang/rust:nightly@sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e                                                                                                                    0.0s
+    => => sha256:1efadebfda1423d1b70a0e991e9ff8bb2e3fe0b08d55562359a004c265fc7c86 10.00MB / 10.00MB                                                                                                                                          1.4s
+    => => sha256:11dd8bc4df9f217c50c416015b7dc68bdffeec2b230d81d97e10a19d3122cf03 1.45kB / 1.45kB                                                                                                                                            0.0s
+    => => sha256:b4910c31031a0301ea4f8b7155269014925aeb17c71b869dea3ff907ba294b55 49.24MB / 49.24MB                                                                                                                                          1.8s
+    => => sha256:208fd617b499747daceba851b67da426c285d1e306b316a193f06968123f49da 7.73MB / 7.73MB                                                                                                                                            0.9s
+    => => sha256:967d12679b291e162943b3376dd2b86e2dde648cfe786da90c50d56272165b6e 1.61kB / 1.61kB                                                                                                                                            0.0s
+    => => sha256:216cdde76a665c27267e42b463c40a5ff895b9dc68e0d0c8dee943912585d9c8 4.58kB / 4.58kB                                                                                                                                            0.0s
+    => => sha256:efe7e7c438113f5e58417f97e7eb0a755b17ee63eebd85a7c3b86a2aad4c993e 52.19MB / 52.19MB                                                                                                                                          3.0s
+    => => sha256:33997ebd7335eb6f55d98725b5fb8e4899166098d6db119cd6f6bc7055ffa858 183.44MB / 183.44MB                                                                                                                                        8.9s
+    => => extracting sha256:b4910c31031a0301ea4f8b7155269014925aeb17c71b869dea3ff907ba294b55                                                                                                                                                 0.7s
+    => => sha256:90c09ef2a62fc78bb65ecfa276790dd34bddd3775207c57f4d8f48772a56f59e 323.14MB / 323.14MB                                                                                                                                       11.9s
+    => => extracting sha256:208fd617b499747daceba851b67da426c285d1e306b316a193f06968123f49da                                                                                                                                                 0.1s
+    => => extracting sha256:1efadebfda1423d1b70a0e991e9ff8bb2e3fe0b08d55562359a004c265fc7c86                                                                                                                                                 0.1s
+    => => extracting sha256:efe7e7c438113f5e58417f97e7eb0a755b17ee63eebd85a7c3b86a2aad4c993e                                                                                                                                                 0.9s
+    => => extracting sha256:33997ebd7335eb6f55d98725b5fb8e4899166098d6db119cd6f6bc7055ffa858                                                                                                                                                 2.5s
+    => => extracting sha256:90c09ef2a62fc78bb65ecfa276790dd34bddd3775207c57f4d8f48772a56f59e                                                                                                                                                 6.0s
+    => [2/2] RUN cargo install cargo-fuzz                                                                                                                                                                                                   19.1s
+    => exporting to image                                                                                                                                                                                                                    0.1s
+    => => exporting layers                                                                                                                                                                                                                   0.1s
+    => => writing image sha256:8f321e7a637d0ac38d0fdfcd0c5d7e9af12f0f61eac4cf902eb44030eef24c20                                                                                                                                              0.0s
+    => => naming to docker.io/library/test 
+    ```
 
-- [ ] running the fuzz test `trie_proof_valid` throws an error:
+- [x] running the fuzz test `trie_proof_valid` succesfully executes:
 
   ```bash
   solidity-merkle-trees % docker run --memory="24g" --rm --user root -v "$PWD":/app -w /app/forge/fuzz test cargo +nightly fuzz run trie_proof_valid
 
-      Updating git repository `https://github.com/paritytech/substrate.git`
-      Updating git repository `https://github.com/polytope-labs/merkle-mountain-range`
-      Updating crates.io index
-      Updating git repository `https://github.com/gakonst/ethers-rs`
-      Updating git repository `https://github.com/foundry-rs/foundry`
-      Updating git repository `https://github.com/polytope-labs/patricia-merkle-trie`
-      Updating git repository `https://github.com/polytope-labs/rs-merkle`
-  Downloading crates ...
-    Downloaded byteorder v1.4.3
+  (...)
 
-    (...)
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 70113
+  Logs VerifyKeys: []
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 70137
+  Logs VerifyKeys: []
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 86613
+  Logs VerifyKeys: []
 
-    Downloaded byte-tools v0.3.1
-    Compiling proc-macro2 v1.0.49
-    Compiling quote v1.0.23
-
-    (...)
-    
-    Compiling forge-fmt v0.2.0 (https://github.com/foundry-rs/foundry?rev=b2baca32bd1a3b31b6f6ae2950a14c5bb8607cdb#b2baca32)
-  error: could not compile `ethers-solc` (lib)
-
-  Caused by:
-    process didn't exit successfully: `rustc --crate-name ethers_solc --edition=2021 /usr/local/cargo/git/checkouts/ethers-rs-c3a7c0a0ae0fe6be/2eb56e6/ethers-solc/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C embed-bitcode=no --cfg 'feature="async"' --cfg 'feature="full"' --cfg 'feature="futures-util"' --cfg 'feature="sha2"' --cfg 'feature="svm"' --cfg 'feature="svm-builds"' --cfg 'feature="svm-solc"' --cfg 'feature="tests"' -C metadata=f69445e6a958ef6c -C extra-filename=-f69445e6a958ef6c --out-dir /app/forge/target/aarch64-unknown-linux-gnu/release/deps --target aarch64-unknown-linux-gnu -L dependency=/app/forge/target/aarch64-unknown-linux-gnu/release/deps -L dependency=/app/forge/target/release/deps --extern cfg_if=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libcfg_if-5f74c00a537f008b.rmeta --extern dunce=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libdunce-0495dd100964742f.rmeta --extern ethers_core=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libethers_core-af9747ca6b0758de.rmeta --extern futures_util=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libfutures_util-13b2c648680f3560.rmeta --extern glob=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libglob-95c83e1ffec8cf90.rmeta --extern hex=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libhex-d6bb48b3d6b80161.rmeta --extern home=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libhome-e22ece10a2f64069.rmeta --extern md5=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libmd5-4d6da31dd605b33c.rmeta --extern num_cpus=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libnum_cpus-a04e9684f49cbad9.rmeta --extern once_cell=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libonce_cell-7df0b10c32b64bbe.rmeta --extern path_slash=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libpath_slash-f5316ce453a0739e.rmeta --extern rayon=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/librayon-49c786ef4b0b6210.rmeta --extern regex=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libregex-ea587b281833c888.rmeta --extern semver=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsemver-81991fd8e14033d9.rmeta --extern serde=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libserde-72a65a2686e64e68.rmeta --extern serde_json=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libserde_json-bf27c8b002394120.rmeta --extern sha2=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsha2-71db3321b3b35eaf.rmeta --extern solang_parser=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsolang_parser-a4f604cf2fe78357.rmeta --extern svm=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsvm_lib-8b1cf0279632991d.rmeta --extern svm_builds=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsvm_rs_builds-1073310d061d175f.rmeta --extern thiserror=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libthiserror-9eef04d8eb929bf7.rmeta --extern tiny_keccak=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtiny_keccak-6306ff926ac235d8.rmeta --extern tokio=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtokio-65f2f2cc9477a590.rmeta --extern tracing=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtracing-8e51370cdf152ac6.rmeta --extern walkdir=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libwalkdir-8a24133d6d019a4b.rmeta --extern yansi=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libyansi-090b2966ea8ed641.rmeta --cap-lints allow -Cpasses=sancov-module -Cllvm-args=-sanitizer-coverage-level=4 -Cllvm-args=-sanitizer-coverage-inline-8bit-counters -Cllvm-args=-sanitizer-coverage-pc-table -Cllvm-args=-sanitizer-coverage-trace-compares --cfg fuzzing -Clink-dead-code -Zsanitizer=address -Cllvm-args=-sanitizer-coverage-stack-depth -Cdebug-assertions -C codegen-units=1 -L native=/app/forge/target/aarch64-unknown-linux-gnu/release/build/ring-29484fff51ea3232/out` (signal: 9, SIGKILL: kill)
-  warning: build failed, waiting for other jobs to finish...
-  Error: failed to build fuzz script: ASAN_OPTIONS="detect_odr_violation=0" RUSTFLAGS="-Cpasses=sancov-module -Cllvm-args=-sanitizer-coverage-level=4 -Cllvm-args=-sanitizer-coverage-inline-8bit-counters -Cllvm-args=-sanitizer-coverage-pc-table -Cllvm-args=-sanitizer-coverage-trace-compares --cfg fuzzing -Clink-dead-code -Zsanitizer=address -Cllvm-args=-sanitizer-coverage-stack-depth -Cdebug-assertions -C codegen-units=1" "cargo" "build" "--manifest-path" "/app/forge/fuzz/Cargo.toml" "--target" "aarch64-unknown-linux-gnu" "--release" "--bin" "trie_proof_valid"
   ```
 
-  - [ ] running the fuzz test `trie_proof_invalid` throws an error as well:
+- [x] running the fuzz test `trie_proof_invalid` succesfully executes:
 
   ```bash
   solidity-merkle-trees % docker run --memory="24g" --rm --user root -v "$PWD":/app -w /app/forge/fuzz test cargo +nightly fuzz run trie_proof_invalid
 
-      Updating git repository `https://github.com/paritytech/substrate.git`
-      Updating git repository `https://github.com/polytope-labs/merkle-mountain-range`
-      Updating crates.io index
-      Updating git repository `https://github.com/gakonst/ethers-rs`
-      Updating git repository `https://github.com/foundry-rs/foundry`
-      Updating git repository `https://github.com/polytope-labs/patricia-merkle-trie`
-      Updating git repository `https://github.com/polytope-labs/rs-merkle`
-  Downloading crates ...
-    Downloaded base16ct v0.1.1
+  (...)
 
-    (...)
-
-    Downloaded object v0.30.3
-    Compiling ethers-solc v1.0.2 (https://github.com/gakonst/ethers-rs#2eb56e69)
-
-    (...)
-
-    Compiling foundry-evm v0.2.0 (https://github.com/foundry-rs/foundry?rev=b2baca32bd1a3b31b6f6ae2950a14c5bb8607cdb#b2baca32)
-  error: could not compile `ethers-solc` (lib)
-
-  Caused by:
-    process didn't exit successfully: `rustc --crate-name ethers_solc --edition=2021 /usr/local/cargo/git/checkouts/ethers-rs-c3a7c0a0ae0fe6be/2eb56e6/ethers-solc/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C embed-bitcode=no --cfg 'feature="async"' --cfg 'feature="full"' --cfg 'feature="futures-util"' --cfg 'feature="sha2"' --cfg 'feature="svm"' --cfg 'feature="svm-builds"' --cfg 'feature="svm-solc"' --cfg 'feature="tests"' -C metadata=f69445e6a958ef6c -C extra-filename=-f69445e6a958ef6c --out-dir /app/forge/target/aarch64-unknown-linux-gnu/release/deps --target aarch64-unknown-linux-gnu -L dependency=/app/forge/target/aarch64-unknown-linux-gnu/release/deps -L dependency=/app/forge/target/release/deps --extern cfg_if=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libcfg_if-5f74c00a537f008b.rmeta --extern dunce=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libdunce-0495dd100964742f.rmeta --extern ethers_core=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libethers_core-af9747ca6b0758de.rmeta --extern futures_util=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libfutures_util-13b2c648680f3560.rmeta --extern glob=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libglob-95c83e1ffec8cf90.rmeta --extern hex=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libhex-d6bb48b3d6b80161.rmeta --extern home=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libhome-e22ece10a2f64069.rmeta --extern md5=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libmd5-4d6da31dd605b33c.rmeta --extern num_cpus=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libnum_cpus-a04e9684f49cbad9.rmeta --extern once_cell=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libonce_cell-7df0b10c32b64bbe.rmeta --extern path_slash=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libpath_slash-f5316ce453a0739e.rmeta --extern rayon=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/librayon-49c786ef4b0b6210.rmeta --extern regex=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libregex-ea587b281833c888.rmeta --extern semver=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsemver-81991fd8e14033d9.rmeta --extern serde=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libserde-72a65a2686e64e68.rmeta --extern serde_json=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libserde_json-bf27c8b002394120.rmeta --extern sha2=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsha2-71db3321b3b35eaf.rmeta --extern solang_parser=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsolang_parser-a4f604cf2fe78357.rmeta --extern svm=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsvm_lib-8b1cf0279632991d.rmeta --extern svm_builds=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libsvm_rs_builds-1073310d061d175f.rmeta --extern thiserror=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libthiserror-9eef04d8eb929bf7.rmeta --extern tiny_keccak=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtiny_keccak-6306ff926ac235d8.rmeta --extern tokio=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtokio-65f2f2cc9477a590.rmeta --extern tracing=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libtracing-8e51370cdf152ac6.rmeta --extern walkdir=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libwalkdir-8a24133d6d019a4b.rmeta --extern yansi=/app/forge/target/aarch64-unknown-linux-gnu/release/deps/libyansi-090b2966ea8ed641.rmeta --cap-lints allow -Cpasses=sancov-module -Cllvm-args=-sanitizer-coverage-level=4 -Cllvm-args=-sanitizer-coverage-inline-8bit-counters -Cllvm-args=-sanitizer-coverage-pc-table -Cllvm-args=-sanitizer-coverage-trace-compares --cfg fuzzing -Clink-dead-code -Zsanitizer=address -Cllvm-args=-sanitizer-coverage-stack-depth -Cdebug-assertions -C codegen-units=1 -L native=/app/forge/target/aarch64-unknown-linux-gnu/release/build/ring-29484fff51ea3232/out` (signal: 9, SIGKILL: kill)
-  warning: build failed, waiting for other jobs to finish...
+  INFO: Running with entropic power schedule (0xFF, 100).
+  INFO: Seed: 978142482
+  INFO: Loaded 1 modules   (5397285 inline 8-bit counters): 5397285 [0x55cad69cd500, 0x55cad6ef3025), 
+  INFO: Loaded 1 PC tables (5397285 PCs): 5397285 [0x55cad6ef3028,0x55cadc14e278), 
+  INFO:        0 files found in /app/forge/fuzz/corpus/trie_proof_invalid
+  INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+  INFO: A corpus is not provided, starting from an empty corpus
+  #2	INITED cov: 20 ft: 21 corp: 1/1b exec/s: 0 rss: 263Mb
+  #3	NEW    cov: 20 ft: 22 corp: 2/3b lim: 4 exec/s: 0 rss: 263Mb L: 2/2 MS: 1 InsertByte-
+    NEW_FUNC[1/6]: 0x55cac3cc28e0  (/app/forge/target/x86_64-unknown-linux-gnu/release/trie_proof_invalid+0x878c8e0) (BuildId: fba2fbc0f943c2bc4fc67fdac971b5ad200c69eb)
+    NEW_FUNC[2/6]: 0x55cac3cd9f10  (/app/forge/target/x86_64-unknown-linux-gnu/release/trie_proof_invalid+0x87a3f10) (BuildId: fba2fbc0f943c2bc4fc67fdac971b5ad200c69eb)
+  #7	NEW    cov: 63 ft: 66 corp: 3/7b lim: 4 exec/s: 0 rss: 264Mb L: 4/4 MS: 4 ChangeBit-InsertByte-ChangeBit-InsertByte-
+  #175	REDUCE cov: 63 ft: 66 corp: 3/6b lim: 4 exec/s: 0 rss: 265Mb L: 1/4 MS: 3 ChangeByte-CopyPart-EraseBytes-
+  #384	NEW    cov: 66 ft: 69 corp: 4/12b lim: 6 exec/s: 0 rss: 265Mb L: 6/6 MS: 4 ShuffleBytes-ShuffleBytes-ShuffleBytes-CopyPart-
+  #595	NEW    cov: 68 ft: 71 corp: 5/19b lim: 8 exec/s: 0 rss: 266Mb L: 7/7 MS: 1 InsertByte-
+  #596	NEW    cov: 73 ft: 76 corp: 6/27b lim: 8 exec/s: 0 rss: 266Mb L: 8/8 MS: 1 CopyPart-
+  #645	NEW    cov: 74 ft: 77 corp: 7/35b lim: 8 exec/s: 0 rss: 266Mb L: 8/8 MS: 4 ChangeBinInt-ChangeBit-ChangeBinInt-CMP- DE: "\001\000\000\000\000\000\000\000"-
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
+  Slowest unit: 13 s:
+  artifact_prefix='/app/forge/fuzz/artifacts/trie_proof_invalid/'; Test unit written to /app/forge/fuzz/artifacts/trie_proof_invalid/slow-unit-c36ee1f534bc62032e8bc87d2ed85d00ea941769
+  Base64: AQEAAAAAAAAAAAA=
+    NEW_FUNC[1/4982]: 0x55cac3cc0aa0  (/app/forge/target/x86_64-unknown-linux-gnu/release/trie_proof_invalid+0x878aaa0) (BuildId: fba2fbc0f943c2bc4fc67fdac971b5ad200c69eb)
+    NEW_FUNC[2/4982]: 0x55cac3cc1af0  (/app/forge/target/x86_64-unknown-linux-gnu/release/trie_proof_invalid+0x878baf0) (BuildId: fba2fbc0f943c2bc4fc67fdac971b5ad200c69eb)
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
+  #955	NEW    cov: 43628 ft: 43154 corp: 8/46b lim: 11 exec/s: 59 rss: 1359Mb L: 11/11 MS: 4 InsertByte-PersAutoDict-PersAutoDict-CopyPart- DE: "\001\000\000\000\000\000\000\000"-"\001\000\000\000\000\000\000\000"-
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
+  #956	NEW    cov: 43635 ft: 44625 corp: 9/57b lim: 11 exec/s: 50 rss: 1359Mb L: 11/11 MS: 1 ShuffleBytes-
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
+  #982	NEW    cov: 43635 ft: 44627 corp: 10/68b lim: 11 exec/s: 46 rss: 1359Mb L: 11/11 MS: 1 CopyPart-
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
+  names: ["MerkleMountainRangeTest", "MerkleMultiProofTest", "MerklePatriciaTest"]
+  Gas used VerifyKeys: 42871
+  Logs VerifyKeys: []
   ```
+
