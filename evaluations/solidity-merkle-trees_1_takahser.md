@@ -38,7 +38,7 @@ which was used for testing the delivery. It should also be checked if the softwa
   - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/Node.sol
   - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/TrieDB.sol
   - https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol
-- There are some incomplete TODO comments in the [EthereumTrieDB.sol contract](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/ethereum/EthereumTrieDB.sol). Please specify them or remove them if they're outdated.
+- ~~There are some incomplete TODO comments in the [EthereumTrieDB.sol contract](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/ethereum/EthereumTrieDB.sol). Please specify them or remove them if they're outdated.~~ => ignored, since [not part of the grant](https://github.com/w3f/Grant-Milestone-Delivery/pull/774#discussion_r1175427387)
 
 ### Testing Guide Feedback
 
