@@ -63,7 +63,7 @@ Received waiting validators
 Updated Kusama 1kv data
 Updated Polkadot 1kv data
 ```
-Running `ng test --code-coverage` on the front-end generates very low coverage:
+Running `ng test --code-coverage` on the front-end generates very low coverage. Consider adding more unit tests for components.
 ```js
 ✔ Browser application bundle generation complete.
 24 04 2023 21:04:36.926:WARN [karma]: No captured browser, open http://localhost:9876/
