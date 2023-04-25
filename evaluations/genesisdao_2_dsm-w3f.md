@@ -17,6 +17,88 @@
 | 3. | Frontend Implementation	 |<ul><li>[ ] </li></ul>| https://genesis-dao.org | Not fully evaluated yet |
 | 4. | Design and Product Flow |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/Proposal.pdf | Not fully evaluated yet |
 
+## Evaluation V3
+
+
+I still with the same problem for running the node using docker:
+
+```
+genesis-dao  | error: failed to run custom build command for `local-runtime v4.0.0-dev (/var/www/genesis-dao/runtime/local)`
+genesis-dao  |
+genesis-dao  | Caused by:
+genesis-dao  |   process didn't exit successfully: `/var/www/genesis-dao/target/release/build/local-runtime-220d662ede7528cd/build-script-build` (exit status: 1)
+genesis-dao  |   --- stderr
+genesis-dao  |   Rust WASM toolchain not installed, please install it!
+genesis-dao  |
+genesis-dao  |   Further error information:
+genesis-dao  |   ------------------------------------------------------------
+genesis-dao  |  	Compiling wasm-test v1.0.0 (/tmp/.tmpcNlA6a)
+genesis-dao  |   error[E0463]: can't find crate for `std`
+genesis-dao  | 	|
+genesis-dao  | 	= note: the `wasm32-unknown-unknown` target may not be installed
+genesis-dao  | 	= help: consider downloading the target with `rustup target add wasm32-unknown-unknown`
+genesis-dao  | 	= help: consider building the standard library from source with `cargo build -Zbuild-std`
+genesis-dao  |
+genesis-dao  |   error: cannot find macro `println` in this scope
+genesis-dao  |	--> src/main.rs:3:5
+genesis-dao  | 	|
+genesis-dao  |   3 |             	println!("{}", env!("RUSTC_VERSION"));
+genesis-dao  | 	|             	^^^^^^^
+genesis-dao  |
+genesis-dao  |   error: requires `sized` lang_item
+genesis-dao  |
+genesis-dao  |   For more information about this error, try `rustc --explain E0463`.
+genesis-dao  |   error: could not compile `wasm-test` due to 3 previous errors
+genesis-dao  |   ------------------------------------------------------------
+genesis-dao  |
+genesis-dao  | warning: build failed, waiting for other jobs to finish...
+genesis-dao exited with code 101
+```
+
+### Service
+
+This time, running the service with docker and using the external node worked well but when I tried to use the local node it failed to connect.
+
+```
+listener  | ConnectionRefusedError while initializing blockchain connection. Retrying in 10s ...
+listener  | ConnectionRefusedError while initializing blockchain connection. Retrying in 30s ...
+listener  | ConnectionRefusedError while initializing blockchain connection. Retrying in 60s ...
+```
+
+The ideal scenario would be to run the service with the node using docker. I tested without docker and got this error running `make build`:
+
+```
+pre-commit install
+Traceback (most recent call last):
+  File "/home/user/.local/bin/pre-commit", line 5, in <module>
+	from pre_commit.main import main
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/main.py", line 12, in <module>
+	from pre_commit.commands.autoupdate import autoupdate
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/commands/autoupdate.py", line 19, in <module>
+	from pre_commit.store import Store
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/store.py", line 6, in <module>
+	import sqlite3
+  File "/usr/local/lib/python3.11/sqlite3/__init__.py", line 57, in <module>
+	from sqlite3.dbapi2 import *
+  File "/usr/local/lib/python3.11/sqlite3/dbapi2.py", line 27, in <module>
+	from _sqlite3 import *
+ModuleNotFoundError: No module named '_sqlite3'
+make: *** [Makefile:11: build] Error 1
+```
+
+This error seems to be a dependency one. Instructions are saying that Python 3.11 is required with some dependencies but there is no script for doing the installation or at least links for where the user can find how to install them. I thought that was trivial for installing this, however after getting this problem for a while I think would be better to have instructions to install the dependencies for the project, including Python 3.11 and the libs required, such as sqlite3.
+
+
+I could start the service, but it doesn't seams to be connected with the node. When I tried to connect my wallet in the frontend these logs appeared in the service, including the 404 code for some requests:
+
+```
+HTTP GET /accounts/?limit=5&offset=10 200 [0.02, 127.0.0.1:39216]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 304 [0.00, 127.0.0.1:39226]
+HTTP GET /static/drf-yasg/redoc/redoc.standalone.js.map 304 [0.00, 127.0.0.1:39226]
+HTTP GET /accounts/5DhZhZ5swfbobJMkcpYEm45aHa8LWyCkXGtjYBjKVPekQacw/ 404 [0.02, 127.0.0.1:39250]
+HTTP GET /accounts/5DhZhZ5swfbobJMkcpYEm45aHa8LWyCkXGtjYBjKVPekQacw/ 404 [0.02, 127.0.0.1:39250]
+```
+
 ## Evaluation V2
 
 ### Docker
