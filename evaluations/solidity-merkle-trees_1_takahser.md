@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/solidity-trie-verifier.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -19,7 +19,7 @@
 | 4. |  NodeCodec | <ul><li>[x] </li></ul> | [SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol) | Solidity implementation of Substrate's [`NodeCodec` with SCALE encoding](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_codec.rs#L81). |
 | 5. | Node | <ul><li>[x] </li></ul> | [`NodeKind` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/Node.sol#L9) | Solidity implementation of Substrate's [`Node` enum](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L184) that stores the type of node in the trie and essential information thereof. |
 | 6. | NodePlan | <ul><li>[x] </li></ul> | [`NodeHandle` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/Node.sol#L26) | Solidity implementation of Substrate's [`NodePlan` enum](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L507). |
-| 7. | NodeHeader | <ul><li>[ ] </li></ul> | ? | Solidity implementation of Substrate's [`NodeHeader` enum](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_header.rs#L26). |
+| 7. | NodeHeader | <ul><li>[x] </li></ul> | https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol#L26-L62 | Solidity implementation of Substrate's [`NodeHeader` enum](https://github.com/paritytech/substrate/blob/129fee774a6d185d117a57fd1e81b3d0d05ad747/primitives/trie/src/node_header.rs#L26). |
 | 8. | NibbleSlicePlan | <ul><li>[x] </li></ul> | [`NibbleSliceOps` library](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/NibbleSlice.sol#L10) | Solidity implementation of Substrate's [`NibbleSlicePlan` struct](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/node.rs#L454). |
 | 9. | NibbleSlice | <ul><li>[x] </li></ul> | [`NibbleSlice` struct](https://github.com/polytope-labs/solidity-merkle-trees/blob/82698e828b883eeb1ee0f658956c0c0ad26f5f49/src/trie/NibbleSlice.sol#L5) | Solidity implementation of Substrate's [`NibbleSlice` struct](https://github.com/paritytech/trie/blob/42f086bc8748f25e978da10a9cefdb396a72b158/trie-db/src/nibble/mod.rs#L180). |
 | 10. | Layoutv0 | <ul><li>[x] </li></ul> | [SubstrateTrieDB.sol](https://github.com/polytope-labs/solidity-merkle-trees/blob/9ec345c82b9adbe49c024a29588e5ac631976639/src/trie/substrate/SubstrateTrieDB.sol) | Solidity implementation of Substrate's [`LayoutV0` struct](https://github.com/paritytech/substrate/blob/ece32a72e934f6fe6705a7d418bbf3e71b4931ad/primitives/trie/src/lib.rs#L60). |  
