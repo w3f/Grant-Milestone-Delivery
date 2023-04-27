@@ -86,3 +86,119 @@ docker build -t silentdata-example .
  => => naming to docker.io/library/silentdata-example 
  ```
  Docker image successfully builds and runs for the pallet as well. I'm also able to manually build the pallet into the node.
+ 
+ Instagram checks work in Docker but `npm run build` fails with the following errors:
+ ```
+ npm run build
+
+> examples@1.0.0 build
+> npm run clean && tsc
+
+
+> examples@1.0.0 clean
+> rm -rf ./dist
+
+src/index.ts:1:19 - error TS2307: Cannot find module 'yargs' or its corresponding type declarations.
+
+1 import yargs from 'yargs'
+                    ~~~~~~~
+
+src/index.ts:4:20 - error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+4 const argv = yargs(process.argv.slice(2))
+                     ~~~~~~~
+
+src/index.ts:29:3 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+29   console.log(`An error occurred: ${error.message}`)
+     ~~~~~~~
+
+src/lib.ts:1:68 - error TS2307: Cannot find module '@appliedblockchain/silentdata-node' or its corresponding type declarations.
+
+1 import { silentdata, Silentdata, CheckType, CheckBlockchain } from '@appliedblockchain/silentdata-node'
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/lib.ts:13:3 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+13   console.log(check.data)
+     ~~~~~~~
+
+src/util.ts:1:62 - error TS2307: Cannot find module '@appliedblockchain/silentdata-node' or its corresponding type declarations.
+
+1 import { CheckResource, InstagramCheckCertificateData } from '@appliedblockchain/silentdata-node'
+                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/util.ts:2:23 - error TS2307: Cannot find module 'secp256k1' or its corresponding type declarations.
+
+2 import secp256k1 from 'secp256k1'
+                        ~~~~~~~~~~~
+
+src/util.ts:3:20 - error TS2307: Cannot find module 'keccak' or its corresponding type declarations.
+
+3 import create from 'keccak'
+                     ~~~~~~~~
+
+src/util.ts:35:21 - error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+35   const signature = Buffer.from(signatureHex, 'hex')
+                       ~~~~~~
+
+src/util.ts:36:19 - error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+36   const message = Buffer.from(messageHex, 'hex')
+                     ~~~~~~
+
+src/util.ts:39:22 - error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+39   const signingKey = Buffer.from(signingKeyHex, 'hex')
+                        ~~~~~~
+
+src/util.ts:42:9 - error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+42     if (Buffer.compare(signingKey, Buffer.from(recoveredKey)) === 0) {
+           ~~~~~~
+
+src/util.ts:42:36 - error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+42     if (Buffer.compare(signingKey, Buffer.from(recoveredKey)) === 0) {
+                                      ~~~~~~
+
+src/util.ts:50:3 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+50   console.log('Proof certificate:')
+     ~~~~~~~
+
+src/util.ts:51:3 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+51   console.log(parseCertificateData(check))
+     ~~~~~~~
+
+src/util.ts:52:3 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+52   console.log('Proof verification:')
+     ~~~~~~~
+
+src/util.ts:53:37 - error TS2550: Property 'entries' does not exist on type 'ObjectConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2017' or later.
+
+53   for (const [key, value] of Object.entries(check.data)) {
+                                       ~~~~~~~
+
+src/util.ts:55:7 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+55       console.log(key + ' = ' + addRecoveryId(value, check.data.rawData, check.data.signingKey))
+         ~~~~~~~
+
+src/util.ts:57:7 - error TS2584: Cannot find name 'console'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+57       console.log(key + ' = ' + value)
+         ~~~~~~~
+
+
+Found 19 errors in 3 files.
+
+Errors  Files
+     3  src/index.ts:1
+     2  src/lib.ts:1
+    14  src/util.ts:1
+```
+
