@@ -15,6 +15,6 @@
 | **0c.** | Testing and Testing Guide |[link](https://github.com/WeteeDAO/dao-entrance/blob/main/docs/testing-guide.md#join-dao)| unit test `flutter test`. |
 | **0d.** | Docker |-| Especially sorry, because this is a flutter ui project, we cannot provide docker with it. |
 | 1. | DAO UI on native flutter View |[link](https://github.com/dao-entrance/app)| A flutter navive module 1. RoadMap Target Management 2. DAO Share Management 3. Core Team, Association Management 4. Workflow Management (board/task) 5. Financial Management 6. Task reward management 7. Hot-plug voting management 8. Contribution Value, Medal Management 9. Hierarchical Management |
-| 3. | [Tests link](https://github.com/WeteeDAO/dao-entrance/blob/main/docs/install_and_run.md#run-e2e-dao) | End to end testing of window/mac/list/ios/android full platform to ensure application security and stability |
+| 2. | [Tests link](https://github.com/WeteeDAO/dao-entrance/blob/main/docs/install_and_run.md#run-e2e-dao) | End to end testing of window/mac/list/ios/android full platform to ensure application security and stability |
 
 
