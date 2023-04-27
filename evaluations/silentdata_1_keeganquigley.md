@@ -85,4 +85,4 @@ docker build -t silentdata-example .
  => => writing image sha256:166414d1cac1dc8c830fa4e2cd3f65cbb25aa749f67882a2fc6537af75cb7b5c                          0.0s
  => => naming to docker.io/library/silentdata-example 
  ```
- 
+ Docker image successfully builds and runs for the pallet as well. I'm also able to manually build the pallet into the node.
