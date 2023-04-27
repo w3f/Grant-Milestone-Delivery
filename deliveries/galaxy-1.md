@@ -10,7 +10,7 @@
 **Deliverables**
 
 | Number | Deliverable | Link | Notes |
-| -----: | ----------- | ------------- |
+|-----|-----------|-------------|-----|
 | 1. | Frontend: Galaxy Web App | https://github.com/7flash/galaxy-polkadot/tree/master | includes docs and tests |
 
 **Additional Information**
