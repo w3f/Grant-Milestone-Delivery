@@ -38,3 +38,13 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+4 tests run successfully for the smart-contract:
+```rust
+running 4 tests
+test silentdata::tests::decode_works ... ok
+test silentdata::tests::sd_input_works ... ok
+test silentdata::tests::verify_works ... ok
+test silentdata::tests::verify_and_decode_works ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
