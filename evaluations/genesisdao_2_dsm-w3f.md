@@ -17,6 +17,208 @@
 | 3. | Frontend Implementation	 |<ul><li>[ ] </li></ul>| https://genesis-dao.org | Not fully evaluated yet |
 | 4. | Design and Product Flow |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/Proposal.pdf | Not fully evaluated yet |
 
+## Evaluation V4
+
+### Docker
+
+I tested the docker and got again the same error, but I was able to solve this by modifying the files:
+
+Dockerfile
+```
+RUN rustup install nightly-2023-03-13-x86_64-unknown-linux-gnu 
+
+RUN rustup default nightly-2023-03-13-x86_64-unknown-linux-gnu 
+
+RUN rustup target add wasm32-unknown-unknown
+
+RUN cargo build --release --features local-node
+```
+
+docker-compose.yml
+```
+services:
+  chain:
+    build: .
+    ports:
+      - "9944:9944"
+    environment:
+      - CARGO_HOME=/var/www/genesis-dao/.cargo
+```
+
+And with this, Docker started the node, service, and front end. But it doesn't seem to be connected. I tried to connect my wallet and received the error "n.balance is undefined", seems to be the same error I received trying without docker "account.balance is undefined".
+
+I checked the containers and genesis-dao-node-listener-1 has some problems.
+```
+user@localhost:~/Documents/genesisdao/genesis-dao-node$ docker ps
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+035b9fb73085   genesis-dao-node-web      "docker-entrypoint.s…"   22 seconds ago   Up 19 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   genesis-dao-node-web-1
+07c94345eab7   genesis-dao-node-worker   "./entrypoint.sh wor…"   22 seconds ago   Up 20 seconds                                               genesis-dao-node-worker-1
+337dd21213be   genesis-dao-node-app      "./entrypoint.sh web"    22 seconds ago   Up 20 seconds   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   genesis-dao-node-app-1
+283cfb219d40   postgres:14.1-alpine      "docker-entrypoint.s…"   22 seconds ago   Up 21 seconds   0.0.0.0:5433->5432/tcp, :::5433->5432/tcp   genesis-dao-node-db-1
+1ee29e7ce2c4   genesis-dao-node-chain    "./target/release/ge…"   22 seconds ago   Up 21 seconds   0.0.0.0:9944->9944/tcp, :::9944->9944/tcp   genesis-dao-node-chain-1
+d99b68c5bf16   redis:5-alpine            "docker-entrypoint.s…"   22 seconds ago   Up 21 seconds   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   genesis-dao-node-cache-1
+```
+```
+user@localhost:~/Documents/genesisdao/genesis-dao-node$ docker ps -a
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                      PORTS                                       NAMES
+035b9fb73085   genesis-dao-node-web        "docker-entrypoint.s…"   25 seconds ago   Up 22 seconds               0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   genesis-dao-node-web-1
+07c94345eab7   genesis-dao-node-worker     "./entrypoint.sh wor…"   25 seconds ago   Up 23 seconds                                                           genesis-dao-node-worker-1
+337dd21213be   genesis-dao-node-app        "./entrypoint.sh web"    25 seconds ago   Up 23 seconds               0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   genesis-dao-node-app-1
+3e08c11c762d   genesis-dao-node-listener   "./entrypoint.sh lis…"   25 seconds ago   Exited (1) 20 seconds ago                                               genesis-dao-node-listener-1
+283cfb219d40   postgres:14.1-alpine        "docker-entrypoint.s…"   25 seconds ago   Up 24 seconds               0.0.0.0:5433->5432/tcp, :::5433->5432/tcp   genesis-dao-node-db-1
+1ee29e7ce2c4   genesis-dao-node-chain      "./target/release/ge…"   25 seconds ago   Up 24 seconds               0.0.0.0:9944->9944/tcp, :::9944->9944/tcp   genesis-dao-node-chain-1
+d99b68c5bf16   redis:5-alpine              "docker-entrypoint.s…"   25 seconds ago   Up 24 seconds               0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   genesis-dao-node-cache-1
+```
+```
+user@localhost:~/Documents/genesisdao/genesis-dao-node$ docker logs genesis-dao-node-listener-1 
+Syncing initial accounts...
+Traceback (most recent call last):
+  File "/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "core_account" does not exist
+LINE 1: INSERT INTO "core_account" ("created_at", "updated_at", "add...
+                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/app/manage.py", line 22, in <module>
+    main()
+  File "/usr/src/app/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/venv/lib/python3.11/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/venv/lib/python3.11/site-packages/django/core/management/__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/venv/lib/python3.11/site-packages/django/core/management/base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/venv/lib/python3.11/site-packages/django/core/management/base.py", line 448, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/core/management/commands/blockchain_event_listener.py", line 8, in handle
+    substrate_service.sync_initial_accs()  # todo check which data to preload
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/core/substrate.py", line 133, in sync_initial_accs
+    models.Account.objects.bulk_create(
+  File "/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/django/db/models/query.py", line 799, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1825, in _batched_insert
+    self._insert(
+  File "/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "core_account" does not exist
+LINE 1: INSERT INTO "core_account" ("created_at", "updated_at", "add...
+```
+
+The logs from genesis-dao-node-db-1 seem to have some problem with Alice's address
+```
+user@localhost:~/Documents/genesisdao/genesis-dao-node$ docker logs genesis-dao-node-db-1
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+sh: locale: not found
+2023-04-27 15:51:13.304 UTC [30] WARNING:  no usable system locales were found
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+	pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2023-04-27 15:51:13.944 UTC [36] LOG:  starting PostgreSQL 14.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
+2023-04-27 15:51:13.946 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-27 15:51:13.951 UTC [37] LOG:  database system was shut down at 2023-04-27 15:51:13 UTC
+2023-04-27 15:51:13.955 UTC [36] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down....2023-04-27 15:51:14.125 UTC [36] LOG:  received fast shutdown request
+2023-04-27 15:51:14.126 UTC [36] LOG:  aborting any active transactions
+2023-04-27 15:51:14.127 UTC [36] LOG:  background worker "logical replication launcher" (PID 43) exited with exit code 1
+2023-04-27 15:51:14.127 UTC [38] LOG:  shutting down
+2023-04-27 15:51:14.140 UTC [36] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2023-04-27 15:51:14.243 UTC [1] LOG:  starting PostgreSQL 14.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
+2023-04-27 15:51:14.243 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-04-27 15:51:14.243 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-04-27 15:51:14.247 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-27 15:51:14.251 UTC [50] LOG:  database system was shut down at 2023-04-27 15:51:14 UTC
+2023-04-27 15:51:14.256 UTC [1] LOG:  database system is ready to accept connections
+2023-04-27 15:51:15.409 UTC [58] ERROR:  relation "core_account" does not exist at character 13
+2023-04-27 15:51:15.409 UTC [58] STATEMENT:  INSERT INTO "core_account" ("created_at", "updated_at", "address") VALUES ('2023-04-27T15:51:15.409408+00:00'::timestamptz, '2023-04-27T15:51:15.409426+00:00'::timestamptz, '5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY'), ('2023-04-27T15:51:15.409440+00:00'::timestamptz, '2023-04-27T15:51:15.409446+00:00'::timestamptz, '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty'), ('2023-04-27T15:51:15.409455+00:00'::timestamptz, '2023-04-27T15:51:15.409462+00:00'::timestamptz, '5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc'), ('2023-04-27T15:51:15.409471+00:00'::timestamptz, '2023-04-27T15:51:15.409476+00:00'::timestamptz, '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY') ON CONFLICT DO NOTHING
+```
+
+### Without Docker
+
+I had the same problems with service. I got this error using the command `pre-commit install` from `make build`.
+
+```
+user@localhost:~/Documents/genesisdao/genesis-dao-service$    pre-commit install
+Traceback (most recent call last):
+  File "/home/user/.local/bin/pre-commit", line 5, in <module>
+    from pre_commit.main import main
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/main.py", line 12, in <module>
+    from pre_commit.commands.autoupdate import autoupdate
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/commands/autoupdate.py", line 19, in <module>
+    from pre_commit.store import Store
+  File "/home/user/.local/lib/python3.11/site-packages/pre_commit/store.py", line 6, in <module>
+    import sqlite3
+  File "/usr/local/lib/python3.11/sqlite3/__init__.py", line 57, in <module>
+    from sqlite3.dbapi2 import *
+  File "/usr/local/lib/python3.11/sqlite3/dbapi2.py", line 27, in <module>
+    from _sqlite3 import *
+ModuleNotFoundError: No module named '_sqlite3'
+```
+
+
 ## Evaluation V3
 
 
