@@ -237,3 +237,14 @@ Done in 5.18s.
 info There appears to be trouble with the npm registry (returned undefined). Retrying...
 info There appears to be trouble with the npm registry (returned undefined). Retrying...
 ```
+## Guide
+
+I'm able to get through the guide and register and create an API key. Building the Docker file works, but then for some reason the command fails:
+```
+docker run silentdata-example \
+--clientId={8eb12c0d-5352-4bcb-b5da-d02c3dd61ea1} \
+--clientSecret={myapikey} \
+--action=create \
+--walletAddress={WALLET_ADDRESS}
+An error occurred: Client ID or API key incorrect
+```
