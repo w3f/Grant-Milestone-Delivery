@@ -22,6 +22,25 @@
 | 3b. | Task Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py | Not fully evaluated yet |
 | 3c. | Workflow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py | Not fully evaluated yet |
 
+## Evaluation V5
+
+This time I was able to start the front end and got this warning:
+
+```
+Compiled with warnings.
+
+/static/js/bundle.js is 7.55 MB, and won't be precached. Configure maximumFileSizeToCacheInBytes to change this limit.
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in /static/js/bundle.js is 7.55 MB, and won't be precached. Configure maximumFileSizeToCacheInBytes to change this limit.
+
+webpack compiled with 1 warning
+```
+
+I noticed the page was too slow connected to `wss://rpc.polkadot.io`, but using a local node the page works. I tried to check the feature using a local node, I changed the `src/config/development.json` to connect to the local node. I could choose a wallet, register the Balance Notification, transfer, and check the transfer in the local node, but I couldn't check the notification using the Developer Tools. Did I miss something or need to do some other step to get the notification? Just this last step didn't work. 
+
 ## Evaluation V4
 
 ### Workflow
@@ -36,7 +55,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 6.745s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/CarMarketPlaceMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -46,7 +64,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 4.214s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/EmployeeSalary.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -56,7 +73,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.845s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/EmployeeSalaryMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -66,7 +82,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.894s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/MapOpMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -76,7 +91,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.805s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/PolkadotPayout.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -86,7 +100,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.767s
-
 OK
 Test Completed
 ```
@@ -98,7 +111,6 @@ I noticed this time only have 8 tests and before it was 10 tests. I could create
 
 ```
 Failed to compile.
-
 ./node_modules/@ledgerhq/hw-transport-webhid/lib-es/TransportWebHID.js
 Module not found: Can't resolve '@ledgerhq/devices/hid-framing' in '/home/user/Documents/aurras/aurras/examples/substrate-push-notification/node_modules/@ledgerhq/hw-transport-webhid/lib-es'
 ```
@@ -116,7 +128,6 @@ And other erro showed up:
 
 ```
 Failed to compile.
-
 ./node_modules/@polkadot/wasm-crypto/packageInfo.js 6:14
 Module parse failed: Unexpected token (6:14)
 File was processed with these loaders:
