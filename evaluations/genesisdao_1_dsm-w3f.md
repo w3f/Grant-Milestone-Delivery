@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/GenesisDAO.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,13 +9,163 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | Licence | <ul><li>[x] </li></ul>| All repositories have a LICENSE.md file at their repo root. | Both Apache 2.0 | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| All repositories have a README.md file at their repo root, that is the entry point to the documentation. | Not fully evaluated yet | 
-| 0c. | Testing and Testing Guide | <ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | Need a testing guide for system tests |
-| 0d. | Docker | <ul><li>[x] </li></ul>| All repositories are dockerized. Enter the repo via command-line and run docker compose up -d | 
+| 0b. | Documentation | <ul><li>[x] </li></ul>| All repositories have a README.md file at their repo root, that is the entry point to the documentation. |  | 
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md |  |
+| 0d. | Docker | <ul><li>[x] </li></ul>| All repositories are dockerized. Enter the repo via command-line and run docker compose up -d |  | 
 | 1. | Parachain setup | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node |  |
-| 2. | pallet_dao_core | <ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-core | Not fully evaluated yet | 
-| 3. | Frontend Infrastructure | <ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend | Not fully evaluated yet |
-| 4. | Design and Product Flow | <ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/design.pdf | Need examples with input data and expected results to be considered a testing guide |
+| 2. | pallet_dao_core | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-core | | 
+| 3. | Frontend Infrastructure | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend |  |
+| 4. | Design and Product Flow | <ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/design.pdf |  |
+
+## Evaluation V4
+
+### Docker 
+
+Docker works fine. Would be nice if you provide an example of the `.env` needed to run the system in the repository and mention how to use it in the Testing Guide.
+
+```
+user@localhost:~/Documents/GenesisDao/pre-feedback/genesis-dao-frontend$ docker compose up
+[+] Running 1/0
+ ⠿ Container genesis-dao-frontend  Recreated                                                                                                                                                                  0.0s
+Attaching to genesis-dao-frontend
+genesis-dao-frontend  | yarn run v1.22.19
+genesis-dao-frontend  | $ next start
+genesis-dao-frontend  | ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+genesis-dao-frontend  | info  - Loaded env from /usr/src/app/.env
+```
+
+## Evaluation V3
+
+### Docker
+
+The error in Evaluation V2 was fixed but now there is a new problem. I think it is the IP address in `.env`. Please explain how to setup the .env file properly.  
+
+```
+user@localhost:~/Documents/GenesisDao/genesis-dao-frontend$ docker compose up
+[+] Running 1/0
+ ⠿ Container genesis-dao-frontend  Recreated                                                                                                                                                              	0.0s
+Attaching to genesis-dao-frontend
+genesis-dao-frontend  | yarn run v1.22.19
+genesis-dao-frontend  | $ next start
+genesis-dao-frontend  | ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+genesis-dao-frontend  | info  - Loaded env from /usr/src/app/.env
+genesis-dao-frontend  | 2023-03-01 15:06:41      	API-WS: disconnected from ws://127.0.0.1:9944: 1006:: connection failed
+genesis-dao-frontend  | node:internal/process/promises:288
+genesis-dao-frontend  |         	triggerUncaughtException(err, true /* fromPromise */);
+genesis-dao-frontend  |         	^
+genesis-dao-frontend  |
+genesis-dao-frontend  | [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "#<_Event>".] {
+genesis-dao-frontend  |   code: 'ERR_UNHANDLED_REJECTION'
+genesis-dao-frontend  | }
+genesis-dao-frontend  |
+genesis-dao-frontend  | Node.js v18.14.2
+genesis-dao-frontend  | error Command failed with exit code 1.
+genesis-dao-frontend  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+genesis-dao-frontend exited with code 1
+```
+
+### System Testing
+
+I tested the frontend in the branch pre-feedback, it works fine like in the video.
+
+## Evaluation V2
+
+### Integration Tests
+
+The ignored tests are now disabled.
+
+### Code Quality
+
+The warnings generated by EsLint were fixed.
+
+The testing coverage in the frontend now returns something close to 60%.
+
+```
+user@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ npm test
+> test
+> jest
+info  - Loaded env from /home/user/Documents/Genesis Dao/genesis-dao-frontend/.env
+ PASS  __test__/DaoCard.test.jsx
+ PASS  __test__/utils.test.tsx
+ PASS  __test__/issue.test.tsx
+ PASS  __test__/Notification.test.tsx
+ PASS  __test__/create.test.tsx
+ PASS  __test__/explore.test.tsx
+ PASS  __test__/daoHome.test.tsx
+ PASS  __test__/WalletConnect.test.tsx
+ PASS  __test__/manage.test.tsx
+ PASS  __test__/index.test.tsx
+------------------------|---------|----------|---------|---------|----------------------
+File                	| % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
+------------------------|---------|----------|---------|---------|----------------------
+All files           	|   56.91 |	31.77 |   51.97 |	56.8 |                 	 
+ components         	|   45.33 |	21.21 |	39.8 |   45.84 |                 	 
+  CreateDaoForm.tsx 	|   	0 |    	0 |   	0 |   	0 | 1-122           	 
+  CreateDaoModal.tsx	|   66.66 |    	0 |   55.55 |  	64 | 22,27-28,33-36,41-42
+  DaoCard.tsx       	| 	100 |  	100 | 	100 | 	100 |                 	 
+  DaoCards.tsx      	|	62.5 |    	0 |   	0 |   71.42 | 8-12            	 
+  DestroyDao.tsx    	|   23.52 |    	0 |   	0 |   30.76 | 5-15            	 
+  ExploreDaos.tsx   	| 	100 |   	50 | 	100 | 	100 | 39              	 
+  IssueTokensForm.tsx   |   71.79 |	28.57 |	90.9 |   66.66 | 23-28,45-54,63  	 
+  LoadingModal.tsx  	|   	0 |    	0 |   	0 |   	0 | 1-34            	 
+  LogoForm.tsx      	|  	75 |    	0 |  	75 |   72.72 | 13,18-19        	 
+  Meta.tsx          	| 	100 |   	50 | 	100 | 	100 | 30              	 
+  Notification.tsx  	|   	0 |  	100 |   	0 |   	0 | 1-30            	 
+  NotificationToast.tsx |   77.27 |   	20 |	62.5 |   76.19 | 73,78-79,85,95  	 
+  Spinner.tsx       	|   66.66 |  	100 |   	0 | 	100 |                 	 
+  TopNavBar.tsx     	|   	0 |  	100 |   	0 |   	0 | 1-30            	 
+  TransferForm.tsx  	|   	0 |    	0 |   	0 |   	0 | 4-140           	 
+  WalletConnect.tsx 	|   71.05 |	38.88 |  	60 |   66.66 | 28-29,33,37-103,108  
+ config             	| 	100 |  	100 | 	100 | 	100 |                 	 
+  index.ts          	| 	100 |  	100 | 	100 | 	100 |                 	 
+ pages              	|   87.77 |	35.71 |   84.84 |	86.3 |                 	 
+  create.tsx        	|   	0 |  	100 |   	0 |   	0 | 1-22            	 
+  explore.tsx       	|   89.28 | 	12.5 |   81.81 |   86.95 | 19,23,33        	 
+  index.tsx         	|   96.66 |  	100 |  	90 |  	96 | 24              	 
+  manage.tsx        	|	90.9 |   	60 | 	100 |   88.23 | 16,35           	 
+  start.tsx         	| 	100 |  	100 | 	100 | 	100 |                 	 
+ pages/dao/[daoId]  	|   54.83 |	36.36 |   57.14 |   53.84 |                 	 
+  index.tsx         	| 	100 |	44.44 | 	100 | 	100 | 16-63           	 
+  tokens.tsx        	|   	0 |    	0 |   	0 |   	0 | 1-56            	 
+ templates          	| 	100 |   	50 | 	100 | 	100 |                 	 
+  MainLayout.tsx    	| 	100 |   	50 | 	100 | 	100 | 28-29           	 
+ utils              	|   77.77 |   	70 |   57.14 |  	80 |                 	 
+  index.ts          	|   77.77 |   	70 |   57.14 |  	80 | 7,17-18         	 
+------------------------|---------|----------|---------|---------|----------------------
+Test Suites: 10 passed, 10 total
+Tests:   	12 passed, 12 total
+Snapshots:   0 total
+Time:    	5.349 s
+Ran all test suites.
+```
+
+We notice that the coverage in the lib.rs and not automated generate files on the pallets are good. 
+
+Most of cargo clippy warnings were fixed. 
+
+### Docker
+
+When I ran `docker compose up` in the frontend got this error:
+
+```
+user@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ docker compose up
+[+] Running 1/0
+ ⠿ Container genesis-dao-frontend  Created                                                                                                                                                                	0.0s
+Attaching to genesis-dao-frontend
+genesis-dao-frontend  | yarn run v1.22.19
+genesis-dao-frontend  | error Couldn't find a package.json file in "/"
+genesis-dao-frontend  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+genesis-dao-frontend exited with code 1
+```
+
+### System Testing
+
+I tested pallet_dao_core with Polkadot.js following the guide it works fine.
+
+The testing guide is missing examples using the frontend, but when I tried to test the frontend it seems to haven't been connected to Genesis DAO Node. 
+
+We notice that you still committing code to the main branch of the repository. Would be nice to freeze a version in a branch for us to complete this evaluation. 
+
 
 ## Evaluation V1
 
@@ -35,27 +185,17 @@ One integration test was ignored.
 User@localhost:~/Documents/Genesis Dao/genesis-dao-node/integration-wrapper$ cargo test
 	Finished test [unoptimized + debuginfo] target(s) in 0.76s
  	Running unittests src/lib.rs (/home/User/Documents/Genesis Dao/genesis-dao-node/target/debug/deps/integration_wrapper-653524c017e4c2c9)
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
  	Running tests/test_dao_lifecycle.rs (/home/User/Documents/Genesis Dao/genesis-dao-node/target/debug/deps/test_dao_lifecycle-975a760cc1f734c4)
-
 running 1 test
 test dao_lifecycle has been running for over 60 seconds
 test dao_lifecycle ... ok
-
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 141.15s
-
    Doc-tests integration_wrapper
-
 running 1 test
 test src/lib.rs - node_runtime::transaction_payment::constants::ConstantsApi::operational_fee_multiplier (line 22) ... ignored
-
 test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-
 ```
 
 ### Code Quality
@@ -64,29 +204,22 @@ I ran `npm run lint` and got some warnings.
 
 ```
 User@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ npm run lint
-
 > lint
 > next lint
-
 ./src/components/IssueTokensForm.tsx
 59:6  Warning: React Hook useEffect has a missing dependency: 'setValue'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
 ./src/components/LoadingModal.tsx
 18:12  Warning: Classname 'bg-opacity-75' should be replaced by an opacity suffix (eg. '/75')  tailwindcss/migration-from-tailwind-2
 22:16  Warning: Classname 'min-h-100px]' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
-
 ./src/components/Meta.tsx
 7:3  Warning: propType "canonical" is not required, but has no corresponding defaultProps declaration.  react/require-default-props
 8:3  Warning: propType "siteName" is not required, but has no corresponding defaultProps declaration.  react/require-default-props
-
 ./src/components/NotificationToast.tsx
 10:3  Warning: propType "txnHash" is not required, but has no corresponding defaultProps declaration.  react/require-default-props
 91:6  Warning: React Hook useEffect has a missing dependency: 'show'. Either include it or remove the dependency array. You can also do a functional update 'setShow(s => ...)' if you only need 'show' in the 'setShow' call.  react-hooks/exhaustive-deps
 104:13  Warning: Classname 'font-bol' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
-
 ./src/components/WalletConnect.tsx
 110:15  Warning: Unexpected console statement.  no-console
-
 ./src/hooks/useGenesisDao.ts
 50:5  Warning: Unexpected console statement.  no-console
 54:7  Warning: Unexpected console statement.  no-console
@@ -105,16 +238,13 @@ User@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ npm run lint
 300:9  Warning: 'destroyAssetApprovals' is assigned a value but never used.  unused-imports/no-unused-vars
 369:7  Warning: Unexpected console statement.  no-console
 399:7  Warning: Unexpected console statement.  no-console
-
 ./src/pages/dao/[daoId]/index.tsx
 22:12  Warning: Classname 'space-between' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
-
 ./src/pages/explore.tsx
 18:29  Warning: 'event' is defined but never used.  @typescript-eslint/no-unused-vars
 18:29  Warning: 'event' is defined but never used. Allowed unused args must match /^_/u.  unused-imports/no-unused-vars
 28:6  Warning: React Hook useEffect has a missing dependency: 'fetchDaos'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
 34:6  Warning: React Hook useEffect has a missing dependency: 'updateDaosOwnedByWallet'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
 ./src/pages/index.tsx
 15:6  Warning: React Hook useEffect has missing dependencies: 'daos' and 'fetchDaos'. Either include them or remove the dependency array.  react-hooks/exhaustive-deps
 23:12  Warning: Classname 'z-1' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
@@ -124,19 +254,14 @@ User@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ npm run lint
 37:18  Warning: Classname 'shadow-[0_2px_2px_rgb(0,0,0,0.2)' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
 42:18  Warning: Classname 'shadow-[0_2px_2px_rgb(0,0,0,0.2)' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
 47:18  Warning: Classname 'shadow-[0_2px_2px_rgb(0,0,0,0.2)' is not a Tailwind CSS class!  tailwindcss/no-custom-classname
-
 ./src/pages/manage.tsx
 19:6  Warning: React Hook useEffect has a missing dependency: 'fetchDaos'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
 ./src/stores/genesisStore.ts
 197:30  Warning: '_k' is defined but never used.  @typescript-eslint/no-unused-vars
-
 ./src/templates/MainLayout.tsx
 13:3  Warning: propType "canonical" is not required, but has no corresponding defaultProps declaration.  react/require-default-props
 14:3  Warning: propType "siteName" is not required, but has no corresponding defaultProps declaration.  react/require-default-props
-
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
-
 ```
 
 I ran `npm test` and got low testing coverage. 
@@ -144,15 +269,12 @@ I ran `npm test` and got low testing coverage.
 ```
 User@localhost:~/Documents/Genesis Dao/genesis-dao-frontend$ npm test
 npm test
-
 > test
 > jest
-
  PASS  __test__/index.test.tsx
   Index page
 	Render method
   	✓ should have Genesis Dao text (48 ms)
-
 ------------------------|---------|----------|---------|---------|---------------------
 File                	| % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s   
 ------------------------|---------|----------|---------|---------|---------------------
@@ -197,7 +319,6 @@ Tests:   	1 passed, 1 total
 Snapshots:   0 total
 Time:    	3.598 s
 Ran all test suites.
-
 ```
 
 Cargo clippy returned some warnings:
@@ -216,7 +337,6 @@ warning: very complex type used. Consider factoring parts into `type` definition
    |
    = note: `#[warn(clippy::type_complexity)]` on by default
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#type_complexity
-
 warning: `integration_wrapper` (lib) generated 1 warning
     Checking rocksdb v0.19.0
     Checking kvdb-rocksdb v0.17.0
@@ -237,7 +357,6 @@ note: this value is dropped without further use
 48 |     module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
    |                                              ^^^^
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: very complex type used. Consider factoring parts into `type` definitions
   --> node/src/service.rs:41:6
    |
@@ -253,7 +372,6 @@ warning: very complex type used. Consider factoring parts into `type` definition
    |
    = note: `#[warn(clippy::type_complexity)]` on by default
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#type_complexity
-
 warning: writing `&String` instead of `&str` involves a new object where a slice will do
    --> node/src/service.rs:150:26
     |
@@ -262,7 +380,6 @@ warning: writing `&String` instead of `&str` involves a new object where a slice
     |
     = note: `#[warn(clippy::ptr_arg)]` on by default
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
-
 warning: `genesis-dao` (lib) generated 3 warnings
 warning: useless conversion to the same type: `u128`
    --> node/src/benchmarking.rs:105:12
@@ -272,7 +389,6 @@ warning: useless conversion to the same type: `u128`
     |
     = note: `#[warn(clippy::useless_conversion)]` on by default
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion
-
 warning: redundant clone
    --> node/src/benchmarking.rs:164:7
     |
@@ -286,7 +402,6 @@ note: this value is dropped without further use
 164 |         call.clone(),
     |         ^^^^
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: redundant clone
    --> node/src/benchmarking.rs:166:40
     |
@@ -299,7 +414,6 @@ note: this value is dropped without further use
 166 |         runtime::Signature::Sr25519(signature.clone()),
     |                                     ^^^^^^^^^
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: redundant clone
    --> node/src/benchmarking.rs:167:8
     |
@@ -312,7 +426,6 @@ note: this value is dropped without further use
 167 |         extra.clone(),
     |         ^^^^^
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: redundant clone
   --> node/src/rpc.rs:48:47
    |
@@ -325,9 +438,7 @@ note: this value is dropped without further use
 48 |     module.merge(System::new(client.clone(), pool.clone(), deny_unsafe).into_rpc())?;
    |                                              ^^^^
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_clone
-
 warning: `genesis-dao` (bin "genesis-dao") generated 7 warnings (2 duplicates)
-
 ```
 
 The test coverage on the pallets, measured using `cargo tarpaulin`.
@@ -380,7 +491,6 @@ The test coverage on the pallets, measured using `cargo tarpaulin`.
 || ../dao-votes/src/lib.rs: 0/38
 || 
 63.55% coverage, 1062/1671 lines covered
-
 ```
 
 * dao-votes, low coverage:
@@ -407,4 +517,3 @@ The test coverage on the pallets, measured using `cargo tarpaulin`.
 || 
 22.17% coverage, 274/1236 lines covered
 ```
-

@@ -2,7 +2,7 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/runtimeverification/web3-grants-program/blob/rv-kmir-grant/applications/rv-kmir.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/rv-kmir.md
 
 * **Milestone Number:** 1
 

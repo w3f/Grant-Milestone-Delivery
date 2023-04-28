@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ZK-Snarks%20tutorial.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -12,12 +12,12 @@
 | **0b.** | Documentation | <ul><li>[x] </li></ul>|Documentation can be found in the [README](https://github.com/bright/zk-snarks-with-substrate/tree/main/pallets/zk-snarks/README.md) file. |  | 
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) |  |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) | 
-| 1. | Research notes | <ul><li>[ ] </li></ul>| Notes can be found in the [QAP_NOTES](https://github.com/bright/zk-snarks-with-substrate/blob/main/notes/qap_notes.pdf) file. | Not fully evaluated yet. | 
-| 2. | Groth16  proof verification method | <ul><li>[ ] </li></ul>| Code for Groth16 proof verification can be found in the [verify.rs](https://github.com/bright/zk-snarks-with-substrate/tree/main/pallets/zk-snarks/src/verify.rs) file.| Not fully evaluated yet. |
+| 1. | Research notes | <ul><li>[x] </li></ul>| Notes can be found in the [QAP_NOTES](https://github.com/bright/zk-snarks-with-substrate/blob/main/notes/qap_notes.pdf) file. |  | 
+| 2. | Groth16  proof verification method | <ul><li>[x] </li></ul>| Code for Groth16 proof verification can be found in the [verify.rs](https://github.com/bright/zk-snarks-with-substrate/tree/main/pallets/zk-snarks/src/verify.rs) file.|  |
 | 3. | Demo | <ul><li>[x] </li></ul>| Demo part is done in our cycle of articles, but the details commands which should be run can be found in the [README](https://github.com/bright/zk-snarks-with-substrate/tree/main/circom/README.md) file.| | 
 | 4. | Circuits in circom | <ul><li>[x] </li></ul>| Circuit template is in the [task.circom](https://github.com/bright/zk-snarks-with-substrate/tree/main/circom/task.circom) file.| | 
-| 5. | Blog post: Tutorial Groth16 (Part 1) | <ul><li>[ ] </li></ul>|   Blog post is in the [groth16.md](https://github.com/bright/zk-snarks-with-substrate/tree/main/blog/groth16.md) file.| Not fully evaluated yet. |
-| 6. | Blog post: Tutorial Pallet (Part 2) | <ul><li>[ ] </li></ul>| Blog post is in the [zk-snark-pallet.md](https://github.com/bright/zk-snarks-with-substrate/tree/main/blog/zk-snark-pallet.md) file.| Not fully evaluated yet.  | 
+| 5. | Blog post: Tutorial Groth16 (Part 1) | <ul><li>[x] </li></ul>|   Blog post is in the [groth16.md](https://github.com/bright/zk-snarks-with-substrate/tree/main/blog/groth16.md) file.|  |
+| 6. | Blog post: Tutorial Pallet (Part 2) | <ul><li>[x] </li></ul>| Blog post is in the [zk-snark-pallet.md](https://github.com/bright/zk-snarks-with-substrate/tree/main/blog/zk-snark-pallet.md) file.|  | 
 | 7. | Youtube video | <ul><li>[x] </li></ul>| Video is in the [zk-snarks.mp4](https://github.com/bright/zk-snarks-with-substrate/tree/main/video/zk-snarks.mp4) file.| | 
 
 ## Evaluation V2
