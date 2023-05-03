@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:**  [Galaxy](https://github.com/w3f/Grants-Program/blob/master/applications/galaxy.md)
 - **Milestone:** 1
 - **Kusama Identity:** Eexv1mKLiCidz2gGh6vfowtXgSSc7mvD4xEb2ji998W4DPs
@@ -8,15 +8,19 @@
 
 | Number | Deliverable              | Accepted               | Link                                                                                                                  | Evaluation Notes                                                      |
 |--------|--------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| 0a.    | Licence                  | <ul><li>[ ] </li></ul> | -                                                                                                                     | No Licence                                                            |
+| 0a.    | Licence                  | <ul><li>[ ] </li></ul> | [MIT](https://github.com/7flash/galaxy-polkadot/blob/master/LICENSE)                                                  | Correct Licence                                                       |
 | 0b.    | Documentation            | <ul><li>[x] </li></ul> | [Video Tutorial](https://youtu.be/WOQvxZCiU0Q) [ReadMe](https://github.com/7flash/galaxy-polkadot/tree/master#readme) | Documentation is satisfactory plus the video tutorial is also helpful |
 | 0c.    | Testing & Testing Guide  | <ul><li>[x] </li></ul> | [Tests](https://github.com/7flash/galaxy-polkadot/tree/master#running-the-tests)                                      | Test cases passed. Output attached below                              |
-| 0d.    | Docker                   | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/master/Dockerfile)                                        | No Docker docs provided, however Dockerfile is working fine.          |
+| 0d.    | Docker                   | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/master/Dockerfile)                                        | Fixed in the recent commit.                                           |
 | 1.     | Frontend: Galaxy Web App | <ul><li>[x] </li></ul> | [Src](https://github.com/7flash/galaxy-polkadot/tree/master/src)                                                      | Features listed in the application are working fine                   |
 
 
 ## General Notes
 
+## Update 4th May 2023
+Licence file is added in the recent commits and the previous mentioned issues are fixed too, so the delivery status is changed to `Accepted`.
+
+## 3rd May 2023
 The repo is well-structured and well-documented, and the features listed in the application are working fine. However, there is no Licence file in the repo and it'll also be better if there is some helpful documentation regarding docker.
 ## `yarn test` output
 
