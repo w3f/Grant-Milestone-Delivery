@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/GenesisDAO.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,13 +9,23 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | Licence |<ul><li>[x] </li></ul>| n/a |  | 
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet | 
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | There is no testing guide for the frontend  |
-| 0d. | Docker |<ul><li>[ ] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) | Some failures running docker. |
-| 1. | Substrate module: pallet_dao_asset |<ul><li>[ ] </li></ul>| [pallet](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-assets) with [checkpoint functionality](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/pallets/dao-assets/src/functions.rs#L56-L130) | Not fully evaluated yet |
-| 2. | Substrate module: pallet_dao_vote	|<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes | Not fully evaluated yet | 
-| 3. | Frontend Implementation	 |<ul><li>[ ] </li></ul>| https://genesis-dao.org | Not fully evaluated yet |
-| 4. | Design and Product Flow |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/Proposal.pdf | Not fully evaluated yet |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| n/a |  | 
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md |  |
+| 0d. | Docker |<ul><li>[x] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) |  |
+| 1. | Substrate module: pallet_dao_asset |<ul><li>[x] </li></ul>| [pallet](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-assets) with [checkpoint functionality](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/pallets/dao-assets/src/functions.rs#L56-L130) |  |
+| 2. | Substrate module: pallet_dao_vote	|<ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes |  | 
+| 3. | Frontend Implementation	 |<ul><li>[x] </li></ul>| https://genesis-dao.org |  |
+| 4. | Design and Product Flow |<ul><li>[x] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/design/Proposal.pdf |  |
+
+## Evaluation V5
+
+### Testing
+
+I tested the application using docker again. This time I was able to start the node, service, and frontend without problems, create a DAO using the frontend and check the process in the node. I only noticed one minor problem, the image I uploaded wasn't showing in the DAO.
+
+The problem that I had to start the service without docker seems to be in my environment and not a problem with the application since the docker is running fine.
+
+I have tested pallet_dao_asset and pallet_dao_vote before, and they worked fine.
 
 ## Evaluation V4
 
@@ -26,11 +36,8 @@ I tested the docker and got again the same error, but I was able to solve this b
 Dockerfile
 ```
 RUN rustup install nightly-2023-03-13-x86_64-unknown-linux-gnu 
-
 RUN rustup default nightly-2023-03-13-x86_64-unknown-linux-gnu 
-
 RUN rustup target add wasm32-unknown-unknown
-
 RUN cargo build --release --features local-node
 ```
 
@@ -79,10 +86,7 @@ Traceback (most recent call last):
 psycopg2.errors.UndefinedTable: relation "core_account" does not exist
 LINE 1: INSERT INTO "core_account" ("created_at", "updated_at", "add...
                     ^
-
-
 The above exception was the direct cause of the following exception:
-
 Traceback (most recent call last):
   File "/usr/src/app/manage.py", line 22, in <module>
     main()
@@ -137,13 +141,10 @@ The logs from genesis-dao-node-db-1 seem to have some problem with Alice's addre
 user@localhost:~/Documents/genesisdao/genesis-dao-node$ docker logs genesis-dao-node-db-1
 The files belonging to this database system will be owned by user "postgres".
 This user must also own the server process.
-
 The database cluster will be initialized with locale "en_US.utf8".
 The default database encoding has accordingly been set to "UTF8".
 The default text search configuration will be set to "english".
-
 Data page checksums are disabled.
-
 fixing permissions on existing directory /var/lib/postgresql/data ... ok
 creating subdirectories ... ok
 selecting dynamic shared memory implementation ... posix
@@ -156,12 +157,8 @@ sh: locale: not found
 2023-04-27 15:51:13.304 UTC [30] WARNING:  no usable system locales were found
 performing post-bootstrap initialization ... ok
 syncing data to disk ... ok
-
-
 Success. You can now start the database server using:
-
 	pg_ctl -D /var/lib/postgresql/data -l logfile start
-
 initdb: warning: enabling "trust" authentication for local connections
 You can change this by editing pg_hba.conf or using the option -A, or
 --auth-local and --auth-host, the next time you run initdb.
@@ -172,10 +169,7 @@ waiting for server to start....2023-04-27 15:51:13.944 UTC [36] LOG:  starting P
  done
 server started
 CREATE DATABASE
-
-
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-
 waiting for server to shut down....2023-04-27 15:51:14.125 UTC [36] LOG:  received fast shutdown request
 2023-04-27 15:51:14.126 UTC [36] LOG:  aborting any active transactions
 2023-04-27 15:51:14.127 UTC [36] LOG:  background worker "logical replication launcher" (PID 43) exited with exit code 1
@@ -183,9 +177,7 @@ waiting for server to shut down....2023-04-27 15:51:14.125 UTC [36] LOG:  receiv
 2023-04-27 15:51:14.140 UTC [36] LOG:  database system is shut down
  done
 server stopped
-
 PostgreSQL init process complete; ready for start up.
-
 2023-04-27 15:51:14.243 UTC [1] LOG:  starting PostgreSQL 14.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
 2023-04-27 15:51:14.243 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
 2023-04-27 15:51:14.243 UTC [1] LOG:  listening on IPv6 address "::", port 5432
