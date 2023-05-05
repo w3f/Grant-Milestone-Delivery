@@ -35,7 +35,7 @@ Supersig is like multisig but with superpowers. This means that you have some ad
 | 0c. | Testing Guide | https://github.com/decentration/pallet_supersig/tree/polkadot-v0.9.37-fix-unbounded/src/tests | `cargo test` |
 | 0d. | Article and Video  | https://medium.com/@decentration/supersig-statemine-cbe6533233c2, https://www.loom.com/share/ea2fe68f99c44a4b91baaa85828b1745 | Medium Article and Video for reviewal. If you are the reviewer watch this so you can navigate this milestone with ease. |
 | 1. | Substrate module: pallet_supersig |  pallet_supersig https://github.com/decentration/pallet_supersig/tree/polkadot-v0.9.37-fix-unbounded | |
-| 2. | Supersig-app: polkadot-js-ui (fork) | https://github.com/decentration/apps | When you `yarn build` and `yarn lint`. For best results build from Ubuntu. Polkadot JS is not designed to build for Macbook M2, though you may be able to with Mac Intel. 
+| 2. | Supersig-app: polkadot-js-ui (fork) | https://github.com/decentration/apps/tree/main-fellowship-1 | When you `yarn build` and `yarn lint`. For best results build from Ubuntu. Polkadot JS is not designed to build for Macbook M2, though you may be able to with Mac Intel.
 
 When you yarn build you should find no errors occuring from `page-supersig`, though there may be errors from outside coming from the newest master branch of polkadot-js, we've dealt with some of the prior errors, however as we don't know the full context of those errors, we will leave them to the jurisdiction fo the product owner, Jaco. |
 | 3. | Benchmarking | https://github.com/decentration/pallet_supersig/blob/master/src/weights.rs  |  No change to weights. | 
