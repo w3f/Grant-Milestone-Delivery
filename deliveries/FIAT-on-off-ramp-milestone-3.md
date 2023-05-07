@@ -35,7 +35,7 @@ Demo app is a React application that uses [Polkadot JS API](https://polkadot.js.
 | -----: | ----------- | ------------- |
 | 0a. | License | Apache 2.0  |
 | 0b. | Tutorial | Tutorial is provided in the [`/ebics-demo/DEMO.md`](https://github.com/element36-io/ocw-ebics/blob/main/ebics-demo/DEMO.md) file. |
-| 1. | Buy me a coffee dApp | A decentralized application is provided, which allows users to buy someone a coffee or simply donate to support their cause. Users can donate by either sending stablecoins or fiat to the recipient's on-chain account or bank account (IBAN). The recipient can then withdraw the funds to their bank account or send them to someone else. |
+| 1. | Buy me a coffee dApp | A decentralized [application](https://github.com/element36-io/ocw-ebics/tree/main/ebics-demo) is provided, which allows users to buy someone a coffee or simply donate to support their cause. Users can donate by either sending stablecoins or fiat to the recipient's on-chain account or bank account (IBAN). The recipient can then withdraw the funds to their bank account or send them to someone else. |
 | 2. | Docker-Compose: node & Dapp | Instead of `docker-compose` a [Makefile](https://github.com/element36-io/ocw-ebics/blob/main/Makefile) is provided with the commands that launch the chain and the demo app |
 
 **Additional Information**
