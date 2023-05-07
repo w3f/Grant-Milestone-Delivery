@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-sdk.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,13 +9,52 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/LICENSE |  |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/README.md, https://github.com/blockcoders/xcm-sdk/blob/main/README-es.md | Not fully evaluated yet |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk#testing | Not fully evaluated yet |
-| 1. | Create Messages Types |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/interfaces/index.ts | Not fully evaluated yet |
-| 2. | Send XCM messages |<ul><li>[ ] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/provider.ts | Not fully evaluated yet |
-| 3. | Testing |<ul><li>[ ] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | Connection failed msg on unit tests. No scripts for system testing. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/README.md, https://github.com/blockcoders/xcm-sdk/blob/main/README-es.md |  |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk#testing |  |
+| 1. | Create Messages Types |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/interfaces/index.ts |  |
+| 2. | Send XCM messages |<ul><li>[x] </li></ul>| https://github.com/blockcoders/xcm-sdk/blob/main/src/provider.ts |  |
+| 3. | Testing |<ul><li>[x] </li></ul>| https://coveralls.io/github/blockcoders/xcm-sdk?branch=main | |
 
 **General Notes**
+
+## Evaluation V4
+
+After setting up the Zombienet provided, the example of the script src/examples/local-network/reserveAssets-statemine-to-trappist.ts worked doing a limitedReserveTransferAssets operation.
+
+
+## Evaluation V3
+
+I minted a new asset (Id: 1985) tried the XCM asset transaction and didn't worked: tx: 0x39ed3b0ae3e9d79e47265e257dba8e7e19c5eef4d5a60492d92e10fd20bd6026
+
+Result:
+
+
+![screen-failing-xcm-asset](https://user-images.githubusercontent.com/112647953/212341567-068af424-e367-434b-b5c4-be0ec9f31b52.jpg)
+
+There is anything else that I should do to this transaction work?
+
+All other transactions worked. 
+
+## Evaluation V2
+
+The warnings in the unit tests and from ESLint were solved. 
+
+Regarding the system tests: 
+
+* Only the limited version of the methods were used in the system tests. Please include system tests for the other functions available.
+
+- rococo-to-rockmine - worked, the assets were transfered. tx: 0x7aac9818bc7ce4f91a94ac4ca48798b68450a7a45d3693c45c6b401f917ace39
+- rococo-to-dali - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0xf73f0408b2a5fd5f060a01a22eef6ce96dd4cac3cc448f62c8b3e29893cc6e45
+- rockmine-to-rococo - worked, the assets were transfered. tx: 0x44ccd0a55079683146b5fb9c32e891346824d410f44b899333a01d27b29dc750
+- rockmine-to-dali-roc.ts - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0x41a008489fce5bcb43c33be579481ffb36f328f4b61b989bee23058958f87550
+- rockmine-to-dali-asset.ts - the XCM msg was sent but the asset was not transfered. Please explain. tx: 0x8d15e12be2cc7fbfdfb42aa5584555871f40a0ae0c7dfa198a73f943582d6dc2
+
+The XCM transactions which uses limitedReserveTransferAssets function are returning FailedToTransactAsset as showed below: 
+
+![screen](https://user-images.githubusercontent.com/112647953/211804995-75fabf14-01a0-4820-86de-22c5c00532ee.jpg)
+
+
+## Evaluation V1
 
 ### Testing
 

@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/maintenance/wasm-opt-for-rust.md 
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/wasm-opt-for-rust.md 
 - **Delivery Number:** 1
 - **Delivery Date:** 1.01.23
 * **Kusama Identity:** [HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve](https://polkascan.io/pre/kusama/account/HFG4FvoJv8uanizzetS1tPA6wigNAiKuEHKcm1NaKNNDwve)

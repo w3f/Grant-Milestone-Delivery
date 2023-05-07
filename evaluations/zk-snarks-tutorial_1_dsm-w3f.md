@@ -2,7 +2,7 @@
 
 # Evaluation
 
-- **Status:** In Progress.
+- **Status:** Approved.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ZK-Snarks%20tutorial.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -12,10 +12,22 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[x] </li></ul>| MIT license can be found [here](https://github.com/bright/zk-snarks-with-substrate/tree/main/LICENSE). |  |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>| Documentation can be found in the [README](https://github.com/bright/zk-snarks-with-substrate/tree/main/pallets/zk-snarks/README.md) file. ||
-| **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) | Need a tutorial for functional testing the pallet |
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) |  |
 | **0d.** | Docker |<ul><li>[x] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) | 
-| 1. | The pallet |<ul><li>[ ] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) and [polkadotjs app](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/extrinsics) | Need a tutorial for using / testing.
-| 2. | Blog post |<ul><li>[ ] </li></ul> | Blog post can be found in https//github.com/bright/zk-snarks-with-substrate/tree/main/blog/introduction.md | Changes requested.
+| 1. | The pallet |<ul><li>[x] </li></ul>| [Repository](https://github.com/bright/zk-snarks-with-substrate/) and [polkadotjs app](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/extrinsics) | 
+| 2. | Blog post |<ul><li>[x] </li></ul> | Blog post can be found in https//github.com/bright/zk-snarks-with-substrate/tree/main/blog/introduction.md | 
+
+## Evaluation V2
+
+The tutorial was improved by adding references/citations and fixing the other problems mentioned. The references/citations are mostly from other blogs/tutorials. This is an unusual way to cite other works since are expected to be cited the original source of the information (creator of that, scientifically speaking). As the tutorial is for developers, who may find it interesting to find other blogs/tutorials on the topic, I see no problem with the citations/references in this case.
+
+The code in the tutorial ran without problems. 
+
+A tutorial was added to show how to run the system using polkadot.js. The system ran as explained in the tutorial. At this point, the extrinsic are not actually verifying the proof since this is expected to be delivered in milestone 2. 
+
+The cargo clippy warnings from pallet-zk-snarks were fixed.
+
+## Evaluation V1
 
 
 ### Tutorial text
