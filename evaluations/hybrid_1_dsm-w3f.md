@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/hybrid.md 
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,15 +9,21 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.| License |<ul><li>[x] </li></ul>| [LICENSE](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/LICENSE) | Apache 2.0 | 
-| 0b.| Documentation | <ul><li>[ ] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md) | Not fully evaluated yet | 
+| 0b.| Documentation | <ul><li>[x] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md) |  | 
 | 0c.| Testing and Testing Guide | <ul><li>[x] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#tutorial) |  | 
 | 0d.| Docker | <ul><li>[x] </li></ul>| [README.md](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/README.md#docker) |  | 
-| 1.| Connect to Substrate chains | <ul><li>[ ] </li></ul>| [main.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/main.rs#L50) | Not fully evaluated yet | 
-| 2.| Block syncing | <ul><li>[ ] </li></ul>| [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L283)| Not fully evaluated yet | 
-| 3.| Index writing | <ul><li>[ ] </li></ul>| [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L198) | Not fully evaluated yet | 
-| 4.| Status querying | <ul><li>[ ] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L83) | Not fully evaluated yet | 
-| 5.| Index querying | <ul><li>[ ] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L95) | Not fully evaluated yet | 
-| 6.| Dapp | <ul><li>[ ] </li></ul>| [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp/tree/milestone-1) | Not fully evaluated yet | 
+| 1.| Connect to Substrate chains | <ul><li>[x] </li></ul>| [main.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/main.rs#L50) |  | 
+| 2.| Block syncing | <ul><li>[x] </li></ul>| [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L283)|  | 
+| 3.| Index writing | <ul><li>[x] </li></ul>| [substrate.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/substrate.rs#L198) |  | 
+| 4.| Status querying | <ul><li>[x] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L83) |  | 
+| 5.| Index querying | <ul><li>[x] </li></ul>| [websockets.rs](https://github.com/hybrid-explorer/hybrid-indexer/blob/milestone-1/src/websockets.rs#L95) |  | 
+| 6.| Dapp | <ul><li>[x] </li></ul>| [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp/tree/milestone-1) |  | 
+
+## Evaluation V4
+
+### Testing
+
+Now I was able to search with all parameters without problems.
 
 ## Evaluation V3
 

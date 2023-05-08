@@ -11,11 +11,19 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|https://github.com/Zkvers/substrate-zk/blob/master/LICENSE| | 
 | 0b. | Documentation | <ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/zk-tutorials/proof-system/groth16/theory_to_practice.md| Not fully evaluated yet  | 
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/| Broken link |
-| 0d.  |Docker |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/docker-compose.yml| Failed to run|
-| 1.  |make groth16 compatible with substrate |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/bellman-verifier| Not fully evaluated yet |
-| 2.  |adapt snarkjs and bellman |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/snarkjs-bellman-adapter/tree/main| Not fully evaluated yet |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/|  |
+| 0d.  |Docker |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/docker-compose.yml| Works but could be improved |
+| 1.  |make groth16 compatible with substrate |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/bellman-verifier|  |
+| 2.  |adapt snarkjs and bellman |<ul><li>[x] </li></ul>| https://github.com/Zkvers/snarkjs-bellman-adapter/tree/main|  |
 | 3.  |ZKP education |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/zk-tutorials| Not fully evaluated yet |
+
+## Evaluation V3
+
+### Docker 
+
+Now Docker works without problems, but it created the folder `target` needing permission to use, and it only installs rust and starts the substrate. I still need to install other things like the circom compiler and snarkjs. Would be nice if the Docker provided a container with all requirements installed.
+
+I tested again running the substrate with Docker, and I had no problem only needed to get permission with `chown` for the folder `target` and install the circom and snarkjs. I was able to verify the proof in the terminal and in the substrate.
 
 ## Evaluation V2
 
