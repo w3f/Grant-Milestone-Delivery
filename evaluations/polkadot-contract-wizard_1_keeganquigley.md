@@ -43,3 +43,13 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 Error: Invalid rewrite found
 error Command failed with exit code 1.
 ```
+UPDATE: Runs successfully after modifying the .env file:
+```js
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+info  - Loaded env from /home/ubuntu/polkadot-contract-wizard/.env
+event - compiled client and server successfully in 31.9s (14038 modules)
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+```
