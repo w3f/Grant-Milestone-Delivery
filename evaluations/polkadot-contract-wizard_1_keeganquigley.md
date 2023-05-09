@@ -17,7 +17,7 @@
 
 # General Notes
 
-The instructions for the [backend](https://github.com/protofire/polkadot-contract-wizard#backend) has a [broken link](https://github.com/protofire/polkadot-contract-wizard/blob/develop/ink-compiler-be/README.md).
+## Front-end
 
 Docker fails when running `yarn build`:
 ```js
@@ -87,7 +87,10 @@ Snapshots:   0 total
 Time:        21.407 s
 Ran all test suites.
 ```
-## Backend Tests
+## Backend
+
+The instructions for the [backend](https://github.com/protofire/polkadot-contract-wizard#backend) has a [broken link](https://github.com/protofire/polkadot-contract-wizard/blob/develop/ink-compiler-be/README.md).
+
 `docker-compose run compiler-be-test` runs successfully:
 ```js
 2023-05-09 20:02:39 - INFO: X-Frame-Options: SAMEORIGIN
