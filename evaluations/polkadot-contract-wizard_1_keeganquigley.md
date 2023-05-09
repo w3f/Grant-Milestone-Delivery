@@ -34,3 +34,12 @@ Docker fails when running `yarn build`:
 ------
 failed to solve: process "/bin/sh -c yarn build" did not complete successfully: exit code: 1
 ```
+The same happens when trying to run locally with yarn:
+```js
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+`destination` does not start with `/`, `http://`, or `https://` for route {"source":"/api/:path*","destination":"undefined/:path*"}
+
+
+Error: Invalid rewrite found
+error Command failed with exit code 1.
+```
