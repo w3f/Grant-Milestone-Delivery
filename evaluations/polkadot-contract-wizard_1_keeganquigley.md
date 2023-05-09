@@ -17,6 +17,8 @@
 
 # General Notes
 
+The instructions for the [backend](https://github.com/protofire/polkadot-contract-wizard#backend) has a [broken link](https://github.com/protofire/polkadot-contract-wizard/blob/develop/ink-compiler-be/README.md).
+
 Docker fails when running `yarn build`:
 ```js
  => [3/4] RUN yarn install                                                                                          119.1s
@@ -53,3 +55,48 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 ```
+And also with Docker:
+```js
+pkw_backend    | 2023-05-09 19:05:26 - INFO: 📬 Routes:
+pkw_backend    | 2023-05-09 19:05:26 - INFO: (fetch_or_compile_contract) POST /contract
+pkw_backend    | 2023-05-09 19:05:26 - INFO: (get_contract) GET /contract?<code_id>&<wasm>
+pkw_backend    | 2023-05-09 19:05:26 - INFO: (store_deployment) POST /deployments
+pkw_backend    | 2023-05-09 19:05:26 - INFO: (get_contract_deployments) GET /deployments?<user_address>&<network>
+pkw_backend    | 2023-05-09 19:05:26 - INFO: 📡 Fairings:
+pkw_backend    | 2023-05-09 19:05:26 - INFO: CORS Headers (response)
+pkw_backend    | 2023-05-09 19:05:26 - INFO: Shutdown Handler (shutdown)
+pkw_backend    | 2023-05-09 19:05:26 - INFO: Shield (liftoff, response, singleton)
+pkw_backend    | 2023-05-09 19:05:26 - INFO: 🛡️ Shield:
+pkw_backend    | 2023-05-09 19:05:26 - INFO: Permissions-Policy: interest-cohort=()
+pkw_backend    | 2023-05-09 19:05:26 - INFO: X-Content-Type-Options: nosniff
+pkw_backend    | 2023-05-09 19:05:26 - INFO: X-Frame-Options: SAMEORIGIN
+pkw_backend    | 2023-05-09 19:05:26 - INFO: 🚀 Rocket has launched from http://0.0.0.0:8000
+```
+## Unit Tests
+
+6 Jest tests pass:
+```js
+ PASS  tests/utils.test.ts
+ PASS  tests/coreApp.test.ts
+ PASS  tests/formatString.test.ts
+ PASS  tests/sections/docs/index.test.tsx
+
+Test Suites: 6 passed, 6 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        21.407 s
+Ran all test suites.
+```
+## Backend Tests
+`docker-compose run compiler-be-test` runs successfully:
+```js
+2023-05-09 20:02:39 - INFO: X-Frame-Options: SAMEORIGIN
+2023-05-09 20:02:39 - INFO: X-Content-Type-Options: nosniff
+2023-05-09 20:02:39 - INFO: Permissions-Policy: interest-cohort=()
+2023-05-09 20:02:39 - INFO: 🚀 Rocket has launched into local orbit
+2023-05-09 20:02:39 - INFO: POST /contract:
+2023-05-09 20:02:39 - INFO: Matched: (fetch_or_compile_contract) POST /contract
+test main_get_contract_test::main_get_contract_test::get_contract_working_as_expected has been running for over 60 seconds
+test main_post_contract_test::main_post_contract_test::post_contract_expects_code_is_ok has been running for over 60 seconds
+```
+All 33 Rust tests pass successfully. I can also build the release successfully and execute the API with `./target/release/compiler-be` once the Cargo env variable is set.
