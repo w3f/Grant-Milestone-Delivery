@@ -16,6 +16,65 @@
 | 2. | Supersig-app: polkadot-js-ui (fork) |<ul><li>[ ] </li></ul>|  https://github.com/decentration/apps |Not fully evaluated yet 
 | 3. | Benchmarking |<ul><li>[x] </li></ul>|  https://github.com/decentration/pallet_supersig/blob/master/src/weights.rs  |   | 
 
+## Evaluation V3
+
+### Testing 
+
+I ran `yarn build` and it finished without problems.
+
+I ran `yarn lint` and got these errors:
+
+```
+user@localhost:~/Documents/supersig/apps$ yarn lint
+$ polkadot-dev-run-lint 
+$ yarn polkadot-exec-eslint --fix --resolve-plugins-relative-to /home/user/Documents/supersig/apps/node_modules/@polkadot/dev/scripts --ext .js,.cjs,.mjs,.ts,.tsx /home/user/Documents/supersig/apps
+$ eslint --fix --resolve-plugins-relative-to /home/user/Documents/supersig/apps/node_modules/@polkadot/dev/scripts --ext .js,.cjs,.mjs,.ts,.tsx /home/user/Documents/supersig/apps
+
+/home/user/Documents/supersig/apps/packages/apps-config/src/api/spec/kabocha.ts
+  66:11  error  Expected object keys to be in ascending order. 'no_of_members' should be before 'proposal_info'  sort-keys
+  70:11  error  Expected object keys to be in ascending order. 'no_of_members' should be before 'proposal_info'  sort-keys
+
+/home/user/Documents/supersig/apps/packages/page-supersig/src/Supersig/Dashboard/index.tsx
+  4:15  warning  '__AugmentedRpc' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/user/Documents/supersig/apps/packages/page-supersig/src/index.tsx
+  29:5  error  Expected object keys to be in ascending order. 'dashboard' should be before 'decode'  sort-keys
+
+✖ 4 problems (3 errors, 1 warning)
+
+node:internal/errors:857
+  const err = new Error(message);
+              ^
+
+Error: Command failed: yarn polkadot-exec-eslint --fix --resolve-plugins-relative-to /home/user/Documents/supersig/apps/node_modules/@polkadot/dev/scripts --ext .js,.cjs,.mjs,.ts,.tsx /home/user/Documents/supersig/apps
+    at checkExecSyncError (node:child_process:861:11)
+    at Object.execSync (node:child_process:932:15)
+    at execSync (file:///home/user/Documents/supersig/apps/node_modules/@polkadot/dev/scripts/util.mjs:79:6)
+    at file:///home/user/Documents/supersig/apps/node_modules/@polkadot/dev/scripts/polkadot-dev-run-lint.mjs:31:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:193:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:530:24)
+    at async loadESM (node:internal/process/esm_loader:91:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 185350,
+  stdout: null,
+  stderr: null
+}
+```
+
+I'm using node 16.20.0 in the branch main-fellowship-1.
+
+```
+user@localhost:~/Documents/supersig/apps$ node -v
+v16.20.0
+
+user@localhost:~/Documents/supersig/apps$ git branch
+* main-fellowship-1
+```
+
 ## Evaluation V2
 
 ### Automate Testing
