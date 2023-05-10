@@ -7,15 +7,19 @@
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 0a    | License | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/LICENSE</div><div>Backend: https://github.com/protofire/ink-compiler-be/blob/main/LICENSE</div></div> |  |
-| 0b.    | Documentation | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/README.md</div><div> Backend: https://github.com/protofire/ink-compiler-be/blob/main/README.md</div></div>  |  |
-| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/tests/Readme.md</div><div> Backend: https://github.com/protofire/ink-compiler-be/blob/main/README.md#testing</div></div>  |  |
-| 0d.    | Docker | <ul><li>[x] </li></ul> | https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/docker-compose.yml |  |
-| 0e. | Article | <ul><li>[x] </li></ul> | https://medium.com/protofire-blog/introducing-the-polkadot-contract-wizard-a-game-changer-for-the-polkadot-and-kusama-ecosystem-fb9076880ca7 |  |
-| 1. | Create a service that allows on demand contract compilation and deployment. | <ul><li>[x] </li></ul> | https://github.com/protofire/ink-compiler-be/tree/main |  |
-| 2. | Develop Instance functionality. | <ul><li>[x] </li></ul> | https://github.com/protofire/polkadot-contract-wizard/tree/milestone-2 |  |
+| 0a    | License | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/LICENSE</div><div>Backend: https://github.com/protofire/ink-compiler-be/blob/main/LICENSE</div></div> | Ok. |
+| 0b.    | Documentation | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/README.md</div><div> Backend: https://github.com/protofire/ink-compiler-be/blob/main/README.md</div></div>  | Ok. |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | <div><div>Frontend: https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/tests/Readme.md</div><div> Backend: https://github.com/protofire/ink-compiler-be/blob/main/README.md#testing</div></div>  | Ok. |
+| 0d.    | Docker | <ul><li>[x] </li></ul> | https://github.com/protofire/polkadot-contract-wizard/blob/milestone-2/docker-compose.yml | Ok. |
+| 0e. | Article | <ul><li>[x] </li></ul> | https://medium.com/protofire-blog/introducing-the-polkadot-contract-wizard-a-game-changer-for-the-polkadot-and-kusama-ecosystem-fb9076880ca7 | Ok. |
+| 1. | Create a service that allows on demand contract compilation and deployment. | <ul><li>[x] </li></ul> | https://github.com/protofire/ink-compiler-be/tree/main | Ok. |
+| 2. | Develop Instance functionality. | <ul><li>[x] </li></ul> | https://github.com/protofire/polkadot-contract-wizard/tree/milestone-2 | Ok. |
 
 # General Notes
+
+Very nicely made app. Works well and allows for quick generation and compliation/deployment of select PSP token standards using OpenBrush. They have a helpful Telegram support channel as well.
+
+All issues in deployed app have been scheduled for a fix.
 
 ## Front-end
 
