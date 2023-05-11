@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-analyzer.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -8,11 +8,48 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| **0a.** | License| <ul><li>[ ] </li></ul>| [Apache 2.0](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-APACHE) and [MIT](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-MIT).| Two licenses |
+| **0a.** | License| <ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-APACHE) and [MIT](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-MIT).|  |
 | **0b.** | Documentation| <ul><li>[x] </li></ul>| [README](https://github.com/ink-analyzer/ink-analyzer#readme) on GitHub, rustdoc documentation on docs.rs for [semantic analyzer crate (ink-analyzer)](https://docs.rs/ink-analyzer/latest/ink_analyzer/), [IR crate (ink-analyzer-ir)](https://docs.rs/ink-analyzer-ir/latest/ink_analyzer_ir/), [proc-macro crate (ink-analyzer-macro)](https://docs.rs/ink-analyzer-macro/latest/ink_analyzer_macro/) and extensive inline source documentation in all 3 crates. |  |
 | **0c.** | Testing and Testing Guide| <ul><li>[x] </li></ul>| [Testing guide](https://github.com/ink-analyzer/ink-analyzer#testing).| |
 | **0d.** | Docker| <ul><li>[x] </li></ul>| [Dockerfile](https://github.com/ink-analyzer/ink-analyzer/blob/master/Dockerfile).||
-| 1.      | Semantic Analyzer: Rust library crate: Diagnostic errors | <ul><li>[ ] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [Semantic analyzer crate (ink-analyzer)](https://crates.io/crates/ink-analyzer), [IR crate (ink-analyzer-ir)](https://crates.io/crates/ink-analyzer-ir) and [proc-macro crate (ink-analyzer-macro)](https://crates.io/crates/ink-analyzer-macro).| Not fully evaluated yet |
+| 1.      | Semantic Analyzer: Rust library crate: Diagnostic errors | <ul><li>[x] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [Semantic analyzer crate (ink-analyzer)](https://crates.io/crates/ink-analyzer), [IR crate (ink-analyzer-ir)](https://crates.io/crates/ink-analyzer-ir) and [proc-macro crate (ink-analyzer-macro)](https://crates.io/crates/ink-analyzer-macro).| Not fully evaluated yet |
+
+## Evaluation V2
+
+### License
+
+The grantees [explained](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) why this project is using two licenses and looks good to me since both are open source.
+
+### Testing
+
+Some integration tests were provided, and they passed.
+
+```
+ 	Running tests/chain_extension_tests.rs (target/debug/deps/chain_extension_tests-65b3f5fc7fc6b5de)
+
+running 2 tests
+test rand_extension_works ... ok
+test psp22_extension_works ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.35s
+
+ 	Running tests/contract_tests.rs (target/debug/deps/contract_tests-f8fb10ae08351ac3)
+
+running 3 tests
+test flipper_works ... ok
+test mother_works ... ok
+test erc20_works ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+
+ 	Running tests/trait_definition_tests.rs (target/debug/deps/trait_definition_tests-0bb20edff0ce3b49)
+
+running 2 tests
+test flipper_trait_works ... ok
+test erc20_trait_works ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+```
 
 ## Evaluation V1
 
