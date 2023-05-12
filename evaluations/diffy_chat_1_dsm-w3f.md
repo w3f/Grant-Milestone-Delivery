@@ -9,11 +9,93 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.| License | <ul><li>[ ] </li></ul>| [LICENSE](https://github.com/Belsoft-rs/diffychat-pallet/blob/main/LICENSE) | DOTRTC Library license is missing |
-| 0b.| Documentation |<ul><li>[ ] </li></ul>| [Readme.md](https://github.com/Belsoft-rs/diffychat-pallet#readme) | Not fully evaluated yet. Need instructions to deploy locally. |
-| 0c.| Testing Guide |<ul><li>[ ] </li></ul>| [DOTRTC usage](https://github.com/Belsoft-rs/diffychat-dotrtc#usage); [Substrate pallet](https://github.com/Belsoft-rs/diffychat-pallet#getting-started) | Not fully evaluated yet. |
-| 1.| Diffy chat pallet |<ul><li>[ ] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-pallet) |  Not fully evaluated yet. | 
+| 0b.| Documentation |<ul><li>[ ] </li></ul>| [Readme.md](https://github.com/Belsoft-rs/diffychat-pallet#readme) | Not fully evaluated yet.  |
+| 0c.| Testing Guide |<ul><li>[ ] </li></ul>| [DOTRTC usage](https://github.com/Belsoft-rs/diffychat-dotrtc#usage); [Substrate pallet](https://github.com/Belsoft-rs/diffychat-pallet#getting-started) | Need instructions how to run unit tests of DOTRTC. |
+| 1.| Diffy chat pallet |<ul><li>[x] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-pallet) |   | 
 | 2.| DOTRTC library |<ul><li>[ ] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-dotrtc) |  Not fully evaluated yet. | 
-| 3.| HTML test page |<ul><li>[ ] </li></ul>| [See here](https://belsoft-rs.github.io/diffychat/index.html) |  Not fully evaluated yet. | 
+| 3.| HTML test page |<ul><li>[ ] </li></ul>| [See here](https://belsoft-rs.github.io/diffychat/index.html) | Only works in Chrome | 
+
+## Evaluation V2
+
+
+### License and Documentation
+
+Are missing the instructions to run the unit tests and the License for DOTRTC Library.
+
+### Building
+
+I tried to run `rollup -c ./rollup.config.js` and got this error:
+
+```
+user@localhost:~/Documents/diffychat/diffychat-dotrtc/demo$ rollup -c ./rollup.config.js
+
+./index.js → ./build/index.js...
+[!] RollupError: Could not resolve "./blockchain.js" from "../src/DOTRTC.js"
+../src/DOTRTC.js
+	at error (/home/user/.nvm/versions/node/v18.16.0/lib/node_modules/rollup/dist/shared/rollup.js:279:30)
+	at ModuleLoader.handleInvalidResolvedId (/home/user/.nvm/versions/node/v18.16.0/lib/node_modules/rollup/dist/shared/rollup.js:24433:24)
+	at /home/user/.nvm/versions/node/v18.16.0/lib/node_modules/rollup/dist/shared/rollup.js:24395:26
+```
+
+After changing the import `./blockchain.js` to `./Blockchain.js` in DOTRTC, it builds without problems.
+
+```
+user@localhost:~/Documents/diffychat/diffychat-dotrtc/demo$ rollup -c ./rollup.config.js
+
+./index.js → ./build/index.js...
+(!) Unresolved dependencies
+https://rollupjs.org/troubleshooting/#warning-treating-module-as-external-dependency
+abab (imported by "../src/Peer.js")
+wrtc (imported by "../src/Peer.js")
+created ./build/index.js in 5.1s
+```
+
+Please change the import or the file name.
+
+### Manual Testing
+
+I tested using Firefox and got the same problem. Alice send a message to Bob, but Bob didn't get any message, but Alice received the message from Bob.
+
+![image (18)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/097f9f3a-063c-4d44-b03a-b976afb42780)
+
+I checked the developer tool and got this error:
+
+
+Using the index.html:
+```
+Uncaught RangeError: source array is too long
+    frameSet file:///home/user/Documents/diffychat/diffychat-dotrtc/demo/build/index.js:56671
+    onmessage file:///home/user/Documents/diffychat/diffychat-dotrtc/demo/build/index.js:56593
+index.js:56671:17
+    frameSet file:///home/user/Documents/diffychat/diffychat-dotrtc/demo/build/index.js:56671
+    onmessage file:///home/user/Documents/diffychat/diffychat-dotrtc/demo/build/index.js:56593
+```
+
+Using the external application:
+```
+Uncaught RangeError: source array is too long
+    frameSet https://belsoft-rs.github.io/diffychat/index.html:1857
+    onmessage https://belsoft-rs.github.io/diffychat/index.html:1857
+    PeerChannel https://belsoft-rs.github.io/diffychat/index.html:1857
+    channelCreate https://belsoft-rs.github.io/diffychat/index.html:1859
+    channelCreate https://belsoft-rs.github.io/diffychat/index.html:1859
+    <anonymous> https://belsoft-rs.github.io/diffychat/index.html:1859
+index.html:1857:1619
+    frameSet https://belsoft-rs.github.io/diffychat/index.html:1857
+    onmessage https://belsoft-rs.github.io/diffychat/index.html:1857
+    (assíncrono: EventHandlerNonNull)
+    PeerChannel https://belsoft-rs.github.io/diffychat/index.html:1857
+    channelCreate https://belsoft-rs.github.io/diffychat/index.html:1859
+    channelCreate https://belsoft-rs.github.io/diffychat/index.html:1859
+    <anonymous> https://belsoft-rs.github.io/diffychat/index.html:1859
+    dispatchEvent resource://gre/modules/media/PeerConnection.jsm:819
+    dispatchEvent resource://gre/modules/media/PeerConnection.jsm:1760
+    notifyDataChannel resource://gre/modules/media/PeerConnection.jsm:1902
+```
+
+I tested using Chrome and didn't get this error. All parts worked well in Chrome.
+
+Please either fix the error for Firefox or add instructions for the user to know that the example only works in Chrome.
 
 ## Evaluation V1
 
