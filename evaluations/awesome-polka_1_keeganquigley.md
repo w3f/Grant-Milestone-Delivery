@@ -16,3 +16,25 @@
 | *2.* | Project Owner Dashboard  | <ul><li>[x] </li></ul> | [Dashboard Link](https://awesomepolka.org/dashboard/project) | |
 
 # General Notes
+
+8 unit tests pass (validation using Yup)
+```js
+yarn run v1.22.15
+warning ../package.json: No license field
+$ jest
+ PASS  src/utils/validation/tests/articleValidation.test.ts
+ PASS  src/utils/validation/tests/faqValidation.test.ts
+ PASS  src/utils/validation/tests/teamValidation.test.ts
+ PASS  src/utils/validation/tests/jobsValidation.test.ts
+ PASS  src/utils/validation/tests/coingeckoTokenValidation.test.ts
+ PASS  src/utils/validation/tests/githubRepoValidation.test.ts
+ PASS  src/utils/validation/tests/profileValidation.test.ts
+ PASS  src/utils/validation/tests/descriptionValidation.test.ts
+
+Test Suites: 8 passed, 8 total
+Tests:       36 passed, 36 total
+Snapshots:   0 total
+Time:        1.782 s
+Ran all test suites.
+✨  Done in 2.92s.
+```
