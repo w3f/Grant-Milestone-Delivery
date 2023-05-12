@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/supersig_fellowship.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,11 +10,15 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|  Apache 2.0  |  | |
 | 0b. | Documentation |<ul><li>[x] </li></ul>|  https://decentration.medium.com/, https://wiki.kabocha.network/docs/Supersig/introduction |  |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>|  https://github.com/decentration/pallet_supersig/tree/polkadot-v0.9.37-fix-unbounded/src/tests | Need a testing / verification guide for deliverable 2 |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>|  https://github.com/decentration/pallet_supersig/tree/polkadot-v0.9.37-fix-unbounded/src/tests |  |
 | 0d. | Article and Video  |<ul><li>[x] </li></ul>|  https://medium.com/@decentration/supersig-statemine-cbe6533233c2, https://www.loom.com/share/ea2fe68f99c44a4b91baaa85828b1745 |  |
 | 1. | Substrate module: pallet_supersig |<ul><li>[x] </li></ul>|   pallet_supersig https://github.com/decentration/pallet_supersig/tree/polkadot-v0.9.37-fix-unbounded |  |
-| 2. | Supersig-app: polkadot-js-ui (fork) |<ul><li>[ ] </li></ul>|  https://github.com/decentration/apps |Not fully evaluated yet 
+| 2. | Supersig-app: polkadot-js-ui (fork) |<ul><li>[x] </li></ul>|  https://github.com/decentration/apps | 
 | 3. | Benchmarking |<ul><li>[x] </li></ul>|  https://github.com/decentration/pallet_supersig/blob/master/src/weights.rs  |   | 
+
+## Evaluation V4
+
+The errors reported were fixed or justified. 
 
 ## Evaluation V3
 
