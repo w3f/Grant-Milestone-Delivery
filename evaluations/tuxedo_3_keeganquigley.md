@@ -1,3 +1,22 @@
+# Evaluation
+
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Web3Box.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+| Number | Deliverable | Accepted | Link | Notes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 0a.    | License     | <ul><li>[x] </li></ul> | [LICENSE file](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3/LICENSE) | Apache 2.0, as recommended | 
+| 0b.    | Documentation | <ul><li>[x] </li></ul> | [Hosted Rustdocs](https://off-narrative-labs.github.io/Tuxedo) | We have detailed rustdocs throughout the project; they are also hosted. These docs serve as a technical and architectural reference. | 
+| 0c.    | Testing     | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#testing-and-code-quality) | Tests are run in CI and instructions for running them locally are in the readme. |
+| 0d.    | Docker      | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#docker), [Published Images](https://github.com/orgs/Off-Narrative-Labs/packages) | We provide docker images for both the template node and the PoC wallet as well as instructions for how to test the node with them. |
+| 0e.    | Full Tutorial | <ul><li>[x] </li></ul> | [Starter Code](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/), [Complete Solutions](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/tree/dex-solutions), [Walkthrough Video](https://www.youtube.com/watch?v=bWA2ksTmNBU) | Instead of the simple tutorial about passing around tokens from the original spec, we expanded this into a complete tutorial about adding an additional token to your runtime and designing a decentralized exchange between the two tokens. This tutorial contains written instructions, starter code, complete unit tests so you know when you have solved each part, and a complete solution example. We also worked through most of this tutorial live on Substrate Seminar.
+| 1.     | Template Piece | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial#use-as-a-template), [Dex Template](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/blob/dex-tutorial/dex/src/lib.rs) | We've decided to use the same starting point for our tutorial and for a general-purpose template. As explained in the readme, this makes it easier for learners to complete the tutorial and continue naturally on to their project. It also makes it easier for downstream projects to get updates to tuxedo core.
+
+# General Notes
+
+## Tests
 ```rust
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
