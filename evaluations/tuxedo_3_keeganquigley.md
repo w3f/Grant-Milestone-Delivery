@@ -1,22 +1,58 @@
 # Evaluation
 
-- **Status:** In progress
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Web3Box.md
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 0a.    | License     | <ul><li>[x] </li></ul> | [LICENSE file](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3/LICENSE) | Apache 2.0, as recommended | 
-| 0b.    | Documentation | <ul><li>[x] </li></ul> | [Hosted Rustdocs](https://off-narrative-labs.github.io/Tuxedo) | We have detailed rustdocs throughout the project; they are also hosted. These docs serve as a technical and architectural reference. | 
-| 0c.    | Testing     | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#testing-and-code-quality) | Tests are run in CI and instructions for running them locally are in the readme. |
-| 0d.    | Docker      | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#docker), [Published Images](https://github.com/orgs/Off-Narrative-Labs/packages) | We provide docker images for both the template node and the PoC wallet as well as instructions for how to test the node with them. |
-| 0e.    | Full Tutorial | <ul><li>[x] </li></ul> | [Starter Code](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/), [Complete Solutions](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/tree/dex-solutions), [Walkthrough Video](https://www.youtube.com/watch?v=bWA2ksTmNBU) | Instead of the simple tutorial about passing around tokens from the original spec, we expanded this into a complete tutorial about adding an additional token to your runtime and designing a decentralized exchange between the two tokens. This tutorial contains written instructions, starter code, complete unit tests so you know when you have solved each part, and a complete solution example. We also worked through most of this tutorial live on Substrate Seminar.
-| 1.     | Template Piece | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial#use-as-a-template), [Dex Template](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/blob/dex-tutorial/dex/src/lib.rs) | We've decided to use the same starting point for our tutorial and for a general-purpose template. As explained in the readme, this makes it easier for learners to complete the tutorial and continue naturally on to their project. It also makes it easier for downstream projects to get updates to tuxedo core.
-
+| 0a.    | License     | <ul><li>[x] </li></ul> | [LICENSE file](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3/LICENSE) | Apache 2.0 | 
+| 0b.    | Documentation | <ul><li>[x] </li></ul> | [Hosted Rustdocs](https://off-narrative-labs.github.io/Tuxedo) | Great docs and guide. | 
+| 0c.    | Testing     | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#testing-and-code-quality) | All tests pass. |
+| 0d.    | Docker      | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo/blob/milestone-3#docker), [Published Images](https://github.com/orgs/Off-Narrative-Labs/packages) | Node and CLI both run successfully. | 
+| 0e.    | Full Tutorial | <ul><li>[x] </li></ul> | [Starter Code](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/), [Complete Solutions](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/tree/dex-solutions), [Walkthrough Video](https://www.youtube.com/watch?v=bWA2ksTmNBU) | Ok.
+| 1.     | Template Piece | <ul><li>[x] </li></ul> | [Readme Section](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial#use-as-a-template), [Dex Template](https://github.com/Off-Narrative-Labs/Tuxedo-Order-Book-Dex-Tutorial/blob/dex-tutorial/dex/src/lib.rs) | Ok.
 # General Notes
 
+Excellent work! Amazing docs and guides, and the tutorial is very helpful to see UTXO in action. Very cool to see it working in Substrate. 
+
+I was able to run the node and CLI locally as well as with Docker. I was able to play with the CLI to create UXTO transactions:
+```rust
+docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet show-balance
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+[2023-05-15T22:40:04Z INFO  tuxedo_template_wallet::sync] Initializing fresh sync from genesis 0xf9799acb9cd2371e4f2d986fd923999d985533909e459ea2bcda200a0577fd68
+[2023-05-15T22:40:04Z INFO  tuxedo_template_wallet] Number of blocks in the db: 0
+[2023-05-15T22:40:04Z INFO  tuxedo_template_wallet] Wallet database synchronized with node to height 35
+Balance Summary
+0xd2bf…df67: 100
+--------------------
+total      : 100
+```
+```rust
+docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet show-all-outputs
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+[2023-05-15T23:23:47Z INFO  tuxedo_template_wallet::sync] Initializing fresh sync from genesis 0xf9799acb9cd2371e4f2d986fd923999d985533909e459ea2bcda200a0577fd68
+[2023-05-15T23:23:47Z INFO  tuxedo_template_wallet] Number of blocks in the db: 0
+[2023-05-15T23:23:48Z INFO  tuxedo_template_wallet] Wallet database synchronized with node to height 910
+###### Unspent outputs ###########
+000000000000000000000000000000000000000000000000000000000000000000000000: owner 0xd2bf4b844dfefd6772a8843e669f943408966a977e3ae2af1dd78e0f55f4df67, amount 100
+```
+```rust
+docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet spend-coins -o 50 -o 40 -o 5
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+[2023-05-15T23:25:16Z INFO  tuxedo_template_wallet::sync] Initializing fresh sync from genesis 0xf9799acb9cd2371e4f2d986fd923999d985533909e459ea2bcda200a0577fd68
+[2023-05-15T23:25:16Z INFO  tuxedo_template_wallet] Number of blocks in the db: 0
+[2023-05-15T23:25:17Z INFO  tuxedo_template_wallet] Wallet database synchronized with node to height 939
+[2023-05-15T23:25:17Z INFO  tuxedo_template_wallet::money] Node's response to spend transaction: Ok("0xd1de5722d3190c86990aea4e61d821c74932035f57d3a190d74b3cf91c73a169")
+Created "dc867b7132dbb7951c30569f7d1f3bfd92bdf497a22720728cfe886d9777aef300000000" worth 50. owned by 0xd2bf…df67
+Created "dc867b7132dbb7951c30569f7d1f3bfd92bdf497a22720728cfe886d9777aef301000000" worth 40. owned by 0xd2bf…df67
+Created "dc867b7132dbb7951c30569f7d1f3bfd92bdf497a22720728cfe886d9777aef302000000" worth 5. owned by 0xd2bf…df67
+```
+
 ## Tests
+
+Unit tests all pass for the Crypto Kitties game, the CLI, Tuxedo Core, Money, and the runtime template:
 ```rust
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
@@ -247,3 +283,4 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+Cargo Clippy comes back clean.
