@@ -9,15 +9,28 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [MIT](https://github.com/tolgayayci/awesome-polka/blob/dev/LICENSE) | |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | [Awesome Polka Docs](https://docs.awesomepolka.org/docs/awesome-polka/getting-started) | |
-| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Guide](https://docs.awesomepolka.org/docs/technical-details/testing) | |
-| **0e.** | Article | <ul><li>[x] </li></ul> | [Documentation Includes](https://docs.awesomepolka.org/docs/awesome-polka/getting-started) | |
-| **1.** | UI & UX Development | <ul><li>[x] </li></ul> | **Home Page:** [Link](https://awesomepolka.org) <br /><br /> **Projects Page:**  [Link](https://awesomepolka.org/projects)</br></br>**Project Detail Page:**  [Link](https://awesomepolka.org/projects/awesome-polka)<br /></br>**Articles Page:**  [Link](https://awesomepolka.org/articles)<br /></br>**Article Detail Page:**  [Link](https://awesomepolka.org/articles/09885b15-3a16-478f-aa2f-d6929d2f05c8)<br /></br>**Ranking Page:** [Link](https://awesomepolka.org/ranking)</br></br> **Learn Page:** [Link](https://awesomepolka.org/learn)</br></br> **UX Improvements & Testing:**  [Link](https://docs.awesomepolka.org/docs/technical-details/testing)|
-| *2.* | Project Owner Dashboard  | <ul><li>[x] </li></ul> | [Dashboard Link](https://awesomepolka.org/dashboard/project) | |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [Awesome Polka Docs](https://docs.awesomepolka.org/docs/awesome-polka/getting-started) | Ok. |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Guide](https://docs.awesomepolka.org/docs/technical-details/testing) | Ok. |
+| **0e.** | Article | <ul><li>[x] </li></ul> | [Documentation Includes](https://docs.awesomepolka.org/docs/awesome-polka/getting-started) | Ok. |
+| **1.** | UI & UX Development | <ul><li>[x] </li></ul> | **Home Page:** [Link](https://awesomepolka.org) <br /><br /> **Projects Page:**  [Link](https://awesomepolka.org/projects)</br></br>**Project Detail Page:**  [Link](https://awesomepolka.org/projects/awesome-polka)<br /></br>**Articles Page:**  [Link](https://awesomepolka.org/articles)<br /></br>**Article Detail Page:**  [Link](https://awesomepolka.org/articles/09885b15-3a16-478f-aa2f-d6929d2f05c8)<br /></br>**Ranking Page:** [Link](https://awesomepolka.org/ranking)</br></br> **Learn Page:** [Link](https://awesomepolka.org/learn)</br></br> **UX Improvements & Testing:**  [Link](https://docs.awesomepolka.org/docs/technical-details/testing)| See below.
+| *2.* | Project Owner Dashboard  | <ul><li>[x] </li></ul> | [Dashboard Link](https://awesomepolka.org/dashboard/project) | See below. |
 
 # General Notes
 
 Site is built with Vercel and pretty straight forward to navigate. It is a good proof of concept but right now links to just our blogs and wiki pages. Not much information in any of the categories. I hope to see a lot more information added in the future. Hopefully this will change as people sign up to contribute posts.
+
+Please address issues below:
+
+1. As far as I can tell, Awesome Polka is not available on the iOS app store or the Google Play store. The icons just point back to the domain. Is there a reason these are included when the mobile versions haven't been created yet?
+
+2. I'm able to log into the dashboard to modify the contents, however these categories don't exist on the site even though they say "published". Therefore I can't see my changes reflected. Shouldn't I be able to see these categories on the site? (i.e. FAQ, Team, Jobs, etc.)
+
+<img width="1287" alt="dash" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/1f462179-04d4-48fa-8dea-fad673a1e45d">
+
+3. When trying to create an article, selecting "Cancel changes" and "Update" does nothing. I am also unable to upload a cover photo. Are these buttons supposed to work?
+
+![article](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/33aebf00-7be6-4517-8df2-8acb098e47bc)
+
 
 ## Tests
 
