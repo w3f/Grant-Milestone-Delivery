@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Awesome-Polka.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -18,6 +18,8 @@
 # General Notes
 
 Site is built with Vercel and pretty straight forward to navigate. It is a good proof of concept but right now links to just our blogs and wiki pages. Not much information in any of the categories. I hope to see a lot more information added in the future. Hopefully this will change as people sign up to contribute posts.
+
+**UPDATE:**: Below issues have been resolved. I can now create article posts and the app store icons have been removed.
 
 Please address issues below:
 
