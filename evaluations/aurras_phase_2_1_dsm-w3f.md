@@ -1,6 +1,6 @@
-# Evaluation
+ Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_2.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,18 +9,41 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/master/LICENSE | |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#usage <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#usage | Not fully evaluated yet |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#test <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#test | Not fully evaluated yet |
-| 1a. | Workflow Composer: Rust OpenWhisk Client Library | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust | Not fully evaluated yet |
-| 1b. | Workflow Composer: Composer | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/composer | Not fully evaluated yet |
-| 1c. | Workflow Composer: Pipe | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 | Not fully evaluated yet |
-| 1d. | Workflow Composer: structured YAML file | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/examples/STRUCTURED_YAML.yaml | Not fully evaluated yet |
-| 1e. | Workflow Composer: Concat Operator | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L362 | Not fully evaluated yet |
-| 1f. | Workflow Composer: Map Operator | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L538 | Not fully evaluated yet |
-| 2.  | Predefined boiler plate | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/boilerplate | Not fully evaluated yet |
-| 3a. | Flow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/flow.py | Not fully evaluated yet |
-| 3b. | Task Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py | Not fully evaluated yet |
-| 3c. | Workflow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py | Not fully evaluated yet |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#usage <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#usage |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#test <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#test |  |
+| 1a. | Workflow Composer: Rust OpenWhisk Client Library | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust |  |
+| 1b. | Workflow Composer: Composer | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/composer |  |
+| 1c. | Workflow Composer: Pipe | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 |  |
+| 1d. | Workflow Composer: structured YAML file | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/examples/STRUCTURED_YAML.yaml |  |
+| 1e. | Workflow Composer: Concat Operator | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L362 |  |
+| 1f. | Workflow Composer: Map Operator | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L538 |  |
+| 2.  | Predefined boiler plate | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/boilerplate |  |
+| 3a. | Flow Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/flow.py |  |
+| 3b. | Task Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py |  |
+| 3c. | Workflow Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py |  |
+
+## Evaluation V6
+
+Thanks for providing the video tutorial. I was able to check the push notification this time, as in the video, and the application works fine.
+
+## Evaluation V5
+
+This time I was able to start the front end and got this warning:
+
+```
+Compiled with warnings.
+
+/static/js/bundle.js is 7.55 MB, and won't be precached. Configure maximumFileSizeToCacheInBytes to change this limit.
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in /static/js/bundle.js is 7.55 MB, and won't be precached. Configure maximumFileSizeToCacheInBytes to change this limit.
+
+webpack compiled with 1 warning
+```
+
+I noticed the page was too slow connected to `wss://rpc.polkadot.io`, but using a local node the page works. I tried to check the feature using a local node, I changed the `src/config/development.json` to connect to the local node. I could choose a wallet, register the Balance Notification, transfer, and check the transfer in the local node, but I couldn't check the notification using the Developer Tools. Did I miss something or need to do some other step to get the notification? Just this last step didn't work. 
 
 ## Evaluation V4
 
@@ -36,7 +59,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 6.745s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/CarMarketPlaceMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -46,7 +68,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 4.214s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/EmployeeSalary.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -56,7 +77,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.845s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/EmployeeSalaryMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -66,7 +86,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.894s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/MapOpMock.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -76,7 +95,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.805s
-
 OK
 Test Completed
 user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/PolkadotPayout.yaml | docker run -i --rm hugobyte/workflow-composer test
@@ -86,7 +104,6 @@ Running Test ...
 ........
 ----------------------------------------------------------------------
 Ran 8 tests in 2.767s
-
 OK
 Test Completed
 ```
@@ -98,7 +115,6 @@ I noticed this time only have 8 tests and before it was 10 tests. I could create
 
 ```
 Failed to compile.
-
 ./node_modules/@ledgerhq/hw-transport-webhid/lib-es/TransportWebHID.js
 Module not found: Can't resolve '@ledgerhq/devices/hid-framing' in '/home/user/Documents/aurras/aurras/examples/substrate-push-notification/node_modules/@ledgerhq/hw-transport-webhid/lib-es'
 ```
@@ -116,7 +132,6 @@ And other erro showed up:
 
 ```
 Failed to compile.
-
 ./node_modules/@polkadot/wasm-crypto/packageInfo.js 6:14
 Module parse failed: Unexpected token (6:14)
 File was processed with these loaders:

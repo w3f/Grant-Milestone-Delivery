@@ -201,4 +201,50 @@ Errors  Files
      2  src/lib.ts:1
     14  src/util.ts:1
 ```
+In the `silentdata-node` repo, yarn is unsuccessful in installing the dependancies:
+```
+ubuntu@ip-172-31-3-233:~$ yarn add @appliedblockchain/silentdata-node
+yarn add v1.22.19
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 18 new dependencies.
+info Direct dependencies
+└─ @appliedblockchain/silentdata-node@0.4.0
+info All dependencies
+├─ @appliedblockchain/silentdata-node@0.4.0
+├─ @peculiar/webcrypto@1.4.3
+├─ asn1js@3.0.5
+├─ asynckit@0.4.0
+├─ axios@1.4.0
+├─ bytestreamjs@2.0.1
+├─ cbor@8.1.0
+├─ combined-stream@1.0.8
+├─ delayed-stream@1.0.0
+├─ follow-redirects@1.15.2
+├─ form-data@4.0.0
+├─ mime-db@1.52.0
+├─ mime-types@2.1.35
+├─ nofilter@3.1.0
+├─ pkijs@3.0.14
+├─ proxy-from-env@1.1.0
+├─ tweetnacl@1.0.3
+└─ webcrypto-core@1.7.7
+Done in 5.18s.
+info There appears to be trouble with the npm registry (returned undefined). Retrying...
+info There appears to be trouble with the npm registry (returned undefined). Retrying...
+```
+## Guide
 
+I'm able to get through the guide and register and create an API key. Building the Docker file works, but then for some reason the command fails:
+```
+docker run silentdata-example \
+--clientId={8eb12c0d-5352-4bcb-b5da-d02c3dd61ea1} \
+--clientSecret={myapikey} \
+--action=create \
+--walletAddress={WALLET_ADDRESS}
+An error occurred: Client ID or API key incorrect
+```
