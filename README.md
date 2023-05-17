@@ -20,7 +20,7 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
 
 1. **Milestone Delivery:**
    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application (ignore if you applied privately).
-   2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**.  In the case of a maintenance application, use the ([`maintenance template`](maintenance_deliveries/maintenance-delivery-template.md)) instead.
+   2. In the newly created fork, create a copy of the milestone delivery template ([`deliveries/milestone-delivery-template.md`](deliveries/milestone-delivery-template.md)). If you're using the GitHub web interface, you will need to create a new file and copy the [contents](https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/milestone-delivery-template.md) of the template inside the new one. Make sure you **do not modify the template file directly**. In the case of a maintenance application, use the ([`maintenance template`](maintenance_deliveries/maintenance-delivery-template.md)) instead.
    5. Fill out the template with the details of your milestone, including all deliverables as listed in your application.
    4. Name the file `project_name-milestone_number.md` or in the case of maintenance agreement `project_name-delivery_number.md`
    5. Fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89).
@@ -30,13 +30,14 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
    1. The [operations team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted. Payments are usually processed within 14 days.
-   2. Payment is made to the Bitcoin, Polkadot, Kusama or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
+   2. Payment is made to the bank account or Bitcoin, Polkadot, Kusama or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
 Grant applications can be [amended](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address. *You can evaluate as many deliveries as you like.*
+
 
 ### Requirements
 
@@ -50,11 +51,9 @@ As part of the grant program, we allow everyone to participate in the evaluation
 2. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
 3. Name the file `project-name_milestone-number_your-github-username.md`.
 4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
-5. Once you have completed the evaluation, create a pull request.
+5. Once you have completed the evaluation, create a pull request in the [W3F Grants Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
 7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
-
-*You can evaluate as many deliveries as you like. With each successful evaluation, the probability of being double-checked decreases and eventually you'll be added to the list of [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team) yourself.*
 
 ## :bulb: Help
 
@@ -66,10 +65,15 @@ As part of the grant program, we allow everyone to participate in the evaluation
 
 ### Real-time conversation
 
-We have Riot channels for real-time discussions on Web3 and Polkadot. Join the conversation.
+We have a Matrix channel for grant-related questions and activities. Head over there to ask grants-related questions, share your experience with other applications and grantees, or simply hang out:
 
-- [Web3 Foundation](https://app.element.io/#/room/#w3f:matrix.org)
-- [Polkadot Watercooler](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation)
+- [W3F Grants Community](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation&via=matrix.org)
+
+We also have Matrix/Element channels for real-time discussions on Web3 and Polkadot. Join the conversation!
+
+- [Web3 Foundation Chat](https://matrix.to/#/#w3f:matrix.org)
+- [Polkadot Space](https://matrix.to/#/#polkadot:web3.foundation)
+- [Kusama Space](https://matrix.to/#/#kusama:web3.foundation)
 
 ## :information_source: License <!-- omit in toc -->
 
