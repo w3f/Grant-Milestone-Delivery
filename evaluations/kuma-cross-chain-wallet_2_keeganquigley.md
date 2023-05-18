@@ -178,3 +178,4 @@ Consider fixing this warning about rules for next milestone:
 
 ✖ 9 problems (0 errors, 9 warnings)
 ```
+Please note: No security audits were performed as a part of this evaluation.
