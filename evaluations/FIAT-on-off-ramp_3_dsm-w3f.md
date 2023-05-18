@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Open-Grants-Program/blob/master/applications/FIAT-on-off-ramp.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -10,8 +10,18 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| Unlicense  |
 | 0b. | Tutorial | <ul><li>[x] </li></ul>| Tutorial is provided in the [`/ebics-demo/DEMO.md`](https://github.com/element36-io/ocw-ebics/blob/main/ebics-demo/DEMO.md) file. | 
-| 1. | Buy me a coffee dApp | <ul><li>[ ] </li></ul>| A decentralized [application](https://github.com/element36-io/ocw-ebics/tree/main/ebics-demo) is provided, which allows users to buy someone a coffee or simply donate to support their cause. Users can donate by either sending stablecoins or fiat to the recipient's on-chain account or bank account (IBAN). The recipient can then withdraw the funds to their bank account or send them to someone else. | Some problems during the tests
+| 1. | Buy me a coffee dApp | <ul><li>[x] </li></ul>| A decentralized [application](https://github.com/element36-io/ocw-ebics/tree/main/ebics-demo) is provided, which allows users to buy someone a coffee or simply donate to support their cause. Users can donate by either sending stablecoins or fiat to the recipient's on-chain account or bank account (IBAN). The recipient can then withdraw the funds to their bank account or send them to someone else. | 
 | 2. | Docker-Compose: node & Dapp | <ul><li>[x] </li></ul>| Instead of `docker-compose` a [Makefile](https://github.com/element36-io/ocw-ebics/blob/main/Makefile) is provided with the commands that launch the chain and the demo app |
+
+## Evaluation V2
+
+### Manual Testing
+
+I tested again, and the donations from Alice and Bob have increased the total donations. In this way, the application is working fine.
+
+I found a small problem in the application that could be fixed. It's still possible to set a negative value to total donations. This negative value occurs because the substrate node has an initial balance for Jack, and the application doesn't check this balance at the start considering it as zero. In this way, it is possible to withdraw more than the balance that is shown in the frontend. It would be nice to fix this problem.
+
+The application uses an external EBICS service which was validated in Milestone 1. So no problem to use this external service for the test.
 
 ## Evaluation V1
 
