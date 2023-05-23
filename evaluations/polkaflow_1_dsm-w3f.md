@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkaflow.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -27,12 +27,34 @@
 | 13. | Frontend: Project Page<br>Backend: Data Process - (Project Info Card) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
 | 14. | Frontend: Project Page<br>Backend: Data Process - (Recent Stargazing) | <ul><li>[x] </li></ul>| [PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) |  | 
 | 15. | Frontend: Project List Page | <ul><li>[x] </li></ul>| [PolkaFlow Website Projects Page](https://polkaflow.xyz/projects)|  | 
-| 16. | Integrate: Algolia | <ul><li>[ ] </li></ul>| [Frontend Repo - Algolia Search Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/components/Layouts/Search/search.js) | Not fully evaluated yet | 
-| 17. | Frontend: Categorization | <ul><li>[ ] </li></ul>|[Frontend Repo - Typeform Integration Line ](https://github.com/justmert/eco-flow-frontend/blob/170707defb2e00fbb475a7e338593fd80c343636/src/components/Layouts/Navbar/navbar.js#L96) | Not fully evaluated yet | 
-| 18. | Integrate: Typeform | <ul><li>[ ] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) | Not fully evaluated yet | 
+| 16. | Integrate: Algolia | <ul><li>[x] </li></ul>| [Frontend Repo - Algolia Search Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/components/Layouts/Search/search.js) |  | 
+| 17. | Frontend: Categorization | <ul><li>[x] </li></ul>|[Frontend Repo - Typeform Integration Line ](https://github.com/justmert/eco-flow-frontend/blob/170707defb2e00fbb475a7e338593fd80c343636/src/components/Layouts/Navbar/navbar.js#L96) |  | 
+| 18. | Integrate: Typeform | <ul><li>[x] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) |  | 
 | 19. | Integrate: Google Analytics | <ul><li>[x] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) |  | 
 | 20. | Backend: Schedule | <ul><li>[x] </li></ul>| [Backend Repo - Schedule](https://github.com/justmert/eco-flow-backend/blob/master/main.py) |  | 
 | 21. | Frontend: UX & UI | <ul><li>[x] </li></ul>| [PolkaFlow Website](https://polkaflow.xyz/)|  | 
+
+## Evaluation V3
+
+### Backend
+
+I tried to run the backend and got this error:
+
+```
+user@localhost:~/Documents/polkaflow/eco-flow-backend$ python3 seed.py --ecosystem polka
+Traceback (most recent call last):
+  File "/home/user/Documents/polkaflow/eco-flow-backend/seed.py", line 6, in <module>
+  from projects import projects
+ModuleNotFoundError: No module named 'projects'
+```
+
+The last commit excluded the file `projects.py`. I fixed this problem by adding this file again to the folder. Whould be nice to provide some explanations about this to the user be able to configure and run the application with their projects.
+
+### Frontend
+
+I was able to check the integration of Typeform in the frontend and view the data being stored.
+
+After configuring the Search attributes in Algolia, I was able to search without problems. Would be nice if the documentation gives an explanation about this.
 
 ## Evaluation V2
 
@@ -42,7 +64,7 @@ To successfully run the command `python3 seed.py --ecosystem <ecosystem_name>`, 
 
 After that, I was able to successfully run the backend and the Firebase has been updated with the information on paritytech/substrate, paritytech/polkadot, and paritytech/ink.
 
-Please explain in the documentation what `<ecosystem_name>` means and how to setup a value for it .
+Please explain in the documentation what `<ecosystem_name>` means and how to setup a value for it.
 
 
 ### Frontend
