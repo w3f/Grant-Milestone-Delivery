@@ -19,6 +19,44 @@
 
 # General Notes
 
+## Tests
+
+Docker fails with the following:
+```rust
+sh ./docker/build.sh
+~/substrate-node ~/substrate-node
+Building parity/substrate:latest docker image, hang on!
+[+] Building 245.4s (10/15)
+ => [internal] load .dockerignore                                                                                     0.0s
+ => => transferring context: 99B                                                                                      0.0s
+ => [internal] load build definition from substrate_builder.Dockerfile                                                0.0s
+ => => transferring dockerfile: 1.82kB                                                                                0.0s
+ => [internal] load metadata for docker.io/paritytech/ci-linux:production                                             1.5s
+ => [internal] load metadata for docker.io/library/ubuntu:20.04                                                       1.5s
+ => [builder 1/4] FROM docker.io/paritytech/ci-linux:production@sha256:555bea4b712590ee08bf5ad2d9c4aa76fd5663291c7  174.6s
+ => => resolve docker.io/paritytech/ci-linux:production@sha256:555bea4b712590ee08bf5ad2d9c4aa76fd5663291c71d5180722b  0.0s
+ => => sha256:555bea4b712590ee08bf5ad2d9c4aa76fd5663291c71d5180722b98b1d6a7e0b 761B / 761B                            0.0s
+ => => sha256:7e12b5224551127862490c6ef3d1b8bb7684fff8ddd2994737200f8053e0c4cb 9.91kB / 9.91kB                        0.0s
+ => => sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 31.40MB / 31.40MB                      8.9s
+ => => sha256:3b4d18f7247ab0517742ad602f79deae16533e766e110ee5ebd8978620033443 570.02MB / 570.02MB                  160.5s
+ => => sha256:5d2ff4126beaf07b2eca0c5df928087cac191766af27ba554fd928c7c67e5cad 361.19MB / 361.19MB                  120.2s
+ => => extracting sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c                             0.5s
+ => => extracting sha256:3b4d18f7247ab0517742ad602f79deae16533e766e110ee5ebd8978620033443                             7.7s
+ => => extracting sha256:5d2ff4126beaf07b2eca0c5df928087cac191766af27ba554fd928c7c67e5cad                             4.8s
+ => [internal] load build context                                                                                     0.5s
+ => => transferring context: 41.15MB                                                                                  0.4s
+ => CACHED [stage-1 1/6] FROM docker.io/library/ubuntu:20.04@sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d  0.0s
+ => [builder 2/4] WORKDIR /substrate                                                                                  1.0s
+ => [builder 3/4] COPY . /substrate                                                                                   0.3s
+ => ERROR [builder 4/4] RUN cargo build --locked --release                                                           68.0s
+------
+ > [builder 4/4] RUN cargo build --locked --release:
+#10 2.177     Updating crates.io index
+#10 67.94 Killed
+------
+process "/bin/sh -c cargo build --locked --release" did not complete successfully: exit code: 137
+```
+
 Unit tests all pass, however there are some warnings about unused variables:
 
 ```rust
@@ -65,3 +103,6 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+## Cargo Clippy
+
+Comes back clean.
