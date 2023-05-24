@@ -23,7 +23,7 @@
 | 0b. | Documentation |https://github.com/SaaS3-Foundation/saas3-dao| | 
 | 0c.  | Testing Guide |https://github.com/SaaS3-Foundation/saas3-dao| | 
 | 0d. | Docker |  We are not able to provide a Dockerfile | |
-| oe. | Article/Tutorial | https://github.com/SaaS3-Foundation/saas3-dao | |
+| oe. | Article/Tutorial | https://github.com/SaaS3-Foundation/saas3-dao/blob/main/Tutorial.md | |
 | 1. | pallet-court | https://github.com/SaaS3-Foundation/saas3-dao/tree/main/pallets/court |A pallet of court DAO, dAPI user raise sue to determine the punishment of malfunction miners / services and return sue claimed tokens to dAPI user. |
 |  | Functions | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L233 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L262 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L286|`pub fn submit_sue(origin, value, defendent, statement)` dAPI User submit sue claims for malfunction. <br> `pub fn vote_sue(origin, lawsuit_id, approve)` Jury evaluates and votes the sue submission to determine punishment.<br> `pub fn process_sue(origin, lawsuit_id)` Process the accepted sue claims of dAPI user to slash malfunction miner / dAPI. The tokens will be paid to dAPI user and treasury with a ratio. |
 |  | Structs | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#LL68C1-L79C2 | |
