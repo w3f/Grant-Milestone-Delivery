@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/openbrush-follow-up-2.md
 - **Milestone:** 7
 - **Kusama Identity:** Address
@@ -14,10 +14,10 @@
 | 2. | Implement `AssetPallet` chain extension in OpenBrush | <ul><li>[x] </li></ul> | [pallet assets chain extension](https://github.com/727-Ventures/pallet-assets-chain-extension/blob/85e30a466cf9bdaff9eefadf7a59b130c40db82f/src/ink.rs) | - |
 | 3. | Implement PSP22 with that chain extension in OpenBrush | <ul><li>[x] </li></ul> | [psp22 pallet](https://github.com/727-Ventures/openbrush-contracts/blob/1ad6286f3b93c216e13e67eb1fa5231879caa7bc/contracts/src/token/psp22_pallet/psp22_pallet.rs) | - |
 | 4. | Create standards for `AssetPallet` Chain Extension and for `PSP22Asset` extension | <ul><li>[x] </li></ul> | [chain extension registration](https://github.com/paritytech/chainextension-registry/commit/5d4d180e62d0cc8df01093c2440fb13521722688) | - |
-| 5. | Advanced ink! unit testing framework | <ul><li>[ ] </li></ul> | [PR for cross-contract tests (open)](https://github.com/paritytech/ink/pull/1589), [chain extension registration](https://github.com/paritytech/chainextension-registry/commit/5d4d180e62d0cc8df01093c2440fb13521722688) | From the spec: _Add support to the contract deployment_. What exactly does it mean and how can it be tested? |
+| 5. | Advanced ink! unit testing framework | <ul><li>[x] </li></ul> | [PR for cross-contract tests (open)](https://github.com/paritytech/ink/pull/1589), [support for contract deployment](https://github.com/paritytech/ink/pull/1589/files#diff-fbdf5aa06d125a406b5e67346d6929c3befb7bbf449636a72384efdbe83a19d5R587-R596), [chain extension registration](https://github.com/paritytech/chainextension-registry/commit/5d4d180e62d0cc8df01093c2440fb13521722688) | - |
 | 6. | Support of XCM and cross transferring of `PSP22` tokens | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/@krikolkk/xcm-and-cross-chain-asset-transferring-6922a0ba209) | The capability of creating `pallet-assets` tokens using the `PSP22` contracts was tested. The transfer of `pallet-assets` tokens created on Westend was successfully tested as well, according to the guide. |
 | 7. | Add support for ink! 4.0 | <ul><li>[x] </li></ul> | [Openbrush v3.0.0-beta release (supports ink! v4)](https://github.com/727-Ventures/openbrush-contracts/releases/tag/3.0.0-beta) | - |
-| 8a. | Marketing - Create 2 educational video for OpenBrush/ink! | <ul><li>[ ] </li></ul> | [Ink! Onboarding video](https://www.youtube.com/watch?v=Rp5XvMM7ba8), [Ink! PSP22 tutorial](https://www.youtube.com/watch?v=JDua1vwBR5I) | See [Video Tutorial Feedback](#video-tutorial-feedback) |
+| 8a. | Marketing - Create 2 educational video for OpenBrush/ink! | <ul><li>[x] </li></ul> | [Ink! Onboarding video](https://www.youtube.com/watch?v=Rp5XvMM7ba8), [Ink! PSP22 tutorial](https://www.youtube.com/watch?v=JDua1vwBR5I) | See [Video Tutorial Feedback](#video-tutorial-feedback) |
 | 8b. | Marketing - The website upgrade | <ul><li>[x] </li></ul> | [PR](https://github.com/727-Ventures/openbrush-website/pull/56/files), [website repo](https://github.com/727-Ventures/openbrush-website) | - | 
 
 Ideally all links inside the above table should include the commit hash,
@@ -39,7 +39,7 @@ In general, please add instructions on how to test this delivery.
 ### Video Tutorial Feedback
 
 - The PSP22 tutorial video does a good job explaining how to use the PSP22 contracts.
-- However, it would have been helpful if the code written during the tutorial was linked in the description.
+- ~~However, it would have been helpful if the code written during the tutorial was linked in the description.~~ -> code was uploaded retrospectively [here](https://github.com/coreggon11/ink-tutorial) and will be added to the video description soon
 - I uploaded the code I wrote along the tutorial to [GitHub](https://github.com/takahser/ink-brush-tutorial-contracts), however, there are errors (as discussed on Element)
 
 ### Automated Tests

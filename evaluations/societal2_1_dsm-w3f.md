@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted.
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/societal_grant2.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,10 +10,21 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission/blob/main/LICENSE)|  |
 | 0b. | Documentation | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission/blob/main/README.md) |  |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission/blob/main/docs/AssetsTestingGuide.md)| Small difference on the screens in the tutorial |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission/blob/main/docs/AssetsTestingGuide.md)|  |
 | 0d. | Docker | <ul><li>[x] </li></ul>|[Docker Image](https://hub.docker.com/layers/societal/societal-node/vb4f81a4/images/sha256-69ba2805d6eb08d8bd5721afc4c82d2975a368efcde2634356ba6568a9111e9d?context=explore)|  |
-| 1. | Substrate Module: Reservable & Lockable Asset Pallet | <ul><li>[ ] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission) | Automated tests failing. Some possible quality improvements.  |  
+| 1. | Substrate Module: Reservable & Lockable Asset Pallet | <ul><li>[x] </li></ul>|[GitHub repo link](https://github.com/sctllabs/societal-grant-2-submission) |   |  
 | 2. | Client Modules | <ul><li>[x] </li></ul>| [Polkadot-JS](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) |  |
+
+## Evaluation V2
+
+The warnings presented during the build were fixed.
+
+The image in the tutorial was fixed.
+
+The automated tests are now passing. For some reason `cargo tarpaulin` fail to run and I didn't evaluate the coverage of the tests. This is not a blocker but would be nice to check.
+
+Some warnings of cargo clippy remain.
+
 
 ## Evaluation V1
 

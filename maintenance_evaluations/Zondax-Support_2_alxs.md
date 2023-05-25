@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Zondax-Support.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/Zondax-Support.md
 - **Milestone:** 2
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
