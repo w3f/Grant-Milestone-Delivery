@@ -15,6 +15,64 @@
 | 1. | KMIR syntax | <ul><li>[ ] </li></ul>| [mir-syntax.k](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/k-src/mir-syntax.k) | Tests passing but small problems to fix. |
 | 2. | **kmir** executable extension | <ul><li>[ ] </li></ul>| [**kmir parse** implementation](https://github.com/runtimeverification/mir-semantics/blob/bd09e9d1716904afbbab2c0e27735202689d788e/kmir/src/kmir/__main__.py#L23), [**kmir parse** examples](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/README.md#examples) | Command failing |
 
+## Evaluation V2
+
+### Testing
+
+I ran the tests and noticed most of the tests was removed, keeping only the `test_handwritten`. This was to only run tests related to the KMIR syntax and Kmir parse?
+
+```
+[gw0] [ 98%] PASSED src/tests/integration/test_parse.py::test_handwritten_syntax[statement-storage-live.mir]
+src/tests/integration/test_parse.py::test_handwritten_syntax[builtins-deref_copy.mir]
+[gw0] [ 99%] PASSED src/tests/integration/test_parse.py::test_handwritten_syntax[builtins-deref_copy.mir]
+src/tests/integration/test_parse.py::test_handwritten_syntax[type-array-identifier-len.mir]
+[gw0] [100%] PASSED src/tests/integration/test_parse.py::test_handwritten_syntax[type-array-identifier-len.mir]
+
+================================================================================================ slowest durations ================================================================================================
+63.03s setup	src/tests/integration/test_parse.py::test_handwritten_syntax[terminator-call-generic-args.mir]
+62.30s setup	src/tests/integration/test_parse.py::test_handwritten_syntax[type-async.mir]
+62.12s setup	src/tests/integration/test_parse.py::test_handwritten_syntax[rvalue-variable.mir]
+61.39s setup	src/tests/integration/test_parse.py::test_handwritten_syntax[statement-const-eval-counter.mir]
+0.03s teardown src/tests/integration/test_parse.py::test_compiletest[test_id0-input_path0]
+0.02s call 	src/tests/integration/test_parse.py::test_handwritten_syntax[type-impl-reference-sum.mir]
+0.01s call 	src/tests/integration/test_parse.py::test_handwritten_syntax[rust-expression-precedence.mir]
+
+(430 durations < 0.005s hidden.  Use -vv to show these durations.)
+==================================================================================== 145 passed, 1 skipped in 63.57s (0:01:03) ====================================================================================
+```
+
+### Kmir parse
+
+I had the same problems again. 
+
+Here is the list of versions:
+
+```
+user@localhost:~/Documents/kmir/k/mir-semantics$ kup list
+┌───────────┬──────────────────────────────────────────┬──────────────┐
+│ Package   │ Installed version                        │ Status       │
+├───────────┼──────────────────────────────────────────┼──────────────┤
+│ kup       │ f6363845418afc73d13c6b940d8e987c3fce5c67 │ 🟢 installed │
+│ k         │ f2f25ce7986f0c783f6ceeda428d561a42b87f13 │ 🟢 installed │
+│ pyk       │ ce5421ac331f0e191d32b54697294f54a7b38baf │ 🟢 installed │
+│ kavm      │                                          │ 🔵 available │
+│ kevm      │                                          │ 🔵 available │
+│ kplutus   │                                          │ 🔵 available │
+│ kore-exec │                                          │ 🔵 available │
+│ kore-rpc  │                                          │ 🔵 available │
+└───────────┴──────────────────────────────────────────┴──────────────┘
+user@localhost:~/Documents/kmir/mir-semantics/kmir$ poetry --version
+Poetry (version 1.5.0)
+user@localhost:~/Documents/kmir/mir-semantics/kmir$ pip --version
+pip 22.2.2 from /home/user/.pyenv/versions/3.10.8/lib/python3.10/site-packages/pip (python 3.10)
+user@localhost:~/Documents/kmir/mir-semantics/kmir$ python -V
+Python 3.10.8
+```
+
+Is the Python version in the prerequisites correct? Could you provide the versions that you are using? Usually, when we have problems reproducing the steps to install the software under evaluation we ask for a demo video to help in this task. Can you provide a demo video showing how to install and use the application? Otherwise, we will wait for the docker ticket to be solved to try again with docker, which is a more controlled environment. 
+
+
+
 ## Evaluation V1
 
 ### Testing
