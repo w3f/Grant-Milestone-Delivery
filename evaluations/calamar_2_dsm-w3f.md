@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Calamar.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,19 +10,87 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| [LICENSE](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/LICENSE.txt) | |
 | 0b. | Documentation | <ul><li>[x] </li></ul>| [README](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/README.md), [Calamar docs](https://docs.calamar.app/) | |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>| [README#Test](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/README.md#test), [E2E tests](https://github.com/topmonks/calamar/tree/fc791d5ddc433cea71b3587dc0718c50a017c9ee/test/e2e), [GitHub workflow](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/.github/workflows/test-and-deploy.yml#L27), [Test reports](https://github.com/topmonks/calamar/deployments?environment=test-report#activity-log), [Screenshots](https://app.argos-ci.com/topmonks/calamar) | Timeout in some tests |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>| [README#Test](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/README.md#test), [E2E tests](https://github.com/topmonks/calamar/tree/fc791d5ddc433cea71b3587dc0718c50a017c9ee/test/e2e), [GitHub workflow](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/.github/workflows/test-and-deploy.yml#L27), [Test reports](https://github.com/topmonks/calamar/deployments?environment=test-report#activity-log), [Screenshots](https://app.argos-ci.com/topmonks/calamar) |  |
 | 0d. | Docker | <ul><li>[x] </li></ul>| [Dockerfile](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/Dockerfile), [README#Docker](https://github.com/topmonks/calamar/blob/fc791d5ddc433cea71b3587dc0718c50a017c9ee/README.md#docker) | |
 | 0e. | Article | <ul><li>[x] </li></ul>| [Article](https://medium.com/topmonks/calamar-block-explorer-milestone-2-finished-ca581f95301a) | |
-| 1. | Account / Balance overview | <ul><li>[ ] </li></ul>| [PR#142](https://github.com/topmonks/calamar/pull/142), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) | Not fully evaluated yet |
-| 2. | Account / Balance charts | <ul><li>[ ] </li></ul>| [PR#143](https://github.com/topmonks/calamar/pull/143), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) | Not fully evaluated yet |
-| 3. | Account / Transfers list | <ul><li>[ ] </li></ul>| [PR#134](https://github.com/topmonks/calamar/pull/134), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) | Not fully evaluated yet |
-| 4. | Account / Calls list | <ul><li>[ ] </li></ul>| [PR#125](https://github.com/topmonks/calamar/pull/125), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) | Not fully evaluated yet |
-| 5. | Account / Identity info | <ul><li>[ ] </li></ul>| [PR#150](https://github.com/topmonks/calamar/pull/150), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/EMRpBNnfAqRb62b14cxmnCdihtUjEeyh6tfyhGwnGwxjY8F) | Not fully evaluated yet |
-| 6. | Chain dashboard / Stats | <ul><li>[ ] </li></ul>| [PR#149](https://github.com/topmonks/calamar/pull/149), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) | Not fully evaluated yet |
-| 7. | Chain dashboard / Asset value chart | <ul><li>[ ] </li></ul>| [PR#149](https://github.com/topmonks/calamar/pull/149), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) | Not fully evaluated yet |
-| 8. | Chain dashboard / Latest blocks | <ul><li>[ ] </li></ul>| [PR#136](https://github.com/topmonks/calamar/pull/136), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) | Not fully evaluated yet |
-| 9. | Chain dashboard / Latest transfers | <ul><li>[ ] </li></ul>| [PR#135](https://github.com/topmonks/calamar/pull/135), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) | Not fully evaluated yet |
-| 10. | Chain dashboard / Top holders | <ul><li>[ ] </li></ul>| [PR#137](https://github.com/topmonks/calamar/pull/137), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) | Not fully evaluated yet |
+| 1. | Account / Balance overview | <ul><li>[x] </li></ul>| [PR#142](https://github.com/topmonks/calamar/pull/142), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) |  |
+| 2. | Account / Balance charts | <ul><li>[x] </li></ul>| [PR#143](https://github.com/topmonks/calamar/pull/143), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) |  |
+| 3. | Account / Transfers list | <ul><li>[x] </li></ul>| [PR#134](https://github.com/topmonks/calamar/pull/134), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) |  |
+| 4. | Account / Calls list | <ul><li>[x] </li></ul>| [PR#125](https://github.com/topmonks/calamar/pull/125), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/GLjawuGpmgzma4JkR4A56esGofJVKXWdDAuGeF6o5D66wGE) |  |
+| 5. | Account / Identity info | <ul><li>[x] </li></ul>| [PR#150](https://github.com/topmonks/calamar/pull/150), [Example](https://c5a84f4a.calamar.pages.dev/kusama/account/EMRpBNnfAqRb62b14cxmnCdihtUjEeyh6tfyhGwnGwxjY8F) |  |
+| 6. | Chain dashboard / Stats | <ul><li>[x] </li></ul>| [PR#149](https://github.com/topmonks/calamar/pull/149), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) |  |
+| 7. | Chain dashboard / Asset value chart | <ul><li>[x] </li></ul>| [PR#149](https://github.com/topmonks/calamar/pull/149), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) |  |
+| 8. | Chain dashboard / Latest blocks | <ul><li>[x] </li></ul>| [PR#136](https://github.com/topmonks/calamar/pull/136), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) |  |
+| 9. | Chain dashboard / Latest transfers | <ul><li>[x] </li></ul>| [PR#135](https://github.com/topmonks/calamar/pull/135), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) |  |
+| 10. | Chain dashboard / Top holders | <ul><li>[x] </li></ul>| [PR#137](https://github.com/topmonks/calamar/pull/137), [Example](https://c5a84f4a.calamar.pages.dev/polkadot) |  |
+
+## Evaluation V2
+
+### Automatic Test
+
+All tests passed this time.
+
+```
+user@localhost:~/Documents/calamar/calamar$ npm run test
+
+> calamar@0.1.0 test
+> playwright test
+
+
+Running 128 tests using 1 worker
+
+  128 passed (18.8m)
+
+To open last HTML report run:
+
+  npx playwright show-report test/report
+```
+
+### Code quality
+
+Some lint warnings were fixed but other warnings remain, for example:
+
+```
+/home/user/Documents/calamar/calamar/src/utils/addRuntimeSpec.ts
+  16:16  warning  Forbidden non-null assertion  @typescript-eslint/no-non-null-assertion
+  28:16  warning  Forbidden non-null assertion  @typescript-eslint/no-non-null-assertion
+
+/home/user/Documents/calamar/calamar/src/utils/assert.ts
+  3:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  3:47  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/compare.ts
+  23:12  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  23:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  25:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  25:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  32:70  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/extractConnectionItems.ts
+  5:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  5:53  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  5:68  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  5:76  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/fetchGraphql.ts
+  3:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/filterToWhere.ts
+  1:39  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/number.ts
+  25:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  56:33  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/tryJsonParse.ts
+  1:37  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/Documents/calamar/calamar/src/utils/uniq.ts
+  5:62  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 104 problems (0 errors, 104 warnings)
+
+```
 
 ## Evaluation V1
 
