@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/substrate-tutorials.md
 - **Milestone:** 2
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,10 +9,10 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/rusty-crewmates/substrate-tutorials/blob/ab1a16c78dea616c9081d246288088fb6a9583ae/LICENSE) | Apache 2.0 |
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [READMEs](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises) | For each exercise we will provide a **README** that explains what to do, along with **inline instructions** for the user to follow in the code files  |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [READMEs](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises), [solutions branch](https://github.com/rusty-crewmates/substrate-tutorials/tree/b8da46c6e4ddb57750c6b77759e6e52655950500/exercises) | — |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [READMEs](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises) | README and inline instructions for each exercise. |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [READMEs](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises), [solutions](https://github.com/rusty-crewmates/substrate-tutorials/tree/b8da46c6e4ddb57750c6b77759e6e52655950500/exercises) | Solutions provided in a separate branch. |
 | 0d. | Docker | <ul><li>[x] </li></ul> | — | Skipped, unnecessary |
-| 0e. | Article | <ul><li>[ ] </li></ul> | link | Missing |
+| 0e. | Article | <ul><li>[x] </li></ul> | [medium.com](https://medium.com/@timothedelabrouille/learn-substrate-hands-on-5126069d1334) | — |
 | 1. | Exercise `genesis_config` | <ul><li>[x] </li></ul> | [exercises/ex08-genesis-config](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises/ex08-genesis-config) | — |  
 | 2. | Exercise `mocks` | <ul><li>[x] </li></ul> | [exercises/ex09-mock](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises/ex09-mock) | — |  
 | 3. | Exercise `weight` | <ul><li>[x] </li></ul> | [exercises/ex06-weights](https://github.com/rusty-crewmates/substrate-tutorials/tree/ab1a16c78dea616c9081d246288088fb6a9583ae/exercises/ex06-weights) | — |  
