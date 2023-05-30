@@ -1,20 +1,20 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_silentdata.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
-| 0a.  | License | <ul><li>[x] </li></ul> | [Node.js library](https://github.com/appliedblockchain/silentdata-node-public/blob/main/LICENSE) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot-public/blob/main/LICENSE) | ...|
-| 0b. | Documentation | <ul><li>[x] </li></ul> | [Silent Data whitepaper](https://www.linkedin.com/smart-links/AQEE0cyaT_nw0g) <br/>[Node.js library](https://github.com/appliedblockchain/silentdata-node/blob/main/README.md) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/README.md) | ...|
-| 0c.  | Testing Guide | <ul><li>[x] </li></ul> |[Guide](https://docs.google.com/document/d/1B5woRIl_ZNuahx007V6nXmjW3_Ne4aQ4kVFB-I_Bu0M/edit?usp=sharing) | ...|
-| 0d.  | Docker | <ul><li>[x] </li></ul> |[Node.js library usage example](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/examples/Dockerfile) <br/>[Silent Data pallet](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/docker/Dockerfile.node) | ...|
-| 0e.  | Article | <ul><li>[x] </li></ul> |[Polkadot Foundation Partnership Silent Data](https://www.linkedin.com/pulse/polkadot-foundation-partnership-silent-data-silentdata)| ...|
-| 1.  | Library | <ul><li>[x] </li></ul> |[silentdata-node](https://github.com/appliedblockchain/silentdata-node) | ...|
-| 2.  | Smart Contract | <ul><li>[x] </li></ul> |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot) | ...|
-| 3.  | Extension | <ul><li>[x] </li></ul> |[Secure enclave](https://github.com/appliedblockchain/silentdata-defi-core/compare/v0.4.0...v0.5.0-rc1) <br/>[Web application](https://github.com/appliedblockchain/silentdata-defi-app/compare/v0.4.0...v0.5.0-rc1) | Will these private repos be published? |
+| 0a.  | License | <ul><li>[x] </li></ul> | [Node.js library](https://github.com/appliedblockchain/silentdata-node-public/blob/main/LICENSE) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot-public/blob/main/LICENSE) | Ok. |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [Silent Data whitepaper](https://www.linkedin.com/smart-links/AQEE0cyaT_nw0g) <br/>[Node.js library](https://github.com/appliedblockchain/silentdata-node/blob/main/README.md) <br/>[Smart contract](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/README.md) | Ok. |
+| 0c.  | Testing Guide | <ul><li>[x] </li></ul> |[Guide](https://docs.google.com/document/d/1B5woRIl_ZNuahx007V6nXmjW3_Ne4aQ4kVFB-I_Bu0M/edit?usp=sharing) | Ok. |
+| 0d.  | Docker | <ul><li>[x] </li></ul> |[Node.js library usage example](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/examples/Dockerfile) <br/>[Silent Data pallet](https://github.com/appliedblockchain/silentdata-polkadot/blob/main/docker/Dockerfile.node) | Ok. |
+| 0e.  | Article | <ul><li>[x] </li></ul> |[Polkadot Foundation Partnership Silent Data](https://www.linkedin.com/pulse/polkadot-foundation-partnership-silent-data-silentdata)| Ok. |
+| 1.  | Library | <ul><li>[x] </li></ul> |[silentdata-node](https://github.com/appliedblockchain/silentdata-node) | Ok. |
+| 2.  | Smart Contract | <ul><li>[x] </li></ul> |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot) | Ok. |
+| 3.  | Extension | <ul><li>[x] </li></ul> | | Ok. |
 
 # General Notes
 
@@ -201,6 +201,8 @@ Errors  Files
      2  src/lib.ts:1
     14  src/util.ts:1
 ```
+**UPDATE:** Build issues were resolved.
+
 In the `silentdata-node` repo, yarn is unsuccessful in installing the dependancies:
 ```
 ubuntu@ip-172-31-3-233:~$ yarn add @appliedblockchain/silentdata-node
