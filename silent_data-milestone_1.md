@@ -23,7 +23,3 @@ In order to improve the developer experience a Node.js library for interacting w
 | 1.  | Library |[silentdata-node](https://github.com/appliedblockchain/silentdata-node) | ...|
 | 2.  | Smart Contract |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot) | ...|
 | 3.  | Extension| ...| ...|
-
-**Additional Information**
-
-The reviewer will need to provide their github usernames to be given read access to the `silentdata-defi-core` and `silentdata-defi-app` repositories.
