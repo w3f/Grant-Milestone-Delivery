@@ -99,6 +99,7 @@ Building parity/substrate:latest docker image, hang on!
 ------
 process "/bin/sh -c cargo build --locked --release" did not complete successfully: exit code: 137
 ```
+Disk space doesn't seem to be an issue, please fix this for the next milestone.
 
 Unit tests all pass, however there are some warnings about unused variables:
 
