@@ -85,9 +85,9 @@ docker build -t silentdata-example .
  => => writing image sha256:166414d1cac1dc8c830fa4e2cd3f65cbb25aa749f67882a2fc6537af75cb7b5c                          0.0s
  => => naming to docker.io/library/silentdata-example 
  ```
- Docker image successfully builds and runs for the pallet as well. I'm also able to manually build the pallet into the node. I'm able to deploy and instantiate the contract on the node and call it.
+Docker image successfully builds and runs for the pallet as well. I'm also able to manually build the pallet into the node. I'm able to deploy and instantiate the contract on the node and call it.
  
- Instagram checks work in Docker but `npm run build` fails with the following errors:
+Instagram checks work in Docker but `npm run build` fails with the following errors:
  ```
  npm run build
 
@@ -239,6 +239,8 @@ Done in 5.18s.
 info There appears to be trouble with the npm registry (returned undefined). Retrying...
 info There appears to be trouble with the npm registry (returned undefined). Retrying...
 ```
+ **UPDATE:** Repo doesn't apply.
+ 
 ## Guide
 
 I'm able to get through the guide and register and create an API key. Building the Docker file works, but then for some reason the command fails:
