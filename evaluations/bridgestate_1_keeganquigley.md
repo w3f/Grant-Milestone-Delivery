@@ -12,7 +12,7 @@
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/tests.rs) | Ok. |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw#using-docker) |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/Article.md) | Ok. |
-| 1. | Attestation oracle core: Off-chain worker | <ul><li>[x] </li></ul> | Ok. |
+| 1. | Attestation oracle core: Off-chain worker | <ul><li>[x] </li></ul> |  | Ok. |
 | 2. | Attestation oracle core: Pallet | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw/tree/main#add-the-collateral-reader-pallet-to-your-runtime) | Ok. |
 | 3. | Attestation oracle core: RPCs | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/impls.rs) | Ok. |
 | 4. | Attestation oracle core: Collateral ratio calculation | <ul><li>[x] </li></ul> | [Link](https://github.com/diadata-org/bridgestate-ocw/tree/main#about-the-collateral-reader-pallet) | Ok. |
