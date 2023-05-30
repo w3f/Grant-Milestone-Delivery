@@ -22,7 +22,7 @@ In order to improve the developer experience a Node.js library for interacting w
 | 0e.  | Article |[Polkadot Foundation Partnership Silent Data](https://www.linkedin.com/pulse/polkadot-foundation-partnership-silent-data-silentdata)| ...|
 | 1.  | Library |[silentdata-node](https://github.com/appliedblockchain/silentdata-node) | ...|
 | 2.  | Smart Contract |[silentdata-polkadot](https://github.com/appliedblockchain/silentdata-polkadot) | ...|
-| 3.  | Extension |[Secure enclave](https://github.com/appliedblockchain/silentdata-defi-core/compare/v0.4.0...v0.5.0-rc1) <br/>[Web application](https://github.com/appliedblockchain/silentdata-defi-app/compare/v0.4.0...v0.5.0-rc1) | Both private repositories |
+| 3.  | Extension| ...| ...|
 
 **Additional Information**
 
