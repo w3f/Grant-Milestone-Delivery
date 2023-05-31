@@ -24,29 +24,144 @@
 
 Testing this delivery:
 - Deliverable 0b.:
-    - Documentation describes Patron CLI usage and provide information how to self-host server.
+    - The documentation for usage is available in the [main project repository](https://github.com/Brushfam/patron-backend):
+        - CLI documentation: https://github.com/Brushfam/patron-backend/blob/master/docs/cli.md
+        - Self-hosting documentation: https://github.com/Brushfam/patron-backend/blob/master/docs/self-hosted.md
+- Deliverable 0c.:
+    - Ensure that you have a Rust toolchain available (if you don't, you can use the Nix development shell to acquire one, `nix develop`)
+    - We provide unit tests for API server, which can be launched with the following command:
+      ```sh
+      cargo test
+      ```
 - Deliverable 0d.:
-    - The contract build process is done on our platform side using isolated containers and contract verification workflow, while the
-      deployment itself is done on user's side, without delegating any private keys to us. After build is finished, contract will be deployed automatically.
+    - We provide Docker images for the contract builder process and API server. Contract builder process image
+      is used to provide an environment for the contract build itself, and is a necessary component that has to be used with a container engine such as Docker.
+      The API server is provided as a Docker image too, but can also be built and deployed without Docker.
+        - API server Docker image can be downloaded from [main project repository](https://github.com/Brushfam/patron-backend) releases
+          or built with Nix tooling:
+            ```sh
+            nix build .#docker.server
+            ```
+            - Contract builder process Docker image can be built with Nix tooling
+              (it's necessary to provide a way to modify self-hosted domain):
+            ```sh
+            nix build .#docker.ink-builder
+            ```
 - Deliverable 0e.:
-    - The article describes problem Patron solves and ways you can use Patron.
-- Deliverable 1a, 1b, 1c.:
-    - For test how Patron contract build works, you need upload your code and run deploy command:
-        - run `patron auth` command and login into system. After that CLI automatically gets authentication token;
-        - after first step, you need to config your `Config.toml`
-        - second and the last command is `patron deploy constructor_name --suri //Alice`. Second argument is secret URI. More
-          about arguments you can find [here](https://github.com/Brushfam/patron-backend/blob/master/docs/cli.md). After this command
-          Patron archive send user code and send it to server for build. After build process, Patron automatically deploy contract
-          with `cargo-contract` and public key.
+    - [Article](https://medium.com/brushfam/patron-is-your-one-stop-smart-contract-manager-for-polkadot-ecosystem-b1f89a48ba40)
+- Deliverable 1a.:
+    - To test this deliverable, you need to prepare a working instance of a PostgreSQL database and configure your local project
+      with instructions available in the [self-hosting documentation](https://github.com/Brushfam/patron-backend/blob/master/docs/self-hosted.md).
+    - Build the project with `cargo` or `nix`:
+        ```sh
+        cargo build --release
+        ```
+      or
+        ```sh
+        nix build .#
+        ```
+    - Run database migrations:
+        ```sh
+        ./target/release/migration
+        ```
+- Deliverable 1b.:
+    - Ensure that you have the database prepared with instructions from the deliverable 1a.
+    - Initialize the database with the following command:
+        ```sh
+        ./target/release/event_client initialize [name] [url] [schema]
+        ```
+      For example, to initialize an Astar node:
+        ```sh
+        ./target/release/event_client initialize astar wss://1rpc.io:443/astr astar
+        ```
+    - Start watching for new events from this node using the following command:
+        ```sh
+        ./target/release/event_client watch astar
+        ```
+    - See [self-hosting documentation](https://github.com/Brushfam/patron-backend/blob/master/docs/self-hosted.md) for more
+      details on how to use the event client (also known as sync server).
+- Deliverable 1c.:
+    - Ensure that you have the database prepared with instructions from the deliverable 1a.
+    - For testing this deliverable, you can either use hosted or self-hosted versions of smart contract builder.
+    - For testing the hosted version, refer to deliverable 3a testing instructions.
+    - For testing self-hosted version, you'll need a Linux server with Docker, `udisks2`, `fallocate` and `mkfs.ext4` available.
+        - More information on why these components are required is available [here](https://github.com/Brushfam/patron-backend/blob/master/docs/self-hosted.md#smart-contract-builder)
+    - Build the smart contract builder Docker image with Nix, while changing the preferred domain to a custom one in a
+      [flake.nix file](https://github.com/Brushfam/patron-backend/blob/202c60325a51af0b7762e1b72e4d609adbbdd56e/flake.nix#L61):
+      ```sh
+      nix build .#docker.ink-builder
+      ```
+    - Load the resulting image with `docker` CLI:
+      ```sh
+      docker load < result
+      ```
+    - Configure the smart contract builder according to the [self-hosting documentation](https://github.com/Brushfam/patron-backend/blob/master/docs/self-hosted.md).
+    - Start the smart contract builder with the following command:
+      ```sh
+      ./target/release/builder serve
+      ```
 - Deliverable 2a.:
-    - We implemented app where you can see your deployed contracts and search to find other contract details.
-      There is several pages: login, profile, main page, smart contract and code hash pages.
+    - You can use [our website](https://patron.works) to test the hosted version of the web UI. You can use data from Astar
+      network to test the hosted version.
+    - [Self-hosted version](https://github.com/Brushfam/patron-frontend) can be built with the following command:
+      ```sh
+      npm i
+      REACT_APP_SERVER_URL=https://api.example.com npm run build
+      ```
+      Replace `https://api.example.com` with the URL of your API server.
+
+      To test non-production builds with built-in HTTP server you can use the following command:
+      ```sh
+      npm i
+      REACT_APP_SERVER_URL=https://api.example.com npm start
+      ```
 - Deliverable 2b.:
-    - Each build sessions has own code hash and timestamp. On smart contract and code hash pages you can also see "verified" icon and check tabs with logs and source code.
+    - You can search contract addresses and verified code hashes using the main page search bar.
+    - Contract address info will provide you with information on the contract's code hash, events,
+      source code and build log (if available).
+    - Verified code hashes will provide you with the source code and build log.
 - Deliverable 2c.:
-    - For login via Patron UI you just need go to login page, choose account for your SubWallet extension and sign the message to login. Registration
-      is automatic. If Patron see that record with user doesn't exist, it creates account and execute login process.
-    - For login via Patron CLI you need to run `patron auth`. After you sign the message, you can use Patron CLI.
+    - There are two separate authentication flows available - website and CLI flow.
+    - For CLI flow refer to deliverable 3a.
+    - For website flow, open either [hosted](https://patron.works) or self-hosted versions of a website.
+    - Click on the "Log in" button in the top-right corner of a screen.
+    - Choose a wallet that you would like to use for authentication purposes.
+    - Sign a message with the provided wallet (there are no fees associated with any wallet interactions).
 - Deliverable 3a.:
-    - Patron CLI is one of the main Patron features. Using CLI, developers can verify and deploy their contracts in one go, just with 2 commands.
-      Patron CLI flow was described in `Deliverable 1a, 1b, 1c.` step. 
+    - Ensure that you have a Rust toolchain available
+      (`cargo-contract` installation is optional, as the CLI will attempt to download it automatically)
+    - Your project needs to have a `Deploy.toml` file, which describes the tooling versions with which
+      it has to be built. Consult the [CLI documentation](https://github.com/Brushfam/patron-backend/blob/master/docs/cli.md#deploy)
+      for more information on that.
+    - CLI provides developers with two commands - `auth` and `deploy`.
+        - `auth`
+            - `auth` command allows users to authenticate themselves to the API server.
+            - To use `auth` in a self-hosted environment you need to pass additional `-s` and `-w` flags:
+            ```sh
+            patron auth -s https://api.example.com -w https://example.com
+            ```
+          Where `https://api.example.com` is the URL of your API server, and `https://example.com`
+          is the URL of your web UI.
+            - Omit `-s` and `-w` flags to use the hosted version of an API server and web UI.
+            - After running the `auth` command, the CLI will automatically try to open the browser
+              for authentication purposes. If your platform does not support that functionality,
+              you can always open the URL manually, as it's in the same terminal.
+            - Use the same authentication instructions as were provided in the deliverable 2c.
+        - `deploy`
+            - `deploy` command is your entrypoint for smart contract deployment purposes.
+            - The interface is similar to that of a `cargo-contract`, and many flags that
+              are available to upload and instantiate a contract are available here.
+            - For testing, we can deploy to local `substrate-contracts-node` instance, which can be built using these commands:
+              ```sh
+              git clone https://github.com/paritytech/substrate-contracts-node
+              cd substrate-contracts-node
+              cargo run
+              ```
+            - To deploy your smart contract, write the following command, replacing placeholders with the correct values for your contract:
+              ```sh
+              patron deploy [constructor] --suri [suri]
+              ```
+              `[constructor]` placeholder is the constructor method name, that will be called during instantiation phase.
+              `[suri]` is your secret URI string, which is passed verbatim to `cargo-contract`. For testing purposes we can use `//Alice`.
+            - The build process will start as soon as there are available smart contract builder instances. In this case,
+              you should see build logs appearing on your screen, allowing you to trace the build itself.
