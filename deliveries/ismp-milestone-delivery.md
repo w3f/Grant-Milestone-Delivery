@@ -57,3 +57,4 @@
 | 1f. | Bechmarks |[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| |
 
 **Additional Information**
+This delivery contains both milestones for the ISMP proposal as `pallet-ismp` is dependent on `ismp-rs`.
