@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Knowledge-Oriented-Framework.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,11 +10,16 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[License](https://creativecommons.org/licenses/by-sa/4.0/)| | 
 | 0b. | Documentation/Tutorial |<ul><li>[x] </li></ul>|[TR1](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/TR%20-%20Use%20case.pdf)|  | 
-| 0c. | Methodology |<ul><li>[ ] </li></ul>|[Article Section 3](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/Article.pdf)| Need review of terms used and citations/references |
+| 0c. | Methodology |<ul><li>[x] </li></ul>|[Article Section 3](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/Article.pdf)|  |
 | 0d. | Infrastructure |<ul><li>[x] </li></ul>|[TR2](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/TR%20-%20Infrastructure%20requirements.pdf)||
 | 0e. | Article |<ul><li>[x] </li></ul>|[Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/Article.pdf)| | 
-| 1. | Case Study |<ul><li>[ ] </li></ul>|[TR3](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/TR%20-%20Case%20study.pdf)| Need review of the questions|
+| 1. | Case Study |<ul><li>[x] </li></ul>|[TR3](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone2/TR%20-%20Case%20study.pdf)| |
 
+## Evaluation V2
+
+The references requested were added in the methodology section.
+
+The grantees explained that the current instruments of the research [are in draft version](https://github.com/w3f/Grant-Milestone-Delivery/pull/863#issuecomment-1568419705) and could be adjusted. As the intention declared in the deliverable definition 0c. Methodology of M2 "... the requirements for the query engine will be grounded in real-world experience needs", and the case study is about Polkadot ecosystem, I still think that would be better to adjust the instruments to be more specific to our ecosystem thus helping to achieve this goal. As M3 is based on gathering experts' opinions, this requirement could be fulfilled later in M3 and doesn't prevent the approval of M2. 
 
 ## Evaluation V1
 

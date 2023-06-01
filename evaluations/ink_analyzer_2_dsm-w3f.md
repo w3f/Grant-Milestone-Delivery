@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-analyzer.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,12 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[x] </li></ul>| [MIT](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-MIT) or [Apache 2.0](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-APACHE).|   |
-| **0b.** | Documentation |<ul><li>[ ] </li></ul>| [Project README](https://github.com/ink-analyzer/ink-analyzer#readme) and [semantic analyzer (ink-analyzer) crate README](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer#readme) on GitHub, [semantic analyzer crate (ink-analyzer) rustdoc](https://docs.rs/ink-analyzer/latest/ink_analyzer/) documentation on docs.rs and extensive inline source documentation. |  Not fully evaluated yet |
-| **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| [Testing guide](https://github.com/ink-analyzer/ink-analyzer#testing).| Need integration/system tests.  |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>| [Project README](https://github.com/ink-analyzer/ink-analyzer#readme) and [semantic analyzer (ink-analyzer) crate README](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer#readme) on GitHub, [semantic analyzer crate (ink-analyzer) rustdoc](https://docs.rs/ink-analyzer/latest/ink_analyzer/) documentation on docs.rs and extensive inline source documentation. |  Not fully evaluated yet |
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [Testing guide](https://github.com/ink-analyzer/ink-analyzer#testing).|  |
 | **0d.** | Docker |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/ink-analyzer/ink-analyzer/blob/master/Dockerfile).|
-| 1.      | Semantic Analyzer: Rust crate update: Code completion suggestions |<ul><li>[ ] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [completions public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L42-L45) and [completions module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/completions.rs).                                                           | Not fully evaluated yet |
-| 2.      | Semantic Analyzer: Rust crate update: Code/intent actions |<ul><li>[ ] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [code/intent actions public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L47-L50) and [code/intent actions module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/actions.rs).                                               | Not fully evaluated yet  |
-| 3.      | Semantic Analyzer: Rust crate update: Hover content   |<ul><li>[ ] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [hover content public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L52-L55) and [hover content module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/hover.rs).|  Not fully evaluated yet                                                                                                                                                     
+| 1.      | Semantic Analyzer: Rust crate update: Code completion suggestions |<ul><li>[x] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [completions public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L42-L45) and [completions module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/completions.rs).                                                           |  |
+| 2.      | Semantic Analyzer: Rust crate update: Code/intent actions |<ul><li>[x] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [code/intent actions public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L47-L50) and [code/intent actions module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/actions.rs).                                               |   |
+| 3.      | Semantic Analyzer: Rust crate update: Hover content   |<ul><li>[x] </li></ul>| [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [hover content public interface](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis.rs#L52-L55) and [hover content module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/hover.rs).|                                                                                                                                                       
+## Evaluation V2
+
+The grantee provided more [explanations about the integration/system tests](https://github.com/w3f/Grant-Milestone-Delivery/pull/873#issuecomment-1569335266). They are adequate to check the current milestone delivery since are using complete contracts, performing some modifications on it and checking the expected results of the features.
 
 ## Evaluation V1
 
