@@ -95,6 +95,56 @@ Caused by:
   ```
   I tried installing OpenSSL tools with `sudo apt-get install libssl-dev` to no avail.
   
+  Docker also fails to run:
+  ```rust
+  ~/substrate-raft-setup ~/substrate-raft-setup
+Building bright/substrate-raft-setup:latest docker image, hang on!
+[+] Building 3.7s (9/14)
+ => [internal] load build definition from Dockerfile                                                                  0.0s
+ => => transferring dockerfile: 1.53kB                                                                                0.0s
+ => [internal] load .dockerignore                                                                                     0.0s
+ => => transferring context: 2B                                                                                       0.0s
+ => [internal] load metadata for docker.io/paritytech/ci-linux:1c0fde6a-20220811                                      1.5s
+ => [internal] load metadata for docker.io/library/ubuntu:20.04                                                       1.3s
+ => CANCELED [builder 1/4] FROM docker.io/paritytech/ci-linux:1c0fde6a-20220811@sha256:4e8c072ea12bc17d99cb531adb58d  2.2s
+ => => resolve docker.io/paritytech/ci-linux:1c0fde6a-20220811@sha256:4e8c072ea12bc17d99cb531adb58dea5a4c7d4880a8a86  0.0s
+ => => sha256:a4115f36e7e5073366d03bde65ca2cb5e4c8e443c1b1f316b6aa4179fab42000 1.05MB / 527.84MB                      2.2s
+ => => sha256:660ac983e23e1bd2d0e97d5d2e468994e007da287a2e395ca13e53b8571e5283 2.10MB / 337.09MB                      2.2s
+ => => sha256:4e8c072ea12bc17d99cb531adb58dea5a4c7d4880a8a86525052d24d1454e89e 761B / 761B                            0.0s
+ => => sha256:a63a944a77f9ebe6cbf1d5100a7c9c07bb3fd3181d298bb166c8a1ce75b81aec 9.38kB / 9.38kB                        0.0s
+ => => sha256:751ef25978b2971e15496369695ba51ed5b1b9aaca7e37b18a173d754d1ca820 8.39MB / 27.14MB                       2.2s
+ => [internal] load build context                                                                                     0.6s
+ => => transferring context: 50.35MB                                                                                  0.5s
+ => [stage-1 1/5] FROM docker.io/library/ubuntu:20.04@sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e5  0.0s
+ => CACHED [stage-1 2/5] RUN apt-get update                                                                           0.0s
+ => ERROR [stage-1 3/5] RUN apt-get install -y openssl                                                                2.2s
+------
+ > [stage-1 3/5] RUN apt-get install -y openssl:
+#7 0.363 Reading package lists...
+#7 0.953 Building dependency tree...
+#7 1.035 Reading state information...
+#7 1.119 The following additional packages will be installed:
+#7 1.119   libssl1.1
+#7 1.119 Suggested packages:
+#7 1.119   ca-certificates
+#7 1.153 The following NEW packages will be installed:
+#7 1.153   libssl1.1 openssl
+#7 1.635 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+#7 1.635 Need to get 1757 kB of archives.
+#7 1.635 After this operation, 4950 kB of additional disk space will be used.
+#7 1.635 Ign:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl1.1 arm64 1.1.1f-1ubuntu2.17
+#7 1.781 Ign:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openssl arm64 1.1.1f-1ubuntu2.17
+#7 1.946 Err:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl1.1 arm64 1.1.1f-1ubuntu2.17
+#7 1.946   404  Not Found [IP: 185.125.190.39 80]
+#7 2.106 Err:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openssl arm64 1.1.1f-1ubuntu2.17
+#7 2.106   404  Not Found [IP: 185.125.190.39 80]
+#7 2.117 E: Failed to fetch http://ports.ubuntu.com/ubuntu-ports/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.17_arm64.deb  404  Not Found [IP: 185.125.190.39 80]
+#7 2.117 E: Failed to fetch http://ports.ubuntu.com/ubuntu-ports/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.17_arm64.deb  404  Not Found [IP: 185.125.190.39 80]
+#7 2.117 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+process "/bin/sh -c apt-get install -y openssl" did not complete successfully: exit code: 100
+```
+  
   **Linting:**: Cargo clippy produces the following warnings for `substrate-raft`:
 ```rust
 warning: associated function `project_ref` is never used
