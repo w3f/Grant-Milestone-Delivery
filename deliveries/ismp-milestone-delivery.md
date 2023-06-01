@@ -21,8 +21,8 @@
 | 0a. | License |[https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE](https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE)| | 
 | 0b.  | Documentation |[https://github.com/polytope-labs/ismp-rs/blob/main/README.md](https://github.com/polytope-labs/ismp-rs/blob/main/README.md)| |
 | 0c. | Testing and Testing Guide |[https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite](https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite)| Presents a testsuite that can be verified from the latest [CI checks](https://github.com/polytope-labs/ismp-rs/actions/runs/5111348956) and workflow file.|
-| 0d. | Docker | | |
-| 0e. | Article | | |
+| 0d. | Docker |[https://github.com/polytope-labs/ismp-rs#run-test-in-docker](https://github.com/polytope-labs/ismp-rs#run-test-in-docker)| |
+| 0e. | Article | TBA | |
 | 0f. | ISMP Specification |[https://github.com/polytope-labs/ismp](https://github.com/polytope-labs/ismp)| |
 | 1 | `ismp-rs` |[https://github.com/polytope-labs/ismp-rs](https://github.com/polytope-labs/ismp-rs)| |
 | 1a. | `ISMPHOST` |[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37)| |
@@ -46,8 +46,8 @@
 | 0a. | License |[https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE](https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE)| | 
 | 0b.  | Documentation |[https://github.com/polytope-labs/substrate-ismp/blob/main/README.md](https://github.com/polytope-labs/substrate-ismp/blob/main/README.md)| |
 | 0c. | Testing and Testing Guide |[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs)| Presents unit tests that can be verified from the latest [CI checks](https://github.com/polytope-labs/substrate-ismp/actions/runs/5123249573) and workflow file.|
-| 0d. | Docker | | |
-| 0e. | Article| | |
+| 0d. | Docker |[https://github.com/polytope-labs/substrate-ismp#run-test-in-docker](https://github.com/polytope-labs/substrate-ismp#run-test-in-docker)| |
+| 0e. | Article| TBA | |
 | 1. | pallet-ismp |[https://github.com/polytope-labs/substrate-ismp](https://github.com/polytope-labs/substrate-ismp)| |
 | 1a. | Host |[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48)| |
 | 1b. | Router |[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48)| |
@@ -57,4 +57,3 @@
 | 1f. | Bechmarks |[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| |
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
