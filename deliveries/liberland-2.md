@@ -6,7 +6,7 @@
 * **Milestone Number:** 2
 
 **Context** (optional)
-> Liberland has implemented on chain registries for companies, land and assets This, in combination with the upcoming judiciary, allows the full running of traditional businesses, as well as smart and dumb contracts completely on-chain.
+> Liberland has implemented on chain registries for companies, land and assets. This, in combination with the upcoming judiciary, allows the full running of traditional businesses, as well as smart and dumb contracts completely on-chain.
 
 **Deliverables**
 | Number | Deliverable | Link | Notes |
@@ -16,8 +16,8 @@
 | 0c.  | Testing Guide | [Testing guide](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#) | ... | 
 | 0d.  | Docker |[Docker](https://hub.docker.com/r/liberland/blockchain-node)| Uses testnet chainspec | 
 | 0e.  | Article |(Draft)[https://docs.google.com/document/d/1IiOEka3eZOOyM7GuT5aVJYihdSz3qYbWqwcTNS_Pvqg]| Article draft| 
-| 1.  | Land owner Pallet |[Modified NFTs pallet](https://github.com/liberland/liberland_substrate/tree/main/frame/nfts)| Uses office pallet| 
-| 2.  | Metaverse integration pallet |[Test metaverse build](https://liberverse.net/win64-staging)| Not a pallet | 
+| 1.  | Land owner Pallet |[Modified NFTs pallet](https://github.com/liberland/liberland_substrate/tree/main/frame/nfts), [Office pallet](https://github.com/liberland/liberland_substrate/tree/develop/frame/office), [Geo Checks]([https://github.com/liberland/liberland_substrate/commit/eecc509e26f160f4106f4eac5ae8328a1b44cd23](https://github.com/liberland/liberland_substrate/pull/291/files#diff-2126ae6766e9fabbb2462c7c1d2b0494c27b7c6e518f4672b1cc3a9d335afb3cR323)), [Instructions](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.98cfecawie0o)| Uses office pallet, see additional info and testing guide| 
+| 2.  | Metaverse integration pallet |Similar to Land owner pallet + [Test metaverse build](https://liberverse.net), [Chain-metaverse middleware API](http://api.liberverse.net/v1/plots), [Middleware code open sourced](https://github.com/DorianSternVukotic/liberland-middleware-api)| Land owner instance + middleware | 
 | 3.  | Company registration pallet |[Registry](https://github.com/liberland/liberland_substrate/tree/main/frame/registry)| Uses office pallet| 
 
 **Additional Information**
@@ -25,8 +25,12 @@
 #### Main repo: https://github.com/liberland/liberland_substrate/
 #### A live testnet can be accessed here:
 [Testnet](https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Ftestchain.liberland.org%252F#)
+
 [Frontend](https://testnet.liberland.org/signin)
-#### Mainnet launching this week
+#### Mainnet (may not be up to date with features mentioned in the grant)
+Dont test delivery with ~~[Mainnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet.liberland.org#/explorer)~~
+
+Dont test delivery with ~~[Mainnet Frontend](https://blockchain.liberland.org/signin)~~
 
 For the last few months we have been focusing on getting all features ready to launch the mainnet.
 This includes grant related tasks and others. We expanded the political system, adding a separation of power between
@@ -55,7 +59,13 @@ Land, Metaverse Land and Asset registries are office-managed collections of the 
 MetaverseLandRegistryOffice and AssetRegistryOffice that all behave more or less in the same way.
 See [testing guide](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.jdlftz66hx0s) for details.
 
-Since nfts pallet provided all functionality that was required, we did not have to create a whole new metaverse integration pallet from
-scratch, though we did have to some integration work. Since there are no good C libraries for substrate, we created a public API that reads
-metaverse plots of lands from the blockchain and is connected to the metaverse. The flow of data is Blockchain nfts -> middleware API -> metaverse
+Since nfts pallet provided most functionality that was required, we did not have to create a whole new metaverse integration pallet from
+scratch, Instead we modified it to provide metadata validation of geocoordinates and created integration middleware in the form of a public API that reads
+metaverse plots of lands from the blockchain and is connected to the metaverse. The flow of data is Blockchain nfts -> middleware API -> metaverse. Some of the geo checks include making sure a land nft is within configurable coordinates, format of geocoordinates is correct, land plot is a closed loop, land plot doesnt self intersect etc...
+
+- [Register, Manage and run on-chain companies](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.la6hgf9tw9qp)
+- [Register virtual land, where the land in the metaverse is managed by a pallet](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.98cfecawie0o)
+- [Trade with on-chain assets, NFT's and LLM](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.r11hvyl51i4a)
+- [e-citizenship, you can apply for an e-citizenship](https://docs.google.com/document/d/1ntrT6bafTD2LfXUG9QLxOieogXELn9icN1y__EGfZ98/edit#heading=h.pph4a9bhmlev)
+
 
