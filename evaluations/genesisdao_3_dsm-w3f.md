@@ -10,12 +10,38 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | Licence |<ul><li>[x] </li></ul>| n/a |  | 
 | 0b. | Documentation |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. | 
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | Integration tests are failing. Need testing guide for system test. |
+| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | Not fully evaluated yet. |
 | 0d. | Docker |<ul><li>[ ] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) | Not fully evaluated yet. |
 | 0e. | Article |<ul><li>[x] </li></ul>| [Link](https://docs.google.com/document/d/1c3B9iyoHE7cP5a5qYwa-A_0Vy5zo1uAo-S1vcZ5h_B4/edit#heading=h.obore8uev3ox) |  |
 | 1. | Substrate module: pallet_dao_vote |<ul><li>[ ] </li></ul>| [Link](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes) | Not fully evaluated yet. |
 | 2. | Frontend Implementation	|<ul><li>[ ] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) | Not fully evaluated yet. |
 | 3. | Product Touches |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. |
+
+## Evaluation V2
+
+### Integration Test
+
+This time the Integration Test passed.
+
+```
+     Running unittests src/lib.rs (/home/user/Documents/genesisdao/genesis-dao-node/target/debug/deps/integration_wrapper-aae9373ea162552d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/test_dao_lifecycle.rs (/home/user/Documents/genesisdao/genesis-dao-node/target/debug/deps/test_dao_lifecycle-0db8c4fb21eb2a62)
+
+running 1 test
+test dao_lifecycle has been running for over 60 seconds
+test dao_lifecycle ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 266.81s
+```
+
+### Manual Test
+
+Thanks for providing the testing guide. I didn't fully evaluate it yet, because I need to wait 24 hours to finalize the proposal but I was able to check the other features in the testing guide, like marking a proposal as faulty and acting as a council.
 
 ## Evaluation V1
 
