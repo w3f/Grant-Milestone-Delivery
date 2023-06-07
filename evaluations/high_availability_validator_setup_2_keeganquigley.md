@@ -144,7 +144,45 @@ Building bright/substrate-raft-setup:latest docker image, hang on!
 ------
 process "/bin/sh -c apt-get install -y openssl" did not complete successfully: exit code: 100
 ```
-  
+## V2
+
+Tried Docker on Ubuntu and fails with this:
+```rust
+error: failed to run custom build command for `node-template-runtime v4.0.0-dev (/node-template/runtime)`
+#0 563.4 
+#0 563.4 Caused by:
+#0 563.4   process didn't exit successfully: `/node-template/target/release/build/node-template-runtime-37c0b72b2eac5a32/build-script-build` (exit status: 1)
+#0 563.4   --- stderr
+#0 563.4   Rust WASM toolchain not installed, please install it!
+#0 563.4 
+#0 563.4   Further error information:
+#0 563.4   ------------------------------------------------------------
+#0 563.4      Compiling wasm-test v1.0.0 (/tmp/.tmpyZyoTz)
+#0 563.4   error[E0463]: can't find crate for `std`
+#0 563.4     |
+#0 563.4     = note: the `wasm32-unknown-unknown` target may not be installed
+#0 563.4     = help: consider downloading the target with `rustup target add wasm32-unknown-unknown`
+#0 563.4     = help: consider building the standard library from source with `cargo build -Zbuild-std`
+#0 563.4 
+#0 563.4   error: requires `sized` lang_item
+#0 563.4 
+#0 563.4   For more information about this error, try `rustc --explain E0463`.
+#0 563.4   error: could not compile `wasm-test` due to 2 previous errors
+#0 563.4   ------------------------------------------------------------
+#0 563.4 
+#0 563.4 warning: build failed, waiting for other jobs to finish...
+------
+Dockerfile:9
+--------------------
+   7 |     WORKDIR /node-template
+   8 |     COPY . .
+   9 | >>> RUN cargo build --locked --release
+  10 |     
+  11 |     # This is the 2nd stage: a very small image where we copy the binary."
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cargo build --locked --release" did not complete successfully: exit code: 101
+```
+
   **Linting:**: Cargo clippy produces the following warnings for `substrate-raft`:
 ```rust
 warning: associated function `project_ref` is never used
