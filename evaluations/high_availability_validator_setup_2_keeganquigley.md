@@ -212,7 +212,64 @@ Dockerfile:9
 --------------------
 ERROR: failed to solve: process "/bin/sh -c cargo build --locked --release" did not complete successfully: exit code: 101
 ```
+## V3
 
+Docker runs successfully in Codespaces:
+```js
+@keeganquigley ➜ /workspaces/substrate-raft (milestone-2) $ bash docker/build.sh
+/workspaces/substrate-raft /workspaces/substrate-raft
+Building parity/substrate:latest docker image, hang on!
+[+] Building 5510.4s (20/20) FINISHED                                                                                                                                                                                     
+ => [internal] load .dockerignore                                                                                                                                                                                    0.3s
+ => => transferring context: 99B                                                                                                                                                                                     0.0s
+ => [internal] load build definition from substrate_builder.Dockerfile                                                                                                                                               0.5s
+ => => transferring dockerfile: 1.60kB                                                                                                                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:20.04                                                                                                                                                      0.9s
+ => [internal] load metadata for docker.io/paritytech/ci-linux:production                                                                                                                                            0.7s
+ => [auth] paritytech/ci-linux:pull token for registry-1.docker.io                                                                                                                                                   0.0s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                                                                                                                        0.0s
+ => [stage-1 1/8] FROM docker.io/library/ubuntu:20.04@sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e58387dc6b3                                                                                       13.2s
+ => => resolve docker.io/library/ubuntu:20.04@sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e58387dc6b3                                                                                                0.3s
+ => => sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e58387dc6b3 1.13kB / 1.13kB                                                                                                                       0.0s
+ => => sha256:b795f8e0caaaacad9859a9a38fe1c78154f8301fdaf0872eaf1520d66d9c0b98 424B / 424B                                                                                                                           0.0s
+ => => sha256:88bd6891718934e63638d9ca0ecee018e69b638270fe04990a310e5c78ab4a92 2.30kB / 2.30kB                                                                                                                       0.0s
+ => => sha256:ca1778b6935686ad781c27472c4668fc61ec3aeb85494f72deb1921892b9d39e 27.50MB / 27.50MB                                                                                                                     3.2s
+ => => extracting sha256:ca1778b6935686ad781c27472c4668fc61ec3aeb85494f72deb1921892b9d39e                                                                                                                            8.6s
+ => [internal] load build context                                                                                                                                                                                   12.9s
+ => => transferring context: 185.99MB                                                                                                                                                                               12.3s
+ => [builder 1/4] FROM docker.io/paritytech/ci-linux:production@sha256:7bc94ccc966e0e998eec5dcbc514d2e6886b6c4d4b3e1e3c8e5378fdb583e06b                                                                             68.2s
+ => => resolve docker.io/paritytech/ci-linux:production@sha256:7bc94ccc966e0e998eec5dcbc514d2e6886b6c4d4b3e1e3c8e5378fdb583e06b                                                                                      0.2s
+ => => sha256:7bc94ccc966e0e998eec5dcbc514d2e6886b6c4d4b3e1e3c8e5378fdb583e06b 762B / 762B                                                                                                                           0.0s
+ => => sha256:c9e6004a6b7abc733befd4c97cf9f307fabe8ce90d1ac292c46fc8f0e1a78786 10.01kB / 10.01kB                                                                                                                     0.0s
+ => => sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1 31.40MB / 31.40MB                                                                                                                     0.7s
+ => => sha256:a1188d3531963af14d12a749ea904f2c144d4085ff80590d6e0279263007c748 406.31MB / 406.31MB                                                                                                                  11.2s
+ => => sha256:f4fff1446f7a40d17230f286942b0b1ee3ee84bc63de77562f72763ea4e3bafc 571.73MB / 571.73MB                                                                                                                  13.6s
+ => => extracting sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1                                                                                                                            8.9s
+ => => extracting sha256:f4fff1446f7a40d17230f286942b0b1ee3ee84bc63de77562f72763ea4e3bafc                                                                                                                           33.0s
+ => => extracting sha256:a1188d3531963af14d12a749ea904f2c144d4085ff80590d6e0279263007c748                                                                                                                           17.1s
+ => [stage-1 2/8] RUN apt-get update                                                                                                                                                                                 8.3s
+ => [stage-1 3/8] RUN apt-get install -y openssl                                                                                                                                                                     8.9s 
+ => [builder 2/4] WORKDIR /substrate                                                                                                                                                                                 0.3s
+ => [builder 3/4] COPY . /substrate                                                                                                                                                                                  4.2s
+ => [builder 4/4] RUN cargo build --locked --release                                                                                                                                                              5391.6s
+ => [stage-1 4/8] COPY --from=builder /substrate/target/release/substrate /usr/local/bin                                                                                                                             1.3s
+ => [stage-1 5/8] COPY --from=builder /substrate/target/release/subkey /usr/local/bin                                                                                                                                0.4s
+ => [stage-1 6/8] COPY --from=builder /substrate/target/release/node-template /usr/local/bin                                                                                                                         0.6s
+ => [stage-1 7/8] COPY --from=builder /substrate/target/release/chain-spec-builder /usr/local/bin                                                                                                                    0.4s
+ => [stage-1 8/8] RUN useradd -m -u 1000 -U -s /bin/sh -d /substrate substrate &&  mkdir -p /data /substrate/.local/share/substrate &&  chown -R substrate:substrate /data &&  ln -s /data /substrate/.local/share/  3.6s
+ => exporting to image                                                                                                                                                                                               3.0s
+ => => exporting layers                                                                                                                                                                                              2.9s
+ => => writing image sha256:6db86cc74546a784e8426c5df410eedaf97bc32281f550535706c228da65166c                                                                                                                         0.0s
+ => => naming to docker.io/parity/substrate:latest                                                                                                                                                                   0.0s
+
+real    91m51.717s
+user    0m10.582s
+sys     0m9.266s
+Image is ready
+parity/substrate   latest    6db86cc74546   31 seconds ago   319MB
+parity/substrate   v3.0.0    6db86cc74546   31 seconds ago   319MB
+/workspaces/substrate-raft
+```
   **Linting:**: Cargo clippy produces the following warnings for `substrate-raft`:
 ```rust
 warning: associated function `project_ref` is never used
