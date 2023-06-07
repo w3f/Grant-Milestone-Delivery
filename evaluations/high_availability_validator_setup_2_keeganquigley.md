@@ -21,6 +21,21 @@
 
 ## Tests
 
+6 tests pass successfully in `authority-service`:
+```rust
+running 6 tests
+test config::test::next_test ... ok
+test config::test::load_test ... ok
+test handler::test::test_authorize_round ... ok
+test handler::test::test_authorize ... ok
+test handler::test::test_authorize_fix_order ... ok
+test handler::test::test_authorize_session ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+```
+
+Running on Ubuntu 20.04
+
 Running `cargo test` in `substrate-raft-setup` fails with:
 ```rust
 error: failed to run custom build command for `openssl-sys v0.9.80`
@@ -93,9 +108,24 @@ Caused by:
   ', /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/openssl-sys-0.9.80/build/find_normal.rs:191:5
   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
   ```
-  I tried installing OpenSSL tools with `sudo apt-get install libssl-dev` to no avail.
-  
-  Docker also fails to run:
+  I tried installing OpenSSL tools with `sudo apt-get install libssl-dev` to no avail. Also tried `sudo apt install pkg-config`. That works to fix pkg-config error but then it displays an old Rust issue that has been fixed since this toolchain was released:
+```rust
+error: `sp_trie::recorder::Recorder<H>::as_trie_recorder::{opaque#0}<'_>` does not live long enough
+   --> /home/ubuntu/.cargo/git/checkouts/substrate-raft-e8c7ccdd76a0db97/f4bab8f/primitives/state-machine/src/trie_backend_essence.rs:181:44
+    |
+181 |         let recorder = recorder.as_mut().map(|r| r as _);
+    |                                                  ^
+
+error: `sp_trie::recorder::Recorder<H>::as_trie_recorder::{opaque#0}<'_>` does not live long enough
+   --> /home/ubuntu/.cargo/git/checkouts/substrate-raft-e8c7ccdd76a0db97/f4bab8f/primitives/state-machine/src/trie_backend_essence.rs:219:44
+    |
+219 |         let recorder = recorder.as_mut().map(|r| r as _);
+    |                                                  ^
+
+error: could not compile `sp-state-machine` due to 2 previous errors
+```
+
+Docker also fails to run:
   ```rust
   ~/substrate-raft-setup ~/substrate-raft-setup
 Building bright/substrate-raft-setup:latest docker image, hang on!
