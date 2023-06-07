@@ -17,6 +17,12 @@
 | 2. | Frontend Implementation	|<ul><li>[ ] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) | Not fully evaluated yet. |
 | 3. | Product Touches |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. |
 
+## Evaluation V3
+
+### Testing
+
+I created some proposals. These proposals were rejected because the total token I distributed was under 10% of the token supply. The test guide is leading to this case. I created another DAO and proposals to verify the approved and implemented case, but I need to wait again the 24 hours.
+
 ## Evaluation V2
 
 ### Integration Test
