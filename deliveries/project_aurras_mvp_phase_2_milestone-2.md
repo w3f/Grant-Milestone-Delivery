@@ -14,4 +14,4 @@
 | 0c. | Testing Guide | https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing | |
 | 0d. | Docker File | https://github.com/HugoByte/aurras/blob/next/workflow/Dockerfile | |
 | 1a. | Workflow Composer: Flow Macro | https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs | |
-| 1b. | staking and payout features for scs/substrate-api-client | https://github.com/scs/substrate-api-client/pull/294 | |
+| 1b. | staking and payout features for scs/substrate-api-client | https://github.com/scs/substrate-api-client/pull/294 | This deliverable is introduced as a work around for a blocker for the action timeout, This has also significantly increased the performance. [Source](https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_2.md#update--amendments) <br/> cargo test --features staking-xt |
