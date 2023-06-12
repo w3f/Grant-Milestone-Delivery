@@ -23,6 +23,98 @@
 | | Events |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L169| |
 | 3. | UI & Frontend |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets| Not fully evaluated yet |
 
+## Evaluation V2
+
+### Automated Test
+
+I ran `cargo +nightly test`, and all tests passed without warnings, with better coverage.
+
+```
+running 9 tests
+test tests::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::submite_sue_works ... ok
+test tests::vote_sue_works ... ok
+test tests::contribution_works ... ok
+test tests::vote_against_works ... ok
+test tests::process_sue_before_vote ... ok
+test tests::remove_approved_sue ... ok
+test tests::process_sue_works ... ok
+test tests::remove_unapproved_sue ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+ 	Running unittests src/lib.rs (target/debug/deps/pallet_template-e0640ccd8bc222e0)
+
+running 3 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::it_works_for_default_value ... ok
+test tests::correct_error_for_none_value ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+ 	Running unittests src/lib.rs (target/debug/deps/pallet_treasury-fa4c5da44e70add7)
+
+running 6 tests
+test tests::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::genesis_config_works ... ok
+test tests::receive_from_zero_balance_should_fail ... ok
+test tests::receive_should_works ... ok
+test tests::claim_rewards_exceed_claim ... ok
+test tests::claim_rewards_ok ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+ 	Running unittests src/main.rs (target/debug/deps/saas3_dao_node-a29cbf50b04bb799)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+ 	Running unittests src/lib.rs (target/debug/deps/saas3_dao_runtime-912420306e0771b8)
+
+running 5 tests
+test weights::block_weights::constants::test_weights::sane ... ok
+test weights::rocksdb_weights::constants::test_db_weights::sane ... ok
+test weights::paritydb_weights::constants::test_db_weights::sane ... ok
+test weights::extrinsic_weights::constants::test_weights::sane ... ok
+test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-court
+```
+
+```
+Jun 12 10:49:44.439  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| node/src/chain_spec.rs: 0/90
+|| node/src/cli.rs: 0/5
+|| node/src/command.rs: 0/187
+|| node/src/main.rs: 0/2
+|| node/src/rpc.rs: 0/6
+|| node/src/service.rs: 0/155
+|| pallets/court/src/lib.rs: 58/71
+|| pallets/template/src/lib.rs: 9/17
+|| pallets/treasury/src/lib.rs: 45/52
+|| runtime/src/lib.rs: 11/97
+|| runtime/src/weights/block_weights.rs: 1/1
+|| runtime/src/weights/extrinsic_weights.rs: 1/1
+|| runtime/src/weights/paritydb_weights.rs: 0/3
+|| runtime/src/weights/rocksdb_weights.rs: 0/3
+|| runtime/src/xcm_config.rs: 0/31
+||
+17.34% coverage, 125/721 lines covered   
+```
+
+### Manual Testing
+
+I didn't understand what the `root user` is in this application. Is it to use `sudo` to use the command `court.processSue`? Please explain. Do I need to use the root user to approve in the frontend?
+The lack of access to the root user prevented me to complete the manual testing of the application. 
+
+### Code Quality
+
+The EsLint warnings were fixed.
+
 ## Evaluation V1
 
 ### Documentation
