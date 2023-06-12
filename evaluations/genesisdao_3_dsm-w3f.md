@@ -17,6 +17,25 @@
 | 2. | Frontend Implementation	|<ul><li>[ ] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) | Not fully evaluated yet. |
 | 3. | Product Touches |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. |
 
+## Evaluation V4
+
+### Testing
+
+I created a DAO with 1,000,000 tokens and received some pop-ups after the creation and when updating the page.
+
+![pasted image 0 (3)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/8d17c635-419e-4258-b36a-0656e3ca62ee)
+
+I created a proposal but when I voted the vote count didn't update with the vote. Besides that, the vote was registered in the blockchain.
+
+![pasted image 0 (4)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/95feb06b-9638-4582-86d1-ec35a8da1c26)
+
+When I reloaded the page no proposal was listed. I tried to create another one but the interface didn't list the new proposal.
+
+![image (21)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/14166868-c8dd-4e61-a8f2-18715f792486)
+
+
+I created another DAO with 100,000 tokens the application worked fine. I was able to approve the proposal and mark it as implemented but the interface didn't appear with any information saying the proposal was implemented. Would be nice if the frontend have this information.
+
 ## Evaluation V3
 
 ### Testing
