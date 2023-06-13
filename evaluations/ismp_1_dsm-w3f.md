@@ -9,8 +9,8 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE](https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE)| | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/README.md](https://github.com/polytope-labs/ismp-rs/blob/main/README.md)| Would be nice to have instructions to install without docker  |
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite](https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite)| Low testing coverage |
+| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/README.md](https://github.com/polytope-labs/ismp-rs/blob/main/README.md)| Not fully evaluated yet |
+| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite](https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite)| Not fully evaluated yet |
 | 0d. | Docker |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs#run-test-in-docker](https://github.com/polytope-labs/ismp-rs#run-test-in-docker)| Not fully evaluated yet |
 | 0e. | Article |<ul><li>[ ] </li></ul>| TBA | Need to be delivered |
 | 0f. | ISMP Specification |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp](https://github.com/polytope-labs/ismp)| Not fully evaluated yet |
@@ -27,6 +27,47 @@
 | | `RequestMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs)| Not fully evaluated yet |
 | | `ResponseMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs)| Not fully evaluated yet |
 | | `TimeoutMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs)| Not fully evaluated yet |
+
+## Evaluation V2
+
+### Documentation
+
+It was add the instructions to run without docker.
+
+### Testing
+
+The tests returned better coverage. It is possible to improve even more but it isn't mandatory.
+
+```
+running 5 tests
+test tests::should_reject_expired_check_clients ... ok
+test tests::should_reject_updates_within_challenge_period ... ok
+test tests::should_reject_messages_for_frozen_state_machines ... ok
+test tests::dispatcher_should_write_receipts_for_outgoing_requests_and_responses ... ok
+test tests::should_process_timeouts_correctly ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+
+Jun 13 07:15:27.209  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| ismp/src/consensus.rs: 2/2
+|| ismp/src/handlers/consensus.rs: 12/51
+|| ismp/src/handlers/request.rs: 3/30
+|| ismp/src/handlers/response.rs: 3/61
+|| ismp/src/handlers/timeout.rs: 27/73
+|| ismp/src/handlers.rs: 21/23
+|| ismp/src/host.rs: 10/32
+|| ismp/src/messaging.rs: 3/25
+|| ismp/src/router.rs: 19/65
+|| ismp/src/util.rs: 33/49
+|| ismp-testsuite/src/lib.rs: 128/134
+|| ismp-testsuite/src/mocks.rs: 87/132
+||
+51.40% coverage, 348/677 lines covered
+```
+
+I will use Milestone 2 deliverables to verify the proper behavior of the Milestone 1 deliverables.
 
 ## Evaluation V1
 
