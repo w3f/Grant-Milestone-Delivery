@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/High_availability_validator_setup.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -8,14 +8,14 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | https://github.com/bright/substrate-raft/blob/milestone-1/LICENSE-GPL3 | GPLv3, Unlicense | 
-| 0b. | Documentation | <ul><li>[x] </li></ul> | Inline |  | 
-| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | - |  |
-| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/bright/substrate-raft/tree/milestone-1/docker |  |
-| **1** | Basic Service | <ul><li>[x] </li></ul> | [Authority-service](https://github.com/bright/substrate-raft-setup/blob/milestone-2/bin/authority-service) code |  |
-| **2** | Getting permission from microservice | <ul><li>[x] </li></ul> | [Repository](https://github.com/bright/substrate-raft-setup/blob/milestone-2) for the custom node, and the [implementation](https://github.com/bright/substrate-raft-setup/blob/milestone-2/permission_resolver/src/lib.rs) for the PermissionResolver |  |
-| **3** | Allow as optional | <ul><li>[x] </li></ul> | Code for the [cli](https://github.com/bright/substrate-raft-setup/blob/milestone-2/node/src/cli.rs) |  |
-| **4** | Clean up substrate code | <ul><li>[x] </li></ul> | Changes in [code](https://github.com/bright/substrate-raft/commit/f4bab8f2a461271ab52ec6343934f6b84623b6c8) |  |
-| **5** | Integration test | <ul><li>[x] </li></ul> |  |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | Inline | Looks good. | 
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | - | Looks good. |
+| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/bright/substrate-raft/tree/milestone-1/docker | Looks good. |
+| **1** | Basic Service | <ul><li>[x] </li></ul> | [Authority-service](https://github.com/bright/substrate-raft-setup/blob/milestone-2/bin/authority-service) code | Looks good. |
+| **2** | Getting permission from microservice | <ul><li>[x] </li></ul> | [Repository](https://github.com/bright/substrate-raft-setup/blob/milestone-2) for the custom node, and the [implementation](https://github.com/bright/substrate-raft-setup/blob/milestone-2/permission_resolver/src/lib.rs) for the PermissionResolver | Looks good. |
+| **3** | Allow as optional | <ul><li>[x] </li></ul> | Code for the [cli](https://github.com/bright/substrate-raft-setup/blob/milestone-2/node/src/cli.rs) | Looks good. |
+| **4** | Clean up substrate code | <ul><li>[x] </li></ul> | Changes in [code](https://github.com/bright/substrate-raft/commit/f4bab8f2a461271ab52ec6343934f6b84623b6c8) | Looks good. |
+| **5** | Integration test | <ul><li>[x] </li></ul> |  | Looks good. |
 
 # General Notes
 
@@ -174,7 +174,7 @@ Building bright/substrate-raft-setup:latest docker image, hang on!
 ------
 process "/bin/sh -c apt-get install -y openssl" did not complete successfully: exit code: 100
 ```
-## V2
+## Update 2
 
 Tried Docker on Ubuntu and fails with this:
 ```rust
@@ -212,7 +212,7 @@ Dockerfile:9
 --------------------
 ERROR: failed to solve: process "/bin/sh -c cargo build --locked --release" did not complete successfully: exit code: 101
 ```
-## V3
+## Update 3
 
 Docker runs successfully in Codespaces:
 ```js
@@ -270,7 +270,62 @@ parity/substrate   latest    6db86cc74546   31 seconds ago   319MB
 parity/substrate   v3.0.0    6db86cc74546   31 seconds ago   319MB
 /workspaces/substrate-raft
 ```
-  **Linting:**: Cargo clippy produces the following warnings for `substrate-raft`:
+Had a call with the team and they gave demo of the tech. Essentially the issues were on my end as I wasn't running good enough hardware specs. They were able to show the basic boolean logic working, and see the `permissionResolver` trait in action. `Authority-Service` code could use more inline comments.
+
+`cargo test` successful but with some warnings:
+```rust
+warning: using `.borrow()` on a double reference, which returns `&KArg1` instead of borrowing the inner type
+  --> frame/support/src/storage/generator/double_map.rs:81:22
+   |
+81 |         let key_hashed = k1.borrow().using_encoded(Self::Hasher1::hash);
+   |                            ^^^^^^^^^
+   |
+   = note: `#[warn(suspicious_double_ref_op)]` on by default
+
+warning: using `.borrow()` on a double reference, which returns `&KArg1` instead of borrowing the inner type
+  --> frame/support/src/storage/generator/double_map.rs:98:23
+   |
+98 |         let key1_hashed = k1.borrow().using_encoded(Self::Hasher1::hash);
+   |                             ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&KArg2` instead of borrowing the inner type
+  --> frame/support/src/storage/generator/double_map.rs:99:23
+   |
+99 |         let key2_hashed = k2.borrow().using_encoded(Self::Hasher2::hash);
+   |                             ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&VArg` instead of borrowing the inner type
+   --> frame/support/src/storage/generator/double_map.rs:201:66
+    |
+201 |         unhashed::put(&Self::storage_double_map_final_key(k1, k2), &val.borrow())
+    |                                                                        ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&KeyArg1` instead of borrowing the inner type
+   --> frame/support/src/storage/generator/double_map.rs:332:26
+    |
+332 |             let key1_hashed = key1.borrow().using_encoded(OldHasher1::hash);
+    |                                   ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&KeyArg2` instead of borrowing the inner type
+   --> frame/support/src/storage/generator/double_map.rs:333:26
+    |
+333 |             let key2_hashed = key2.borrow().using_encoded(OldHasher2::hash);
+    |                                   ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&KeyArg` instead of borrowing the inner type
+  --> frame/support/src/storage/generator/map.rs:71:23
+   |
+71 |         let key_hashed = key.borrow().using_encoded(Self::Hasher::hash);
+   |                             ^^^^^^^^^
+
+warning: using `.borrow()` on a double reference, which returns `&KeyArg` instead of borrowing the inner type
+   --> frame/support/src/storage/generator/map.rs:330:24
+    |
+330 |             let key_hashed = key.borrow().using_encoded(OldHasher::hash);
+    |                                 ^^^^^^^^^
+```
+  
+  **Linting:**: Cargo clippy produces the following warnings for `substrate-raft`. Consider fixing for next milestone.
 ```rust
 warning: associated function `project_ref` is never used
   --> client/telemetry/src/transport.rs:80:1
