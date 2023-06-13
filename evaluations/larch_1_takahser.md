@@ -27,7 +27,9 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Documentation feedback
 
-- [ ] It would be nice if there was a way to navigate the docs more easily. For example, you could add an *index.md* file to each directory and add links (and some useful content) to each of them. Some basic info about the project can be found on the web ui when running the code after buildiug it.
+- [ ] It would be nice if there was a way to navigate the docs more easily. For example, you could add an *index.md* file to each directory and add links (and some useful content) to each of them.
+
+- [ ] Some basic info about the project can be found on the web ui when running the code after buildiug it. However, they're not very well written.
 
 - [ ] I didn't identify any npm task called `prepare` as indicated in your [development index.md docs](https://github.com/Zeeve-App/larch/blob/5a7d8f1ef13b4ddd49d3137e775a048d9a0c2c33/docs/development/index.md).
 
