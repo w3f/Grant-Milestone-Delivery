@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE](https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE)| | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/README.md](https://github.com/polytope-labs/substrate-ismp/blob/main/README.md)| Would be nice to have instructions to run without docker |
+| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/README.md](https://github.com/polytope-labs/substrate-ismp/blob/main/README.md)|  |
 | 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs)| Need a manual testing guide |
 | 0d. | Docker |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp#run-test-in-docker](https://github.com/polytope-labs/substrate-ismp#run-test-in-docker)| Not fully evaluated yet |
 | 0e. | Article|<ul><li>[ ] </li></ul>| TBA | Not a deliverable for this milestone |
@@ -20,6 +20,56 @@
 | 1d. | RPC |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs)| Not fully evaluated yet |
 | 1e. | Runtime-APIs |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs)| Not fully evaluated yet |
 | 1f. | Bechmarks |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| Not fully evaluated yet |
+
+## Evaluation V2
+
+### Documentation
+
+It was add the instructions to run without docker and also a demo. However, it is missing the instructions to run the demo. Please, provide instructions to run the demo with examples including inputs and expected outputs to demonstrate the behavior of the software.
+
+### Testing
+
+The tests returned better coverage. It is possible to improve even more but it isn't mandatory.
+
+```
+running 12 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::should_reject_expired_check_clients ... ok
+test tests::should_reject_updates_within_challenge_period ... ok
+test tests::should_reject_messages_for_frozen_state_machines ... ok
+test tests::should_handle_post_request_timeouts_correctly ... ok
+test tests::should_handle_get_request_timeouts_correctly ... ok
+test tests::dispatcher_should_write_receipts_for_outgoing_requests_and_responses ... ok
+test tests::should_handle_get_request_responses_correctly ... ok
+test tests::should_generate_and_verify_batch_proof_correctly ... ok
+test tests::should_generate_proofs_correctly_for_single_leaf_mmr ... ok
+test tests::should_generate_and_verify_batch_proof_for_leaves_inserted_across_multiple_blocks_correctly ... ok
+test benchmarking::benchmarks::benchmark_tests::test_benchmarks ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+Jun 13 09:36:17.846  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| ismp-demo/src/lib.rs: 0/80
+|| pallet-ismp/primitives/src/mmr.rs: 12/18
+|| pallet-ismp/rpc/src/lib.rs: 0/88
+|| pallet-ismp/src/benchmarking.rs: 78/99
+|| pallet-ismp/src/dispatcher.rs: 38/49
+|| pallet-ismp/src/errors.rs: 0/29
+|| pallet-ismp/src/events.rs: 0/11
+|| pallet-ismp/src/handlers.rs: 0/28
+|| pallet-ismp/src/host.rs: 80/89
+|| pallet-ismp/src/lib.rs: 85/166
+|| pallet-ismp/src/mmr/mmr.rs: 26/28
+|| pallet-ismp/src/mmr/storage.rs: 46/57
+|| pallet-ismp/src/mmr/utils.rs: 7/7
+|| pallet-ismp/src/weight_info.rs: 0/135
+|| parachain/inherent/src/lib.rs: 0/17
+|| parachain/src/consensus.rs: 0/140
+|| parachain/src/lib.rs: 0/50
+|| 
+34.10% coverage, 372/1091 lines covered
+```
 
 ## Evaluation V1
 

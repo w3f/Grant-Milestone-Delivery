@@ -11,9 +11,152 @@
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/master/LICENSE | |
 | 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro | Need better instructions how to run and how to test. |
 | 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing | Need better instructions how to run and how to test. |
-| 0d. | Docker File |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/Dockerfile | Need better instructions how to run and how to test. |
+| 0d. | Docker File |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/Dockerfile |  |
 | 1a. | Workflow Composer: Flow Macro |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs | Not fully evaluated yet |
-| 1b. | staking and payout features for scs/substrate-api-client |<ul><li>[ ] </li></ul>| https://github.com/scs/substrate-api-client/pull/294 | Not fully evaluated yet |
+| 1b. | staking and payout features for scs/substrate-api-client |<ul><li>[x] </li></ul>| https://github.com/scs/substrate-api-client/pull/294 |  |
+
+## Evaluation V3
+
+### Docker
+
+This time, I got no errors creating the .wasm using Docker.
+
+```
+user@localhost:~/Documents/aurras/aurras/workflow/composer$ cat ../examples/PolkadotPayout.yaml | docker run -i --rm hugobyte/workflow-composer generate > output.wasm
+go: downloading github.com/spf13/cobra v1.6.1
+go: downloading github.com/spf13/pflag v1.0.5
+info: component 'rust-std' for target 'wasm32-wasi' is up to date
+user@localhost:~/Documents/aurras/aurras/workflow/composer$ 
+```
+
+### Flow Macro
+
+I ran `cargo test --not-fail-fast`, and two tests failed. I noticed the tests for Workflow Macro are passing. 
+
+```
+user@localhost:~/Documents/aurras/aurras/workflow$ cargo test --no-fail-fast
+    Finished test [unoptimized + debuginfo] target(s) in 0.28s
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_balance_filter-358e79f9f11d1f75)
+
+running 4 tests
+test tests::invoke_trigger_fail - should panic ... ok
+test tests::filter_topics_pass ... ok
+test tests::invoke_trigger_pass - should panic ... ok
+test tests::filter_address_pass ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.72s
+
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_balance_notification_registration-b6db6ee18c9dcd21)
+
+running 5 tests
+test tests::get_event_sources_invalid_method - should panic ... ok
+test tests::get_event_sources_fail_getaddress - should panic ... ok
+test tests::get_event_sources_pass - should panic ... ok
+test tests::get_event_sources_fail ... ok
+test tests::add_address_pass ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.32s
+
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_event_receiver-c06d10c7016d288b)
+
+running 2 tests
+test tests::parse_event_fail - should panic ... ok
+test tests::parse_event_pass ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_event_registration-8c5ff9b017dc1b01)
+
+running 1 test
+test tests::register_source_pass ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.48s
+
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_push_notification-e704de5e5db4d7ff)
+
+running 3 tests
+test tests::send_notification_pass_main ... FAILED
+test tests::send_notification_pass ... FAILED
+test tests::send_notification_fail_main - should panic ... ok
+
+failures:
+
+---- tests::send_notification_pass_main stdout ----
+thread 'tests::send_notification_pass_main' panicked at 'called `Result::unwrap()` on an `Err` value: NotPresent', actions/push-notification/src/lib.rs:102:53
+
+---- tests::send_notification_pass stdout ----
+thread 'tests::send_notification_pass' panicked at 'called `Result::unwrap()` on an `Err` value: NotPresent', actions/push-notification/src/lib.rs:75:51
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::send_notification_pass
+    tests::send_notification_pass_main
+
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.46s
+
+error: test failed, to rerun pass `-p action-push-notification --lib`
+     Running unittests src/lib.rs (/home/user/Documents/aurras/aurras/target/debug/deps/action_substrate_event_processor-ffb9dc955e8c208b)
+
+running 5 tests
+test tests::parse_event_data_pass ... ok
+test tests::parse_staking_event_data_pass ... ok
+test tests::parse_staking_event_data_fail_invalid_category - should panic ... ok
+test tests::parse_staking_event_data_method_exception - should panic ... ok
+test tests::parse_event_data_fail - should panic ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (/home/user/Documents/aurras/aurras/target/debug/deps/test_util-da42c0ad9c2836a3)
+
+running 6 tests
+test tests::flow_macro_tests::test_macro ... ok
+test tests::flow_macro_tests::test_flow_macro_add_node ... ok
+test wasi_http::test_allowed_domains ... ok
+test tests::test_car_market_place ... ok
+test tests::test_map_operator ... ok
+test tests::test_employee_salary_with_concat_operator ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.16s
+
+error: 1 target failed:
+    `-p action-push-notification --lib`
+```
+
+Could you provide a way for using the Workflow Macro that doesn't need any programming skill, with instructions on how to run it to check the functionality of the Workflow Macro?
+
+### Staking and Payout Features for scs/substrate-api-client
+
+I noticed you added a note explaining this Derivable and saying to run `cargo test --features staking-xt`, and all tests passed.
+
+```
+user@localhost:~/Documents/substrate-api-client$ cargo test --features staking-xt
+    Finished test [unoptimized + debuginfo] target(s) in 0.54s
+     Running unittests src/lib.rs (target/debug/deps/substrate_api_client-d6ec907760ee1c09)
+
+running 12 tests
+test api::tests::test_xt_status_as_u8 ... ok
+test api::tests::test_reached_xt_status_for_broadcast ... ok
+test api::rpc_api::events::tests::filter_extrinsic_events_works ... ok
+test api::rpc_api::events::tests::fetch_events_from_block_works ... ok
+test api::tests::test_reached_xt_status_for_finalized ... ok
+test api::tests::test_reached_xt_status_for_in_block ... ok
+test api::tests::test_transaction_status_is_expected ... ok
+test api::tests::test_transaction_status_as_u8 ... ok
+test api::tests::test_reached_xt_status_for_ready ... ok
+test api::rpc_api::events::tests::retrieve_extrinsic_index_from_block_works ... ok
+test api::api_client::tests::api_extrinsic_params_works ... ok
+test api::api_client::tests::api_runtime_update_works ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+   Doc-tests substrate-api-client
+
+running 1 test
+test src/api/api_client.rs - api::api_client::Api (line 35) - compile ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+```
 
 ## Evaluation V2
 
