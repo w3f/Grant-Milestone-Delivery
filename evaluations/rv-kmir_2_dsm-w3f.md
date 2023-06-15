@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/rv-kmir.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,11 +9,36 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [BSD-3](https://github.com/runtimeverification/mir-semantics/blob/master/LICENSE)  | |
-| **0b.** | Documentation |<ul><li>[ ] </li></ul>|[kmir CLI instructions](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/README.md) | Not fully evaluated yet |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Testing Instructions with Docker](https://github.com/runtimeverification/mir-semantics/tree/milestone2-deliverable#running-integration-tests-with-docker) | Need explanation about skipped tests |
-| **0d.** | Docker | <ul><li>[ ] </li></ul>| [Dockerfile](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/Dockerfile) | Not fully evaluated yet
-| 1. | KMIR syntax | <ul><li>[ ] </li></ul>| [mir-syntax.k](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/k-src/mir-syntax.k) | Tests passing but small problems to fix. |
-| 2. | **kmir** executable extension | <ul><li>[ ] </li></ul>| [**kmir parse** implementation](https://github.com/runtimeverification/mir-semantics/blob/bd09e9d1716904afbbab2c0e27735202689d788e/kmir/src/kmir/__main__.py#L23), [**kmir parse** examples](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/README.md#examples) | Command failing |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>|[kmir CLI instructions](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/README.md) |  |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Testing Instructions with Docker](https://github.com/runtimeverification/mir-semantics/tree/milestone2-deliverable#running-integration-tests-with-docker) |  |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| [Dockerfile](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/Dockerfile) | 
+| 1. | KMIR syntax | <ul><li>[x] </li></ul>| [mir-syntax.k](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/k-src/mir-syntax.k) |  |
+| 2. | **kmir** executable extension | <ul><li>[x] </li></ul>| [**kmir parse** implementation](https://github.com/runtimeverification/mir-semantics/blob/bd09e9d1716904afbbab2c0e27735202689d788e/kmir/src/kmir/__main__.py#L23), [**kmir parse** examples](https://github.com/runtimeverification/mir-semantics/blob/milestone2-deliverable/kmir/README.md#examples) |  |
+
+## Evaluation V3
+
+### Docker
+
+The steps you sent me are missing the `make build` command, resulting in the path problem. The `kmir parse` doesn't result in this problem if I run `make build` before `poetry shell`.
+
+
+kmir parse
+
+```
+(kmir-py3.10) user@7034ba919a44:~/kmir$ kmir parse --definition-dir $(kbuild which llvm) src/tests/integration/test-data/handwritten-mir/execution/assert-true.mir
+Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'Mir'Unds'MirComponent'Unds'Mir{}(inj{SortFunction{}, SortMirComponent{}}(Lbl'UndsLBraUndsRBraUnds'MIR-SYNTAX'Unds'Function'Unds'FunctionSignature'Unds'FunctionBody{}(Lblfn'UndsLParUndsRPar'-'-GT-UndsUnds'MIR-SYNTAX'Unds'FunctionSignature'Unds'FunctionPath'Unds'ParameterList'Unds'Type{}(Lbl'UndsColnColnUndsUnds'MIR-SYNTAX'Unds'FunctionPath'Unds'FunctionPathComponent'Unds'FunctionPath{}(inj{SortIdentifierToken{}, SortFunctionPathComponent{}}(\dv{SortIdentifierToken{}}("main")),Lbl'Stop'List'LBraQuotUndsColnColnUndsUnds'MIR-SYNTAX'Unds'FunctionPath'Unds'FunctionPathComponent'Unds'FunctionPath'QuotRBraUnds'FunctionPath{}()),Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MIR-SYNTAX'Unds'ParameterList'Unds'Parameter'Unds'ParameterList'QuotRBraUnds'ParameterList{}(),inj{SortTupleType{}, SortType{}}(Lbl'LParRParUnds'MIR-SYNTAX'Unds'TupleType{}())),Lbl'UndsUndsUndsUndsUnds'MIR-SYNTAX'Unds'FunctionBody'Unds'DebugList'Unds'BindingList'Unds'ScopeList'Unds'BasicBlockList{}(Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'DebugList'Unds'Debug'Unds'DebugList'QuotRBraUnds'DebugList{}(),Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BindingList'Unds'Binding'Unds'BindingList{}(Lbllet'UndsUndsColnUndsSClnUnds'MIR-SYNTAX'Unds'Binding'Unds'OptMut'Unds'Local'Unds'Type{}(Lblmut'Unds'MIR-SYNTAX'Unds'OptMut{}(),inj{SortLocalToken{}, SortLocal{}}(\dv{SortLocalToken{}}("_0")),inj{SortTupleType{}, SortType{}}(Lbl'LParRParUnds'MIR-SYNTAX'Unds'TupleType{}())),Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BindingList'Unds'Binding'Unds'BindingList{}(Lbllet'UndsUndsColnUndsSClnUnds'MIR-SYNTAX'Unds'Binding'Unds'OptMut'Unds'Local'Unds'Type{}(Lblmut'Unds'MIR-SYNTAX'Unds'OptMut{}(),inj{SortLocalToken{}, SortLocal{}}(\dv{SortLocalToken{}}("_1")),inj{SortTypePathEndSegment{}, SortType{}}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'TypePathEndSegment'Unds'PathIdentSegment'Unds'PathIdentSegmentEndSuffix{}(inj{SortIdentifierToken{}, SortPathIdentSegment{}}(\dv{SortIdentifierToken{}}("bool")),inj{SortPathIdentSegmentSuffix{}, SortPathIdentSegmentEndSuffix{}}(Lbl'Unds'MIR-SYNTAX'Unds'PathIdentSegmentSuffix{}())))),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'BindingList'Unds'Binding'Unds'BindingList'QuotRBraUnds'BindingList{}())),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'ScopeList'Unds'Scope'Unds'ScopeList'QuotRBraUnds'ScopeList{}(),Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BasicBlockList'Unds'BasicBlock'Unds'BasicBlockList{}(Lbl'UndsColnUndsUnds'MIR-SYNTAX'Unds'BasicBlock'Unds'BB'Unds'BasicBlockBody{}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BB'Unds'BBName'Unds'MaybeBBCleanup{}(inj{SortBBToken{}, SortBBName{}}(\dv{SortBBToken{}}("bb0")),Lbl'Unds'MIR-SYNTAX'Unds'MaybeBBCleanup{}()),Lbl'LBraUndsUndsSClnRBraUnds'MIR-SYNTAX'Unds'BasicBlockBody'Unds'StatementList'Unds'Terminator{}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'StatementList'Unds'TerminatedStatement'Unds'StatementList{}(Lbl'UndsSClnUnds'MIR-SYNTAX'Unds'TerminatedStatement'Unds'Statement{}(Lbl'UndsEqlsUndsUnds'MIR-SYNTAX'Unds'Statement'Unds'Place'Unds'RValue{}(inj{SortLocalToken{}, SortPlace{}}(\dv{SortLocalToken{}}("_1")),inj{SortConstant{}, SortRValue{}}(Lblconst'UndsUnds'MIR-SYNTAX'Unds'Constant'Unds'ConstantValue{}(inj{SortBool{}, SortConstantValue{}}(\dv{SortBool{}}("true")))))),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'StatementList'Unds'TerminatedStatement'Unds'StatementList'QuotRBraUnds'StatementList{}()),Lbl'Unds'-'-GT-UndsUnds'MIR-SYNTAX'Unds'Terminator'Unds'CallLike'Unds'TerminatorDestination{}(inj{SortAssertCall{}, SortCallLike{}}(Lblassert'LParUndsRParUnds'MIR-SYNTAX'Unds'AssertCall'Unds'AssertArgumentList{}(Lbl'UndsCommUndsUnds'MIR-SYNTAX'Unds'AssertArgumentList'Unds'AssertArgument'Unds'AssertArgumentList{}(inj{SortLocalToken{}, SortAssertArgument{}}(\dv{SortLocalToken{}}("_1")),Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MIR-SYNTAX'Unds'AssertArgumentList'Unds'AssertArgument'Unds'AssertArgumentList'QuotRBraUnds'AssertArgumentList{}()))),inj{SortBB{}, SortTerminatorDestination{}}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BB'Unds'BBName'Unds'MaybeBBCleanup{}(inj{SortBBToken{}, SortBBName{}}(\dv{SortBBToken{}}("bb1")),Lbl'Unds'MIR-SYNTAX'Unds'MaybeBBCleanup{}()))))),Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BasicBlockList'Unds'BasicBlock'Unds'BasicBlockList{}(Lbl'UndsColnUndsUnds'MIR-SYNTAX'Unds'BasicBlock'Unds'BB'Unds'BasicBlockBody{}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'BB'Unds'BBName'Unds'MaybeBBCleanup{}(inj{SortBBToken{}, SortBBName{}}(\dv{SortBBToken{}}("bb1")),Lbl'Unds'MIR-SYNTAX'Unds'MaybeBBCleanup{}()),Lbl'LBraUndsUndsSClnRBraUnds'MIR-SYNTAX'Unds'BasicBlockBody'Unds'StatementList'Unds'Terminator{}(Lbl'UndsUndsUnds'MIR-SYNTAX'Unds'StatementList'Unds'TerminatedStatement'Unds'StatementList{}(Lbl'UndsSClnUnds'MIR-SYNTAX'Unds'TerminatedStatement'Unds'Statement{}(Lbl'UndsEqlsUndsUnds'MIR-SYNTAX'Unds'Statement'Unds'Place'Unds'RValue{}(inj{SortLocalToken{}, SortPlace{}}(\dv{SortLocalToken{}}("_0")),inj{SortConstant{}, SortRValue{}}(Lblconst'UndsUnds'MIR-SYNTAX'Unds'Constant'Unds'ConstantValue{}(inj{SortTupleConstant{}, SortConstantValue{}}(Lbl'LParRParUnds'MIR-SYNTAX'Unds'TupleConstant{}()))))),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'StatementList'Unds'TerminatedStatement'Unds'StatementList'QuotRBraUnds'StatementList{}()),Lblreturn'Unds'MIR-SYNTAX'Unds'Terminator{}())),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'BasicBlockList'Unds'BasicBlock'Unds'BasicBlockList'QuotRBraUnds'BasicBlockList{}()))))),Lbl'Stop'List'LBraQuotUndsUndsUnds'MIR-SYNTAX'Unds'Mir'Unds'MirComponent'Unds'Mir'QuotRBraUnds'Mir{}())
+```
+
+kmir parse --output pretty
+
+```
+(kmir-py3.10) user@7034ba919a44:~/kmir$ kmir parse --definition-dir $(kbuild which llvm) src/tests/integration/test-data/handwritten-mir/execution/assert-true.mir --output pretty
+fn main :: .FunctionPath ( .ParameterList ) -> ( ) { .DebugList let mut _0 : ( ) ;  let mut _1 : bool  ;  .BindingList .ScopeList bb0  : { _1 = const true ;  .StatementList assert ( _1 , .AssertArgumentList ) -> bb1  ; }  bb1  : { _0 = const ( ) ;  .StatementList return ; }  .BasicBlockList }  .Mir
+```
+
+I got the same results without Docker.
+
+Please, adjust the documentation, adding the `make build` to the instructions.
 
 ## Evaluation V2
 
