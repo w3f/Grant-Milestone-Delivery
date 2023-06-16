@@ -9,11 +9,41 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/master/LICENSE | |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro | Need better instructions how to run and how to test. |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing | Need better instructions how to run and how to test. |
+| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro | Not fully evaluated yet |
+| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing | Need fix the tests |
 | 0d. | Docker File |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/Dockerfile |  |
-| 1a. | Workflow Composer: Flow Macro |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs | Not fully evaluated yet |
+| 1a. | Workflow Composer: Flow Macro |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs | Need fix the tests |
 | 1b. | staking and payout features for scs/substrate-api-client |<ul><li>[x] </li></ul>| https://github.com/scs/substrate-api-client/pull/294 |  |
+
+## Evaluation V4
+
+### Test
+
+I tried again doing all the configuration, like in Milestone 1, to register the push notification token, but the test failed. 
+
+```
+running 3 tests
+test tests::send_notification_pass ... FAILED
+test tests::send_notification_pass_main ... FAILED
+test tests::send_notification_fail_main - should panic ... ok
+
+failures:
+
+---- tests::send_notification_pass stdout ----
+thread 'tests::send_notification_pass' panicked at 'called Result::unwrap() on an Err value: NotPresent', actions/push-notification/src/lib.rs:75:51
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+
+---- tests::send_notification_pass_main stdout ----
+thread 'tests::send_notification_pass_main' panicked at 'called Result::unwrap() on an Err value: NotPresent', actions/push-notification/src/lib.rs:102:53
+
+
+failures:
+    tests::send_notification_pass
+    tests::send_notification_pass_main
+
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.54s
+```
+
 
 ## Evaluation V3
 
