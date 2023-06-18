@@ -150,17 +150,17 @@ application.
   [RFP](https://github.com/w3f/Grants-Program/blob/master/docs/RFPs/Open/Static-Analysis-for-Runtime-Pallets.md#project-description-page_facing_up)
   mentions 3 more classes, the RFP repo has a
   [description and example for the "arithmetic-overflow" vulnarability class](https://github.com/bhargavbh/MIRAI/tree/main/substrate_examples/arithmetic-overflow)
-  and I assume more could be found in engaging with pallet developers. I see
-  that in your application you also mentioned the two classes, but is there a
-  reason why you focused only on two in your research?
+  and I assume more could be found in engaging with pallet developers.
 
 - You
   [identified several **major** issues with MIRAI + substrate](https://github.com/scs/MIRAI/tree/db8104d6bba5224ad445502ec46166288349e60c/substrate-examples#findings)):
+
   1. crashes and timeouts
   2. invasiveness on code (=> adoption is hard)
   3. [problem with nesting `precondition!` and `verify!`](https://github.com/scs/MIRAI/blob/db8104d6bba5224ad445502ec46166288349e60c/substrate-examples/pallet_template/README.md#open-issues)
-     To me, those issues sound severe. Are you confident that you will be able
-     to fix them in a next step? What is your approach?
+
+  To me, those issues sound severe. Are you confident that you will be able to
+  fix them in a next step? What is your approach?
 
 In general, I would welcome a more detailed description of the errors / crashes
 you got with MIRAI, so others can evaluate on their systems and build upon your
