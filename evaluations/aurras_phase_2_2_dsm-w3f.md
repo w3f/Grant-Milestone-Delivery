@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_2.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,11 +9,117 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/master/LICENSE | |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro | Not fully evaluated yet |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing | Need fix the tests |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro |  |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/workflow_macro#testing |  |
 | 0d. | Docker File |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/Dockerfile |  |
-| 1a. | Workflow Composer: Flow Macro |<ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs | Need fix the tests |
+| 1a. | Workflow Composer: Flow Macro |<ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs |  |
 | 1b. | staking and payout features for scs/substrate-api-client |<ul><li>[x] </li></ul>| https://github.com/scs/substrate-api-client/pull/294 |  |
+
+## Evaluation V5
+
+All Tests passed:
+
+```
+running 4 tests
+test tests::invoke_trigger_fail - should panic ... ok
+test tests::filter_address_pass ... ok
+test tests::invoke_trigger_pass - should panic ... ok
+test tests::filter_topics_pass ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.97s
+
+     Running unittests src/lib.rs (target/debug/deps/action_balance_notification_registration-717f95e234253623)
+
+running 5 tests
+test tests::get_event_sources_pass - should panic ... ok
+test tests::get_event_sources_fail_getaddress - should panic ... ok
+test tests::get_event_sources_invalid_method - should panic ... ok
+test tests::add_address_pass ... ok
+test tests::get_event_sources_fail ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.50s
+
+     Running unittests src/lib.rs (target/debug/deps/action_event_receiver-89cca91ba018fa92)
+
+running 2 tests
+test tests::parse_event_pass ... ok
+test tests::parse_event_fail - should panic ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/action_event_registration-5be9e8ae1b8f8cec)
+
+running 1 test
+test tests::register_source_pass ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.67s
+
+     Running unittests src/lib.rs (target/debug/deps/action_push_notification-c0f8885b8c948840)
+
+running 3 tests
+test tests::send_notification_pass_main ... ok
+test tests::send_notification_pass ... ok
+test tests::send_notification_fail_main - should panic ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.53s
+
+     Running unittests src/lib.rs (target/debug/deps/action_substrate_event_processor-860a7d9001f2b178)
+
+running 5 tests
+test tests::parse_staking_event_data_pass ... ok
+test tests::parse_event_data_pass ... ok
+test tests::parse_staking_event_data_method_exception - should panic ... ok
+test tests::parse_staking_event_data_fail_invalid_category - should panic ... ok
+test tests::parse_event_data_fail - should panic ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/actions_common-5e4714479145d33b)
+
+running 6 tests
+test types::context::tests::invoke_trigger_pass ... ok
+test types::context::tests::invoke_action_pass ... ok
+test types::context::tests::create_rule_pass ... ok
+test types::context::tests::get_list_pass ... ok
+test types::context::tests::create_trigger_pass ... ok
+test types::context::tests::update_document_pass ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.85s
+
+     Running unittests src/main.rs (target/debug/deps/test_util-af63a880229f6cc9)
+
+running 6 tests
+test tests::flow_macro_tests::test_flow_macro_add_node ... ok
+test tests::flow_macro_tests::test_macro ... ok
+test wasi_http::test_allowed_domains ... ok
+test tests::test_car_market_place ... ok
+test tests::test_map_operator ... ok
+test tests::test_employee_salary_with_concat_operator ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.77s
+
+
+Jun 19 07:48:16.693  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| actions/balance-filter/src/lib.rs: 32/41
+|| actions/balance-filter/src/types/message.rs: 2/2
+|| actions/balance-notification-registration/src/lib.rs: 42/47
+|| actions/common/src/mock/couchdb_test_container.rs: 18/18
+|| actions/common/src/types/context.rs: 74/103
+|| actions/common/src/types/trigger.rs: 1/1
+|| actions/event-receiver/src/lib.rs: 16/23
+|| actions/event-registration/src/lib.rs: 20/39
+|| actions/event-registration/src/types/source.rs: 1/1
+|| actions/push-notification/src/lib.rs: 12/12
+|| actions/substrate-event-processor/src/lib.rs: 26/35
+|| workflow/boilerplate/src/common.rs: 0/6
+|| workflow/test_util/src/helper.rs: 66/66
+|| workflow/test_util/src/main.rs: 0/1
+|| workflow/workflow_apis/src/errors/mod.rs: 0/1
+|| 
+78.28% coverage, 310/396 lines covered
+```
+
 
 ## Evaluation V4
 
