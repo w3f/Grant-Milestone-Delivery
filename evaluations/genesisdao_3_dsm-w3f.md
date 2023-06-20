@@ -17,6 +17,20 @@
 | 2. | Frontend Implementation	|<ul><li>[ ] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) | Not fully evaluated yet. |
 | 3. | Product Touches |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. |
 
+## Evaluation V5
+
+I ran the docker to set up all components. I was creating the DAO like before, and after the governance configuration, I received this screen.
+
+![pasted image 0 (5)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/4fd6b17a-d1ce-4b21-955f-49d44d195f0c)
+
+
+I checked the console and viewed this error.
+
+![pasted image 0 (6)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/38a1eeb1-a8f7-4a4e-8043-93ced6786878)
+
+
+I checked this using Firefox and Chrome. This error prevented me to continue the evaluation.
+
 ## Evaluation V4
 
 ### Testing
