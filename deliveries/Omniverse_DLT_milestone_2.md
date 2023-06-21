@@ -25,7 +25,7 @@
 
 | Number | Deliverable |     Link      | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | - [Omniverse Swap](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/milestone-2/LICENSE) <br/> -[Omniverse Ink!]() | GPLv3  |
+| 0a. | License | - [Omniverse Swap](https://github.com/Omniverse-Web3-Labs/omniverse-swap/blob/milestone-2/LICENSE) <br/> -[Omniverse Ink!](https://github.com/Omniverse-Web3-Labs/omniverse-ink/blob/main/LICENSE) | GPLv3  |
 | 0b. | Documentation | - [A high-level Priciple of the Omniverse Swap](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/High-Level%20Principle%20of%20Omniverse%20Swap.md) <br/> - [How to dev with `Ink!`](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/dev-for-Ink!.md) <br/> - [Tutorial of how to auto-deploy](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/Auto-Deployment.md) <br/> - [Tutorial of how to operate](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/Auto-Tutorial.md) | The documentation for this milestone include the high-level introduction of the swap, how to dev with `Ink!`, and the tutorial of how to use. We provide the tutorial for two parts, the one is the deployment that is made **automatically**, and the other is the operation. |
 | 0c. | Testing Guide | [The test guide for milestone 2](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/test-guide/m2-test-guide.md) | For this milestone we have provided incredibly convenient testing tools for testing the entire process in just a few steps. We think it brings much convenient and really makes sense. |
 | 0d. | Docker | [Synchronizer docker](https://github.com/Omniverse-Web3-Labs/omniverse-synchronizer/tree/milestone-2/docker)| We provide a Dockerfile to auto-run synchronizers. The related document can be found in the [Auto-Deployment](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/Auto-Deployment.md#launch-the-auto-synchronizer) |
@@ -42,9 +42,9 @@
 
 Currently, we have finished the basic functions of `O-DLT` protocol, and provided four tech stack implementations:  
 
-- [Ethereum (EVMs)](https://github.com/Omniverse-Web3-Labs/omniverse-evm/tree/web3-grant)
+- [Ethereum (EVMs)](https://github.com/Omniverse-Web3-Labs/omniverse-evm/tree/main)
 - Polkadot
-  - [Pallet](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/web3-grant)
+  - [Pallet](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/milestone-2/pallets)
   - [Ink!](https://github.com/Omniverse-Web3-Labs/omniverse-ink)
  - [Flow](https://github.com/Omniverse-Web3-Labs/omniverse-flow)
 
