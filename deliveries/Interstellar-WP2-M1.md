@@ -27,7 +27,7 @@ Although, given the resolution we want for a better User Experience, this dramat
 
 | Number | Deliverable | Link | Notes  |
 | -----: | ----------- | -----------|------------ |
-| 0a. | Licence  |  APACHE 2.0, MIT | no more GPL licence |
+| 0a. | Licence  |  APACHE 2.0, MIT | |
 | 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/P2M1.html#code-documentation  ) |   |
 | 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/P2M1.html#testing-guide) | |
 | 0d. | Dockers | [Docker compose demo]() | [How to launch docker compose demo]( https://book.interstellar.gg/P2M1_demo_tutorial.html)   |
