@@ -26,7 +26,7 @@ Although, given the resolution we want for a better User Experience, this dramat
 
 One way to solve this problem is to include only half/or less of the transaction's message pixels in the circuit. This still prevents an attacker from modifying it, as modifying only a part of the message would be useless. We will make this modification on the next milestone. 
 
-To approach the targeted fps objective, and anticipate the reduced size of the circuit for the next milestone, a test where  the resolution of the message displayed is reduced by half to approximate the size of the circuit in the next milestone. Knowing that the resolution will stay the same.
+To approach the targeted fps objective, and anticipate the reduced size of the circuit for the next milestone keeping the same resolution. A test where the resolution of the message displayed is reduced by half to approximate the size of the circuit in the next milestone. 
 
 
 **Deliverables**
