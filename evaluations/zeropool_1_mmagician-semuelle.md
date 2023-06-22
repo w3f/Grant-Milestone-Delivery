@@ -1,9 +1,9 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ZeroPool.md
 - **Milestone:** 1
-- **Kusama Identity:** [H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85](https://polkascan.io/pre/kusama/account/H9M22FTqs1kKRAUiEk1BCVNQfWdMzVV3HbHuMwkirirxk85)
+- **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
 - **Previously successfully merged evaluation:** All by mmagician
 
 | Number | Deliverable | Accepted | Link | Notes |
@@ -11,12 +11,16 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-APACHE), [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-MIT), [LICENSE](https://github.com/zeropoolnetwork/libzeropool/blob/beae8527536bd03a22e4d110de10079d096f9b55/LICENSE-APACHE), [LICENSE](https://github.com/zeropoolnetwork/fawkes-crypto/blob/190c1541de416ca4b634a54b555cd3f23f3a20e5/LICENSE-MIT) | - |
 | 0b.  | Documentation | <ul><li>[x] </li></ul> | [docs.rs](https://docs.rs/libzeropool/0.5.6/libzeropool/index.html), [docs.rs](https://docs.rs/fawkes-crypto/4.4.0/fawkes_crypto/index.html), [README](https://github.com/zeropoolnetwork/libzeropool/blob/0f406f4947bbd1abd3bfd0731c0128d3ac015ab1/README.md) [README](https://github.com/zeropoolnetwork/fawkes-crypto/blob/5149f041ab7fa9b037cf104c8360360da66db427/README.md), [zeropool.network](https://zeropool.network/docs/implementation/contracts-and-circuits/substrate/) | Some docs added on request. |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [zeropoolnetwork/zeropool-substrate](https://github.com/zeropoolnetwork/zeropool-substrate/blob/f13adb61ae2720f8703311f1ae5a6c2d85c8b4ca/README.md#run-the-full-test-environment), [zeropoolnetwork/fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto/tree/5149f041ab7fa9b037cf104c8360360da66db427/fawkes-crypto/tests), [zeropoolnetwork/libzeropool](https://github.com/zeropoolnetwork/libzeropool/tree/0f406f4947bbd1abd3bfd0731c0128d3ac015ab1/tests)| |
-| 0d. | Article/Tutorial | <ul><li>[ ] </li></ul> | | No tutorial |
+| 0d. | Article/Tutorial | <ul><li>[x] </li></ul> | [medium.com](https://medium.com/zeropool/zeropool-implementing-privacy-preserving-transactions-with-zksnarks-and-substrate-1bd060505166) | Overview of project, developments and future plans |
 | 1. | zkSNARK circuit and cryptography library | <ul><li>[x] </li></ul> |  [fawkes-crypto](https://github.com/zeropoolnetwork/fawkes-crypto/tree/5149f041ab7fa9b037cf104c8360360da66db427), [libzeropool](https://github.com/zeropoolnetwork/libzeropool/tree/0f406f4947bbd1abd3bfd0731c0128d3ac015ab1) | — |
 
 ## General notes
 
-### Evaluation 04.07.2022
+### Evaluation 22.06.2023
+
+Article provided, milestone accepted.
+
+### Evaluation 14.06.2023
 
 Tests are working. Some documentation added, article still missing.
 
