@@ -12,21 +12,21 @@
 
 **Context** (optional)
 
-The targeted performance in frames per second (fps) is related to both the performance of the garbled circuit evaluation itself in terms of gates/ms and the total number of logical gates to be evaluated per frame, which is linked to the screen resolution. The number of pixels to display is approx. close to the number of gates. 
+In order to improve the frames per second (fps) performance of our garbled circuit evaluation, we need to consider both the efficiency of the evaluation itself in terms of gates/ms and the total number of logical gates required for each frame, which is directly linked to the screen resolution. As a rough approximation, the number of pixels to display is proportional to the number of gates.
 
-Although it is not necessary from a security standpoint to hide the transaction message, it is essential to make it almost impossible for an attacker to identify this message in memory to modify it. See [Interstellar Secure UX/UI](https://medium.com/@jlleleu/interstellar-secure-ux-7d7f095403c9)
+While it is not strictly necessary to hide the transaction message from a security standpoint, it is crucial to make it exceedingly difficult for an attacker to identify and modify this message in memory. Please refer to the [Interstellar Secure UX/UI](https://medium.com/@jlleleu/interstellar-secure-ux-7d7f095403c9) article for more details.
 
-To do so, in the last milestone M5, we included the transaction message in the circuit itself to prevent an attacker from modifying it.It is one of the main reason why we reached only 3 fps.
+To address this concern, in the M5 milestone, we incorporated the transaction message within the circuit itself to prevent unauthorized modifications. However, including the message in the circuit significantly increased the number of gates that need to be evaluated, resulting in a performance of only 3 fps. In M3, our circuit consisted of 80,000 gates, while the updated circuit with the included message now contains 314,970 gates.
 
-Our new scheme developed from scratch based upon the following whitepapers [A New Framework for Garbled Circuits](https://www.esat.kuleuven.be/cosic/publications/article-3351.pdf) and [A New Approach to Garbled Circuits](https://eprint.iacr.org/2021/739.pdf) achieve 10x the performance of Swanky with the same circuit that include transaction message. 
- 
-However, for the M3, the security was relaxed and the message was not included in the circuit reducing its size to approxitmatly 80 000 gates when the current circuit size is 314 970 gates.
+So, we have develloped a new garbling scheme, from scratch, drawing inspiration from the whitepapers [A New Framework for Garbled Circuits](https://www.esat.kuleuven.be/cosic/publications/article-3351.pdf) and [A New Approach to Garbled Circuits](https://eprint.iacr.org/2021/739.pdf). This new scheme proven secure against PPT adversary, achieves a 10x performance improvement compared to the previous method, while still incorporating the transaction message within the circuit. Our optimizations, including parallelization and free gates, contribute to this significant boost in performance.
 
-Although, given the resolution we want for a better User Experience, this dramatically increases the number of gates to evaluate. So, despite the number of optimizations we made to accelerate the evaluation of the logical gates, we cannot achieve the targeted 60 fps with such a big circuit.
+We believe that by implementing additional optimizations and reducing the size of the circuit, we can approach our target fps objective without sacrificing the desired high resolution. One approach to achieve this is to include only a portion (half or less) of the transaction message pixels in the circuit. This modification effectively prevents attackers from modifying the message, as modifying only a part of it would be futile. We will incorporate this change in the next milestone of our circuit design.
 
-One way to solve this problem is to include only half/or less of the transaction's message pixels in the circuit. This still prevents an attacker from modifying it, as modifying only a part of the message would be useless. We will make this modification on the next milestone. 
+To demonstrate the feasibility of this approach, we also propose an additional test where the resolution of the displayed message is reduced by half, approximating the circuit size in the upcoming milestone.
 
-To approach the targeted fps objective, and anticipate the reduced size of the circuit for the next milestone keeping the same resolution. A test where the resolution of the message displayed is reduced by half to approximate the size of the circuit in the next milestone. 
+
+
+
 
 
 **Deliverables**
