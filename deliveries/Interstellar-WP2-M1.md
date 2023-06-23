@@ -37,7 +37,7 @@ To demonstrate the feasibility of this approach, we also propose an additional t
 | Number | Deliverable | Link | Notes  |
 | -----: | ----------- | -----------|------------ |
 | 0a. | Licence  |  APACHE 2.0, MIT | |
-| 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/22M1.html#code-documentation  ) |   |
-| 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/P2M1.html#testing-guide) | |
+| 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/2M1.html#code-documentation  ) |   |
+| 0c. | Testing Guide | [testing guide]( https://book.interstellar.gg/2M1_demo_tutorial.html) | |
 | 0d. | Dockers | [Docker compose demo]() | [How to launch docker compose demo]( https://book.interstellar.gg/2M1_demo_tutorial.html)   |
 | 1. | New Garbling Scheme|link   | Test
