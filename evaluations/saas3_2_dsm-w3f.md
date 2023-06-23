@@ -23,6 +23,26 @@
 | | Events |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L169| |
 | 3. | UI & Frontend |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets| Not fully evaluated yet |
 
+## Evaluation V4
+
+I tried to use the frontend in the Evaluation V3, but I tested again to provide some prints. I created a lawsuit and voted with four different accounts. 
+
+![Screenshot 2023-06-22 at 08-00-49 SaaS3 DAO Pallets](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/8e023ec3-7947-499e-ba0c-5e84e224bc1c)
+
+With any of the jury accounts, I tried to approve the lawsuit. The frontend showed a success message but wasn't added new events in the polkadot.js. 
+
+![image (22)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/bfa1e372-047e-4140-bbb0-c883b034d07d)
+
+![Screenshot 2023-06-22 at 08-49-23 Polkadot_Substrate Portal](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/919e448e-ee37-4b80-a019-a4780a2c14dc)
+
+I found another problem. I created another lawsuit, but when I voted in the second lawsuit, the frontend has sent the transaction with id 0, seeding the vote to the first lawsuit.
+
+![Screenshot 2023-06-22 at 08-55-02 SaaS3 DAO Pallets](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/75d37c52-9673-4545-b272-1c970518078c)
+
+![image (23)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/925e0e2e-25ee-475a-b3d7-ef6f8c92b331)
+
+The last vote was trying to vote on the first lawsuit, but it seeded to the second one. The order of the list seems to be inverted, showing the second lawsuit on top of the list, but on top of the list, the id is 0.
+
 
 ## Evaluation V3
 
