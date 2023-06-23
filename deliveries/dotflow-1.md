@@ -22,6 +22,6 @@ The list of things we implemented in this milestone:
 | 0a. | License | [Contract](https://github.com/TheDotflow/dotflow-ink/blob/main/LICENSE) [Frontend](https://github.com/TheDotflow/dotflow-ui/blob/main/LICENSE) | MIT license | 
 | 0b.  | Documentation | [Link](https://github.com/TheDotflow/dotflow-ink/blob/main/README.md) |  | 
 | 0c.  | Testing and Testing Guide | [Contract](https://github.com/TheDotflow/dotflow-ink/blob/main/contracts/identity/tests.rs) [Guide](https://github.com/TheDotflow/dotflow-ink#build--test-locally) [Identity Key](https://github.com/TheDotflow/dotflow-ui/blob/main/__tests__/identityKey.test.ts) [Guide](https://github.com/TheDotflow/dotflow-ui#set-up-development-environment) | Tests for the identity contract and the Identity Key |
-| 0d.  | Docker | [Contract]() [Frontend](https://github.com/TheDotflow/dotflow-ui#run-with-docker) |  |
+| 0d.  | Docker | [Contract](https://github.com/TheDotflow/dotflow-ink#docker) [Frontend](https://github.com/TheDotflow/dotflow-ui#run-with-docker) |  |
 | 1.  | Identity Contract | [Link](https://github.com/TheDotflow/dotflow-ink/blob/main/contracts/identity/lib.rs) | The Identity contract code |
 | 2.  | My Identity page | [Frontend code](https://github.com/TheDotflow/dotflow-ui/tree/main/src) [Identity Key](https://github.com/TheDotflow/dotflow-ui/pull/15) [Address Encryption](https://github.com/TheDotflow/dotflow-ui/pull/21) | The frontend code |
