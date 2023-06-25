@@ -13,7 +13,7 @@
 | 0b. | Documentation | Project README: https://github.com/web3labs/epirus-substrate/tree/main/explorer-ui#readme <br/> Video demo: https://www.loom.com/share/85fb7a8cbe6e40ba9bcadd804b7e6bc5 | Well documented |
 | 0c. | Testing Guide | UI unit tests: https://github.com/web3labs/epirus-substrate/blob/main/explorer-ui/README.md#testing | UI, coverage, analysis tests and linting are passing. Logs attached below. | 
 | 0d. | Docker | UI Docker image: [ghcr.io/web3labs/epirus-substrate-ui:latest](https://github.com/web3labs/epirus-substrate/pkgs/container/epirus-substrate-ui) <br /> Docker compose for running all explorer components locally: https://github.com/web3labs/epirus-substrate/tree/main/local-testnet | Was able to compile and run the docker image. When running the local testnet with docker compose, UI is not running (logs below) |
-| 1. | Updated Explorer UI | https://github.com/web3labs/epirus-substrate/tree/main/explorer-ui | Source code for the blocks, extrinsics data display can be found in the `./src/components/blocks/` and `./src/components/extrinsics/` folders. | Can confirm the new files are present and changes have been made acoording to the application. Explorer compiles and runs successfully. |
+| 1. | Updated Explorer UI | https://github.com/web3labs/epirus-substrate/tree/main/explorer-ui | Can confirm the new folders (`./src/components/blocks/` and `./src/components/extrinsics/`) are present and changes have been made acoording to the application. Explorer compiles and runs successfully. |
 | 2. | Public explorer instance | https://substrate.sirato.xyz | Public explorer instance for Rococo-Contracts. A new menu item `Blocks` has been added to the side navbar | New navbar is present and the explorer is running |
 
 ## General Notes
