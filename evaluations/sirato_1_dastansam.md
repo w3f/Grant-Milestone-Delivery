@@ -22,9 +22,13 @@ In general, it's documented well and majority of the instructions are clear. Cod
 
 When installing the dependencies, I couldn't do it with simple `npm install` command, I had to force install the dependencies with `npm install --force`. I am not completely sure if it's because of some upstream issues with npm or dependencies, but I think it should either be fixed to work with `npm install` or documented that it should be installed with `npm install --force`.
 
+### Explorer running locally
+
+<img width="1669" alt="Explorer local run" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/c72fd26b-7fe6-4930-8cf1-b5e718b3f2ce">
+
 ### Code suggestions
 
-I noticed that `.env` file is not gitignored. It's not a big deal, but it's better to keep it out of the repository. You can set the environment variables in the `.env` file in `.env.example` and use it as a fallback file.
+I noticed that `.env` file is not gitignored. It's not a big deal, but it's better to keep it out of the repository. You can set the environment variables in the `.env` file in `.env.example` and use it as a fallback file to `.env`. `.env` should be used for production variables, I think.
 
 ### Logs
 
