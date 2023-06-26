@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/GenesisDAO.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -9,13 +9,28 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | Licence |<ul><li>[x] </li></ul>| n/a |  | 
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. | 
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/docs/testing.md | Not fully evaluated yet. |
-| 0d. | Docker |<ul><li>[ ] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) | Not fully evaluated yet. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| n/a |  | 
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|  |
+| 0d. | Docker |<ul><li>[x] </li></ul>| [node Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/Dockerfile), [frontend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-frontend/blob/main/Dockerfile), [backend Dockerfile](https://github.com/deep-ink-ventures/genesis-dao-service/blob/main/Dockerfile) |  |
 | 0e. | Article |<ul><li>[x] </li></ul>| [Link](https://docs.google.com/document/d/1c3B9iyoHE7cP5a5qYwa-A_0Vy5zo1uAo-S1vcZ5h_B4/edit#heading=h.obore8uev3ox) |  |
-| 1. | Substrate module: pallet_dao_vote |<ul><li>[ ] </li></ul>| [Link](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes) | Not fully evaluated yet. |
-| 2. | Frontend Implementation	|<ul><li>[ ] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) | Not fully evaluated yet. |
-| 3. | Product Touches |<ul><li>[ ] </li></ul>| n/a | Not fully evaluated yet. |
+| 1. | Substrate module: pallet_dao_vote |<ul><li>[x] </li></ul>| [Link](https://github.com/deep-ink-ventures/genesis-dao-node/tree/main/pallets/dao-votes) |  |
+| 2. | Frontend Implementation	|<ul><li>[x] </li></ul>| [Website](https://genesis-dao.org). [Repo](https://github.com/deep-ink-ventures/genesis-dao-frontend) |  |
+| 3. | Product Touches |<ul><li>[x] </li></ul>| n/a |  |
+
+## Evaluation V6 
+
+The problem reported in Evaluation V5 was fixed. But I have a similar problem from Evaluation V4.  Probably is a small problem in the frontend of the application, and this do not prevent the acceptions of the milestone since it is mostly working. I recorded the problem to help to fix it.
+
+In this video, I show the creation of the DAO with 1,000,000 tokens, the pop-up error, and the frontend didn't update the voting count, but the voting is registered in the pokadot.js.
+
+https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/266c7475-801d-451d-9ccc-f72b83fd4c84
+
+In this other video, I show the application working fine when I created the DAO with 100,000 tokens.
+
+
+https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/67d1a362-9f9a-4665-8c77-30b46ef06f2f
+
+
 
 ## Evaluation V5
 
