@@ -1,18 +1,10 @@
 # Evaluation
 
-- **Status:** Accepted
+- **Status:** Pending
 - **Application Document:** [centrifuge-gsrpc-v2](https://github.com/w3f/Grants-Program/blob/master/applications/centrifuge-gsrpc-v2.md)
 - **Milestone:** 2
 - **Kusama Identity:** [CwYBnfoxb1B6fibdMN4js21DQeqgbqHgwLwacfKFdC7vsyZ](https://kusama.subscan.io/account/CwYBnfoxb1B6fibdMN4js21DQeqgbqHgwLwacfKFdC7vsyZ)
 - **Previously successfully merged evaluation:** N/A
-
-| Number | Deliverable     | Accepted                | Link                                                                                                                              | Evaluation Notes     |
-|--------|-----------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| 1.     | License         | <ul><li>[x] </li> </ul> | [License](https://github.com/centrifuge/go-substrate-rpc-client/blob/events-parsing-v2-milestone-1/LICENSE)                       | Apache License v2    |
-| 2.     | Documentation   | <ul><li>[x] </li></ul>  | [Documentation](https://github.com/centrifuge/go-substrate-rpc-client/blob/events-parsing-v2-milestone-1/README.md)               | inline documentation |
-| 3.     | PR with changes | <ul><li>[x] </li></ul>  | [centrifuge/go-substrate-rpc-client#327](https://github.com/centrifuge/go-substrate-rpc-client/pull/327)                          |                      |
-| 4a.    | Tests           | <ul><li>[x] </li></ul>  | [UnitTest](https://github.com/centrifuge/go-substrate-rpc-client/blob/19aa30067543bd77becbc2cee55d755fd689aa12/Makefile#L49)      |                      |
-| 4b.    | Test execution  | <ul><li>[x] </li></ul>  | [TestExecution](https://github.com/centrifuge/go-substrate-rpc-client/blob/19aa30067543bd77becbc2cee55d755fd689aa12/Makefile#L49) |                      |
 
 | Number | Deliverable                      | Accepted                | Link                                                                                                                                                                              |  Evalulation Notes                                                                                                        |
 |--------|----------------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
