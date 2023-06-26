@@ -23,6 +23,98 @@
 | | Events |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L169| |
 | 3. | UI & Frontend |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets| Not fully evaluated yet |
 
+## Evaluation V4
+
+I tried to use the frontend in the Evaluation V3, but I tested again to provide some prints. I created a lawsuit and voted with four different accounts. 
+
+![Screenshot 2023-06-22 at 08-00-49 SaaS3 DAO Pallets](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/8e023ec3-7947-499e-ba0c-5e84e224bc1c)
+
+With any of the jury accounts, I tried to approve the lawsuit. The frontend showed a success message but wasn't added new events in the polkadot.js. 
+
+![image (22)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/bfa1e372-047e-4140-bbb0-c883b034d07d)
+
+![Screenshot 2023-06-22 at 08-49-23 Polkadot_Substrate Portal](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/919e448e-ee37-4b80-a019-a4780a2c14dc)
+
+I found another problem. I created another lawsuit, but when I voted in the second lawsuit, the frontend has sent the transaction with id 0, seeding the vote to the first lawsuit.
+
+![Screenshot 2023-06-22 at 08-55-02 SaaS3 DAO Pallets](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/75d37c52-9673-4545-b272-1c970518078c)
+
+![image (23)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/925e0e2e-25ee-475a-b3d7-ef6f8c92b331)
+
+The last vote was trying to vote on the first lawsuit, but it seeded to the second one. The order of the list seems to be inverted, showing the second lawsuit on top of the list, but on top of the list, the id is 0.
+
+
+## Evaluation V3
+
+### Manual Test
+
+I tried again to use these pallets, I followed the [guide](https://github.com/SaaS3-Foundation/saas3-dao/blob/main/Tutorial.md), and I could vote using the Charlie, Eve, Ferdie, and Dave address.
+
+```
+court.proposals: Option<PalletCourtLawsuit>
+{
+  plaintiff: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+  value: 50
+  defendent: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+  statement: I demand compensation for damages.
+  voters: [
+    5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y
+    5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy
+    5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw
+    5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+  ]
+  votes: [
+    true
+    true
+    true
+    true
+  ]
+  approved: false
+}
+```
+
+I got the same error, BadOrigin, when trying to Process a Lawsuit using any of the jury member's addresses.
+
+I changed the unit test code to check if the pallet works with a signature from the jury.
+
+Original Test
+```
+#[test]
+fn process_sue_works() {
+	new_test_ext().execute_with(|| {
+		Balances::make_free_balance_be(&0, 101);
+		assert_ok!(Court::submit_sue(RuntimeOrigin::signed(1), 100, 0, vec![]));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(2), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(3), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(4), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(5), 0, true));
+		assert_ok!(Court::process_sue(RuntimeOrigin::root(), 0));
+		assert_eq!(Court::approvals().len(), 1);
+		assert_eq!(Court::proposal_count(), 1);
+	});
+}
+```
+
+Modified Test
+```
+#[test]
+fn process_sue_works() {
+	new_test_ext().execute_with(|| {
+		Balances::make_free_balance_be(&0, 101);
+		assert_ok!(Court::submit_sue(RuntimeOrigin::signed(1), 100, 0, vec![]));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(2), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(3), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(4), 0, true));
+		assert_ok!(Court::vote_sue(RuntimeOrigin::signed(5), 0, true));
+		assert_ok!(Court::process_sue(RuntimeOrigin::signed(2), 0));
+		assert_eq!(Court::approvals().len(), 1);
+		assert_eq!(Court::proposal_count(), 1);
+	});
+}
+```
+
+This test passed, so I don't know why this isn't working using polkadot.js. It is working for you? Did you tried it using polkadot.js? 
+
 ## Evaluation V2
 
 ### Automated Test
