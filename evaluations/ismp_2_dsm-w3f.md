@@ -21,6 +21,85 @@
 | 1e. | Runtime-APIs |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs)| Not fully evaluated yet |
 | 1f. | Bechmarks |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| Not fully evaluated yet |
 
+## Evaluation V3
+
+While running [these instructions for integration test](https://github.com/polytope-labs/tesseract/tree/blake2b#integration-test-guide) (private repo) I had some problems:
+
+In Step 3, to spin-up the network, I used the polkadot-lauch specification from [here](https://github.com/polytope-labs/hyperbridge/tree/blake2b/scripts/polkadot-launch) to spin-up the parachains, but the script was not able to run the relaychain. I tried first starting manually Polkadot version 0.9.43 but this caused a problem with the metadata version in the step 4 of the tutorial, see the error below. 
+
+```
+subxt codegen --url=ws://localhost:9944 | rustfmt --edition=2018 --emit=stdout > /home/user/workspace/tesseract-blake2b/parachain/src/codegen/relay_chain.rs
+error: unknown start of token: \u{1b}
+ --> <stdin>:1:1
+  |
+1 | Could not decode metadata, only V14 metadata is supported: Cannot try_into() to Metadata: unsupported metadata version
+  | ^
+
+error: unknown start of token: \u{1b}
+ --> <stdin>:1:124
+  |
+1 | Could not decode metadata, only V14 metadata is supported: Cannot try_into() to Metadata: unsupported metadata version
+  |                                                                                                                           ^
+
+error: this file contains an unclosed delimiter
+ --> <stdin>:1:130
+  |
+1 | Could not decode metadata, only V14 metadata is supported: Cannot try_into() to Metadata: unsupported metadata version
+  | -                                                                                                                         -    ^
+  | |                                                                                                                         |
+  | unclosed delimiter                                                                                                        unclosed delimiter
+```
+
+Then I changed to version 0.9.42 and the metadata problem was solved, being able to run `subxt codegen`. However, in step 5, there are some compilation errors in the code generated in step 4. See below:
+
+```
+error[E0405]: cannot find trait `StaticExtrinsic` in module `subxt::blocks`
+     --> parachain/src/codegen/relay_chain.rs:21013:39
+      |
+21013 |                 impl ::subxt::blocks::StaticExtrinsic for ForceSubscribeVersionNotify {
+      |                                       ^^^^^^^^^^^^^^^ not found in `subxt::blocks`
+
+error[E0405]: cannot find trait `StaticExtrinsic` in module `subxt::blocks`
+     --> parachain/src/codegen/relay_chain.rs:21030:39
+      |
+21030 |                 impl ::subxt::blocks::StaticExtrinsic for ForceUnsubscribeVersionNotify {
+      |                                       ^^^^^^^^^^^^^^^ not found in `subxt::blocks`
+
+error[E0405]: cannot find trait `StaticExtrinsic` in module `subxt::blocks`
+     --> parachain/src/codegen/relay_chain.rs:21051:39
+      |
+21051 |                 impl ::subxt::blocks::StaticExtrinsic for LimitedReserveTransferAssets {
+      |                                       ^^^^^^^^^^^^^^^ not found in `subxt::blocks`
+
+error[E0405]: cannot find trait `StaticExtrinsic` in module `subxt::blocks`
+     --> parachain/src/codegen/relay_chain.rs:21072:39
+      |
+21072 |                 impl ::subxt::blocks::StaticExtrinsic for LimitedTeleportAssets {
+      |                                       ^^^^^^^^^^^^^^^ not found in `subxt::blocks`
+
+For more information about this error, try `rustc --explain E0405`.
+```
+
+I changed back the code generated for the parachain and relaychain to the ones available in the repository. However, using this way the test runs but stay stuck and don't complete.
+
+```
+cargo +nightly test -p tesseract-integration-tests test_messaging_relay -- --nocapture
+⚡ Found 3 strongly connected components which includes at least one cycle each
+cycle(001) ∈ α: ApprovalVoting ~~{"DisputeCoordinatorMessage"}~~> DisputeCoordinator ~~{"ApprovalVotingMessage"}~~>  *
+cycle(002) ∈ β: CandidateBacking ~~{"StatementDistributionMessage"}~~> StatementDistribution ~~{"CandidateBackingMessage"}~~>  *
+cycle(003) ∈ γ: NetworkBridgeRx ~~{"GossipSupportMessage"}~~> GossipSupport ~~{"NetworkBridgeRxMessage"}~~>  *
+   Compiling tesseract-parachain v0.1.0 (/home/diogo/workspace/w3f/tesseract-blake2b/parachain)
+   Compiling tesseract-integration-tests v0.1.0 (/home/diogo/workspace/w3f/tesseract-blake2b/integration-tests)
+    Finished test [unoptimized + debuginfo] target(s) in 3m 30s
+     Running unittests src/lib.rs (target/debug/deps/tesseract_integration_tests-452855ab9d4ed01a)
+
+running 1 test
+test test_messaging_relay has been running for over 60 seconds
+```
+
+I think we could have a problem with the version of the relaychain. What is the exact version you are using? Any other configuration that I need to perform to run these tests?
+
+
 ## Evaluation V2
 
 ### Documentation
