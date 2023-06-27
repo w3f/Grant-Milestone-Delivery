@@ -4,7 +4,7 @@
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/validated-streams.md
 - **Milestone:** 2 
 - **Kusama Identity:** [HZrUkonEQc9tReQNndBTML5NbYWBaj8KGaHUGGxwq3jP9PY](https://explorer.polkascan.io/kusama/account/HZrUkonEQc9tReQNndBTML5NbYWBaj8KGaHUGGxwq3jP9PY)
-- **Previously successfully merged evaluation:** All by semuelle
+- **Previously successfully merged evaluation:** none
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
