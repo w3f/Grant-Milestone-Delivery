@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Pending
+- **Status:** Accepted
 - **Application Document:** [centrifuge-gsrpc-v2](https://github.com/w3f/Grants-Program/blob/master/applications/centrifuge-gsrpc-v2.md)
 - **Milestone:** 2
 - **Kusama Identity:** [CwYBnfoxb1B6fibdMN4js21DQeqgbqHgwLwacfKFdC7vsyZ](https://kusama.subscan.io/account/CwYBnfoxb1B6fibdMN4js21DQeqgbqHgwLwacfKFdC7vsyZ)
@@ -9,14 +9,20 @@
 | Number | Deliverable                      | Accepted                | Link                                                                                                                                                                              |  Evalulation Notes                                                                                                        |
 |--------|----------------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | 1.     | License                          | <ul><li>[x] </li> </ul> | [License](https://github.com/centrifuge/go-substrate-rpc-client/blob/event-parsing-v2/LICENSE)                                                                                    | Apache License v2                                                                                                         |
-| 2.     | Documentation                    | <ul><li>[ ] </li> </ul> | [Documentation](https://github.com/centrifuge/go-substrate-rpc-client/blob/event-parsing-v2/registry/REGISTRY.md)                                                                 | Documentation Needs to be improved                                                                                        |
+| 2.     | Documentation                    | <ul><li>[x] </li> </ul> | [Documentation](https://github.com/centrifuge/go-substrate-rpc-client/blob/event-parsing-v2/registry/REGISTRY.md)                                                                 | Documentation Needs to be improved                                                                                        |
 | 3.     | PR with changes                  | <ul><li>[x] </li> </ul> | [centrifuge/go-substrate-rpc-client#338](https://github.com/centrifuge/go-substrate-rpc-client/pull/338)                                                                          | PR looks good                                                                                                             |
 | 4a.    | Registry Unit Tests              | <ul><li>[x] </li> </ul> | [UnitTest](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/registry/registry_test.go)                                         | Unit Test coverage is good                                                                                                |
-| 4b.    | Registry (Events) Live Tests     | <ul><li>[x] </li> </ul> | [Events Live Tests](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/registry/retriever/event_retriever_live_test.go)          | Error in running docker tests, submitted a [PR](https://github.com/centrifuge/go-substrate-rpc-client/pull/353) to fix    |
-| 4c.    | Registry (Extrinsics) Live Tests | <ul><li>[ ] </li> </ul> | [Extrinsics Live Tests](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/registry/retriever/extrinsic_retriever_live_test.go)  | Live test against public endpoints. Tests are running for too long. No need to check for 1000 events. 50 are fine         |
-| 4d.    | Test execution                   | <ul><li>[x] </li> </ul> | [Test execution](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/Makefile#L49-L53)                                            | Makefile has a [error](https://github.com/centrifuge/go-substrate-rpc-client/issues/352)                                  |
+| 4b.    | Registry (Events) Live Tests     | <ul><li>[x] </li> </ul> | [Events Live Tests](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/registry/retriever/event_retriever_live_test.go)          | Tests are running fine                                                                                                    |
+| 4c.    | Registry (Extrinsics) Live Tests | <ul><li>[x] </li> </ul> | [Extrinsics Live Tests](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/registry/retriever/extrinsic_retriever_live_test.go)  | Live test against public endpoints.                                                                                       |
+| 4d.    | Test execution                   | <ul><li>[x] </li> </ul> | [Test execution](https://github.com/centrifuge/go-substrate-rpc-client/blob/20047b8b15d046d0fa137cc716cb489395a0081a/Makefile#L49-L53)                                            |                                                                                                                           |
 | 5.     | Dockerfile                       | <ul><li>[x] </li> </ul> | [Dockerfile](https://github.com/centrifuge/go-substrate-rpc-client/blob/b9da36ebf177cbb3ee41c2ef2b9a1fb08e5f8522/Dockerfile_milestone2)                                           | Dockerfile is provided                                                                                                    |
 | 6.     | In-Memory Registry               | <ul><li>[x] </li> </ul> | [centrifuge/go-substrate-rpc-client#338](https://github.com/centrifuge/go-substrate-rpc-client/pull/338)                                                                          | In-Memory Registry is implemented                                                                                         |
+
+
+## General Notes v2 - June 29, 2023
+
+- Tutorial on how to parse events is added [PR](https://github.com/centrifuge/go-substrate-rpc-client/commit/7e3e5ad5225bfa7afd342f3fe8932dc44702c472)
+- Live tests count is controlled by env var.
 
 ## General Notes v1 - June 26, 2023
 
