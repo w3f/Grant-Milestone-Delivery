@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Omniverse%20DLT.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -13,10 +13,14 @@
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>| [The test guide for milestone 2](https://github.com/Omniverse-Web3-Labs/Omniverse-DLT-Introduction/blob/main/docs/test-guide/m2-test-guide.md) | |
 | 0d. | Docker |<ul><li>[x] </li></ul>| [Synchronizer docker](https://github.com/Omniverse-Web3-Labs/omniverse-synchronizer/tree/milestone-2/docker)| |
 | 0e. | Article |<ul><li>[x] </li></ul>| [link](https://medium.com/@xiyuzheng1984/the-ink-tech-stack-along-with-a-swap-for-o-dlt-tokens-be128bb955e6) | |
-| 1. | Substrate module: swap |<ul><li>[ ] </li></ul>| - [Pallet for Omniverse Swap](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/milestone-2/pallets/omni-swap) <br/> -[the simulation of the o-amm](https://github.com/Omniverse-Web3-Labs/o-amm) <br/> - [off-chain calc and on-chain verify](https://github.com/Omniverse-Web3-Labs/O-AMM-ParaSim/tree/main) | Possible small improvements and doubts. |
-| 2. | Substrate chain |<ul><li>[ ] </li></ul>| [Parachain itself](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/milestone-2) | Not fully evaluated yet|  
-| 3. | Ink! smart contract implementation |<ul><li>[ ] </li></ul>| [Ink! tech stacks](https://github.com/Omniverse-Web3-Labs/omniverse-ink) | Not fully evaluated yet |
-| 4. | Off-Chain Synchronizer |<ul><li>[ ] </li></ul>| [link](https://github.com/Omniverse-Web3-Labs/omniverse-synchronizer/tree/milestone-2) | Not fully evaluated yet |
+| 1. | Substrate module: swap |<ul><li>[x] </li></ul>| - [Pallet for Omniverse Swap](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/milestone-2/pallets/omni-swap) <br/> -[the simulation of the o-amm](https://github.com/Omniverse-Web3-Labs/o-amm) <br/> - [off-chain calc and on-chain verify](https://github.com/Omniverse-Web3-Labs/O-AMM-ParaSim/tree/main) |  |
+| 2. | Substrate chain |<ul><li>[x] </li></ul>| [Parachain itself](https://github.com/Omniverse-Web3-Labs/omniverse-swap/tree/milestone-2) | |  
+| 3. | Ink! smart contract implementation |<ul><li>[x] </li></ul>| [Ink! tech stacks](https://github.com/Omniverse-Web3-Labs/omniverse-ink) |  |
+| 4. | Off-Chain Synchronizer |<ul><li>[x] </li></ul>| [link](https://github.com/Omniverse-Web3-Labs/omniverse-synchronizer/tree/milestone-2) |  |
+
+## Evaluation V2
+
+All pending problems and doubts were solved and are explained [here in this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/889#issuecomment-1614276659).
 
 ## Evaluation V1
 
