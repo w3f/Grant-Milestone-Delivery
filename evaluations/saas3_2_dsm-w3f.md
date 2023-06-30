@@ -23,6 +23,81 @@
 | | Events |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L169| |
 | 3. | UI & Frontend |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets| Not fully evaluated yet |
 
+## Evaluation V5
+
+### License
+
+Still missing the Apache License in both repositories.
+
+### Automated Test
+
+I ran `cargo +nightly test` again to check, but this time some tests failed.
+
+```
+issamu@localhost:~/Documents/saas3/saas3-dao$ cargo +nightly test
+⚡ Found 3 strongly connected components which includes at least one cycle each
+cycle(001) ∈ α: DisputeCoordinator ~~{"DisputeDistributionMessage"}~~> DisputeDistribution ~~{"DisputeCoordinatorMessage"}~~>  *
+cycle(002) ∈ β: CandidateBacking ~~{"CollatorProtocolMessage"}~~> CollatorProtocol ~~{"CandidateBackingMessage"}~~>  *
+cycle(003) ∈ γ: NetworkBridgeRx ~~{"GossipSupportMessage"}~~> GossipSupport ~~{"NetworkBridgeRxMessage"}~~>  *
+    Finished test [unoptimized + debuginfo] target(s) in 0.78s
+     Running unittests src/lib.rs (target/debug/deps/pallet_court-5de9314ef157f9e7)
+
+running 9 tests
+test tests::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::vote_against_works ... FAILED
+test tests::vote_sue_works ... ok
+test tests::contribution_works ... FAILED
+test tests::process_sue_before_vote ... FAILED
+test tests::remove_approved_sue ... FAILED
+test tests::process_sue_works ... FAILED
+test tests::submite_sue_works ... ok
+test tests::remove_unapproved_sue ... ok
+
+failures:
+
+---- tests::vote_against_works stdout ----
+thread 'tests::vote_against_works' panicked at 'Expected Ok(_). Got Err(
+    BadOrigin,
+)', pallets/court/src/tests.rs:156:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- tests::contribution_works stdout ----
+thread 'tests::contribution_works' panicked at 'Expected Ok(_). Got Err(
+    BadOrigin,
+)', pallets/court/src/tests.rs:211:9
+
+---- tests::process_sue_before_vote stdout ----
+thread 'tests::process_sue_before_vote' panicked at 'assertion failed: `(left == right)`
+  left: `Err(BadOrigin)`,
+ right: `Err(Module(ModuleError { index: 2, error: [10, 0, 0, 0], message: Some("VoterCountTooLow") }))`', pallets/court/src/tests.rs:167:9
+
+---- tests::remove_approved_sue stdout ----
+thread 'tests::remove_approved_sue' panicked at 'Expected Ok(_). Got Err(
+    BadOrigin,
+)', pallets/court/src/tests.rs:197:9
+
+---- tests::process_sue_works stdout ----
+thread 'tests::process_sue_works' panicked at 'Expected Ok(_). Got Err(
+    BadOrigin,
+)', pallets/court/src/tests.rs:141:9
+
+
+failures:
+    tests::contribution_works
+    tests::process_sue_before_vote
+    tests::process_sue_works
+    tests::remove_approved_sue
+    tests::vote_against_works
+
+test result: FAILED. 4 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p pallet-court --lib`
+```
+
+### Manual Testing
+
+I tried again, and this time, I could successfully process a lawsuit using polkadot.js and the front end. I also could claim the rewards in polkadot.js. Could you explain how `court.removeSue(lawsuitId)` should work? I think it isn't part of the deliverables, but I tested this and only noticed in the chain state the id remove from the `court.approvals()`, but the `court.proposals(u32)`, still returning `approved: true` and didn't change the frontend.
+
 ## Evaluation V4
 
 I tried to use the frontend in the Evaluation V3, but I tested again to provide some prints. I created a lawsuit and voted with four different accounts. 
