@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** In Progress
-- **Application Document:** [Application](https://github.com/w3f/Grants-Program/pull/1252)
+- **Application Document:** [Subrelay](https://github.com/w3f/Grants-Program/pull/1252)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
 - **Previously successfully merged evaluation:** [Milestone 1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/subrelay_1_dsm-w3f.md)
@@ -10,7 +10,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://github.com/subrelay/subrelay-api/blob/main/LICENSE https://github.com/subrelay/interface/blob/main/LICENSE | | 
+| 0a. | License | https://github.com/subrelay/subrelay-api/blob/main/LICENSE https://github.com/subrelay/interface/blob/main/LICENSE | Correct licenses. | 
 | 0b.  | Documentation | https://docs.subrelay.com/ | Extensive documentation. In some places invalid url is present https://app.subrelay.xyz (forgot to rename?) | 
 | 0c. | Testing and Testing Guide | https://github.com/subrelay/interface/tree/main/cypress https://github.com/subrelay/subrelay-api/tree/main/test | Couldn't run integration tests, more on this below. | 
 | 0d. | Docker file | https://docs.subrelay.com/self-hosted/getting-started | Working as expected. | 
