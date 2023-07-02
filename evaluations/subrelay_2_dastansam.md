@@ -26,7 +26,7 @@
 
 In general, all the features are delivered, I was able to test them on production and everything works as expected. 
 
-The only thing that I couldn't test locally was the integration tests. Initially the errors were related to Postgres DB, I resolved them and even run the `migration` script that you run in the CI `yarn run typeorm migration:run`. But I still get several errors and all tests are failing. Maybe this is related to my local environment, regardless, I think this part of the code is missing some documentation. I see that issues are related to DB and missing tokens for Discord and Telegram bots. Would be great if you could provide some pre-requisites for running the integration tests locally.
+The only thing that I couldn't test locally was the integration tests. Initially the errors were related to Postgres DB, I resolved them and even run the `migration` script that you run in the CI `yarn run typeorm migration:run`. But I still get several errors and all tests are failing. Maybe this is related to my local environment, regardless, I think this part of the code is missing some documentation. I see that errors are related to DB and missing tokens for Discord and Telegram bots. Would be great if you could clearly indicate pre-requisites for running the integration tests locally in the README.
 
 ### Outputs
 
@@ -141,10 +141,27 @@ error Command failed with exit code 1.
 
 ### Screenshots
 
+Workflow dashboard:
+
+<img width="1713" alt="Workflow dashboard" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/295c4f3b-7cd6-4dc5-879a-18f51aeed46a">
+
 #### Email
+
+<img width="1442" alt="Email notifs" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/9757fb26-40ec-4704-a4a9-5b842155b8aa">
 
 #### Webhook
 
+<img width="1713" alt="Webhook notifs" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/ff62b709-5cca-4cfb-a387-bc461856939a">
+
+
 #### Discord
 
+<img width="622" alt="Discord notifs" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/af84dd94-d97b-472f-96aa-c2aad2317e9d">
+
 #### Telegram
+
+![image](https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/e08c3701-f5d9-46c1-9d98-b0c06e50cb85)
+
+### Logs
+
+<img width="1713" alt="Logs" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/8c0e6237-2e4f-4ecf-b2e0-578e1c699c74">
