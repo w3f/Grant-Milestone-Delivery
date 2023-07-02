@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** In Progress
-- **Application Document:** [Application](https://github.com/Szegoo/Grants-Program/blob/42b031052c16670685c65a409d91779d0069903a/applications/Dotflow.md)
+- **Application Document:** [Application](https://github.com/w3f/Grants-Program/pull/1252)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
 - **Previously successfully merged evaluation:** [Milestone 1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/subrelay_1_dsm-w3f.md)
