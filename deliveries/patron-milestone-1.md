@@ -16,11 +16,11 @@
 | 0e.    | Article                       | https://medium.com/brushfam/patron-is-your-one-stop-smart-contract-manager-for-polkadot-ecosystem-b1f89a48ba40 |                                                                                           |
 | 1a.    | Backend storage               | https://github.com/Brushfam/patron-backend/tree/master/crates/db                                               | PostgreSQL, S3-compatible storage                                                         |
 | 1b.    | Sync server                   | https://github.com/Brushfam/patron-backend/tree/master/crates/server                                           |                                                                                           |
-| 1c.    | Smart contract builder        | https://github.com/Brushfam/patron-backend/blob/master/crates/cli/src/commands/deploy.rs                       |                                                                                           |
+| 1c.    | Smart contract builder        | https://github.com/Brushfam/patron-backend/tree/master/crates/builder/src                                      |                                                                                           |
 | 2a.    | Web UI                        | https://patron.works/                                                                                          | can be used for authentication, searching contracts details, review user build sessions   |
 | 2b.    | Detailed contract information | https://github.com/Brushfam/patron-frontend/blob/master/src/pages/CodeHashWindow.tsx                           | provided fields such as code hash, timestamp, session build logs, contract addresses etc. |
-| 2c.    | User authentication           | https://github.com/Brushfam/patron-backend/blob/master/crates/cli/src/commands/auth.rs                         | Patron uses SubConnect integration                                                        |
-| 3a.    | Developer CLI utility         | https://github.com/Brushfam/patron-backend/tree/master/crates/cli                                              | developer-oriented CLI utility                                                            |
+| 2c.    | User authentication           | https://github.com/Brushfam/patron-backend/blob/master/crates/patron/src/commands/auth.rs                      | Patron uses SubConnect integration                                                        |
+| 3a.    | Developer CLI utility         | https://github.com/Brushfam/patron-backend/tree/master/crates/patron                                           | developer-oriented CLI utility                                                            |
 
 Testing this delivery:
 - Deliverable 0b.:
