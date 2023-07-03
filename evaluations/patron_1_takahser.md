@@ -17,7 +17,7 @@
 | 1b. | Sync server | <ul><li>[x] </li></ul> | [server crate](https://github.com/Brushfam/patron-backend/tree/d6bb21b010d4b9abf13c7ee7bce4b3898c3a1fc0/crates/server) | - |
 | 1c. | Smart contract builder | <ul><li>[ ] </li></ul> | [provided link (broken)](https://github.com/Brushfam/patron-backend/blob/master/crates/cli/src/commands/deploy.rs) | The link provided returns a 404; Spec: Immutable, pre-configured smart contract builders are to be implemented for verified smart contract deployment. |
 | 2a. | Web UI | <ul><li>[ ] </li></ul> | [patron frontend repo](https://github.com/Brushfam/patron-frontend/tree/master) | See [Web UI Feedback](#web-ui-feedback) |
-| 2b. | Detailed contract information | <ul><li>[ ] </li></ul> | [CodeHashWindow.tsx](https://github.com/Brushfam/patron-frontend/blob/f0a32db6ba72da3a4dc65034ec64e7ec7ce2f0b0/src/pages/CodeHashWindow.tsx) | -|
+| 2b. | Detailed contract information | <ul><li>[x] </li></ul> | [CodeHashWindow.tsx](https://github.com/Brushfam/patron-frontend/blob/f0a32db6ba72da3a4dc65034ec64e7ec7ce2f0b0/src/pages/CodeHashWindow.tsx) | - |
 | 2c. | User authentication | <ul><li>[ ] </li></ul> | [provided link (broken)](https://github.com/Brushfam/patron-backend/blob/master/crates/cli/src/commands/auth.rs) | The link provided returns a 404; Spec: We will implement a web3-oriented authentication solution |
 | 3a. | Developer CLI utility | <ul><li>[ ] </li></ul> | [provided link (broken)](https://github.com/Brushfam/patron-backend/tree/master/crates/cli) | The link provided returns a 404; Spec: A deployment workflow unified, developer-oriented CLI utility will be implemented. |
 
