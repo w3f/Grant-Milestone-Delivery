@@ -25,6 +25,8 @@ I also though you would use `Polkadot.js` wallet when you mentioned that `web me
 
 ## Logs and screenshots
 
+<img width="1721" alt="Hanging screenshot" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/963bebb0-b0fd-4f33-b15d-9941fd07770f">
+
 <details>
 
 <summary>Tests</summary>
