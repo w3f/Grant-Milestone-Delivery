@@ -19,9 +19,9 @@
 
 ## General Notes
 
-Contact list feature works both locally and on production. However, main web messenger has different behaviour. I followed the tutorial [video](https://media.belsoft.rs/diffychat/diffychat.mp4) that was provided but chat windows just hang and lag for me. I attached screenshot of the failure.
+Contact list feature works both locally and on production. However, main web messenger has different behaviour than expected. I followed the tutorial [video](https://media.belsoft.rs/diffychat/diffychat.mp4) that was provided but chat windows just hang and lag for me. I attached screenshot of the failure.
 
-I also though you would use `Polkadot.js` wallet when you mentioned that `web messenger will use Polkadot.js`, but it seems that you are using `polkadot.js` library. It seemed strange to me that user inserts their `mnemonic` phrase into the form and not use their wallet directly. I think it would be nice if you could provide some context on that.
+I also thought you would use `Polkadot.js` wallet when you mentioned that `web messenger will use Polkadot.js for authorization`, but it seems that you are using `polkadot.js` library. It seemed strange to me that user inserts their `mnemonic` phrase into the form and not use their wallet directly. I think it would be nice if you could provide some context on that.
 
 ## Logs and screenshots
 
