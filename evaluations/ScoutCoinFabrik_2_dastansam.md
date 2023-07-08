@@ -35,6 +35,8 @@ As far as I understand, `rust-analyzer` is an integral part of `scout-audit`, ho
 rust-analyzer failed to load workspace: Failed to read Cargo metadata from Cargo.toml file ~/scout/detectors/Cargo.toml, cargo 1.67.0 (8ecd4f20a 2023-01-10): Failed to run `"cargo" "metadata" "--format-version" "1" "--manifest-path" "~/scout/detectors/Cargo.toml" "--filter-platform" "aarch64-apple-darwin"`: `cargo metadata` exited with an error: error: manifest path `~/scout/detectors/Cargo.toml` does not exist
 ```
 
+I wanted to see how the extension behaves when opening vulnerable code examples in `test-cases`, but it wasn't possible. I think this might be the reason why.
+
 ### Typos in integration tests
 
 In the `integration_test.rs` file, there are two typos that prevent the tests from passing. First one is in [line 32](https://github.com/CoinFabrik/scout/blob/3dcde6d88ddbb551e4a11c64842c0beae09a968a/apps/cargo-scout-audit/tests/integration_test.rs#L32-L33), second one is in [line 124](https://github.com/CoinFabrik/scout/blob/3dcde6d88ddbb551e4a11c64842c0beae09a968a/apps/cargo-scout-audit/tests/integration_test.rs#L124). In both of them, `scout` should be renamed to `scout-audit`, since this is the name of the CLI tool.
@@ -69,7 +71,8 @@ I think this directly contradicts to [`panic-error`](https://coinfabrik.github.i
 let sum = value1.checked_add(value2).ok_or(TradingPairErrors::Overflow)?;
 let coeff = absolute_difference.checked_div(sum).ok_or(TradingPairErrors::DivisionByZero)?;
 let percentage_difference = 100_u128.checked_mul().ok_or(TradingPairErrors::Overflow)?;
-Ok(result)
+
+Ok(percentage_difference)
 ```
 
 ## Logs
