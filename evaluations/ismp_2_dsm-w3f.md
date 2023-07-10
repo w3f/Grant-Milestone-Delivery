@@ -21,6 +21,73 @@
 | 1e. | Runtime-APIs |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs)| Not fully evaluated yet |
 | 1f. | Bechmarks |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| Not fully evaluated yet |
 
+## Evaluation V4
+
+### Test
+
+To configure the system, I ran the polkadot-lauch, after that, I ran the docker provided. I was able to use the ismpDemo pallet to transfer some balance from Parachain 2001 to 2000 and request the timestamp. The docker registered these actions in the log.
+
+I also tried, without success, to run the tests from tesserac inside the docker container, using the tesserac-blake2b and the tesserac-main.
+
+Using `docker exec -it container_id /bin/bash` and running the tests:
+```
+= note: ld: error: duplicate symbol: memory32_grow
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory32_grow) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x0) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: table_copy
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(table_copy) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x20) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+		  .
+		  .
+		  .
+          ld: error: duplicate symbol: externref_global_set
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(externref_global_set) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x220) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: memory_atomic_notify
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory_atomic_notify) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x240) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: memory_atomic_wait32
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory_atomic_wait32) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x260) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: too many errors emitted, stopping now (use -error-limit=0 to see all errors)
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `tesseract-integration-tests` (lib test) due to previous error
+```
+
+Running the test in tesseract-main and tesseract-blake2b:
+```
+		.
+		.
+		.
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.4.rcgu.o): in function `out_of_gas':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.4:(.text+0x2a0): multiple definition of `out_of_gas'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.15.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.15:(.text+0x2a0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.4.rcgu.o): in function `new_epoch':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.4:(.text+0x2c0): multiple definition of `new_epoch'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.15.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.15:(.text+0x2c0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.7.rcgu.o): in function `wasm_to_host_trampoline':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.7:(.text+0x0): multiple definition of `wasm_to_host_trampoline'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.3.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.3:(.text+0x0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.7.rcgu.o): in function `host_to_wasm_trampoline':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.7:(.text+0x20): multiple definition of `host_to_wasm_trampoline'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.3.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.3:(.text+0x20): first defined here
+          collect2: error: ld returned 1 exit status
+
+error: could not compile `tesseract-integration-tests` (lib test) due to previous error
+```
+
 ## Evaluation V3
 
 While running [these instructions for integration test](https://github.com/polytope-labs/tesseract/tree/blake2b#integration-test-guide) (private repo) I had some problems:
