@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/SaaS3.md 
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -8,20 +8,24 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License |<ul><li>[ ] </li></ul>| Apache 2.0 | License file is missing in the root of the repository
-| 0b. | Documentation |<ul><li>[ ] </li></ul>|https://github.com/SaaS3-Foundation/saas3-dao| Not fully evaluated yet | 
-| 0c.  | Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/SaaS3-Foundation/saas3-dao| Need a manual testing guide | 
-| 0d. | Docker |<ul><li>[ ] </li></ul>|  We are not able to provide a Dockerfile | Would be easier to setup with a zombienet |
-| oe. | Article/Tutorial |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/main/Tutorial.md | Not fully evaluated yet |
-| 1. | pallet-court |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/tree/main/pallets/court |Not fully evaluated yet |
-|  | Functions |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L233 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L262 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L286| Not fully evaluated yet |
+| 0a. | License |<ul><li>[x] </li></ul>| Apache 2.0 | 
+| 0b. | Documentation |<ul><li>[x] </li></ul>|https://github.com/SaaS3-Foundation/saas3-dao|  | 
+| 0c.  | Testing Guide |<ul><li>[x] </li></ul>|https://github.com/SaaS3-Foundation/saas3-dao|  | 
+| 0d. | Docker |<ul><li>[x] </li></ul>|  We are not able to provide a Dockerfile | I was able to test it locally without docker |
+| oe. | Article/Tutorial |<ul><li>[x] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/main/Tutorial.md |  |
+| 1. | pallet-court |<ul><li>[x] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/tree/main/pallets/court |  |
+|  | Functions |<ul><li>[x] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L233 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L262 </br> https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L286|  |
 |  | Structs |  | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#LL68C1-L79C2 | |
 |  | Storage |  | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#LL115C2-L121C4 | |
 | | Events |  |https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/court/src/lib.rs#L160 |
-| 2. | pallet-treasury |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/main/pallets/treasury/src/lib.rs| Not fully evaluated yet |
+| 2. | pallet-treasury |<ul><li>[x] </li></ul>| https://github.com/SaaS3-Foundation/saas3-dao/blob/main/pallets/treasury/src/lib.rs|  |
 | | Storage |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L117 |
 | | Events |   | https://github.com/SaaS3-Foundation/saas3-dao/blob/ce2447ab1d54b2723f9ab72d8aabe5d65fff34d5/pallets/treasury/src/lib.rs#L169| |
-| 3. | UI & Frontend |<ul><li>[ ] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets| Not fully evaluated yet |
+| 3. | UI & Frontend |<ul><li>[x] </li></ul>| https://github.com/SaaS3-Foundation/SaaS3-DAO-Pallets|  |
+
+## Evaluation V6
+
+The licenses were added and now the tests are passing. As declared [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/872#issuecomment-1616628303), the `removeSue` is out of the scope of the grant. 
 
 ## Evaluation V5
 
