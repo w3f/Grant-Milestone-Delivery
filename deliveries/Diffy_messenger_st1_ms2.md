@@ -28,4 +28,4 @@ In this milestone our team has executed the following deliverables
 
 A short video showing delivered functionality:
 
-[![Preview](https://github.com/beoblock/Grant-Milestone-Delivery/assets/126072104/7fee3eb1-b81e-4ce2-ac20-1ffd6b04216a)](https://media.belsoft.rs/diffychat/diffychat.mp4)
+[![Preview](https://github-production-user-asset-6210df.s3.amazonaws.com/126072104/251771167-7fee3eb1-b81e-4ce2-ac20-1ffd6b04216a.png)](https://media.belsoft.rs/diffychat/diffychat.mp4)
