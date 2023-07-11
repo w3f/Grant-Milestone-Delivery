@@ -14,7 +14,7 @@
 | 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|[Link](https://github.com/hyperledger/solang/blob/main/src/bin/cli/test.rs)|Refer to Item 1 in General Notes regarding Testing Guide.|
 | 0d.  | Docker |<ul><li>[] </li></ul>|| No docker image provided. Refer to item 2 in General Notes. |
 | 0e. | Article |<ul><li>[x] </li></ul>|[Link](https://forum.polkadot.network/t/introducing-solang-improvements/3361)| Link provided.|
-| 1.  | Implement Solang projects |<ul><li>[ ] </li></ul>|[Link](https://github.com/hyperledger/solang/pull/1392)| See Item 4 in General Notes. |
+| 1.  | Implement Solang projects |<ul><li>[x] </li></ul>|[Link](https://github.com/hyperledger/solang/pull/1392)| See Item 4 in General Notes. |
 
 
 
