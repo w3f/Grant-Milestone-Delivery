@@ -40,5 +40,5 @@ We believe that by implementing additional optimizations and reducing the size o
 | 1. | New Garbling Scheme| [New Garbling library](https://github.com/Interstellar-Network/lib-garble-rs/tree/w3f-phase2-milestone1), [Demo tutorial](https://book.interstellar.gg/2M1_demo_tutorial.html) | Mobile offline demo  app with the new evaluator and a pre-computed circuit  generated with the new scheme |
 
 
-> Additional information:
- A docker is not needed here as we provide an offline demo, if you want to test the fps with a garble circuit generated from the garbling pallet, we can provide ypu with a docker and an omline app.
+**Additional information:**
+ A docker is not needed here as we provide an offline demo to show fps result, because we focus mostly on user experience. If you want to test the full pipeline for this milestone we can provide ypu with a docker and an omline app.
