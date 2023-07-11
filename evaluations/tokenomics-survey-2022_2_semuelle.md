@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tokenomics-survey-2022.md
 - **Milestone:** 2
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -18,6 +18,10 @@
 
 
 ## General Notes
+
+### Jul 11 2023
+
+All issues addressed in pull request comment and Overleaf project. 
 
 ### Jul 10 2023
 
