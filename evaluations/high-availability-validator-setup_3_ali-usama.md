@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [High Availability Validator Setup](https://github.com/w3f/Grants-Program/blob/master/applications/High_availability_validator_setup.md)
 - **Milestone:** 3
 - **Kusama Identity:** Eexv1mKLiCidz2gGh6vfowtXgSSc7mvD4xEb2ji998W4DPs
@@ -9,8 +9,8 @@
 | Number | Deliverable                     | Accepted               | Link                                                                                                                                                                                     | Evaluation Notes                                                          |
 |--------|---------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 0a.    | Licence                         | <ul><li>[x] </li></ul> | [Unlicense](https://github.com/bright/substrate-raft-setup/blob/milestone-3/LICENSE)                                                                                                     | Correct Licence                                                           |
-| 0b.    | Documentation                   | <ul><li>[x] </li></ul> | [Setup Docs](https://github.com/bright/substrate-raft-setup/blob/milestone-3/docs/rust-setup.md)<br/>[ReadMe](https://github.com/bright/substrate-raft-setup/blob/milestone-3/README.md) | Well-structured doc files and inline documentation is well-explained too. |
-| 0c.    | Testing Guide                   | <ul><li>[x] </li></ul> | `cargo test`                                                                                                                                                                             | `cargo test` fails with the following output.                             |
+| 0b.    | Documentation                   | <ul><li>[x] </li></ul> | [ReadMe](https://github.com/bright/substrate-raft-setup/blob/milestone-3/README.md) | Minimal inline docs and documentation |
+| 0c.    | Testing Guide                   | <ul><li>[x] </li></ul> | `cargo test`                                                                                                                                                                             | --                             |
 | 0d.    | Docker                          | <ul><li>[x] </li></ul> | [Running locally](https://github.com/bright/substrate-raft-setup/blob/milestone-3/README.md#running-locally-1)                                                                           | Builds and runs successfully.                                             |
 | 1.     | Run necessary Raft services     | <ul><li>[x] </li></ul> | [Running docker-compose](https://github.com/bright/substrate-raft-setup/blob/milestone-3/README.md#running-docker-compose-1)                                                             | Working as per the application                                            |
 | 2.     | Integrate Raft client into Node | <ul><li>[x] </li></ul> | [Running docker-compose](https://github.com/bright/substrate-raft-setup/blob/milestone-3/README.md#running-docker-compose-1)                                                             | Working as per the application                                            |
@@ -19,9 +19,16 @@
 
 ## General Notes
 
+### Jul 11, 2023
+
+Tests work as expected.
+
+### Jul 10, 2023
+
 The delivery is well-structured and well-documented, however, the only issue I found is tha failing `cargo test` command in the root directory of the terminal. I tried with updated and older rustc versions too, but both failed with the same error mentioned below.
 
 ### `cargo test` output
+
 ```
 CMake Warning:
     Manually-specified variables were not used by the project:
@@ -60,6 +67,7 @@ CMake Warning:
 ```
 
 ### `bash docker/build.sh` output
+
 ```
 Building bright/substrate-raft-setup:latest docker image, hang on!
 [+] Building 2676.3s (15/15) FINISHED                                                                                                                                                 
@@ -85,9 +93,9 @@ Building bright/substrate-raft-setup:latest docker image, hang on!
  => => writing image sha256:2e766c6e9b34a20c4f749762e5bbe9befda7ca6afa96f0ea05cf510448ab24ac                                                                                     0.0s
  => => naming to docker.io/bright/substrate-raft-setup:latest                                                                                                                    0.0s
 
-real	44m37.150s
-user	1m5.707s
-sys	0m29.217s
+real 44m37.150s
+user 1m5.707s
+sys 0m29.217s
 Image is ready
 bright/substrate-raft-setup   latest    2e766c6e9b34   1 second ago   202MB
 bright/substrate-raft-setup   v4.0.0    2e766c6e9b34   1 second ago   202MB
