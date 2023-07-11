@@ -42,5 +42,5 @@ We believe that by implementing additional optimizations and reducing the size o
 
 **Additional information:**
 
-As we prioritize the user experience and aim to showcase the FPS improvement compared to the previous milestone, there is no requirement for a Docker here. Instead, we offer an offline demo. However, if you'd like to test the full pipeline for this milestone, we can provide you with both a Docker and an online app
+As we prioritize the user experience and aim to showcase the FPS improvement compared to the previous milestone, there is no requirement for a Docker here. Instead, we provide  an offline demo app to simplify the evaluation. However, if you'd like to test the full pipeline for this milestone, we can provide you with both a Docker and an online app
 
