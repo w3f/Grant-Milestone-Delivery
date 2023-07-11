@@ -33,7 +33,8 @@ We believe that by implementing additional optimizations and reducing the size o
 | -----: | ----------- | -----------|------------ |
 | 0a. | Licence  |  APACHE 2.0, MIT | |
 | 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/2M1.html#code-documentation  ) |   |
-| 0c. | Testing Guide | [testing guide]( https://book.interstellar.gg/2M1_demo_tutorial.html) | |
+| 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/2M1.html) | |
+| 0d. | Docker | | A docker is not needed here as we provide an offline demo  |
 | 1. | New Garbling Scheme| [New Garbling library](https://github.com/Interstellar-Network/lib-garble-rs/tree/w3f-phase2-milestone1), [Demo tutorial](https://book.interstellar.gg/2M1_demo_tutorial.html) | Mobile offline demo  app with the new evaluator and a pre-computed circuit  generated with the new scheme |
 
 
