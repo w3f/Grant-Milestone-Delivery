@@ -41,4 +41,6 @@ We believe that by implementing additional optimizations and reducing the size o
 
 
 **Additional information:**
- A docker is not needed here as we provide an offline demo to show fps result, because we focus mostly on user experience. If you want to test the full pipeline for this milestone we can provide ypu with a docker and an omline app.
+
+As we prioritize the user experience and aim to showcase the FPS improvement compared to the previous milestone, there is no requirement for a Docker here. Instead, we offer an offline demo. However, if you'd like to test the full pipeline for this milestone, we can provide you with both a Docker and an online app
+
