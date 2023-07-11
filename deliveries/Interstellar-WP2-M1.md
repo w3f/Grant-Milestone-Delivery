@@ -18,10 +18,9 @@ While it is not strictly necessary to hide the transaction message from a securi
 
 To address this concern, in the M5 milestone, we incorporated the transaction message within the circuit itself to prevent unauthorized modifications. However, including the message in the circuit significantly increased the number of gates that need to be evaluated, resulting in a performance of only 1 fps with Fancy Garble scheme. To compare with M3, our circuit consisted of approximatively  80,000 gates, while the updated circuit with the included message now contains 314,970 gates.
 
-So, we have develloped a new garbling scheme implementation, from scratch, based on the following whitepapers: [A New Framework for Garbled Circuits](https://www.esat.kuleuven.be/cosic/publications/article-3351.pdf) and [A New Approach to Garbled Circuits](https://eprint.iacr.org/2021/739.pdf). This new scheme proven secure against PPT adversary, achieves a 50x performance improvement compared to the previous method i.e Fancy Garble, while still incorporating the transaction message within the circuit. Our optimizations, including parallelization, free gates, and especially tight memory managment that maximize usage of the L3 cache, contribute to this significant boost in performance.
+So, we have develloped a new garbling scheme implementation, from scratch, based on the following whitepapers: [A New Framework for Garbled Circuits](https://www.esat.kuleuven.be/cosic/publications/article-3351.pdf) and [A New Approach to Garbled Circuits](https://eprint.iacr.org/2021/739.pdf). This new scheme proven secure against PPT adversary, achieves a major performance improvement compared to the previous method i.e Fancy Garble, while still incorporating the transaction message within the circuit. Our optimizations, including parallelization, free gates, and especially tight memory managment, contribute to this significant boost in performance.
 
 We believe that by implementing additional optimizations and reducing the size of the circuit, we can stiil increase performance without sacrificing the desired high resolution and security. One approach to achieve this is to include only a portion (half or less) of the transaction message pixels in the circuit. This modification effectively prevents attackers from modifying the message, as modifying only a part of it would be futile. It is likely that we will incorporate this change in the next milestone related to our circuit design modification/optimization. This can be done on top of specific modifications to reduce cognitive load in order to achieve snoother user experience. 
-
 
 
 
@@ -35,5 +34,6 @@ We believe that by implementing additional optimizations and reducing the size o
 | 0a. | Licence  |  APACHE 2.0, MIT | |
 | 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/2M1.html#code-documentation  ) |   |
 | 0c. | Testing Guide | [testing guide]( https://book.interstellar.gg/2M1_demo_tutorial.html) | |
-| 0d. | Dockers | [Docker compose demo]() | [How to launch docker compose demo]( https://book.interstellar.gg/2M1_demo_tutorial.html)   |
-| 1. | New Garbling Scheme|link   | Test
+| 1. | New Garbling Scheme| [New Garbling library](https://github.com/Interstellar-Network/lib-garble-rs/tree/w3f-phase2-milestone1), [Demo tutorial](https://book.interstellar.gg/2M1_demo_tutorial.html) | Mobile offline demo  app with the new evaluator and a pre-computed circuit  generated with the new scheme |
+
+
