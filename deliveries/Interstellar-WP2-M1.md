@@ -2,7 +2,9 @@
 
 
 
-**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).**  
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md).**  
+
+
 
 > As W3F does not anymore offer payments in ETH, we switched to payment in USD in the submitted invoice
 
@@ -33,8 +35,8 @@ We believe that by implementing additional optimizations and reducing the size o
 | -----: | ----------- | -----------|------------ |
 | 0a. | Licence  |  APACHE 2.0, MIT | |
 | 0b. | Documentation  |  [code documentation](https://book.interstellar.gg/2M1.html#code-documentation  ) |   |
-| 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/2M1.html) | |
-| 0d. | Docker | | A docker is not needed here as we provide an offline demo  |
+| 0c. | Testing Guide | [Testing Guide](https://book.interstellar.gg/2M1.html#testing-guide) | |
+| 0d. | Docker | | A docker is not needed here as we provide an offline demo, if you want to test the fps with a garble circuit generated from the garbling pallet, we can provide ypu with a docker and an omline app|
 | 1. | New Garbling Scheme| [New Garbling library](https://github.com/Interstellar-Network/lib-garble-rs/tree/w3f-phase2-milestone1), [Demo tutorial](https://book.interstellar.gg/2M1_demo_tutorial.html) | Mobile offline demo  app with the new evaluator and a pre-computed circuit  generated with the new scheme |
 
 
