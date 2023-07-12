@@ -8,7 +8,7 @@
 
 > As W3F does not anymore offer payments in ETH, we switched to payment in USD in the submitted invoice
 
-* **Application Document:** https://github.com/Interstellar-Network/Grants-Program/blob/master/applications/Interstellar-network2.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Interstellar-network2.md
 
 * **Milestone Number:**  1
 
