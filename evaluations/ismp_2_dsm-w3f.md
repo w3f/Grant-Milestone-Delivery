@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ismp.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,17 +9,122 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE](https://github.com/polytope-labs/substrate-ismp/blob/main/LICENSE)| | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/README.md](https://github.com/polytope-labs/substrate-ismp/blob/main/README.md)|  |
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs)| Need a manual testing guide |
-| 0d. | Docker |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp#run-test-in-docker](https://github.com/polytope-labs/substrate-ismp#run-test-in-docker)| Not fully evaluated yet |
-| 0e. | Article|<ul><li>[ ] </li></ul>| TBA | Not a deliverable for this milestone |
-| 1. | pallet-ismp |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp](https://github.com/polytope-labs/substrate-ismp)| Not fully evaluated yet |
-| 1a. | Host |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48)| Not fully evaluated yet |
-| 1b. | Router |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48)| Not fully evaluated yet |
-| 1c. | `ParachainConsensusClient` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/parachain/src/consensus.rs#L115](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/parachain/src/consensus.rs#L115)| Not fully evaluated yet |
-| 1d. | RPC |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs)| Not fully evaluated yet |
-| 1e. | Runtime-APIs |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs)| Not fully evaluated yet |
-| 1f. | Bechmarks |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)| Not fully evaluated yet |
+| 0b.  | Documentation |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/README.md](https://github.com/polytope-labs/substrate-ismp/blob/main/README.md)|  |
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/tests.rs)|  |
+| 0d. | Docker |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp#run-test-in-docker](https://github.com/polytope-labs/substrate-ismp#run-test-in-docker)|  |
+| 0e. | Article|<ul><li>[x] </li></ul>| TBA | Shared and evaluated in private |
+| 1. | pallet-ismp |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp](https://github.com/polytope-labs/substrate-ismp)|  |
+| 1a. | Host |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/host.rs#L48)|  |
+| 1b. | Router |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/pallet-ismp/src/dispatcher.rs#L48)|  |
+| 1c. | `ParachainConsensusClient` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/parachain/src/consensus.rs#L115](https://github.com/polytope-labs/substrate-ismp/blob/88c262e3d10c6d74ce0ae29bc2d50b000ab0f7be/parachain/src/consensus.rs#L115)|  |
+| 1d. | RPC |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/rpc/src/lib.rs)|  |
+| 1e. | Runtime-APIs |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/runtime-api/src/lib.rs)|  |
+| 1f. | Bechmarks |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs](https://github.com/polytope-labs/substrate-ismp/blob/main/pallet-ismp/src/benchmarking.rs)|  |
+
+## Evaluation V5
+
+### Article
+
+It was shared in private. 
+
+### Test
+
+I set up the parachains and relay chain with the polkadot-launch and tried to run the tests with `RUSTFLAGS="-C link-args=-Wl,--allow-multiple-definition" cargo test`, it ignored two tests, and two tests passed.
+
+```
+running 1 test
+test config::tests::serialize ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+running 2 tests
+test test_messaging_relay ... ignored
+[2023-07-11T12:27:52Z INFO  tesseract] 🛰 Starting messaging relay
+[2023-07-11T12:28:18Z INFO  tesseract] Events from KUSAMA-2000 [Request { dest_chain: Kusama(2001), source_chain: Kusama(2000), request_nonce: 2 }]
+[2023-07-11T12:28:18Z INFO  tesseract] 🛰Submitting ismp messages from KUSAMA-2000 to KUSAMA-2001
+test test_parachain_parachain_messaging_relay has been running for over 60 seconds
+[2023-07-11T12:29:18Z INFO  tesseract] Events from KUSAMA-2001 [Request { dest_chain: Kusama(2000), source_chain: Kusama(2001), request_nonce: 1 }]
+[2023-07-11T12:29:18Z INFO  tesseract] Latest update StateMachineUpdated { state_machine_id: StateMachineId { state_id: Kusama(2001), consensus_client: [80, 65, 82, 65] }, latest_height: 158 }
+[2023-07-11T12:29:18Z INFO  tesseract] 🛰Submitting ismp messages from KUSAMA-2001 to KUSAMA-2000
+[2023-07-11T12:30:06Z INFO  tesseract] Events from KUSAMA-2000 [Request { dest_chain: Kusama(2001), source_chain: Kusama(2000), request_nonce: 3 }]
+[2023-07-11T12:30:06Z INFO  tesseract] 🛰Submitting GET response messages to KUSAMA-2000
+test test_parachain_parachain_messaging_relay ... ok
+
+test result: ok. 1 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 146.41s
+
+     Running unittests src/lib.rs (target/debug/deps/tesseract_messaging-c326ab0f1e5ce648)
+running 1 test
+test parachain/src/codegen/relay_chain.rs - codegen::relay_chain::api::transaction_payment::constants::ConstantsApi::operational_fee_multiplier (line 5282) ... ignored
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+## Evaluation V4
+
+### Test
+
+To configure the system, I ran the polkadot-lauch, after that, I ran the docker provided. I was able to use the ismpDemo pallet to transfer some balance from Parachain 2001 to 2000 and request the timestamp. The docker registered these actions in the log.
+
+I also tried, without success, to run the tests from tesserac inside the docker container, using the tesserac-blake2b and the tesserac-main.
+
+Using `docker exec -it container_id /bin/bash` and running the tests:
+```
+= note: ld: error: duplicate symbol: memory32_grow
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory32_grow) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x0) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: table_copy
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(table_copy) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x20) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+		  .
+		  .
+		  .
+          ld: error: duplicate symbol: externref_global_set
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(externref_global_set) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x220) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: memory_atomic_notify
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory_atomic_notify) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x240) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: duplicate symbol: memory_atomic_wait32
+          >>> defined at wasmtime_runtime.f727c6301590d743-cgu.12
+          >>>            wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.f727c6301590d743-cgu.12.rcgu.o:(memory_atomic_wait32) in archive /builds/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib
+          >>> defined at wasmtime_runtime.cbb1d63ff2563d91-cgu.3
+          >>>            wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.cbb1d63ff2563d91-cgu.3.rcgu.o:(.text+0x260) in archive /builds/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib
+          
+          ld: error: too many errors emitted, stopping now (use -error-limit=0 to see all errors)
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `tesseract-integration-tests` (lib test) due to previous error
+```
+
+Running the test in tesseract-main and tesseract-blake2b:
+```
+		.
+		.
+		.
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.4.rcgu.o): in function `out_of_gas':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.4:(.text+0x2a0): multiple definition of `out_of_gas'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.15.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.15:(.text+0x2a0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.4.rcgu.o): in function `new_epoch':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.4:(.text+0x2c0): multiple definition of `new_epoch'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.15.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.15:(.text+0x2c0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.7.rcgu.o): in function `wasm_to_host_trampoline':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.7:(.text+0x0): multiple definition of `wasm_to_host_trampoline'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.3.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.3:(.text+0x0): first defined here
+          /usr/bin/ld: /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-02e91c626dd0510d.rlib(wasmtime_runtime-02e91c626dd0510d.wasmtime_runtime.ad68ba448d2d484b-cgu.7.rcgu.o): in function `host_to_wasm_trampoline':
+          wasmtime_runtime.ad68ba448d2d484b-cgu.7:(.text+0x20): multiple definition of `host_to_wasm_trampoline'; /home/user/Documents/ismp/tesseract-main/target/debug/deps/libwasmtime_runtime-2ecb720b7671101e.rlib(wasmtime_runtime-2ecb720b7671101e.wasmtime_runtime.782be41ea348b988-cgu.3.rcgu.o):wasmtime_runtime.782be41ea348b988-cgu.3:(.text+0x20): first defined here
+          collect2: error: ld returned 1 exit status
+
+error: could not compile `tesseract-integration-tests` (lib test) due to previous error
+```
 
 ## Evaluation V3
 
