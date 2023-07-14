@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_developer_experience_improvements.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,10 +10,20 @@
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | https://github.com/hyperledger/solang/blob/main/LICENSE | Apache-2.0 |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | https://solang.readthedocs.io/en/latest/running.html#compiler-usage https://solang.readthedocs.io/en/latest/running.html#starting-a-new-project| |
-| 0c. | Testing | <ul><li>[ ] </li></ul> | https://github.com/hyperledger/solang/blob/main/src/bin/cli/test.rs https://github.com/hyperledger/solang/blob/main/tests/cli.rs| Not fully evaluated yet |
+| 0c. | Testing | <ul><li>[x] </li></ul> | https://github.com/hyperledger/solang/blob/main/src/bin/cli/test.rs https://github.com/hyperledger/solang/blob/main/tests/cli.rs|  |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | There will be no independent DockerFiler for this milestone, because Solang has its own DockerFile, which can be used to test the mentioned functionalities.|
 |     0e. | Article | <ul><li>[x] </li></ul> | https://forum.polkadot.network/t/introducing-solang-improvements/3361 |
-|      1. | Implement [Solang projects](https://github.com/hyperledger/solang/milestone/6) | <ul><li>[ ] </li></ul> | https://github.com/hyperledger/solang/pull/1316 https://github.com/hyperledger/solang/pull/1347 https://github.com/hyperledger/solang/pull/1392 | Not fully evaluated yet |
+|      1. | Implement [Solang projects](https://github.com/hyperledger/solang/milestone/6) | <ul><li>[x] </li></ul> | https://github.com/hyperledger/solang/pull/1316 https://github.com/hyperledger/solang/pull/1347 https://github.com/hyperledger/solang/pull/1392 |  |
+
+## Evaluation V2
+
+### Configuration file
+
+The PR fixed the `verbose` flag issue in the `solang.toml` file. 
+
+## Testing
+
+All tests are passing during the `cargo test` execution. Testing is ok.
 
 ## Evaluation V1
 
