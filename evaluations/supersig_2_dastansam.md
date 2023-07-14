@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [Application](https://github.com/w3f/Grants-Program/blob/master/applications/supersig_fellowship.md)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
@@ -19,7 +19,7 @@
 | 2. | Substrate Chain | https://github.com/decentration/substrate-supersig-template/tree/v0.9.37-fix-unbounded | Node compiles and runs. However, e2e workflow tests are not passing when connected to the local node. | 
 | 3. | Polkadot JS Apps UI Fork | https://github.com/decentration/apps/tree/main-fellowship-1 | Explorer app is forked and deployed at https://apps.decentration.org |
 
-## General Notes
+## Evaluation v1
 
 In general, it's well documented, easy to follow and UI looks smooth. One minor issue is the invalid link in the documentation, but the valid one is provided below, so it's not a big deal. The only thing to address is the failing e2e workflow tests when connected to the local node. It fails with the following error:
 ```bash 
@@ -48,3 +48,6 @@ I suspect this might be because I didn't add chain definitions to the `apps`, bu
 
 <img width="1692" alt="Local chain tests" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/c39c1020-bea1-401a-801c-6c13e0472763">
 
+## Evaluation v2
+
+Running `cargo update` before compiling the node fixes failing tests on a local chain.
