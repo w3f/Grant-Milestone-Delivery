@@ -17,6 +17,8 @@
 
 # General Notes
 
+In general the wallet has a very MetaMask like feel and is easy to use. I'm unable to test out XCM functionality due to not being able to transfer between testnets (Rococo, Westend). Would be nice if this could be implemented.
+
 ## Tests
 ```js
  ✓ src/accounts/AccountManager.test.ts (20)
