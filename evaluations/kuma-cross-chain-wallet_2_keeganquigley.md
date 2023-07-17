@@ -2,7 +2,7 @@
 
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cross-chain-wallet.md
-- **Milestone:** 1
+- **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
