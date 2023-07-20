@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [Application](https://github.com/w3f/Grants-Program/blob/master/applications/Diffy_chat.md)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
@@ -17,6 +17,7 @@
 | 1. | Contacts list feature | [See here](https://github.com/Belsoft-rs/diffychat-client/blob/master/src/components/messenger/contacts/contacts.js) | Feature is delivered completely, and is deployed [here](https://belsoft-rs.github.io/diffychat/). Users are able to add others into their contact list. | 
 | 2. | Web messenger dapp MVP | [See here](https://belsoft-rs.github.io/diffychat/index.html) | I wasn't able to complete instructions for testing the web messenger. I followed the tutorial video that was provided but it just hangs and lags for me. I attached some screenshots of the failure. | 
 
+# Evaluation v1
 ## General Notes
 
 Contact list feature works both locally and on production. However, main web messenger has different behaviour than expected. I followed the tutorial [video](https://media.belsoft.rs/diffychat/diffychat.mp4) that was provided but chat windows just hang and lag for me. I attached screenshot of the failure.
@@ -45,3 +46,11 @@ test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```
 
 </details>
+
+# Evaluation v2
+
+Issues were addressed and demo app works as demonstrated in the video. Screenshots below:
+
+<img width="1719" alt="Bob window" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/c15c3d15-d6f8-4744-b3e2-dd6411ba3aa7">
+
+<img width="1719" alt="Alice window" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/5e2b2385-3bd5-47eb-906d-de024d13c676">
