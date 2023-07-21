@@ -6,8 +6,8 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
-* **Milestone Number:** e.g. 1
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Knowledge-Oriented-Framework.md
+* **Milestone Number:** 3
 
 **Context** (optional)
 > An important aspect of creating an ontology is to engage with experts from application domains to gain their insights and perspectives. This engagement helps to ensure that the ontological framework is grounded in real-world experience and reflects the current understanding of representative personas in the applied fields. In this sense, a key step of the proposed approach is to present and discuss the ontology with the Polkadot team.
