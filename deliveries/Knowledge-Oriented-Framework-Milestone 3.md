@@ -20,10 +20,10 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License |[License](https://creativecommons.org/licenses/by-sa/4.0/)|Creative Commons BY-SA| 
-| 0b. | Documentation/Tutorial |[CollabSession](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/collabsession_reflections.pdf) [Findings](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/article.pdf)| Collaborative Session and Reflections Scientific and Technical Findings | 
-| 0c. | Methodology |[Mural](https://app.mural.co/t/mobrsys8246/m/mobrsys8246/1687177222066/0657ff82c759a1e630298bfe0bef6f839249ced7?sender=uaffae0538327c8810b801518) [Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdc6twdciTH9hF-dKiNsv5oCWoIZwbyqwuFqKNB5sPq_AA6ww/viewform?usp=pp_url) [Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/Article.pdf)| Methodology: see Section IV of the Article describing the Methodology |
+| 0b. | Documentation/Tutorial |[CollabSession](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/collabsession_reflections.pdf) [Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/article.pdf)| Collaborative Session and Reflections Scientific and Technical Findings | 
+| 0c. | Methodology |[Mural](https://app.mural.co/t/mobrsys8246/m/mobrsys8246/1687177222066/0657ff82c759a1e630298bfe0bef6f839249ced7?sender=uaffae0538327c8810b801518) [Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdc6twdciTH9hF-dKiNsv5oCWoIZwbyqwuFqKNB5sPq_AA6ww/viewform?usp=pp_url) [Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/article.pdf)| Methodology: see Section IV of the Article describing the Methodology |
 | 0d. | Infrastructure |[TR](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/infrastructure.pdf)|Technical Report presenting the infrastructure requirements|
-| 0e. | Article |[Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/Article.pdf)|Full article detailing scientific and technical findings achieved in the project| 
+| 0e. | Article |[Article](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/article.pdf)|Full article detailing scientific and technical findings achieved in the project| 
 | 1. | Presentation Deck |[Deck](https://github.com/mobr-ai/POnto/raw/main/deliverables/milestone3/collabsession_reflections.pdf)|Slide deck with reflections over the discussed content and action items|
 
 **Additional Information**
