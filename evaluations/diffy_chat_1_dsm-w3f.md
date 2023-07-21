@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/blob/master/applications/Diffy_chat.md 
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -8,15 +8,74 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.| License | <ul><li>[ ] </li></ul>| [LICENSE](https://github.com/Belsoft-rs/diffychat-pallet/blob/main/LICENSE) | DOTRTC Library license is missing |
-| 0b.| Documentation |<ul><li>[ ] </li></ul>| [Readme.md](https://github.com/Belsoft-rs/diffychat-pallet#readme) | Not fully evaluated yet.  |
-| 0c.| Testing Guide |<ul><li>[ ] </li></ul>| [DOTRTC usage](https://github.com/Belsoft-rs/diffychat-dotrtc#usage); [Substrate pallet](https://github.com/Belsoft-rs/diffychat-pallet#getting-started) | Need instructions how to run unit tests of DOTRTC. |
+| 0a.| License | <ul><li>[x] </li></ul>| [LICENSE](https://github.com/Belsoft-rs/diffychat-pallet/blob/main/LICENSE) |  |
+| 0b.| Documentation |<ul><li>[x] </li></ul>| [Readme.md](https://github.com/Belsoft-rs/diffychat-pallet#readme) |   |
+| 0c.| Testing Guide |<ul><li>[x] </li></ul>| [DOTRTC usage](https://github.com/Belsoft-rs/diffychat-dotrtc#usage); [Substrate pallet](https://github.com/Belsoft-rs/diffychat-pallet#getting-started) |  |
 | 1.| Diffy chat pallet |<ul><li>[x] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-pallet) |   | 
-| 2.| DOTRTC library |<ul><li>[ ] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-dotrtc) |  Not fully evaluated yet. | 
-| 3.| HTML test page |<ul><li>[ ] </li></ul>| [See here](https://belsoft-rs.github.io/diffychat/index.html) | Only works in Chrome | 
+| 2.| DOTRTC library |<ul><li>[x] </li></ul>| [See here](https://github.com/Belsoft-rs/diffychat-dotrtc) |   | 
+| 3.| HTML test page |<ul><li>[x] </li></ul>| [See here](https://belsoft-rs.github.io/diffychat/index.html) | | 
+
+## Evaluation V3
+
+### License and Documentation
+
+DOTRTC Library now has a License. The documentation has instructions to run the unit test in the DOTRTC Library but doesn't mention `cargo test` in the Diffy Chat Pallet. Please update the documentation. 
+
+### Manual Testing
+
+I tested again and the application now runs fine in Firefox.
+
+### Unit Test
+
+I ran `npm test` and got an error. I tested the application and it's working fine. Please fix this error.
+
+```
+user@localhost:~/Documents/diffychat/diffychat-dotrtc$ npm test
+
+> test
+> jest
+
+ FAIL  __tests__/tests.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /home/user/Documents/diffychat/diffychat-dotrtc/__tests__/tests.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){import BinData from "../src/BinData.js";
+                                                                                      ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1495:14)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.204 s
+Ran all test suites.
+```
 
 ## Evaluation V2
-
 
 ### License and Documentation
 

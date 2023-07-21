@@ -1,6 +1,6 @@
-# Evaluation
+ Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/project_aurras_mvp_phase_2.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,18 +9,22 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/master/LICENSE | |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#usage <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#usage | Not fully evaluated yet |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#test <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#test | Not fully evaluated yet |
-| 1a. | Workflow Composer: Rust OpenWhisk Client Library | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust | Not fully evaluated yet |
-| 1b. | Workflow Composer: Composer | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/composer | Not fully evaluated yet |
-| 1c. | Workflow Composer: Pipe | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 | Not fully evaluated yet |
-| 1d. | Workflow Composer: structured YAML file | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/examples/STRUCTURED_YAML.yaml | Not fully evaluated yet |
-| 1e. | Workflow Composer: Concat Operator | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L362 | Not fully evaluated yet |
-| 1f. | Workflow Composer: Map Operator | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L538 | Not fully evaluated yet |
-| 2.  | Predefined boiler plate | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/boilerplate | Not fully evaluated yet |
-| 3a. | Flow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/flow.py | Not fully evaluated yet |
-| 3b. | Task Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py | Not fully evaluated yet |
-| 3c. | Workflow Provider | <ul><li>[ ] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py | Not fully evaluated yet |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#usage <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#usage |  |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust#test <br/> https://github.com/HugoByte/aurras/tree/next/workflow/composer#test |  |
+| 1a. | Workflow Composer: Rust OpenWhisk Client Library | <ul><li>[x] </li></ul>| https://github.com/HugoByte/openwhisk-client-rust |  |
+| 1b. | Workflow Composer: Composer | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/composer |  |
+| 1c. | Workflow Composer: Pipe | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/workflow_macro/src/lib.rs#L85 |  |
+| 1d. | Workflow Composer: structured YAML file | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/examples/STRUCTURED_YAML.yaml |  |
+| 1e. | Workflow Composer: Concat Operator | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L362 |  |
+| 1f. | Workflow Composer: Map Operator | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/functions.py#L538 |  |
+| 2.  | Predefined boiler plate | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/tree/next/workflow/boilerplate |  |
+| 3a. | Flow Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/flow.py |  |
+| 3b. | Task Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/task.py |  |
+| 3c. | Workflow Provider | <ul><li>[x] </li></ul>| https://github.com/HugoByte/aurras/blob/next/workflow/providers/hooks/workflow.py |  |
+
+## Evaluation V6
+
+Thanks for providing the video tutorial. I was able to check the push notification this time, as in the video, and the application works fine.
 
 ## Evaluation V5
 

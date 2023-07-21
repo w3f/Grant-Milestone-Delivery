@@ -14,9 +14,9 @@
 
 ## :mailbox: Milestone Delivery Process
 
-The milestone delivery process is part of the [W3F Grants Program](https://github.com/w3f/Grants-Program). You can find the application process [here](https://github.com/w3f/Grants-Program/blob/master/README.md#pencil-process).  
+The milestone delivery process is part of the [W3F Grants Program](https://github.com/w3f/Grants-Program). You can find the application process [here](https://grants.web3.foundation/docs/Process/how-to-apply).  
 
-:warning: Before you submit a milestone, make sure it complies with our [Guidelines for Milestone Deliverables](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).
+:warning: Before you submit a milestone, make sure it complies with our [Guidelines for Milestone Deliverables](https://grants.web3.foundation/docs/Support%20Docs/milestone-deliverables-guidelines).
 
 1. **Milestone Delivery:**
    1. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository with the **same GitHub account** that you used to submit the application (ignore if you applied privately).
@@ -26,13 +26,13 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    5. Fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89).
    6. Create a pull request and fill out the comment template.
 2. **Milestone Review:**
-   1. [Evaluators](https://github.com/w3f/Grants-Program#team) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
+   1. [Evaluators](https://grants.web3.foundation/docs/Introduction/team#w3f-grants-committee) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
-   1. The [operations team](https://github.com/w3f/Grants-Program#team) receives a notification once the delivery is accepted. Payments are usually processed within 14 days.
+   1. The [operations team](https://grants.web3.foundation/docs/Introduction/team#w3f-operations-team) receives a notification once the delivery is accepted. Payments are usually processed within 14 days.
    2. Payment is made to the bank account or Bitcoin, Polkadot, Kusama or Ethereum address specified in the initial application. The exchange rate for BTC depends on the time of payment.
 
-Grant applications can be [amended](https://github.com/w3f/Grants-Program#changes-to-a-grant-after-approval) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
+Grant applications can be [amended](https://grants.web3.foundation/docs/Process/changes) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
 
 ## :ballot_box_with_check: External Evaluations
 
@@ -51,9 +51,9 @@ As part of the grant program, we allow everyone to participate in the evaluation
 2. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
 3. Name the file `project-name_milestone-number_your-github-username.md`.
 4. Fill out the template with the specifics of your evaluation. The higher the quality of your assessment and the level of detail, the higher the KSM recompense.
-5. Once you have completed the evaluation, create a pull request in the [W3F Grants Delivery](https://github.com/w3f/Grant-Milestone-Delivery) repo.
+5. Once you have completed the evaluation, create a pull request in this repository.
 6. Add a comment or review to the pull request that contains the evaluated milestone delivery. This comment should contain a quick summary of your finding as well as link to the milestone submission.
-7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://github.com/w3f/Grants-Program#team). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
+7. Milestone evaluations are double-checked by [W3F Grants Evaluators](https://grants.web3.foundation/docs/Introduction/team#w3f-grants-committee). Successful milestone evaluations are merged and the evaluator is rewarded with KSM.
 
 ## :bulb: Help
 
