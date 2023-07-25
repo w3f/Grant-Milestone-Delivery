@@ -499,3 +499,9 @@ test __pallet_staking_reward_curve_test_module::reward_curve_precision ... ok
 </details>
 
 ### Screenshots
+
+<img width="1719" alt="Success window" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/7698c2be-b745-408b-98d4-6ace2747ad9e">
+
+<img width="1719" alt="Failed call" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/85216dc3-324c-4e72-bfac-cbec1da0e36b">
+
+<img width="1719" alt="New subscription tier" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/2abc3b87-d385-4c32-ad64-32c7a0c9be14">
