@@ -4,7 +4,7 @@
 - **Application Document:** [Societal](https://github.com/sctllabs/Grants-Program/blob/master/applications/Societal.md)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
-- **Previously successfully merged evaluation:** 1
+- **Previously successfully merged evaluation:** [Milestone 1](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/societal-grant-3_1_ali-usama.md)
 
 ## Deliverables
 
