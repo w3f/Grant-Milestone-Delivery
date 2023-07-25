@@ -16,7 +16,7 @@
 | 0c. | Testing Guide |[GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m2/docs/TiersTestingGuide.md)| All unit tests are passing. Logs below. |
 | 0d. | Docker |[Docker Image](https://hub.docker.com/layers/societal/societal-node/grant3_m2-latest/images/sha256-c17b20e56572e3d68102fec147e6e1427e8b174c791584d98bec338480a7b0f2?context=explore)| New Docker image is deployed and launching with Docker works as promised. |
 | 1. | Substrate Module: DAO Subscription Pallet |[GitHub repo link](https://github.com/sctllabs/societal-node/tree/grant3_m2/pallets/dao-subscription) | New tiers upgrade for subscriptions has been added and it works as expected. New unit tests are added which maintain the good level of coverage. |
-| 2. | Client Modules | [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9944) | Detailed and extensive guide for testing new subscription tiers is provided. It walks through from scratch to everything. |
+| 2. | Client Modules | [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9944) | Detailed and extensive guide for testing new subscription tiers is provided. It covers everything and makes it really easy to test new features. |
 
 ## General Notes
 
