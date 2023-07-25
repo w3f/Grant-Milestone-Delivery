@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1715](https://github.com/w3f/Grants-Program/blob/master/applications/ocelloids_monitoring_sdk.md)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
@@ -20,10 +20,6 @@
 ## General Notes
 
 Overall, this is a solid project, well documented and scripts, and all promised features work as expected, and are well tested (including unit tests and intergration tests).
-
-## Issues
-
-When I run the `filter-extrinsics` test, only part of the log is shown and after waiting for a long time no extrinsics from the chain are returned, is there a bug or do I need to wait longer?
 
 ### Logs
 
@@ -134,8 +130,28 @@ Blocks: 100 (tx: 364, events: 4931)
 
 > Endpoints: [ 'wss://rpc.polkadot.io', 'wss://kusama-rpc.polkadot.io' ]
 > Using filter: {
-  "call.section": "timestamp"
+  "extrinsic.call.section": "timestamp"
 }
+{"network":0,"extrinsicId":"16555430-0","blockNumber":"16,555,430","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,016,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944488-0","blockNumber":"18,944,488","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,016,001"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555431-0","blockNumber":"16,555,431","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,022,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944489-0","blockNumber":"18,944,489","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,022,001"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555432-0","blockNumber":"16,555,432","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,028,001"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944490-0","blockNumber":"18,944,490","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,028,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555433-0","blockNumber":"16,555,433","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,034,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944491-0","blockNumber":"18,944,491","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,034,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555434-0","blockNumber":"16,555,434","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,040,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944492-0","blockNumber":"18,944,492","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,040,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944493-0","blockNumber":"18,944,493","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,046,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555435-0","blockNumber":"16,555,435","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,046,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944494-0","blockNumber":"18,944,494","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,052,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555436-0","blockNumber":"16,555,436","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,052,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555437-0","blockNumber":"16,555,437","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,058,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944495-0","blockNumber":"18,944,495","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,058,001"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555438-0","blockNumber":"16,555,438","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,064,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944496-0","blockNumber":"18,944,496","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,064,000"},"method":"set","section":"timestamp"}}
+{"network":0,"extrinsicId":"16555439-0","blockNumber":"16,555,439","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,070,000"},"method":"set","section":"timestamp"}}
+{"network":1,"extrinsicId":"18944497-0","blockNumber":"18,944,497","position":0,"isSigned":false,"method":{"args":{"now":"1,690,298,070,000"},"method":"set","section":"timestamp"}}
 
 ```
 
