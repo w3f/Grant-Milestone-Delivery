@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1750](https://github.com/w3f/Grants-Program/blob/master/applications/contracts-tool.md)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
