@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/community-health-check.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -12,3 +12,4 @@
 
 # General Notes
 
+The article is well written but contains no data specific to the Polkadot / Substrate ecosystem. For the next milestone it would be nice to see more data such as basic information about the Polkadot and Kusama network. For example, how many nodes are in the graph? How they were selected?
