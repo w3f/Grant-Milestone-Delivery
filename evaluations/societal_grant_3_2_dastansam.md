@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [Societal](https://github.com/sctllabs/Grants-Program/blob/master/applications/Societal.md)
 - **Milestone:** 2
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
@@ -15,18 +15,18 @@
 | 0b. | Documentation |[GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m2/README.md) | Extensive documentation is provided |
 | 0c. | Testing Guide |[GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m2/docs/TiersTestingGuide.md)| All unit tests are passing. Logs below. |
 | 0d. | Docker |[Docker Image](https://hub.docker.com/layers/societal/societal-node/grant3_m2-latest/images/sha256-c17b20e56572e3d68102fec147e6e1427e8b174c791584d98bec338480a7b0f2?context=explore)| New Docker image is deployed and launching with Docker works as promised. |
-| 1. | Substrate Module: DAO Subscription Pallet |[GitHub repo link](https://github.com/sctllabs/societal-node/tree/grant3_m2/pallets/dao-subscription) | New tiers upgrade for subscriptions has been added and it works as expected when testing it. New unit tests are added which maintain the good level of coverage. |
+| 1. | Substrate Module: DAO Subscription Pallet |[GitHub repo link](https://github.com/sctllabs/societal-node/tree/grant3_m2/pallets/dao-subscription) | New tiers upgrade for subscriptions has been added and it works as expected. New unit tests are added which maintain the good level of coverage. |
 | 2. | Client Modules | [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9944) | Detailed and extensive guide for testing new subscription tiers is provided. It walks through from scratch to everything. |
 
 ## General Notes
 
-Overall, very well-done work on this milestone. I haven't found any critical issues, testing guide was very helpful and I was able to confirm all the promised features/deliverables are working as expected.
+Overall, very well-done work on this milestone. I haven't found any critical issues, testing guide was very helpful and I was able to confirm all the promised features/deliverables are working as expected. I added some screenshots that demonstrate the new features below.
 
 ### Code suggestions
 
 - Extrinsics and types lack documentation.
 - Adding integration tests would be a nice addition. You could probably add some tests in the main `dao` pallet that make use of other pallets. For example, in the case of subscription tiers, you could replicate the failure and success scenarios you provided in the `./docs/TiersTestingGuide.md`.
-- Running `cargo clippy --features runtime-benchmarks,try-runtime` fails with the following error in the logs. Not critical, but it would be nice to fix it. It's probably about missing `runtime-benchmarks` or `try-runtime` feature in one of the dependencies. There is also several dependencies that are missing `std` features.
+- Running `cargo clippy --features runtime-benchmarks,try-runtime` fails with the following error in the logs. It's probably about missing `runtime-benchmarks` or `try-runtime` feature in one of the dependencies. There is also several dependencies that are missing `std` features. These issues are not critical at all, but it would be nice to fix it, I think.
 
 ### Logs
 
@@ -62,7 +62,7 @@ incomplete `std` of `sp-staking`
 
 <details>
 
-<summary>Clippy</summary>
+<summary>Clippy with `try-runtime` feature</summary>
 
 ```bash
 error[E0046]: not all trait items implemented, missing: `unchecked_into_checked_i_know_what_i_am_doing`
@@ -77,8 +77,85 @@ error[E0046]: not all trait items implemented, missing: `unchecked_into_checked_
      Compiling polkadot-runtime-parachains v0.9.41 (https://github.com/paritytech/polkadot?branch=release-v0.9.41#e203bfb3)
   For more information about this error, try `rustc --explain E0046`.
   error: could not compile `fp-self-contained` due to previous error
+
+
 ```
 
+</details>
+
+<details>
+
+<summary>Clippy with `runtime-benchmarks`</summary>
+
+```bash
+warning: useless conversion to the same type: `std::ops::Range<u32>`
+   --> pallets/dao-democracy/src/benchmarking.rs:334:37
+    |
+334 |           let addresses: BoundedVec<_, _> = (0..(T::MaxBlacklisted::get() - 1))
+    |  ___________________________________________^
+335 | |             .into_iter()
+    | |________________________^ help: consider removing `.into_iter()`: `(0..(T::MaxBlacklisted::get() - 1))`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion
+    = note: `#[warn(clippy::useless_conversion)]` on by default
+
+warning: the borrowed expression implements the required traits
+   --> pallets/dao-democracy/src/benchmarking.rs:417:49
+    |
+417 |         let (_, new_vetoers) = <Blacklist<T>>::get(0, &proposal_hash).ok_or("no blacklist")?;
+    |                                                       ^^^^^^^^^^^^^^ help: change this to: `proposal_hash`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+    = note: `#[warn(clippy::needless_borrow)]` on by default
+
+warning: called `unwrap` on `tier` after checking its variant with `is_some`
+  --> pallets/dao/src/benchmarking.rs:76:22
+   |
+75 |     if tier.is_some() {
+   |     ----------------- help: try: `if let Some(..) = tier`
+76 |         dao_json["tier"] = tier.unwrap();
+   |                            ^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_unwrap
+   = note: `#[warn(clippy::unnecessary_unwrap)]` on by default
+
+warning: the `Err`-variant returned from this function is very large
+  --> pallets/dao/src/benchmarking.rs:90:48
+   |
+90 | fn get_dao_origin<T: Config>(dao_id: DaoId) -> Result<T::RuntimeOrigin, BenchmarkError> {
+
+warning: this match could be written as a `let` statement
+    --> pallets/dao/src/lib.rs:1150:3
+     |
+1150 | /         let dao_account_id = match dao_origin {
+1151 | |             ref origin => &origin.clone().dao_account_id,
+1152 | |         };
+     | |__________^
+     |
+     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_single_binding
+     = note: `#[warn(clippy::match_single_binding)]` on by default
+help: consider using a `let` statement
+     |
+1150 ~         let ref origin = dao_origin;
+1151 +   let dao_account_id = &origin.clone().dao_account_id;
+     |
+
+error: using `clone` on a double-reference; this will copy the reference of type `&dao_primitives::DaoOrigin<AccountId>` instead of cloning the inner type
+    --> pallets/dao/src/lib.rs:1151:19
+     |
+1151 |             ref origin => &origin.clone().dao_account_id,
+     |                            ^^^^^^^^^^^^^^
+     |
+     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_double_ref
+     = note: `#[deny(clippy::clone_double_ref)]` on by default
+help: try dereferencing it
+     |
+1151 |             ref origin => &&(*origin).clone().dao_account_id,
+     |                            ~~~~~~~~~~~~~~~~~~
+help: or try being explicit if you are sure, that you want to clone a reference
+     |
+1151 |             ref origin => &<&dao_primitives::DaoOrigin<AccountId>>::clone(origin).dao_account_id,
+```
 </details>
 
 <details>
@@ -420,3 +497,5 @@ test __pallet_staking_reward_curve_test_module::reward_curve_precision ... ok
 ```
 
 </details>
+
+### Screenshots
