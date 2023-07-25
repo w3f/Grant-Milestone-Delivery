@@ -25,7 +25,7 @@ Overall, very well-done work on this milestone. I haven't found any critical iss
 ### Code suggestions
 
 - Extrinsics and types lack documentation.
-- Adding integration tests would be a nice addition. You could probably add some tests in the main `dao` pallet that make use of other pallets. For example, in the case of subscription tiers, you could replicate the failure and success scenarios you provided in the `./docs/TiersTestingGuide.md`.
+- Integration tests would be a nice addition. You could probably add some tests in the main `dao` pallet that make use of other pallets. For example, in the case of subscription tiers, you could replicate the failure and success scenarios you provided in the `./docs/TiersTestingGuide.md`.
 - Running `cargo clippy --features runtime-benchmarks,try-runtime` fails with the following error in the logs. It's probably about missing `runtime-benchmarks` or `try-runtime` feature in one of the dependencies. There is also several dependencies that are missing `std` features. These issues are not critical at all, but it would be nice to fix it, I think.
 
 ### Logs
