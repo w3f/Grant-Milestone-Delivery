@@ -16,12 +16,70 @@
 | 0c. | Testing Guide |[GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m2/docs/TiersTestingGuide.md)| All unit tests are passing. Logs below. |
 | 0d. | Docker |[Docker Image](https://hub.docker.com/layers/societal/societal-node/grant3_m2-latest/images/sha256-c17b20e56572e3d68102fec147e6e1427e8b174c791584d98bec338480a7b0f2?context=explore)| New Docker image is deployed and launching with Docker works as promised. |
 | 1. | Substrate Module: DAO Subscription Pallet |[GitHub repo link](https://github.com/sctllabs/societal-node/tree/grant3_m2/pallets/dao-subscription) | New tiers upgrade for subscriptions has been added and it works as expected when testing it. New unit tests are added which maintain the good level of coverage. |
-| 2. | Client Modules | [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9944) | You can use Polkadot-JS to interact with the DAO pallets and follow the [Testing Article](https://github.com/sctllabs/societal-node/blob/grant3_m2/docs/TiersTestingGuide.md) on how to work with the custom traits of the Subscription Pallet and DAO functionality.  |
+| 2. | Client Modules | [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9944) | Detailed and extensive guide for testing new subscription tiers is provided. It walks through from scratch to everything. |
 
 ## General Notes
 
+Overall, very well-done work on this milestone. I haven't found any critical issues, testing guide was very helpful and I was able to confirm all the promised features/deliverables are working as expected.
+
+### Code suggestions
+
+- Extrinsics and types lack documentation.
+- Adding integration tests would be a nice addition. You could probably add some tests in the main `dao` pallet that make use of other pallets. For example, in the case of subscription tiers, you could replicate the failure and success scenarios you provided in the `./docs/TiersTestingGuide.md`.
+- Running `cargo clippy --features runtime-benchmarks,try-runtime` fails with the following error in the logs. Not critical, but it would be nice to fix it. It's probably about missing `runtime-benchmarks` or `try-runtime` feature in one of the dependencies. There is also several dependencies that are missing `std` features.
 
 ### Logs
+
+<details>
+
+<summary>Missing std features</summary>
+
+```bash
+incomplete `std` of `cumulus-pallet-session-benchmarking`
+incomplete `std` of `dao-primitives`
+incomplete `std` of `eth-primitives`
+incomplete `std` of `frame-benchmarking`
+incomplete `std` of `frame-election-provider-support`
+incomplete `std` of `frame-try-runtime`
+incomplete `std` of `log`
+incomplete `std` of `num_enum`
+incomplete `std` of `pallet-asset-tx-payment`
+incomplete `std` of `pallet-dao-bounties-precompile`
+incomplete `std` of `pallet-dao-collective-precompile`
+incomplete `std` of `pallet-dao-democracy-precompile`
+incomplete `std` of `pallet-dao-eth-governance-precompile`
+incomplete `std` of `pallet-dao-membership-precompile`
+incomplete `std` of `pallet-dao-precompile`
+incomplete `std` of `pallet-dao-treasury-precompile`
+incomplete `std` of `pallet-evm-precompile-blake2`
+incomplete `std` of `pallet-evm-precompile-bn128`
+incomplete `std` of `pallet-evm-precompile-dispatch`
+incomplete `std` of `pallet-evm-precompileset-assets-erc20`
+incomplete `std` of `sp-staking`
+```
+
+</details>
+
+<details>
+
+<summary>Clippy</summary>
+
+```bash
+error[E0046]: not all trait items implemented, missing: `unchecked_into_checked_i_know_what_i_am_doing`
+    --> /Users/dastan@enjin.io/.cargo/git/checkouts/frontier-2366eb3ebc8df5d5/85cdbee/primitives/self-contained/src/unchecked_extrinsic.rs:80:1
+     |
+  80 | / impl<Address, AccountId, Call, Signature, Extra, Lookup> Checkable<Lookup>
+  81 | |     for UncheckedExtrinsic<Address, Call, Signature, Extra>
+     | |___________________________________________________________^ missing `unchecked_into_checked_i_know_what_i_am_doing` in implementation
+     |
+     = help: implement the missing item: `fn unchecked_into_checked_i_know_what_i_am_doing(self, _: &Context) -> Result<<Self as Checkable<Context>>::Checked, TransactionValidityError> { todo!() }`
+
+     Compiling polkadot-runtime-parachains v0.9.41 (https://github.com/paritytech/polkadot?branch=release-v0.9.41#e203bfb3)
+  For more information about this error, try `rustc --explain E0046`.
+  error: could not compile `fp-self-contained` due to previous error
+```
+
+</details>
 
 <details>
 
