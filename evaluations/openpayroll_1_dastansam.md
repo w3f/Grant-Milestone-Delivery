@@ -16,7 +16,7 @@
 | 0d.    | Docker                                                       | <div><div>Frontend: https://github.com/polkadrys/open-payroll-web/blob/main/Dockerfile</div><div> Smart Contract: https://github.com/polkadrys/openPayroll/blob/main/Dockerfile</div></div> | Docker image for frontend compiles and runs, but Docker image for contract fails to compile. Logs below. |
 | 1.| Design frontend interface (Figma) | https://www.figma.com/file/FkHVzkM1dcn8rHkKjegYW0/OpenPayroll?type=design&node-id=0%3A1&mode=design&t=hQcmM0GOdGQsvPji-1 | The figma file on Empathy, Design, UI, Wireframes, Wireframes Mobile and Landing is provided. |
 | 2. | Develop the interface based on the previous task result | https://github.com/polkadrys/open-payroll-web/tree/main | UI is delivered and is deployed. All expected deliverables are provided. |
-| 3. | Develop the payroll smart contract | https://github.com/polkadrys/openPayroll/tree/main | Smart contract is present, it's well documented and covers a huge scope. There are some issues with building the contract both with Docker and natively. Logs below. |
+| 3. | Develop the payroll smart contract | https://github.com/polkadrys/openPayroll/tree/main | Smart contract is present, it's well documented and covers a huge scope. There are some issues with building the contract with Docker. It compiles perfectly fine natively. Logs below. |
 | 4. | Integrate the UI with the contracts | https://github.com/polkadrys/open-payroll-web/tree/main | Same deliverable as #2 |
 | 5. | Quality Assurance | https://github.com/polkadrys/open-payroll-web/tree/main/e2e | It's a nice addition to have end-to-end tests, however I faced some difficulties running it. Screenshot below. |
 
