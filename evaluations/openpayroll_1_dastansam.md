@@ -26,15 +26,16 @@ In general, it's well documented, contains both unit and end-to-end tests and th
 
 ### End-to-end tests
 
-I didn't understand what is meant by:
+It's not clear what is meant by:
 
 > - Set up your wallet to provide a valid account. 
 
-Is simply having Polkadot.js with wallet connected to the frontend enough? Or do I have to fund the account or do something else?
+Is simply having Polkadot.js with wallet connected to the frontend enough? Or do we have to fund the account or do something else?
 
 ### Code suggestions
 
 - One issue I would suggest to resolve is the usage of unsafe methods in the smart contract. It's not a blocker for the milestone, but it's better to avoid them in the future. In the smart contract calls, many of them contain unsafe `unwrap()` method which can lead to runtime errors. It can be refactored to throw an error instead of panicking. For example, in the `claim_payment` method, instead of [`unwrap()`](https://github.com/polkadrys/openPayroll/blob/main/src/lib.rs#L392C50-L392C56), you can use `ok_or` method to return an error.
+- Move `Cargo.toml` from `contract/src` folder to root folder.
 
 ### Logs
 
@@ -191,3 +192,8 @@ error: could not compile `thiserror` (lib) due to previous error
 warning: build failed, waiting for other jobs to finish...
 error: could not compile `anyhow` (lib) due to 2 previous errors
 ```
+
+### Screenshots
+
+<img width="1719" alt="Failing end-to-end" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/6b1013b9-1697-4771-86f5-fc725ccb83ae">
+
