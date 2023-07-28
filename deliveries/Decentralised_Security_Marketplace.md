@@ -11,7 +11,7 @@ Following are the links to the repositories of the deliverables promised as per 
 **Deliverables**
 
 | Number | Deliverable | Link | Notes |
-| -----: | ----------- | ------------- |
+| -----: | ----------- | ----- | ------- |
 | **0a.** | License | Unlicense | Unlicensed |
 | **0b.** | Documentation | >[Escrow Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/escrow/Escrow%20Doc.pdf) >[Reward Token Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/reward_token/Reward%20Token.pdf) >[Node Services Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/AuditBazaarBackendArchitecture.docx) | The documentations are meant to explain the working of the application till this milestone. |
 | **0c.** | Testing and Testing Guide | - | The respective Test files can be found alongside the project repositories with guidelines in readme files. |
