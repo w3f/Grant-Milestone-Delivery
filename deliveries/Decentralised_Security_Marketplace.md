@@ -24,6 +24,7 @@ Following are the links to the repositories of the deliverables promised as per 
 | 6 | Node Services | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Backend) | The link leads to the repository of the front end of the application, the guidelines to operate it can be found in readme file. |
 
 **Additional Information**
+
 **1)** The code of the respective deliverables can be found in the 'Main' branch of each repo.
 
 **2)** All the functionality of **Audit Directory Contract** has been moved to the escrow contract itself for a more seemless and smooth working. This also cuts down redundant deployment costs.
