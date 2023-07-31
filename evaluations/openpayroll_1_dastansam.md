@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/openPayroll.md
 - **Milestone:** 1
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
@@ -19,6 +19,8 @@
 | 3. | Develop the payroll smart contract | https://github.com/polkadrys/openPayroll/tree/main | Smart contract is present, it's well documented and covers a huge scope. There are some issues with building the contract with Docker. It compiles perfectly fine natively. Logs below. |
 | 4. | Integrate the UI with the contracts | https://github.com/polkadrys/open-payroll-web/tree/main | Same deliverable as #2 |
 | 5. | Quality Assurance | https://github.com/polkadrys/open-payroll-web/tree/main/e2e | It's a nice addition to have end-to-end tests, however I faced some difficulties running it. Screenshot below. |
+
+# Evaluation v1
 
 ## General Notes
 
@@ -197,3 +199,66 @@ error: could not compile `anyhow` (lib) due to 2 previous errors
 
 <img width="1719" alt="Failing end-to-end" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/6b1013b9-1697-4771-86f5-fc725ccb83ae">
 
+# Evaluation v2
+
+All the outstanding issues have been resolved. The contract now compiles and I was able to run both integration and unit tests successfully. 
+
+### Logs
+
+<details>
+
+<summary>Unit tests</summary>
+
+```bash
+test open_payroll::tests::add_beneficiary_without_access ... ok
+test open_payroll::tests::add_beneficiary_with_no_multipliers ... ok
+test open_payroll::tests::check_deactivate_multiplier ... ok
+test open_payroll::tests::check_contract_balance ... ok
+test open_payroll::tests::add_beneficiary ... ok
+test open_payroll::tests::check_current_start_period_block ... ok
+test open_payroll::tests::check_list_beneficiaries ... ok
+test open_payroll::tests::check_max_beneficiaries_from_creation ... ok
+test open_payroll::tests::check_is_total_debts_is_zero_after_all_claims ... ok
+test open_payroll::tests::check_max_multipliers_from_creation ... ok
+test open_payroll::tests::check_max_multipliers ... ok
+test open_payroll::tests::check_transfer_ownership ... ok
+test open_payroll::tests::check_next_block_period ... ok
+test open_payroll::tests::check_total_balance_and_debts_on_init ... ok
+test open_payroll::tests::check_total_debt_with_unclaimed_for_next_period_advancing_a_period ... ok
+test open_payroll::tests::check_total_debt_with_unclaimed_for_next_period_on_init ... ok
+test open_payroll::tests::claim_more_payment ... ok
+test open_payroll::tests::check_total_debts_with_individual_debts ... ok
+test open_payroll::tests::claim_parcial_payment ... ok
+test open_payroll::tests::check_unclaimed_beneficiaries ... ok
+test open_payroll::tests::create_contract_with_beneficiaries_ok ... ok
+test open_payroll::tests::create_contract_ok ... ok
+test open_payroll::tests::create_contract_with_duplicated_beneficiaries ... ok
+test open_payroll::tests::create_contract_with_invalid_amount_of_multipliers ... ok
+test open_payroll::tests::claim_payment ... ok
+test open_payroll::tests::default_works ... ok
+test open_payroll::tests::remove_beneficiary_not_found ... ok
+test open_payroll::tests::remove_beneficiary ... ok
+test open_payroll::tests::remove_beneficiary_without_access ... ok
+test open_payroll::tests::failing_not_transfered_ownership ... ok
+test open_payroll::tests::pause_and_resume ... ok
+test open_payroll::tests::pause_and_resume_without_access ... ok
+test open_payroll::tests::update_base_payment ... ok
+test open_payroll::tests::check_max_beneficiaries ... ok
+test open_payroll::tests::update_base_payment_without_access ... ok
+test open_payroll::tests::update_base_payment_in_initial_block ... ok
+test open_payroll::tests::update_base_payment_error ... ok
+test open_payroll::tests::update_base_payment_invalid_base_payment ... ok
+test open_payroll::tests::update_base_payment_without_all_payments_updated ... ok
+test open_payroll::tests::update_base_payment_with_all_payments_claimed ... ok
+test open_payroll::tests::update_benefiaries_created_in_create_contract ... ok
+test open_payroll::tests::update_periodicity ... ok
+test open_payroll::tests::update_periodicity_invalid_periodicity ... ok
+test open_payroll::tests::update_periodicity_with_all_payments_updated ... ok
+test open_payroll::tests::update_periodicity_without_access ... ok
+test open_payroll::tests::update_periodicity_with_all_payments_claimed ... ok
+test open_payroll::tests::update_periodicity_without_all_payments_updated ... ok
+
+test result: ok. 47 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+```
+
+</details>
