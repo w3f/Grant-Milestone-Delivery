@@ -107,29 +107,25 @@ todo
 
 ```bash
 
-go: downloading github.com/centrifuge/go-substrate-rpc-client/v4 v4.1.0
-go: downloading github.com/vedhavyas/go-subkey v1.0.4
-go: downloading golang.org/x/crypto v0.9.0
-go: downloading github.com/ethereum/go-ethereum v1.10.20
-go: downloading github.com/decred/base58 v1.0.4
-go: downloading github.com/cristalhq/aconfig v0.18.4
-go: downloading github.com/cristalhq/aconfig/aconfigtoml v0.17.1
-go: downloading github.com/ChainSafe/go-schnorrkel v1.0.0
-go: downloading github.com/gtank/merlin v0.1.1
-go: downloading golang.org/x/sys v0.8.0
-go: downloading github.com/pierrec/xxHash v0.1.5
-go: downloading github.com/go-stack/stack v1.8.1
-go: downloading github.com/decred/dcrd/crypto/blake256 v1.0.0
-go: downloading github.com/BurntSushi/toml v1.1.0
-go: downloading github.com/deckarep/golang-set v1.8.0
-go: downloading github.com/gorilla/websocket v1.5.0
-go: downloading github.com/rs/cors v1.8.2
-go: downloading github.com/cosmos/go-bip39 v1.0.0
-go: downloading github.com/gtank/ristretto255 v0.1.2
-go: downloading github.com/mimoo/StrobeGo v0.0.0-20220103164710-9a04d6ca976b
-2023/07/30 02:10:08 Connecting to ws://localhost:9944...
+?   	substrate-faucet	[no test files]
+?   	substrate-faucet/internal/config	[no test files]
+?   	substrate-faucet/internal/domain/entity	[no test files]
+?   	substrate-faucet/internal/domain/service	[no test files]
+?   	substrate-faucet/internal/env/redis	[no test files]
+?   	substrate-faucet/internal/env/substrate	[no test files]
+?   	substrate-faucet/internal/handler/processor	[no test files]
+=== RUN   TestWrongAddress
+--- PASS: TestWrongAddress (0.00s)
+=== RUN   TestMakeATransfer
+    service_test.go:53: substrate tx sent, hash: 0x1234567890
+--- PASS: TestMakeATransfer (0.00s)
+=== RUN   TestService_Test
+--- PASS: TestService_Test (0.00s)
 PASS
-ok  	substrate-faucet/internal/env/substrate	0.162s
+ok  	substrate-faucet/internal/service/drip	0.010s
+?   	substrate-faucet/internal/service/substrate	[no test files]
+?   	substrate-faucet/internal/service/umi/discord	[no test files]
+?   	substrate-faucet/internal/service/umi/matrix	[no test files]
 
 
 ```
