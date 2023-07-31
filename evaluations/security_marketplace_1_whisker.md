@@ -42,9 +42,69 @@ todo
 
 <details>
 
-<summary> Unit tests </summary>
+<summary> Reward token contract Unit tests </summary>
 
 ```bash
+
+warning: function `random_acoount_id` is never used
+  --> lib.rs:83:8
+   |
+83 |     fn random_acoount_id() -> AccountId {
+   |        ^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: module `testCases` should have a snake case name
+  --> lib.rs:77:5
+   |
+77 | mod testCases {
+   |     ^^^^^^^^^ help: convert the identifier to snake case: `test_cases`
+   |
+   = note: `#[warn(non_snake_case)]` on by default
+
+warning: unused `std::result::Result` that must be used
+  --> lib.rs:94:9
+   |
+94 |         contract.mint(accounts.alice,1);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: this `Result` may be an `Err` variant, which should be handled
+   = note: `#[warn(unused_must_use)]` on by default
+
+warning: unused `std::result::Result` that must be used
+   --> lib.rs:107:9
+    |
+107 |         contract.mint(accounts.alice,1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: this `Result` may be an `Err` variant, which should be handled
+
+warning: unused `std::result::Result` that must be used
+   --> lib.rs:120:9
+    |
+120 |         contract.mint(accounts.alice,1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: this `Result` may be an `Err` variant, which should be handled
+
+warning: variable `Error1` should have a snake case name
+   --> lib.rs:134:13
+    |
+134 |         let Error1 = contract.mint(accounts.charlie, 1000);
+    |             ^^^^^^ help: convert the identifier to snake case: `error1`
+
+warning: `reward_token` (lib test) generated 6 warnings
+    Finished test [unoptimized + debuginfo] target(s) in 1m 39s
+     Running unittests lib.rs (target/debug/deps/reward_token-7de3b7d8c4071858)
+
+running 4 tests
+test testCases::test_case_4 ... ok
+test testCases::test_case_1 ... ok
+test testCases::test_case_3 ... ok
+test testCases::test_case_2 ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
 
 ```
 
