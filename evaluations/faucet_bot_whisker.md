@@ -158,7 +158,7 @@ sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBU
 
 </details>
 
-![discord faucet test and delay test](https://ibb.co/dDZH4Pn)
+![discord faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/4ea138c9-3d21-4c97-ba55-930c0c8c577a)
 
 #### Matrix faucet
 
@@ -178,7 +178,7 @@ sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBU
 
 </details>
 
-![matrix faucet test and delay test](https://ibb.co/ZxfLC34)
+![matrix faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/aca3bfe2-03fd-4c55-9ca2-31cae0bc6db1)
 
 <details>
 
@@ -196,4 +196,4 @@ sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBU
 
 </details>
 
-![matrix faucet test and delay test](https://ibb.co/5vtM9gk)
+![matrix faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/86b542ab-4329-4484-9ef9-fc1838df2c37)
