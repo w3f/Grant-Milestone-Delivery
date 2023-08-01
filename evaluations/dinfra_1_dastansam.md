@@ -89,3 +89,9 @@ Ran all test suites.
 </details>
 
 ### Screenshots
+
+<img width="1714" alt="Login" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/390ef86c-0b2a-47ef-9fcc-fe5205fcebe1">
+
+<img width="1714" alt="Dashboard" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/88a521ac-1426-4426-b92e-ebfe58bada8b">
+
+<img width="1714" alt="OGate API" src="https://github.com/dastansam/Grant-Milestone-Delivery/assets/88332432/80a2240c-886c-426d-9c3a-6cd3bd274b41">
