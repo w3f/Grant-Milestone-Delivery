@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1758](https://github.com/w3f/Grants-Program/pull/1758)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
@@ -23,9 +23,13 @@
 
 ## General Notes
 
-todo
+Overall, this is a solid project, well docker-compose scripts, and all promised features work as expected. 
 
-### Logs
+Currently only integration tests are available.
+
+Hope the documentation will be better in the future.
+
+## Logs
 
 <details>
 
@@ -135,3 +139,46 @@ ok  	substrate-faucet/internal/env/substrate	0.162s
 ```
 
 </details>
+
+### Faucet tests
+
+#### Discord faucet
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.037Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.038Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0xed2ecd42b2c2a795d0e61adcffa28ff2df78dc5d1d3334cded204d152c85dd64"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+```
+
+![discord faucet test and delay test](https://ibb.co/dDZH4Pn)
+
+#### Matrix faucet
+
+- Encryption
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.055Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.055Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.120Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0x71ac09e39edc8fcfcf6bbe7335c154efa601c577b102dba24d4c97782ca2a413"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.120Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
+```
+
+![matrix faucet test and delay test](https://ibb.co/ZxfLC34)
+
+- Non-encryption
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.193Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.193Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.254Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0x56c1dd5fbde22bb1620fa643b27a56171807e86a5a9c974ba3353490b8e41a0d"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.254Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
+```
+
+![matrix faucet test and delay test](https://ibb.co/5vtM9gk)
