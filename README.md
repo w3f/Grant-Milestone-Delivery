@@ -36,7 +36,7 @@ Grant applications can be [amended](https://grants.web3.foundation/docs/Process/
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address. *You can evaluate as many deliveries as you like.*
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address. *You can evaluate as many deliveries as you like, but only one at a time.*
 
 
 ### Requirements
@@ -47,7 +47,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 
 ### Process
 
-1. Let the [Grants Team](https://grants.web3.foundation/docs/Introduction/team#w3f-grants-evaluators) know that you are intending to work on an external evaluation, either by commenting on the milestone pull request in question, by submitting a draft PR with a reference to the milestone PR, by [email](mailto:grants@web3.foundation?subject=External%20Evaluation) or [Matrix](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation).
+1. Let the [Grants Team](https://grants.web3.foundation/docs/Introduction/team#w3f-grants-evaluators) know that you are intending to work on an external evaluation (no more than one at a time, please!), either by commenting on the milestone pull request in question, by submitting a draft PR with a reference to the milestone PR, by [email](mailto:grants@web3.foundation?subject=External%20Evaluation) or [Matrix](https://matrix.to/#/!XpynPDLusWUWfDpaqr:matrix.org?via=web3.foundation). 
 2. [Fork](https://github.com/w3f/Grant-Milestone-Delivery/fork) this repository.
 3. In the newly created fork, create a **copy** of the evaluation template ([`evaluations/evaluation-template.md`](evaluations/evaluation-template.md)).
 4. Name the file `project-name_milestone-number_your-github-username.md`.
