@@ -36,3 +36,35 @@ todo
 ```
 
 </details>
+
+<details>
+
+<summary> Benchmark tests </summary>
+
+```bash
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_etf-bb86bac3c815b1c1)
+
+running 5 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test benchmarking::benchmarks::benchmark_tests::test_benchmarks ... ok
+test tests::it_fails_to_update_generator_when_not_decodable ... ok
+test tests::it_sets_the_genesis_state ... ok
+test tests::it_allows_root_to_update_generator ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests pallet-etf
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+```
+
+</details>
+
+### Screenshot
+
+![monitor screenshot](https://ibb.co/VvkhgCK)
