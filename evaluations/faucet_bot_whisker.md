@@ -144,18 +144,27 @@ ok  	substrate-faucet/internal/env/substrate	0.162s
 
 #### Discord faucet
 
+<details>
+
+<summary> Discord faucet logs </summary>
+
 ```bash
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.037Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.038Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0xed2ecd42b2c2a795d0e61adcffa28ff2df78dc5d1d3334cded204d152c85dd64"}
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
 ```
+
+</details>
 
 ![discord faucet test and delay test](https://ibb.co/dDZH4Pn)
 
 #### Matrix faucet
 
-- Encryption
+<details>
+
+<summary> Encryption faucet logs </summary>
 
 ```bash
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.055Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
@@ -167,9 +176,13 @@ sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBU
 
 ```
 
+</details>
+
 ![matrix faucet test and delay test](https://ibb.co/ZxfLC34)
 
-- Non-encryption
+<details>
+
+<summary> Non-Encryption faucet logs </summary>
 
 ```bash
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.193Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
@@ -180,5 +193,7 @@ sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBU
 sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
 
 ```
+
+</details>
 
 ![matrix faucet test and delay test](https://ibb.co/5vtM9gk)
