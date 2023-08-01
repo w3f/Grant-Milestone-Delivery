@@ -25,6 +25,8 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 Summarizes the overall performance plus additional feedback/comments
 
+- [x] in general, it would be good if all the dialoges that contain a form would support the option to submit the form by pressing the *enter* key. To support that, you can work with html `<form>`s. => [issue](https://github.com/Zeeve-App/larch/issues/138) created
+
 ### Documentation feedback
 
 - [x] ~~It would be nice if there was a way to navigate the docs more easily. For example, you could add an *index.md* file to each directory and add links (and some useful content) to each of them.~~ => fixed
