@@ -31,19 +31,10 @@ todo
 1. There is no `cargo contract test` subcommand in smart contracts but your documentation mentions it.
 2. There is no unit test for Escrow contract.
 3. Backend integration test fail.
+4. Backend swagger test fail. (probably needs authorization?)
+5. Frontend docker build fail.
 
 ## Logs
-
-<details>
-
-<summary>Build image </summary>
-
-```bash
-
-
-```
-
-</details>
 
 ### Smart contracts
 
@@ -543,13 +534,72 @@ Jest did not exit one second after the test run has completed.
 
 </details>
 
+#### Screenshots
+
+![swagger register test](https://ibb.co/xmhXBbc)
+
 ### Frontend
 
 <details>
 
-<summary> Reward token contract Unit tests </summary>
+<summary> docker build </summary>
 
 ```bash
+
+[+] Building 65.1s (8/9)                                                                                                                                                                            docker:default
+ => [internal] load .dockerignore                                                                                                                                                                             0.1s
+ => => transferring context: 2B                                                                                                                                                                               0.0s
+ => [internal] load build definition from Dockerfile                                                                                                                                                          0.1s
+ => => transferring dockerfile: 139B                                                                                                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/node:16                                                                                                                                                    9.7s
+ => [1/5] FROM docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0                                                                                             54.2s
+ => => resolve docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0                                                                                              0.0s
+ => => sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0 776B / 776B                                                                                                                    0.0s
+ => => sha256:a21a68db680698eb1a863e229f81f70975f7ff6231e4d3ae755cf82f77bbac67 7.24kB / 7.24kB                                                                                                                0.0s
+ => => sha256:9918064ebccea7fc961fe71dad46105b217763b4b1b3a9dfa7bee2ab29d2039b 50.50MB / 50.50MB                                                                                                             40.3s
+ => => sha256:2345e1e5f82d8963240db3c8e8ccfd431d0962d14219e24bbcc756ef217bba48 17.58MB / 17.58MB                                                                                                              5.4s
+ => => sha256:947969e624beff93eed664f9f52a08712f3d1e12cadbdf929ff928f93d2c383c 51.87MB / 51.87MB                                                                                                             27.2s
+ => => sha256:83e822fa0a8094738dcaed855466cccae8d6599d55409e2befaa2040e27ead15 2.00kB / 2.00kB                                                                                                                0.0s
+ => => sha256:87da2254b9de06a71bc1828dec0a28f6a16af7cade75310533cf5cff9ac7e669 191.90MB / 191.90MB                                                                                                           48.3s
+ => => sha256:24d744d599278585b9ad9ab702beb416d3f6eac9c4dee355921d3aee6045e706 4.21kB / 4.21kB                                                                                                               27.6s
+ => => sha256:0ed2ac5774c00e61286b9bd72324a242b0352f6ed54157ad6ccf4969e41d2418 34.79MB / 34.79MB                                                                                                             41.3s
+ => => extracting sha256:9918064ebccea7fc961fe71dad46105b217763b4b1b3a9dfa7bee2ab29d2039b                                                                                                                     1.4s
+ => => sha256:c91e125a2c9469eb928e0a1507c0bbf008dd732affbe83742dc395c235ac8a08 2.27MB / 2.27MB                                                                                                               45.5s
+ => => sha256:73ea6c88f52c01224892776f5f08b4ff2c56f0459b203497fedf117ffb99748b 451B / 451B                                                                                                                   44.4s
+ => => extracting sha256:2345e1e5f82d8963240db3c8e8ccfd431d0962d14219e24bbcc756ef217bba48                                                                                                                     0.3s
+ => => extracting sha256:947969e624beff93eed664f9f52a08712f3d1e12cadbdf929ff928f93d2c383c                                                                                                                     1.5s
+ => => extracting sha256:87da2254b9de06a71bc1828dec0a28f6a16af7cade75310533cf5cff9ac7e669                                                                                                                     4.4s
+ => => extracting sha256:24d744d599278585b9ad9ab702beb416d3f6eac9c4dee355921d3aee6045e706                                                                                                                     0.0s
+ => => extracting sha256:0ed2ac5774c00e61286b9bd72324a242b0352f6ed54157ad6ccf4969e41d2418                                                                                                                     0.9s
+ => => extracting sha256:c91e125a2c9469eb928e0a1507c0bbf008dd732affbe83742dc395c235ac8a08                                                                                                                     0.0s
+ => => extracting sha256:73ea6c88f52c01224892776f5f08b4ff2c56f0459b203497fedf117ffb99748b                                                                                                                     0.0s
+ => [internal] load build context                                                                                                                                                                             0.3s
+ => => transferring context: 46.32MB                                                                                                                                                                          0.3s
+ => [2/5] WORKDIR /app                                                                                                                                                                                        0.3s
+ => [3/5] COPY ./package*.json ./                                                                                                                                                                             0.1s
+ => ERROR [4/5] RUN npm install                                                                                                                                                                               0.6s
+------
+ > [4/5] RUN npm install:
+0.599 npm ERR! code ENOENT
+0.599 npm ERR! syscall open
+0.599 npm ERR! path /app/package.json
+0.599 npm ERR! errno -2
+0.600 npm ERR! enoent ENOENT: no such file or directory, open '/app/package.json'
+0.600 npm ERR! enoent This is related to npm not being able to find a file.
+0.600 npm ERR! enoent 
+0.601 
+0.601 npm ERR! A complete log of this run can be found in:
+0.601 npm ERR!     /root/.npm/_logs/2023-08-01T00_35_30_634Z-debug-0.log
+------
+Dockerfile:4
+--------------------
+   2 |     WORKDIR /app
+   3 |     COPY ./package*.json ./
+   4 | >>> RUN npm install
+   5 |     COPY . . 
+   6 |     CMD ["npm","run","start"] 
+--------------------
+ERROR: failed to solve: process "/bin/sh -c npm install" did not complete successfully: exit code: 254
 
 
 ```
