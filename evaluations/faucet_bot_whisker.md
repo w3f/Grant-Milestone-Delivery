@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1758](https://github.com/w3f/Grants-Program/pull/1758)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
@@ -23,9 +23,13 @@
 
 ## General Notes
 
-todo
+Overall, this is a solid project, well docker-compose scripts, and all promised features work as expected. 
 
-### Logs
+Currently only integration tests are available.
+
+Hope the documentation will be better in the future.
+
+## Logs
 
 <details>
 
@@ -131,3 +135,61 @@ ok  	substrate-faucet/internal/service/drip	0.010s
 ```
 
 </details>
+
+### Faucet tests
+
+#### Discord faucet
+
+<details>
+
+<summary> Discord faucet logs </summary>
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.037Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.038Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0xed2ecd42b2c2a795d0e61adcffa28ff2df78dc5d1d3334cded204d152c85dd64"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:14:04.103Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
+```
+
+</details>
+
+![discord faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/4ea138c9-3d21-4c97-ba55-930c0c8c577a)
+
+#### Matrix faucet
+
+<details>
+
+<summary> Encryption faucet logs </summary>
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.055Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.055Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.120Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0x71ac09e39edc8fcfcf6bbe7335c154efa601c577b102dba24d4c97782ca2a413"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:15.120Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T10:57:28.205Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
+```
+
+</details>
+
+![matrix faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/aca3bfe2-03fd-4c55-9ca2-31cae0bc6db1)
+
+<details>
+
+<summary> Non-Encryption faucet logs </summary>
+
+```bash
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.193Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.193Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.254Z	DEBUG	drip/service.go:54	substrate tx sent	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML", "hash": "0x56c1dd5fbde22bb1620fa643b27a56171807e86a5a9c974ba3353490b8e41a0d"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:00.254Z	DEBUG	processor/handler.go:40	successfully updated last drip	{"address": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBUG	processor/handler.go:15	request: 	{"addr": "/request 13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+sybil-resistant-chat-bot-substrate-faucet-bot-1  | 2023-08-01T11:17:19.673Z	DEBUG	processor/handler.go:19	request for drip	{"addr": "13GRiCYZFJSu8kC6dwJFr2x9JVUGM2Mdjwu8JsXaRQwDctML"}
+
+```
+
+</details>
+
+![matrix faucet test and delay test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/86b542ab-4329-4484-9ef9-fc1838df2c37)
