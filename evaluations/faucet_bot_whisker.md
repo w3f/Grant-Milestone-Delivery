@@ -25,7 +25,7 @@
 
 Overall, this is a solid project, well docker-compose scripts, and all promised features work as expected. 
 
-Currently only integration tests are available.
+Currently only unit tests are available, and need to integrate with Matrix and Discord to test functionality.
 
 Hope the documentation will be better in the future.
 
