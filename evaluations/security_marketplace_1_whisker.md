@@ -28,11 +28,12 @@ todo
 
 ## Issues
 
-1. There is no `cargo contract test` subcommand in smart contracts but your documentation mentions it.
-2. There is no unit test for Escrow contract.
-3. Backend integration test fail.
-4. Backend swagger test fail. (probably needs authorization?)
-5. Frontend docker build fail.
+1. Backend integration test fail.
+   1. I run `npm start` and then run `npx jest`.
+2. Backend swagger test fail. (probably needs authorization?)
+3. Frontend bugs (see Frontend screenshots)
+   1. can't leave from changing password.
+   2. can't connect wallet, After I have authorized polkadot.js and Talisman, this prompt appears, and I cannot connect to the extension of Subwallet.
 
 ## Logs
 
@@ -116,418 +117,277 @@ test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ```bash
 
-console.log
-    Server is running on port 9000
-
-      at Server.log (src/server.ts:39:15)
-
- FAIL  src/test/userController.test.ts (77.327 s)
+➜  Backend git:(main) npx jest
+ FAIL  src/test/userController.test.ts (70.965 s)
   user Controller
     ✕ register with new email: Pass (5002 ms)
-    ✕ register with empty email: Fail (10 ms)
-    ✕ register with empty password: Fail (5 ms)
-    ✕ register with mismatched passwords: Fail (3 ms)
-    ✕ re-register with same email: Fail (5000 ms)
-    ✕ login with registered email: Pass (5000 ms)
-    ✕ login with empty email: Fail (5 ms)
-    ✕ login with empty password: Fail (4 ms)
+    ✓ register with empty email: Fail (8 ms)
+    ✓ register with empty password: Fail (3 ms)
+    ✓ register with mismatched passwords: Fail (2 ms)
+    ✕ re-register with same email: Fail (5001 ms)
+    ✕ login with registered email: Pass (5001 ms)
+    ✓ login with empty email: Fail (6 ms)
+    ✓ login with empty password: Fail (4 ms)
     ✕ login with registered email and wrong password: Fail (5000 ms)
-    ✕ login with unregistered email: Fail (5000 ms)
+    ✕ login with unregistered email: Fail (5001 ms)
     ✕ update profile  with registered email after login: Pass (5001 ms)
     ✕ getUser  with registered email after login: Pass (5001 ms)
-    ✕ Register audit (5000 ms)
+    ✕ Register audit (5002 ms)
     ✕ Get details of all audit PUBLIC (5001 ms)
     ✕ Get details of all audit (5001 ms)
+    ✕ change password  with registered email after login: Pass (5002 ms)
     ✕ Update Audit Status (5001 ms)
-    ✕ Update Auditor ID (5003 ms)
-    ✕ Two Factor Authentication (5002 ms)
-    ✕ Verify Two Factor Authentication (5002 ms)
+    ✕ Update Auditor ID (5002 ms)
     ✕ Get Details of Audit (5002 ms)
-    ○ skipped change password  with registered email after login: Pass
+
+  ● user Controller › register with new email: Pass
+
+    listen EADDRINUSE: address already in use :::9000
+
+      36 |
+      37 |   public listen(port: number) {
+    > 38 |     this.app.listen(port, () => {
+         |              ^
+      39 |       console.log(`Server is running on port ${port}`);
+      40 |     });
+      41 |   }
+
+      at Function.listen (node_modules/express/lib/application.js:635:24)
+      at ExpressServer.listen (src/server.ts:38:14)
+      at Object.listen (src/test/userController.test.ts:6:8)
 
   ● user Controller › register with new email: Pass
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-       6 |
-       7 | describe('user Controller', () => {
-    >  8 |   it('register with new email: Pass', async () => {
+       7 |
+       8 | describe('user Controller', () => {
+    >  9 |   it('register with new email: Pass', async () => {
          |   ^
-       9 |     let response = await request(Server.app)
-      10 |       .post('/api/v1/register')
-      11 |       .send({
+      10 |     let response = await request(Server.app)
+      11 |       .post('/api/v1/register')
+      12 |       .send(config.REGISTER_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:8:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
-
-  ● user Controller › register with empty email: Fail
-
-    assert.strictEqual(received, expected)
-
-    Expected value to strictly be equal to:
-      "EmailAddress validation failed"
-    Received:
-      "Please enter a valid email"
-    
-    Message:
-      expected 'Please enter a valid email' to equal 'EmailAddress validation failed'
-
-    Difference:
-
-    - Expected
-    + Received
-
-    - EmailAddress validation failed
-    + Please enter a valid email
-
-      31 |       })
-      32 |     expect(response1.status).to.be.eq(500);
-    > 33 |     expect(response1.body.message).to.be.equal('EmailAddress validation failed')
-         |                                          ^
-      34 |   })
-      35 |
-      36 |   it('register with empty password: Fail', async () => {
-
-      at Object.equal (src/test/userController.test.ts:33:42)
-
-  ● user Controller › register with empty password: Fail
-
-    assert.strictEqual(received, expected)
-
-    Expected value to strictly be equal to:
-      "Password validation failed"
-    Received:
-      "Please enter a valid password"
-    
-    Message:
-      expected 'Please enter a valid password' to equal 'Password validation failed'
-
-    Difference:
-
-    - Expected
-    + Received
-
-    - Password validation failed
-    + Please enter a valid password
-
-      47 |       })
-      48 |     expect(response2.status).to.be.eq(500);
-    > 49 |     expect(response2.body.message).to.be.equal('Password validation failed')
-         |                                          ^
-      50 |   })
-      51 |
-      52 |   it('register with mismatched passwords: Fail', async () => {
-
-      at Object.equal (src/test/userController.test.ts:49:42)
-
-  ● user Controller › register with mismatched passwords: Fail
-
-    assert.strictEqual(received, expected)
-
-    Expected value to strictly be equal to:
-      "Password validation failed"
-    Received:
-      "Please enter a valid password"
-    
-    Message:
-      expected 'Please enter a valid password' to equal 'Password validation failed'
-
-    Difference:
-
-    - Expected
-    + Received
-
-    - Password validation failed
-    + Please enter a valid password
-
-      63 |       })
-      64 |     expect(response3.status).to.be.eq(500);
-    > 65 |     expect(response3.body.message).to.be.equal('Password validation failed');
-         |                                          ^
-      66 |
-      67 |   })
-      68 |
-
-      at Object.equal (src/test/userController.test.ts:65:42)
+      at it (src/test/userController.test.ts:9:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › re-register with same email: Fail
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      67 |   })
-      68 |
-    > 69 |   it('re-register with same email: Fail', async () => {
+      51 |   })
+      52 |
+    > 53 |   it('re-register with same email: Fail', async () => {
          |   ^
-      70 |     let response = await request(Server.app)
-      71 |       .post('/api/v1/register')
-      72 |       .send({
+      54 |     let response = await request(Server.app)
+      55 |       .post('/api/v1/register')
+      56 |       .send(config.REGISTER_PAYLOAD_CASE_5)
 
-      at it (src/test/userController.test.ts:69:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:53:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › login with registered email: Pass
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      80 |   })
-      81 |
-    > 82 |   it('login with registered email: Pass', async () => {
+      58 |   })
+      59 |
+    > 60 |   it('login with registered email: Pass', async () => {
          |   ^
-      83 |     let response = await request(Server.app)
-      84 |       .post('/api/v1/login')
-      85 |       .send({
+      61 |     let response = await request(Server.app)
+      62 |       .post('/api/v1/login')
+      63 |       .send(config.LOGIN_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:82:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
-
-  ● user Controller › login with empty email: Fail
-
-    assert.strictEqual(received, expected)
-
-    Expected value to strictly be equal to:
-      400
-    Received:
-      500
-    
-    Message:
-      expected 500 to equal 400
-
-      100 |         password: "Asdervf@12r"
-      101 |       })
-    > 102 |     expect(response1.status).to.be.eq(400);
-          |                                    ^
-      103 |     expect(response1.body.message).to.be.equal('Check Your Email And Password')
-      104 |   })
-      105 |
-
-      at Object.eq (src/test/userController.test.ts:102:36)
-
-  ● user Controller › login with empty password: Fail
-
-    assert.strictEqual(received, expected)
-
-    Expected value to strictly be equal to:
-      400
-    Received:
-      500
-    
-    Message:
-      expected 500 to equal 400
-
-      112 |         password: ""
-      113 |       })
-    > 114 |     expect(response2.status).to.be.eq(400);
-          |                                    ^
-      115 |     expect(response2.body.message).to.be.equal('Wrong Password Entered')
-      116 |   })
-      117 |
-
-      at Object.eq (src/test/userController.test.ts:114:36)
+      at it (src/test/userController.test.ts:60:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › login with registered email and wrong password: Fail
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      116 |   })
-      117 |
-    > 118 |   it('login with registered email and wrong password: Fail', async () => {
-          |   ^
-      119 |     let response = await request(Server.app)
-      120 |       .post('/api/v1/login')
-      121 |       .send({
+      85 |   })
+      86 |
+    > 87 |   it('login with registered email and wrong password: Fail', async () => {
+         |   ^
+      88 |     let response = await request(Server.app)
+      89 |       .post('/api/v1/login')
+      90 |       .send(config.LOGIN_PAYLOAD_CASE_4)
 
-      at it (src/test/userController.test.ts:118:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:87:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › login with unregistered email: Fail
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      127 |     // console.log("response.message",response.body.data)
-      128 |   })
-    > 129 |   it('login with unregistered email: Fail', async () => {
-          |   ^
-      130 |     let response = await request(Server.app)
-      131 |       .post('/api/v1/login')
-      132 |       .send({
+      93 |     // console.log("response.message",response.body.data)
+      94 |   })
+    > 95 |   it('login with unregistered email: Fail', async () => {
+         |   ^
+      96 |     let response = await request(Server.app)
+      97 |       .post('/api/v1/login')
+      98 |       .send(config.LOGIN_PAYLOAD_CASE_5)
 
-      at it (src/test/userController.test.ts:129:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:95:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › update profile  with registered email after login: Pass
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      138 |   })
-      139 |
-    > 140 |   it('update profile  with registered email after login: Pass', async () => {
+      101 |   })
+      102 |
+    > 103 |   it('update profile  with registered email after login: Pass', async () => {
           |   ^
-      141 |     let response = await request(Server.app)
-      142 |       .post('/api/v1/login')
-      143 |       .send({
+      104 |     let response = await request(Server.app)
+      105 |       .post('/api/v1/login')
+      106 |       .send(config.LOGIN_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:140:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:103:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › getUser  with registered email after login: Pass
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      188 |   })
-      189 |
-    > 190 |   it('getUser  with registered email after login: Pass', async () => {
+      119 |
+      120 |
+    > 121 |   it('getUser  with registered email after login: Pass', async () => {
           |   ^
-      191 |     let response = await request(Server.app)
-      192 |       .post('/api/v1/login')
-      193 |       .send({
+      122 |     let response = await request(Server.app)
+      123 |       .post('/api/v1/login')
+      124 |       .send(config.LOGIN_PAYLOAD_CASE_6)
 
-      at it (src/test/userController.test.ts:190:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:121:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Register audit
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      206 |   })
-      207 |
-    > 208 |   it('Register audit', async () => {
+      131 |   })
+      132 |
+    > 133 |   it('Register audit', async () => {
           |   ^
-      209 |     let obj = {
-      210 |       emailAddress: "áweraaty@yopmail.com",
-      211 |       auditType: ["smartContractAudit", "DoublePenetration"],
+      134 |     let response = await request(Server.app)
+      135 |       .post('/api/v1/login')
+      136 |       .send(config.LOGIN_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:208:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:133:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Get details of all audit PUBLIC
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      236 |   })
-      237 |
-    > 238 |   it('Get details of all audit PUBLIC', async () => {
+      147 |   })
+      148 |
+    > 149 |   it('Get details of all audit PUBLIC', async () => {
           |   ^
-      239 |     let obj = {
-      240 |       emailAddress: "áweraaty@yopmail.com"
-      241 |     }
+      150 |     let obj = {
+      151 |       emailAddress: "áweraaty@yopmail.com"
+      152 |     }
 
-      at it (src/test/userController.test.ts:238:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:149:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Get details of all audit
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      260 |   })
-      261 |
-    > 262 |   it('Get details of all audit', async () => {
+      167 |   })
+      168 |
+    > 169 |   it('Get details of all audit', async () => {
           |   ^
-      263 |     let obj = {
-      264 |       emailAddress: "áweraaty@yopmail.com"
-      265 |     }
+      170 |     let obj = {
+      171 |       emailAddress: "áweraaty@yopmail.com"
+      172 |     }
 
-      at it (src/test/userController.test.ts:262:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:169:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
+
+  ● user Controller › change password  with registered email after login: Pass
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      187 |   })
+      188 |
+    > 189 |   it('change password  with registered email after login: Pass', async () => {
+          |   ^
+      190 |     let response = await request(Server.app)
+      191 |       .post('/api/v1/login')
+      192 |       .send(config.LOGIN_PAYLOAD_CASE_1)
+
+      at it (src/test/userController.test.ts:189:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Update Audit Status
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      284 |   })
-      285 |
-    > 286 |   it('Update Audit Status', async () => {
+      199 |   })
+      200 |
+    > 201 |   it('Update Audit Status', async () => {
           |   ^
-      287 |     let obj = {
-      288 |       emailAddress: "áweraaty@yopmail.com",
-      289 |       postID: 86933,
+      202 |     let response = await request(Server.app)
+      203 |       .post('/api/v1/login')
+      204 |       .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:286:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:201:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Update Auditor ID
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      310 |   })
-      311 |
-    > 312 |   it('Update Auditor ID', async () => {
+      223 |   })
+      224 |
+    > 225 |   it('Update Auditor ID', async () => {
           |   ^
-      313 |     let obj = {
-      314 |       emailAddress: "áweraaty@yopmail.com",
-      315 |       postID: 67974,
+      226 |     let response = await request(Server.app)
+      227 |       .post('/api/v1/login')
+      228 |       .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:312:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
-
-  ● user Controller › Two Factor Authentication
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      339 |
-      340 |
-    > 341 |   it('Two Factor Authentication', async () => {
-          |   ^
-      342 |     let obj = {
-      343 |       emailAddress: "áweraaty@yopmail.com"
-      344 |     }
-
-      at it (src/test/userController.test.ts:341:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
-
-  ● user Controller › Verify Two Factor Authentication
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      363 |   })
-      364 |
-    > 365 |   it('Verify Two Factor Authentication', async () => {
-          |   ^
-      366 |
-      367 |     let response = await request(Server.app)
-      368 |       .post('/api/v1/login')
-
-      at it (src/test/userController.test.ts:365:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:225:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
   ● user Controller › Get Details of Audit
 
     thrown: "Exceeded timeout of 5000 ms for a test.
     Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
 
-      401 |
-      402 |
-    > 403 |   it('Get Details of Audit', async () => {
+      246 |
+      247 |
+    > 248 |   it('Get Details of Audit', async () => {
           |   ^
-      404 |     let obj = {
-      405 |       emailAddress: "áweraaty@yopmail.com",
-      406 |       postID: 86933
+      249 |     let response = await request(Server.app)
+      250 |     .post('/api/v1/login')
+      251 |     .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
 
-      at it (src/test/userController.test.ts:403:3)
-      at Object.describe (src/test/userController.test.ts:7:1)
+      at it (src/test/userController.test.ts:248:3)
+      at Object.describe (src/test/userController.test.ts:8:1)
 
 Test Suites: 1 failed, 1 total
-Tests:       20 failed, 1 skipped, 21 total
+Tests:       14 failed, 5 passed, 19 total
 Snapshots:   0 total
-Time:        77.369 s
+Time:        70.995 s, estimated 72 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
 'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
-
 
 
 ```
@@ -536,7 +396,7 @@ Jest did not exit one second after the test run has completed.
 
 #### Screenshots
 
-![swagger register test](https://ibb.co/xmhXBbc)
+![swagger register test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/4068bd94-9ca2-4d16-9b10-d7b041e1d1ab)
 
 ### Frontend
 
@@ -546,62 +406,38 @@ Jest did not exit one second after the test run has completed.
 
 ```bash
 
-[+] Building 65.1s (8/9)                                                                                                                                                                            docker:default
- => [internal] load .dockerignore                                                                                                                                                                             0.1s
- => => transferring context: 2B                                                                                                                                                                               0.0s
- => [internal] load build definition from Dockerfile                                                                                                                                                          0.1s
- => => transferring dockerfile: 139B                                                                                                                                                                          0.0s
- => [internal] load metadata for docker.io/library/node:16                                                                                                                                                    9.7s
- => [1/5] FROM docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0                                                                                             54.2s
- => => resolve docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0                                                                                              0.0s
- => => sha256:6cd6581a9ae814ebbc8077afd63ecbf4d37f9b59ac9d9304a1b5a9e743ac13e0 776B / 776B                                                                                                                    0.0s
- => => sha256:a21a68db680698eb1a863e229f81f70975f7ff6231e4d3ae755cf82f77bbac67 7.24kB / 7.24kB                                                                                                                0.0s
- => => sha256:9918064ebccea7fc961fe71dad46105b217763b4b1b3a9dfa7bee2ab29d2039b 50.50MB / 50.50MB                                                                                                             40.3s
- => => sha256:2345e1e5f82d8963240db3c8e8ccfd431d0962d14219e24bbcc756ef217bba48 17.58MB / 17.58MB                                                                                                              5.4s
- => => sha256:947969e624beff93eed664f9f52a08712f3d1e12cadbdf929ff928f93d2c383c 51.87MB / 51.87MB                                                                                                             27.2s
- => => sha256:83e822fa0a8094738dcaed855466cccae8d6599d55409e2befaa2040e27ead15 2.00kB / 2.00kB                                                                                                                0.0s
- => => sha256:87da2254b9de06a71bc1828dec0a28f6a16af7cade75310533cf5cff9ac7e669 191.90MB / 191.90MB                                                                                                           48.3s
- => => sha256:24d744d599278585b9ad9ab702beb416d3f6eac9c4dee355921d3aee6045e706 4.21kB / 4.21kB                                                                                                               27.6s
- => => sha256:0ed2ac5774c00e61286b9bd72324a242b0352f6ed54157ad6ccf4969e41d2418 34.79MB / 34.79MB                                                                                                             41.3s
- => => extracting sha256:9918064ebccea7fc961fe71dad46105b217763b4b1b3a9dfa7bee2ab29d2039b                                                                                                                     1.4s
- => => sha256:c91e125a2c9469eb928e0a1507c0bbf008dd732affbe83742dc395c235ac8a08 2.27MB / 2.27MB                                                                                                               45.5s
- => => sha256:73ea6c88f52c01224892776f5f08b4ff2c56f0459b203497fedf117ffb99748b 451B / 451B                                                                                                                   44.4s
- => => extracting sha256:2345e1e5f82d8963240db3c8e8ccfd431d0962d14219e24bbcc756ef217bba48                                                                                                                     0.3s
- => => extracting sha256:947969e624beff93eed664f9f52a08712f3d1e12cadbdf929ff928f93d2c383c                                                                                                                     1.5s
- => => extracting sha256:87da2254b9de06a71bc1828dec0a28f6a16af7cade75310533cf5cff9ac7e669                                                                                                                     4.4s
- => => extracting sha256:24d744d599278585b9ad9ab702beb416d3f6eac9c4dee355921d3aee6045e706                                                                                                                     0.0s
- => => extracting sha256:0ed2ac5774c00e61286b9bd72324a242b0352f6ed54157ad6ccf4969e41d2418                                                                                                                     0.9s
- => => extracting sha256:c91e125a2c9469eb928e0a1507c0bbf008dd732affbe83742dc395c235ac8a08                                                                                                                     0.0s
- => => extracting sha256:73ea6c88f52c01224892776f5f08b4ff2c56f0459b203497fedf117ffb99748b                                                                                                                     0.0s
- => [internal] load build context                                                                                                                                                                             0.3s
- => => transferring context: 46.32MB                                                                                                                                                                          0.3s
- => [2/5] WORKDIR /app                                                                                                                                                                                        0.3s
- => [3/5] COPY ./package*.json ./                                                                                                                                                                             0.1s
- => ERROR [4/5] RUN npm install                                                                                                                                                                               0.6s
-------
- > [4/5] RUN npm install:
-0.599 npm ERR! code ENOENT
-0.599 npm ERR! syscall open
-0.599 npm ERR! path /app/package.json
-0.599 npm ERR! errno -2
-0.600 npm ERR! enoent ENOENT: no such file or directory, open '/app/package.json'
-0.600 npm ERR! enoent This is related to npm not being able to find a file.
-0.600 npm ERR! enoent 
-0.601 
-0.601 npm ERR! A complete log of this run can be found in:
-0.601 npm ERR!     /root/.npm/_logs/2023-08-01T00_35_30_634Z-debug-0.log
-------
-Dockerfile:4
---------------------
-   2 |     WORKDIR /app
-   3 |     COPY ./package*.json ./
-   4 | >>> RUN npm install
-   5 |     COPY . . 
-   6 |     CMD ["npm","run","start"] 
---------------------
-ERROR: failed to solve: process "/bin/sh -c npm install" did not complete successfully: exit code: 254
-
+[+] Building 8.2s (10/10) FINISHED                               docker:default
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 199B                                       0.0s
+ => [internal] load metadata for docker.io/library/node:16                 8.1s
+ => [1/5] FROM docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd  0.0s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 5.01kB                                        0.0s
+ => CACHED [2/5] WORKDIR /app                                              0.0s
+ => CACHED [3/5] COPY package.json .                                       0.0s
+ => CACHED [4/5] RUN npm install --force                                   0.0s
+ => CACHED [5/5] COPY . .                                                  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:270be7647a1c9b3a80383fa26755345afc7355ea4b08d  0.0s
+ => => naming to docker.io/library/my-audit-bazaar-img                     0.0s
 
 ```
 
 </details>
+
+#### Screenshots
+
+- Main page
+
+![main page](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/a33d47d3-15a9-46c9-8e34-f9f06ec65dcf)
+
+- Connect wallet
+
+![connect wallet](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/430d1c9d-3770-41a5-be8d-1ea37811aebe)
+
+- Change password
+
+![change password](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/434fab41-f9f0-44bf-a348-52be3ec0de16)
