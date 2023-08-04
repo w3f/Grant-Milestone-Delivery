@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [Application](https://github.com/w3f/Grants-Program/pull/1804)
 - **Milestone:** 1
 - **Kusama Identity:** [Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP](https://sub.id/Fd1SvYZnE3dZ3mEaq5QG1HEWhzNrDyMPJ41C4fQqiMirtTP)
@@ -13,8 +13,10 @@
 | **0a.** | License                   | [Apache](https://github.com/ZeroDAO/melodot/blob/w3f/LICENSE) | Apache 2.0                                                   |
 | **0b.** | Documentation             | [Link](https://github.com/ZeroDAO/melodot/blob/w3f/crates/melo-erasure-coding/README.md) | Extensive and comprehensive documentation. |
 | **0c.** | Testing and Testing Guide | [Tests](https://github.com/ZeroDAO/melodot/blob/w3f/crates/melo-erasure-coding/src/tests.rs) [Link](https://github.com/ZeroDAO/melodot/blob/w3f/crates/melo-erasure-coding/README.md#testing) | Good test coverage and can be run both natively and with docker. Logs below. |
-| **0d.** | Docker                    | [Link](https://github.com/ZeroDAO/melodot/blob/w3f/crates/melo-erasure-coding/README.md#docker) | Unit test run with Docker. Building the crate returns some error, though. Logs below. |
+| **0d.** | Docker                    | [Link](https://github.com/ZeroDAO/melodot/blob/w3f/crates/melo-erasure-coding/README.md#docker) | Update: issue resolved. Unit test run with Docker. Building the crate returns some error, though. Logs below. |
 | 1.      | melo_erasure_coding       | [Crate](https://github.com/ZeroDAO/melodot/tree/w3f/crates/melo-erasure-coding) [Primitives](https://github.com/ZeroDAO/melodot/tree/w3f/primitives) | Core functionalities are provided with `primitives` and `melo-erasure-coding` crates. |
+
+# Evaluation v1
 
 ## General Notes
 
@@ -107,3 +109,7 @@ Creating melodot_dev_run ... done
 Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "build": executable file not found in $PATH: unknown
 ERROR: 1
 ```
+
+# Evaluation v2
+
+All the outsanding issues were resolved. Docker build now works and acknowledgements for external projects are more specific.
