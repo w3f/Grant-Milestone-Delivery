@@ -109,6 +109,7 @@ Creating melodot_dev_run ... done
 Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "build": executable file not found in $PATH: unknown
 ERROR: 1
 ```
+</details>
 
 # Evaluation v2
 
