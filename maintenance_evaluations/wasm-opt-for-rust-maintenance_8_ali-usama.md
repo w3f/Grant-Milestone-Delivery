@@ -1,0 +1,14 @@
+# Evaluation
+
+- **Status:** In Progress
+- **Application Document:** [wasm-opt-for-rust](https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/wasm-opt-for-rust.md)
+- **Milestone:** 8
+- **Kusama Identity:** Eexv1mKLiCidz2gGh6vfowtXgSSc7mvD4xEb2ji998W4DPs
+- **Previously successfully merged evaluation:** All evaluations by ali-usama
+
+| Number | Deliverable | Accepted               | Link | Evaluation Notes |
+|--------|-------------|------------------------|------|------------------|
+| 1.     |             | <ul><li>[x] </li></ul> |      |                  |
+| 2.     |             | <ul><li>[x] </li></ul> |      |                  |
+
+## General Notes
