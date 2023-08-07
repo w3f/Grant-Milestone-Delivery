@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** [w3f/Grants-Program#1660](https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md)
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
 - **Previously successfully merged evaluation:** N/A
