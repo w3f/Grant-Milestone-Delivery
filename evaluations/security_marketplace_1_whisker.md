@@ -8,19 +8,18 @@
 
 **Deliverables**
 
-
-| Number | Deliverable | Link | Notes |
-| -----: | ----------- | ----- | ------- |
-| **0a.** | License | Unlicense | Unlicensed |
-| **0b.** | Documentation | >[Escrow Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/escrow/Escrow%20Doc.pdf) >[Reward Token Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/reward_token/Reward%20Token.pdf) >[Node Services Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/AuditBazaarBackendArchitecture.docx) | The documentations are meant to explain the working of the application till this milestone. |
-| **0c.** | Testing and Testing Guide | - | The respective Test files can be found alongside the project repositories with guidelines in readme files. |
-| **0d.** | Docker | - | The dockerfiles can be found alongside the project repositories.  |
-| 1 | UI/UX | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend) | The link leads to the repository of the front end of the application, the guidelines to operate it can be found in readme file. |
-| 2 | Reputation Token Contract | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend) | This link leads to the reputation token's smart contract.  |
-| 3 | Escrow Contract| [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend) | This link leads to the Escrow Contract's smart contract. |
-| 4 | Audit Directory Contract | - | This contract is not in the planned ecosystem anymore and it's functionality has been shifted in to that of escrow contract's |
-| 5 | Arbiters Contract | - | This contract is not in the planned ecosystem anymore either with it's functionality shifted in the back end to make it cost efficient for Arbiters. |
-| 6 | Node Services | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Backend) | The link leads to the repository of the front end of the application, the guidelines to operate it can be found in readme file. |
+| Number | Deliverable | Accepted | Link | Evaluation Notes |
+| ------ | ----------- | -------- | ---- |----------------- |
+| **0a.**| License |<ul><li>[ ] </li></ul>|Unlicense| Open source but no license|
+| **0b.** | Documentation |<ul><li>[x] </li></ul>|>[Escrow Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/escrow/Escrow%20Doc.pdf) >[Reward Token Contract Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract/blob/main/reward_token/Reward%20Token.pdf) >[Node Services Documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/AuditBazaarBackendArchitecture.docx) | The documentations are easy to read, which explain the working of the application.|
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>|...| The respective Test files can be found alongside the project repositories with guidelines in readme files.|
+| **0d.** | Docker |<ul><li>[x] </li></ul>|[Docker compose](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/docker-compose.yaml)| This docker compose works as expected|
+| 1 | UI/UX |<ul><li>[x] </li></ul>|[Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend)| Beautiful UI/UX and have asked them to fix some small bugs.|
+| 2 | Reputation Token Contract |<ul><li>[x] </li></ul>|[Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend)| This contract wprk as expected with strong ut.|
+| 3 | Escrow Contract |<ul><li>[x] </li></ul>|[Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend)| This contract wprk as expected, but no ut since it is not technically possible|
+| 4 | Audit Directory Contract |<ul><li>[x] </li></ul>|N/A| Seems its functionality has shifted to the escrow contract.|
+| 5 | Arbiters Contract |<ul><li>[x] </li></ul>|N/A| Seems its functionality has shifted to the backend service.|
+| 6 | Node Services |<ul><li>[x] </li></ul>|[Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Backend)| The node service works as expected with a swagger service. |
 
 ## General Notes
 
@@ -31,6 +30,8 @@ But it's still in a non-open source state, so there's no license yet.
 ## Logs
 
 ### Smart contracts
+
+- Test hash: 6cffe044b746eb729538cf1e8107e6d858117b75
 
 <details>
 
@@ -103,6 +104,8 @@ test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 </details>
 
 ### Backend
+
+- Test hash: 7a88f7ccf0f0abd709dd96ed9dfe4e2376840c17
 
 <details>
 
@@ -939,6 +942,8 @@ Ran all test suites.
 </details>
 
 #### Screenshots
+
+- hash: c77c2d9659a18928c47a61be5b11456bd57a4f8d
 
 - Main page
 
