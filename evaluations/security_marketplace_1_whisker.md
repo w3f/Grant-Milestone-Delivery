@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1726](https://github.com/w3f/Grants-Program/blob/master/applications/Security_Marketplace.md)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
@@ -24,16 +24,9 @@
 
 ## General Notes
 
-todo
+Overall, this is a solid project, well documented and scripts, and all promised features work as expected with a good UI/UX. 
 
-## Issues
-
-1. Backend integration test fail.
-   1. I run `npm start` and then run `npx jest`.
-2. Backend swagger test fail. (probably needs authorization?)
-3. Frontend bugs (see Frontend screenshots)
-   1. can't leave from changing password.
-   2. can't connect wallet, After I have authorized polkadot.js and Talisman, this prompt appears, and I cannot connect to the extension of Subwallet.
+But it's still in a non-open source state, so there's no license yet.
 
 ## Logs
 
@@ -116,313 +109,830 @@ test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 <summary> Backend integration tests </summary>
 
 ```bash
+(node:14073) [MONGODB DRIVER] Warning: keepAlive is a deprecated option: Will not be able to turn off in the future.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  console.log
+    Server is running on port 9000
 
-➜  Backend git:(main) npx jest
- FAIL  src/test/userController.test.ts (70.965 s)
+      at Server.log (src/server.ts:39:15)
+
+  console.log
+    config {
+      emailAddress: 'áweraaty@yopmail.com',
+      firstName: 'dfuer',
+      lastName: 'qwert',
+      password: 'Asdervf@12r',
+      confirmPassword: 'Asdervf@12r'
+    } {
+      emailAddress: 'áwerty@yopmail.com',
+      firstName: 'dffrehghfhf',
+      lastName: 'qwertyy',
+      password: 'Asdervf@@@123456',
+      confirmPassword: 'Asdervf@@@123456'
+    }
+
+      at Object.log (src/test/userController.test.ts:14:13)
+
+  console.log
+    response.message {
+      message: 'Logged in successfully',
+      status: 200,
+      error: false,
+      token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IsOhd2VyYWF0eUB5b3BtYWlsLmNvbSIsIl9pZCI6IjY0ZDA4MjJiYzk5NGNhNmZhODFjY2JmNSIsImlhdCI6MTY5MTM4NjQxMSwiZXhwIjoxNjkxNDE1MjExfQ.arUrS85FS2FIpt5NppqP1A44jaxVE50cJoiIL1Noxjk',
+      data: {
+        emailAddress: 'áweraaty@yopmail.com',
+        walletAddress: '',
+        firstName: 'dfuer',
+        lastName: 'qwert',
+        gitHub: '',
+        linkedIn: '',
+        telegram: '',
+        bio: '',
+        profilePicture: ''
+      }
+    }
+
+      at Object.log (src/test/userController.test.ts:66:13)
+
+  console.log
+    <ref *2> Response {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      res: <ref *1> IncomingMessage {
+        _readableState: ReadableState {
+          objectMode: false,
+          highWaterMark: 16384,
+          buffer: BufferList { head: null, tail: null, length: 0 },
+          length: 0,
+          pipes: [],
+          flowing: true,
+          ended: true,
+          endEmitted: true,
+          reading: false,
+          constructed: true,
+          sync: true,
+          needReadable: false,
+          emittedReadable: false,
+          readableListening: false,
+          resumeScheduled: false,
+          errorEmitted: false,
+          emitClose: true,
+          autoDestroy: true,
+          destroyed: true,
+          errored: null,
+          closed: true,
+          closeEmitted: true,
+          defaultEncoding: 'utf8',
+          awaitDrainWriters: null,
+          multiAwaitDrain: false,
+          readingMore: true,
+          dataEmitted: true,
+          decoder: [StringDecoder],
+          encoding: 'utf8',
+          [Symbol(kPaused)]: false
+        },
+        _events: [Object: null prototype] {
+          end: [Array],
+          data: [Array],
+          error: [Array],
+          close: [Function: bound emit]
+        },
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        socket: Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: null,
+          _closeAfterHandlingError: false,
+          _readableState: [ReadableState],
+          _events: [Object: null prototype],
+          _eventsCount: 7,
+          _maxListeners: undefined,
+          _writableState: [WritableState],
+          allowHalfOpen: false,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: null,
+          _server: null,
+          parser: null,
+          _httpMessage: [ClientRequest],
+          [Symbol(async_id_symbol)]: 645,
+          [Symbol(kHandle)]: [TCP],
+          [Symbol(lastWriteQueueSize)]: 0,
+          [Symbol(timeout)]: null,
+          [Symbol(kBuffer)]: null,
+          [Symbol(kBufferCb)]: null,
+          [Symbol(kBufferGen)]: null,
+          [Symbol(kCapture)]: false,
+          [Symbol(kSetNoDelay)]: true,
+          [Symbol(kSetKeepAlive)]: false,
+          [Symbol(kSetKeepAliveInitialDelay)]: 0,
+          [Symbol(kBytesRead)]: 0,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        httpVersionMajor: 1,
+        httpVersionMinor: 1,
+        httpVersion: '1.1',
+        complete: true,
+        rawHeaders: [
+          'X-Powered-By',
+          'Express',
+          'Access-Control-Allow-Origin',
+          '*',
+          'Content-Type',
+          'application/json; charset=utf-8',
+          'Content-Length',
+          '86',
+          'ETag',
+          'W/"56-/23N2lZHemAsMBOB3nw1KisCtHg"',
+          'Vary',
+          'Accept-Encoding',
+          'Date',
+          'Mon, 07 Aug 2023 05:33:31 GMT',
+          'Connection',
+          'close'
+        ],
+        rawTrailers: [],
+        aborted: false,
+        upgrade: false,
+        url: '',
+        method: null,
+        statusCode: 400,
+        statusMessage: 'Bad Request',
+        client: Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: null,
+          _closeAfterHandlingError: false,
+          _readableState: [ReadableState],
+          _events: [Object: null prototype],
+          _eventsCount: 7,
+          _maxListeners: undefined,
+          _writableState: [WritableState],
+          allowHalfOpen: false,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: null,
+          _server: null,
+          parser: null,
+          _httpMessage: [ClientRequest],
+          [Symbol(async_id_symbol)]: 645,
+          [Symbol(kHandle)]: [TCP],
+          [Symbol(lastWriteQueueSize)]: 0,
+          [Symbol(timeout)]: null,
+          [Symbol(kBuffer)]: null,
+          [Symbol(kBufferCb)]: null,
+          [Symbol(kBufferGen)]: null,
+          [Symbol(kCapture)]: false,
+          [Symbol(kSetNoDelay)]: true,
+          [Symbol(kSetKeepAlive)]: false,
+          [Symbol(kSetKeepAliveInitialDelay)]: 0,
+          [Symbol(kBytesRead)]: 0,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        _consuming: false,
+        _dumped: false,
+        req: ClientRequest {
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: true,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: false,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: 64,
+          _hasBody: true,
+          _trailer: '',
+          finished: true,
+          _headerSent: true,
+          _closed: false,
+          socket: [Socket],
+          _header: 'POST /api/v1/login HTTP/1.1\r\n' +
+            'Host: 127.0.0.1:43873\r\n' +
+            'Accept-Encoding: gzip, deflate\r\n' +
+            'Content-Type: application/json\r\n' +
+            'Content-Length: 64\r\n' +
+            'Connection: close\r\n' +
+            '\r\n',
+          _keepAliveTimeout: 0,
+          _onPendingData: [Function: nop],
+          agent: [Agent],
+          socketPath: undefined,
+          method: 'POST',
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          path: '/api/v1/login',
+          _ended: true,
+          res: [Circular *1],
+          aborted: false,
+          timeoutCb: null,
+          upgradeOrConnect: false,
+          parser: null,
+          maxHeadersCount: null,
+          reusedSocket: false,
+          host: '127.0.0.1',
+          protocol: 'http:',
+          [Symbol(kCapture)]: false,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(kEndCalled)]: true,
+          [Symbol(kNeedDrain)]: false,
+          [Symbol(corked)]: 0,
+          [Symbol(kOutHeaders)]: [Object: null prototype],
+          [Symbol(kUniqueHeaders)]: null
+        },
+        text: '{"message":"User not found, Please register yourself first","status":400,"error":true}',
+        [Symbol(kCapture)]: false,
+        [Symbol(kHeaders)]: {
+          'x-powered-by': 'Express',
+          'access-control-allow-origin': '*',
+          'content-type': 'application/json; charset=utf-8',
+          'content-length': '86',
+          etag: 'W/"56-/23N2lZHemAsMBOB3nw1KisCtHg"',
+          vary: 'Accept-Encoding',
+          date: 'Mon, 07 Aug 2023 05:33:31 GMT',
+          connection: 'close'
+        },
+        [Symbol(kHeadersCount)]: 16,
+        [Symbol(kTrailers)]: null,
+        [Symbol(kTrailersCount)]: 0,
+        [Symbol(RequestTimeout)]: undefined
+      },
+      request: Test {
+        _events: [Object: null prototype] { abort: [Function (anonymous)] },
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        _enableHttp2: false,
+        _agent: false,
+        _formData: null,
+        method: 'POST',
+        url: 'http://127.0.0.1:43873/api/v1/login',
+        _header: { 'content-type': 'application/json' },
+        header: { 'Content-Type': 'application/json' },
+        writable: true,
+        _redirects: 0,
+        _maxRedirects: 0,
+        cookies: '',
+        qs: {},
+        _query: [],
+        qsRaw: [],
+        _redirectList: [],
+        _streamRequest: false,
+        _lookup: undefined,
+        _buffer: true,
+        app: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          _events: [Object: null prototype],
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _connections: 0,
+          _handle: null,
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: false,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          keepAliveTimeout: 5000,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          headersTimeout: 60000,
+          requestTimeout: 0,
+          _connectionKey: '6::::0',
+          [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+          [Symbol(ServerResponse)]: [Function: ServerResponse],
+          [Symbol(kCapture)]: false,
+          [Symbol(async_id_symbol)]: 643,
+          [Symbol(kUniqueHeaders)]: null
+        },
+        _asserts: [],
+        _server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          _events: [Object: null prototype],
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _connections: 0,
+          _handle: null,
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: false,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          keepAliveTimeout: 5000,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          headersTimeout: 60000,
+          requestTimeout: 0,
+          _connectionKey: '6::::0',
+          [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+          [Symbol(ServerResponse)]: [Function: ServerResponse],
+          [Symbol(kCapture)]: false,
+          [Symbol(async_id_symbol)]: 643,
+          [Symbol(kUniqueHeaders)]: null
+        },
+        _data: { emailAddress: 'áwe1rty@yopmail.com', password: 'Asdervf@12r' },
+        req: ClientRequest {
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: true,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: false,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: 64,
+          _hasBody: true,
+          _trailer: '',
+          finished: true,
+          _headerSent: true,
+          _closed: false,
+          socket: [Socket],
+          _header: 'POST /api/v1/login HTTP/1.1\r\n' +
+            'Host: 127.0.0.1:43873\r\n' +
+            'Accept-Encoding: gzip, deflate\r\n' +
+            'Content-Type: application/json\r\n' +
+            'Content-Length: 64\r\n' +
+            'Connection: close\r\n' +
+            '\r\n',
+          _keepAliveTimeout: 0,
+          _onPendingData: [Function: nop],
+          agent: [Agent],
+          socketPath: undefined,
+          method: 'POST',
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          path: '/api/v1/login',
+          _ended: true,
+          res: [IncomingMessage],
+          aborted: false,
+          timeoutCb: null,
+          upgradeOrConnect: false,
+          parser: null,
+          maxHeadersCount: null,
+          reusedSocket: false,
+          host: '127.0.0.1',
+          protocol: 'http:',
+          [Symbol(kCapture)]: false,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(kEndCalled)]: true,
+          [Symbol(kNeedDrain)]: false,
+          [Symbol(corked)]: 0,
+          [Symbol(kOutHeaders)]: [Object: null prototype],
+          [Symbol(kUniqueHeaders)]: null
+        },
+        protocol: 'http:',
+        host: '127.0.0.1:43873',
+        _endCalled: true,
+        _callback: [Function (anonymous)],
+        _fullfilledPromise: Promise { [Circular *2] },
+        res: <ref *1> IncomingMessage {
+          _readableState: [ReadableState],
+          _events: [Object: null prototype],
+          _eventsCount: 4,
+          _maxListeners: undefined,
+          socket: [Socket],
+          httpVersionMajor: 1,
+          httpVersionMinor: 1,
+          httpVersion: '1.1',
+          complete: true,
+          rawHeaders: [Array],
+          rawTrailers: [],
+          aborted: false,
+          upgrade: false,
+          url: '',
+          method: null,
+          statusCode: 400,
+          statusMessage: 'Bad Request',
+          client: [Socket],
+          _consuming: false,
+          _dumped: false,
+          req: [ClientRequest],
+          text: '{"message":"User not found, Please register yourself first","status":400,"error":true}',
+          [Symbol(kCapture)]: false,
+          [Symbol(kHeaders)]: [Object],
+          [Symbol(kHeadersCount)]: 16,
+          [Symbol(kTrailers)]: null,
+          [Symbol(kTrailersCount)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        _resBuffered: true,
+        response: [Circular *2],
+        called: true,
+        [Symbol(kCapture)]: false
+      },
+      req: <ref *3> ClientRequest {
+        _events: [Object: null prototype] {
+          drain: [Function],
+          error: [Function (anonymous)],
+          finish: [Function: requestOnFinish]
+        },
+        _eventsCount: 3,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: true,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        maxRequestsOnConnectionReached: false,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        strictContentLength: false,
+        _contentLength: 64,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        _closed: false,
+        socket: Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: null,
+          _closeAfterHandlingError: false,
+          _readableState: [ReadableState],
+          _events: [Object: null prototype],
+          _eventsCount: 7,
+          _maxListeners: undefined,
+          _writableState: [WritableState],
+          allowHalfOpen: false,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: null,
+          _server: null,
+          parser: null,
+          _httpMessage: [Circular *3],
+          [Symbol(async_id_symbol)]: 645,
+          [Symbol(kHandle)]: [TCP],
+          [Symbol(lastWriteQueueSize)]: 0,
+          [Symbol(timeout)]: null,
+          [Symbol(kBuffer)]: null,
+          [Symbol(kBufferCb)]: null,
+          [Symbol(kBufferGen)]: null,
+          [Symbol(kCapture)]: false,
+          [Symbol(kSetNoDelay)]: true,
+          [Symbol(kSetKeepAlive)]: false,
+          [Symbol(kSetKeepAliveInitialDelay)]: 0,
+          [Symbol(kBytesRead)]: 0,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        _header: 'POST /api/v1/login HTTP/1.1\r\n' +
+          'Host: 127.0.0.1:43873\r\n' +
+          'Accept-Encoding: gzip, deflate\r\n' +
+          'Content-Type: application/json\r\n' +
+          'Content-Length: 64\r\n' +
+          'Connection: close\r\n' +
+          '\r\n',
+        _keepAliveTimeout: 0,
+        _onPendingData: [Function: nop],
+        agent: Agent {
+          _events: [Object: null prototype],
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          defaultPort: 80,
+          protocol: 'http:',
+          options: [Object: null prototype],
+          requests: [Object: null prototype] {},
+          sockets: [Object: null prototype],
+          freeSockets: [Object: null prototype] {},
+          keepAliveMsecs: 1000,
+          keepAlive: false,
+          maxSockets: Infinity,
+          maxFreeSockets: 256,
+          scheduling: 'lifo',
+          maxTotalSockets: Infinity,
+          totalSocketCount: 1,
+          [Symbol(kCapture)]: false
+        },
+        socketPath: undefined,
+        method: 'POST',
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        path: '/api/v1/login',
+        _ended: true,
+        res: <ref *1> IncomingMessage {
+          _readableState: [ReadableState],
+          _events: [Object: null prototype],
+          _eventsCount: 4,
+          _maxListeners: undefined,
+          socket: [Socket],
+          httpVersionMajor: 1,
+          httpVersionMinor: 1,
+          httpVersion: '1.1',
+          complete: true,
+          rawHeaders: [Array],
+          rawTrailers: [],
+          aborted: false,
+          upgrade: false,
+          url: '',
+          method: null,
+          statusCode: 400,
+          statusMessage: 'Bad Request',
+          client: [Socket],
+          _consuming: false,
+          _dumped: false,
+          req: [Circular *3],
+          text: '{"message":"User not found, Please register yourself first","status":400,"error":true}',
+          [Symbol(kCapture)]: false,
+          [Symbol(kHeaders)]: [Object],
+          [Symbol(kHeadersCount)]: 16,
+          [Symbol(kTrailers)]: null,
+          [Symbol(kTrailersCount)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        aborted: false,
+        timeoutCb: null,
+        upgradeOrConnect: false,
+        parser: null,
+        maxHeadersCount: null,
+        reusedSocket: false,
+        host: '127.0.0.1',
+        protocol: 'http:',
+        [Symbol(kCapture)]: false,
+        [Symbol(kBytesWritten)]: 0,
+        [Symbol(kEndCalled)]: true,
+        [Symbol(kNeedDrain)]: false,
+        [Symbol(corked)]: 0,
+        [Symbol(kOutHeaders)]: [Object: null prototype] {
+          host: [Array],
+          'accept-encoding': [Array],
+          'content-type': [Array],
+          'content-length': [Array]
+        },
+        [Symbol(kUniqueHeaders)]: null
+      },
+      text: '{"message":"User not found, Please register yourself first","status":400,"error":true}',
+      files: undefined,
+      buffered: true,
+      headers: {
+        'x-powered-by': 'Express',
+        'access-control-allow-origin': '*',
+        'content-type': 'application/json; charset=utf-8',
+        'content-length': '86',
+        etag: 'W/"56-/23N2lZHemAsMBOB3nw1KisCtHg"',
+        vary: 'Accept-Encoding',
+        date: 'Mon, 07 Aug 2023 05:33:31 GMT',
+        connection: 'close'
+      },
+      header: {
+        'x-powered-by': 'Express',
+        'access-control-allow-origin': '*',
+        'content-type': 'application/json; charset=utf-8',
+        'content-length': '86',
+        etag: 'W/"56-/23N2lZHemAsMBOB3nw1KisCtHg"',
+        vary: 'Accept-Encoding',
+        date: 'Mon, 07 Aug 2023 05:33:31 GMT',
+        connection: 'close'
+      },
+      statusCode: 400,
+      status: 400,
+      statusType: 4,
+      info: false,
+      ok: false,
+      redirect: false,
+      clientError: true,
+      serverError: false,
+      error: Error: cannot POST /api/v1/login (400)
+          at Response.Object.<anonymous>.Response.toError (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/node/response.js:110:17)
+          at Response.toError [as _setStatusProperties] (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/response-base.js:107:48)
+          at new _setStatusProperties (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/node/response.js:41:8)
+          at Test.Object.<anonymous>.Request._emitResponse (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/node/index.js:953:20)
+          at _emitResponse (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/node/index.js:1166:38)
+          at IncomingMessage.fn (/opt/src/Whisker17/w3f-test/security/Security_Marketplace_Backend/Backend/node_modules/superagent/src/node/parsers/json.js:19:7)
+          at IncomingMessage.emit (node:events:525:35)
+          at endReadableNT (node:internal/streams/readable:1358:12)
+          at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+        status: 400,
+        text: '{"message":"User not found, Please register yourself first","status":400,"error":true}',
+        method: 'POST',
+        path: '/api/v1/login'
+      },
+      created: false,
+      accepted: false,
+      noContent: false,
+      badRequest: true,
+      unauthorized: false,
+      notAcceptable: false,
+      forbidden: false,
+      notFound: false,
+      unprocessableEntity: false,
+      type: 'application/json',
+      charset: 'utf-8',
+      links: {},
+      setEncoding: [Function: bound ],
+      redirects: [],
+      _body: {
+        message: 'User not found, Please register yourself first',
+        status: 400,
+        error: true
+      },
+      pipe: [Function (anonymous)],
+      [Symbol(kCapture)]: false
+    } .#################
+
+      at Object.log (src/test/userController.test.ts:100:13)
+
+  console.log
+    login data eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IsOhd2VyYWF0eUB5b3BtYWlsLmNvbSIsIl9pZCI6IjY0ZDA4MjJiYzk5NGNhNmZhODFjY2JmNSIsImlhdCI6MTY5MTM4NjQxMSwiZXhwIjoxNjkxNDE1MjExfQ.arUrS85FS2FIpt5NppqP1A44jaxVE50cJoiIL1Noxjk
+
+      at Object.log (src/test/userController.test.ts:109:13)
+
+  console.log
+    response.message {
+      message: 'Success',
+      status: 200,
+      error: false,
+      data: {
+        emailAddress: 'áweraaty@yopmail.com',
+        walletAddress: '5En7yhgG9E8vCrnyZMdxc7ToJdYqRyeCzfgjNXoAS8rkG16r',
+        firstName: 'admin',
+        lastName: 'qwerfty',
+        gitHub: 'https://github.com/Sriharsh1103',
+        linkedIn: '',
+        telegram: '',
+        bio: 'good guy ultra max pro',
+        profilePicture: ''
+      }
+    }
+
+      at Object.log (src/test/userController.test.ts:116:13)
+
+  console.log
+    response ... {
+      message: 'Success',
+      status: 200,
+      error: false,
+      data: {
+        response: {
+          emailAddress: 'áweraaty@yopmail.com',
+          status: 'PENDING',
+          auditType: [Array],
+          gitHub: 'https://github.com/pass-the-baton/derivatives/tree/main/contractsgithub.com',
+          offerAmount: 1,
+          postID: 7281,
+          estimatedDelivery: '05/10/2023',
+          description: 'great project',
+          socialLink: 'googlecom',
+          auditorEmail: '',
+          _id: '64d0822bc994ca6fa81ccc04',
+          createdAt: '2023-08-07T05:33:31.659Z',
+          updatedAt: '2023-08-07T05:33:31.659Z'
+        },
+        firstName: 'admin',
+        lastName: 'qwerfty'
+      }
+    }
+
+      at Object.log (src/test/userController.test.ts:146:13)
+
+  console.log
+    response ... {
+      message: 'Success',
+      status: 200,
+      error: false,
+      count: 1,
+      data: [
+        {
+          emailAddress: 'áweraaty@yopmail.com',
+          _id: '64d0822bc994ca6fa81ccc04',
+          firstName: 'admin',
+          lastName: 'qwerfty',
+          createdAt: '2023-08-07T05:33:31.659Z',
+          auditType: [Array],
+          gitHub: 'https://github.com/pass-the-baton/derivatives/tree/main/contractsgithub.com',
+          postID: 7281,
+          offerAmount: 1,
+          estimatedDelivery: '05/10/2023'
+        }
+      ]
+    }
+
+      at Object.log (src/test/userController.test.ts:166:13)
+
+  console.log
+    response ... {
+      message: 'Success',
+      status: 200,
+      error: false,
+      count: 1,
+      data: [
+        {
+          emailAddress: 'áweraaty@yopmail.com',
+          _id: '64d0822bc994ca6fa81ccc04',
+          firstName: 'admin',
+          lastName: 'qwerfty',
+          createdAt: '2023-08-07T05:33:31.659Z',
+          auditType: [Array],
+          gitHub: 'https://github.com/pass-the-baton/derivatives/tree/main/contractsgithub.com',
+          postID: 7281,
+          offerAmount: 1,
+          estimatedDelivery: '05/10/2023'
+        }
+      ]
+    }
+
+      at Object.log (src/test/userController.test.ts:186:13)
+
+  console.log
+    response ... {
+      message: 'Success',
+      status: 200,
+      error: false,
+      data: {
+        response: {
+          _id: '64d0822cc994ca6fa81ccc1e',
+          emailAddress: 'áweraaty@yopmail.com',
+          status: 'PENDING',
+          auditType: [Array],
+          gitHub: 'https://github.com/pass-the-baton/derivatives/tree/main/contractsgithub.com',
+          offerAmount: 1,
+          postID: 83184,
+          estimatedDelivery: '05/10/2023',
+          description: 'great project',
+          socialLink: 'googlecom',
+          auditorEmail: '',
+          createdAt: '2023-08-07T05:33:32.206Z',
+          updatedAt: '2023-08-07T05:33:32.206Z'
+        },
+        firstName: 'admin',
+        lastName: 'qwerfty'
+      }
+    }
+
+      at Object.log (src/test/userController.test.ts:268:13)
+
+ PASS  src/test/userController.test.ts
   user Controller
-    ✕ register with new email: Pass (5002 ms)
-    ✓ register with empty email: Fail (8 ms)
-    ✓ register with empty password: Fail (3 ms)
-    ✓ register with mismatched passwords: Fail (2 ms)
-    ✕ re-register with same email: Fail (5001 ms)
-    ✕ login with registered email: Pass (5001 ms)
-    ✓ login with empty email: Fail (6 ms)
+    ✓ register with new email: Pass (181 ms)
+    ✓ register with empty email: Fail (5 ms)
+    ✓ register with empty password: Fail (4 ms)
+    ✓ register with mismatched passwords: Fail (4 ms)
+    ✓ re-register with same email: Fail (4 ms)
+    ✓ login with registered email: Pass (56 ms)
+    ✓ login with empty email: Fail (3 ms)
     ✓ login with empty password: Fail (4 ms)
-    ✕ login with registered email and wrong password: Fail (5000 ms)
-    ✕ login with unregistered email: Fail (5001 ms)
-    ✕ update profile  with registered email after login: Pass (5001 ms)
-    ✕ getUser  with registered email after login: Pass (5001 ms)
-    ✕ Register audit (5002 ms)
-    ✕ Get details of all audit PUBLIC (5001 ms)
-    ✕ Get details of all audit (5001 ms)
-    ✕ change password  with registered email after login: Pass (5002 ms)
-    ✕ Update Audit Status (5001 ms)
-    ✕ Update Auditor ID (5002 ms)
-    ✕ Get Details of Audit (5002 ms)
+    ✓ login with registered email and wrong password: Fail (54 ms)
+    ✓ login with unregistered email: Fail (42 ms)
+    ✓ update profile  with registered email after login: Pass (78 ms)
+    ✓ getUser  with registered email after login: Pass (65 ms)
+    ✓ Register audit (68 ms)
+    ✓ Get details of all audit PUBLIC (63 ms)
+    ✓ Get details of all audit (62 ms)
+    ✓ change password  with registered email after login: Pass (218 ms)
+    ✓ Update Audit Status (71 ms)
+    ✓ Update Auditor ID (67 ms)
+    ✓ Get Details of Audit (68 ms)
 
-  ● user Controller › register with new email: Pass
-
-    listen EADDRINUSE: address already in use :::9000
-
-      36 |
-      37 |   public listen(port: number) {
-    > 38 |     this.app.listen(port, () => {
-         |              ^
-      39 |       console.log(`Server is running on port ${port}`);
-      40 |     });
-      41 |   }
-
-      at Function.listen (node_modules/express/lib/application.js:635:24)
-      at ExpressServer.listen (src/server.ts:38:14)
-      at Object.listen (src/test/userController.test.ts:6:8)
-
-  ● user Controller › register with new email: Pass
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-       7 |
-       8 | describe('user Controller', () => {
-    >  9 |   it('register with new email: Pass', async () => {
-         |   ^
-      10 |     let response = await request(Server.app)
-      11 |       .post('/api/v1/register')
-      12 |       .send(config.REGISTER_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:9:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › re-register with same email: Fail
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      51 |   })
-      52 |
-    > 53 |   it('re-register with same email: Fail', async () => {
-         |   ^
-      54 |     let response = await request(Server.app)
-      55 |       .post('/api/v1/register')
-      56 |       .send(config.REGISTER_PAYLOAD_CASE_5)
-
-      at it (src/test/userController.test.ts:53:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › login with registered email: Pass
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      58 |   })
-      59 |
-    > 60 |   it('login with registered email: Pass', async () => {
-         |   ^
-      61 |     let response = await request(Server.app)
-      62 |       .post('/api/v1/login')
-      63 |       .send(config.LOGIN_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:60:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › login with registered email and wrong password: Fail
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      85 |   })
-      86 |
-    > 87 |   it('login with registered email and wrong password: Fail', async () => {
-         |   ^
-      88 |     let response = await request(Server.app)
-      89 |       .post('/api/v1/login')
-      90 |       .send(config.LOGIN_PAYLOAD_CASE_4)
-
-      at it (src/test/userController.test.ts:87:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › login with unregistered email: Fail
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      93 |     // console.log("response.message",response.body.data)
-      94 |   })
-    > 95 |   it('login with unregistered email: Fail', async () => {
-         |   ^
-      96 |     let response = await request(Server.app)
-      97 |       .post('/api/v1/login')
-      98 |       .send(config.LOGIN_PAYLOAD_CASE_5)
-
-      at it (src/test/userController.test.ts:95:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › update profile  with registered email after login: Pass
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      101 |   })
-      102 |
-    > 103 |   it('update profile  with registered email after login: Pass', async () => {
-          |   ^
-      104 |     let response = await request(Server.app)
-      105 |       .post('/api/v1/login')
-      106 |       .send(config.LOGIN_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:103:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › getUser  with registered email after login: Pass
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      119 |
-      120 |
-    > 121 |   it('getUser  with registered email after login: Pass', async () => {
-          |   ^
-      122 |     let response = await request(Server.app)
-      123 |       .post('/api/v1/login')
-      124 |       .send(config.LOGIN_PAYLOAD_CASE_6)
-
-      at it (src/test/userController.test.ts:121:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Register audit
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      131 |   })
-      132 |
-    > 133 |   it('Register audit', async () => {
-          |   ^
-      134 |     let response = await request(Server.app)
-      135 |       .post('/api/v1/login')
-      136 |       .send(config.LOGIN_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:133:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Get details of all audit PUBLIC
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      147 |   })
-      148 |
-    > 149 |   it('Get details of all audit PUBLIC', async () => {
-          |   ^
-      150 |     let obj = {
-      151 |       emailAddress: "áweraaty@yopmail.com"
-      152 |     }
-
-      at it (src/test/userController.test.ts:149:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Get details of all audit
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      167 |   })
-      168 |
-    > 169 |   it('Get details of all audit', async () => {
-          |   ^
-      170 |     let obj = {
-      171 |       emailAddress: "áweraaty@yopmail.com"
-      172 |     }
-
-      at it (src/test/userController.test.ts:169:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › change password  with registered email after login: Pass
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      187 |   })
-      188 |
-    > 189 |   it('change password  with registered email after login: Pass', async () => {
-          |   ^
-      190 |     let response = await request(Server.app)
-      191 |       .post('/api/v1/login')
-      192 |       .send(config.LOGIN_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:189:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Update Audit Status
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      199 |   })
-      200 |
-    > 201 |   it('Update Audit Status', async () => {
-          |   ^
-      202 |     let response = await request(Server.app)
-      203 |       .post('/api/v1/login')
-      204 |       .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:201:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Update Auditor ID
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      223 |   })
-      224 |
-    > 225 |   it('Update Auditor ID', async () => {
-          |   ^
-      226 |     let response = await request(Server.app)
-      227 |       .post('/api/v1/login')
-      228 |       .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:225:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-  ● user Controller › Get Details of Audit
-
-    thrown: "Exceeded timeout of 5000 ms for a test.
-    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
-
-      246 |
-      247 |
-    > 248 |   it('Get Details of Audit', async () => {
-          |   ^
-      249 |     let response = await request(Server.app)
-      250 |     .post('/api/v1/login')
-      251 |     .send(config.NEW_LOGIN_CRED_PAYLOAD_CASE_1)
-
-      at it (src/test/userController.test.ts:248:3)
-      at Object.describe (src/test/userController.test.ts:8:1)
-
-Test Suites: 1 failed, 1 total
-Tests:       14 failed, 5 passed, 19 total
+Test Suites: 1 passed, 1 total
+Tests:       19 passed, 19 total
 Snapshots:   0 total
-Time:        70.995 s, estimated 72 s
+Time:        2.008 s, estimated 72 s
 Ran all test suites.
-Jest did not exit one second after the test run has completed.
-
-'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
-
-
-```
-
-</details>
-
-#### Screenshots
-
-![swagger register test](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/4068bd94-9ca2-4d16-9b10-d7b041e1d1ab)
-
-### Frontend
-
-<details>
-
-<summary> docker build </summary>
-
-```bash
-
-[+] Building 8.2s (10/10) FINISHED                               docker:default
- => [internal] load .dockerignore                                          0.0s
- => => transferring context: 2B                                            0.0s
- => [internal] load build definition from Dockerfile                       0.0s
- => => transferring dockerfile: 199B                                       0.0s
- => [internal] load metadata for docker.io/library/node:16                 8.1s
- => [1/5] FROM docker.io/library/node:16@sha256:6cd6581a9ae814ebbc8077afd  0.0s
- => [internal] load build context                                          0.0s
- => => transferring context: 5.01kB                                        0.0s
- => CACHED [2/5] WORKDIR /app                                              0.0s
- => CACHED [3/5] COPY package.json .                                       0.0s
- => CACHED [4/5] RUN npm install --force                                   0.0s
- => CACHED [5/5] COPY . .                                                  0.0s
- => exporting to image                                                     0.0s
- => => exporting layers                                                    0.0s
- => => writing image sha256:270be7647a1c9b3a80383fa26755345afc7355ea4b08d  0.0s
- => => naming to docker.io/library/my-audit-bazaar-img                     0.0s
 
 ```
 
@@ -436,8 +946,4 @@ Jest did not exit one second after the test run has completed.
 
 - Connect wallet
 
-![connect wallet](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/430d1c9d-3770-41a5-be8d-1ea37811aebe)
-
-- Change password
-
-![change password](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/434fab41-f9f0-44bf-a348-52be3ec0de16)
+![connect wallet](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/fee3504e-c9d2-47bf-bc68-192ac5a9aa67)
