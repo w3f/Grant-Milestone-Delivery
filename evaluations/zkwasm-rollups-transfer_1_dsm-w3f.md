@@ -22,7 +22,9 @@
 
 ### Documentation
 
-The [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/) is good, but the readme has some broken links. Could you explain how you got the values for deliverable 2 and if I can reproduce it?
+The [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/) is good. Could you explain how you got the values for deliverable 2 and if I can reproduce it?
+
+The repository has some broken links. Here are some I found, in the [README in the root](https://github.com/KogarashiNetwork/Kogarashi/blob/master/README.md), all the links in the columns name in Crypto Primitives. In the same README, all the links in the Pallet Functionalities, and in the [README in the folder primitive](https://github.com/KogarashiNetwork/Kogarashi/tree/master/primitive) the name `zkstd`.
 
 ### Article
 
