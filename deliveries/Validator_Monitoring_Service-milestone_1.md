@@ -26,7 +26,7 @@ The current deliverable is a portable version of our service. That means that we
 | Number | Deliverable | Link | Notes |
 | --- | --- | --- | --- |
 | 0a. | License | Apache 2.0 |  |
-| 0b. | Documentation | https://github.com/p2p-org/polkadot_monitoring_service/blob/main/docs/overview.md | And  |
+| 0b. | Documentation | https://github.com/p2p-org/polkadot_monitoring_service/blob/main/docs/overview.md | And https://github.com/p2p-org/polkadot_monitoring_service/blob/main/README.md |
 | 0c. | Testing Guide | https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard | You need to test two components: 1) exporters and a Grafana instance: after running docker-compose, go to the local Grafana http://127.0.0.1:3000/d/fDrj0_EGz/p2p-org-polkadot-kusama-dashboard?orgId=1 and check that for the validators the collection of metrics started (the dashboard is not empty) 2) tg bot: follow the instruction in the read me (tg bot should generate values.yml for the Grafana) |
 | 0d. | Docker | https://github.com/p2p-org/polkadot_monitoring_service |  |
 | 1. | Events exporter | https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events | We collect data for unique metrics such as finality (prevotes and pre commits), common data (rewards points, etc), and validator-related events. 
