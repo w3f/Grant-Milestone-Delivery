@@ -19,7 +19,7 @@ During the current milestone, our team prioritized enhancing technical aspects a
 
 Moreover, we integrated a range of validator-related events into the dashboard, including balances, Imonline, proxy, staking, ParasDisputes, and others. These events, which significantly impact validator operations, provide a more comprehensive view of the validator's functioning. Alongside these advancements, we launched a new webpage to introduce our services to users, intending to bolster user understanding and engagement.
 
-The current deliverable is a portable version of our service. That means that we provide two components 1) exporters and a Grafana instance. 2) tg bot. In the portable version, these components are independent and fully working locally. To set up monitoring as a service one needs to use his/her own infrastructure (which is impossible to provide in a repository). However, we provide all the necessary tools and run an our own monitoring as a service.  
+The current deliverable is a portable version of our service. That means that we provide two components 1) exporters and a Grafana instance. 2) tg bot. In the portable version, these components are independent and fully working locally. To set up monitoring as a сloud service one needs to use his/her own infrastructure (which is impossible to provide in a repository). However, we provide all the necessary tools and run an our own monitoring as a service.  
 
 **Deliverables**
 
