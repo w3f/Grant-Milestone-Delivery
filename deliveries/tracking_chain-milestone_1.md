@@ -5,14 +5,14 @@
 * **Application Document:** [LINK](https://github.com/w3f/Grants-Program/blob/master/applications/tracking_chain.md)
 * **Milestone Number:** 1
 
-**Context** (optional)
+**Context** (optional)  
 A smart contract has been created capable of storing a pair of key-values and the entire infrastructure in order to be able to write on-chain the data entering the Triage API service. A generic Substrate Client has also been created in Dotnet (with the integration of the Ajuna SubstrateGaming project) capable of supporting add-on modules to support any Substrate chain that has the contract pallet.
 
 **Deliverables**
 
 | Number | Deliverable | Link | Notes |
 | ------- | ------------- | ----- |------------- |
-| **0a.** | License | MIT | [LINK](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) |
+| **0a.** | License | [LINK](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) | MIT |
 | **0b.** | Documentation | [LINK](https://github.com/TrackingChains/TrackingChain/wiki) | We will provide a basic **tutorial** that explains how a user can configure the data entry for create profile for to associate the tracking requests to a smart contract transaction. |
 | **0c.** | Testing and Testing Guide | [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. |
 | **0d.** | Docker | [LINK SQL Server under Docker](https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash) | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
