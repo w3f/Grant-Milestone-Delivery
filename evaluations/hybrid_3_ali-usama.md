@@ -6,19 +6,21 @@
 - **Kusama Identity:** Eexv1mKLiCidz2gGh6vfowtXgSSc7mvD4xEb2ji998W4DPs
 - **Previously successfully merged evaluation:** All evaluations by ali-usama
 
-| Number | Deliverable             | Accepted               | Link                                                                                                                                                                        | Evaluation Notes                            |
-|--------|-------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| 0a.    | Licence                 | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/LICENSE)                                                                                           | Correct Licence                             |
-| 0b.    | Documentation           | <ul><li>[x] </li></ul> | [Tutorial](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/tutorial.md)<br/>[README](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/README.md) | Detailed documentation                      |
-| 0c.    | Testing & Testing Guide | <ul><li>[x] </li></ul> | [Testing-Guide](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/testing-guide.md)                                                                           | All test cases pass. Output attached below. |
-| 0d.    | Docker                  | <ul><li>[x] </li></ul> | [Docker ReadMe](https://github.com/hybrid-explorer/polkadot-indexer/blob/main/README.md#docker)                                                                             | ...                                         |
-| 0e.    | Blog post               | <ul><li>[x] </li></ul> | [Launch-Announcement](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/launch-announcement.md)                                                               | Well-writen article                         |
-| 1.     | Hybrid indexer library  | <ul><li>[x] </li></ul> | [substrate-pallet](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/src/substrate_pallets.rs)                                                                    | Working as per application                  |
-| 2.     | Polkadot Indexer        | <ul><li>[x] </li></ul> | [polkadot-indexer](https://github.com/hybrid-explorer/polkadot-indexer)                                                                                                     | Working as per application                  |
-| 3.     | Chain Select            | <ul><li>[x] </li></ul> | [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp)                                                                                                               | Working as per application                  |
+| Number | Deliverable             | Accepted               | Link                                                                                                                                                                        | Evaluation Notes                                                                            |
+|--------|-------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| 0a.    | Licence                 | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/LICENSE)                                                                                           | Correct Licence                                                                             |
+| 0b.    | Documentation           | <ul><li>[x] </li></ul> | [Tutorial](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/tutorial.md)<br/>[README](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/README.md) | Detailed documentation                                                                      |
+| 0c.    | Testing & Testing Guide | <ul><li>[x] </li></ul> | [Testing-Guide](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/testing-guide.md)                                                                           | All test cases pass. Output attached below.                                                 |
+| 0d.    | Docker                  | <ul><li>[x] </li></ul> | [Docker ReadMe](https://github.com/hybrid-explorer/polkadot-indexer/blob/main/README.md#docker)                                                                             | Images building and running successfully, except `polkadot-indexer`. Output attached below. |
+| 0e.    | Blog post               | <ul><li>[x] </li></ul> | [Launch-Announcement](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/doc/launch-announcement.md)                                                               | Well-writen article                                                                         |
+| 1.     | Hybrid indexer library  | <ul><li>[x] </li></ul> | [substrate-pallet](https://github.com/hybrid-explorer/hybrid-indexer/blob/main/src/substrate_pallets.rs)                                                                    | Working as per application                                                                  |
+| 2.     | Polkadot Indexer        | <ul><li>[x] </li></ul> | [polkadot-indexer](https://github.com/hybrid-explorer/polkadot-indexer)                                                                                                     | Working as per application                                                                  |
+| 3.     | Chain Select            | <ul><li>[x] </li></ul> | [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp)                                                                                                               | Working as per application                                                                  |
 
 
 ## General Notes
+
+All three repositories included in the milestone are well-structured and well-documented. Except the docker build issues in the 'polkadot-indexer', no major issues were found in the delivery. 
 
 ### `cargo test` output
 ```commandline
@@ -78,4 +80,88 @@ test result: ok. 45 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fin
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+### Docker Build Output
+1. [hybrid-indexer](https://github.com/hybrid-explorer/hybrid-indexer/tree/main)
+```commandline
+docker build .
+[+] Building 2012.4s (9/9) FINISHED                                                                                                               
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 189B                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 52B                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/rust:slim                                                                                 4.2s
+ => [1/4] FROM docker.io/library/rust:slim@sha256:ec0d77d4f1abd42828514c313b7f196b5fed655bf61f5e4c9e04f892016c270f                        1653.5s
+ => => resolve docker.io/library/rust:slim@sha256:ec0d77d4f1abd42828514c313b7f196b5fed655bf61f5e4c9e04f892016c270f                           0.0s
+ => => sha256:1d5252f66ea9b661aceca1027b3d7ca259a50608261a25b51148119ecf086932 31.42MB / 31.42MB                                           299.4s
+ => => sha256:b6a3e85cbf07885cd8c7ffa0d0804b5d6582137a2c227b23d6efa05706c7cebc 247.12MB / 247.12MB                                        1645.7s
+ => => sha256:ec0d77d4f1abd42828514c313b7f196b5fed655bf61f5e4c9e04f892016c270f 984B / 984B                                                   0.0s
+ => => sha256:7b9e70011dbfd71a3998fe30ea2a531b6da83630967da55bb2d4429e6f88b70a 742B / 742B                                                   0.0s
+ => => sha256:a481afef44127ac10336f34d2bbb9137d116390cd4b29d35057d191468eb7532 4.85kB / 4.85kB                                               0.0s
+ => => extracting sha256:1d5252f66ea9b661aceca1027b3d7ca259a50608261a25b51148119ecf086932                                                    2.0s
+ => => extracting sha256:b6a3e85cbf07885cd8c7ffa0d0804b5d6582137a2c227b23d6efa05706c7cebc                                                    7.4s
+ => [internal] load build context                                                                                                            0.0s
+ => => transferring context: 3.01kB                                                                                                          0.0s
+ => [2/4] WORKDIR /usr/src/hybrid-indexer                                                                                                    0.8s
+ => [3/4] COPY . .                                                                                                                           0.0s
+ => [4/4] RUN cargo build --release                                                                                                        345.8s
+ => exporting to image                                                                                                                       8.0s
+ => => exporting layers                                                                                                                      8.0s
+ => => writing image sha256:4628da65b737ba9bfa83c2886fc6db373e2c71a1ca32a7b2d400adb1882c15af
+```
+2. [hybrid-dapp](https://github.com/hybrid-explorer/hybrid-dapp/blob/main/README.md#docker)
+```commandline
+docker build .
+[+] Building 265.3s (10/10) FINISHED                                                                                                              
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 296B                                                                                                            0.0s
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 188B                                                                                                         0.0s
+ => [internal] load metadata for docker.io/gplane/pnpm:8                                                                                     8.5s
+ => [1/5] FROM docker.io/gplane/pnpm:8@sha256:aa0d638af24764bdbaa56f0b31b3fc70462b512ca4fc9116fa4b647bd1360327                               0.0s
+ => [internal] load build context                                                                                                            0.0s
+ => => transferring context: 3.18kB                                                                                                          0.0s
+ => CACHED [2/5] WORKDIR /usr/src/hybrid-dapp                                                                                                0.0s
+ => [3/5] COPY . .                                                                                                                           0.0s
+ => [4/5] RUN pnpm install                                                                                                                 239.1s
+ => [5/5] RUN pnpm build                                                                                                                    13.6s
+ => exporting to image                                                                                                                       4.0s 
+ => => exporting layers                                                                                                                      4.0s 
+ => => writing image sha256:ed805ef8aae1b98ac649f503ea1fc079b5d36cf9a4b56584aeac6d719a305a19
+```
+```commandline
+docker run --rm -p 8272:8272 ed805ef8aae1b98ac649f503ea1fc079b5d36cf9a4b56584aeac6d719a305a19
+
+> hybrid-app@0.0.0 preview /usr/src/hybrid-dapp
+> vite preview "--host" "0.0.0.0" "--port" "8272"
+
+  ➜  Local:   http://localhost:8272/
+  ➜  Network: http://172.17.0.2:8272/
+
+```
+3. [polkadot-indexer](https://github.com/hybrid-explorer/polkadot-indexer#docker)
+
+Getting this error on the docker-build for polkadot-indexer
+```commandline
+docker build .
+...
+#0 835.8    Compiling home v0.5.5
+#0 836.4    Compiling hybrid-indexer v0.1.0
+#0 849.0    Compiling clap v4.3.19
+#0 849.2    Compiling metadata v0.1.0 (/usr/src/polkadot-indexer/metadata)
+#0 2035.1 error: could not compile `metadata` (lib)
+#0 2035.1 
+#0 2035.1 Caused by:
+#0 2035.2   process didn't exit successfully: `/usr/local/rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name metadata --edition=2021 metadata/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C embed-bitcode=no -C metadata=c8f93a828242b360 -C extra-filename=-c8f93a828242b360 --out-dir /usr/src/polkadot-indexer/target/release/deps -L dependency=/usr/src/polkadot-indexer/target/release/deps --extern subxt=/usr/src/polkadot-indexer/target/release/deps/libsubxt-3998efaa841aca38.rmeta -L native=/usr/src/polkadot-indexer/target/release/build/ring-37c484a9d815ace0/out` (signal: 9, SIGKILL: kill)
+------
+Dockerfile:9
+--------------------
+   7 |     RUN rustup default nightly
+   8 |     
+   9 | >>> RUN cargo build --release
+  10 |     
+  11 |     EXPOSE 8172 8173 8174 8175
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cargo build --release" did not complete successfully: exit code: 101
 ```
