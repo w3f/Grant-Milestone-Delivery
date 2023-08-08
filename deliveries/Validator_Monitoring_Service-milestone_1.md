@@ -29,8 +29,7 @@ The current deliverable is a portable version of our service. That means that we
 | 0b. | Documentation | https://github.com/p2p-org/polkadot_monitoring_service/blob/main/docs/overview.md | And https://github.com/p2p-org/polkadot_monitoring_service/blob/main/README.md |
 | 0c. | Testing Guide | https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard | You need to test two components: 1) exporters and a Grafana instance: after running docker-compose, go to the local Grafana http://127.0.0.1:3000/d/fDrj0_EGz/p2p-org-polkadot-kusama-dashboard?orgId=1 and check that for the validators the collection of metrics started (the dashboard is not empty) 2) tg bot: follow the instruction in the read me (tg bot should generate values.yml for the Grafana) |
 | 0d. | Docker | https://github.com/p2p-org/polkadot_monitoring_service |  |
-| 1. | Events exporter | https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events | We collect data for unique metrics such as finality (prevotes and pre commits), common data (rewards points, etc), and validator-related events. 
-Everything dockerised  |
+| 1. | Events exporter | https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events | We collect data for unique metrics such as finality (prevotes and pre commits), common data (rewards points, etc), and validator-related events. Everything dockerised  |
 | 2. | Telegram bot UI + support chat upgrades | https://github.com/p2p-org/polkadot_monitoring_service/tree/main/bot | A bot provides full monitoring as a service and sets up a personal Grafana dashboard for every platform user (you do not need to run tg bot if you run it only locally and only for yourself (without external users).  |
 | 3. | Create a landing page | https://maas.p2p.org/ | Template in figma: https://www.figma.com/file/QUcO9g8FoiXDlNBUmIkdXm/MaaS?type=design&mode=design&t=LpmIkQyUPFyiSni6-0 |
 
