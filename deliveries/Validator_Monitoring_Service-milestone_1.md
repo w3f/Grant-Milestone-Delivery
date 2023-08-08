@@ -27,9 +27,7 @@ The current deliverable is a portable version of our service. That means that we
 | --- | --- | --- | --- |
 | 0a. | License | Apache 2.0 |  |
 | 0b. | Documentation | https://github.com/p2p-org/polkadot_monitoring_service/blob/main/docs/overview.md | And  |
-| 0c. | Testing Guide | https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard | You need to test two components: 
-1) exporters and a Grafana instance: after running docker-compose, go to the local Grafana http://127.0.0.1:3000/d/fDrj0_EGz/p2p-org-polkadot-kusama-dashboard?orgId=1 and check that for the validators the collection of metrics started (the dashboard is not empty)
-2) tg bot: follow the instruction in the read me (tg bot should generate values.yml for the Grafana) |
+| 0c. | Testing Guide | https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard | You need to test two components: 1) exporters and a Grafana instance: after running docker-compose, go to the local Grafana http://127.0.0.1:3000/d/fDrj0_EGz/p2p-org-polkadot-kusama-dashboard?orgId=1 and check that for the validators the collection of metrics started (the dashboard is not empty) 2) tg bot: follow the instruction in the read me (tg bot should generate values.yml for the Grafana) |
 | 0d. | Docker | https://github.com/p2p-org/polkadot_monitoring_service |  |
 | 1. | Events exporter | https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events | We collect data for unique metrics such as finality (prevotes and pre commits), common data (rewards points, etc), and validator-related events. 
 Everything dockerised  |
@@ -38,4 +36,15 @@ Everything dockerised  |
 
 **Additional Information**
 
-The delivery plan for the Milestone 2 which covers all deliverables indicated in the proposal :
+The delivery plan for the Milestone 2 which covers all deliverables indicated in the proposal:
+| Number | Deliverable | Specification |
+| --- | --- | --- |
+| 0a. | License | Apache 2.0 |
+| 0b. | Documentation | We will provide a tutorial page that explains how a user can set up monitoring for selected validators. We show how our functionality works and give reasoning and explanations for all metrics that are shown to the user. |
+| 0c. | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+| 0d. | Docker | We will provide a Dockerfile(s) that can be used to self-host the telegram bot and check the functionality. |
+| 0e. | Article | We will publish an article that explains the user flow of our system and promotes using monitoring for validators operators. |
+| 1. | Telegram bot adding alerting based on events | We will introduce a feature that allows users to subscribe to specific events. This means users can opt to receive Telegram notifications when their chosen validators receive rewards, are elected into the active set, and more. |
+| 2. | Improve UX Dashboard | We plan to streamline Grafana's interface by removing surplus controls, enhancing the quality of our charts, and implementing Kiosk mode. We aim to bolster security through provisioning measures, such as enforcing password changes for users. |
+| 3. | Cover monitoring for parachains | We will add the support of the most popular parachains such as Moonbeam, Moonriver, Acala, Karura, Astar, Shiden |
+| 4. | Auto-remove instances | We will develop a system that identifies and removes inactive Grafana instances. |
