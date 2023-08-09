@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** [w3f/Grants-Program#1847](https://github.com/w3f/Grants-Program/blob/master/applications/tracking_chain.md)
 - **Milestone:** 1
 - **Kusama Identity:** [FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5](https://sub.id/FdAoQzuxaG2nsXFGpvXfzzUDYueKqYK1B1LShZ874N2vhv5)
@@ -27,12 +27,6 @@
 ## General Notes
 
 TodoOverall, this is a solid project, well documented and scripts, and all promised features work as expected. 
-
-## Issues
-
-- Swagger does not work.
-
-![image](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/fcd7167b-4101-433b-aec9-822f9e68cb55)
 
 ## Logs
 
@@ -305,6 +299,8 @@ Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operati
 ![TransactionRegistries](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/e5d23a0e-48dd-4f2c-bdb3-fbdb6e2e581b)
 
 #### API proof
+
+![Swagger](https://github.com/w3f/Grant-Milestone-Delivery/assets/12571049/7f77682b-cb63-4826-9463-e429522f2358)
 
 <details>
 <summary> Tracking Data </summary>
