@@ -43,7 +43,7 @@ As part of the grant program, we allow everyone to participate in the evaluation
 
 - [On-Chain identity](https://guide.kusama.network/docs/learn-identity/) on Kusama
 - GitHub account
-- Share your postal address with us via grants@web3.foundation due to regulatory reasons
+- Share your identity and postal address with us via grants@web3.foundation due to regulatory reasons
 - The evaluation must be submitted within ten days after the milestone was delivered
 
 ### Process
