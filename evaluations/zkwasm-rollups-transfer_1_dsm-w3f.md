@@ -10,13 +10,70 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/KogarashiNetwork/Kogarashi/blob/master/LICENSE) | |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| Not Fully Evaluated yet. |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| Not Fully Evaluated yet. |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| |
 | 0d. | Docker | <ul><li>[x] </li></ul>| [docker-compose](https://github.com/KogarashiNetwork/Kogarashi/blob/master/docker-compose.yml) [base image](https://github.com/KogarashiNetwork/Kogarashi/tree/master/docker) | |
 | 0e. | Article | <ul><li>[ ] </li></ul>| [RedDSA Signature](https://kogarashinetwork.github.io/Kogarashi/technical/reddsa_signature/)| Not Fully Evaluated yet. |
-| 1. | `RedDSA` implementation | <ul><li>[ ] </li></ul>| [Making Substrate RedDSA Compatible](https://github.com/KogarashiNetwork/zksubstrate/compare/49a4103...95f493c) [RedDSA Library](https://github.com/KogarashiNetwork/Kogarashi/tree/master/primitive/redjubjub) | I have a problem with `cargo run fund`.  |
+| 1. | `RedDSA` implementation | <ul><li>[ ] </li></ul>| [Making Substrate RedDSA Compatible](https://github.com/KogarashiNetwork/zksubstrate/compare/49a4103...95f493c) [RedDSA Library](https://github.com/KogarashiNetwork/Kogarashi/tree/master/primitive/redjubjub) | Not Fully Evaluated yet. |
 | 2. | `Jubjub` curve optimization | <ul><li>[ ] </li></ul>| [field square](https://github.com/KogarashiNetwork/Kogarashi/pull/64) [field double](https://github.com/KogarashiNetwork/Kogarashi/pull/63) [jubjub NAF](https://github.com/KogarashiNetwork/Kogarashi/pull/60) [Twisted Edwards Revisit](https://github.com/KogarashiNetwork/Kogarashi/pull/68) | Not Fully Evaluated yet. |
-|3. | Client wallet implementation | <ul><li>[ ] </li></ul>| [Wallet Cli Example](https://github.com/KogarashiNetwork/Kogarashi/tree/master/node/client) | I have a problem with `cargo run fund`.  |
+|3. | Client wallet implementation | <ul><li>[ ] </li></ul>| [Wallet Cli Example](https://github.com/KogarashiNetwork/Kogarashi/tree/master/node/client) | Not Fully Evaluated yet. |
+
+## Evaluation V2
+
+The parts that involve cryptograpy will be evaluated by a specialist from our research team. 
+
+### Article
+
+Considering the article as the site, it seems to be good for me.
+
+### Manual Testing
+
+I ran the tutorial, and no problems this time.
+
+<details>
+
+```
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run balance
+	Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli balance`
+0 Balance
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run fund
+	Finished dev [unoptimized + debuginfo] target(s) in 0.29s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli fund`
+Transaction Success: String("0xe0d0316cacdf955c921481ef14e72a96fa3a7c658485f14b9b56b1920a62c168")
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run balance
+	Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli balance`
+1000000000000 Balance
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run balance Bob
+	Finished dev [unoptimized + debuginfo] target(s) in 0.26s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli balance Bob`
+1152921504606846976 Balance
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run transfer Bob 1000
+	Finished dev [unoptimized + debuginfo] target(s) in 0.34s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli transfer Bob 1000`
+Transaction Success: String("0x06d73d8bd15743d8e8380a058c35bf5be12f895de5ed4a7cef734dbd8bb0fdb8")
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run balance Bob
+	Finished dev [unoptimized + debuginfo] target(s) in 0.32s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli balance Bob`
+1152921504606847976 Balance
+
+user@localhost:~/Documents/zkwasm/Kogarashi/node/client$ cargo run balance
+	Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+ 	Running `/home/user/Documents/zkwasm/Kogarashi/node/target/debug/kogarashi-cli balance`
+999874998858 Balance
+```
+
+</details>
+
+### Benchmark
+
+I ran `cargo bench` and received something similar to the results. Could you specify what machine configuration was used for running the benchmark?
 
 ## Evaluation V1
 
