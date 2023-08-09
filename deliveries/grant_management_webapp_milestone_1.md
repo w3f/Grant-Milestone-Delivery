@@ -9,7 +9,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| **0a.** | License | Unlicense | Unlicensed |
+| **0a.** | License | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | Apache-2.0 |
 | **0b.** | Documentation | [User Guide](https://docs.google.com/document/d/1BLBns9tTUSpJMu7MhuQdLZYF8mUBQ8TD/edit) | **Inline documents can be found in the repositories** and User guide is for UI/UX components. |
 | **0c.** | Testing and Testing Guide | - | The respective Test files can be found alongside the project repositories with guidelines in readme files. |
 | **0d.** | Docker | - | The dockerfiles can be found alongside the project repositories.  |
