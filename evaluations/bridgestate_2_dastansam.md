@@ -14,8 +14,8 @@
 | **0b.** | Documentation | [Link](https://github.com/diadata-org/bridgestate-ocw#readme) | Documentation is provided, it is missing instructions on running tests |
 | **0c.** | Testing and Testing Guide | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/tests.rs) | Tests do not pass. |
 | **0d.** | Docker | [Link](https://github.com/diadata-org/bridgestate-ocw#using-docker) | Docker build is failing. |
-| 1. | Bridge Integration: Multichain | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/multichain.rs) | Multichain bridge integration |
-| 2. | Bridge Integration: Interlay | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/interlay.rs) | Interlay bridge integration |
+| 1. | Bridge Integration: Multichain | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/multichain.rs) | Lack of clear testing intstructions. |
+| 2. | Bridge Integration: Interlay | [Link](https://github.com/diadata-org/bridgestate-ocw/blob/main/src/interlay.rs) | Lack of clear testing intstructions. |
 
 ## General Notes
 
