@@ -20,6 +20,11 @@
 
 ## General Notes
 
+## Updated Notes Aug 9th, 2023
+The docker build issues are fixed in the recent commits. No further issues were found
+
+-----
+
 All three repositories included in the milestone are well-structured and well-documented. Except the docker build issues in the 'polkadot-indexer', no major issues were found in the delivery. 
 
 ### `cargo test` output
@@ -141,6 +146,29 @@ docker run --rm -p 8272:8272 ed805ef8aae1b98ac649f503ea1fc079b5d36cf9a4b56584aea
 
 ```
 3. [polkadot-indexer](https://github.com/hybrid-explorer/polkadot-indexer#docker)
+
+#### Output after the recent fixes
+```commandline
+docker build .
+[+] Building 3537.3s (10/10) FINISHED                                                                                                                 
+ => [internal] load build definition from Dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 261B                                                                                                             0.0s
+ => [internal] load .dockerignore                                                                                                                0.0s
+ => => transferring context: 48B                                                                                                                 0.0s
+ => [internal] load metadata for docker.io/library/rust:slim                                                                                     9.6s
+ => [internal] load build context                                                                                                                0.1s
+ => => transferring context: 1.64MB                                                                                                              0.1s
+ => [1/5] FROM docker.io/library/rust:slim@sha256:ec0d77d4f1abd42828514c313b7f196b5fed655bf61f5e4c9e04f892016c270f                               0.0s
+ => CACHED [2/5] WORKDIR /usr/src/polkadot-indexer                                                                                               0.0s
+ => [3/5] COPY . .                                                                                                                               0.9s
+ => [4/5] RUN rustup default nightly                                                                                                           163.8s
+ => [5/5] RUN cargo build --release -j 1                                                                                                      3352.3s
+ => exporting to image                                                                                                                          10.5s 
+ => => exporting layers                                                                                                                         10.5s 
+ => => writing image sha256:0e01bebfc2258ef038c058615279fb771d783e86794d0974dff0b1981a999264 
+```
+
+---
 
 Getting this error on the docker-build for polkadot-indexer
 ```commandline
