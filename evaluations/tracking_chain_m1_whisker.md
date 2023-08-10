@@ -12,7 +12,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.**| License |<ul><li>[x] </li></ul>| [MIT](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) | |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>|[Tutorial](https://github.com/TrackingChains/TrackingChain/wiki) | The documentations are easy to read, which explain the working of the application.|
-| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [UT](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)| |
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [UT](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)| Work as expected |
 | **0d.** | Docker |<ul><li>[x] </li></ul>|[docker](https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash)| This docker works as expected|
 | **0e.** | Article |<ul><li>[x] </li></ul>|[How to](https://github.com/TrackingChains/TrackingChain/wiki/Configuration-Step-By-Step)| Would be better if there is a indpendent article explaining the working of the application. |
 | 1 | API: Triage |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.1.0-alpha/src/Triage.API) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.1.0-alpha) | Work as expected|
@@ -26,7 +26,7 @@
 
 ## General Notes
 
-TodoOverall, this is a solid project, well documented and scripts, and all promised features work as expected. 
+Overall, this is a solid project, well documented and scripts, and all promised features work as expected. 
 
 ## Logs
 
