@@ -169,27 +169,4 @@ docker build .
 ```
 
 ---
-
-Getting this error on the docker-build for polkadot-indexer
-```commandline
-docker build .
-...
-#0 835.8    Compiling home v0.5.5
-#0 836.4    Compiling hybrid-indexer v0.1.0
-#0 849.0    Compiling clap v4.3.19
-#0 849.2    Compiling metadata v0.1.0 (/usr/src/polkadot-indexer/metadata)
-#0 2035.1 error: could not compile `metadata` (lib)
-#0 2035.1 
-#0 2035.1 Caused by:
-#0 2035.2   process didn't exit successfully: `/usr/local/rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name metadata --edition=2021 metadata/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C embed-bitcode=no -C metadata=c8f93a828242b360 -C extra-filename=-c8f93a828242b360 --out-dir /usr/src/polkadot-indexer/target/release/deps -L dependency=/usr/src/polkadot-indexer/target/release/deps --extern subxt=/usr/src/polkadot-indexer/target/release/deps/libsubxt-3998efaa841aca38.rmeta -L native=/usr/src/polkadot-indexer/target/release/build/ring-37c484a9d815ace0/out` (signal: 9, SIGKILL: kill)
-------
-Dockerfile:9
---------------------
-   7 |     RUN rustup default nightly
-   8 |     
-   9 | >>> RUN cargo build --release
-  10 |     
-  11 |     EXPOSE 8172 8173 8174 8175
---------------------
-ERROR: failed to solve: process "/bin/sh -c cargo build --release" did not complete successfully: exit code: 101
-```
+The polkadot-indexer build errors were fixed after the recent commits. 
