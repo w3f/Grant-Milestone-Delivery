@@ -7,16 +7,16 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.    | License                  | <ul><li>[x] </li></ul>|             [License](https://github.com/Mangoboxlabs/MangoSale/blob/main/LICENSE)              | Apache 2.0                                                        |
-| 0b.    | Documentation            | <ul><li>[x] </li></ul>|     [Documentation](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md)     |                                                    |
-| 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSale/blob/main/contract/README.md#testing) |  |
-| 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSale/tree/main/docker)               |                                                     |
+| 0a.    | License                  | <ul><li>[x] </li></ul>|             [License](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/LICENSE)              | Apache 2.0                                  |
+| 0b.    | Documentation            | <ul><li>[x] </li></ul>|     [Documentation](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/contract/README.md)     | Looks good.                                 |
+| 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/contract/README.md#testing) | Looks good. |
+| 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/docker)               |                                                     |
 | 0e.    | Article         | <ul><li>[x] </li></ul>|              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)               | |
-| 1.     | Ink! Contract: Launchpad           | <ul><li>[x] </li></ul>|   [mango_airdrop](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_airdrop)   |  |
-| 2.     | Ink! Contract: Fair launch           | <ul><li>[x] </li></ul>|      [mango_lock](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/mango_lock)      |  |
-| 3.     | Ink! Contract: Dutch Auction           | <ul><li>[x] </li></ul>|   [token_factory](https://github.com/Mangoboxlabs/MangoSale/tree/main/contract/token_factory)   |  |
-| 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend)           |                      |
-| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSale/tree/main/frontend#cypress-e2e-test)       |                       |
+| 1.     | Ink! Contract: Launchpad           | <ul><li>[x] </li></ul>|   [Launchpad](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/launchpad)   |  |
+| 2.     | Ink! Contract: Fair launch           | <ul><li>[x] </li></ul>|      [Fair Launch](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/fair_launchpad)      |  |
+| 3.     | Ink! Contract: Dutch Auction           | <ul><li>[x] </li></ul>|   [Dutch Auction](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/dutch_auction)   |  |
+| 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend)           |                      |
+| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend#cypress-e2e-test)       |                       |
 
 ## General Notes
 
@@ -85,3 +85,47 @@ Front-end runs dev and prod successfully:
  DONE  Build complete. The dist directory is ready to be deployed.
  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
  ```
+## Evaluation V2
+
+Thanks for making the changes! The dutch_auction test no longer fails and cargo clippy errors were fixed. Moving on, I ran into a few more issues below:
+
+## ink! Contracts / back-end
+
+I switched to the following toolchain settings: `nightly-2022-06-27`, `cargo-contract 0.15.0`, and all the necessary prerequisites, but when running `cargo +nightly-2022-06-27 contract build --optimization-passes=0` all three contracts fail to compile with this error about `wasm-opt`:
+ ```rust
+     Finished release [optimized] target(s) in 44.56s
+ [2/5] Post processing wasm file
+ [3/5] Optimizing wasm file
+ERROR: wasm-opt not found! Make sure the binary is in your PATH environment.
+We use this tool to optimize the size of your contract's Wasm binary.
+
+wasm-opt is part of the binaryen package. You can find detailed
+installation instructions on https://github.com/WebAssembly/binaryen#tools.
+
+There are ready-to-install packages for many platforms:
+* Debian/Ubuntu: apt-get install binaryen
+* Homebrew: brew install binaryen
+* Arch Linux: pacman -S binaryen
+* Windows: binary releases at https://github.com/WebAssembly/binaryen/releases
+```
+This cargo-contract version is from 2021, is there a reason such an old version is used?
+
+**Suggestion**: Also I want to add a suggestion: It would be nice to add a Cargo.toml file in the root dir or contract dir so that unit tests for all three contracts can be run at the same time, rather than having to go into each folder and run the test individually. Here is [an example](https://github.com/TheDotflow/dotflow-ink/blob/main/Cargo.toml)https://github.com/TheDotflow/dotflow-ink/blob/main/Cargo.toml. This will make it a lot easier to run tests when there are a ton of them.
+
+## Front-end
+
+1. purchaseToken.cy currently fails:
+
+   <br><img width="507" alt="mangosale error 3" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/a300fed4-3f8c-49bd-a91f-b203f9544842">
+
+2. The "Create" button (incorrectly spelled "creat") does nothing when the wallet has no funds. There should most likely be an error message here.
+
+3. I'm not able to create a token, any parameters I enter result in a duplicate contract error:
+
+   <br>![mangosale error 4](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/2fc361ab-c1db-479c-a722-1cb5c9d3341b)
+
+4. If the user no balance in the auction, it displays as "not a number" when it should probably display 0:
+
+   <br>![mangosale error 6](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/82f77f3d-df70-44f4-9697-198ad41f11f3)
+
+
