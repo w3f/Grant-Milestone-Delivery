@@ -7,16 +7,16 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a. | License |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/LICENSE-APACHE.txt | Correct License|
-| 0b.  | Documentation |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/tree/main/docs | Well Written, I recommend create a seperate README.md file in docs folder for easy navigation. |
-| 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>|[ Testing and Testing Guide](https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/README.md) | Documentation is acceptable but there are some shortcomings. The project uses PROTOC and Make, but you have to install PROTOC and Make manually - this is not specified in the documentation and therefore the first build gave an error. But other than that, there is no problem, it works as stated in the instructions. |
- 0d. | Docker |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/Dockerfile | Dockerfile seems well-structured for building a Substrate node. Detailed evaluation in the General Notes. | 
-| 1. | Event Store |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/pallets/event-store/src/lib.rs | Working as per application |
-| 2. | Dispatcher |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/pallets/dispatcher/src/lib.rs  | Working as per application| Working as per application |
-| 3.  | Aggregate |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/common/src/aggregate.rs | Working as per application | 
-| 4.  | Event |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/proto/src/event.rs |  Working as per application  | 
-| 5.  | Command |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/proto/src/command.rs | Working as per application  | 
-| 6.  | Operations |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/main/proto/src/operation.rs | Working as per application | 
+| 0a. | License |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/LICENSE-APACHE.txt | Correct License|
+| 0b.  | Documentation |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/tree/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/docs | Well Written, I recommend create a seperate README.md file in docs folder for easy navigation. |
+| 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/README.md | Documentation is acceptable but there are some shortcomings. The project uses PROTOC and Make, but you have to install PROTOC and Make manually - this is not specified in the documentation and therefore the first build gave an error. But other than that, there is no problem, it works as stated in the instructions. |
+ 0d. | Docker |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/Dockerfile | Dockerfile seems well-structured for building a Substrate node. Detailed evaluation in the General Notes. | 
+| 1. | Event Store |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/pallets/event-store/src/lib.rs | Working as per application |
+| 2. | Dispatcher |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/pallets/dispatcher/src/lib.rs  | Working as per application| Working as per application |
+| 3.  | Aggregate |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/common/src/aggregate.rs | Working as per application | 
+| 4.  | Event |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/proto/src/event.rs |  Working as per application  | 
+| 5.  | Command |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/proto/src/command.rs | Working as per application  | 
+| 6.  | Operations |<ul><li>[x] </li></ul>| https://github.com/Collective-Intelligence-Labs/cila-substrate/blob/e6b68cbf5c41a0c7b0d7e919a5c4d522051d7e0f/proto/src/operation.rs | Working as per application | 
 
 
 ## General Notes
@@ -69,20 +69,23 @@ Phusion Base Image: The use of phusion/baseimage is a deviation from more common
 
 ### 'cargo build --release' command
 
-Attempt #1 (Failed) - Without Sourcing PROTOC because of missing part in documentation
+<details>
 
+<summary>Attempt #1 (Failed) - Without Sourcing PROTOC because of missing part in documentation </summary>
+<p>
+ 
 ```commandline
 
     Updating crates.io index
     Updating git repository `https://github.com/paritytech/substrate.git`
     Updating git repository `https://github.com/yahortsaryk/quick-protobuf.git`
-  Downloaded asn1-rs v0.3.1
-  Downloaded block-buffer v0.9.0
-  Downloaded bitvec v1.0.1
-  Downloaded base16ct v0.2.0
-  Downloaded Inflector v0.11.4
-  Downloaded array-bytes v4.2.0
-  Downloaded bytes v1.4.0
+    Downloaded asn1-rs v0.3.1
+    Downloaded block-buffer v0.9.0
+    Downloaded bitvec v1.0.1
+    Downloaded base16ct v0.2.0
+    Downloaded Inflector v0.11.4
+    Downloaded array-bytes v4.2.0
+    Downloaded bytes v1.4.0
   Downloaded directories-next v2.0.0
   Downloaded ecdsa v0.14.8
   Downloaded addr2line v0.19.0
@@ -1086,11 +1089,14 @@ Caused by:
   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 warning: build failed, waiting for other jobs to finish...
 
-
-
 ```
+</p>
+</details>
 
-Attempt 2 # (Successfull) After sourcing PROTOC
+<details>
+
+<summary>Attempt 2 # (Successfull) After sourcing PROTOC and other modules</summary>
+<p>
 
 ```commandline
 
@@ -1194,8 +1200,17 @@ Building [=======================> ] 976/987: librocksdb-sys(build)
 
 ```
 
+</p>
+
+</details>
+
 ### ./target/release/omnichain-prototype --dev Results
 
+<details>
+ <summary>Output</summary>
+
+ <p>
+  
 ```commandline
 
 2023-08-15 23:18:20 Substrate Node    
@@ -1249,8 +1264,4 @@ Building [=======================> ] 976/987: librocksdb-sys(build)
 ... Continues to operate
 
 '''
-
-
-
-
 
