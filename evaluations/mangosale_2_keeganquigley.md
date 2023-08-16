@@ -128,4 +128,16 @@ This cargo-contract version is from 2021, is there a reason such an old version 
 
    <br>![mangosale error 6](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/82f77f3d-df70-44f4-9697-198ad41f11f3)
 
+## Evaluation V3
+
+Above issues have been fixed! Now however there are two additional UI errors. When running `createToken.cy` I am able to sign the transaction with my test account:
+
+<br><img width="552" alt="tx" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/90b323ea-3f6b-4fe5-97bd-ab7e141a4ae4">
+
+But `createLaunchpad.cy` and `purchaseToken.cy` both fail respectively:
+
+<br><img width="506" alt="mango fail" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/4fd3a364-99b8-4c8d-8f58-d521c377678e">
+<br><img width="506" alt="mango fail 2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/64379e3e-fd16-4924-850d-95c1e6726185">
+
+I think this is happening because the inital createToken.cy test doesn't complete due to lack of funds in the test wallet.
 
