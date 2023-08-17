@@ -9,14 +9,14 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                  | <ul><li>[x] </li></ul>|             [License](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/LICENSE)              | Apache 2.0                                  |
 | 0b.    | Documentation            | <ul><li>[x] </li></ul>|     [Documentation](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/contract/README.md)     | Looks good.                                 |
-| 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/contract/README.md#testing) | Looks good. |
-| 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/docker)               |                                                     |
-| 0e.    | Article         | <ul><li>[x] </li></ul>|              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)               | |
-| 1.     | Ink! Contract: Launchpad           | <ul><li>[x] </li></ul>|   [Launchpad](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/launchpad)   |  |
-| 2.     | Ink! Contract: Fair launch           | <ul><li>[x] </li></ul>|      [Fair Launch](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/fair_launchpad)      |  |
-| 3.     | Ink! Contract: Dutch Auction           | <ul><li>[x] </li></ul>|   [Dutch Auction](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/dutch_auction)   |  |
-| 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend)           |                      |
-| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend#cypress-e2e-test)       |                       |
+| 0c.    | Testing Guide            | <ul><li>[x] </li></ul>| [Testing Guide](https://github.com/Mangoboxlabs/MangoSaleV2/blob/main/contract/README.md#testing) | Docs could be improved for clarity. |
+| 0d.    | Docker         | <ul><li>[x] </li></ul>|              [Docker](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/docker)               | Looks good.                                          |
+| 0e.    | Article         | <ul><li>[x] </li></ul>|              [Article](https://medium.com/@mangoboxlabs/encryption-project-based-on-polkadot-ecology-mangosale-503fcb5d7913)              | Looks good. |
+| 1.     | Ink! Contract: Launchpad           | <ul><li>[x] </li></ul>|   [Launchpad](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/launchpad)   | Looks good. |
+| 2.     | Ink! Contract: Fair launch           | <ul><li>[x] </li></ul>|      [Fair Launch](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/fair_launchpad)      | Looks good. |
+| 3.     | Ink! Contract: Dutch Auction           | <ul><li>[x] </li></ul>|   [Dutch Auction](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/contract/dutch_auction)   | Looks good. |
+| 4.     | Front-end UI	         | <ul><li>[x] </li></ul>|          [Front-end UI](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend)           | Looks good.                     |
+| 5.     | Front-end integration (e2e) test	         | <ul><li>[x] </li></ul>|      [e2e](https://github.com/Mangoboxlabs/MangoSaleV2/tree/main/frontend#cypress-e2e-test)  | Looks good.                |
 
 ## General Notes
 
@@ -141,3 +141,6 @@ But `createLaunchpad.cy` and `purchaseToken.cy` both fail respectively:
 
 I think this is happening because the inital createToken.cy test doesn't complete due to lack of funds in the test wallet.
 
+## Evaluation V5
+
+All issues have been resolved and I am able to run Cypress e2e tests in Chrome, as well as compile the contracts and test the functions manually. Everything works as expected.
