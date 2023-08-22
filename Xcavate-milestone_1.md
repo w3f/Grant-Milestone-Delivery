@@ -11,7 +11,7 @@
 > We have built a fully functioning substrate based node + react.js Frontend + node.js backend dApp for user interaction
 
 **Deliverables**
-> Please see all our deliverables below. In addition please see this high level process flow to give you a better understanding of the overall interactions. [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg]
+> Please see all our deliverables below. In addition please see this high level process flow to give you a better understanding of the overall interactions. [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg]. These are some instructions to guide you through the various deliverables [https://github.com/xcavate2022/Grant-Milestone-Delivery/xcav_milestone_instruction.md]
 
 
 | Number | Deliverable | Link | Notes |
