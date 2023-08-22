@@ -1,6 +1,7 @@
 # Backend
 
-https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate
+1. Complete the <a href="https://docs.substrate.io/install/">basic Rust setup instructions</a>
+2. Clone Xcav chain <a href="https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate">xcavate chain repo</a> and follow instructions from readme file.
 
 # Frontend
 
