@@ -8,6 +8,7 @@
 1. DApp development with Sporran, use <a href="https://github.com/BTE-Trusted-Entity/sporran-extension/blob/main/docs/external.md">this link</a>configure sporran wallet and get some test tokens
 
 2. Get your DID from sporran wallet
+   <img src="assets/get_your_did.png" alt="jacket" width="500" height="600">
 
 3. Download PolkadotJs extension in browser and create new account by following the <a href="https://polkadot.js.org/extension/">this link</a>
 
