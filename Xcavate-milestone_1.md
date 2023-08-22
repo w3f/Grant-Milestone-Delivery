@@ -1,27 +1,30 @@
 # Milestone Delivery :mailbox:
 
 > ⚡ Only the GitHub account that submitted the application is allowed to submit milestones. 
-> 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
-* **Milestone Number:** e.g. 1
+* **Application Document:** [https://github.com/w3f/Grants-Program/pull/1649]
+* **Milestone Number:** 1
 
 **Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+> We have built a fully functioning substrate based node + react.js Frontend + node.js backend dApp for user interaction
 
 **Deliverables**
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
-> 
-> If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
+> Please see all our deliverables below. In addition please see this high level process flow to give you a better understanding of the overall interactions. [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg]
+
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
-| 2.  | ... |...| ...| 
+| 1. | Xcavate Node Repo | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | This is a fully functioning substrate node | 
+| 2a.  | Xcavate Loan App Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Frontend] | React.js Frontend | 
+| 2b.  | Xcavate Loan App Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
+| 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
+| 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
+| 4.  | Staking pallet | To do | Community Loan Staking - This will require XCAV token holders to stake in to the Community Loan Pool and receive an aggregated APY for the period staked... This is more complex than we anticipated so requires a future milestone of its own  | 
+| 5.  | Verification pallet | [https://github.com/XcavateBlockchain/kilt-credentials] | Not a pallet - It leverages the KILT protocol - going forward this will be a DID pallet that communicates with KILT via XCM  | 
+| 6.  | DAO | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
+
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
-
+> While we have made great progress with this project + we are confident we can deliver this as a live project within the Dotsama ecosystem. There is quite a bit more work to be doen and as such would require additional funding if available.
