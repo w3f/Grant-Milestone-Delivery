@@ -1,7 +1,5 @@
 # Backend
 
-# This our XCAVATE Blockchain which you can find in our github repository.
-
 https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate
 
 # Frontend
@@ -23,4 +21,3 @@ https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate
    https://github.com/XcavateBlockchain/MVP_Backend
 
 7. Connect sporran wallet in MVP_Frontend and attested developer credentials, Instruction is listed in below link
-
