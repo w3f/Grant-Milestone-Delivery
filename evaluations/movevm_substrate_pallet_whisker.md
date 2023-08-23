@@ -12,7 +12,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.**| License |<ul><li>[x] </li></ul>| [MIT](https://github.com/eigerco/pallet-move/blob/main/LICENSE) | |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>|[Link](https://github.com/eigerco/pallet-move/blob/main/README.md)  | The documentations are easy to read, which explain the working of the application.|
-| **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| <ul> <li>[Testing guide](https://github.com/eigerco/pallet-move/blob/main/doc/testing_guide.md)</li><li>[Integration tests with mock](https://github.com/eigerco/pallet-move/tree/main/tests)</li> <li>[Testing node](https://github.com/eigerco/substrate-node-template-move-vm-test)</li> </ul> | Many ignored test cases.|
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| <ul> <li>[Testing guide](https://github.com/eigerco/pallet-move/blob/main/doc/testing_guide.md)</li><li>[Integration tests with mock](https://github.com/eigerco/pallet-move/tree/main/tests)</li> <li>[Testing node](https://github.com/eigerco/substrate-node-template-move-vm-test)</li> </ul> | |
 | **0d.** | Docker |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/eigerco/pallet-move/blob/main/Dockerfile) | Work as expected |
 | **0e.** | Article |<ul><li>[x] </li></ul>|[Design article](https://github.com/eigerco/pallet-move/blob/main/doc/design.md)| A good article which is easy to read and understand. |
 | 1 | System pallet: Substrate Move |<ul><li>[x] </li></ul>| </li> <li> [Pallet](https://github.com/eigerco/pallet-move) </li> <li> [Workflows](https://github.com/eigerco/pallet-move/tree/main/.github/workflows) </li> </ul> | Work as expected|
