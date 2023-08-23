@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Grant_management_webapp.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -13,10 +13,20 @@
 | **0b.** | Documentation | <ul><li>[x] </li></ul>| [User Guide](https://docs.google.com/document/d/1BLBns9tTUSpJMu7MhuQdLZYF8mUBQ8TD/edit) | |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| - | |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| - |  | 
-| 1 | Frontend | <ul><li>[ ] </li></ul>| [Github Repository](https://github.com/antiers-solutions/gmw-frontend) | Not fully evaluated yet.  |
+| 1 | Frontend | <ul><li>[x] </li></ul>| [Github Repository](https://github.com/antiers-solutions/gmw-frontend) |  |
 | 2 | Backend | <ul><li>[x] </li></ul>| [Github Repository](https://github.com/antiers-solutions/gmw-backend) |  |
 | 3 | Backend | <ul><li>[x] </li></ul>| [Github Repository](https://github.com/antiers-solutions/gmw-backend) |  |
 | 4 | Data Base | <ul><li>[x] </li></ul>| [Github Repository](https://github.com/antiers-solutions/gmw-backend) |  |
+
+## Evaluation V3
+
+### Frontend
+
+I tested it again. The filter based on name, data, status, and level are working, but I noticed it isn't working when used with the search bar, because the filter returns the table in alphabetical order with all Projects. Furthermore, the milestone table doesn't have borders in the overview of the project. However, for now, these two are a minor problem.
+
+Another problem I found is related to the login functionality via SingIn with GitHub. When I try to login with CORS disabled in my browser, the login page opens and closes quickly. With CORS enabled, the login page works without problems, but I need to disable the CORS to use the application. I can login using the token with CORS disabled. So it isn't a big problem.
+
+I could merge a team and change the stats from a project without problems.
 
 ## Evaluation V2
 
