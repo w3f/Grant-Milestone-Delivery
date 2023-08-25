@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-tools.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,12 +10,30 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                   | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/LICENSE    |            |
-| 0b.    | Documentation             | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/README.md  | I was not able to run the example with success.  |
+| 0b.    | Documentation             | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/README.md  |  |
 | 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools#test                 |            |
 | 0d.    | Docker                    | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/Dockerfile |            |
-| 1.     | Send UMP message          | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/ump.go  | Not fully evaluated yet. |
-| 2.     | Send DMP message          | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/dmp.go  | Not fully evaluated yet. |
-| 3.     | Send HRMP message         | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/hrmp.go | Not fully evaluated yet. |
+| 1.     | Send UMP message          | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/ump.go  |  |
+| 2.     | Send DMP message          | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/dmp.go  |  |
+| 3.     | Send HRMP message         | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/hrmp.go |  |
+
+## Evaluation V2
+
+Now the example provided worked well. 
+
+Asset Hub
+
+
+![image](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/4bf7da0d-b779-4ef6-a8ce-3706ef02dec8)
+
+
+
+Rococo
+
+
+![image](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/0a489b9c-b3de-4325-acd9-0a8ed98111fe)
+
+
 
 ## Evaluation V1
 
