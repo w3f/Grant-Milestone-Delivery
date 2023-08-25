@@ -36,8 +36,7 @@ Grant applications can be [amended](https://grants.web3.foundation/docs/Process/
 
 ## :ballot_box_with_check: External Evaluations
 
-As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address. *You can evaluate as many deliveries as you like, but only one at a time.*
-
+As part of the grant program, we allow everyone to participate in the evaluation process of submitted milestones. Successfully merged external evaluations will receive **up to 15 KSM**, depending on the quality and depth of the evaluation. The payout will be sent to their Kusama identity address.
 
 ### Requirements
 
@@ -45,6 +44,8 @@ As part of the grant program, we allow everyone to participate in the evaluation
 - GitHub account
 - Share your identity and postal address with us via grants@web3.foundation due to regulatory reasons
 - The evaluation must be submitted within ten days after the milestone was delivered
+- Should your cumulative payouts exceed 1,000 CHF, we may request and perform Know Your Customer (KYC) verification procedures before processing the payout
+- You are permitted to evaluate a limited number of cases, with a calendar yearly cap equivalent to 2,000 CHF in KSM, in adherence to regulatory guidelines
 
 ### Process
 
