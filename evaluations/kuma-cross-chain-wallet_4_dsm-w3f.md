@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cross-chain-wallet.md
 - **Milestone:** 4
 - **Kusama Identity:** Address
@@ -11,13 +11,24 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul> | https://github.com/blockcoders/kuma-wallet/blob/main/LICENSE | |
 | 0b. | Documentation |<ul><li>[x] </li></ul> | https://github.com/blockcoders/kuma-wallet/blob/main/README.md, https://github.com/blockcoders/kuma-wallet/blob/main/README-es.md |  |
-| 0c. | Testing Guide |<ul><li>[ ] </li></ul> | https://github.com/blockcoders/kuma-wallet#running-locally | One test is falling in some cases. |
+| 0c. | Testing Guide |<ul><li>[x] </li></ul> | https://github.com/blockcoders/kuma-wallet#running-locally |  |
 | 0e. | Article |<ul><li>[x] </li></ul> | https://twitter.com/blockcoders_/status/1690077065087754240 |  |
-| 1. | Polish UX experience |<ul><li>[ ] </li></ul> | https://github.com/kumawallet/extension/pull/30 | The blur effect for the private key isn't working on Firefox. |
+| 1. | Polish UX experience |<ul><li>[x] </li></ul> | https://github.com/kumawallet/extension/pull/30 |  |
 | 2. | Landing page |<ul><li>[x] </li></ul> | https://kumawallet.io/ | |
 | 3. | Video Tutorial |<ul><li>[x] </li></ul> | https://kumawallet.io/tutorials |  |
-| 4. | End to End Testing |<ul><li>[ ] </li></ul> | https://kumawallet.io/tutorials | I Had some problems with the XCM transfer.  |
+| 4. | End to End Testing |<ul><li>[x] </li></ul> | https://kumawallet.io/tutorials |   |
 | 5. | QR code |<ul><li>[x] </li></ul> | https://github.com/kumawallet/extension/blob/main/src/pages/receive/Receive.tsx | |
+
+## Evaluation V2
+
+The XCM transfer using testnets worked well. The blur effect it still with problem, but this can be fixed later and don't prevent the approval.
+
+![image](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/478628ca-cb08-4e51-84a1-29d94ef4038a)
+
+![image](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/f36fd676-1ad1-4629-ba5c-a2b6538bbaa9)
+
+
+## Evaluation V1
 
 ### Documentation 
 
