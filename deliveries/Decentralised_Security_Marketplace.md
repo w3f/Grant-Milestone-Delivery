@@ -18,7 +18,7 @@ Following are the links to the repositories of the deliverables promised as per 
 | **0d.** | Docker | - | The dockerfiles can be found alongside the project repositories.  |
 | 1 | UI/UX | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend) | The link leads to the repository of the front end of the application, the guidelines to operate it can be found in readme file. |
 | 2 | Reputation Token Contract | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract) | This link leads to the reputation token's smart contract.  |
-| 3 | Escrow Contract| [Github Repository]([https://github.com/ParthChaudhary31/Security_Marketplace_Frontend](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract)) | This link leads to the Escrow Contract's smart contract. |
+| 3 | Escrow Contract| [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract)) | This link leads to the Escrow Contract's smart contract. |
 | 4 | Auditor's Voting Contract | [Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Smartcontract) |
 | 4 | Audit Directory Contract | - | This contract is not in the planned ecosystem anymore and it's functionality has been shifted in to that of escrow contract's |
 | 5 | Arbiters Contract | - | This contract is not in the planned ecosystem anymore either with it's functionality shifted in the back end to make it cost efficient for Arbiters. |
