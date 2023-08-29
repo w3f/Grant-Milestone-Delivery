@@ -28,7 +28,7 @@ which was used for testing the delivery. It should also be checked if the softwa
 
 ### Polkadot Parachains Section Feedback
 
-- in my personal opinion this chapter could use some more ccounter-checking as there are some typos and sentences that don't make sense, for example:
+- in my personal opinion this chapter could use some more counter-checking as there are some typos and sentences that don't make sense, for example:
     - "Initial proposal flow-chart/decision-tree development that will help developers place their
 token in the following contexts." => this seems incomplete
     - "Types under the following topics" => I think there should be a colon after it
