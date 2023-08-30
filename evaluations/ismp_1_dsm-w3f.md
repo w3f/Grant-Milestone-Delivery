@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ismp.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,24 +9,28 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE](https://github.com/polytope-labs/ismp-rs/blob/main/LICENSE)| | 
-| 0b.  | Documentation |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/README.md](https://github.com/polytope-labs/ismp-rs/blob/main/README.md)| Not fully evaluated yet |
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite](https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite)| Not fully evaluated yet |
-| 0d. | Docker |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs#run-test-in-docker](https://github.com/polytope-labs/ismp-rs#run-test-in-docker)| Not fully evaluated yet |
-| 0e. | Article |<ul><li>[ ] </li></ul>| TBA | Need to be delivered |
-| 0f. | ISMP Specification |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp](https://github.com/polytope-labs/ismp)| Not fully evaluated yet |
-| 1 | `ismp-rs` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs](https://github.com/polytope-labs/ismp-rs)| Not fully evaluated yet |
-| 1a. | `ISMPHOST` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37)| Not fully evaluated yet |
-| 1b. | `ISMPRouter` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/router.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/router.rs)| Not fully evaluated yet |
-| 1c. | `ISMPModule` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/module.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/module.rs)| Not fully evaluated yet |
-| 1d. | `ConsensusClient` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L91](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L91)| Not fully evaluated yet |
-| | Request/Response proof verification |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L123](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L123)| Not fully evaluated yet |
-| | Request Timeout verification |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/messaging.rs#L160](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/messaging.rs#L160)| Not fully evaluated yet |
-| 1e. | Handlers |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers.rs)| Not fully evaluated yet |
-| | `CreateConsensusClient` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L91](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L91)| Not fully evaluated yet |
-| | `ConsensusMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L28](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L28)| Not fully evaluated yet |
-| | `RequestMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs)| Not fully evaluated yet |
-| | `ResponseMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs)| Not fully evaluated yet |
-| | `TimeoutMessage` |<ul><li>[ ] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs)| Not fully evaluated yet |
+| 0b.  | Documentation |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/README.md](https://github.com/polytope-labs/ismp-rs/blob/main/README.md)|  |
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite](https://github.com/polytope-labs/ismp-rs/tree/main/ismp-testsuite)|  |
+| 0d. | Docker |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs#run-test-in-docker](https://github.com/polytope-labs/ismp-rs#run-test-in-docker)|  |
+| 0e. | Article |<ul><li>[x] </li></ul>| TBA | Shared and evaluated in private |
+| 0f. | ISMP Specification |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp](https://github.com/polytope-labs/ismp)|  |
+| 1 | `ismp-rs` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs](https://github.com/polytope-labs/ismp-rs)|  |
+| 1a. | `ISMPHOST` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/host.rs#L37)|  |
+| 1b. | `ISMPRouter` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/router.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/router.rs)|  |
+| 1c. | `ISMPModule` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/module.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/module.rs)|  |
+| 1d. | `ConsensusClient` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L91](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L91)|  |
+| | Request/Response proof verification |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L123](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/consensus.rs#L123)|  |
+| | Request Timeout verification |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/messaging.rs#L160](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/messaging.rs#L160)|  |
+| 1e. | Handlers |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers.rs)|  |
+| | `CreateConsensusClient` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L91](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L91)|  |
+| | `ConsensusMessage` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L28](https://github.com/polytope-labs/ismp-rs/blob/1932c2c45f7c6ff104dd27b87aa06769739697fb/ismp/src/handlers/consensus.rs#L28)|  |
+| | `RequestMessage` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/request.rs)|  |
+| | `ResponseMessage` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/response.rs)|  |
+| | `TimeoutMessage` |<ul><li>[x] </li></ul>|[https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs](https://github.com/polytope-labs/ismp-rs/blob/main/ismp/src/handlers/timeout.rs)|  |
+
+## Evaluation V3
+
+I finished the evaluation of this milestone by using the software provided with the pallets and infrastructure delivered in M2. 
 
 ## Evaluation V2
 
