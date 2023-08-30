@@ -8,16 +8,247 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| **0a.** | License | <ul><li>[ ] </li></ul>| https://github.com/ideal-lab5/substrate/blob/etf/LICENSE-GPL3 | GPLv3 | 
+| **0a.** | License | <ul><li>[x] </li></ul>| https://github.com/ideal-lab5/substrate/blob/etf/LICENSE-GPL3 |  | 
 | **0b.** | Documentation | <ul><li>[ ] </li></ul>| https://ideal-lab5.github.io | Not fully evaluated yet.|
 | **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| https://docs.google.com/document/d/1wyWSHl-MJtiaFzuZqsPTAq0ABRCw9RlxIjt5m6pEOUY/edit?usp=sharing  | Not fully evaluated yet. |
-| **0d.** | Docker | <ul><li>[ ] </li></ul>| https://hub.docker.com/repository/docker/ideallabs/etf/general | Not fully evaluated yet. |
-| **0e.** | Article | <ul><li>[ ] </li></ul>| https://ideallabs.substack.com/p/e1d2e89b-ec19-477d-8781-7401fc3efbbe | unpublished, pending milestone 2 acceptance. |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| https://hub.docker.com/repository/docker/ideallabs/etf/general |  |
+| **0e.** | Article | <ul><li>[x] </li></ul>| https://ideallabs.substack.com/p/e1d2e89b-ec19-477d-8781-7401fc3efbbe |  |
 | 1. | Light Client | <ul><li>[ ] </li></ul>| [smoldot fork](https://github.com/ideal-lab5/smoldot/tree/etf), [substrate-connect fork](https://github.com/ideal-lab5/substrate-connect/tree/etf) | Not fully evaluated yet. |
 | 2 | User Interface: setup | <ul><li>[ ] </li></ul>| [the UI](https://github.com/ideal-lab5/etf.js/tree/main/examples) | Not fully evaluated yet. |
 | 3. | SDK: Slot Scheduling | <ul><li>[ ] </li></ul>| [implementation](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L42), [tests](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.test.spec.ts#L6) | Not fully evaluated yet. |
 | 4. | SDK: Encryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) | Not fully evaluated yet. |
 | 5. | SDK: Decryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) | Not fully evaluated yet. |
+
+## Evaluation V2
+
+### Substrate
+
+I was able to run the tests this time. Some tests were ignored, and I received some error messages but the tests passed.
+
+My machine doesn't meet the requirements for the benchmark, but no tests failed. This would only impact if I run `cargo bench`?
+
+```
+     Running tests/benchmark_machine_works.rs (target/debug/deps/benchmark_machine_works-84f27864495d08d6)
+
+running 2 tests
+2023-08-30 09:28:19 Running machine benchmarks...    
+2023-08-30 09:28:22 
++----------+----------------+-------------+-------------+-------------------+
+| Category | Function       | Score       | Minimum     | Result            |
++===========================================================================+
+| CPU      | BLAKE2-256     | 1.26 GiBs   | 1.00 GiBs   | ✅ Pass (125.8 %) |
+|----------+----------------+-------------+-------------+-------------------|
+| CPU      | SR25519-Verify | 451.92 KiBs | 666.00 KiBs | ❌ Fail ( 67.9 %) |
+|----------+----------------+-------------+-------------+-------------------|
+| Memory   | Copy           | 7.53 GiBs   | 14.32 GiBs  | ❌ Fail ( 52.6 %) |
+|----------+----------------+-------------+-------------+-------------------|
+| Disk     | Seq Write      | 833.59 MiBs | 450.00 MiBs | ✅ Pass (185.2 %) |
+|----------+----------------+-------------+-------------+-------------------|
+| Disk     | Rnd Write      | 343.94 MiBs | 200.00 MiBs | ✅ Pass (172.0 %) |
++----------+----------------+-------------+-------------+-------------------+
+From 5 benchmarks in total, 3 passed and 2 failed (10% fault tolerance).    
+2023-08-30 09:28:22 The hardware fails to meet the requirements    
+2023-08-30 09:28:22 Ignoring error since --allow-fail is set: UnmetRequirement    
+2023-08-30 09:28:22 Ignoring error since --allow-fail is set: BadBuildProfile("Detected a `debug` profile")    
+test benchmark_machine_works ... ok
+test benchmark_machine_fails_with_slow_hardware ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.79s
+```
+
+Example of tests that returned some error but passed.
+
+<details>
+
+```
+     Running unittests src/lib.rs (target/debug/deps/pallet_election_provider_e2e_test-fa0834b4d790a1e5)
+
+running 5 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+Aug 30 09:37:14.123 ERROR runtime::election-provider: [#30] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+Aug 30 09:37:14.125 ERROR runtime::election-provider: [#60] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+test set_validation_intention_after_chilled ... ok
+test enters_emergency_phase_after_forcing_before_elect ... ok
+Aug 30 09:37:14.139 ERROR runtime::election-provider: [#30] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+Aug 30 09:37:14.141 ERROR runtime::election-provider: [#60] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+test block_progression_works ... ok
+Aug 30 09:37:14.188 ERROR runtime::election-provider: [#570] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+Aug 30 09:37:14.189 ERROR runtime::election-provider: [#600] 🗳  Entering emergency mode: ElectionError::Fallback("`NoElection` cannot do anything.")    
+test continous_slashes_below_offending_threshold ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_grandpa-80d8dc3e61d2548a)
+
+running 25 tests
+test mock::__pallet_staking_reward_curve_test_module::reward_curve_piece_count ... ok
+test tests::report_equivocation_has_valid_weight ... ok
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test benchmarking::bench_note_stalled ... ok
+test tests::authorities_change_logged ... ok
+Aug 30 09:37:17.175 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.175 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+test tests::authorities_change_logged_after_delay ... ok
+Aug 30 09:37:17.176 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+test benchmarking::bench_check_equivocation_proof ... ok
+test tests::cannot_schedule_change_when_one_pending ... ok
+test tests::time_slot_have_sane_ord ... ok
+test tests::always_schedules_a_change_on_new_session_when_stalled ... ok
+test tests::schedule_pause_only_when_live ... ok
+test tests::schedule_resume_only_when_paused ... ok
+test tests::dispatch_forced_change ... ok
+test tests::on_new_session_doesnt_start_new_set_if_schedule_change_failed ... ok
+Aug 30 09:37:17.291 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.293 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.310 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.350 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.350 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.351 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.353 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+Aug 30 09:37:17.355 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+test tests::cleans_up_old_set_id_session_mappings ... ok
+test mock::__pallet_staking_reward_curve_test_module::reward_curve_precision ... ok
+Aug 30 09:37:17.546 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+test tests::report_equivocation_validate_unsigned_prevents_duplicates ... ok
+test tests::report_equivocation_invalid_key_owner_proof ... ok
+test tests::report_equivocation_invalid_set_id ... ok
+test tests::valid_equivocation_reports_dont_pay_fees ... ok
+test benchmarking::tests::test_generate_equivocation_report_blob ... ok
+test tests::report_equivocation_current_set_works ... ok
+test tests::report_equivocation_invalid_session ... ok
+test tests::report_equivocation_old_set_works ... ok
+test tests::report_equivocation_invalid_equivocation_proof ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.79s
+
+
+     Running unittests src/lib.rs (target/debug/deps/sc_consensus_beefy-12f8dc0855ce0f81)
+
+running 48 tests
+test communication::tests::beefy_protocols_names ... ok
+test communication::peers::tests::should_track_known_peers_progress ... ok
+test metrics::tests::should_register_metrics ... ok
+test keystore::tests::sign_no_keystore ... ok
+test communication::gossip::tests::known_votes_insert_remove ... ok
+test keystore::tests::sign_error ... ok
+test keystore::tests::verify_works ... ok
+test keystore::tests::authority_id_works ... ok
+test keystore::tests::sign_works ... ok
+test round::tests::vote_threshold ... ok
+test justification::tests::should_decode_and_verify_finality_proof ... ok
+test keystore::tests::verify_should_work ... ok
+test communication::gossip::tests::messages_rebroadcast ... ok
+test round::tests::round_tracker ... ok
+test round::tests::should_provide_equivocation_proof ... ok
+test round::tests::old_rounds_not_accepted ... ok
+test round::tests::new_rounds ... ok
+test justification::tests::should_verify_with_validator_set ... ok
+test round::tests::multiple_rounds ... ok
+test keystore::tests::public_keys_works ... ok
+test keystore::tests::pair_works ... ok
+test round::tests::add_and_conclude_votes ... ok
+test worker::tests::extract_authorities_change_digest ... ok
+test communication::gossip::tests::should_validate_messages ... ok
+test communication::gossip::tests::messages_allowed_and_expired ... ok
+test aux_schema::tests::should_load_persistent_sanity_checks ... ok
+test worker::tests::should_finalize_correctly ... ok
+test worker::tests::should_init_session ... ok
+test worker::tests::should_vote_target ... ok
+test worker::tests::vote_on_mandatory_block ... ok
+test worker::tests::vote_on_min_block_delta ... ok
+test worker::tests::vote_on_power_of_two ... ok
+test worker::tests::vote_on_target_block ... ok
+test tests::should_initialize_voter_at_latest_finalized ... ok
+test tests::should_initialize_voter_at_genesis ... ok
+test tests::should_initialize_voter_when_last_final_is_session_boundary ... ok
+test worker::tests::test_oracle_accepted_interval ... ok
+test tests::should_initialize_voter_at_custom_genesis ... ok
+test worker::tests::keystore_vs_validator_set ... ok
+test worker::tests::should_not_report_bad_old_or_self_equivocations ... ok
+test tests::beefy_importing_justifications ... ok
+test tests::beefy_finalizing_blocks ... ok
+test tests::beefy_finalizing_after_pallet_genesis ... ok
+test tests::beefy_reports_equivocations ... ok
+test tests::gossipped_finality_proofs ... ok
+test tests::lagging_validators ... ok
+test tests::correct_beefy_payload ... ok
+Aug 30 09:40:04.782 ERROR gossip: Got message from unregistered peer who=12D3KooWLYHA6vesbsEAUF49PbSxBCR5uYP4pNHTD9yZSxiuUnPX protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+Aug 30 09:40:04.784 ERROR gossip: Got message from unregistered peer who=12D3KooWDUFHAfkHLZJMBYhxufBPhiTeoeRHTxfn9HEGFTbfqf6B protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+Aug 30 09:40:04.785 ERROR gossip: Got message from unregistered peer who=12D3KooWSqjASF8rqNMCYqrM6TVWniGGHQP2TSnn8Vqz4uEo7cNW protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+Aug 30 09:40:04.791 ERROR gossip: Got message from unregistered peer who=12D3KooWLYHA6vesbsEAUF49PbSxBCR5uYP4pNHTD9yZSxiuUnPX protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+Aug 30 09:40:04.792 ERROR gossip: Got message from unregistered peer who=12D3KooWDUFHAfkHLZJMBYhxufBPhiTeoeRHTxfn9HEGFTbfqf6B protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+Aug 30 09:40:04.792 ERROR gossip: Got message from unregistered peer who=12D3KooWSqjASF8rqNMCYqrM6TVWniGGHQP2TSnn8Vqz4uEo7cNW protocol=/0000000000000000000000000000000000000000000000000000000000000000/beefy/2
+test tests::on_demand_beefy_justification_sync ... ok
+
+test result: ok. 48 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 20.16s
+```
+
+</details>
+
+### ETF.js
+
+When I tried to install it locally, I needed to change the [packge.json](https://github.com/ideal-lab5/etf.js/blob/main/examples/package.json#L8) to `"@ideallabs/etf.js": "file:../dist/etf.js",` and dist/etf.js [here](https://github.com/ideal-lab5/etf.js/blob/main/dist/etf.js#L21-L25) and [here](https://github.com/ideal-lab5/etf.js/blob/main/dist/etf.js#L70-L74).
+
+After this, I tested the application, and it worked fine using the node `etf0.idealabs.network`. I would like to run it locally to ensure it is working. Could you explain how to do this?
+
+One test continues to fail sometimes.
+
+<details>
+
+```
+  ● DistanceBasedSlotScheduler › should generate a valid schedule
+
+	expect(received).toBeLessThanOrEqual(expected)
+
+	Expected: <= 21
+	Received:	22
+
+  	21 | 	schedule.slotIds.forEach(slot => {
+  	22 |   	expect(slot).toBeGreaterThanOrEqual(currentSlot + 1);
+	> 23 |   	expect(slot).toBeLessThanOrEqual(currentSlot + 1 + distance * 2);
+     	|                	^
+  	24 |   	expect(slot % 2).toBe(0); // Ensure the slot is even
+  	25 | 	});
+  	26 |   });
+
+  	at src/etf.test.spec.ts:23:20
+      	at Array.forEach (<anonymous>)
+  	at Object.<anonymous> (src/etf.test.spec.ts:21:22)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:   	1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:    	8.35 s
+Ran all test suites.
+```
+
+</details>
+
+### CLI
+
+The CLI is working without problems.
+
+<details>
+
+```
+user@localhost:~/Documents/cryptex/etf-cli$ ./target/debug/etf-cli encrypt "Hello World" "id1 id2 id3" 2 "hw"
+Encryption worked!
+Encryption ciphertext: [108, 112, 9, 184, 142, 30, 84, 52, 135, 84, 18, 201, 129, 239, 100, 210, 152, 237, 11, 195, 27, 55, 124, 84, 133, 163, 130, 223]
+Encryption nonce: [48, 55, 98, 102, 11, 86, 150, 18, 110, 53, 207, 14, 18]
+Encryption capsule: [12, 193, 2, 153, 154, 100, 126, 157, 74, 26, 247, 28, 26, 202, 206, 105, 202, 232, 253, 98, 201, 169, 8, 28, 159, 239, 118, 78, 70, 135, 18, 98, 71, 205, 86, 6, 8, 171, 97, 194, 94, 156, 220, 172, 190, 58, 231, 212, 30, 191, 71, 1, 114, 106, 137, 159, 140, 29, 71, 252, 18, 93, 34, 163, 165, 179, 9, 69, 167, 28, 134, 177, 150, 227, 52, 22, 41, 60, 31, 47, 194, 91, 50, 122, 28, 152, 74, 114, 63, 126, 48, 146, 121, 111, 236, 114, 114, 33, 237, 32, 0, 0, 0, 0, 0, 0, 0, 131, 114, 151, 219, 91, 166, 161, 173, 55, 120, 157, 244, 45, 156, 179, 40, 11, 8, 23, 95, 3, 151, 108, 145, 96, 31, 217, 40, 156, 255, 242, 244, 32, 0, 0, 0, 0, 0, 0, 0, 119, 12, 186, 32, 213, 135, 37, 160, 213, 40, 33, 212, 197, 130, 0, 181, 136, 174, 76, 229, 153, 43, 180, 248, 104, 197, 72, 100, 79, 143, 62, 245, 193, 2, 175, 112, 211, 128, 17, 230, 58, 205, 153, 168, 15, 145, 64, 22, 58, 182, 187, 254, 215, 17, 230, 255, 80, 178, 68, 108, 80, 150, 76, 172, 29, 177, 134, 43, 131, 99, 134, 160, 44, 149, 20, 117, 138, 18, 207, 161, 125, 37, 25, 157, 62, 77, 99, 227, 8, 191, 223, 40, 12, 75, 213, 212, 211, 87, 25, 214, 22, 147, 220, 234, 56, 38, 112, 126, 5, 139, 146, 197, 20, 0, 112, 12, 207, 44, 167, 150, 48, 33, 4, 172, 225, 205, 114, 6, 152, 183, 32, 0, 0, 0, 0, 0, 0, 0, 155, 41, 117, 225, 199, 158, 106, 169, 204, 69, 84, 154, 52, 8, 167, 152, 104, 13, 207, 6, 41, 209, 92, 163, 28, 1, 47, 166, 181, 168, 108, 26, 32, 0, 0, 0, 0, 0, 0, 0, 39, 198, 215, 175, 22, 167, 160, 201, 103, 236, 217, 245, 60, 47, 150, 225, 102, 126, 81, 5, 59, 254, 49, 220, 179, 106, 79, 90, 4, 118, 54, 68, 193, 2, 175, 66, 38, 36, 9, 92, 99, 25, 25, 233, 96, 204, 87, 255, 149, 233, 246, 131, 3, 58, 251, 1, 68, 210, 165, 192, 221, 108, 10, 86, 213, 132, 32, 14, 119, 101, 208, 52, 144, 83, 30, 115, 141, 239, 249, 0, 238, 173, 18, 4, 139, 112, 162, 220, 126, 82, 33, 146, 187, 191, 137, 159, 133, 5, 2, 156, 188, 45, 172, 89, 73, 47, 201, 186, 213, 11, 228, 124, 10, 102, 204, 186, 220, 91, 91, 203, 79, 88, 119, 50, 52, 131, 211, 215, 63, 138, 32, 0, 0, 0, 0, 0, 0, 0, 30, 42, 175, 245, 225, 82, 35, 107, 189, 213, 114, 42, 120, 203, 137, 140, 103, 233, 124, 43, 32, 82, 230, 79, 130, 146, 54, 93, 213, 188, 185, 252, 32, 0, 0, 0, 0, 0, 0, 0, 242, 154, 209, 235, 254, 155, 209, 30, 55, 72, 222, 191, 147, 233, 202, 180, 72, 231, 19, 157, 142, 53, 71, 222, 76, 21, 58, 106, 53, 73, 20, 73]
+Encryption secrets: [[129, 123, 117, 88, 199, 203, 214, 217, 198, 48, 223, 171, 58, 93, 124, 66, 34, 137, 126, 98, 30, 223, 8, 193, 27, 140, 218, 97, 77, 254, 146, 7, 182, 111, 12, 243, 104, 143, 50, 76, 91, 31, 154, 7, 237, 64, 77, 38], [178, 53, 231, 253, 18, 110, 85, 138, 73, 238, 41, 97, 179, 100, 86, 44, 102, 43, 67, 245, 201, 165, 214, 201, 11, 226, 243, 246, 62, 211, 50, 203, 25, 171, 90, 229, 118, 197, 69, 230, 29, 71, 178, 148, 16, 241, 58, 23], [142, 128, 201, 113, 4, 220, 182, 86, 46, 130, 185, 60, 185, 20, 102, 243, 213, 220, 149, 94, 184, 26, 193, 91, 54, 185, 175, 240, 254, 133, 196, 223, 29, 118, 146, 62, 61, 184, 245, 126, 4, 123, 219, 28, 2, 46, 13, 139]]
+Writing details to file...
+File created: hw.etf
+
+
+user@localhost:~/Documents/cryptex/etf-cli$ ./target/debug/etf-cli decrypt "hw.etf"
+Attempting to decrypt: [112, 9, 184, 142, 30, 84, 52, 135, 84, 18, 201, 129, 239, 100, 210, 152, 237, 11, 195, 27, 55, 124, 84, 133, 163, 130, 223]
+Result: Hello World
+
+```
+
+</details>
 
 ## Evaluation V1
 
