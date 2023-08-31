@@ -18,7 +18,7 @@
 | ------------- | ------------- | ------------- |------------- |
 | 1. | Xcavate Node Repo | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | This is a fully functioning substrate node | 
 | 2a.  | Xcavate Loan App Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Frontend] | React.js Frontend | 
-| 2b.  | Xcavate Loan App Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
+| 2b.  | Xcavate Loan App Repo part 2 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
 | 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
 | 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
 | 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
