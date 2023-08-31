@@ -21,7 +21,7 @@
 | 2b.  | Xcavate Loan App Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
 | 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
 | 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
-| 4.  | Staking pallet | To do | Community Loan Staking - This will require XCAV token holders to stake in to the Community Loan Pool and receive an aggregated APY for the period staked... This is more complex than we anticipated so requires a future milestone of its own  | 
+| 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
 | 5.  | Verification pallet | [https://github.com/XcavateBlockchain/kilt-credentials] | Not a pallet - It leverages the KILT protocol - going forward this will be a DID pallet that communicates with KILT via XCM  | 
 | 6.  | DAO | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
 
