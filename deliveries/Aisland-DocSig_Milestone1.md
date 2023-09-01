@@ -16,7 +16,13 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 1. | ... |...| ...| 
+| 0a. | License |[https://github.com/aisland-dao/docsig/blob/main/LICENSE](https://github.com/aisland-dao/docsig/blob/main/LICENSE)| Apache 2.0| 
+| 0b.| Documentation |[Dapp Documentation](https://github.com/aisland-dao/docsig/blob/main/README.md),  [Pallet Documentation](https://github.com/aisland-dao/aisland-node/blob/main/pallets/docsig/README.md), [Dapp Repository](https://github.com/aisland-dao/docsig), [Pallet Repository](https://github.com/aisland-dao/aisland-node/blob/main/pallets/docsig)| in-line documentation is present in every source code file| 
+| 0c.  |Testing and Testing Guide|[Dapp unit tests](https://github.com/aisland-dao/docsig/blob/main/README.md#unit-tests), [Pallet unit tests](https://github.com/aisland-dao/aisland-node/blob/main/pallets/docsig/src/tests.rs)| | 
+| 0d.  | Docker |[Docker Dcoumentation](https://github.com/aisland-dao/docsig/blob/main/README.md#docker), [Docker file](https://github.com/aisland-dao/docsig/blob/main/docker-compose.yml)| | 
+| 0e.  | Article |...| ...| 
+| 2.  | ... |...| ...| 
+
 | 2.  | ... |...| ...| 
 
 **Additional Information**
