@@ -7,8 +7,13 @@
 * **Milestone Number:** 1
   
 **Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
-
+Aisland docsig is a platform to exchange signed documents throught the blockchain.  
+In this first milestone we added some features to Docsig:  
+1.new functions in Docsig Pallet to store the documents completely on chain (not only the hash);  
+2. UI managament of a standard signature (generated from fonts or scanned and uploaded);  
+3. Plugin for blocks editor to insert the standard signature;  
+4. Encryption/Decryption of the the documents stored on the blockchain.  
+  
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
 > 
