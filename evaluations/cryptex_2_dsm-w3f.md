@@ -14,10 +14,66 @@
 | **0d.** | Docker | <ul><li>[x] </li></ul>| https://hub.docker.com/repository/docker/ideallabs/etf/general |  |
 | **0e.** | Article | <ul><li>[x] </li></ul>| https://ideallabs.substack.com/p/e1d2e89b-ec19-477d-8781-7401fc3efbbe |  |
 | 1. | Light Client | <ul><li>[ ] </li></ul>| [smoldot fork](https://github.com/ideal-lab5/smoldot/tree/etf), [substrate-connect fork](https://github.com/ideal-lab5/substrate-connect/tree/etf) | Not fully evaluated yet. |
-| 2 | User Interface: setup | <ul><li>[ ] </li></ul>| [the UI](https://github.com/ideal-lab5/etf.js/tree/main/examples) | Not fully evaluated yet. |
+| 2 | User Interface: setup | <ul><li>[x] </li></ul>| [the UI](https://github.com/ideal-lab5/etf.js/tree/main/examples) |  |
 | 3. | SDK: Slot Scheduling | <ul><li>[ ] </li></ul>| [implementation](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L42), [tests](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.test.spec.ts#L6) | Not fully evaluated yet. |
-| 4. | SDK: Encryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) | Not fully evaluated yet. |
-| 5. | SDK: Decryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) | Not fully evaluated yet. |
+| 4. | SDK: Encryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) |  |
+| 5. | SDK: Decryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) |  |
+
+## Evaluation V3
+
+### Substrate
+
+Yes, I have ran `cargo test --package pallet-etf --features runtime-benchmarks`. All tests passed.
+
+<details>
+
+```
+user@localhost:/mnt/encrypted_sda/workspace/cryptex/substrate/bin/node-template/node$ cargo test --package pallet-etf --features runtime-benchmarks
+warning: call to `.borrow()` on a reference in this situation does nothing
+   --> frame/support/src/storage/generator/map.rs:300:60
+	|
+300 |             	Some(ref val) => unhashed::put(final_key.as_ref(), &val.borrow()),
+	|                                                                    	^^^^^^^^^ help: remove this redundant call
+	|
+	= note: the type `V` does not implement `Borrow`, so calling `borrow` on `&V` copies the reference, which does not do anything and can be removed
+	= note: `#[warn(noop_method_call)]` on by default
+
+warning: call to `.borrow()` on a reference in this situation does nothing
+   --> frame/support/src/storage/generator/map.rs:317:60
+	|
+317 |             	Some(ref val) => unhashed::put(final_key.as_ref(), &val.borrow()),
+	|                                                                    	^^^^^^^^^ help: remove this redundant call
+	|
+	= note: the type `V` does not implement `Borrow`, so calling `borrow` on `&V` copies the reference, which does not do anything and can be removed
+
+warning: `frame-support` (lib) generated 2 warnings (run `cargo fix --lib -p frame-support` to apply 2 suggestions)
+	Finished test [unoptimized + debuginfo] target(s) in 0.50s
+ 	Running unittests src/lib.rs (/mnt/encrypted_sda/workspace/cryptex/substrate/target/debug/deps/pallet_etf-bb86bac3c815b1c1)
+
+running 5 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test benchmarking::benchmarks::benchmark_tests::test_benchmarks ... ok
+test tests::it_fails_to_update_generator_when_not_decodable ... ok
+test tests::it_sets_the_genesis_state ... ok
+test tests::it_allows_root_to_update_generator ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+   Doc-tests pallet-etf
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+```
+
+</details>
+
+### Etf.js
+
+The test that was failling, this time doesn't failed.
+
+I was able to connect using the substrate and it worked without problems, but I couldn't test using the Light Client. The smoldot fork is working, but I don't know how to add and run with local chain `127.0.0.1:9944`. I tried somethings, but without success. Could you provide assistance on that?
 
 ## Evaluation V2
 
