@@ -24,6 +24,8 @@
 | 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
 | 5.  | Verification pallet | [https://github.com/XcavateBlockchain/kilt-credentials] | Not a pallet - It leverages the KILT protocol - going forward this will be a DID pallet that communicates with KILT via XCM  | 
 | 6.  | DAO | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
+| 10.  | Article | [https://xcavate.io/revolutionizing-real-estate-development-financing-with-nft-backed-loans/] | This blog article explores the revolutionalising aspect of utilising NFT backed Real Estate Development Loans  | 
+
 
 
 **Additional Information**
