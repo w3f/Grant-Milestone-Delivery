@@ -11,14 +11,15 @@
 > We have built a fully functioning substrate based node + react.js Frontend + node.js backend dApp for user interaction
 
 **Deliverables**
-> Please see all our deliverables below. These are some instructions to guide you through the various deliverables [https://github.com/xcavate2022/Grant-Milestone-Delivery/xcav_milestone_instruction.md]
+> Please see deliverables below; including some testing documentation & a video to guide you through the specific lending protocol and smart contract deliverables.
 
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a.  | License | Apache 2.0 | 
 | 0b.  | Documentation | [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | please see this high level process flow to give you a better understanding of the overall interactions |
-| 0c. | Testing and Testing Guide | [ to do ] | A comprehenmsive video walking through all aspects of the loan process & functionality | 
+| 0c. | Testing video | [ to do ] | A comprehensive video walking through all aspects of the loan process & functionality |
+| 0d. | Testing Guide | [ to do ] | Documentation to guide the tester through all aspects of the loan process & functionality |
 | 1. | Xcavate Node Repo | [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | This is a fully functioning substrate node | 
 | 2.  | Xcavate Loan App Repo | [https://github.com/XcavateBlockchain/MVP_Frontend] | Ink! Smart Contract | 
 | 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
