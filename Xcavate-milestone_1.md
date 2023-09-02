@@ -25,7 +25,7 @@
 | 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
 | 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
 | 5.  | Verification pallet | [https://github.com/XcavateBlockchain/kilt-credentials] | Not a pallet - It leverages the KILT protocol - going forward this will be a DID pallet that communicates with KILT via XCM  | 
-| 6.  | DAO | [https://github.com/XcavateBlockchain/MarketplaceMVP_Substrate] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
+| 6.  | DAO | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
 | 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Frontend] | React.js Frontend | 
 | 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
 | 8.  | Docker | Despite our best efforts we could not get the substrate node template to save as a docker image - however it works perfectly well using VS Code | 
