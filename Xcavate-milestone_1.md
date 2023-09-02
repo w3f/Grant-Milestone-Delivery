@@ -21,9 +21,8 @@
 | 0c. | Testing video | [ to do ] | A comprehensive video walking through all aspects of the loan process & functionality |
 | 0d. | Testing Guide | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] | Documentation to guide the tester through loan process & functionality |
 | 1. | Xcavate Node Repo | [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | This is a fully functioning substrate node | 
-| 2.  | Xcavate Loan App Repo | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! Smart Contract | 
-| 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
-| 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
+| 2.  | Xcavate Loan App Repo | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet | 
+| 3.  | Loan management pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
 | 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
 | 5.  | Verification pallet | [https://github.com/XcavateBlockchain/kilt-credentials] | Not a pallet - It leverages the KILT protocol - going forward this will be a DID pallet that communicates with KILT via XCM  | 
 | 6.  | DAO | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Our chain uses the SUDO pallet... this will continue until it has matured enough for the full community governance structure to be implemented  | 
