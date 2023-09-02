@@ -29,7 +29,7 @@
 | 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | [https://github.com/XcavateBlockchain/MVP_Frontend] | React.js Frontend | 
 | 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | [https://github.com/XcavateBlockchain/MVP_Backend] | node.js Backend | 
 | 8.  | Docker | Despite our best efforts we could not get the substrate node template to save as a docker image - however it works perfectly well using VS Code | 
-| 9.  | Tutorial | [ to do ] | How to use the Xcavate network | 
+| 9.  | Tutorial | [https://xcavate.io/XcavatePlatformProcessflow.jpg] | How the Xcavate network functions | 
 | 10.  | Article | [https://xcavate.io/revolutionizing-real-estate-development-financing-with-nft-backed-loans/] | This blog article explores the revolutionalising aspect of utilising NFT backed Real Estate Development Loans  | 
 
 
