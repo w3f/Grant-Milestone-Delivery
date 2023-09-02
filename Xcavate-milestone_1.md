@@ -35,4 +35,4 @@
 
 
 **Additional Information**
-> While we have made great progress with this project + we are confident we can deliver this as a live project within the Dotsama ecosystem. There is quite a bit more work to be doen and as such would require additional funding if available.
+> While we have made great progress with this project + we are confident we can deliver this as a live project within the Dotsama ecosystem. There is quite a bit more work to be done and as such would require additional funding if available.
