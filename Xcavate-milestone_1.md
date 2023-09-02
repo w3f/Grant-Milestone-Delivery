@@ -16,7 +16,7 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a.  | License | Apache 2.0 | 
+| 0a.  | License | Apache 2.0 | |
 | 0b.  | Documentation | [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | please see this high level process flow to give you a better understanding of the overall interactions |
 | 0c. | Testing video | [https://youtu.be/LxOwFm4XDrw] | A comprehensive video walking through all aspects of the loan process & functionality |
 | 0d. | Testing Guide | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] [https://github.com/XcavateBlockchain/lending_protocol_contracts/blob/main/README.md] | Documentation to guide the tester through loan process & functionality |
