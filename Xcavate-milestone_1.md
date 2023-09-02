@@ -19,9 +19,9 @@
 | 0a.  | License | Apache 2.0 | 
 | 0b.  | Documentation | [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | please see this high level process flow to give you a better understanding of the overall interactions |
 | 0c. | Testing video | [ to do ] | A comprehensive video walking through all aspects of the loan process & functionality |
-| 0d. | Testing Guide | [ to do ] | Documentation to guide the tester through all aspects of the loan process & functionality |
+| 0d. | Testing Guide | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] | Documentation to guide the tester through loan process & functionality |
 | 1. | Xcavate Node Repo | [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | This is a fully functioning substrate node | 
-| 2.  | Xcavate Loan App Repo | [https://github.com/XcavateBlockchain/MVP_Frontend] | Ink! Smart Contract | 
+| 2.  | Xcavate Loan App Repo | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! Smart Contract | 
 | 3a.  | Loan management pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] | Actually called Community Loan Pallet - A percentage of all XCAV tokens will be deposited in an account, once minted, to facilitate all approved real estate developer loans  |
 | 3b.  | Loan Management Contracts | [https://github.com/XcavateBlockchain/lending_protocol_contracts] | Ink! based contracts that interact with the contracts pallet  | 
 | 4.  | Community Loan Staking pallet | [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] | Community Loan Staking - This is its basic format... additional work is needed to make production ready  | 
