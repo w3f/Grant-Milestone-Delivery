@@ -9,11 +9,108 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.  | License | <ul><li>[x] </li></ul>| [LICENSE]( https://github.com/sandoxio/sandox/blob/main/LICENSE) |  |
-| 0b.  | Documentation | <ul><li>[ ] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md) | Could be improved |
-| 0c.  | Testing Guide | <ul><li>[ ] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md#how-to) | Could be improved |
+| 0b.  | Documentation | <ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md) |  |
+| 0c.  | Testing Guide | <ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md#how-to) |  |
 | 1.  | “Project” panel | <ul><li>[x] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/components/panels/projectInfo/projectInfo.js) |  | 
 | 2.  | Polkadot js implementation | <ul><li>[ ] </li></ul>| https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js#L399 | Some problems using Firefox. 
 | 3.  | Project compiling feature | <ul><li>[ ] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js) | Some problems using Firefox. |  
+
+## Evaluation V2
+
+### Testing
+
+The functions of this milestone are working fine. I could run the code using Firefox but in this browser the error messages are not displayed.
+
+- Example 1
+    
+    <details>
+
+    app.js
+
+    ```
+    console.logERROR("Test")
+    ```
+
+    Firefox
+
+    ```
+    12:29:29    >   Launched "app.js"
+    12:29:29    >   @app.js:2:9
+    ```
+
+    Chrome
+
+    ```
+    12:30:59	>	Launched "app.js"
+    12:30:59	>	TypeError: console.logERROR is not a function
+                    at app.js:1:9
+    ```
+    </details>
+
+- Example 2
+
+    <details>
+
+    app.js
+
+    ```
+    console.logERROR(Test")
+    ```
+
+    Firefox
+
+    ```
+    12:45:23    >   Launched "app.js"
+    12:45:23    >
+    ```
+
+    Chrome
+
+    ```
+    12:45:07	>	Launched "app.js"
+    12:45:07	>	SyntaxError: missing ) after argument list
+    ```
+
+    </details>
+
+- Example 3
+
+    <details>
+
+    blockchain.js
+
+    ```
+    import {ApiPromise, WsProvider} from '@polkadot/api';
+    import {cryptoWaitReady} from '@polkadot/util-crypto';
+
+
+    cryptoWaitReady().then(async () => {
+        const wsProvider = new WsProviderERROR('wss://rpc.polkadot.io');
+        const api = await ApiPromise.create({ provider: wsProvider }); 
+
+        const chain = await api.rpc.system.chain();
+        console.log('You are connected to chain ' + chain);
+    });
+    ```
+
+    Firefox
+
+    ```
+    12:36:03    >   Launched "app.js"
+    12:36:03    >   @src/blockchain.js:6:24
+    ```
+
+    Chrome
+
+    ```
+    12:35:38	>	Launched "app.js"
+    12:35:38	>	ReferenceError: WsProviderERROR is not defined
+                    at src/blockchain.js:6:24
+    ```
+
+    </details>
+
+I recommend displaying the column number of the cursor somewhere to help the user find the problems when there is a syntax error.
 
 ## Evaluation V1
 
