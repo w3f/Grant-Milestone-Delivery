@@ -19,6 +19,38 @@
 | 4. | SDK: Encryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) |  |
 | 5. | SDK: Decryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) |  |
 
+## Evaluation V4
+
+### Etf.js
+
+I started the smoldot using `npm install; npm start` in `./wasm-node/javascript`.
+
+I started the ipfs using `ipfs daemon`.
+
+I started the Etf.js changing the `./example/app.js`.
+
+```
+  const distanceBasedSlotScheduler = new DistanceBasedSlotScheduler();
+  let api = new Etf(distanceBasedSlotScheduler, "0.0.0.0", 9944);
+  await api.init(false);
+```
+
+I checked the developer tools.
+
+In console:
+
+![image (40)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/616571b1-202f-4eab-8528-dae31eff3653)
+
+
+In network:
+
+![image (41)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/d63effb9-d68d-4284-a7ad-d426db60f476)
+
+
+Am I forgetting to run something? Do I need to do any extra steps?
+
+The application works fine, using the full node and the etf0 bootnode. I will ask to someone of the research team to take a look at the cryptography part.
+
 ## Evaluation V3
 
 ### Substrate
