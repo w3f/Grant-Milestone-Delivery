@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/sandox.md 
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -12,8 +12,12 @@
 | 0b.  | Documentation | <ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md) |  |
 | 0c.  | Testing Guide | <ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md#how-to) |  |
 | 1.  | “Project” panel | <ul><li>[x] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/components/panels/projectInfo/projectInfo.js) |  | 
-| 2.  | Polkadot js implementation | <ul><li>[ ] </li></ul>| https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js#L399 | Some problems using Firefox. 
-| 3.  | Project compiling feature | <ul><li>[ ] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js) | Some problems using Firefox. |  
+| 2.  | Polkadot js implementation | <ul><li>[x] </li></ul>| https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js#L399 |  
+| 3.  | Project compiling feature | <ul><li>[x] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js) |  |  
+
+## Evaluation V3
+
+The remainder problems with Firefox were fixed.
 
 ## Evaluation V2
 
