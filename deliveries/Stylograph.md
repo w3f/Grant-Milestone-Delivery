@@ -31,8 +31,8 @@ Note that Genesis DAO now has a Cumulus/parachain integration, so compiling no l
 | 0d.    | Benchmarking | [GitHub](https://github.com/deep-ink-ventures/pallet_hookpoints/blob/main/src/benchmarking.rs) | Pallet Hookpoints includes benchmarks |
 | 0e.    | State of the art Tech Stack | N/A | Utilizes next.js/react for frontend, python/django for backend, and rust for Substrate components |
 | 1.     | Pallet Development | [GitHub](https://github.com/deep-ink-ventures/pallet_hookpoints), [Crates.io](https://crates.io/crates/pallet-hookpoints) | Developed as specified in the original proposal |
-| 2.     | Frontend Integration: Dashboard Add-On | [PDF Walkthrough](#provide-link-to-pdf), [Website](https://genesis-dao.org) | See the PDF walkthrough or visit genesis-dao.org for more details |
-| 3.     | Frontend Integration: Token Transfer | [PDF Walkthrough](#provide-link-to-pdf), [Website](https://genesis-dao.org) | See the PDF walkthrough or visit genesis-dao.org for more details |
+| 2.     | Frontend Integration: Dashboard Add-On | [Walkthrough](https://docs.google.com/document/d/1GDqfZnigri5qp6sJoIu4655NALk0cMxDl3BMAnnbGWc/edit?usp=sharing), [Website](https://genesis-dao.org) | See the walkthrough or visit genesis-dao.org for more details |
+| 3.     | Frontend Integration: Token Transfer | [Walkthrough](https://docs.google.com/document/d/1GDqfZnigri5qp6sJoIu4655NALk0cMxDl3BMAnnbGWc/edit?usp=sharing), [Website](https://genesis-dao.org) | See the walkthrough or visit genesis-dao.org for more details |
 
 ## Milestone 2 Deliverables
 
@@ -44,7 +44,7 @@ Note that Genesis DAO now has a Cumulus/parachain integration, so compiling no l
 | 0d.    | State of the art Tech Stack | N/A | Utilizes next.js/react for frontend, python/django for backend, and rust for Substrate components |
 | 1.     | Facade Builder | [GitHub](https://github.com/deep-ink-ventures/hookpoints-cli), [Crates.io](https://crates.io/crates/hookpoints-cli) | CLI generates `hooks.rs` and all boilerplate/trait code. Refer to the Medium article for details |
 | 2.     | Reference Implementation | [GitHub Example](https://github.com/deep-ink-ventures/genesis-dao-node/blob/main/pallets/dao-votes/src/tests.rs#L342-L379) | Genesis DAO uses this implementation. An example can be found at the provided GitHub link |
-| 3.     | Frontend Integration: Councils Management | [PDF Walkthrough](#provide-link-to-pdf) | See the PDF Walkthrough or create a proposal and mark it as faulty, then visit the transaction page for more details |
+| 3.     | Frontend Integration: Councils Management | [Walkthrough](https://docs.google.com/document/d/1GDqfZnigri5qp6sJoIu4655NALk0cMxDl3BMAnnbGWc/edit?usp=sharing) | See the Walkthrough or create a proposal and mark it as faulty, then visit the transaction page for more details |
 
 ## Additional Information
 
@@ -53,4 +53,4 @@ Note that Genesis DAO now has a Cumulus/parachain integration, so compiling no l
 - Both `pallet_hookpoints` and `hookpoints-cli` have been released as version 1.0.0, which serves as the reference for this milestone. We are actively adding new features to both.
 - We are actively integrating `pallet_hookpoints` into Genesis DAO. An example of its usage is the planned integration of vesting wallets, which will be respected by the votes hookpoint. More details can be found in this [GitHub issue](https://github.com/deep-ink-ventures/genesis-dao-node/issues/117).
 - A detailed walkthrough has been provided through a [Medium article](https://medium.com/@GenesisDAO/introducing-the-hookpoints-pallet-377de6680c2d).
-- The frontend part is fully completed, and a PDF walkthrough is attached for
+- The frontend part is fully completed
