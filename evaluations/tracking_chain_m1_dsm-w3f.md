@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tracking_chain.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,17 +9,31 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) |  |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo)  | Not fully evaluated yet |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) | Not fully evaluated yet |
-| **0d.** | Docker | <ul><li>[ ] </li></ul>| [LINK SQL Server under Docker](https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash) | Not fully evaluated yet |
-| 0e. | Article | <ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo)  | Not fully evaluated yet |
+| **0b.** | Documentation | <ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo)  |  |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) |  |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| [LINK SQL Server under Docker](https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash) |  |
+| 0e. | Article | <ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo)  |  |
 | 1. | Frontend Admin Tools | <ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.2.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.2.0-alpha) |  |
 | 2. | Frontend Transaction Monitor | <ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.2.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.2.0-alpha) |  |
 | 3. | Frontend Registry | <ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.2.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.2.0-alpha) |  |
 
+## Evaluation V2
+
+### Docker 
+
+The [Docker Compose](https://github.com/TrackingChains/TrackingChain/wiki/Docker-Compose) is working fine.
+
+### Documentation
+
+The [documentation](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo) seems nice.
+
+### Manual Test
+
+The IDs for accounts and ProfileGroups are now showing in AdminTools.
+
 ## Evaluation V1
 
-### Docker
+### Dockerhttps://github.com/TrackingChains/TrackingChain/wiki/Milestone-2-Guide-to-Demo
 
 Would be possible to create a docker that configures and run all the application?
 
