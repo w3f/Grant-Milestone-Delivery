@@ -3,7 +3,8 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Stylograph.md
-* **Milestone Number**: 1 and 2
+* **Milestone Number**: 1
+* **Milestone Number**: 2
 
 ## Context
 Both milestones were completed simultaneously for practical development reasons. The project was initially named "Stylograph," but has been renamed to `pallet_hookpoints` to align with traditional Substrate naming conventions. The frontend part is also fully completed. A detailed walkthrough of the development process and features is documented in a [Medium article](https://medium.com/@GenesisDAO/introducing-the-hookpoints-pallet-377de6680c2d).
