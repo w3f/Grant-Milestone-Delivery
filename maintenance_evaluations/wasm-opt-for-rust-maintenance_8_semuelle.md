@@ -2,7 +2,7 @@
 
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/maintenance/wasm-opt-for-rust.md
-- **Milestone:** 5
+- **Milestone:** 8
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
 - **Previously successfully merged evaluation:** All by semuelle
 
