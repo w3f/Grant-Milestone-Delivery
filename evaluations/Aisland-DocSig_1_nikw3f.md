@@ -439,6 +439,13 @@ Docker instructions works.
 ```
 I am able to open UI on `localhost:3000` and sign docs.
 
+## UI
+
+I am able to run UI and sign documents.
+
+<img width="1445" alt="Screenshot 2023-09-08 at 14 07 16" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/142136841/dd943504-ea38-4a2b-a31b-77d3c8228d1b">
+
+
 ## Tests
 
 Unit tests are passing. Total 30 tests:
