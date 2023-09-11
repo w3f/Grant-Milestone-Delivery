@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/societal_saas_pricing.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -9,12 +9,16 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| [GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m3/LICENSE)|  |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| [GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m3/README.md) | It needs some adjustments. |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| [GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m3/README.md) |  |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>| [GitHub repo link](https://github.com/sctllabs/societal-node/blob/grant3_m3/docs/PaymentTestingGuide.md)|  |
 | 0d. | Docker | <ul><li>[x] </li></ul>| [Docker Image](https://hub.docker.com/layers/societal/societal-node/grant3_m3-latest/images/sha256-c17b20e56572e3d68102fec147e6e1427e8b174c791584d98bec338480a7b0f2?context=explore)|  |
 | 0e. | Article | <ul><li>[x] </li></ul>| [Article Link](https://medium.com/@societal.xyz/societals-third-web3-foundation-grant-56b80c3b2cc6)|  |
 | 1. | Substrate Module: DAO Factory Pallet | <ul><li>[x] </li></ul>| [GitHub repo link](https://github.com/sctllabs/societal-node/tree/grant3_m3/pallets/dao-subscription) |  |
 | 2. | Client Modules | <ul><li>[x] </li></ul>|  [Polkadot-JS](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=ws://localhost:9954) |  |
+
+## Evaluation V3
+
+The documentation was updated and it is ok. 
 
 ## Evaluation V2
 
