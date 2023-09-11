@@ -12,10 +12,75 @@
 | 0a. | License | <ul><li>[x] </li></ul>| Apache 2.0 |  |
 | 0b. | Documentation | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/blob/main/docs/overview.md |  |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard |  |
-| 0d. | Docker | <ul><li>[ ] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service | Problems to start the bot. |
+| 0d. | Docker | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service |  |
 | 1. | Events exporter | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events |  |
-| 2. | Telegram bot UI + support chat upgrades | <ul><li>[ ] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/bot | I didn't receive the personal dashboard.  |
+| 2. | Telegram bot UI + support chat upgrades | <ul><li>[ ] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/bot | Some problems with the bot commands |
 | 3. | Create a landing page | <ul><li>[x] </li></ul>| https://maas.p2p.org/ |  |
+
+## Evaluation V3
+
+### Docker
+
+Docker is working again.
+
+### Bot
+
+I received the link to the dashboard this time, but when I used the command `destroy my_id`, I got this log in the docker.
+
+<details>
+
+```
+polkadot_monitoring_service-bot-1                     	| ERROR:asyncio:Task exception was never retrieved
+polkadot_monitoring_service-bot-1                     	| future: <Task finished name='Task-23' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'functions' is not defined")>
+polkadot_monitoring_service-bot-1                     	| Traceback (most recent call last):
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+polkadot_monitoring_service-bot-1                     	| 	for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+polkadot_monitoring_service-bot-1                     	| 	return await asyncio.gather(*tasks)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+polkadot_monitoring_service-bot-1                     	| 	response = await handler_obj.handler(*args, **partial_data)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+polkadot_monitoring_service-bot-1                     	| 	return await self.message_handlers.notify(update.message)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+polkadot_monitoring_service-bot-1                     	| 	response = await handler_obj.handler(*args, **partial_data)
+polkadot_monitoring_service-bot-1                     	|   File "/app/./handlers/destroy.py", line 25, in command_destroy
+polkadot_monitoring_service-bot-1                     	| 	functions.deploy(chat_id,'destroy')
+polkadot_monitoring_service-bot-1                     	| NameError: name 'functions' is not defined
+```
+
+</details>
+
+I tried to build again and received this log. (In MY_ID is my Telegram ID)
+
+<details>
+
+```
+polkadot_monitoring_service-bot-1                     	| ERROR:asyncio:Task exception was never retrieved
+polkadot_monitoring_service-bot-1                     	| future: <Task finished name='Task-29' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=Exception('Aborting attempt to copy existing app. Chat ID: MY_ID')>
+polkadot_monitoring_service-bot-1                     	| Traceback (most recent call last):
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+polkadot_monitoring_service-bot-1                     	| 	for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+polkadot_monitoring_service-bot-1                     	| 	return await asyncio.gather(*tasks)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+polkadot_monitoring_service-bot-1                     	| 	response = await handler_obj.handler(*args, **partial_data)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+polkadot_monitoring_service-bot-1                     	| 	return await self.message_handlers.notify(update.message)
+polkadot_monitoring_service-bot-1                     	|   File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+polkadot_monitoring_service-bot-1                     	| 	response = await handler_obj.handler(*args, **partial_data)
+polkadot_monitoring_service-bot-1                     	|   File "/app/./handlers/build.py", line 28, in command_build
+polkadot_monitoring_service-bot-1                     	| 	deploy(chat_id,'./values.yml')
+polkadot_monitoring_service-bot-1                     	|   File "/app/./functions/functions.py", line 10, in deploy
+polkadot_monitoring_service-bot-1                     	| 	raise Exception("Aborting attempt to copy existing app. Chat ID: {}".format(chat_id))
+polkadot_monitoring_service-bot-1                     	| Exception: Aborting attempt to copy existing app. Chat ID: MY_ID
+```
+
+</details>
+
+I was able to use the support function. I was able to send a message, receive, and respond. But I couldn't close the conversation and start a new one. This application has some problems if the user chat is the same as the admin chat.
+
+I used `deactivate_support My_ID` and received the message "Deactivated.", but when I used `/support` again, I received "You already have an active support conversation."
+
 
 ## Evaluation V2
 
