@@ -121,6 +121,9 @@ Docker instructions works.
 
 I am able to open fuseki-server UI on `localhost:3030` and query KB.
 
+<img width="1493" alt="Screenshot 2023-09-13 at 13 11 29" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/142136841/3db81af0-8687-4aa0-9cda-7c452e65d8b2">
+
+
 
 ```
 ➜  PolkadotAnalytics git:(main) ✗ cat test.py
