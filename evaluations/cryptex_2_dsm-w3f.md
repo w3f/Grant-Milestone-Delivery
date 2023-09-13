@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,15 +9,19 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| https://github.com/ideal-lab5/substrate/blob/etf/LICENSE-GPL3 |  | 
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| https://ideal-lab5.github.io | Not fully evaluated yet.|
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| https://docs.google.com/document/d/1wyWSHl-MJtiaFzuZqsPTAq0ABRCw9RlxIjt5m6pEOUY/edit?usp=sharing  | Not fully evaluated yet. |
+| **0b.** | Documentation | <ul><li>[x] </li></ul>| https://ideal-lab5.github.io | |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://docs.google.com/document/d/1wyWSHl-MJtiaFzuZqsPTAq0ABRCw9RlxIjt5m6pEOUY/edit?usp=sharing  | |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| https://hub.docker.com/repository/docker/ideallabs/etf/general |  |
 | **0e.** | Article | <ul><li>[x] </li></ul>| https://ideallabs.substack.com/p/e1d2e89b-ec19-477d-8781-7401fc3efbbe |  |
-| 1. | Light Client | <ul><li>[ ] </li></ul>| [smoldot fork](https://github.com/ideal-lab5/smoldot/tree/etf), [substrate-connect fork](https://github.com/ideal-lab5/substrate-connect/tree/etf) | Not fully evaluated yet. |
+| 1. | Light Client | <ul><li>[x] </li></ul>| [smoldot fork](https://github.com/ideal-lab5/smoldot/tree/etf), [substrate-connect fork](https://github.com/ideal-lab5/substrate-connect/tree/etf) |  |
 | 2 | User Interface: setup | <ul><li>[x] </li></ul>| [the UI](https://github.com/ideal-lab5/etf.js/tree/main/examples) |  |
-| 3. | SDK: Slot Scheduling | <ul><li>[ ] </li></ul>| [implementation](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L42), [tests](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.test.spec.ts#L6) | Not fully evaluated yet. |
-| 4. | SDK: Encryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) |  |
-| 5. | SDK: Decryption | <ul><li>[ ] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) |  |
+| 3. | SDK: Slot Scheduling | <ul><li>[x] </li></ul>| [implementation](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L42), [tests](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.test.spec.ts#L6) |  |
+| 4. | SDK: Encryption | <ul><li>[x] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L138) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L72) |  |
+| 5. | SDK: Decryption | <ul><li>[x] </li></ul>| [in etf.js](https://github.com/ideal-lab5/etf.js/blob/77da831ffe3a93964790a7bcf1e5a53ddf362050/src/etf.ts#L160) which calls the [client](https://github.com/ideal-lab5/etf-sdk/blob/4182f34ac51800e48e6a62d1aa1996181567513e/crypto/src/client/client.rs#L116) |  |
+
+## Evaluation V5
+
+The research team gave some feedback suggesting optimizations to the code that can be handled in the next milestones.
 
 ## Evaluation V4
 
