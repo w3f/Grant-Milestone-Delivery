@@ -24,6 +24,6 @@ This milestone is mainly about setting up the infrastructure for implementing IS
 
 **Additional Information**
 
-This milestone was a lot more challenging than I expected. I had to learn a lot of new things about ISO-8583 standard and deal with unmaintained packages. However, the core functionality and infrastructure that enables ISO-8583 integration with Substrate is complete. 
+This milestone was a lot more challenging than I expected. I had to learn a lot of new things about ISO-8583 standard and deal with unmaintained packages. Parties involved in ISO-8583 are also simulated in a naive way, i.e there is only one bank that is issuing cards, so all transactions are "on-us". However, the core functionality and infrastructure that enables ISO-8583 integration with Substrate is complete.
 
 There were some tough design decisions that I had to make. For example, I had to use JSON RPC instead of message broker (although they are very similar). I am using [`jsonrpsee`](https:://github.com/paritytech/jsonrpsee.git). 
