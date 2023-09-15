@@ -9,7 +9,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.  | License | <ul><li>[ ] </li></ul>| Apache 2.0 | Have merge conflicts.|
+| 0a.  | License | <ul><li>[x] </li></ul>| Apache 2.0 | Have merge conflicts.|
 | 0b.  | Documentation | <ul><li>[ ] </li></ul>| [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | Not fully evaluated yet. |
 | 0c. | Testing video | <ul><li>[x] </li></ul>| [https://youtu.be/LxOwFm4XDrw] |  |
 | 0d. | Testing Guide | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] [https://github.com/XcavateBlockchain/lending_protocol_contracts/blob/main/README.md] | Not fully evaluated yet. |
@@ -23,9 +23,47 @@
 | 5.  | Verification pallet | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/kilt-credentials] | Not fully evaluated yet. | 
 | 6.  | DAO | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Couldn't use cargo commands. | 
 | 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Frontend] | Couldn't connet the wallet. | 
-| 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Sometimes it stoped to work. | 
+| 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Not fully evaluated yet. | 
 | 7c.  | Decentralized Developer Loan dApp / Front End Repo part 3 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Admin] | Not fully evaluated yet. | 
 
+## Evaluation V2
+
+### License 
+
+The merge conflict in the license was fixed..
+
+### Decentralized Developer Loan dApp 
+
+The problem with the Backend is now solved. However, I still can't connect my wallet.
+
+### Code Quality
+
+The lint problems in the directory `MVP_Admin` were fixed.
+
+<details>
+
+```
+user@localhost:~/Documents/xcavate/MVP_Admin$ yarn lint
+yarn run v1.22.19
+$ eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+=============
+
+WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+
+You may find that it works just fine, or you may not.
+
+SUPPORTED TYPESCRIPT VERSIONS: >=3.3.1 <5.2.0
+
+YOUR TYPESCRIPT VERSION: 5.2.2
+
+Please only submit bug reports when using the officially supported version.
+
+=============
+Done in 2.88s.
+
+```
+
+</details>
 
 ## Evaluation V1
 
