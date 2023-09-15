@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/zkwasm-rollups-transfer.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -13,10 +13,14 @@
 | 0b. | Documentation | <ul><li>[x] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>| [RedDSA Tutorial](https://kogarashinetwork.github.io/Kogarashi/tutorial/reddsa_wallet/)| |
 | 0d. | Docker | <ul><li>[x] </li></ul>| [docker-compose](https://github.com/KogarashiNetwork/Kogarashi/blob/master/docker-compose.yml) [base image](https://github.com/KogarashiNetwork/Kogarashi/tree/master/docker) | |
-| 0e. | Article | <ul><li>[ ] </li></ul>| [RedDSA Signature](https://kogarashinetwork.github.io/Kogarashi/technical/reddsa_signature/)| Not Fully Evaluated yet. |
-| 1. | `RedDSA` implementation | <ul><li>[ ] </li></ul>| [Making Substrate RedDSA Compatible](https://github.com/KogarashiNetwork/zksubstrate/compare/49a4103...95f493c) [RedDSA Library](https://github.com/KogarashiNetwork/Kogarashi/tree/master/primitive/redjubjub) | Not Fully Evaluated yet. |
-| 2. | `Jubjub` curve optimization | <ul><li>[ ] </li></ul>| [field square](https://github.com/KogarashiNetwork/Kogarashi/pull/64) [field double](https://github.com/KogarashiNetwork/Kogarashi/pull/63) [jubjub NAF](https://github.com/KogarashiNetwork/Kogarashi/pull/60) [Twisted Edwards Revisit](https://github.com/KogarashiNetwork/Kogarashi/pull/68) | Not Fully Evaluated yet. |
-|3. | Client wallet implementation | <ul><li>[ ] </li></ul>| [Wallet Cli Example](https://github.com/KogarashiNetwork/Kogarashi/tree/master/node/client) | Not Fully Evaluated yet. |
+| 0e. | Article | <ul><li>[x] </li></ul>| [RedDSA Signature](https://kogarashinetwork.github.io/Kogarashi/technical/reddsa_signature/)|  |
+| 1. | `RedDSA` implementation | <ul><li>[x] </li></ul>| [Making Substrate RedDSA Compatible](https://github.com/KogarashiNetwork/zksubstrate/compare/49a4103...95f493c) [RedDSA Library](https://github.com/KogarashiNetwork/Kogarashi/tree/master/primitive/redjubjub) |  |
+| 2. | `Jubjub` curve optimization | <ul><li>[x] </li></ul>| [field square](https://github.com/KogarashiNetwork/Kogarashi/pull/64) [field double](https://github.com/KogarashiNetwork/Kogarashi/pull/63) [jubjub NAF](https://github.com/KogarashiNetwork/Kogarashi/pull/60) [Twisted Edwards Revisit](https://github.com/KogarashiNetwork/Kogarashi/pull/68) |  |
+|3. | Client wallet implementation | <ul><li>[x] </li></ul>| [Wallet Cli Example](https://github.com/KogarashiNetwork/Kogarashi/tree/master/node/client) |  |
+
+## Evaluation V3
+
+The parts that involve cryptograpy will be evaluated in the next milestone. 
 
 ## Evaluation V2
 
