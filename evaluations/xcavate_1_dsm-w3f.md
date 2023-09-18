@@ -26,6 +26,224 @@
 | 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Not fully evaluated yet. | 
 | 7c.  | Decentralized Developer Loan dApp / Front End Repo part 3 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Admin] | Not fully evaluated yet. | 
 
+## Evaluation V3
+
+### Node
+
+I tried again to build using the [newly indicated repository](https://github.com/XcavateBlockchain/Xcavate_Node) with  Docker to check if I could build with success but I received the same error.
+
+<details>
+
+```
+ => ERROR [build 4/4] RUN cargo build --release                                                                                                                                                             537.6s
+------                                                                                                                                                                                                             
+ > [build 4/4] RUN cargo build --release:                                                                                                                                                                          
+#0 0.465 info: syncing channel updates for 'nightly-2023-01-01-x86_64-unknown-linux-gnu'                                                                                                                           
+#0 4.219 info: latest update on 2023-01-01, rust version 1.68.0-nightly (574b64a97 2022-12-31)                                                                                                                     
+#0 4.219 info: downloading component 'cargo'                                                                                                                                                                       
+#0 11.80 info: downloading component 'rust-std' for 'wasm32-unknown-unknown'                                                                                                                                       
+#0 29.30 info: downloading component 'rust-std'
+#0 54.56 info: downloading component 'rustc'
+#0 107.7 info: downloading component 'rustfmt'
+#0 113.0 info: installing component 'cargo'
+#0 113.5 info: installing component 'rust-std' for 'wasm32-unknown-unknown'
+#0 115.0 info: installing component 'rust-std'
+#0 117.2 info: installing component 'rustc'
+#0 121.5 info: installing component 'rustfmt'
+#0 122.2     Updating crates.io index
+#0 403.8     Updating git repository `https://github.com/paritytech/substrate.git`
+#0 537.6 error: failed to get `frame-benchmarking` as a dependency of package `node-template v4.0.0-dev (/code/node)`
+#0 537.6 
+#0 537.6 Caused by:
+#0 537.6   failed to load source for dependency `frame-benchmarking`
+#0 537.6 
+#0 537.6 Caused by:
+#0 537.6   Unable to update https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#98f2e345
+#0 537.6 
+#0 537.6 Caused by:
+#0 537.6   object not found - no match for id (98f2e3451c9143278ec53c6718940aeabcd3b68a); class=Odb (9); code=NotFound (-3)
+------
+Dockerfile:5
+--------------------
+   3 |     WORKDIR /code
+   4 |     COPY . .
+   5 | >>> RUN cargo build --release
+   6 |     
+   7 |     FROM ubuntu:latest
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cargo build --release" did not complete successfully: exit code: 101
+```
+
+</details>
+
+### Contract
+
+I tried to build the contract in the [new contract repository](https://github.com/XcavateBlockchain/xcavate_loan_contract.git) but I received this error.
+
+<details>
+
+```
+user@localhost:~/Documents/xcavate/xcavate_loan_contract$ cargo contract build --release
+ [1/*] Building cargo project
+    Finished release [optimized] target(s) in 0.23s
+ [2/*] Generating metadata
+   Compiling metadata-gen v0.1.0 (/tmp/cargo-contract_CwO95e/.ink/metadata_gen)
+error: linking with `cc` failed: exit status: 1
+  |
+  = note: LC_ALL="C" PATH="/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/bin:/home/user/.pyenv/shims:/home/user/.nvm/versions/node/v18.16.0/bin:/home/user/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/user/.cargo/bin:/home/user/.pyenv/bin:/home/user/.local/bin:/home/user/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/user/.foundry/bin:/home/user/.local/go/bin:/home/user/Downloads/OpenWhisk_CLI-1.2.0-linux-amd64:/home/user/Documents/aurras/aurras/workflow/composer:/home/user/.pyenv/bin:/home/user/Downloads/llvm15.0/bin:/home/user/Downloads/dotnet-sdk-7.0.400-linux-x64:/home/user/Downloads/azuredatastudio-linux-x64:/home/user/Downloads/redis-4.0.7/src:/home/user/Downloads/mongodb-linux-x86_64-debian11-7.0.0/bin:/home/user/Downloads/mongosh-1.10.5-linux-x64/bin:/home/user/Downloads/ipfs/ipfs:/home/user/Downloads/substrate-contracts-node-linux/artifacts/substrate-contracts-node-linux:/home/user/Documents/slothunter/slothunter/target/release" VSLANG="1033" "cc" "-m64" "/tmp/rustc81v7YQ/symbols.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.0.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.1.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.10.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.11.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.12.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.13.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.14.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.15.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.2.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.3.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.4.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.5.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.6.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.7.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.8.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.9.rcgu.o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.b5kp0654vd6vpg.rcgu.o" "-Wl,--as-needed" "-L" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps" "-L" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/build/secp256k1-sys-97a648074d911023/out" "-L" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-Wl,-Bstatic" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libserde_json-bc329f7849043733.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libryu-ffc82982d137c604.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libitoa-da837f2c96aeeb31.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libxcavate_lending_protocol-480ad6859886854b.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libopenbrush-49bad53051da7e2b.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libopenbrush_contracts-79fffed4a08bbc5f.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libopenbrush_lang-da8125b736328b04.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libconst_format-3f544cb7537e5fc1.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink-78a70d03eb1f1786.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_storage-378f5fc4c60b6354.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_env-bcde4bab4f992b22.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_engine-c494b8bb81e9239f.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsha2-8bd9587a566e8bfd.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libcpufeatures-9afc2eebc73d816e.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsha3-9d370768c01b408a.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libkeccak-2ec801f7ea8c87f9.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libblake2-78d95274fa9ec3ea.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libdigest-43825aa295da0447.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsubtle-bb7be9b9749eb57e.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libblock_buffer-e09c5b416703ab8f.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libcrypto_common-1e51f07719035c87.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libgeneric_array-d847891487d83175.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libtypenum-65220950c030e733.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsecp256k1-7ba2cf923e6a36e1.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsecp256k1_sys-ca32534bbf5fddf1.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libarrayref-fc0a72e5085c38fd.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libstatic_assertions-6865a9c0238fb2ad.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libnum_traits-bdd166091f2c59da.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_storage_traits-3d8fc6937e9efbb9.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_metadata-222fcd0f3251619d.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libimpl_serde-71f7f1bc667db6ee.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_primitives-efafb59a1c70fc33.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libscale_encode-b5944ffd99ee6ecd.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libscale_decode-62533a7a6969fbc0.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libsmallvec-486b64106c006df0.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libscale_bits-a0760d77e5be9559.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libscale_info-9ab6a37acc20aad9.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libbitvec-fd3fbdf8eb8abd4c.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libwyz-e289aec6b92cf679.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libtap-abdd322fa87742c3.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libradium-53217f1c2dc64443.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libfunty-a012e3942e58fb90.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libparity_scale_codec-2cd3d25dbd284026.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libserde-184b512f15d121b4.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libarrayvec-157f4de9642b9fc9.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libbyte_slice_cast-31d55c9844484da4.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libxxhash_rust-aac50840cd46e640.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libink_prelude-8ef58543bfb53009.rlib" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/libcfg_if-af4ed11818f18246.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-62c4894b82797b30.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-21d882eb82e74d58.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-a7a4a5c38e3da2ad.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-e2b1fec37c9c19cd.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-f5128b1419f0c95a.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-41e9355081407ce3.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-3d69bc2ce2ff7508.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-bb4c6139d02b6b90.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-3990de10d3f2460e.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-3a23c05350b4d45c.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler-c2c33bc29289b145.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-b3d80be3be44960e.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-d2581a381e26c54b.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-0ff401eab4233ffd.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-6d46d38f739892fe.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-cb19371b39fc63d8.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-522518611024dce5.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-05898138a596088a.rlib" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-66b9c3ae5ff29c13.rlib" "-Wl,-Bdynamic" "-lgcc_s" "-lutil" "-lrt" "-lpthread" "-lm" "-ldl" "-lc" "-Wl,--eh-frame-hdr" "-Wl,-znoexecstack" "-L" "/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-o" "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe" "-Wl,--gc-sections" "-pie" "-Wl,-zrelro,-znow" "-Wl,-O1" "-nodefaultlibs"
+  = note: /usr/bin/ld: /home/user/Documents/xcavate/xcavate_loan_contract/target/ink/release/deps/metadata_gen-6bc6308340102ffe.metadata_gen.20a7a34b-cgu.14.rcgu.o: in function `metadata_gen::main':
+          metadata_gen.20a7a34b-cgu.14:(.text._ZN12metadata_gen4main17h2367a0e1641f1b89E+0x11): undefined reference to `__ink_generate_metadata'
+          collect2: error: ld returned 1 exit status
+          
+  = note: some `extern` functions couldn't be found; some native libraries may need to be installed or have their path specified
+  = note: use the `-l` flag to specify native libraries to link
+  = note: use the `cargo:rustc-link-lib` directive to specify the native libraries to link with Cargo (see https://doc.rust-lang.org/cargo/reference/build-scripts.html#cargorustc-link-libkindname)
+
+error: could not compile `metadata-gen` due to previous error
+ERROR: command ["/home/user/.rustup/toolchains/nightly-2023-01-01-x86_64-unknown-linux-gnu/bin/cargo", "run", "--color=always", "--package", "metadata-gen", "--manifest-path=/tmp/cargo-contract_CwO95e/Cargo.toml", "--target-dir", "/home/user/Documents/xcavate/xcavate_loan_contract/target/ink", "--release"] exited with code 101
+```
+
+</details>
+
+### Decentralized Developer Loan dApp
+
+This time, I was able to connect my wallet using the latest test version of Sporran. When I tried to link my credentials to my DID, I received this error in the backend.
+
+<details>
+
+```
+[18/09/2023, 10:14:29][INFO]  Incomming -> Method: [POST] - Url: [/api/user] - IP: [::ffff:127.0.0.1]
+uploading error ::  MissingRequiredParameter: Missing required key 'Bucket' in params
+	at ParamValidator.fail (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/param_validator.js:50:37)
+	at ParamValidator.validateStructure (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/param_validator.js:62:14)
+	at ParamValidator.validateMember (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/param_validator.js:89:21)
+	at ParamValidator.validate (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/param_validator.js:34:10)
+	at Request.VALIDATE_PARAMETERS (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/event_listeners.js:166:42)
+	at Request.callListeners (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+	at callNextListener (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:96:12)
+	at /home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/event_listeners.js:120:11
+	at finish (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/config.js:396:7)
+	at /home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/config.js:438:9 {
+  code: 'MissingRequiredParameter',
+  time: 2023-09-18T13:14:37.677Z
+}
+```
+
+</details>
+
+I updated the .env with the AWS and Crust network info provided in [this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/992#issuecomment-1718973383), and this solved the problem. I would like to know what is being stored in the AWS. Is this info necessary for the application? If It is, it needs to be in the `.env.example` and in the documentation with some instructions on how to get these variables.
+
+When I tried to Request a loan, I received 400 Bad Request in the console and this error in the backend when trying to submit in the last window.
+
+<details>
+
+```
+uploading error ::  SignatureDoesNotMatch: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+	at Request.extractError (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/services/s3.js:711:35)
+	at Request.callListeners (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+	at Request.emit (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+	at Request.emit (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:686:14)
+	at Request.transition (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:22:10)
+	at AcceptorStateMachine.runTo (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/state_machine.js:14:12)
+	at /home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/state_machine.js:26:10
+	at Request.<anonymous> (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:38:9)
+	at Request.<anonymous> (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:688:12)
+	at Request.callListeners (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:116:18) {
+  code: 'SignatureDoesNotMatch',
+  region: null,
+  time: 2023-09-18T13:46:43.905Z,
+  requestId: '1FEWBNBDH7CVDARX',
+  extendedRequestId: '+TrXoPhGemO/kj7Zy1S6PMi2FxdNgVgyLO0nceQuVvBFjFtt3J06KrWCk1cCUSLRBZU7dYdgOmuM18pNPL2w+A==',
+  cfId: undefined,
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 90.9324145644753
+}
+```
+
+</details>
+
+The request info:
+
+<details>
+
+```
+
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="planningPermissionCode"
+
+UK1085745222
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="planningAuthority"
+
+Planning Authority
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="landTitleDeedCode"
+
+"UK1085745222"
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="companyUrl"
+
+www.planningpermisionapplication.dev
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="companyName"
+
+Briks and blocks limited
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="companyPhoneNumber"
+
+094523546
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="companyDirector"
+
+John Deo
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="address"
+
+UK1085745222
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="landValue"
+
+1000000
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="totalGDV"
+
+3000000
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="duration"
+
+6
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="amount"
+
+1000000
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="currency"
+
+GBP
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="repaymentMethod"
+
+Pay
+-----------------------------251684705632918065901995171460
+Content-Disposition: form-data; name="developmentPlan"; filename="Screenshot 2023-05-04 at 08-02-52 Polkadot_Substrate Portal.png"
+Content-Type: image/png
+
+PNG
+...
+...
+-----------------------------251684705632918065901995171460--
+```
+
+</details>
+
+I have some minor problems and questions. Should I be able to create a new DID using the front end? This step is on the PDF (pages 3, 4, and 5), but I didn't saw it. 
+
+Some input boxes in the documentation are select boxes, but when I was testing, all the input boxes were input text. 
+
+When I uploaded the image, the "Click to upload or drag and drop" box didn't change it, so I tried a few times to upload the image but I gave up and submitted it. I checked the console and the PNG was sent. I tested using Firefox. This don't look like the expected behavior. 
+
+
 ## Evaluation V2
 
 ### License 
