@@ -1,7 +1,7 @@
 # Evaluation ISO-8583 PoC
 
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ISO-8583-implementation.md
 - **Milestone:** 1
 - **Kusama Identity:** Ha27MB4gKH36ieRPa1T1ASqhUz4sVxMoVmK7o5CS6tXDqjW
@@ -11,12 +11,12 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/blob/main/LICENSE)| License is Ok. |
 | 0b.  | Documentation |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/tree/main)| README is good. It contains links to other 3 README with proper documentation on how to run the solution. |
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>|[Link1](https://github.com/subclone/payment-processor/tree/main/pcidss/oracle/src/tests) [Link2](https://github.com/subclone/payment-processor/blob/main/pcidss/core/src/bank_account/models.rs#L149)| See General Comment #7. A Guide on how to run tests would be helpful for novice users. |
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>|[Link1](https://github.com/subclone/payment-processor/tree/main/pcidss/oracle/src/tests) [Link2](https://github.com/subclone/payment-processor/blob/main/pcidss/core/src/bank_account/models.rs#L149)| See General Comment #7. A Guide on how to run tests would be helpful for novice users. |
 | 0d.  | Docker |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/blob/main/pcidss/Dockerfile)| Good. See more under General Comments #6  |
 | 1.  | Merchant App |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/tree/main/interface)| See General comments #1 and #2.Resolve the openssl-legacy-provider issue |
 | 2. | Payment Processor |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/tree/main/payment-processor)| See General Comment #3 |
-| 3. | PCIDSS Compliant Gateway|<ul><li>[] </li></ul>|[Link](https://github.com/subclone/payment-processor/tree/main/pcidss/oracle)|See General comment #8 |
-| 4. | Makefile |<ul><li>[] </li></ul>|[Link](https://github.com/subclone/payment-processor/blob/main/Makefile)| See General Comment #4 |
+| 3. | PCIDSS Compliant Gateway|<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/tree/main/pcidss/oracle)|See General comment #8 |
+| 4. | Makefile |<ul><li>[x] </li></ul>|[Link](https://github.com/subclone/payment-processor/blob/main/Makefile)| See General Comment #4 |
 
 
 
@@ -181,3 +181,123 @@ make: *** [run] Error 1
 ```
 
 9. Consider hosting the solution online for the second delivery. It makes everything much easier to test and validate the functionality without running everything locally.
+    
+
+10. **Update after initial revision**: The Postgres Docker image worked. I am now able to run it locally.  
+
+```
+Status: Downloaded newer image for kingleard/pcidss-oracle:latest
+Creating pcidss_postgres_1 ... done
+Creating pcidss_oracle_1   ... done
+Attaching to pcidss_postgres_1, pcidss_oracle_1
+postgres_1  | ********************************************************************************
+postgres_1  | WARNING: POSTGRES_HOST_AUTH_METHOD has been set to "trust". This will allow
+postgres_1  |          anyone with access to the Postgres port to access your database without
+postgres_1  |          a password, even if POSTGRES_PASSWORD is set. See PostgreSQL
+postgres_1  |          documentation about "trust":
+postgres_1  |          https://www.postgresql.org/docs/current/auth-trust.html
+postgres_1  |          In Docker's default configuration, this is effectively any other
+postgres_1  |          container on the same system.
+postgres_1  | 
+postgres_1  |          It is not recommended to use POSTGRES_HOST_AUTH_METHOD=trust. Replace
+postgres_1  |          it with "-e POSTGRES_PASSWORD=password" instead to set a password in
+postgres_1  |          "docker run".
+postgres_1  | ********************************************************************************
+postgres_1  | The files belonging to this database system will be owned by user "postgres".
+postgres_1  | This user must also own the server process.
+postgres_1  | 
+postgres_1  | The database cluster will be initialized with locale "en_US.utf8".
+postgres_1  | The default database encoding has accordingly been set to "UTF8".
+postgres_1  | The default text search configuration will be set to "english".
+postgres_1  | 
+postgres_1  | Data page checksums are disabled.
+postgres_1  | 
+postgres_1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres_1  | creating subdirectories ... ok
+postgres_1  | selecting dynamic shared memory implementation ... posix
+postgres_1  | selecting default max_connections ... 100
+postgres_1  | selecting default shared_buffers ... 128MB
+postgres_1  | selecting default time zone ... UTC
+postgres_1  | creating configuration files ... ok
+postgres_1  | running bootstrap script ... ok
+postgres_1  | performing post-bootstrap initialization ... sh: locale: not found
+postgres_1  | 2023-09-18 18:57:02.045 UTC [33] WARNING:  no usable system locales were found
+postgres_1  | ok
+postgres_1  | syncing data to disk ... ok
+postgres_1  | 
+postgres_1  | 
+postgres_1  | Success. You can now start the database server using:
+postgres_1  | 
+postgres_1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres_1  | 
+postgres_1  | initdb: warning: enabling "trust" authentication for local connections
+postgres_1  | You can change this by editing pg_hba.conf or using the option -A, or
+postgres_1  | --auth-local and --auth-host, the next time you run initdb.
+postgres_1  | waiting for server to start....2023-09-18 18:57:10.740 UTC [53] LOG:  starting PostgreSQL 14.9 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, 64-bit
+postgres_1  | 2023-09-18 18:57:10.742 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_1  | 2023-09-18 18:57:10.758 UTC [54] LOG:  database system was shut down at 2023-09-18 18:57:09 UTC
+postgres_1  | 2023-09-18 18:57:10.783 UTC [53] LOG:  database system is ready to accept connections
+postgres_1  |  done
+postgres_1  | server started
+postgres_1  | 
+postgres_1  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+postgres_1  | 
+postgres_1  | waiting for server to shut down...2023-09-18 18:57:11.088 UTC [53] LOG:  received fast shutdown request
+postgres_1  | 2023-09-18 18:57:11.089 UTC [53] LOG:  aborting any active transactions
+postgres_1  | .2023-09-18 18:57:11.091 UTC [53] LOG:  background worker "logical replication launcher" (PID 60) exited with exit code 1
+postgres_1  | 2023-09-18 18:57:11.093 UTC [55] LOG:  shutting down
+postgres_1  | 2023-09-18 18:57:11.135 UTC [53] LOG:  database system is shut down
+postgres_1  |  done
+postgres_1  | server stopped
+postgres_1  | 
+postgres_1  | PostgreSQL init process complete; ready for start up.
+postgres_1  | 
+postgres_1  | 2023-09-18 18:57:11.216 UTC [1] LOG:  starting PostgreSQL 14.9 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, 64-bit
+postgres_1  | 2023-09-18 18:57:11.216 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres_1  | 2023-09-18 18:57:11.217 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres_1  | 2023-09-18 18:57:11.220 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_1  | 2023-09-18 18:57:11.237 UTC [66] LOG:  database system was shut down at 2023-09-18 18:57:11 UTC
+postgres_1  | 2023-09-18 18:57:11.256 UTC [1] LOG:  database system is ready to accept connections
+oracle_1    | + /usr/bin/pcidss-oracle --iso8583-spec=/usr/bin/spec.yaml --database-host=postgres
+oracle_1    | current-dir: /
+oracle_1    | spec-file: /usr/bin/spec.yaml
+postgres_1  | 2023-09-18 19:00:43.911 UTC [422] ERROR:  duplicate key value violates unique constraint "pg_database_datname_index"
+postgres_1  | 2023-09-18 19:00:43.911 UTC [422] DETAIL:  Key (datname)=(mockdb) already exists.
+postgres_1  | 2023-09-18 19:00:43.911 UTC [422] STATEMENT:  create database "mockdb";
+postgres_1  | 2023-09-18 19:01:41.563 UTC [70] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
+```
+
+I noticed that one of the tests was still failing due to duplication in database. You can try mocking the data in tests rather than reading/writing to database. 
+
+```
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/op_core-4ed3cc35f909a678)
+
+running 5 tests
+test transaction::models::tests::test_conversion_from_transaction_create_to_transaction ... ok
+test bank_account::models::tests::test_arithmetic_overflow_nonce ... ok
+test bank_account::models::tests::test_arithmetic_overflow_balance ... ok
+test bank_account::models::tests::test_successful_debit ... ok
+test bank_account::models::tests::test_successful_credit ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/pcidss_oracle-56e2f38d67c88873)
+
+running 2 tests
+test tests::payment::test_payment ... FAILED
+test tests::reversal::test_reversals_success ... ok
+
+failures:
+
+---- tests::payment::test_payment stdout ----
+thread 'tests::payment::test_payment' panicked at 'Error to init database to tests: InternalServerError("db error: ERROR: duplicate key value violates unique constraint \"pg_database_datname_index\"\nDETAIL: Key (datname)=(mockdb) already exists.")', oracle/src/tests/mock.rs:25:41
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::payment::test_payment
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.25s
+```
