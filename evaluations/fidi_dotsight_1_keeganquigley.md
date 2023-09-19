@@ -1,19 +1,19 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/fidi-dotsight-analytics.md
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/LICENSE) | 
-| **0b.** | Documentation | <ul><li>[x] </li></ul> |[LINK](https://github.com/fidi-tech/dotsight/blob/main/README.md) | As well as evolving [Documentation](https://docs.fidi.tech/) |
-| **0c.** | Testing | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/debank/wallet.datasource.spec.ts#L5) |  |
-| **1a.** | GiantSquid data funneling | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/giant-squid/stats/wallet-token.datasource.ts#L22) [USAGE](https://github.com/fidi-tech/dotsight/blob/main/README.md#sample-pipeline-subsquid-sourced) |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> |[LINK](https://github.com/fidi-tech/dotsight/blob/main/README.md) [Documentation](https://docs.fidi.tech/)| Well written docs. |
+| **0c.** | Testing | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/debank/wallet.datasource.spec.ts#L5) |  Tests all passing.
+| **1a.** | GiantSquid data funneling | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/giant-squid/stats/wallet-token.datasource.ts#L22) [USAGE](https://github.com/fidi-tech/dotsight/blob/main/README.md#sample-pipeline-subsquid-sourced) | All working as expected.
 | **1b.** | Data Aggregation module | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/tree/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/pipelines/services/pipeline/config) [USAGE](https://github.com/fidi-tech/dotsight/blob/main/README.md#pipeline-creation) |  
-| **1c.** | Off-chain sourced addresses support | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/middlewares/collection/coingecko/wallet-token-price.middleware.ts) | See also [Middleware](https://github.com/fidi-tech/dotsight/blob/main/README.md#middlewares) |
+| **1c.** | Off-chain sourced addresses support | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/middlewares/collection/coingecko/wallet-token-price.middleware.ts) See also [Middleware](https://github.com/fidi-tech/dotsight/blob/main/README.md#middlewares) |
 | **2a.** | Data Interface for developers | <ul><li>[x] </li></ul> |[LINK](https://github.com/fidi-tech/dotsight/tree/main#contributing) |
-| **2b.** | Schema mapping and morphing | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/mappers/abstract.mapper.ts) | Done by the corresponding [mappers](https://github.com/fidi-tech/dotsight/blob/main/README.md#mappers).
+| **2b.** | Schema mapping and morphing | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/mappers/abstract.mapper.ts) Done by the corresponding [mappers](https://github.com/fidi-tech/dotsight/blob/main/README.md#mappers). |
 | **2c.** | Data interface: view construction | <ul><li>[x] </li></ul> | n/a | |
 | **2d.** | Data interface: Deployment | <ul><li>[x] </li></ul> | n/a | |
 | **3a.** | Dashboards: Default Analytical Views | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/giant-squid/stats/wallet-token.datasource.ts#L22) [USAGE](https://github.com/fidi-tech/dotsight/blob/main/README.md#sample-pipeline-subsquid-sourced)  | 
@@ -23,6 +23,39 @@
 | **4c.** | Lighthouse use cases: customized dApp views | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/12280b45f5f1ddd855d6b91eaee4abbf1916f534/src/data-sources/collection/giant-squid/stats/wallet-token.datasource.ts#L22) [USAGE](https://github.com/fidi-tech/dotsight/blob/main/README.md#sample-pipeline-subsquid-sourced) |  |
 
 # General Notes
+
+Thank you for the robust documentation! CLI application is working nicely. I'm able to use curl to display the query results for the pre-defined pipelines:
+```sh
+curl "localhost:3000/pipelines/polkadot-coin/execute?mapperIds[]=dot-value-distribution&walletIds[]=16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD&walletIds"
+{"dot-value-distribution":{"items":[{"id":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD-DOT","name":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD","value":{"usd":245301175.01310474}}]}}%                                                  
+curl "localhost:3000/pipelines/polkadot-coin/execute?mapperIds[]=dot-value-distribution&walletIds[]=16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD&walletIds[]=12xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW&currencies[]=eth&currencies[]=usd"
+{"dot-value-distribution":{"items":[{"id":"12xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW-DOT","name":"12xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW","value":{"eth":98579.6938809727,"usd":161788639.5382557}},{"id":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD-DOT","name":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD","value":{"eth":149464.8500070791,"usd":245301175.01310474}}]}}%
+```
+Code is clean but could perhaps use more inline comments.
+
+<details>
+
+  <summary>Coingecko Middleware Example</summary>
+
+  ```ts
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/coins/list
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/coins/list 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/simple/price
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/simple/price 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/coins/list
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/coins/list 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/simple/price
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/simple/price 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/coins/list
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/coins/list 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/simple/price
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/simple/price 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/coins/list
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/coins/list 200:OK
+[CoingeckoWalletTokenPriceMiddleware][Request] GET https://api.coingecko.com/simple/price
+[CoingeckoWalletTokenPriceMiddleware][Response] GET https://api.coingecko.com/simple/price 200:OK
+```
+</details>
 
 <details>
   
@@ -150,7 +183,7 @@ Ran all test suites.
 
   <summary>App starts successfully:</summary>
 
-```js
+```ts
 > @fidi/dotsight@0.0.1 start
 > nest start
 
