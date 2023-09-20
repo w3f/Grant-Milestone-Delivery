@@ -9,22 +9,152 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a.  | License | <ul><li>[x] </li></ul>| Apache 2.0 | Have merge conflicts.|
+| 0a.  | License | <ul><li>[x] </li></ul>| Apache 2.0 | |
 | 0b.  | Documentation | <ul><li>[ ] </li></ul>| [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | Not fully evaluated yet. |
 | 0c. | Testing video | <ul><li>[x] </li></ul>| [https://youtu.be/LxOwFm4XDrw] |  |
 | 0d. | Testing Guide | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] [https://github.com/XcavateBlockchain/lending_protocol_contracts/blob/main/README.md] | Not fully evaluated yet. |
-| 0e.  | Docker | <ul><li>[ ] </li></ul>| Not fully evaluated yet. | 
+| 0e.  | Docker | <ul><li>[ ] </li></ul>|   | Not fully evaluated yet. | 
 | 0f.  | Article | <ul><li>[ ] </li></ul>| [https://xcavate.io/revolutionizing-real-estate-development-financing-with-nft-backed-loans/] | Not fully evaluated yet. | 
 | 0g.  | Tutorial | <ul><li>[ ] </li></ul>| [https://xcavate.io/XcavateDeveloperLoanUserInstructions.pdf] [https://xcavate.io/XcavatePlatformProcessflow.jpg] | Not fully evaluated yet.| 
-| 1. | Xcavate Node Repo | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | Couldn't use cargo commands. | 
+| 1. | Xcavate Node Repo | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | Not fully evaluated yet. | 
 | 2.  | Xcavate Loan App Repo | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/lending_protocol_contracts] |  | 
-| 3.  | Loan management pallet | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] | Not fully evaluated yet. |
-| 4.  | Community Loan Staking pallet | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] | Not fully evaluated yet. | 
+| 3.  | Loan management pallet | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] |  |
+| 4.  | Community Loan Staking pallet | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] |  | 
 | 5.  | Verification pallet | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/kilt-credentials] | Not fully evaluated yet. | 
-| 6.  | DAO | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Couldn't use cargo commands. | 
-| 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Frontend] | Couldn't connet the wallet. | 
+| 6.  | DAO | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Not fully evaluated yet. | 
+| 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Frontend] | Not fully evaluated yet. | 
 | 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Not fully evaluated yet. | 
 | 7c.  | Decentralized Developer Loan dApp / Front End Repo part 3 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Admin] | Not fully evaluated yet. | 
+
+## Evaluation V4
+
+### Node
+
+Please put in the documentation instructions to build the node using the Vs Code, in this I would be able to try it. 
+
+The reported error of the contract build is working like in the vídeo. 
+
+I ran `cargo test`, and all tests passed. 
+
+I ran `cargo clippy` to check the coverage. It doesn't return good coverage. 
+It would be good if the tests had better coverage, but it isn't mandatory.
+
+
+- Test Results:
+
+   <details>
+
+   ```
+      Running unittests src/lib.rs (target/debug/deps/node_template_runtime-267c7a6a1955e10d)
+
+   running 4 tests
+   test __pallet_staking_reward_curve_test_module::reward_curve_piece_count ... ok
+   test tests::check_whitelist ... ok
+   test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+   test __pallet_staking_reward_curve_test_module::reward_curve_precision ... ok
+
+   test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+
+      Running unittests src/lib.rs (target/debug/deps/pallet_community_loan_pool-0f99444e4053d75e)
+
+   running 9 tests
+   test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+   test tests::reject_works ... ok
+   test tests::add_committee_member_works ... ok
+   test tests::propose_works ... ok
+   test tests::propose_doesnt_work_not_enough_userbalance ... ok
+   test tests::add_committee_member_fails_when_member_is_two_times_added ... ok
+   test tests::approve_fails_invalid_index ... ok
+   test tests::voting_works ... ok
+   test tests::voting_works_only_for_members ... ok
+
+   test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+      Running unittests src/lib.rs (target/debug/deps/pallet_xcavate_staking-b71625fbbb7326c0)
+
+   running 6 tests
+   test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+   Sep 20 10:56:13.728 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   Sep 20 10:56:13.728 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   Sep 20 10:56:13.729 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   Sep 20 10:56:13.729 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   test tests::stake_works ... ok
+   test tests::person_cant_stake_0_token ... ok
+   Sep 20 10:56:13.729 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   test tests::unstake_works ... ok
+   Sep 20 10:56:13.729 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+   test tests::unstake_doesnt_work_for_nonstaker ... ok
+   test tests::stake_with_several_people_works ... ok
+
+   test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+   ```
+
+   </details>
+
+- Coverage:
+
+   <details>
+
+   ```
+   Sep 20 10:39:16.557  INFO cargo_tarpaulin::report: Coverage Results:
+   || Tested/Total Lines:
+   || node/src/benchmarking.rs: 0/54
+   || node/src/chain_spec.rs: 0/105
+   || node/src/command.rs: 0/97
+   || node/src/main.rs: 0/2
+   || node/src/rpc.rs: 0/6
+   || node/src/service.rs: 0/157
+   || pallets/community-loan-pool/src/benchmarking.rs: 0/14
+   || pallets/community-loan-pool/src/lib.rs: 61/228
+   || pallets/community-loan-pool/src/weights.rs: 0/10
+   || pallets/xcavate-staking/src/lib.rs: 43/123
+   || runtime/src/constants.rs: 0/2
+   || runtime/src/impls.rs: 0/3
+   || runtime/src/lib.rs: 5/260
+   || 
+   10.27% coverage, 109/1061 lines covered
+   ```
+
+   </details>
+
+### Frontend
+
+I tried to test the front end again but I received the same error. This time, when I was creating the personal credentials.
+
+<details>
+
+```
+[20/09/2023, 08:14:51][INFO]  Incomming -> Method: [POST] - Url: [/api/user] - IP: [::ffff:127.0.0.1]
+uploading error ::  SignatureDoesNotMatch: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+    at Request.extractError (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/services/s3.js:711:35)
+    at Request.callListeners (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:686:14)
+    at Request.transition (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/request.js:688:12)
+    at Request.callListeners (/home/user/Documents/xcavate/MVP_Backend/node_modules/aws-sdk/lib/sequential_executor.js:116:18) {
+  code: 'SignatureDoesNotMatch',
+  region: null,
+  time: 2023-09-20T11:14:52.107Z,
+  requestId: '3YEBN5A52H63THFB',
+  extendedRequestId: 'EvvFqszJzilrwWG66gM+m0QwPKsSuaVH6TLKPw2nlcfAsJmiGfHfLuy/3BLcie6HUO4tsij0znA=',
+  cfId: undefined,
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 54.60688654405206
+}
+```
+
+</details>
+
+You said this error is related to an external problem, so we need to wait for the Acurast Oracle to solve this problem. 
+
+One possibility is to amend this Milestone in the application document, removing the frontend from the deliverables, if this problem takes too much time to be solved. However, it would be necessary to give us a discount on the price since a deliverable would be removed. Correct me if I'm wrong, but the Verification pallet can only be tested using the frontend. So we would need to remove this pallet from the Milestone as well in this case. 
+
+Let me know what you think about this option, or when this problem is resolved to reevaluate the milestone.
 
 ## Evaluation V3
 
