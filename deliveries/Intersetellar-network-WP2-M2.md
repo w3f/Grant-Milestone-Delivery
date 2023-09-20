@@ -32,7 +32,7 @@ Please refer to the [Interstellar Decentralized Authentication](https://medium.c
 | Number | Deliverable | Link | Notes  |
 | -----: | ----------- | -----------|------------ |
 | 0a. | Licence  |  APACHE 2.0, MIT | |
-| 0b. | Documentation |  [documentation](https://book.interstellar.gg/2M1.html) |   |
+| 0b. | Documentation |  [documentation](https://book.interstellar.gg/2M2.html) |   |
 | 0c. | Testing Guide | [testing guide](https://book.interstellar.gg/2M2.html#testing-guide) | |
 | 0d. | Docker | | see additional information |
 | 1. | New Circuit| [New Circuit design](https://github.com/Interstellar-Network/lib_circuits/tree/main/circuit-gen-rs/data/verilog#new-circuit-diagrams), [Demo tutorial](https://book.interstellar.gg/2M2_demo_tutorial.html) | Mobile offline demo apps, each with the new circuit and a pre-computed display circuit generated with a defined probability to display segments |
