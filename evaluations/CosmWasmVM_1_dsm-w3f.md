@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/CosmWasmVM-CoreProduct.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,13 +10,56 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a | License | <ul><li>[x] </li></ul>| [https://github.com/ComposableFi/composable/blob/main/code/parachain/frame/cosmwasm/License.md] |  |
-| 0b  | Documentation | <ul><li>[ ] </li></ul>| [CosmWasm VM Docs](https://docs.composable.finance/products/cosmwasm-vm-overview), [CLI Docs](https://docs.composable.finance/developer-guides/cosmwasm-cli) | Not fully Evaluated yet. |
+| 0b  | Documentation | <ul><li>[x] </li></ul>| [CosmWasm VM Docs](https://docs.composable.finance/products/cosmwasm-vm-overview), [CLI Docs](https://docs.composable.finance/developer-guides/cosmwasm-cli) | |
 0c    | Testing   | <ul><li>[x] </li></ul>| [https://github.com/ComposableFi/composable/tree/main/code/parachain/frame/cosmwasm]       |        |
 |  0d          | Docker  | <ul><li>[x] </li></ul>| [https://hub.docker.com/r/composablefi/devnet]    |  |
 |  1a   | Development  | <ul><li>[x] </li></ul>| [Core Pallet](https://github.com/ComposableFi/composable/tree/main/code/parachain/frame/cosmwasm) | 
-| 1b    | Development | <ul><li>[ ] </li></ul>| Any pallet can be called via precompile contracts (CosmWasm messaging interface for pallets as if thry were usual contracts). XCM can be called via [this precompile](https://github.com/ComposableFi/composable/blob/main/code/xcvm/lib/core/src/transport/xcm/mod.rs), Pallet src has [Fuzzing test](https://github.com/ComposableFi/composable/tree/main/code/parachain/frame/cosmwasm/fuzz_targets) | Not fully Evaluated yet.| |
-1c    | Testing | <ul><li>[ ] </li></ul>| Benchamrks for pallet extrinics and gas metering of WASM instuctions are done using parity benchmarking infrastucture. You can run our devnet via the docker file or running `nix run composable#devnet-picasso` - Guide for running the CLI on a local network included in the CLI docs. CW20(analog of ERC-20) contract and 2 Composable contracts are embedded into genesis. VM can be tested via `cargo test`, examples of tests are [here](https://github.com/ComposableFi/cosmwasm-vm/blob/main/orchestrate/README.md), run of contracts in simulator and asserts of results. | Not fully Evaluated yet. |
+| 1b    | Development | <ul><li>[x] </li></ul>| Any pallet can be called via precompile contracts (CosmWasm messaging interface for pallets as if thry were usual contracts). XCM can be called via [this precompile](https://github.com/ComposableFi/composable/blob/main/code/xcvm/lib/core/src/transport/xcm/mod.rs), Pallet src has [Fuzzing test](https://github.com/ComposableFi/composable/tree/main/code/parachain/frame/cosmwasm/fuzz_targets) |  |
+1c    | Testing | <ul><li>[x] </li></ul>| Benchamrks for pallet extrinics and gas metering of WASM instuctions are done using parity benchmarking infrastucture. You can run our devnet via the docker file or running `nix run composable#devnet-picasso` - Guide for running the CLI on a local network included in the CLI docs. CW20(analog of ERC-20) contract and 2 Composable contracts are embedded into genesis. VM can be tested via `cargo test`, examples of tests are [here](https://github.com/ComposableFi/cosmwasm-vm/blob/main/orchestrate/README.md), run of contracts in simulator and asserts of results. | |
 
+## Evaluation V2
+
+### Manual Test
+
+I'm having some problems to use the ccw-vm. Because it isn't part of the deliverables, I don't think it is a problem for the Evaluation.
+
+```
+user@localhost:~/Documents/cosmwasm/composable$ nix run github:ComposableFi/composable/release-v9.10038.2#ccw --allow-import-from-derivation --extra-experimental-features "flakes nix-command" --no-sandbox --accept-flake-config --option sandbox relaxed
+warning: ignoring untrusted substituter 'https://composable.cachix.org'
+warning: ignoring untrusted substituter 'https://cosmos.cachix.org'
+warning: ignoring untrusted substituter 'https://devenv.cachix.org'
+warning: ignoring untrusted substituter 'https://nix-community.cachix.org'
+warning: ignoring untrusted substituter 'https://nixpkgs-update.cachix.org'
+composable-cosmwasm, the foundation for wasm smart contracts.
+
+Usage: ccw <COMMAND>
+
+Commands:
+  substrate  Interact with the CosmWasm contracts on a substrate-based chain
+  help       Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+user@localhost:~/Documents/cosmwasm/composable$ ccw
+bash: ccw: command not found 
+```
+
+I tried again to launch the local networking using Nix. I had a problem. I tried to change the parameter to `--option sandox false`, but got the same error. I already tested this using Docker, so I think it doesn't have problems for the Evaluation.
+
+```
+user@localhost:~/Documents/cosmwasm/composable$ nix run github:ComposableFi/composable/release-v9.10038.2#devnet-picasso --allow-import-from-derivation --extra-experimental-features "flakes nix-command" --no-sandbox --accept-flake-config --option sandbox relaxed
+warning: ignoring untrusted substituter 'https://composable.cachix.org'
+warning: ignoring untrusted substituter 'https://cosmos.cachix.org'
+warning: ignoring untrusted substituter 'https://devenv.cachix.org'
+warning: ignoring untrusted substituter 'https://nix-community.cachix.org'
+warning: ignoring untrusted substituter 'https://nixpkgs-update.cachix.org'
+error: derivation '/nix/store/3yikq03h3q80cfrfz4iyfb597f6frdgk-polkadot-parachain.drv' has '__noChroot' set, but that's not allowed when 'sandbox' is 'true'
+```
+
+### Fuzzing Test
+
+It is running without problems. I let it run for almost a day and no error was found.
 
 ## Evaluation V1
 
