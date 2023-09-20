@@ -174,3 +174,8 @@ error: test failed, to rerun pass `-p pcidss-oracle --bin pcidss-oracle`
 
 
 Please add some tests for payment-processer node server and interface.
+
+## Interface
+
+I was able to run the interface and do a transaction. Please see the screenshot below:
+
