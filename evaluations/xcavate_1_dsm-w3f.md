@@ -26,6 +26,21 @@
 | 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Not fully evaluated yet. | 
 | 7c.  | Decentralized Developer Loan dApp / Front End Repo part 3 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Admin] | Not fully evaluated yet. | 
 
+## Evaluation V5
+
+### Frontend
+
+I tested again with the .env provided in the [PDF](https://xcavate.io/XcavateDeveloperLoanUserInstructions.pdf). I was able to request the loan but it didn't reflected in the blockchain when I looked for the expected event using polkadotJs. I would need the Acurast to update the dependencies to continue the evaluation. Let me know when it happens.
+
+### Documents
+
+The Documents still need the explanation of the .env from the backend. It needs to explain how to get the variables. For the AWS variables, you can link an external guide. The .env.example needs to be updated because it misses some variables.
+
+The Documents need an explanation of how to run the build with Vscode because it isn't possible to build with docker.
+
+The [PDF](https://xcavate.io/XcavateDeveloperLoanUserInstructions.pdf) is missing the instructions to approve and reject the loan request.
+
+
 ## Evaluation V4
 
 ### Node
