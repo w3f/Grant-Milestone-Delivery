@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ink-analyzer-phase-2.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,13 +9,33 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License  | <ul><li>[x] </li></ul>  | [MIT](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-MIT) or [Apache 2.0](https://github.com/ink-analyzer/ink-analyzer/blob/master/LICENSE-APACHE). |  |
-| **0b.** | Documentation  | <ul><li>[ ] </li></ul>  | [Project README](https://github.com/ink-analyzer/ink-analyzer#readme) and [semantic analyzer (ink-analyzer) crate README](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer#readme) on GitHub, [semantic analyzer crate (ink-analyzer) rustdoc](https://docs.rs/ink-analyzer/latest/ink_analyzer/) documentation on docs.rs and extensive inline source documentation.  |  Not fully evaluated yet.  |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [Testing guide](https://github.com/ink-analyzer/ink-analyzer#testing). |  Not fully evaluated yet.  |
+| **0b.** | Documentation  | <ul><li>[x] </li></ul>  | [Project README](https://github.com/ink-analyzer/ink-analyzer#readme) and [semantic analyzer (ink-analyzer) crate README](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer#readme) on GitHub, [semantic analyzer crate (ink-analyzer) rustdoc](https://docs.rs/ink-analyzer/latest/ink_analyzer/) documentation on docs.rs and extensive inline source documentation.  |    |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Testing guide](https://github.com/ink-analyzer/ink-analyzer#testing). |    |
 | **0d.** | Docker | <ul><li>[x] </li></ul>   | [Dockerfile](https://github.com/ink-analyzer/ink-analyzer/blob/master/Dockerfile).  |   |
-| 1. | Semantic Analyzer: Rust crate update: Quick fixes for all existing diagnostic errors and warnings | <ul><li>[ ] </li></ul> | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [diagnostics module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/diagnostics.rs), [diagnostics type with quickfixes field](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/diagnostics.rs#L44-L55) and [extensive updates adding quickfixes to all diagnostics and related tests](https://github.com/search?q=repo%3Aink-analyzer%2Fink-analyzer+quickfixes&type=code). |  Not fully evaluated yet.  |
-| 2. | Semantic Analyzer: Rust crate update: ink_e2e macro support  | <ul><li>[ ] </li></ul>  | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer) and [updates across the semantic analyzer (ink-analyzer) and intermediate representation (ink-analyzer-ir) crates to support ink_e2e macro analysis](https://github.com/search?q=repo%3Aink-analyzer%2Fink-analyzer%20ink_e2e&type=code).  |  Not fully evaluated yet.  |
-| 3. | Semantic Analyzer: Rust crate update: Command for creating a new ink! project with a contract stub | <ul><li>[ ] </li></ul>   | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [new_project function](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen.rs#L42-L88) and [codegen module](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen.rs). |  Not fully evaluated yet.  |
-| 4. | Semantic Analyzer: Rust crate update: Code/intent actions for inserting code stubs/snippets for relevant ink! entities | <ul><li>[ ] </li></ul> | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [codegen/snippets submodule](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen/snippets.rs), and [actions/item](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/actions/item.rs) and [actions/entity](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/actions/entity.rs) actions submodules. | Not fully evaluated yet. | 
+| 1. | Semantic Analyzer: Rust crate update: Quick fixes for all existing diagnostic errors and warnings | <ul><li>[x] </li></ul> | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [diagnostics module](https://github.com/ink-analyzer/ink-analyzer/tree/master/crates/analyzer/src/analysis/diagnostics.rs), [diagnostics type with quickfixes field](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/diagnostics.rs#L44-L55) and [extensive updates adding quickfixes to all diagnostics and related tests](https://github.com/search?q=repo%3Aink-analyzer%2Fink-analyzer+quickfixes&type=code). |    |
+| 2. | Semantic Analyzer: Rust crate update: ink_e2e macro support  | <ul><li>[x] </li></ul>  | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer) and [updates across the semantic analyzer (ink-analyzer) and intermediate representation (ink-analyzer-ir) crates to support ink_e2e macro analysis](https://github.com/search?q=repo%3Aink-analyzer%2Fink-analyzer%20ink_e2e&type=code).  |    |
+| 3. | Semantic Analyzer: Rust crate update: Command for creating a new ink! project with a contract stub | <ul><li>[x] </li></ul>   | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [new_project function](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen.rs#L42-L88) and [codegen module](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen.rs). |    |
+| 4. | Semantic Analyzer: Rust crate update: Code/intent actions for inserting code stubs/snippets for relevant ink! entities | <ul><li>[x] </li></ul> | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer), [codegen/snippets submodule](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/codegen/snippets.rs), and [actions/item](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/actions/item.rs) and [actions/entity](https://github.com/ink-analyzer/ink-analyzer/blob/master/crates/analyzer/src/analysis/actions/entity.rs) actions submodules. | | 
+
+## Evaluation V2
+
+### Testing
+
+Thanks for the [instructions](https://github.com/w3f/Grant-Milestone-Delivery/pull/1004#issuecomment-1730056904). I haven't had problems testing using the VsCode. The application is working fine.
+
+### Code quality
+
+I checked, and my Rust was nightly for default, so it was the same as running the `cargo nightly clippy`. I haven't received any warnings this time, using the nightly or the stable versions.
+
+
+```
+user@localhost:~/Documents/ink-analyzer/ink-analyzer$ cargo clippy
+    Finished dev [unoptimized + debuginfo] target(s) in 0.09s
+
+user@localhost:~/Documents/ink-analyzer/ink-analyzer$ cargo +nightly clippy
+    Finished dev [unoptimized + debuginfo] target(s) in 0.09s
+```
+
 
 ## Evaluation V1
 
