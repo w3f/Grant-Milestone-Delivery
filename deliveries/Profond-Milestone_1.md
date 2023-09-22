@@ -1,0 +1,23 @@
+# Milestone Delivery :mailbox:
+
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**
+
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Profond.md
+- **Milestone Number:** 1
+
+**Context** (optional)
+
+**Deliverables**
+
+| Number | Deliverable                            | Link                                                                                                                                                                                                                                                                                                                                              | Notes |
+| ------ | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| 0a.    | License                                | https://github.com/profondHQ/profond-psp22-contract/blob/master/LICENSE                                                                                                                                                                                                                                                                           |       |
+| 0b.    | Documentation                          | User document at: https://profond.gitbook.io/docs/ . API documentation is on the backend API swagger: https://github.com/profondHQ/profond-backend-api                                                                                                                                                                                            |       |
+| 0c.    | Testing and Testing Guide              | PSP22 Tests: https://github.com/profondHQ/profond-psp22-contract/tree/master/tests . PSP34 Tests: https://github.com/profondHQ/paras-ink-nft-launchpad-contract/tree/main/tests. API Tests: https://github.com/profondHQ/profond-backend-api/tree/master/test. Test cases: https://drive.google.com/file/d/10p3J6sO9N9L2nulLg66I11lnUcQdj5ws/view |       |
+| 0d.    | Article                                | Article published at https://medium.com/@profond.ai/introducing-profond-ai-no-code-platform-for-creators-to-create-an-nft-and-coins-740bba361253                                                                                                                                                                                                  |       |
+| 1.     | No Code NFT Creation (ink!)            | Live at: https://profond.ai/. FE code: https://github.com/profondHQ/launchpad . Contract used: https://github.com/profondHQ/paras-ink-nft-launchpad-contract                                                                                                                                                                                      |       |
+| 2.     | No Code Fungible Token Creation (ink!) | Live at: https://profond.ai/. FE code: https://github.com/profondHQ/launchpad . Contract used: https://github.com/profondHQ/profond-psp22-contract                                                                                                                                                                                                |       |
+| 3.     | Project Management Module              | BE code is at https://github.com/profondHQ/profond-backend-api and handles create and query of NFT collections and Fungible Tokens (Coins). Indexer code: https://github.com/profondHQ/profond-indexer, every successful creation of a smart contract will be automatically listed by the indexer.                                                |       |
+| 4.     | Multichain Integration                 | Users can change between multiple chains, try it at https://profond.ai. FE code: https://github.com/profondHQ/launchpad                                                                                                                                                                                                                           |       |
+
+**Additional Information**
