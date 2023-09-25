@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Xcavate.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,21 +10,21 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.  | License | <ul><li>[x] </li></ul>| Apache 2.0 | |
-| 0b.  | Documentation | <ul><li>[ ] </li></ul>| [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] | Not fully evaluated yet. |
+| 0b.  | Documentation | <ul><li>[x] </li></ul>| [https://xcavate.io/w3f/Xcavate_Real_Estate_Lending_Process.jpg] |  |
 | 0c. | Testing video | <ul><li>[x] </li></ul>| [https://youtu.be/LxOwFm4XDrw] |  |
-| 0d. | Testing Guide | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] [https://github.com/XcavateBlockchain/lending_protocol_contracts/blob/main/README.md] | Not fully evaluated yet. |
-| 0e.  | Docker | <ul><li>[ ] </li></ul>|   | Not fully evaluated yet. | 
-| 0f.  | Article | <ul><li>[ ] </li></ul>| [https://xcavate.io/revolutionizing-real-estate-development-financing-with-nft-backed-loans/] | Not fully evaluated yet. | 
-| 0g.  | Tutorial | <ul><li>[ ] </li></ul>| [https://xcavate.io/XcavateDeveloperLoanUserInstructions.pdf] [https://xcavate.io/XcavatePlatformProcessflow.jpg] | Not fully evaluated yet.| 
-| 1. | Xcavate Node Repo | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool] | Not fully evaluated yet. | 
+| 0d. | Testing Guide | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/README.md] [https://github.com/XcavateBlockchain/lending_protocol_contracts/blob/main/README.md] |  |
+| 0e.  | Docker | <ul><li>[x] </li></ul>|   |   | 
+| 0f.  | Article | <ul><li>[x] </li></ul>| [https://xcavate.io/revolutionizing-real-estate-development-financing-with-nft-backed-loans/] |  | 
+| 0g.  | Tutorial | <ul><li>[x] </li></ul>| [https://xcavate.io/XcavateDeveloperLoanUserInstructions.pdf] [https://xcavate.io/XcavatePlatformProcessflow.jpg] | Not fully evaluated yet.| 
+| 1. | Xcavate Node Repo | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool] |  | 
 | 2.  | Xcavate Loan App Repo | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/lending_protocol_contracts] |  | 
 | 3.  | Loan management pallet | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/community-loan-pool] |  |
 | 4.  | Community Loan Staking pallet | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/tree/MVP_Lending_Protocol/pallets/xcavate-staking] |  | 
-| 5.  | Verification pallet | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/kilt-credentials] | Not fully evaluated yet. | 
-| 6.  | DAO | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] | Not fully evaluated yet. | 
-| 7a.  | Decentralized Developer Loan dApp / Front End Repo part 1 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Frontend] | Not fully evaluated yet. | 
-| 7b.  | Decentralized Developer Loan dApp / Front End Repo part 2 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Backend] | Not fully evaluated yet. | 
-| 7c.  | Decentralized Developer Loan dApp / Front End Repo part 3 | <ul><li>[ ] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Admin] | Not fully evaluated yet. | 
+| 5.  | DAO | <ul><li>[x] </li></ul>| [https://github.com/XcavateBlockchain/MVP_Lending_Pool/blob/MVP_Lending_Protocol/node/Cargo.toml] |  | 
+
+## Evaluation V6
+
+After [the amendment of the grant application](https://github.com/w3f/Grants-Program/pull/1995), the remainder deliverables are working well. 
 
 ## Evaluation V5
 
