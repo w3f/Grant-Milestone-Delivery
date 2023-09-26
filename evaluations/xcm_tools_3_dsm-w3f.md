@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-tools.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -10,12 +10,26 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                   | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/LICENSE     |            |
-| 0b.    | Documentation             | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/README.md   | I had problems with the installation and the send command in the CLI.|
-| 0c.    | Testing and Testing Guide | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools#test                  | I had problems with the installation and the send command in the CLI.|
-| 0d.    | Docker                    | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/Dockerfile  | Not fully evaluated yet.|
+| 0b.    | Documentation             | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/README.md   |            |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools#test                  |            |
+| 0d.    | Docker                    | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/Dockerfile  |            |
 | 1.     | Parse xcm instructions    | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/parse.go |            |
 | 2.     | Tracing transaction       | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/tree/main/tracker     |            |
-| 3.     | Cli support               | <ul><li>[ ] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/cmd/cli.go  |I had problems with the installation and the send command in the CLI.|
+| 3.     | Cli support               | <ul><li>[x] </li></ul>| https://github.com/gmajor-encrypt/xcm-tools/blob/main/cmd/cli.go  |            |
+
+## Evaluation V2
+
+### Test
+
+I was able to install using the command `go install github.com/gmajor-encrypt/xcm-tools/cmd@latest` and with the binary built using docker and without docker.
+
+This time, I was able to use the send command without problems. I noticed this [line](https://github.com/gmajor-encrypt/xcm-tools/blob/main/cmd/main.go#L66) is printing "xxx" for the UMP, and I think it shouldn't be printed. This don't prevent the acceptance of the milestone but would be nice to fix. 
+
+```
+user@localhost:~/Documents/xcm-tools/xcm-tools/cmd$ go run . send UMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-asset-hub-rpc.polkadot.io
+xxx
+2023/09/26 07:07:57 send UMP message success, tx hash: 0x9701df59591303e01fbfb2c75dbfbbcef23d0b89e1f57fd2503c0c4fd8746bb0
+```
 
 ## Evaluation V1
 
