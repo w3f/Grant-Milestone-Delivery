@@ -4,7 +4,7 @@
 > 
 > Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
 
-**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this delivery**  
+**The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** Please, provide a link to the merged contract (the `.md` file in the [applications/maintenance](https://github.com/w3f/Grants-Program/tree/master/applications/maintenance) directory).
 * **Delivery Number:** e.g. 1

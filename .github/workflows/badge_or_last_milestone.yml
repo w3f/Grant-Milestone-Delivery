@@ -18,7 +18,7 @@ jobs:
           filter: |
             deliveries/*.md
             maintenance_deliveries/*.md
-          
+
   check-needs-badge:
     runs-on: ubuntu-latest
     needs: get-delivery-files
@@ -26,7 +26,7 @@ jobs:
     outputs:
       needs_badge: ${{ steps.badge-check.outputs.check }} 
       needs_last_milestone_comment: ${{ steps.last-milestone.outputs.check }}
-
+      request_invoice: ${{ github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]' }}
     strategy:
       max-parallel: 1
       fail-fast: false
@@ -76,12 +76,12 @@ jobs:
           message: >
             Congratulations on completing the first milestone of this grant!
             As part of the Grants Program, we want to help grant recipients acknowledge their grants publicly.
-            To that end, we’ve created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/grant-badge-guidelines.md)
+            To that end, we've created a [badge for projects](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/grant-badge-guidelines.md)
             that successfully deliver their first milestone.
             Please use the badge only in reference to the work that has been completed as part of this grant,
             so please do not display it on your team or project's homepage unless accompanied by a short description of the grant.
             Furthermore, you're now welcome to announce the grant publicly. Please remember to observe the
-            [foundation’s guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
+            [foundation's guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/announcement-guidelines.md) in doing so.
             If you haven't already, reach out to grantsPR@web3.foundation for feedback on your announcement and cross-promotion.<br/><br/>
             Thank you for your contribution, and good luck!
             If you have any remaining milestone, let us know if you encounter any delays by leaving a comment on the application PR
@@ -111,3 +111,16 @@ jobs:
 
             Lastly, we hope your W3F grant was a success and we want to thank you for being part of the journey!
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  request-invoice:
+    runs-on: ubuntu-latest
+    needs: check-needs-badge
+    if: needs.check-needs-badge.outputs.request_invoice
+    steps:
+      - name: Request invoice
+        uses: thollander/actions-comment-pull-request@1.0.1
+        with:
+          message: >
+            :coin: Please fill out the [invoice form](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform?usp=pp_url&entry.1070766548=${{github.event.pull_request.html_url}}) in order to initiate the payment process. Thank you! 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
