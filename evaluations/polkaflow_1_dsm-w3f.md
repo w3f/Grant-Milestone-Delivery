@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkaflow.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,30 +9,80 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>|[Frontend License](https://github.com/justmert/eco-flow-frontend/blob/master/LICENSE)<br>[Backend License](https://github.com/justmert/eco-flow-backend/blob/master/LICENSE)|  | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>|[Frontend Documentation](https://github.com/justmert/eco-flow-frontend/blob/master/README.md)<br>[Backend Documentation](https://github.com/justmert/eco-flow-backend/blob/master/README.md)| Not fully evaluated yet | 
-| 0c. | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Backend Repo - Testing](https://github.com/justmert/eco-flow-backend#test-the-app) | Not fully evaluated yet | 
-| 0d. | Docker | <ul><li>[ ] </li></ul>|  | Not fully evaluated yet | 
-| 1. | Database | <ul><li>[ ] </li></ul>|[PolkaFlow Firebase Database Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/App.js)| Not fully evaluated yet | 
-| 2. | Python Backend | <ul><li>[ ] </li></ul>|[Backend Repo](https://github.com/justmert/eco-flow-backend)| Need .env example | 
-| 3. | Frontend: Dashboard Page<br>Backend: Data Process - (Star Count)	 | <ul><li>[ ] </li></ul>|[PolkaFlow Website Dashboard Page](https://polkaflow.xyz/dashboard/substrate) | Not fully evaluated yet | 
-| 4. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Commit History) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 5. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Code Frequency) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 6. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Top Contributors) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 7. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Issue Activity) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) | Not fully evaluated yet | 
-| 8. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Issue Count) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 9. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Recent Issues) | <ul><li>[ ] </li></ul>| [PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 10. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Recent Commits) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) | Not fully evaluated yet | 
-| 11. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Pull Request Count) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 12. | Frontend: Project Page<br>Backend: Data Process - (Pull Request Activity) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 13. | Frontend: Project Page<br>Backend: Data Process - (Project Info Card) | <ul><li>[ ] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)| Not fully evaluated yet | 
-| 14. | Frontend: Project Page<br>Backend: Data Process - (Recent Stargazing) | <ul><li>[ ] </li></ul>| [PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) | Not fully evaluated yet | 
-| 15. | Frontend: Project List Page | <ul><li>[ ] </li></ul>| [PolkaFlow Website Projects Page](https://polkaflow.xyz/projects)| Not fully evaluated yet | 
-| 16. | Integrate: Algolia | <ul><li>[ ] </li></ul>| [Frontend Repo - Algolia Search Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/components/Layouts/Search/search.js) | Not fully evaluated yet | 
-| 17. | Frontend: Categorization | <ul><li>[ ] </li></ul>|[Frontend Repo - Typeform Integration Line ](https://github.com/justmert/eco-flow-frontend/blob/170707defb2e00fbb475a7e338593fd80c343636/src/components/Layouts/Navbar/navbar.js#L96) | Not fully evaluated yet | 
-| 18. | Integrate: Typeform | <ul><li>[ ] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) | Not fully evaluated yet | 
-| 19. | Integrate: Google Analytics | <ul><li>[ ] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) | Not fully evaluated yet | 
-| 20. | Backend: Schedule | <ul><li>[ ] </li></ul>| [Backend Repo - Schedule](https://github.com/justmert/eco-flow-backend/blob/master/main.py) | Not fully evaluated yet | 
-| 21. | Frontend: UX & UI | <ul><li>[ ] </li></ul>| [PolkaFlow Website](https://polkaflow.xyz/)| Not fully evaluated yet | 
+| 0b. | Documentation | <ul><li>[x] </li></ul>|[Frontend Documentation](https://github.com/justmert/eco-flow-frontend/blob/master/README.md)<br>[Backend Documentation](https://github.com/justmert/eco-flow-backend/blob/master/README.md)|  | 
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Backend Repo - Testing](https://github.com/justmert/eco-flow-backend#test-the-app) |  | 
+| 0d. | Docker | <ul><li>[x] </li></ul>|  |  | 
+| 1. | Database | <ul><li>[x] </li></ul>|[PolkaFlow Firebase Database Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/App.js)|  | 
+| 2. | Python Backend | <ul><li>[x] </li></ul>|[Backend Repo](https://github.com/justmert/eco-flow-backend)|  | 
+| 3. | Frontend: Dashboard Page<br>Backend: Data Process - (Star Count)	 | <ul><li>[x] </li></ul>|[PolkaFlow Website Dashboard Page](https://polkaflow.xyz/dashboard/substrate) |  | 
+| 4. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Commit History) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 5. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Code Frequency) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 6. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Top Contributors) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 7. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Issue Activity) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) |  | 
+| 8. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Issue Count) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 9. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Recent Issues) | <ul><li>[x] </li></ul>| [PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 10. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Recent Commits) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) |  | 
+| 11. | Frontend: Dashboard/Project Pages<br>Backend: Data Process - (Pull Request Count) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 12. | Frontend: Project Page<br>Backend: Data Process - (Pull Request Activity) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 13. | Frontend: Project Page<br>Backend: Data Process - (Project Info Card) | <ul><li>[x] </li></ul>|[PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate)|  | 
+| 14. | Frontend: Project Page<br>Backend: Data Process - (Recent Stargazing) | <ul><li>[x] </li></ul>| [PolkaFlow Website Example Project Page](https://polkaflow.xyz/projects/paritytech/substrate) |  | 
+| 15. | Frontend: Project List Page | <ul><li>[x] </li></ul>| [PolkaFlow Website Projects Page](https://polkaflow.xyz/projects)|  | 
+| 16. | Integrate: Algolia | <ul><li>[x] </li></ul>| [Frontend Repo - Algolia Search Integration ](https://github.com/justmert/eco-flow-frontend/blob/master/src/components/Layouts/Search/search.js) |  | 
+| 17. | Frontend: Categorization | <ul><li>[x] </li></ul>|[Frontend Repo - Typeform Integration Line ](https://github.com/justmert/eco-flow-frontend/blob/170707defb2e00fbb475a7e338593fd80c343636/src/components/Layouts/Navbar/navbar.js#L96) |  | 
+| 18. | Integrate: Typeform | <ul><li>[x] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) |  | 
+| 19. | Integrate: Google Analytics | <ul><li>[x] </li></ul>| [Frontend Repo - Analytics Integration](https://github.com/justmert/eco-flow-frontend/blob/master/public/index.html) |  | 
+| 20. | Backend: Schedule | <ul><li>[x] </li></ul>| [Backend Repo - Schedule](https://github.com/justmert/eco-flow-backend/blob/master/main.py) |  | 
+| 21. | Frontend: UX & UI | <ul><li>[x] </li></ul>| [PolkaFlow Website](https://polkaflow.xyz/)|  | 
+
+## Evaluation V3
+
+### Backend
+
+I tried to run the backend and got this error:
+
+```
+user@localhost:~/Documents/polkaflow/eco-flow-backend$ python3 seed.py --ecosystem polka
+Traceback (most recent call last):
+  File "/home/user/Documents/polkaflow/eco-flow-backend/seed.py", line 6, in <module>
+  from projects import projects
+ModuleNotFoundError: No module named 'projects'
+```
+
+The last commit excluded the file `projects.py`. I fixed this problem by adding this file again to the folder. Whould be nice to provide some explanations about this to the user be able to configure and run the application with their projects.
+
+### Frontend
+
+I was able to check the integration of Typeform in the frontend and view the data being stored.
+
+After configuring the Search attributes in Algolia, I was able to search without problems. Would be nice if the documentation gives an explanation about this.
+
+## Evaluation V2
+
+### Backend
+
+To successfully run the command `python3 seed.py --ecosystem <ecosystem_name>`, I needed to put "polka-" in the name of the collections in Firebase, for example, "polka-repositories-data".
+
+After that, I was able to successfully run the backend and the Firebase has been updated with the information on paritytech/substrate, paritytech/polkadot, and paritytech/ink.
+
+Please explain in the documentation what `<ecosystem_name>` means and how to setup a value for it.
+
+
+### Frontend
+
+I was able to view the dashboard and the project page but when I tried to view the projects list I got a blank page. That occurred because the `polka-repositories-info` in the Firebase had a document to permit the collection creation. After excluding this document on Firebase, the page worked fine. I could check all the information on these pages.
+
+I tried to search "substrate" or other repository names but the search didn't returned anything. Algolia has information about the substrate and polkadot but not about ink. I also received no error in the developer tools that helped me to solve this problem.
+
+![image (19)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/310b909e-53e0-4ed6-be8e-c9cd45d3df0f)
+
+
+I checked the submit using the typeform and got this page:
+
+
+![image (20)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/87298546-3be1-4111-93b9-a171b5f0a961)
+
+
+I would like to know if Typeform and Algolia integration need more configuration and if it is possible to test the Typeform locally.
 
 ## Evaluation V1
 
