@@ -17,10 +17,24 @@
 | **0d.** | Docker | [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/milestone2/Dockerfile) | Setup development environment |
 | 0e. | Article | [Article Link](https://telegra.ph/Galaxy-Browser-v111-09-28) | Telegraph blogpost |
 | 0e. | Video | [Video Link](https://www.youtube.com/watch?v=U1TshR00K8Q) | Demo User Video |
-| 1. | Galaxy Browser | [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/milestone2/desktop) | Run and build scripts |
-| 2. | Smart contract | [Smart Contract Directory](https://github.com/7flash/galaxy-polkadot/tree/milestone2/contract) | `5E1zfVZmokEX29W9xVzMYJAzvwnXWE7AVcP3d1rXzWhC4sxi` deployed at the Rococo testnet |
+| 1. | Galaxy Browser | [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/milestone2) | Frontend App and submodules |
+| 2. | Smart contract | [Smart Contract Submodule](https://github.com/7flash/galaxy-polkadot/tree/milestone2/contract) | `5E1zfVZmokEX29W9xVzMYJAzvwnXWE7AVcP3d1rXzWhC4sxi` deployed at the Rococo testnet |
 
 **Additional Information**
+### Submodules
+
+| Number | Link | Notes |
+|-------|------|-------|
+| 3. | [Galaxy Desktop](https://github.com/7flash/galaxy-desktop-app/tree/main) | |
+|     | [main.ts](https://github.com/7flash/galaxy-desktop-app/blob/main/main.ts) | Deno Backend |
+|     | [build.ts](https://github.com/7flash/galaxy-desktop-app/blob/main/build.ts) | Bundles executable to .dmg |
+| 4. | [Excalidraw](https://github.com/7flash/galaxydraw/tree/master) | fork excalidraw |
+| 5. | [Dist](https://github.com/7flash/galaxy-dist/tree/a02cde286d6f0b50935e4d8ba75d4f0b958dd8e2) | Frontend build (retrieved by main.ts) |
+| 6. | [WebUI](https://github.com/7flash/webui/tree/main) | fork webui |
+| 7. | [Deno WebUI](https://github.com/7flash/deno-webui/tree/main) | fork deno-webui |
+| 8. | [Import](https://github.com/7flash/import/tree/main) | fork dynamicImport |
+| 9. | [Deno Modern Installer](https://github.com/7flash/deno_modern_installer/tree/main) | fork installer (used by build.ts) |
+
 ### Galaxy Browser Evaluation on macOS
 
 1. **Download**: 
