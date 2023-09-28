@@ -11,14 +11,14 @@
 
 | Number | Deliverable | Link | Notes |
 |-------|-------------|------|-------|
-| **0a.** | License | [LICENSE](https://github.com/7flash/galaxy-polkadot/blob/milestone2/LICENSE) | MIT |
-| **0b.** | Documentation | [README](https://github.com/7flash/galaxy-polkadot/blob/milestone2/README.md) | Includes inline documentation and tutorial |
-| **0c.** | Testing and Testing Guide | [Galaxy.test.js](https://github.com/7flash/galaxy-polkadot/blob/milestone2/tests/Galaxy.test.js) | Comprehensive unit tests |
-| **0d.** | Docker | [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/milestone2/Dockerfile) | Setup development environment |
-| 0e. | Article | [Article Link](https://telegra.ph/Galaxy-Browser-v111-09-28) | Telegraph blogpost |
-| 0e. | Video | [Video Link](https://www.youtube.com/watch?v=U1TshR00K8Q) | Demo User Video |
-| 1. | Galaxy Browser | [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/milestone2) | Frontend App and submodules |
-| 2. | Smart contract | [Smart Contract Submodule](https://github.com/7flash/galaxy-polkadot/tree/milestone2/contract) | `5E1zfVZmokEX29W9xVzMYJAzvwnXWE7AVcP3d1rXzWhC4sxi` deployed at the Rococo testnet |
+| **0a.** | License | [LICENSE](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/LICENSE) | MIT |
+| **0b.** | Documentation | [README](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/README.md) | - |
+| **0c.** | Testing and Testing Guide | [Galaxy.test.js](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/tests/Galaxy.test.js) | - |
+| **0d.** | Docker | [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/Dockerfile) | - |
+| 0e. | Article | [Telegraph](https://telegra.ph/Galaxy-Browser-v111-09-28) | - |
+| 0e. | Video | [Youtube](https://www.youtube.com/watch?v=U1TshR00K8Q) | - |
+| 1. | Galaxy Browser | [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9) | Frontend App and Submodules |
+| 2. | Smart contract | [Smart Contract Submodule](https://github.com/7flash/galaxy-polkadot-contract/tree/74b38eafc673a9f1b5d8541a4f43b31cd644db01) | deployed to Rococo testnet `5E1zfVZmokEX29W9xVzMYJAzvwnXWE7AVcP3d1rXzWhC4sxi` |
 
 **Additional Information**
 ### Submodules
@@ -34,21 +34,3 @@
 | 7. | [Deno WebUI](https://github.com/7flash/deno-webui/tree/main) | fork deno-webui |
 | 8. | [Import](https://github.com/7flash/import/tree/main) | fork dynamicImport |
 | 9. | [Deno Modern Installer](https://github.com/7flash/deno_modern_installer/tree/main) | fork installer (used by build.ts) |
-
-### Galaxy Browser Evaluation on macOS
-
-1. **Download**: 
-   - Go to [Galaxy Polkadot Releases](https://github.com/7flash/galaxy-polkadot/releases) and download the latest build for macOS.
-  
-2. **Polkadot Wallet**: 
-   - Ensure your default browser has the **Polkadot wallet** installed in its default profile.
-
-3. **Run Unsigned App**: 
-   - Right-click the app icon and select 'Open'.
-   - When prompted, confirm you want to run the unsigned app.
-
-4. **Functionality Test**: 
-   - Follow visual instructions in [demo video](https://www.youtube.com/watch?v=U1TshR00K8Q) to test:
-     - **Open** 
-     - **Save**
-     - **Publish** functions.
