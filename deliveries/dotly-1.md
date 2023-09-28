@@ -12,8 +12,8 @@
 
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
-| **0a.** | License | https://github.com/justmert/dotly-backend/LICENSE - https://github.com/justmert/dotly-frontend/LICENSE | MIT License |
-| **0b.** | Documentation | https://github.com/justmert/dotly-backend/README.md - https://github.com/justmert/dotly-frontend/README.md | Documentations will be presented as readme files for frontend and backend seperately |
+| **0a.** | License | [https://github.com/justmert/dotly-backend/LICENSE](https://github.com/justmert/dotly-backend/blob/master/LICENSE) - [https://github.com/justmert/dotly-frontend/LICENSE](https://github.com/justmert/dotly-frontend/blob/master/LICENSE) | MIT License |
+| **0b.** | Documentation | [https://github.com/justmert/dotly-backend/README.md](https://github.com/justmert/dotly-backend/blob/master/README.md) - [https://github.com/justmert/dotly-frontend/README.md](https://github.com/justmert/dotly-frontend/blob/master/README.md) | Documentations will be presented as readme files for frontend and backend seperately |
 | **0c.** | Testing and Testing Guide | https://github.com/justmert/dotly-backend?tab=readme-ov-file#how-to-run-tests | After you run backend locally, you can run tests as mentioned in the link |
 | **0d.** | Docker | ----- | Not Applicable, needs manual processes like firebase setup |
 | **0e.** | Article | ---- | Will be published |
