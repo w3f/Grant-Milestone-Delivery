@@ -27,6 +27,8 @@
 
 Overall, good inline comments, great docs, and library usage examples. The testing guide was very helpful. Test app runs nicely. Had to fix SDK path to run swift tests, [see here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1002#issuecomment-1740060784).
 
+Custom RPC calls, common API calls, signer, keychain, and batch extrinsics work as expected. Nice work!
+
 `CustomStaticConfig` successfully initializes with local node and completes a transfer.
 
 ```swift
