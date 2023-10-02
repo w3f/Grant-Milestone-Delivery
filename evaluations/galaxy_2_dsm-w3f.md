@@ -12,10 +12,99 @@
 | **0b.** | Documentation |<ul><li>[ ] </li></ul>|  [README](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/README.md) | Not fully evaluated Yet. |
 | **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>|  [Galaxy.test.js](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/tests/Galaxy.test.js) |  |
 | **0d.** | Docker |<ul><li>[ ] </li></ul>|  [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/Dockerfile) | Not fully evaluated Yet. |
-| 0e. | Article |<ul><li>[ ] </li></ul>|  [Telegraph](https://telegra.ph/Galaxy-Browser-v111-09-28) | Not fully evaluated Yet. |
+| 0e. | Article |<ul><li>[x] </li></ul>|  [Telegraph](https://telegra.ph/Galaxy-Browser-v111-09-28) |  |
 | 0e. | Video |<ul><li>[x] </li></ul>|  [Youtube](https://www.youtube.com/watch?v=U1TshR00K8Q) |  |
-| 1. | Galaxy Browser |<ul><li>[ ] </li></ul>|  [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9) | Not fully evaluated Yet. |
+| 1. | Galaxy Browser |<ul><li>[x] </li></ul>|  [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9) |  |
 | 2. | Smart contract |<ul><li>[x] </li></ul>|  [Smart Contract Submodule](https://github.com/7flash/galaxy-polkadot-contract/tree/74b38eafc673a9f1b5d8541a4f43b31cd644db01) |  |
+
+## Evaluation V3
+
+### Docker
+
+This time, I was able to build the image. In the logs below you can see that it couldn't find some files. However, I was able to publish the frame and load it, but I couldn't save the frame locally. Here is the docker log:
+
+<details>
+
+```
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2023/10/02 11:41:55 [notice] 1#1: using the "epoll" event method
+2023/10/02 11:41:55 [notice] 1#1: nginx/1.24.0
+2023/10/02 11:41:55 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4)
+2023/10/02 11:41:55 [notice] 1#1: OS: Linux 5.10.60
+2023/10/02 11:41:55 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/10/02 11:41:55 [notice] 1#1: start worker processes
+2023/10/02 11:41:55 [notice] 1#1: start worker process 30
+2023/10/02 11:41:55 [notice] 1#1: start worker process 31
+2023/10/02 11:41:55 [notice] 1#1: start worker process 32
+2023/10/02 11:41:55 [notice] 1#1: start worker process 33
+2023/10/02 11:41:55 [notice] 1#1: start worker process 34
+2023/10/02 11:41:55 [notice] 1#1: start worker process 35
+2023/10/02 11:41:55 [notice] 1#1: start worker process 36
+2023/10/02 11:41:55 [notice] 1#1: start worker process 37
+2023/10/02 11:41:55 [notice] 1#1: start worker process 38
+2023/10/02 11:41:55 [notice] 1#1: start worker process 39
+2023/10/02 11:41:55 [notice] 1#1: start worker process 40
+2023/10/02 11:41:55 [notice] 1#1: start worker process 41
+2023/10/02 11:41:55 [notice] 1#1: start worker process 42
+2023/10/02 11:41:55 [notice] 1#1: start worker process 43
+2023/10/02 11:41:55 [notice] 1#1: start worker process 44
+2023/10/02 11:41:55 [notice] 1#1: start worker process 45
+172.17.0.1 - - [02/Oct/2023:11:42:33 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+2023/10/02 11:42:33 [error] 31#31: *2 open() "/usr/share/nginx/html/webui.js" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /webui.js HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+172.17.0.1 - - [02/Oct/2023:11:42:33 +0000] "GET /webui.js HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+172.17.0.1 - - [02/Oct/2023:11:42:33 +0000] "GET /assets/index-512aca53.js HTTP/1.1" 304 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+172.17.0.1 - - [02/Oct/2023:11:42:33 +0000] "GET /assets/index-08362418.css HTTP/1.1" 304 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+2023/10/02 11:42:34 [error] 31#31: *2 open() "/usr/share/nginx/html/webui.js" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /webui.js HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /webui.js HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+2023/10/02 11:42:34 [error] 31#31: *2 open() "/usr/share/nginx/html/public/excalidraw-assets/vendor-ef3c5d81a00ef582b871.js" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /public/excalidraw-assets/vendor-ef3c5d81a00ef582b871.js HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /public/excalidraw-assets/vendor-ef3c5d81a00ef582b871.js HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /vite.svg HTTP/1.1" 200 1497 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /vite.svg HTTP/1.1" 304 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+2023/10/02 11:42:34 [error] 30#30: *1 open() "/usr/share/nginx/html/public/excalidraw-assets/Assistant-Regular.woff2" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /public/excalidraw-assets/Assistant-Regular.woff2 HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /public/excalidraw-assets/Assistant-Regular.woff2 HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+2023/10/02 11:42:34 [error] 30#30: *1 open() "/usr/share/nginx/html/public/excalidraw-assets/Assistant-Bold.woff2" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /public/excalidraw-assets/Assistant-Bold.woff2 HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+172.17.0.1 - - [02/Oct/2023:11:42:34 +0000] "GET /public/excalidraw-assets/Assistant-Bold.woff2 HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" "-"
+```
+
+</details>
+
+Does the Docker only run the frontend without backend? It shouldn't run the backend as well? For example, running both with docker compose would be possible to spin up all system parts locally. 
+
+### Backend
+
+I ran the commands.
+
+```
+git clone https://github.com/7flash/galaxy-polkadot.git
+cd galaxy-polkadot
+git checkout milestone2
+git submodule update --init --recursive
+pnpm install
+```
+
+After that, `cd desktop/webui && make` and I changed [the file](https://github.com/7flash/galaxy-desktop-app/blob/9763b504caf094f1f4000300185c9594a05b560e/main.ts#L8) to `./webui/dist/webui-2.so` and I ran `pnpm dev-deno`. It opens a blank Chrome window. I ran `pnpm dev-desktop` and moved the folder `excalidraw-assets` to the folder `dist`. The command to generate this folder shouldn't be the command below?
+
+```
+npm install react react-dom @excalidraw/excalidraw
+
+or
+
+yarn add react react-dom @excalidraw/excalidraw
+```
+
+After that, I ran `pnpm dev-deno again` and the application with Backend worked fine. I was able to save locally and load. I think the repository is using a [branch](https://github.com/7flash/galaxy-dist/tree/a02cde286d6f0b50935e4d8ba75d4f0b958dd8e2) for the `dist` folder that isn't working properly, but the [new one](https://github.com/7flash/galaxy-dist/tree/01ccb930b88083dc0539244ba7de6f2935049c89) is working fine.
+
+![image (42)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/f2b65338-5d5a-4bfd-ace0-792f3ff82012)
+
+
+The loaded frame has a minor problem. It seems to load images in the corner of the frame. It isn't like when you load from a published one.
 
 ## Evaluation V2
 
