@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/galaxy.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,13 +9,17 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[x] </li></ul>| [LICENSE](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/LICENSE) |  |
-| **0b.** | Documentation |<ul><li>[ ] </li></ul>|  [README](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/README.md) | Not fully evaluated Yet. |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>|  [README](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/README.md) |  |
 | **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>|  [Galaxy.test.js](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/tests/Galaxy.test.js) |  |
-| **0d.** | Docker |<ul><li>[ ] </li></ul>|  [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/Dockerfile) | Not fully evaluated Yet. |
+| **0d.** | Docker |<ul><li>[x] </li></ul>|  [Dockerfile](https://github.com/7flash/galaxy-polkadot/blob/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9/Dockerfile) |  |
 | 0e. | Article |<ul><li>[x] </li></ul>|  [Telegraph](https://telegra.ph/Galaxy-Browser-v111-09-28) |  |
 | 0e. | Video |<ul><li>[x] </li></ul>|  [Youtube](https://www.youtube.com/watch?v=U1TshR00K8Q) |  |
 | 1. | Galaxy Browser |<ul><li>[x] </li></ul>|  [Main Repository](https://github.com/7flash/galaxy-polkadot/tree/f97d5e2e5eab3322782f72d3b469d11cbf7e94a9) |  |
 | 2. | Smart contract |<ul><li>[x] </li></ul>|  [Smart Contract Submodule](https://github.com/7flash/galaxy-polkadot-contract/tree/74b38eafc673a9f1b5d8541a4f43b31cd644db01) |  |
+
+## Evaluation V4
+
+All remaining attention points were fix or justified. The documentation could be improved but this doesn't prevent the acceptance of the milestone.
 
 ## Evaluation V3
 
