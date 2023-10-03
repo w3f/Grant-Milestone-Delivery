@@ -22,6 +22,8 @@ The delivery achieves the goal of 60 fps throughput in many cases, however there
 - There are currently 99 unresolved TODO comments in the code
 - In our testing, the 60 fps goal was not consistently met on all devices and operating system languages (works on tested device with English only)
 - The avg fps was above 60 but sometimes dropped below 60 on the test device
+- 1 test is currently failing
+- clippy is showing a bunch of warnings but I suspect it's due to a downstream dependency
 
 ### Testing Feedback
 
