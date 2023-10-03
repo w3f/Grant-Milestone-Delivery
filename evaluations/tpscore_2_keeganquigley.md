@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** In Progress
-- **Application Document:** 
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/TPScore.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
 
