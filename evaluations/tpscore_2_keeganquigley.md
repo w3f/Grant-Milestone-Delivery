@@ -21,6 +21,8 @@ App works nicely and good documentation. I'm able to create the Docker networks 
 
 I'm not sure what these indicators are supposed to mean exactly. Also, how often do these feeds get updated? I see the latest published ones are from August 9th.
 
+**UPDATE:** Issues resolved regarding the feeds updating. Still have questions regarding the TPS info as it's a bit concerning to see 0s across the board.
+
 <details>
 
   <summary>Entire ETL system runs</summary>
