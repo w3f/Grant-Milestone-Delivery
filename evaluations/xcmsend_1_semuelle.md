@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcmsend.md
 - **Milestone:** 1
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -10,7 +10,7 @@
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a.    |  License | <ul><li>[x] </li></ul> | [XcmSend/app-v0.0.1](https://github.com/XcmSend/app-v0.0.1/blob/5b1e55b64fd8d9e44dd5c2d10e0b74c2a0c81fa6/LICENSE) | MIT |
 | 0b | Documentation | <ul><li>[x] </li></ul> | [XcmSend/xcmsend.github.io](https://github.com/XcmSend/xcmsend.github.io/tree/74afe11c4c0e3f810c01b33df453916749e88e5a) | Also https://xcmsend.github.io |
-| 0c      | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [XcmSend/xcmsend.github.io](https://github.com/XcmSend/xcmsend.github.io/blob/74afe11c4c0e3f810c01b33df453916749e88e5a/src/tests/readme.md) |  |
+| 0c      | Testing and Testing Guide | <ul><li>[x] </li></ul> | [XcmSend/xcmsend.github.io](https://github.com/XcmSend/xcmsend.github.io/blob/74afe11c4c0e3f810c01b33df453916749e88e5a/src/tests/readme.md) | Tests amended on request |
 | 0d      | Docker | <ul><li>[x] </li></ul> | [XcmSend/DockerBuild](https://github.com/XcmSend/DockerBuild/tree/7bad3705ffa5a1d27566e6be578a28cb76e3ae75) | — |
 | 0e      | Article | <ul><li>[x] </li></ul> | [medium.com](https://decentration.medium.com/a-workflow-builder-adds-a-playground-on-top-of-cross-chain-infrastructure-25222617ed8) | Basic intro |
 | 1      | XCMSend UI (MVP) | <ul><li>[x] </li></ul> | [XcmSend/app-v0.0.1](https://github.com/XcmSend/app-v0.0.1/tree/5b1e55b64fd8d9e44dd5c2d10e0b74c2a0c81fa6) | deployed at https://app.xcmsend.com/ |
