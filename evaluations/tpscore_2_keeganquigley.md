@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/TPScore.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -10,10 +10,10 @@
 | **0a.** | License | <ul><li>[x] </li></ul> | [Licence](https://github.com/BCS-Labs/tpscore-web-client/blob/main/LICENSE) | GPLv3|
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | [Documentation](https://github.com/BCS-Labs/tpscore-web-client/blob/main/README.md) | Looks good.
 | **0c.** | Tests and Testing Guide | <ul><li>[x] </li></ul> | [Tests](https://github.com/BCS-Labs/tpscore-web-client/tree/main/src/test), [Testing Guide](https://github.com/BCS-Labs/tpscore-web-client#run-unit-tests) | Looks good. |
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [Dockerfile](https://github.com/BCS-Labs/tpscore-web-client/blob/main/Dockerfile), [How to run the project using Docker](https://github.com/BCS-Labs/tpscore-web-client#how-to-run-the-project-using-docker) | Looks good. |
-| 0e. | Article | <ul><li>[ ] </li></ul> | [Article](https://dev.to/fromaline/tpscore-transactions-per-second-metrics-made-easy-508f) | Looks good. |
-| 1. | Data access | <ul><li>[ ] </li></ul> |[Data access in the app](https://github.com/BCS-Labs/tpscore-web-client/blob/main/src/app/page.tsx#L14)| Looks good. |
-| 2. | UI  | <ul><li>[ ] </li></ul> | [tpscore.xyz](https://tpscore.xyz/), [source code](https://github.com/BCS-Labs/tpscore-web-client/tree/main/src)  | Looks good. |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/BCS-Labs/tpscore-web-client/blob/main/Dockerfile), [How to run the project using Docker](https://github.com/BCS-Labs/tpscore-web-client#how-to-run-the-project-using-docker) | Looks good. |
+| 0e. | Article | <ul><li>[x] </li></ul> | [Article](https://dev.to/fromaline/tpscore-transactions-per-second-metrics-made-easy-508f) | Looks good. |
+| 1. | Data access | <ul><li>[x] </li></ul> |[Data access in the app](https://github.com/BCS-Labs/tpscore-web-client/blob/main/src/app/page.tsx#L14)| Looks good. |
+| 2. | UI  | <ul><li>[x] </li></ul> | [tpscore.xyz](https://tpscore.xyz/), [source code](https://github.com/BCS-Labs/tpscore-web-client/tree/main/src)  | Looks good. |
 
 # General Notes
 
@@ -21,7 +21,9 @@ App works nicely and good documentation. I'm able to create the Docker networks 
 
 I'm not sure what these indicators are supposed to mean exactly. Also, how often do these feeds get updated? I see the latest published ones are from August 9th.
 
-**UPDATE:** Issues resolved regarding the feeds updating. Still have questions regarding the TPS info as it's a bit concerning to see 0s across the board.
+**UPDATE:** Issues resolved regarding the feeds updating.
+
+**UPDATE v2:** Grantee says they are looking to change the display format, and include other extrinsics as well in addition to balance transfers.
 
 <details>
 
