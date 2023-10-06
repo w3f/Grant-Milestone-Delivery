@@ -11,29 +11,54 @@
 | **0a.** | License |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/LICENSE](https://github.com/justmert/dotly-backend/blob/master/LICENSE) - [https://github.com/justmert/dotly-frontend/LICENSE](https://github.com/justmert/dotly-frontend/blob/master/LICENSE) |  |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/README.md](https://github.com/justmert/dotly-backend/blob/master/README.md) - [https://github.com/justmert/dotly-frontend/README.md](https://github.com/justmert/dotly-frontend/blob/master/README.md) | |
 | **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/justmert/dotly-backend?tab=readme-ov-file#how-to-run-tests | Not fully evaluated yet. |
-| **0d.** | Docker |<ul><li>[ ] </li></ul>| ----- | Not fully evaluated yet. |
+| **0d.** | Docker |<ul><li>[ ] </li></ul>| ----- | Not fully evaluated yet.  |
 | **0e.** | Article |<ul><li>[ ] </li></ul>| ---- | Not fully evaluated yet. |
 | 1. | Search Page |<ul><li>[x] </li></ul>| https://dotly.net/ | |
 | 2. | Overview Page |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | I couldn't test Locally. |
 | 3. |  Overview Page - Brief Stats |<ul><li>[ ] </li></ul>|  https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#account | I couldn't test Locally. |
 | 4. |  Overview Page - Parachain Balance Pie |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution | I couldn't test Locally. |
 | 5. |  Overview Page - Parachain Balance List |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution | I couldn't test Locally. |
-| 6. |  Overview Page - Weekly Transaction Rate |<ul><li>[ ] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#stats | It seems to be reporting more than the weekly activity. |
+| 6. |  Overview Page - Weekly Transaction Rate |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#stats |  |
 | 7. | Stats Page |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 | 8. |  Stats Page - Balance History |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#transfer-history |  |
 | 9. |  Stats Page - Transaction History |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#transfer-relationship | |
 | 10. |  Stats Page - Top Senders/Receivers |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#transfer-relationship | |
 | 11. |  Stats Page - Incoming/Outgoing Transfer Widget |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#total-transfers | |
 | 12. | Stats Page - Staking/Pool Reward History |<ul><li>[x] </li></ul>| https://dotly.net/rewards/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#reward-history |  |
-| 13. | Extrinsics Page |<ul><li>[ ] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | Weekly Transaction Rate |
+| 13. | Extrinsics Page |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m |  |
 | 14. | Extrinsics Page - Extrinsics Count History |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#activity | |
 | 15. | Extrinsics Page - Extrinsics Success Rate |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#success-rate | |
 | 16. | Extrinsics Page - Top Interacted Modules/Calls  |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#recent-extrinsics | |
 | 17. | Extrinsics Page - Action Insight |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#distribution | |
 | 18. | Badges Page |<ul><li>[x] </li></ul>| https://dotly.net/badges/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 | 19. | Badges Page - Badges |<ul><li>[x] </li></ul>| https://dotly.net/badges/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
-| 20. | Google Analytics Integration |<ul><li>[ ] </li></ul>| -- | Not fully evaluated yet. |
+| 20. | Google Analytics Integration |<ul><li>[x] </li></ul>| -- |  |
 | 21. | Share Feature |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
+
+## Evaluation V2
+
+### Backend
+
+I'm having problems with the backend. The Overview page isn't loading locally, and the tests for the Overview are failing. Check the Evaluation V1 for more info about this. Could you help me with this?
+
+### Frontend
+
+The weekly transaction rate now returns the correct value.  
+
+![image (47)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/56a55591-c072-48a5-a971-5250b72d3aa3)
+
+
+You sent the print [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1016#issuecomment-1745640019) of the Google Analytics working, I think the Deriverable 20 is fine.
+
+About the Deriverable 4, I think it's better to do an amendment to change this and ajust the deriverables 6 and 8 in this amendment. If you remove a deliverable make sure to give us the dicount in the price since it was not developed. 
+
+### Article
+
+You said [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1016#issuecomment-1745640019) the article in 2 days will be published. You can add the link or send it to me when you do this.
+
+### Docker
+
+About the Docker. Couldn't you instruct the user to create the `.env` with the information about the Firebase for the backend and the token for the frontend? Then instruct the user to build the image and launch the application.
 
 ## Evaluation V1
 
