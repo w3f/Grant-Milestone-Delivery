@@ -10,14 +10,14 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/LICENSE](https://github.com/justmert/dotly-backend/blob/master/LICENSE) - [https://github.com/justmert/dotly-frontend/LICENSE](https://github.com/justmert/dotly-frontend/blob/master/LICENSE) |  |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/README.md](https://github.com/justmert/dotly-backend/blob/master/README.md) - [https://github.com/justmert/dotly-frontend/README.md](https://github.com/justmert/dotly-frontend/blob/master/README.md) | |
-| **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/justmert/dotly-backend?tab=readme-ov-file#how-to-run-tests | Not fully evaluated yet. |
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| https://github.com/justmert/dotly-backend?tab=readme-ov-file#how-to-run-tests |  |
 | **0d.** | Docker |<ul><li>[ ] </li></ul>| ----- | Not fully evaluated yet.  |
-| **0e.** | Article |<ul><li>[ ] </li></ul>| ---- | Not fully evaluated yet. |
+| **0e.** | Article |<ul><li>[x] </li></ul>| ---- |  |
 | 1. | Search Page |<ul><li>[x] </li></ul>| https://dotly.net/ | |
-| 2. | Overview Page |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | I couldn't test Locally. |
-| 3. |  Overview Page - Brief Stats |<ul><li>[ ] </li></ul>|  https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#account | I couldn't test Locally. |
-| 4. |  Overview Page - Parachain Balance Pie |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution | I couldn't test Locally. |
-| 5. |  Overview Page - Parachain Balance List |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution | I couldn't test Locally. |
+| 2. | Overview Page |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | Some problems. |
+| 3. |  Overview Page - Brief Stats |<ul><li>[x] </li></ul>|  https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#account |  |
+| 4. |  Overview Page - Parachain Balance Pie |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution |  |
+| 5. |  Overview Page - Parachain Balance List |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution |  |
 | 6. |  Overview Page - Weekly Transaction Rate |<ul><li>[x] </li></ul>| https://dotly.net/extrinsics/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#stats |  |
 | 7. | Stats Page |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 | 8. |  Stats Page - Balance History |<ul><li>[x] </li></ul>| https://dotly.net/stats/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#transfer-history |  |
@@ -34,6 +34,51 @@
 | 19. | Badges Page - Badges |<ul><li>[x] </li></ul>| https://dotly.net/badges/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 | 20. | Google Analytics Integration |<ul><li>[x] </li></ul>| -- |  |
 | 21. | Share Feature |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
+
+## Evaluation V3
+
+### Docker
+
+Docker is working but I received an error in the frontend. I suggest you keep the instructions to run locally without Docker in the `README`.
+
+### Backend
+
+I successfully ran the tests.
+
+```
+(myenv) user@localhost:~/Documents/dotly/dotly-backend$ pytest tests/*
+=============================================================================================== test session starts ===============================================================================================
+platform linux -- Python 3.9.1, pytest-7.3.1, pluggy-1.3.0
+rootdir: /home/user/Documents/dotly/dotly-backend
+configfile: pytest.ini
+plugins: anyio-4.0.0
+collected 49 items                                                                                                                                                                                           	 
+
+tests/badges-test.py .....                                                                                                                                                                              	[ 10%]
+tests/extrinsics-test.py ........                                                                                                                                                                       	[ 26%]
+tests/badges-test.py .....                                                                                                                                                                              	[ 26%]
+tests/overview-test.py ............                                                                                                                                                                     	[ 51%]
+tests/rewards-test.py .............                                                                                                                                                                     	[ 77%]
+tests/stats-test.py ......
+
+=============================================================================================== 49 passed in 11.95s ===============================================================================================
+```
+
+### Frontend 
+
+I have a problem with the frontend. I received this error. 
+
+![image (48)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/2ddd07da-e3fa-46e8-83a0-05e8f71c9e5b)
+
+
+When I refresh the page a few times, the page loads.
+
+
+https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/c2d62864-84b9-453f-a117-0c3b423507f0
+
+
+
+I didn't receive anything unexpected on the frontend log or backend log. I tested this using Docker and without Docker. I had the same result.
 
 ## Evaluation V2
 
