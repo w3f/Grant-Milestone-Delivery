@@ -11,13 +11,38 @@
 | **0a.** | License |<ul><li>[X] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) |  |
 | **0b.** | Documentation |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | Not fully evaluated yet. |
 | **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) | Not fully evaluated yet. |
-| **0d.** | Docker |<ul><li>[ ] </li></ul>| [Docker-Compose](https://github.com/TrackingChains/TrackingChain/wiki/Docker-Compose) | Not fully evaluated yet. |
+| **0d.** | Docker |<ul><li>[x] </li></ul>| [Docker-Compose](https://github.com/TrackingChains/TrackingChain/wiki/Docker-Compose) | Not fully evaluated yet. |
 | 0e. | Article |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | Not fully evaluated yet. |
-| 1. | Tx Generator/Watcher Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
+| 1. | Tx Generator/Watcher Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) |  |
 | 2. | Tx Recovery/Monitor Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
 | 3. | Tx Cleaner Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
 | 4. | Tx Unlocker Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
-| 5. | Frontend Admin Tools |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
+| 5. | Frontend Admin Tools |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
+
+## Evaluation V2
+
+### Testing
+
+Thanks for the explanation. I was able to run the Docker and check the Deliverables 1, 2, and 5. For these three, I didn't receive the email. Correct me if I'm wrong, but the configuration should be:
+
+```
+"ReportSettings": {
+  "ReportOutput": "All"
+}
+```
+
+```
+  "MailSettings": {
+    "Mail": "My_Email",
+    "DisplayName": "Email_Name",
+    "Password": "My_app_password",
+    "Host": "smtp.gmail.com",
+    "Port": 587
+  }
+```
+
+Do I need to do something else to get this email? I couldn't understand how to test the Deliverables 3 and 4. Do I need to run some command, or should it activate after some event? Could you explain the `Configure Monitor Alert` in `Admin Tools`?
+
 
 ## Evaluation V1
 
