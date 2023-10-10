@@ -4,6 +4,7 @@
 **The delivery is according to the offcial [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**
 
 **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/TreasuryTracker.md
+
 **Milestone Number:** 1
 
 | Number | Deliverable | Specification |
