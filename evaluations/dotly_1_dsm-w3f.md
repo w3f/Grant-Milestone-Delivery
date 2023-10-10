@@ -35,6 +35,18 @@
 | 20. | Google Analytics Integration |<ul><li>[x] </li></ul>| -- |  |
 | 21. | Share Feature |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 
+## Evaluation V4
+
+### Documentation
+
+Could you add the instructions to run the backend without Docker? 
+
+### Testing
+
+The previous error is fixed. Now, In some [cases](https://dotly.net/overview/13EEEhiXeCFpFjVQxmjJsHjr9LFvnAurcnwQ1FDgB5LmJwQp), I received this error. 
+
+![image (49)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/b16101e3-8008-48e9-85dd-93d960b53967)
+
 ## Evaluation V3
 
 ### Docker
