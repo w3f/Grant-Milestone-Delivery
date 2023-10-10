@@ -19,4 +19,11 @@
 
 I am able to install and run the APKs on android device. The circuit diagrams provided looks good. One recommendation with apps are to add ability to generate random seed instead of predefined test account. Happy to accept this milestone.
 
-Testing guide https://book.interstellar.gg/M2_demo_tutorial.html worked as expected.
+## Testing App screens
+
+![WhatsApp Image 2023-10-10 at 13 10 47 (1)](https://github.com/w3f/Grant-Milestone-Delivery/assets/142136841/0e9272e1-d6f4-4e42-a1a7-d7d3873aac03)
+
+![WhatsApp Image 2023-10-10 at 13 10 46](https://github.com/w3f/Grant-Milestone-Delivery/assets/142136841/824dfd10-4fdf-4114-9371-a161d41c6639)
+
+![WhatsApp Image 2023-10-10 at 13 10 29](https://github.com/w3f/Grant-Milestone-Delivery/assets/142136841/ac1ea04e-b39a-4e69-a1a4-16f90991e8bd)
+
