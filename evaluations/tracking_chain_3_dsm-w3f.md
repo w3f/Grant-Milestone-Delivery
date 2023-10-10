@@ -9,15 +9,35 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[X] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/blob/main/LICENSE) |  |
-| **0b.** | Documentation |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | Not fully evaluated yet. |
-| **0c.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) | Not fully evaluated yet. |
-| **0d.** | Docker |<ul><li>[x] </li></ul>| [Docker-Compose](https://github.com/TrackingChains/TrackingChain/wiki/Docker-Compose) | Not fully evaluated yet. |
-| 0e. | Article |<ul><li>[ ] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | Not fully evaluated yet. |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  |  |
+| **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Unit-Test)  [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/main/test/TrackingChain.UnitTest) | |
+| **0d.** | Docker |<ul><li>[x] </li></ul>| [Docker-Compose](https://github.com/TrackingChains/TrackingChain/wiki/Docker-Compose) | |
+| 0e. | Article |<ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | |
 | 1. | Tx Generator/Watcher Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) |  |
-| 2. | Tx Recovery/Monitor Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
+| 2. | Tx Recovery/Monitor Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
 | 3. | Tx Cleaner Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
-| 4. | Tx Unlocker Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
+| 4. | Tx Unlocker Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
 | 5. | Frontend Admin Tools |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
+
+## Evaluation V3
+
+### Testing
+
+Thanks again for the explanation. This time, I received the email:
+
+![image (50)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/22a538a0-60ba-496e-8c62-683e4aa079b4)
+
+
+I check the Pendings, Pools, and Triages in the SQL server. The data was deleted after I started the Monitor. I manually added some transactions, and it only deleted again when I restarted the Monitor. Shouldn't It constantly remove the data from these tables?
+
+
+![pasted image 0 (17)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/722861ea-4b16-421d-a3de-5ad3579e0136)
+
+![pasted image 0 (18)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/6d1190c9-8774-4bb5-be10-600234d9847f)
+
+
+
+I could observe deliverable 4 described in this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1024#issuecomment-1753885074).
 
 ## Evaluation V2
 
