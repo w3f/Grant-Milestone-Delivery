@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Melodot.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -8,15 +8,41 @@
 | Number  | Deliverable                    | Link                                                         | Accepted                                                     | Notes                                                        |
 | ------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **0a.** | License                        | [Apache](https://github.com/ZeroDAO/melodot/blob/w3f/LICENSE) | <ul><li>[x] </li></ul> | Apache 2.0                                                   |
-| **0b.** | Documentation                  | [Docs](https://docs.melodot.io/ )                            | <ul><li>[x] </li></ul> | It includes the `learn` and `guide` sections that provide a introduction to Melodot and how to use it, with more detailed information available in the inline documentation. |
-| **0c.** | Testing and Testing Guide      | [Testing Guide](https://github.com/ZeroDAO/melodot/blob/w3f/TESTING.md) | <ul><li>[x] </li></ul> | Includes unit tests and e2e tests.                           |
-| **0d.** | Docker                         | [Start](https://github.com/ZeroDAO/melodot/tree/w3f#5-docker) [Testing](https://github.com/ZeroDAO/melodot/blob/w3f/TESTING.md#using-docker) | <ul><li>[x] </li></ul> | Run all unit tests, run the development network, and execute e2e tests within Docker. |
-| 1.      | Substrate pallet: excutive_das | [pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/frame-executive-ext) | <ul><li>[x] </li></ul> | The existing pallet has been modified as expected to be compatible with the new block header while keeping all tests compatible. |
-| 2.      | Substrate pallet: system_das   | [Pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/frame-system-ext) | <ul><li>[x] </li></ul> | Extend the `frame-system` pallet to support the creation of extended headers. |
-| 3.      | Substrate pallet: melo_store   | [Pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/pallet-melo-store) | <ul><li>[x] </li></ul> | A core pallet for handling data availability. Main features include: 1) Registering applications. 2) Allowing users to submit data metadata. 3) Validators accessing off-chain storage via OCW and reporting unavailable data. 4) Interface for creating extended block header. |
-| 4.      | melodot-client                 | [Node](https://github.com/ZeroDAO/melodot/tree/w3f/node)     | <ul><li>[x] </li></ul> | A substrate client containing a complete data availability layer. It has successfully completed all the core functions as expected, which can be validated through e2e tests. |
+| **0b.** | Documentation                  | [Docs](https://docs.melodot.io/ )                            | <ul><li>[x] </li></ul> | Very robust docs. |
+| **0c.** | Testing and Testing Guide      | [Testing Guide](https://github.com/ZeroDAO/melodot/blob/w3f/TESTING.md) | <ul><li>[x] </li></ul> | I completed the testing guide. [Examples](https://github.com/ZeroDAO/melodot/tree/main/crates/meloxt/examples) work.                          |
+| **0d.** | Docker                         | [Start](https://github.com/ZeroDAO/melodot/tree/w3f#5-docker) [Testing](https://github.com/ZeroDAO/melodot/blob/w3f/TESTING.md#using-docker) | <ul><li>[x] </li></ul> | Looks good. |
+| 1.      | Substrate pallet: excutive_das | [pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/frame-executive-ext) | <ul><li>[x] </li></ul> | Looks good. |
+| 2.      | Substrate pallet: system_das   | [Pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/frame-system-ext) | <ul><li>[x] </li></ul> | Looks good. |
+| 3.      | Substrate pallet: melo_store   | [Pallet](https://github.com/ZeroDAO/melodot/tree/w3f/crates/pallet-melo-store) | <ul><li>[x] </li></ul> | Looks good. |
+| 4.      | melodot-client                 | [Node](https://github.com/ZeroDAO/melodot/tree/w3f/node)     | <ul><li>[x] </li></ul> | Looks good. |
 
 # General Notes
+
+Great work! This is a very well-made app with great documentation. All core functions work as expected, and the docs have very thorough explanations pertaining to data availability. I was able to run the local nodes using `alice` and `bob` accounts.
+
+**Evaluation v2**
+
+Docker issues have been [resolved](https://github.com/ZeroDAO/melodot/commit/5cb51b0c3e6176eaedca04c0aa2442df1c0e8216). `protoc` crate issue was resolved. Now runs successfully.
+
+```sh
+*** Melodot ***
+[+] Running 1/1
+ ✔ Network melodot_default  Removed                                                                                                                      0.2s 
+[+] Creating 1/0
+ ✔ Network melodot_default  Created
+```
+```sh
+*** Melodot ***
+[+] Creating 1/0
+ ✔ Network melodot_default  Created                                                                                  0.0s
+[+] Running 4/4
+ ✔ dev 3 layers [⣿⣿⣿]      0B/0B      Pulled                                                                        70.2s
+   ✔ 9d21b12d5fab Pull complete                                                                                     12.0s
+   ✔ 12fd99bf0468 Pull complete                                                                                     51.6s
+   ✔ a96623d36357 Pull complete
+```
+
+**Evaluation v1**
 
 For some reason the build-release fails on my Mac, but it builds successfully on Ubuntu.
 
@@ -508,7 +534,7 @@ Running example: submit_invalid_blob_tx
 ```
 </details>
 
-The Docker script fails on both operating systems:
+**Update:** Docker issues resolved.
 
 <details>
 
