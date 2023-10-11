@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dotly.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,10 +11,10 @@
 | **0a.** | License |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/LICENSE](https://github.com/justmert/dotly-backend/blob/master/LICENSE) - [https://github.com/justmert/dotly-frontend/LICENSE](https://github.com/justmert/dotly-frontend/blob/master/LICENSE) |  |
 | **0b.** | Documentation |<ul><li>[x] </li></ul>| [https://github.com/justmert/dotly-backend/README.md](https://github.com/justmert/dotly-backend/blob/master/README.md) - [https://github.com/justmert/dotly-frontend/README.md](https://github.com/justmert/dotly-frontend/blob/master/README.md) | |
 | **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| https://github.com/justmert/dotly-backend?tab=readme-ov-file#how-to-run-tests |  |
-| **0d.** | Docker |<ul><li>[ ] </li></ul>| ----- | Not fully evaluated yet.  |
+| **0d.** | Docker |<ul><li>[x] </li></ul>| ----- |  |
 | **0e.** | Article |<ul><li>[x] </li></ul>| ---- |  |
 | 1. | Search Page |<ul><li>[x] </li></ul>| https://dotly.net/ | |
-| 2. | Overview Page |<ul><li>[ ] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | Some problems. |
+| 2. | Overview Page |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m |  |
 | 3. |  Overview Page - Brief Stats |<ul><li>[x] </li></ul>|  https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#account |  |
 | 4. |  Overview Page - Parachain Balance Pie |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution |  |
 | 5. |  Overview Page - Parachain Balance List |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m#balance-distribution |  |
@@ -34,6 +34,10 @@
 | 19. | Badges Page - Badges |<ul><li>[x] </li></ul>| https://dotly.net/badges/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
 | 20. | Google Analytics Integration |<ul><li>[x] </li></ul>| -- |  |
 | 21. | Share Feature |<ul><li>[x] </li></ul>| https://dotly.net/overview/17bR6rzVsVrzVJS1hM4dSJU43z2MUmz7ZDpPLh8y2fqVg7m | |
+
+## Evaluation V5
+
+The remainder problems were fixed. 
 
 ## Evaluation V4
 
