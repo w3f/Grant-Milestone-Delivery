@@ -18,7 +18,7 @@
 
 # General Notes
 
-Great work! This is a very well-made app with great documentation. All core functions work as expected, and the docs have very thorough explanations pertaining to data availability. I was able to run the local nodes using `alice` and `bob` accounts.
+Great work! This is a very well-made PoC with great documentation. All core functions work as expected, and the docs have very thorough explanations pertaining to data availability. I was able to run the local nodes using `alice` and `bob` accounts.
 
 **Evaluation v2**
 
