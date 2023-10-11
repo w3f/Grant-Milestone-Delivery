@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tracking_chain.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -15,9 +15,13 @@
 | 0e. | Article |<ul><li>[x] </li></ul>| [LINK](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-3-Guide-to-Demo)  | |
 | 1. | Tx Generator/Watcher Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) |  |
 | 2. | Tx Recovery/Monitor Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
-| 3. | Tx Cleaner Worker |<ul><li>[ ] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | Not fully evaluated yet. |
+| 3. | Tx Cleaner Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) |  |
 | 4. | Tx Unlocker Worker |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TransactionMonitor.Worker) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
 | 5. | Frontend Admin Tools |<ul><li>[x] </li></ul>| [SOURCE](https://github.com/TrackingChains/TrackingChain/tree/v0.3.0-alpha/src/TrackingChain.WebApp) [BINARY](https://github.com/TrackingChains/TrackingChain/releases/tag/v0.3.0-alpha) | |
+
+## Evaluation V4
+
+The grantee answered the doubt asked. 
 
 ## Evaluation V3
 
