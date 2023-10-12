@@ -45,6 +45,309 @@ This happens on both the Referenda and Analytics tabs.
 <img width="1437" alt="graph" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/0ae838f7-7d13-4312-92c9-1189550502cf">
 
 # Tests
+
+**Evaluation v2** 
+
+<details>
+
+  <summary>No more failures but still some errors</summary>
+
+  ./vendor/bin/phpunit --verbose tests
+PHPUnit 9.6.13 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.9
+
+....EEEEEEE                                                       11 / 11 (100%)
+
+Time: 00:00.507, Memory: 10.00 MB
+
+There were 7 errors:
+
+1) App\Test\TestCase\Model\Table\NetworksTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/NetworksTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/NetworksTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/NetworksTableTest.php:26
+
+2) App\Test\TestCase\Model\Table\ReferendaTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:26
+
+3) App\Test\TestCase\Model\Table\ReferendaTableTest::testReferencesExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:45
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:45
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/ReferendaTableTest.php:45
+
+4) App\Test\TestCase\Model\Table\RolesTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/RolesTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/RolesTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/RolesTableTest.php:26
+
+5) App\Test\TestCase\Model\Table\SessionsTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/SessionsTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/SessionsTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/SessionsTableTest.php:26
+
+6) App\Test\TestCase\Model\Table\UsersTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/UsersTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/UsersTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/UsersTableTest.php:26
+
+7) App\Test\TestCase\Model\Table\W3fClassificationTableTest::testColumnsExistence
+Cake\Database\Exception\MissingConnectionException: Connection to Mysql could not be established: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:133
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/W3fClassificationTableTest.php:26
+
+Caused by
+PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/W3fClassificationTableTest.php:26
+
+Caused by
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known
+
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:121
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver.php:131
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:164
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:216
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/Database/Connection.php:418
+/Users/keeganquigley/treasury-tracker/vendor/cakephp/cakephp/src/ORM/Table.php:520
+/Users/keeganquigley/treasury-tracker/tests/TestCase/Model/Table/W3fClassificationTableTest.php:26
+
+ERRORS!
+Tests: 11, Assertions: 8, Errors: 7.
+</details>
+
+**Evaluation v1**
 <details>
 
   <summary>Running `./vendor/bin/phpunit --verbose tests` results in 12 errors & 1 failure:</summary>
