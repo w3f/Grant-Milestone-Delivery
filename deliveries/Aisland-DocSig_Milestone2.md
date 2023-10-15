@@ -26,9 +26,12 @@ In the second milestone we added some features to Docsig:
 | 0c.  |Testing and Testing Guide|[Dapp unit tests](https://github.com/aisland-dao/docsig/blob/main/README.md#unit-tests)| | 
 | 0d.  | Docker |[Docker Documentation](https://github.com/aisland-dao/docsig/blob/main/README.md#docker), [Docker file](https://github.com/aisland-dao/docsig/blob/main/docker-compose.yml)| | 
 | 0e.  | Article |[Article of Introduction](https://news.aisland.io/aisland-docsig-decentralised-exchange-of-signed-documents/),[Workshop Video](https://dropbox.aisland.io/index.php/s/fvIn7U4b75v6jSo)|| 
-| 1.  | Substrate module: pallet-docsig |[Pallet Docsig](https://github.com/aisland-dao/aisland-node/tree/main/pallets/docsig), new functions: [newBlob()](https://github.com/aisland-dao/aisland-node/blob/66433f01b1ec232ca013a7d2cb8d8ca1eaebe007/pallets/docsig/src/lib.rs#L234), [destroyBlob()](https://github.com/aisland-dao/aisland-node/blob/66433f01b1ec232ca013a7d2cb8d8ca1eaebe007/pallets/docsig/src/lib.rs#L264), [storePublickey()](https://github.com/aisland-dao/aisland-node/blob/66433f01b1ec232ca013a7d2cb8d8ca1eaebe007/pallets/docsig/src/lib.rs#L210)| | 
-| 2.  | Dapp Feature: Standard Signature Image |The main entry point is the function [render_settings()](https://github.com/aisland-dao/docsig/blob/84e57c3fa448fc71e412f126394355864c40c3ed/client-src/index.js#L1676)|From the dapp, click on "Settings" icon| 
-| 3.  | Dapp Feature: Signature Marker |[Plugin Source Code](https://github.com/aisland-dao/docsig/tree/main/editorjs-signature-plugin), [UI Implementation](https://github.com/aisland-dao/docsig/blob/84e57c3fa448fc71e412f126394355864c40c3ed/client-src/index.js#L1412)|The new option is shown in the blocks editor when you create a blank document, for example.| 
-| 4.  | Dapp Feature: Encryption |[Encryption/Decryption Module](https://github.com/aisland-dao/docsig/blob/main/modules/cryptostream.js), [UI to manage encryption keys](https://github.com/aisland-dao/docsig/blob/84e57c3fa448fc71e412f126394355864c40c3ed/client-src/index.js#L1881), [Implementation on UI multiple points](https://github.com/aisland-dao/docsig/blob/main/client-src/index.js)| | 
+| 1.  | Dapp Feature: Pdf Export |[View Function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/docsig-server.js#L515
+) | 
+| 2.  | Dapp Feature: Signing Link Sharing by multiple channels |The main point is this [function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/client-src/index.js#L413
+)|From the dapp, 'document actions" click on the "Link" icon| 
+| 3.  | Dapp Feature: Multiple Counterparties |Main changes have been done to manage the multiple cunter parties, the main entry port for the UI, is this [function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/client-src/index.js#L343C3-L343C3
+)|| 
+| 4.  | Dapp Feature: Enhanced Templates |The main entry point is this [function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/client-src/index.js#L1665)| | 
 
 **Additional Information**
