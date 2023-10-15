@@ -25,7 +25,7 @@ In the second milestone we added some features to Docsig:
 | 0b.| Documentation |[Dapp Documentation](https://github.com/aisland-dao/docsig/blob/main/README.md),[Dapp Repository](https://github.com/aisland-dao/docsig) | in-line documentation is present in every source code file| 
 | 0c.  |Testing and Testing Guide|[Dapp unit tests](https://github.com/aisland-dao/docsig/blob/main/README.md#unit-tests)| | 
 | 0d.  | Docker |[Docker Documentation](https://github.com/aisland-dao/docsig/blob/main/README.md#docker), [Docker file](https://github.com/aisland-dao/docsig/blob/main/docker-compose.yml)| | 
-| 0e.  | Article |[Article of Introduction](https://news.aisland.io/aisland-docsig-decentralised-exchange-of-signed-documents/),[Workshop Video](https://dropbox.aisland.io/index.php/s/fvIn7U4b75v6jSo)|| 
+| 0e.  | Article |[Article for Update]([https://news.aisland.io/aisland-docsig-decentralised-exchange-of-signed-documents/](https://news.aisland.io/aisland-docsig-new-features/)),[Workshop Video](https://dropbox.aisland.io/index.php/s/3xCUS0r5dNNe4Np)|| 
 | 1.  | Dapp Feature: Pdf Export |[View Function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/docsig-server.js#L515
 ) | 
 | 2.  | Dapp Feature: Signing Link Sharing by multiple channels |The main point is this [function](https://github.com/aisland-dao/docsig/blob/b23cc85356d16baa35b06734492b261a45d15880/client-src/index.js#L413
