@@ -103,5 +103,37 @@ The dashboard enables developers to detect changes in account references and bal
 
 **0c. Manual Testing Guide**
 
+To demonstrate how to use the dashboard, we'll answer the following questions with examples:
+
+Q1: Which transactions/accounts were responsible for the reserved balance in an account?
+
+**A:** Let's focus on the Balance Reference Chart. By selecting **Balance Reference Change Type** -> **reserved** -> **APPLY FILTER** on the left panel, we can see a list of extrinsics affecting the reserved balances. For instance, [17767377-2](https://polkaholic.io/tx/0x82fe6e0014c444b3c1a1554ec0368805184bb23d7fdf88d02516e418f2dc8f9a) and [17766629-2](https://polkaholic.io/tx/0xfcaf9c322c721e479b188ae93f69e0ba971ecdad030374448c97b259af20e1c6) show that reserved balances are affected by `identity:setIdentity` and `referenda:placeDecisionDeposit` extrinsic calls.
+
+![Dashboard UI](https://storage.googleapis.com/cdn.polkaholic.io/deepaccountanalytics-m1/dashboard_reserved.png)
+
+Q2: What modules currently depend on consumers, providers, and sufficients reference counters for a specific account, and which transactions introduced/removed those references?
+
+**A:** Similarly, we can examine the Account Reference Chart. By selecting **Account Reference Change Type** on the left panel, we see that changes to providers are primarily introduced by the *balances* module, whereas changes to consumers are mainly affected by the *staking* module.
+
+![Dashboard UI](https://storage.googleapis.com/cdn.polkaholic.io/deepaccountanalytics-m1/dashboard_consumer_change.png)
+
+![Dashboard UI](https://storage.googleapis.com/cdn.polkaholic.io/deepaccountanalytics-m1/dashboard_provider_change.png)
+
+
+Q3: What are the pallets responsible for reserves/holds and locks/freezes on an account?
+
+**A:** One way to answer this question is by querying the deep indexing table `bigquery-public-data.crypto_polkadot.reservereference0`:
+```
+SELECT ext_section, ext_method, change_type, count(*) cnt  FROM `bigquery-public-data.crypto_polkadot.reservereference0` group by ext_section, ext_method, change_type order by cnt  desc LIMIT 1000
+```
+![Dashboard UI](https://storage.googleapis.com/cdn.polkaholic.io/deepaccountanalytics-m1/bq_deep_table.png)
+
+This shows that the *staking* and *nominationPools* pallets are primarily responsible for reserves/holds, whereas the *proxy* and *multisig* pallets are mainly responsible for locks/freezes.
+
+Similarly, we can derive similar observation from the `Balance Reference Change Tally` chart:
+
+![Dashboard UI](https://storage.googleapis.com/cdn.polkaholic.io/deepaccountanalytics-m1/reference_change_tally.png)
+
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+
+Determining which modules or pallets are responsible for specific changes can be challenging, as trace records don't have a direct causal relationship. However, our deep analytics tool enables developers to narrow down issues to specific extrinsic IDs. Developers can then pinpoint the changes attributed to that extrinsic and investigate further.
