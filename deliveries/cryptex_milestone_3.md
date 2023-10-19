@@ -1,0 +1,30 @@
+# Milestone Delivery :mailbox:
+
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md
+* **Milestone Number:** 3
+
+**Context**
+
+The Etf Network is a Substrate-based blockchain that utilizes identity-based encryption and zero knowledge proofs to enable "encryption to the future", or timelock encryption. It uses a slot-based consensus system as a reference clock to which messages can be encrypted. The initial implementation uses a fork of Aura to implement a proof-of-authority version of ETF, where authorities are IBE master key custodians. Valid blocks authored in future slots contain the corresponding secret keys. To put it another way, each slot has a unique, publicly calculable identity, and whenever a block is authored in that slot, the identity owners leaks their secret key.
+
+In the third milestone we deliver an initial use case on the etf network, a second-price sealed-bid auction NFT platform. The auction takes advantage of the timelock encryption implemented in the previous milestone to seal bids for auction participants.
+
+**Deliverables**
+
+|  Number | Deliverable                      | Link                                                                                                                                                                                                             | Notes                                                                                                                                |
+| ------: | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **0a.** | License                          | https://github.com/ideal-lab5/substrate/blob/etf/LICENSE-GPL3                                                                                                                                                    | GPLv3                                                                                                                                |
+| **0b.** | Documentation                    | https://ideal-lab5.github.io                                                                                                                                                                                     | also see inline documentation and readmes                                                                                            |
+| **0c.** | Testing and Testing Guide        | https://docs.google.com/document/d/1SJ9bf2ALFf-UBG-W4gF63aQS1_9FywDQgBry1oxRv64/edit?usp=sharing                                                                                                                |                                                                                                                                      |
+| **0d.** | Docker                           | [etf node](https://hub.docker.com/repository/docker/ideallabs/etf/general), [etf-auction-ui](https://hub.docker.com/repository/docker/ideallabs/etf-auction-ui/general)                                                                                                                                                   |                                                                                                                                      |
+| **0e.** | Article                          | [milestone 3 substack draft](https://ideallabs.substack.com/p/509e34d1-3d7e-43f0-a7d5-54e8215dae1e)                                                                                                                                            | unpublished, pending milestone 3 acceptance.                                                                                         |
+|      1. | Smart Contract: Auction Platform | [contracts repo](https://github.com/ideal-lab5/contracts)                                                                                                                                                        | see the docs [here](https://ideal-lab5.github.io/timelock_auction.html) and the substack article above for a deep dive on this piece |
+|      2. | UI/SDK: Auction Interface        | [etf-auction-ui repo](https://github.com/ideal-lab5/etf-auction-ui) hosted at [(IPFS)](http://auction.idealabs.network) and [vercel](https://etf-auction.vercel.app/), [etf-sdk](https://github.com/ideal-lab5/etf-sdk), [typescript lib](https://github.com/ideal-lab5/etf.js) | npm packages are published [here](https://www.npmjs.com/search?q=ideallabs)                                                          |
+|      3. | UI + Testnet Deployment          | nodes hosted at [etf0.idealabs.network, etf1.idealabs.network], [Grafana](http://etf0.idealabs.network:3000/d/PUYzGbwWz/substrate-node-template-metrics?orgId=1), [prometheus](http://etf0.idealabs.network:9090/) [ipfs-hosted UI - http://auction.idealabs.network](http://auction.idealabs.network) |                                     |
+
+
+**Additional Information**
+
+- in the [previous milestone delivery](https://github.com/w3f/Grant-Milestone-Delivery/pull/985), we discussed some potential optimizations of the encryption scheme. Rather than expand the scope of this grant to include this optimization (likely requiring an ammendment and re-approval), we opted to include it in the next phase of the project (we have recently been accepted to the SBP program).
