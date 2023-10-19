@@ -1,11 +1,11 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/TreasuryTracker.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
-| Number | Deliverable | Accepted | Specification |
+| Number | Deliverable | Accepted | Link |
 | -----: | ----------- | ------------- | ------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | Apache 2.0 (https://github.com/stake-plus/treasury-tracker/blob/main/LICENSE) |
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | https://github.com/stake-plus/treasury-tracker/blob/main/README.md |
@@ -14,11 +14,11 @@
 | **0e.** | Article | <ul><li>[x] </li></ul> | https://docs.google.com/document/d/1TgUOFUv69fm3vopuTu7VlYLkRxnsMqUT8-BFa2LPG8I/edit?usp=sharing |
 | **1.** | Backend Development | <ul><li>[x] </li></ul> | https://github.com/stake-plus/polkadotjs-proxy |
 | **2.** | Frontend Development | <ul><li>[x] </li></ul> | https://github.com/stake-plus/treasury-tracker |
-| **3.** | Integration and Testing | <ul><li>[x] </li></ul> | Completed as part of development |
+| **3.** | Integration and Testing | <ul><li>[x] </li></ul> |  |
 
 # General Notes
 
-Docker image builds successfully, but takes a while. Perhaps this could be optimized.
+Overall very nice app! The UI is sleek and easy to use. Docs are good but could be more robust. Nice work!
 
 <details>
 
@@ -38,13 +38,30 @@ Docker image builds successfully, but takes a while. Perhaps this could be optim
  ```
 </details>
 
-There seems to be a UI glitch on the live site, on both Brave and Chrome when at 100%. I have to zoom out to 75% to display it normally. But when I run it locally, I don't have this problem for some reason.
+# UI
 
-This happens on both the Referenda and Analytics tabs.
+~~There seems to be a UI glitch on the live site, on both Brave and Chrome when at 100%. I have to zoom out to 75% to display it normally. But when I run it locally, I don't have this problem for some reason.~~
 
-<img width="1437" alt="graph" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/0ae838f7-7d13-4312-92c9-1189550502cf">
+~~This happens on both the Referenda and Analytics tabs.~~
+
+**UPDATE:** Above issues have been resolved.
+
+There is also a small issue when trying to click on the "Latest Proposals" sidebar. Every link results in a 404 errror at `https://treasurytracker.io/null`
+
+![null](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/8604fb5b-036b-4973-a91e-23c39535f94d)
+
+However clicking on "View All" is successful. Please take a look to see if this can be fixed.
 
 # Tests
+
+**Evaluation v3**
+
+Docker command in instructions fails because the container doesn't exist:
+```sh
+docker exec -it docker-test_web_1 /bin/bash .
+Error: No such container: docker-test_web_1
+```
+However it works with `docker exec -it treasury-tracker-web-1 /bin/bash`.
 
 **Evaluation v2** 
 
