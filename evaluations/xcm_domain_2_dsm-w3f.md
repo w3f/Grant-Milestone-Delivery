@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-domain-service.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,15 +9,25 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License                    |<ul><li>[x] </li></ul>| ----                                                                                     | |
-| **0b.** | Documentation              |<ul><li>[ ] </li></ul>| ----                                                                                     | Not fully evaluated yet. |
-| **0c.** | Methodology                |<ul><li>[ ] </li></ul>| [Docs](https://docs.google.com/document/d/1r9gQDz_-qi56uVKXHHleepwx4tMyw6WFoAJJpO57PW0/) | Not fully evaluated yet. |
-| **0d.** | Report                     |<ul><li>[ ] </li></ul>| [Docs](https://docs.google.com/document/d/1-6WTMW5M_0ov_LoP-J0m62_V4yhhDF4zKrnMXuTiskI/) | Not fully evaluated yet. |
-| **1.**  | Technical Assessments      |<ul><li>[ ] </li></ul>| [Docs](https://docs.google.com/document/d/11CFgzmr0tXpaHrtkrzlPY3chhp9gOQEp5cqCsiNEZHA/) | Not fully evaluated yet. |
-| **2.**  | Architecture               |<ul><li>[ ] </li></ul>| [Docs](https://docs.google.com/document/d/1keSkyREimcUnwuooJ4sfkriTMTEWCu_4k-hkrgTgrqc/) | Not fully evaluated yet. |
+| **0b.** | Documentation              |<ul><li>[x] </li></ul>| ----                                                                                     | |
+| **0c.** | Methodology                |<ul><li>[x] </li></ul>| [Docs](https://docs.google.com/document/d/1r9gQDz_-qi56uVKXHHleepwx4tMyw6WFoAJJpO57PW0/) | |
+| **0d.** | Report                     |<ul><li>[x] </li></ul>| [Docs](https://docs.google.com/document/d/1-6WTMW5M_0ov_LoP-J0m62_V4yhhDF4zKrnMXuTiskI/) | |
+| **1.**  | Technical Assessments      |<ul><li>[x] </li></ul>| [Docs](https://docs.google.com/document/d/11CFgzmr0tXpaHrtkrzlPY3chhp9gOQEp5cqCsiNEZHA/) | |
+| **2.**  | Architecture               |<ul><li>[x] </li></ul>| [Docs](https://docs.google.com/document/d/1keSkyREimcUnwuooJ4sfkriTMTEWCu_4k-hkrgTgrqc/) | |
 | **3.**  | Main Technical Deliverable |<ul><li>[x] </li></ul>| [Repository `xcm-domain-service`](https://github.com/azero-id/xcm-domain-service)        | |
-| **4.**  | Technical Deliverable      |<ul><li>[ ] </li></ul>| [Repository `contracts-parachain`](https://github.com/azero-id/contracts-parachain)      | Not fully evaluated yet. |
+| **4.**  | Technical Deliverable      |<ul><li>[x] </li></ul>| [Repository `contracts-parachain`](https://github.com/azero-id/contracts-parachain)      | |
 | **5.**  | Technical Deliverable      |<ul><li>[x] </li></ul>| [PR in `polkadot-sdk`](https://github.com/paritytech/polkadot-sdk/pull/1883)             | |
-| **6.**  | References                 |<ul><li>[ ] </li></ul>| [Docs](https://docs.google.com/document/d/19HiSH8rJKRFbuHm5Ju_lfhVl0XYTLCfgT4FuWIr5-Vw/) | Not fully evaluated yet. |
+| **6.**  | References                 |<ul><li>[x] </li></ul>| [Docs](https://docs.google.com/document/d/19HiSH8rJKRFbuHm5Ju_lfhVl0XYTLCfgT4FuWIr5-Vw/) | |
+
+## Evaluation V2
+
+### Documentation
+
+I think the Documentation is good.
+
+### Testing
+
+Thanks for the instructions. I was able to test the contracts, and it works well. I was able to view the XCM message while I registered, checked the owner, set the address, checked the address, and transferred the domain.
 
 ## Evaluation V1
 
