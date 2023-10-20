@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/rv-kmir.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -9,11 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License |<ul><li>[x] </li></ul>| [BSD-3](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/LICENSE) | |
-| **0b.** | Documentation |<ul><li>[x] </li></ul>| [kmir CLI instructions](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/README.md) | Not fully evaluated yet. |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>| [kmir CLI instructions](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/README.md) |  |
 | **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| [Testing Instructions with Docker](https://github.com/runtimeverification/mir-semantics/tree/milestone3-deliverable#running-integration-tests-with-docker) | |
 | **0d.** | Docker |<ul><li>[x] </li></ul>| [Dockerfile](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/Dockerfile) | |
-| 1. | KMIR semantics |<ul><li>[ ] </li></ul>| [mir.md](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/k-src/mir.md)) | Not fully evaluated yet. |
-| 2. | **kmir** executable extension |<ul><li>[ ] </li></ul>| [**kmir run** implementation](https://github.com/runtimeverification/mir-semantics/blob/e5060a191fabe20799317ad4bd1ed50b4bf1adb9/kmir/src/kmir/__main__.py#L59), [** kmir run ** command](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/README.md#kmir-commands) | Not fully evaluated yet. |
+| 1. | KMIR semantics |<ul><li>[x] </li></ul>| [mir.md](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/k-src/mir.md)) |  |
+| 2. | **kmir** executable extension |<ul><li>[x] </li></ul>| [**kmir run** implementation](https://github.com/runtimeverification/mir-semantics/blob/e5060a191fabe20799317ad4bd1ed50b4bf1adb9/kmir/src/kmir/__main__.py#L59), [** kmir run ** command](https://github.com/runtimeverification/mir-semantics/blob/milestone3-deliverable/kmir/README.md#kmir-commands) |  |
+
+## Evaluation V2
+
+The grantee presented evidence that the work of M3 spent at least 8 weeks as described in the application. See this [this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1021#issuecomment-1769569859). All parts delivered are working.
 
 ## Evaluation V1
 
