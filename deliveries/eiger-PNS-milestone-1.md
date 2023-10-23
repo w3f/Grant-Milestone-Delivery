@@ -18,13 +18,13 @@ We also update [research done previously](https://github.com/common-good-storage
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | **0a.** | Copyright and Licenses |https://github.com/eigerco/polkadot-native-storage/blob/main/LICENSE|  MIT|
-| **0b.** | Documentation/Tutorial |...| ...|
+| **0b.** | Documentation/Tutorial |https://github.com/eigerco/polkadot-native-storage/blob/main/README.md| inline documentation inside the code|
 | **0c.** | Methodology |https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md#2-methodology| ...|
-| **0d.** | Infrastructure |...| ...|
+| **0d.** | Infrastructure |https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md#infrastructure--testing-environment| ...|
 | **0e.** | Article |https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md| ...|
 | **0f.** | Testing and Testing Guide |https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md| ...|
-| **0g.** | Docker |https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker| ...|
-| **1.** | Updated CGS code |...| ...|
+| **0g.** | Docker |https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker  https://github.com/eigerco/polkadot-native-storage/blob/main/Dockerfile| ...|
+| **1.** | Updated CGS code |https://github.com/eigerco/polkadot-native-storage| ...|
 
 
 
