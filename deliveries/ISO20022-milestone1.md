@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grant Program](https://github.com/OpenSmartContract/W3F-Program/blob/master/applications/ISO20022.md)
+* **Application Document:** https://github.com/OpenSmartContract/W3F-Program/blob/master/applications/ISO20022.md
 * **Milestone Number:** 1
 
 **Context** (optional)
