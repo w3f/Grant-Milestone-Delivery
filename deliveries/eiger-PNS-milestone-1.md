@@ -30,4 +30,4 @@ We also update [research done previously](https://github.com/common-good-storage
 
 **Additional Information**
 
-We have outlined 28 work milestones that would deliver immutable native storage for Polkadot.
+In our conclusion, we outlined [28 work milestones](https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-conclusion.md#31-implementation) that would deliver immutable native storage for Polkadot.
