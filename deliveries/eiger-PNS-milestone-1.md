@@ -3,7 +3,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**
 
-* **Application Document:** https://github.com/dtuzi/Grants-Program/blob/4d5e7ff1cc90ab0416604dc705bd02c29ba136e6/applications/Eiger_Storage_on_Polkadot_1.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Eiger_Storage_on_Polkadot_1.md
 * **Milestone Number:** 1
 
 **Context**
