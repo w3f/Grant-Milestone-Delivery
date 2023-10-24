@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/sandox.md 
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -9,13 +9,20 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| [LICENSE]( https://github.com/sandoxio/sandox/blob/main/LICENSE) | |
-| 0b. | Documentation |<ul><li>[ ] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md) | Not fully evaluated yet. |
+| 0b. | Documentation |<ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md) | |
 | 0c. | Testing Guide |<ul><li>[x] </li></ul>| [Readme.md](https://github.com/sandoxio/sandox/blob/main/README.md#how-to) | |
 | 0e. | Article |<ul><li>[x] </li></ul>| [SanDOx.io on Medium](https://medium.com/@sandox) | |
-| 1. | File search |<ul><li>[ ] </li></ul>| [Searchbox](https://github.com/sandoxio/sandox/blob/main/src/components/ui/aceEditor/ace/ext-searchbox.js) | Found some bug. |
+| 1. | File search |<ul><li>[x] </li></ul>| [Searchbox](https://github.com/sandoxio/sandox/blob/main/src/components/ui/aceEditor/ace/ext-searchbox.js) | |
 | 2. | Hotkeys feature |<ul><li>[x] </li></ul>| See [keymap.js](https://github.com/sandoxio/sandox/blob/main/src/components/app/keymap/keymap.js) | |
 | 3. | Themes support |<ul><li>[x] </li></ul>| [See here](https://github.com/sandoxio/sandox/blob/main/src/components/app/appearance/appearance.js) |  | 
 | 4. | Settings and projects storage |<ul><li>[x] </li></ul>| See [projectmanager.js](https://github.com/sandoxio/sandox/blob/main/src/service/projectManager.js) | | 
+
+## Evaluation V2
+
+### Testing
+
+All bugs reported in the Evaluation V1 are fixed. The `./cmd/libsBuild.sh` was added to the compilation script. I would suggest you, for future work, add unit tests and e2e tests to perform quality assurance. Fuzzing also can help to check if the IDE is accepting multiple constructions of the language. 
+
 
 ## Evaluation V1
 
