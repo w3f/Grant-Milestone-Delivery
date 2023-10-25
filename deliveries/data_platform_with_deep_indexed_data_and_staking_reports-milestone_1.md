@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [P2P Data platform for w3f](https://github.com/w3f/Grants-Program/blob/840cecc9f410283e854c8e89409b2b46cfdd8d71/applications/data_platform_with_deep_indexed_data_and_staking_reports.md)
+* **Application Document:** [P2P Data platform for w3f](https://github.com/w3f/Grants-Program/blob/master/applications/data_platform_with_deep_indexed_data_and_staking_reports.md)
 * **Milestone Number:** e.g. 1
 
 **Context** (optional)
