@@ -23,6 +23,6 @@
 
 # General Notes
 
-I did learn some things from this [report](https://docs.google.com/document/d/1pMY0D-vTBEVq65Ro4PW3LzXrT1ZVl9l4r7jIMHmfBqs/), though I'm not quite sure which audience this piece is geared to. I do understand that even for a technical audience, it is still necessary to re-explain some beginner concepts. But a lot of the early pages were copied almost verbatim from the wiki, almost as if to fill space.
+I did learn some things from this [report](https://docs.google.com/document/d/1pMY0D-vTBEVq65Ro4PW3LzXrT1ZVl9l4r7jIMHmfBqs/), though I'm not quite sure which audience this piece is geared to. I do understand that even for a technical audience, it is still necessary to re-explain some beginner concepts. But a lot of the early pages were copied almost verbatim from the wiki, (even if properly attributed), almost as if to fill space.
 
 The team did heed my suggestions and resolved all my review comments on the document. There is also a lot of good information, especially in pages 15 - 22. 
