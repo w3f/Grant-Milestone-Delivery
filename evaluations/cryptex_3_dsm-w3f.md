@@ -17,6 +17,89 @@
 |   2. | UI/SDK: Auction Interface  |<ul><li>[ ] </li></ul>| [etf-auction-ui repo](https://github.com/ideal-lab5/etf-auction-ui) hosted at [(infura IPFS)](http://auction.idealabs.network) and [vercel](https://etf-auction.vercel.app/), [etf-sdk](https://github.com/ideal-lab5/etf-sdk), [typescript lib](https://github.com/ideal-lab5/etf.js) | Have some problems. |
 |   3. | UI + Testnet Deployment |<ul><li>[ ] </li></ul>| nodes hosted at [etf0.idealabs.network, etf1.idealabs.network], [Grafana](http://etf0.idealabs.network:3000/d/PUYzGbwWz/substrate-node-template-metrics?orgId=1), [prometheus](http://etf0.idealabs.network:9090/) [ipfs-hosted UI - http://auction.idealabs.network](http://auction.idealabs.network) | I need some balance to test this. |
 
+## Evaluation V2
+
+### Smart Contract
+
+All tests passed.
+
+<details>
+
+```
+ 	Running unittests lib.rs (target/debug/deps/erc721-40638d9358009cb8)
+
+running 10 tests
+test erc721::tests::mint_works ... ok
+test erc721::tests::burn_works ... ok
+test erc721::tests::mint_existing_should_fail ... ok
+test erc721::tests::burn_fails_token_not_found ... ok
+test erc721::tests::invalid_transfer_should_fail ... ok
+test erc721::tests::transfer_works ... ok
+test erc721::tests::burn_fails_not_owner ... ok
+test erc721::tests::approved_for_all_works ... ok
+test erc721::tests::not_approved_transfer_should_fail ... ok
+test erc721::tests::approved_transfer_works ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+ 	Running unittests lib.rs (target/debug/deps/tlock_proxy-b8e53100ed1b79b2)
+
+running 3 tests
+test tlock_proxy::e2e_tests::default_works ... ok
+test tlock_proxy::e2e_tests::bid_works has been running for over 60 seconds
+test tlock_proxy::e2e_tests::new_auction_works has been running for over 60 seconds
+test tlock_proxy::e2e_tests::bid_works ... ok
+test tlock_proxy::e2e_tests::new_auction_works ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 73.62s
+
+ 	Running unittests lib.rs (target/debug/deps/vickrey_auction-a268f9b7af4bfb23)
+
+running 5 tests
+test vickrey_auction::tests::bid_fails_when_not_proxy ... ok
+test vickrey_auction::tests::bid_success ... ok
+test vickrey_auction::tests::complete_auction_success_many_participants_all_valid ... ok
+test vickrey_auction::tests::complete_auction_success_single_participant ... ok
+test vickrey_auction::tests::complete_auction_success_many_participants_some_valid ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests erc721
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests tlock_proxy
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests vickrey_auction
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+```
+
+</details>
+
+### UI
+
+When I started the front end, I received this message "Provide a valid value for NEXT_PUBLIC_NODE_DETAILS". That occurred because, in the documentation, the variable name is `NEXT_PUBLIC_NODE_DETAIL`. Please fix this.
+
+When I tried to create the auction, the transaction occurred but wasn't successful.
+
+![pasted image 0 (21)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/8daeaa6e-0c69-416e-8008-feae57bad2af)
+
+
+Because of that, I tried using the [external one](http://auction.idealabs.network). It worked. I created the auction, bid, completed, and claimed but I think the minimum bid isn't working because it doesn't start with the minimum bid that I chose, and it doesn't increase when it receives a new bid. I received these errors when testing.
+
+![pasted image 0 (22)](https://github.com/w3f/Grant-Milestone-Delivery/assets/112647953/de4ef125-2184-46d6-8d66-4083ba81b792)
+
+
 ## Evaluation V1
 
 ### Smart Contract
