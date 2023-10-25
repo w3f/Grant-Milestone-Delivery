@@ -81,15 +81,15 @@ Using System:Account trace as example,  At the end of step2, a raw trace of (k,v
 }
 ```
 
-This data is then loaded into the `substrate-etl:crypto_polkadot.traces0` table in BigQuery. The entire dataset has been published to Google's Analytic-Hub [Link TODO](TODO) and has been publicly accessible since May 2023.
+This data is then loaded into the `substrate-etl:crypto_polkadot.traces0` table in BigQuery. Colorful Notion has published the entire `crypto_polkadot` dataset to Google BigQuery (see [Google Cloud Web3](https://cloud.google.com/blog/products/data-analytics/data-for-11-more-blockchains-in-bigquery-public-datasets?_ga=2.78811543.-2035379078.1697835253) and [Polkadot](https://twitter.com/Polkadot/status/1707052392712212676) announcements) which we further published in an [Analytics Hub Exchange Listing](https://console.cloud.google.com/bigquery/analytics-hub/exchanges/projects/1059533059456/locations/us/dataExchanges/polkadot_18b684c335a/listings/polkadot_relay_chain_and_polkadot_parachains_index_18b688cdca3).
 
 ***2. Deep Indexing***
 
-To address the deep account reference issues outlined in the [RFP](https://github.com/w3f/Grants-Program/blob/master/docs/RFPs/data_analysis_tools.md), an intermediate source table named `tracereference0` has been created. This table is publicly accessible at [TODO: `bigquery-public-data.crypto_polkadot.tracereference0`](TODO).
+To address the deep account reference issues outlined in the [RFP](https://github.com/w3f/Grants-Program/blob/master/docs/RFPs/data_analysis_tools.md), an intermediate source table named `tracereference0` has been created. This table is publicly accessible at [`bigquery-public-data.crypto_polkadot.tracereference0`](https://console.cloud.google.com/bigquery?project=substrate-etl&ws=!1m5!1m4!4m3!1ssubstrate-etl!2scrypto_polkadot!3stracereference0).
 
-For questions related to changes in {providers, consumers, sufficients}, the `accountreference0` table is provided and is publicly accessible at [TODO: `bigquery-public-data.crypto_polkadot.accountreference0`](TODO).
+For questions related to changes in {providers, consumers, sufficients}, the `accountreference0` table is provided and is publicly accessible at [`bigquery-public-data.crypto_polkadot.accountreference0`](https://console.cloud.google.com/bigquery?project=substrate-etl&ws=!1m5!1m4!4m3!1ssubstrate-etl!2scrypto_polkadot!3saccountreference0).
 
-For questions concerning changes in {frozen, reserved}, the `reservereference0` table is provided and is publicly accessible at [TODO: `bigquery-public-data.crypto_polkadot.reservereference0`](TODO).
+For questions concerning changes in {frozen, reserved}, the `reservereference0` table is provided and is publicly accessible at [`bigquery-public-data.crypto_polkadot.reservereference0`](https://console.cloud.google.com/bigquery?project=substrate-etl&ws=!1m5!1m4!4m3!1ssubstrate-etl!2scrypto_polkadot!3sreservereference0).
 
 The exact queries for deep indexing can be found in the [substrate-etl repository](https://github.com/colorfulnotion/substrate-etl/blob/main/AccountAnalytics.md).
 
@@ -137,3 +137,9 @@ Similarly, we can derive similar observation from the `Balance Reference Change 
 **Additional Information**
 
 Determining which modules or pallets are responsible for specific changes can be challenging, as trace records don't have a direct causal relationship. However, our deep analytics tool enables developers to narrow down issues to specific extrinsic IDs. Developers can then pinpoint the changes attributed to that extrinsic and investigate further.
+
+We received considerable valuable feedback on this Milestone 1 from @michaelis over Element and are working on Milestone 2 on Staking (primarily) and Democracy (secondarily).
+
+From the [Web3 Foundation Oct 10 announcement](https://twitter.com/Web3foundation/status/1711750271670321233) and earlier discussions concerning a Polkadot Data Alliance bounty, we seek precise guidance on how to develop a team to support these kinds of analyses in 2024.
+
+We are very interested developing Polkadot 2.0 questions especially around EVM Addresses (where we worked on evm-etl), CoreTime, CoreJam, Coreplay as well as ink! WASM Contracts, PolkaVM, Bridgehub and AssetHub.
