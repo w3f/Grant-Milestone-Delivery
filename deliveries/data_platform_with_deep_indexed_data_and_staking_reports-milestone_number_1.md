@@ -16,7 +16,7 @@ The development consist of only 1 milestone which includes the developement of o
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | - | Apache 2.0 |
-| 0b. | Documentation | [Installation Doc](https://github.com/p2paltvnv/polkadot-monitoring-grant#installation) | - |
+| 0b. | Documentation | [Installation Doc](https://github.com/p2p-org/polkadot-grant#installation) | - |
 | 0c. | Testing and Testing Guide | -| You can test though installation. |
 | 0d. | Docker | [Infrastructure repo](https://github.com/p2p-org/polkadot-grant)| Terraform repo with Helm charts. We switched from Docker on Local machine approach in favor of GKE. |
 | 1. | Develop the ETL component |[DAG for ETL from Indexer to DWH](https://github.com/p2p-org/polkadot-grant-dags)| Airflow DAGs for ETL from Postgres (Mbelt, indexer database) to BigQ. This approach chosen by the team due to DWH agnostic. You can switch for any other DWH (Clickhouse, Vertica, SnowFlake) by editing DAG.| 
