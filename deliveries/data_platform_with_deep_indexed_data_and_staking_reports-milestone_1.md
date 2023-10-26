@@ -20,7 +20,7 @@ The development consist of only 1 milestone which includes the developement of o
 | 0c. | Testing and Testing Guide | -| You can test though installation. |
 | 0d. | Docker | [Infrastructure repo](https://github.com/p2p-org/polkadot-grant)| Terraform repo with Helm charts. We switched from Docker on Local machine approach in favor of GKE. |
 | 1. | Develop the ETL component |[DAG for ETL from Indexer to DWH](https://github.com/p2p-org/polkadot-grant-dags)| Airflow DAGs for ETL from Postgres (Mbelt, indexer database) to BigQ. This approach chosen by the team due to DWH agnostic. You can switch for any other DWH (Clickhouse, Vertica, SnowFlake) by editing DAG.| 
-| 2. | Publish DWH data |[Published data in Google open datasets](console.cloud.google.com)| Go to Google BigQ console → Add → in the window "Star a project” type “p2p-data-platform” → see the open data for RFP in “raw_mbelt_data” schema| 
+| 2. | Publish DWH data |[Published data in Google open datasets](https://console.cloud.google.com/)| Go to Google BigQ console → Add → in the window "Star a project” type “p2p-data-platform” → see the open data for RFP in “raw_mbelt_data” schema| 
 | 3. | Forking Superset |[Public data platform on Polkadot](https://polkadot-rfp-superset.tool.p2p.org/superset/welcome/)| BI with access to fully collected data for Polkadot, Kusama, Moonbeam, Moonriver.| 
 
 
