@@ -3,7 +3,7 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** [P2P Data platform for w3f](https://github.com/w3f/Grants-Program/blob/master/applications/data_platform_with_deep_indexed_data_and_staking_reports.md)
-* **Milestone Number:** e.g. 1
+* **Milestone Number:** 1
 
 **Context** (optional)
 The development consist of only 1 milestone which includes the developement of open-source solution with publishing this solution by developer.
