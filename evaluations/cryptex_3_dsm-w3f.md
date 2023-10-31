@@ -3,8 +3,7 @@
 - **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md
 - **Milestone:** 3
-- **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** N/A
+- **Previously successfully merged evaluation:** dsmw3f, keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
