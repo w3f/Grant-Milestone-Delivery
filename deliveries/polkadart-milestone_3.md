@@ -14,7 +14,7 @@ This milestone was focused on allowing any developer using Dart and/or Flutter t
 You can create a new Dart project running `dart create demo` and load the following dependencies on `pubspec.yaml`
 ```yaml
   convert: ^3.1.1
-  polkadart: ^0.2.0
+  polkadart: ^0.2.1
   polkadart_cli: ^0.2.2
   polkadart_keyring: ^0.2.1
   polkadart_scale_codec: ^1.1.2
