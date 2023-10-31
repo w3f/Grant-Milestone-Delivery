@@ -25,4 +25,10 @@ Please see the [README](https://github.com/ink-analyzer/ink-analyzer#readme) for
 
 **Additional Information**
 
-Please use the [master branch](https://github.com/ink-analyzer/ink-analyzer/tree/master) for testing, another branch will be used for continued work until the completion of the review.
+Please use the [lsp-server-v0.2.11](https://github.com/ink-analyzer/ink-analyzer/releases/tag/lsp-server-v0.2.11) tag for testing.
+
+You can checkout the tag locally as follows:
+```shell
+git fetch --all --tags
+git checkout tags/lsp-server-v0.2.11 -b lsp-server-v0.2.11
+```
