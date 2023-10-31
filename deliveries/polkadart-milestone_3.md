@@ -62,13 +62,14 @@ Future<void> main(List<String> arguments) async {
       .replaceAll('0x', '');
 
   final keyring = await KeyPair.fromMnemonic(
-      "resource mirror lecture smooth midnight muffin position cup pepper fruit vanish also//0");
+      "resource mirror lecture smooth midnight muffin position cup pepper fruit vanish also//0"); // This is a random key
   final publicKey = hex.encode(keyring.publicKey.bytes);
   print('Public Key: $publicKey');
 
   final dest = $MultiAddress().id(hex.decode(publicKey));
   final runtimeCall = api.tx.balances.transferAll(dest: dest, keepAlive: true);
   final encodedCall = hex.encode(runtimeCall.encode());
+  print('Encoded call: $encodedCall');
 
   final payloadToSign = SigningPayload(
     method: encodedCall,
@@ -78,7 +79,7 @@ Future<void> main(List<String> arguments) async {
     blockHash: blockHash,
     blockNumber: blockNumber,
     eraPeriod: 64,
-    nonce: 0,
+    nonce: 0, // Supposing it is this wallet first transaction
     tip: 0,
   );
 
