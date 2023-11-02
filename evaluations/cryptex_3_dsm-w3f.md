@@ -21,6 +21,7 @@
 <details>
 
  <summary>Docker commands are successful</summary>
+ 
  ```sh
 docker run -p 9944:9944 -it --rm --name etf-node-0 ideallabs/etf --unsafe-rpc-external --validator --dev --tmp
 WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
@@ -59,6 +60,7 @@ WARNING: The requested image's platform (linux/amd64) does not match the detecte
 <details>
 
   <summary>Benchmarking tests are successful</summary>
+  
   ```rust
 running 5 tests
 test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
@@ -74,7 +76,8 @@ test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-```</details>
+```
+</details>
 
 ## Evaluation V2
 
