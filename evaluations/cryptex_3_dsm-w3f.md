@@ -16,6 +16,68 @@
 |   2. | UI/SDK: Auction Interface  |<ul><li>[ ] </li></ul>| [etf-auction-ui repo](https://github.com/ideal-lab5/etf-auction-ui) hosted at [(infura IPFS)](http://auction.idealabs.network) and [vercel](https://etf-auction.vercel.app/), [etf-sdk](https://github.com/ideal-lab5/etf-sdk), [typescript lib](https://github.com/ideal-lab5/etf.js) | Have some problems. |
 |   3. | UI + Testnet Deployment |<ul><li>[ ] </li></ul>| nodes hosted at [etf0.idealabs.network, etf1.idealabs.network], [Grafana](http://etf0.idealabs.network:3000/d/PUYzGbwWz/substrate-node-template-metrics?orgId=1), [prometheus](http://etf0.idealabs.network:9090/) [ipfs-hosted UI - http://auction.idealabs.network](http://auction.idealabs.network) | I need some balance to test this. |
 
+## Evaluation V3 (Keegan Quigley)
+
+<details>
+
+ <summary>Docker commands are successful</summary>
+ ```sh
+docker run -p 9944:9944 -it --rm --name etf-node-0 ideallabs/etf --unsafe-rpc-external --validator --dev --tmp
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+2023-11-02 04:19:38 EtF Node
+2023-11-02 04:19:38 ✌️  version 4.0.0-dev-cf02da969fa
+2023-11-02 04:19:38 ❤️  by Substrate DevHub <https://github.com/substrate-developer-hub>, 2017-2023
+2023-11-02 04:19:38 📋 Chain specification: Development
+2023-11-02 04:19:38 🏷  Node name: probable-lunch-5771
+2023-11-02 04:19:38 👤 Role: AUTHORITY
+2023-11-02 04:19:38 💾 Database: RocksDb at /tmp/substratedFcloG/chains/dev/db/full
+2023-11-02 04:19:38 ⛓  Native runtime: node-template-100 (node-template-1.tx1.au1)
+2023-11-02 04:19:39 You're running on a system with a broken `madvise(MADV_DONTNEED)` implementation. This will result in lower performance.
+2023-11-02 04:19:45 🔨 Initializing Genesis block/state (state: 0x4184…f840, header-hash: 0xc090…3722)
+2023-11-02 04:19:45 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.
+2023-11-02 04:19:51 Using default protocol ID "sup" because none is configured in the chain specs
+2023-11-02 04:19:51 🏷  Local node identity is: 12D3KooWLKW8DeC2kJs1P4nFS3CQSG5W3qdbGk7FCahPemiUjnHE
+2023-11-02 04:19:51 💻 Operating system: linux
+2023-11-02 04:19:51 💻 CPU architecture: x86_64
+2023-11-02 04:19:51 💻 Target environment: gnu
+2023-11-02 04:19:51 💻 Memory: 7844MB
+2023-11-02 04:19:51 💻 Kernel: 6.4.16-linuxkit
+2023-11-02 04:19:51 💻 Linux distribution: Ubuntu 20.04.6 LTS
+2023-11-02 04:19:51 💻 Virtual machine: no
+2023-11-02 04:19:51 📦 Highest known block at #0
+2023-11-02 04:19:51 〽️ Prometheus exporter started at 127.0.0.1:9615
+2023-11-02 04:19:51 Running JSON-RPC server: addr=0.0.0.0:9944, allowed origins=["*"]
+2023-11-02 04:19:56 💤 Idle (0 peers), best: #0 (0xc090…3722), finalized #0 (0xc090…3722), ⬇ 0 ⬆ 0
+2023-11-02 04:20:00 🙌 Starting consensus session on top of parent 0xc090a537eeb4251e352cf672192462f76e4341901210666d2b58251041723722
+2023-11-02 04:20:00 🎁 Prepared block for proposing at 1 (9 ms) [hash: 0x8c05471233841c2f6f80eaaac42f9e0f4224d668c71433c02665dccd967284c7; parent_hash: 0xc090…3722; extrinsics (1): [0xa9c9…2951]]
+2023-11-02 04:20:00 🔖 Pre-sealed block for proposal at 1. Hash now 0x0b6a84b14c3b5e5f7ccce426f09552dc33e06578cd0b18955796ea3aa354888d, previously 0x8c05471233841c2f6f80eaaac42f9e0f4224d668c71433c02665dccd967284c7.
+2023-11-02 04:20:00 ✨ Imported #1 (0x0b6a…888d)
+2023-11-02 04:20:02 💤 Idle (0 peers), best: #1 (0x0b6a…888d), finalized #0 (0xc090…3722), ⬇ 0 ⬆ 0
+```
+</details>
+
+ <details>
+
+  <summary>Benchmarking tests are successful</summary>
+  ```rust
+running 5 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test benchmarking::benchmarks::benchmark_tests::test_benchmarks ... ok
+test tests::it_fails_to_update_generator_when_not_decodable ... ok
+test tests::it_sets_the_genesis_state ... ok
+test tests::it_allows_root_to_update_generator ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+   Doc-tests pallet-etf
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+</details>
+
 ## Evaluation V2
 
 ### Smart Contract
