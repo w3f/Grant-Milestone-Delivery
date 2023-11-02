@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/cryptex.md
 - **Milestone:** 3
 - **Previously successfully merged evaluation:** dsmw3f, keeganquigley
@@ -1115,6 +1115,71 @@ I was able to successfully set up an NFT auction and place test bids:
 One minor issue I noticed was that I can't seem to see past bids:
 
 <img width="911" alt="past bids" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/20647774-730b-485e-9cd1-c2f9b26dded3">
+
+<details>
+	
+<summary>Docker build works</summary>
+	
+ ```sh
+	docker run -p 3000:3000 --rm ideallabs/etf-auction-ui
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+
+> start
+> next start
+
+  ▲ Next.js 13.5.4
+  - Local:        http://localhost:3000
+
+ ✓ Ready in 2.3s
+ ```
+</details>
+
+<details>
+	<summary>Docker Compose works</summary>
+
+ ```sh
+docker-compose build
+
+[+] Building 51.0s (19/19) FINISHED                                                                  docker:desktop-linux
+ => [web internal] load build definition from Dockerfile                                                             0.0s
+ => => transferring dockerfile: 750B                                                                                 0.0s
+ => [web internal] load .dockerignore                                                                                0.0s
+ => => transferring context: 2B                                                                                      0.0s
+ => [web internal] load metadata for docker.io/library/node:18-alpine                                                1.3s
+ => [web runner 1/7] FROM docker.io/library/node:18-alpine@sha256:435dcad253bb5b7f347ebc69c8cc52de7c912eb7241098b92  5.7s
+ => => resolve docker.io/library/node:18-alpine@sha256:435dcad253bb5b7f347ebc69c8cc52de7c912eb7241098b920f2fc2d7843  0.0s
+ => => sha256:435dcad253bb5b7f347ebc69c8cc52de7c912eb7241098b920f2fc2d7843183d 1.43kB / 1.43kB                       0.0s
+ => => sha256:f439e9091207d478bf7cf8ce3967ea08f3ef357f08eb264dd14eac7f4dacfcb8 1.16kB / 1.16kB                       0.0s
+ => => sha256:f5a5f92010157c0e38d5611b97eb473f6f95fd583c8bf45a2fca5cddd987bdb5 6.79kB / 6.79kB                       0.0s
+ => => sha256:579b34f0a95bb83b3acd6b3249ddc52c3d80f5c84b13c944e9e324feb86dd329 3.33MB / 3.33MB                       0.5s
+ => => sha256:193dce5f4a0cf83f577b68c70b4e91199f39f88aac032b21359a13314f7dc6f5 48.02MB / 48.02MB                     3.0s
+ => => sha256:78d1fe6b9b44fc9c132c16332d54041ac771dc5e65e8fee11bba0ee306c9b04e 2.34MB / 2.34MB                       0.6s
+ => => extracting sha256:579b34f0a95bb83b3acd6b3249ddc52c3d80f5c84b13c944e9e324feb86dd329                            0.2s
+ => => sha256:18c854bc80eaceb8b8e4e799cc9955831ea8355d0b61a08b80b3a5226ea1da55 450B / 450B                           0.6s
+ => => extracting sha256:193dce5f4a0cf83f577b68c70b4e91199f39f88aac032b21359a13314f7dc6f5                            2.5s
+ => => extracting sha256:78d1fe6b9b44fc9c132c16332d54041ac771dc5e65e8fee11bba0ee306c9b04e                            0.0s
+ => => extracting sha256:18c854bc80eaceb8b8e4e799cc9955831ea8355d0b61a08b80b3a5226ea1da55                            0.0s
+ => [web internal] load build context                                                                                5.1s
+ => => transferring context: 470.30MB                                                                                4.9s
+ => [web deps 2/5] RUN apk add --no-cache libc6-compat                                                               1.7s
+ => [web runner 2/7] WORKDIR /app                                                                                    0.4s
+ => [web runner 3/7] RUN addgroup --system --gid 1001 nodejs                                                         0.1s
+ => [web runner 4/7] RUN adduser --system --uid 1001 nextjs                                                          0.2s
+ => [web deps 3/5] WORKDIR /app                                                                                      0.0s
+ => [web deps 4/5] COPY package.json package-lock.json ./                                                            0.0s
+ => [web deps 5/5] RUN  npm install --production                                                                    10.2s
+ => [web builder 3/5] COPY --from=deps /app/node_modules ./node_modules                                              2.1s
+ => [web builder 4/5] COPY . .                                                                                       2.7s
+ => [web builder 5/5] RUN npm run build                                                                             20.4s
+ => [web runner 5/7] COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next                                    0.2s
+ => [web runner 6/7] COPY --from=builder /app/node_modules ./node_modules                                            2.6s
+ => [web runner 7/7] COPY --from=builder /app/package.json ./package.json                                            0.0s
+ => [web] exporting to image                                                                                         1.9s
+ => => exporting layers                                                                                              1.9s
+ => => writing image sha256:e60f8c5b84f130e07b4335482cda7a3ae7f352ead1b1d1b625492928948d4ded                         0.0s
+ => => naming to docker.io/library/etf-auction-ui-web
+```
+</details>
 
 ## Evaluation V2
 
