@@ -77,6 +77,7 @@ For Milestone 2, we have published a list of dashboards hosted at [https://analy
 | 75 [Polkadot Democracy Home](https://analytics.polkaholic.io/superset/dashboard/75)                    | -                   | Showing summary of activity across OpenGov |
 | 74 [Polkadot Democracy - Ref/Proposal](https://analytics.polkaholic.io/superset/dashboard/74/?pollid=219) | `pollid`            | Showing proposal-specific activity                        |
 | 72 [Polkadot Democracy - Account](https://analytics.polkaholic.io/superset/dashboard/72/?account=1649c4indT6Dr3W2yVGZeEsTPpqgzAq67VMdQbsYRCTz8qyv) | `account` | Showing account-specific activity, including voting and delegation behavior  |
+| 65 [Validator Map](https://analytics.polkaholic.io/superset/dashboard/65/?native_filters_key=iZHRhMAuaI28K3-jea7IilYlikPDslL-e-N_8nFEZNgiRQjHoiicquGTMVssBfOz) | none | Showing Validators -> Nominators Mapping, filterable by specific era  |
 
 Users can start from one of the 2 home dashboards [Polkadot Staking Home](https://analytics.polkaholic.io/superset/dashboard/80/) or [Polkadot Democracy Home](https://analytics.polkaholic.io/superset/dashboard/75) and drill into top or recent activity:
 * The Staking dashboards enables Polkadot stakers (Nominators, PoolMembers, Validators) to zoom in on different metrics and inspect their staking performance.   
