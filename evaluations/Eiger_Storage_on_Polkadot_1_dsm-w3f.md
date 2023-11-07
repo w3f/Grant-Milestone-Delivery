@@ -18,7 +18,7 @@
 
 ## Evaluation V2 (by Keegan Quigley)
 
-All issues have been resolved. Nice work so far! Looking forward to seeing the next iteration.
+All issues have been resolved. Nice work so far! I was able to spin up both the relay chain and collator node and complete the entire guide. Looking forward to seeing the next iteration.
 
 ### Tests
 
