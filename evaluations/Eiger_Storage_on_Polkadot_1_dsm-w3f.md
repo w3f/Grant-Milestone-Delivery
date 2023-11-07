@@ -1,21 +1,261 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Eiger_Storage_on_Polkadot_1.md
 - **Milestone:** 1
-- **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** N/A
+- **Previously successfully merged evaluation:** dsmw3f, keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | Copyright and Licenses |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/LICENSE| |
-| **0b.** | Documentation/Tutorial |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md| Not fully evaluated yet.|
-| **0c.** | Methodology |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md#2-methodology| Not fully evaluated yet.|
-| **0d.** | Infrastructure |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md#infrastructure--testing-environment| Not fully evaluated yet.|
-| **0e.** | Article |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md| Not fully evaluated yet.|
-| **0f.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md| Not fully evaluated yet.|
-| **0g.** | Docker |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker , https://github.com/eigerco/polkadot-native-storage/blob/main/Dockerfile| Not fully evaluated yet.|
-| **1.** | Updated CGS code |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage| Not fully evaluated yet.|
+| **0b.** | Documentation/Tutorial |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md| Looks good.|
+| **0c.** | Methodology |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md#2-methodology| Looks good.|
+| **0d.** | Infrastructure |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md#infrastructure--testing-environment| Looks good.|
+| **0e.** | Article |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md| Looks good.|
+| **0f.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md| Looks good.|
+| **0g.** | Docker |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker , https://github.com/eigerco/polkadot-native-storage/blob/main/Dockerfile| Looks good.|
+| **1.** | Updated CGS code |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage| Looks good.|
+
+## Evaluation V2 (by Keegan Quigley)
+
+All issues have been resolved. Nice work so far! Looking forward to seeing the next iteration.
+
+### Tests
+
+<details>
+	<summary>Node unit tests successful now</summary>
+
+```rust
+running 25 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::cannot_register_as_candidate_if_keys_not_registered ... ok
+test tests::basic_setup_works ... ok
+test tests::cannot_register_as_candidate_if_invulnerable ... ok
+test tests::cannot_register_as_candidate_if_poor ... ok
+test tests::cannot_set_genesis_value_twice - should panic ... ok
+test tests::candidate_to_invulnerable_works ... ok
+test tests::authorship_event_handler ... ok
+test tests::add_invulnerable_works ... ok
+test tests::fees_edgecases ... ok
+test tests::cannot_register_candidate_if_too_many ... ok
+test tests::cannot_register_dupe_candidate ... ok
+test tests::it_should_set_invulnerables_even_with_some_invalid ... ok
+test tests::cannot_unregister_candidate_if_too_few ... ok
+test tests::it_should_set_invulnerables ... ok
+test tests::register_as_candidate_works ... ok
+test tests::set_desired_candidates_works ... ok
+test tests::set_candidacy_bond ... ok
+test tests::leave_intent ... ok
+test tests::remove_invulnerable_works ... ok
+test tests::session_management_works ... ok
+test tests::kick_mechanism ... ok
+test tests::should_kick_invulnerables_from_candidates_on_session_change ... ok
+test tests::should_not_kick_mechanism_too_few ... ok
+test tests::invulnerable_limit_works ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_miner-0a1e751b36e9cc47)
+
+running 18 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::change_owner_address_creates_proposal_with_valid_signer ... ok
+test tests::change_owner_address_revokes_existing_proposal_with_valid_signer ... ok
+test tests::change_peer_id_works_with_valid_controller ... ok
+test tests::change_owner_address_rejects_invalid_signer ... ok
+test tests::change_owner_address_confirms_new_owner_with_valid_signer_and_proposal ... ok
+test tests::change_owner_address_rejects_proposal_with_owner_account ... ok
+test tests::change_peer_id_rejects_invalid_signer ... ok
+test tests::change_peer_id_works_with_valid_owner ... ok
+test tests::change_worker_address_keeps_old_controller_without_override ... ok
+test tests::change_worker_address_clears_pending_worker_with_valid_signer_and_old_worker ... ok
+test tests::change_worker_address_rejects_trigger_without_request ... ok
+test tests::change_worker_address_rejects_invalid_signer ... ok
+test tests::change_worker_address_works_with_valid_signer_and_new_worker ... ok
+test tests::confirm_update_worker_accepts_effective_request_with_valid_signature ... ok
+test tests::create_miner_first_miner_addr_is_correct ... ok
+test tests::create_miner ... ok
+test tests::confirm_update_worker_key_rejects_trigger_before_effective_at ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_pns-11a35ffd63cf24c8)
+
+running 1 test
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_pns_common-43dbc4ae8a8e7bce)
+
+running 4 tests
+test address::network::tests::set_network ... ok
+test address::tests::test_from_leb_bytes_extra_bytes ... ok
+test address::tests::test_from_leb_bytes_minimal_encoding ... ok
+test address::tests::test_from_leb_bytes_passing ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_pns_rpc-ab6e38b65331449b)
+
+running 2 tests
+test tests::runtime_error_into_rpc_err_empty_str ... ok
+test tests::runtime_error_into_rpc_err_test_str ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_pns_runtime_api-b9691a8eb295e5cf)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_power-81a501436788fad8)
+
+running 1 test
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/polka_storage_node-54c0c07e629e9c5e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/polka_storage_runtime-690c78982765953f)
+
+running 5 tests
+test weights::paritydb_weights::constants::test_db_weights::sane ... ok
+test weights::block_weights::constants::test_weights::sane ... ok
+test weights::extrinsic_weights::constants::test_weights::sane ... ok
+test weights::rocksdb_weights::constants::test_db_weights::sane ... ok
+test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-collator-selection-power
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-miner
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-pns
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-pns-common
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-pns-rpc
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-pns-runtime-api
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pallet-power
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests polka-storage-runtime
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+</details>
+
+<details>
+	<summary>Integration tests passing</summary>
+
+```rust
+running 18 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::change_owner_address_creates_proposal_with_valid_signer ... ok
+test tests::change_peer_id_works_with_valid_controller ... ok
+test tests::change_owner_address_confirms_new_owner_with_valid_signer_and_proposal ... ok
+test tests::change_owner_address_revokes_existing_proposal_with_valid_signer ... ok
+test tests::change_peer_id_works_with_valid_owner ... ok
+test tests::change_peer_id_rejects_invalid_signer ... ok
+test tests::change_owner_address_rejects_proposal_with_owner_account ... ok
+test tests::change_owner_address_rejects_invalid_signer ... ok
+test tests::change_worker_address_keeps_old_controller_without_override ... ok
+test tests::change_worker_address_clears_pending_worker_with_valid_signer_and_old_worker ... ok
+test tests::change_worker_address_rejects_trigger_without_request ... ok
+test tests::create_miner ... ok
+test tests::create_miner_first_miner_addr_is_correct ... ok
+test tests::change_worker_address_works_with_valid_signer_and_new_worker ... ok
+test tests::confirm_update_worker_accepts_effective_request_with_valid_signature ... ok
+test tests::change_worker_address_rejects_invalid_signer ... ok
+test tests::confirm_update_worker_key_rejects_trigger_before_effective_at ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests pallet-miner
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+</details>
+
+<details>
+	<summary>Benchmarking build works now</summary>
+
+```rust
+   Compiling pallet-power v0.1.0 (/Users/keeganquigley/polka-storage/pallets/power)
+   Compiling pallet-miner v0.1.0 (/Users/keeganquigley/polka-storage/pallets/miner)
+   Compiling pallet-pns v0.1.0 (/Users/keeganquigley/polka-storage/pallets/pns)
+   Compiling cumulus-primitives-utility v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-pallet-xcmp-queue v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-primitives-aura v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling sc-consensus-aura v0.10.0-dev (https://github.com/paritytech/substrate?branch=polkadot-v1.0.0#948fbd2f)
+   Compiling pallet-collator-selection-power v0.1.0 (/Users/keeganquigley/polka-storage/pallets/collator-selection-power)
+   Compiling cumulus-pallet-session-benchmarking v3.0.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-pallet-dmp-queue v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-primitives-timestamp v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling parachain-info v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-client-cli v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-client-consensus-aura v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling pallet-pns-rpc v0.1.0 (/Users/keeganquigley/polka-storage/pallets/pns/rpc)
+   Compiling polkadot-service v1.0.0 (https://github.com/paritytech/polkadot?branch=release-v1.0.0#c9ec8c5a)
+   Compiling cumulus-relay-chain-inprocess-interface v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+   Compiling cumulus-client-service v0.1.0 (https://github.com/paritytech/cumulus.git?branch=polkadot-v1.0.0#0d17cf6b)
+    Finished release [optimized] target(s) in 6m 08s
+```
+</details>
+
+### RPC Testing
+
+cURL command is successful now:
+```sh
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "pns_chainGetBlock", "params": ["123"]}' http://localhost:9944/
+{"jsonrpc":"2.0","result":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"id":1}%
+```
+
+### XCM Testing
+
+Was able to reproduce the same results of non-zero values.
 
 ## Evaluation V1
 
