@@ -19,4 +19,3 @@ The XCM Monitoring Server is an application designed to monitor Cross-Consensus 
 | **0d.** | Docker        | <ul><li>Dockerfile: https://github.com/sodazone/xcm-monitoring/blob/main/Dockerfile</li><li>Docker Hub: https://hub.docker.com/r/sodazone/xcm-monitoring</li><li>Github Container Registry: https://github.com/sodazone/xcm-monitoring/pkgs/container/xcmon</li></ul> |
 | 1. | XCM Monitoring Server | https://github.com/sodazone/xcm-monitoring/tree/main/src | |
 | 2. | Management Tools | https://github.com/sodazone/xcm-monitoring/tree/main/src/services/admin | See 0b. Administration Guide |
-
