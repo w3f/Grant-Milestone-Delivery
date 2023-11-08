@@ -8,17 +8,17 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | Copyright and Licenses |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/LICENSE| |
-| **0b.** | Documentation/Tutorial |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md| Looks good.|
-| **0c.** | Methodology |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md#2-methodology| Looks good.|
-| **0d.** | Infrastructure |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md#infrastructure--testing-environment| Looks good.|
-| **0e.** | Article |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md| Looks good.|
-| **0f.** | Testing and Testing Guide |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md| Looks good.|
-| **0g.** | Docker |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker , https://github.com/eigerco/polkadot-native-storage/blob/main/Dockerfile| Looks good.|
-| **1.** | Updated CGS code |<ul><li>[ ] </li></ul>|https://github.com/eigerco/polkadot-native-storage| Looks good.|
+| **0b.** | Documentation/Tutorial |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md| Looks good.|
+| **0c.** | Methodology |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md#2-methodology| Looks good.|
+| **0d.** | Infrastructure |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md#infrastructure--testing-environment| Looks good.|
+| **0e.** | Article |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/report/src/new-overview.md| Looks good.|
+| **0f.** | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/doc/testing_guide.md| Looks good.|
+| **0g.** | Docker |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage/blob/main/README.md#docker , https://github.com/eigerco/polkadot-native-storage/blob/main/Dockerfile| Looks good.|
+| **1.** | Updated CGS code |<ul><li>[x] </li></ul>|https://github.com/eigerco/polkadot-native-storage| Looks good.|
 
 ## Evaluation V2 (by Keegan Quigley)
 
-All issues have been resolved. Nice work so far! Looking forward to seeing the next iteration.
+All issues have been resolved. Nice work so far! I was able to spin up both the relay chain and collator node and complete the entire guide. Looking forward to seeing the next iteration.
 
 ### Tests
 
