@@ -11,7 +11,7 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | https://github.com/HugoByte/aurras/blob/master/LICENSE | |
 | 0b. | Documentation | https://github.com/HugoByte/aurras/tree/next/workflow/workflow_apis | |
-| 0c. | Testing Guide | Update | |
+| 0c. | Testing Guide | https://github.com/HugoByte/aurras/blob/next/docs/integration-testing.md | |
 | 0d. | Article | https://medium.com/hugobyte/advancing-through-milestones-the-journey-of-aurras-from-mvp-1-to-mvp-2-and-beyond-a8550f8391a5 | |
 | 1a. | Web API: Workflow Registration | https://github.com/HugoByte/aurras/tree/next/actions/workflow-registration | |
 | 1b. | Web API: User Registration | https://github.com/HugoByte/aurras/tree/next/actions/user-registration | |
