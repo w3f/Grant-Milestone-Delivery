@@ -9,18 +9,18 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [MIT](https://github.com/TrackingChains/TrackingChain/blob/9571c983d3e9a74bfa192390ce3c3f391b7fcca3/LICENSE) | - |
-| **0b.** | Documentation |<ul><li>[ ] </li></ul>| [M4 Tutorial](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-4-Guide-to-Demo/6642a57429a57ad224c6e47fe10a71ebea7c2197) | See [Documentation Feedback](#docker-feedback) |
+| **0b.** | Documentation |<ul><li>[x] </li></ul>| [M4 Tutorial](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-4-Guide-to-Demo/6642a57429a57ad224c6e47fe10a71ebea7c2197) | See [Documentation Feedback](#documentation-feedback) |
 | **0c.** | Testing and Testing Guide |<ul><li>[x] </li></ul>| | See [Testing Feedback](#testing-feedback) |
 | **0d.** | Docker |<ul><li>[ ] </li></ul>| [docker-compose.yml](https://github.com/TrackingChains/TrackingChain/blob/9571c983d3e9a74bfa192390ce3c3f391b7fcca3/docker-compose.yml) | See [Docker Feedback](#docker-feedback) |
-| 0e. | Article |<ul><li>[ ] </li></ul>| | See [Documentation Feedback](#docker-feedback) |
-| 1. | Tx Generator Worker |<ul><li>[ ] </li></ul>| [Tx Generator Worker Module](https://github.com/TrackingChains/TrackingChain/tree/9571c983d3e9a74bfa192390ce3c3f391b7fcca3/src/TransactionGenerator.Worker) | (to be evaluated, once the docs are fixed) <br/> <br/> Spec: Improvement to wait for the transaction to be finalized in order to skip the "Tx Watcher Phase" (this mode will be an option present in the configuration) it's will also allow for better support for chains that don't have access to subscans. To achieve this we will listen via socket in order to wait for the finalization of the generated Tx |
+| 0e. | Article |<ul><li>[x] </li></ul>| [M4 guide](https://github.com/TrackingChains/TrackingChain/wiki/Milestone-4-Guide-to-Demo) | The demo was difficult to follow, because there are quite some steps involved that were not particularly included in the article/tutorial. For users experienced with the tool these steps might appear logical, but for evaluators like me who are confronted with the project for the first time, this is an issue. However, the grantee offered a video call to walk through the app together, which was very helpful and is appreciated. |
+| 1. | Tx Generator Worker |<ul><li>[x] </li></ul>| [Tx Generator Worker Module](https://github.com/TrackingChains/TrackingChain/tree/9571c983d3e9a74bfa192390ce3c3f391b7fcca3/src/TransactionGenerator.Worker) | - |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
 
 ## General Notes
 
-Summarizes the overall performance plus additional feedback/comments
+- Unfortunately I wasn't able to access the db that is based on microsoft sql server from my host machine that runs macos. This might be an incopability issue. In any way, the grantee has proven the code to work during the code and application walkthrough that was conducted through a video call.
 
 ## Documentation Feedback
 
