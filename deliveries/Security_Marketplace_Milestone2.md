@@ -11,7 +11,7 @@ Following are the links to the repositories of the deliverables promised as per 
 **Deliverables**
 
 | Number | Deliverable | Link | Note |
-| -----: | ----------- | ------------- |
+| -----: | ----------- | ------------- | -------|
 | **0a.** | License | Unlicense | Unlicensed |
 | **0b.** | Documentation | >[Back-End documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/AuditBazaarBackendArchitecture.docx) >[Front-End readme](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend/blob/security-marketplace-milestone2/README.md)| The documentations are meant to explain the working of the application and setup instructions. |
 | **0c.** | Testing and Testing Guide | - | The respective Test files can be found alongside the project repositories with guidelines in readme files. |
@@ -23,5 +23,7 @@ Following are the links to the repositories of the deliverables promised as per 
 **Additional Information**
 
 **1)** The code of the respective deliverables can be found in the 'Main' branch of each repo.
+
 **2)** You can refer to the read-me files of the respective repositories for instructions to set up the project.
+
 **3)** Here's a list of some recommendations for future amendments we can bring to make platform run smoother [Link](https://docs.google.com/document/d/173oJJ7egd--CCoh8VTz0mGwaEH8f3qv1qA8_e79d50E)
