@@ -117,6 +117,7 @@ Future<void> main(List<String> arguments) async {
 |:---: |  ---      | -- |---  |
 | 0a.  | License          | [Apache 2.0](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart_keyring/LICENSE) |   |
 | 0d.  | Docker           | [Docker](https://github.com/leonardocustodio/polkadart/blob/main/docker-compose.yml) |  |
+| 0e.  | Example          | [Example project](https://github.com/leonardocustodio/polkadart/tree/main/examples) |  |
 | 3a.  | Substrate Uri    | [Substrate URI](https://github.com/leonardocustodio/polkadart/blob/57aee026a5356461a4fbb4cb701c72ad032223b8/packages/substrate_bip39/lib/crypto_scheme.dart#L109-L143)  |  |
 | 3b.  | Encrypt/Decrypt  | [Encrypt](https://github.com/leonardocustodio/polkadart/blob/57aee026a5356461a4fbb4cb701c72ad032223b8/packages/substrate_bip39/lib/crypto_scheme.dart#L60-L77)  |  |
 | 3c.  | Ed25519          | [Ed25519](https://github.com/leonardocustodio/polkadart/tree/main/packages/substrate_bip39)  |   |
