@@ -9,7 +9,7 @@
 
 StorageHub is a decentralized storage system parachain optimized for file based storage and larger data sets that are not suitable to be stored directly in standard parachain storage. The proposed parachain will provide developers in the Polkadot ecosystem with an alternate decentralized and substrate-based storage solution and functionality.
 
-The main deliverable for the first milestone is the [article](https://forum.polkadot.network/t/introducing-storage-hub-a-system-parachain-optimised-for-storage/4525) attached below, which represent a v0.5 Storage Hub design. The article should be a self-conteined and sufficient document that summerizes the design process of this milestone. This is the recommended starting point to understand this proposal. Should the reader wants to expand on the thougth process behind it, previous research and investigations documents are also provided. 
+The main deliverable for the first milestone is the [article](https://forum.polkadot.network/t/introducing-storage-hub-a-system-parachain-optimised-for-storage/4525) attached below, which represent a v0.5 Storage Hub design. The article should be a self-contained and sufficient document that summerizes the design process for this milestone. This is the recommended starting point to understand this proposal. Should the reader want to expand on the thought process behind it, previous research and investigations documents are also provided. 
 
 **Deliverables**
 
