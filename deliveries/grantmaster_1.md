@@ -9,17 +9,17 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://github.com/Zaniyar/grantmaster/LICENSE | Apache 2.0 |
-| 0b. | Documentation | https://github.com/Zaniyar/grantmaster/README.md | Inline documentation and basic tutorial provided. |
-| 0c. | Testing Guide | https://github.com/Zaniyar/grantmaster/README.md | Test instructions for crawler and frontend logic. |
-| 0d. | Docker | https://github.com/Zaniyar/grantmaster/docker-compose.yml, https://github.com/Zaniyar/grantmaster/Dockerfile-api, https://github.com/Zaniyar/grantmaster/Dockerfile-frontend  | Dockerfiles and docker compose files |
-| 0e. | Article | https://github.com/Zaniyar/grantmaster/README.md  | Inline documentation and basic tutorial provided. |
-| 1. | Crawler & REST API | https://github.com/Zaniyar/grantmaster/ | Configurable crawler and REST API developed for Grants-Program GitHub repository interaction. |
-| 2. | GitHub Actions | https://github.com/Zaniyar/grantmaster/packages/github-actions/README.md | GitHub Action implemented to trigger updates for new comments, pull requests, and PR reviews on GitHub. See the dedicated README for instructions on how to use it. |
-| 3. | Frontend Module: Grants Page | https://github.com/Zaniyar/grantmaster/packages/frontend/components/PullRequestSummaryList.tsx | Grants Page developed with search, filtering, sorting, and customization features. Displays all grants. |
-| 4. | Frontend Module: Grant Details | https://github.com/Zaniyar/grantmaster/packages/frontend/components/PullRequestDetail.tsx | Grant Details module created with structured information display for specific grants. |
-| 5. | Frontend Module: Teams | https://github.com/Zaniyar/grantmaster/packages/frontend/components/TeamsPage.tsx | Teams module developed for concise and searchable display of grant-involved teams. |
-| 6. | Frontend Feature: Grants Committee Lense | https://github.com/Zaniyar/grantmaster/packages/frontend/components/PullRequestSummaryList.tsx | Feature added for grants committee members to prioritize grant application reviews (see `isReviewerLenseActive` option). |
+| 0a. | License | https://github.com/Zaniyar/grantmaster/blob/master/LICENSE | Apache 2.0 |
+| 0b. | Documentation | https://github.com/Zaniyar/grantmaster/blob/master/README.md | Inline documentation and basic tutorial provided. |
+| 0c. | Testing Guide | https://github.com/Zaniyar/grantmaster/blob/master/README.md | Test instructions for crawler and frontend logic. |
+| 0d. | Docker | https://github.com/Zaniyar/grantmaster/blob/master/docker-compose.yml, https://github.com/Zaniyar/grantmaster/blob/master/Dockerfile-api, https://github.com/Zaniyar/grantmaster/blob/master/Dockerfile-frontend  | Dockerfiles and docker compose files |
+| 0e. | Article | https://github.com/Zaniyar/grantmaster/blob/master/README.md  | Inline documentation and basic tutorial provided. |
+| 1. | Crawler & REST API | https://github.com/Zaniyar/grantmaster/blob/master/ | Configurable crawler and REST API developed for Grants-Program GitHub repository interaction. |
+| 2. | GitHub Actions | https://github.com/Zaniyar/grantmaster/blob/master/packages/github-actions/README.md | GitHub Action implemented to trigger updates for new comments, pull requests, and PR reviews on GitHub. See the dedicated README for instructions on how to use it. |
+| 3. | Frontend Module: Grants Page | https://github.com/Zaniyar/grantmaster/blob/master/packages/frontend/components/PullRequestSummaryList.tsx | Grants Page developed with search, filtering, sorting, and customization features. Displays all grants. |
+| 4. | Frontend Module: Grant Details | https://github.com/Zaniyar/grantmaster/blob/master/packages/frontend/components/PullRequestDetail.tsx | Grant Details module created with structured information display for specific grants. |
+| 5. | Frontend Module: Teams | https://github.com/Zaniyar/grantmaster/blob/master/packages/frontend/components/TeamsPage.tsx | Teams module developed for concise and searchable display of grant-involved teams. |
+| 6. | Frontend Feature: Grants Committee Lense | https://github.com/Zaniyar/grantmaster/blob/master/packages/frontend/components/PullRequestSummaryList.tsx | Feature added for grants committee members to prioritize grant application reviews (see `isReviewerLenseActive` option). |
 
 **Additional Information**
 
