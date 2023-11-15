@@ -1,8 +1,8 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tracking_chain.md
-- **Milestone:** 1
+- **Milestone:** 4
 - **Kusama Identity:** Address
 - **Previously successfully merged evaluation:** All by takahser
 
