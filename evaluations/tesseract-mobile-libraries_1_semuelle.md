@@ -3,7 +3,6 @@
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dapp_wallet_integration_native_mobile_libraries.md
 - **Milestone:** 1
-(https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
 - **Evaluation by:** semuelle, keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
@@ -27,7 +26,7 @@ Good work overall. I'm able to run both the wallet app and Polkachat app to inte
 
 ## UI
 
-I'm able to connect my account to the Kotlin dev wallet and Polkachat app.
+I'm able to connect my account to the Kotlin dev wallet and Polkachat app. Cool to see it working in Kotlin.
 
 <img width="316" alt="polkachat2small" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/2d497dd3-6a69-4eb0-af71-fa55f5416990">
 
