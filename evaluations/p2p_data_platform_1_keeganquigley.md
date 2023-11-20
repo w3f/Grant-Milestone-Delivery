@@ -17,6 +17,8 @@
 
 # General Notes
 
+Dashboard looks good but there could be better documentation on how to use and test it. Also with Terraform I would expect more e2e tests. I'm hoping it will continue to be improved! Python code looks good but could probably use more inline comments. Overall good work!
+
 # Evaluation v2
 
 ## DAGS
