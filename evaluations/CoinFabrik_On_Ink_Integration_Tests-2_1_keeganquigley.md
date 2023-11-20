@@ -18,4 +18,4 @@
 
  # General Notes
 
- Commits look good, and have been delivered as expected. All 24 function [test cases](https://github.com/CoinFabrik/on-ink-integration-tests/tree/milestone-on-ink-integration-tests-2/test-cases) are present.
+ Commits look good, and have been delivered as expected. All 24 function [test cases](https://github.com/CoinFabrik/on-ink-integration-tests/tree/milestone-on-ink-integration-tests-2/test-cases) are present. Thanks for your continued work and happy to see this phase wrapped up.
