@@ -1,27 +1,50 @@
 # Evaluation
 
-- **Status:** In progress
-- **Application Document:** 
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/data_platform_with_deep_indexed_data_and_staking_reports.md
 - **Milestone:** 1
 - **Evaluation by:** keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | Apache 2.0 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [Installation Doc](https://github.com/p2p-org/polkadot-grant#installation) | - |
-| 0c. | Testing and Testing Guide | <ul><li>[ ] </li></ul> | - |  |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | [Infrastructure repo](https://github.com/p2p-org/polkadot-grant)|  |
-| 1. | Develop the ETL component | <ul><li>[ ] </li></ul> |[DAG for ETL from Indexer to DWH](https://github.com/p2p-org/polkadot-grant-dags)| | 
-| 2. | Publish DWH data | <ul><li>[ ] </li></ul> |[Published data in Google open datasets](https://console.cloud.google.com/)|  | 
-| 3. | Forking Superset | <ul><li>[ ] </li></ul> |[Public data platform on Polkadot](https://polkadot-rfp-superset.tool.p2p.org/superset/welcome/)|  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [Installation Doc](https://github.com/p2p-org/polkadot-grant#installation) | Ok. |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | - | Would be better to be able to run tests separately. |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Infrastructure repo](https://github.com/p2p-org/polkadot-grant)| Docker compose successfully spins up all nodes/apps. Terraform works.|
+| 1. | Develop the ETL component | <ul><li>[x] </li></ul> |[DAG for ETL from Indexer to DWH](https://github.com/p2p-org/polkadot-grant-dags)| Ok. | 
+| 2. | Publish DWH data | <ul><li>[x] </li></ul> |[Published data in Google open datasets](https://console.cloud.google.com/)| Ok. | 
+| 3. | Forking Superset | <ul><li>[x] </li></ul> |[Public data platform on Polkadot](https://polkadot-rfp-superset.tool.p2p.org/superset/welcome/)| Ok. |
 
 # General Notes
 
 # Evaluation v2
 
+## DAGS
+
+Dags successfully run with Docker compose:
+```
+CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS                                 PORTS                    NAMES
+744cc7984c9f   apache/airflow:2.5.3   "/usr/bin/dumb-init …"   2 minutes ago   Up About a minute (healthy)            8080/tcp                 polkadot-grant-dags-airflow-triggerer-1
+207d6e509128   apache/airflow:2.5.3   "/usr/bin/dumb-init …"   2 minutes ago   Up About a minute (healthy)            0.0.0.0:8080->8080/tcp   polkadot-grant-dags-airflow-webserver-1
+d3a40f4de110   apache/airflow:2.5.3   "/usr/bin/dumb-init …"   2 minutes ago   Up About a minute (healthy)            8080/tcp                 polkadot-grant-dags-airflow-worker-1
+0acbcca33e67   apache/airflow:2.5.3   "/usr/bin/dumb-init …"   2 minutes ago   Up About a minute (health: starting)   8080/tcp                 polkadot-grant-dags-airflow-scheduler-1
+5e02c21bf59a   postgres:13            "docker-entrypoint.s…"   2 minutes ago   Up About a minute                      0.0.0.0:5432->5432/tcp   polkadot-grant-dags-postgres_indexer_db-1
+e0157a8de4ef   postgres:13            "docker-entrypoint.s…"   2 minutes ago   Up About a minute (healthy)            5432/tcp                 polkadot-grant-dags-postgres-1
+71a0103e160b   redis:latest           "docker-entrypoint.s…"   2 minutes ago   Up About a minute (healthy)            6379/tcp                 polkadot-grant-dags-redis-1
+```
+DAG workflows work but there is one import error:
+
+<img width="1434" alt="dags" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/602c23b1-533d-456b-925d-805291876a5f">
+
+Triggered 8 datasets and all ran successfully:
+
+<img width="1434" alt="datasets" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/9e8279fb-7f95-41fd-892a-805f899d0f67">
+
+`mbelt3_public_bigloader.py` runs successfully.
+
 ## Tests
 
-Tests aren't able to be run separately; they have to be run during installation.
+Tests can't be run separately; they have to be run during installation, however they all passed.
 
 Was able to build and run the terraform module successfully:
 
