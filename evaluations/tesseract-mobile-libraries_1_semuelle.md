@@ -17,7 +17,6 @@
 | 3. | Wallet-side of the Test protocol in Kotlin | <ul><li>[x] </li></ul> | link | Looks good. |
 | 4. | Wallet-side of the Substrate protocol in Kotlin | <ul><li>[x] </li></ul> | link | Looks good. |
 | 5. | Android demo Wallet | <ul><li>[x] </li></ul> | link | Looks good. |
-| X. | ... | <ul><li>[x] </li></ul> | link | see [General Notes](#general-notes) |
 
 
 ## General Notes
