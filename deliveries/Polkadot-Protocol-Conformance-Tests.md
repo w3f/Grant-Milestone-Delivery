@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/e4c722bb035f83fd62d785a234d60bacd2b39cac/applications/Polkadot-Protocol-Conformance-Tests.md
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Polkadot-Protocol-Conformance-Tests.md
 * **Milestone Number:** 1
 
 **Context**
