@@ -13,10 +13,9 @@
 | 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | [TogetherCrew/twitter-bot](https://github.com/TogetherCrew/twitter-bot/blob/6ceee7385dd4fb8eb2522c94bbb8fcb0d990afa3/README.md) | Running the data pipeline and analyzing the data will be covered by tests to ensure functionality. We will describe how to run the tests |
 | 0d. | Docker | <ul><li>[ ] </li></ul> | link | We will deliver a docker file to tests the functionality. |
 | 0e. | Article | <ul><li>[ ] </li></ul> | link | In addition to the dashboard, we write a handout. This is a walkthrough of the dashboard, explaining each metric, if the score is good or bad, and a list of recommendations.  |
-| 1. | Twitter data pipeline | <ul><li>[ ] </li></ul> | link | We will create a data pipeline fetching data from Twitter using their API. The user will enter one or a few twitter handles. The data pipeline is build using Python. We have already a data flow for Discord visible in the following repos: [Discord bot](https://github.com/RnDAO/tc-botComm), [interactions with db](https://github.com/RnDAO/tc-dbComm), and [interactions between front-end and db](https://github.com/RnDAO/tc-serverComm). |
-| 2. | Twitter dashboard | <ul><li>[x] </li></ul> | [TogetherCrew/frontend](https://github.com/TogetherCrew/frontend/pull/193) | We will extend our dashboard to include a page with Twitter community health data. The dashboard is build using Typescript. Our current dashbaord, build on Discord data, is available in this [github](https://github.com/RnDAO/tc-uiComm). We will add the Twitter metrics to this dashboard.  |
+| 1. | Twitter data pipeline | <ul><li>[x] </li></ul> | [TogetherCrew/twitter-bot](https://github.com/TogetherCrew/twitter-bot/tree/c5b75621585326d4fe95fe144c06e13f367685ed) | Issues fixed on request |
+| 2. | Twitter dashboard | <ul><li>[ ] </li></ul> | [TogetherCrew/frontend](https://github.com/TogetherCrew/frontend/pull/193) | We will extend our dashboard to include a page with Twitter community health data. The dashboard is build using Typescript. Our current dashbaord, build on Discord data, is available in this [github](https://github.com/RnDAO/tc-uiComm). We will add the Twitter metrics to this dashboard.  |
 | 3. | Workshop/call | <ul><li>[ ] </li></ul> | link | We will hold a workshop/ call to answer any questions about the dashboard and handout.  |
-| X. | ... | <ul><li>[ ] </li></ul> | link | see [General Notes](#general-notes) |
 
 
 ## General Notes
