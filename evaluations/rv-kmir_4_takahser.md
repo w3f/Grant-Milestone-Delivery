@@ -22,7 +22,7 @@
 
 ## Documentation Feedback
 
-- [ ] install instructions for the prerequsites are missing (python, pip, poetry)
+- [x] install instructions for the prerequsites ~~are missing~~ have been [added](https://github.com/runtimeverification/mir-semantics/issues/271) (python, pip, poetry)
 
 ## Docker Feedback
 
