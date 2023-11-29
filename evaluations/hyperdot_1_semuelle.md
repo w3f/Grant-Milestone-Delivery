@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Hyperdot.md
 - **Milestone:** 1
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | **0a.** | License                   | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/Infra3-Network/hyperdot-node/blob/ef7ee82d333da7377eb0bb1740b240104a62bee1/LICENSE) | Apache 2.0                                                   |
-| **0b.** | Documentation             | <ul><li>[x] </li></ul> | [README](https://github.com/Infra3-Network/hyperdot-node/blob/ef7ee82d333da7377eb0bb1740b240104a62bee1/README.md), [README.zh-cn](https://github.com/Infra3-Network/hyperdot-node/blob/ef7ee82d333da7377eb0bb1740b240104a62bee1/README.zh-cn.md) | — |
+| **0b.** | Documentation             | <ul><li>[x] </li></ul> | [README](https://github.com/Infra3-Network/hyperdot-node/blob/ef7ee82d333da7377eb0bb1740b240104a62bee1/README.md), [README.zh-cn](https://github.com/Infra3-Network/hyperdot-node/blob/ef7ee82d333da7377eb0bb1740b240104a62bee1/README.zh-cn.md) | Inline documentation improved on request. |
 | **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [README](https://github.com/Infra3-Network/hyperdot-node/tree/d3e7ac7d3d7fa29bf774f24847041d91556229d9#testing) | Tested using provided gcloud credentials. Inline docs incomplete. |
 | **0d.** | Docker                    | <ul><li>[x] </li></ul> | [README](https://github.com/Infra3-Network/hyperdot-node/tree/d3e7ac7d3d7fa29bf774f24847041d91556229d9#docker-installation-guide) | — |
 | **0e.** | Article                   | <ul><li>[x] </li></ul> | [link](https://medium.com/@jackson.libc.rs/the-data-analysis-powerhouse-for-the-polkadot-ecosystem-hyperdot-has-arrived-c44c16cc3539) | Good overview and walkthrough. |
