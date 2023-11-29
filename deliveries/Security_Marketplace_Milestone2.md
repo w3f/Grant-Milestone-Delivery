@@ -16,7 +16,7 @@ Following are the links to the repositories of the deliverables promised as per 
 | **0b.** | Documentation | >[Back-End documentation](https://github.com/ParthChaudhary31/Security_Marketplace_Backend/blob/main/AuditBazaarBackendArchitecture.docx) >[Front-End readme](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend/blob/security-marketplace-milestone2/README.md)| The documentations are meant to explain the working of the application and setup instructions. |
 | **0c.** | Testing and Testing Guide | - | The respective Test files can be found alongside the project repositories with guidelines in readme files. |
 | **0d.** | Docker | - | The dockerfiles can be found alongside the project repositories. |
-| **0e** | Article | - | [Article Document link](https://docs.google.com/document/d/1AnJQgGjM3Xd0gUYXi3HUsFYjcZ0cV4jDKLjt5qqAuks) |
+| **0e** | Article | [Article Document link](https://docs.google.com/document/d/1AnJQgGjM3Xd0gUYXi3HUsFYjcZ0cV4jDKLjt5qqAuks) | Google Docs Link to the article |
 | 1 | Node Services | >[Cron Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Cron)  >[Services Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Backend) | The Back-end across two seperate repositories, One for back-end services and the other one for cron service. |
 | 2 | Front End | >[Github Repository](https://github.com/ParthChaudhary31/Security_Marketplace_Frontend/tree/security-marketplace-milestone2) | The link leads to the repository of the front end of the application, the guidelines to operate it can be found in readme file. |
 
