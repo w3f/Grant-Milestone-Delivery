@@ -115,7 +115,7 @@ jobs:
   request-invoice:
     runs-on: ubuntu-latest
     needs: check-needs-badge
-    if: needs.check-needs-badge.outputs.request_invoice
+    if: always()
     steps:
       - name: Request invoice
         uses: thollander/actions-comment-pull-request@1.0.1
