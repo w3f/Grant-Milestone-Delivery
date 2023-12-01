@@ -3,7 +3,7 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** [Lastic Coretime Price Simulator](https://github.com/w3f/Grants-Program/blob/master/applications/lastic-price-simulation-2.md)
-* **Milestone Number:** 1
+* **Milestone Number:** 2
 
 **Context**
 Milestone 1 of the Lastic Coretime Price Simulator project encompasses the creation and deployment of a web application for simulating Coretime pricing within the Polkadot Network. The deliverables include a fully functional Streamlit-based application, comprehensive documentation, and an article publication to enhance community understanding of Coretime pricing dynamics.
