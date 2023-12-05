@@ -1,24 +1,84 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Plutonication.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| **0a.** | License | <ul><li>[ ] </li></ul> | [PlutonicationServer](https://github.com/RostislavLitovkin/PlutonicationServer/blob/main/LICENSE) | MIT |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul> | Docs for running all codes is in the [Readme](https://github.com/RostislavLitovkin/PlutonicationServer/#readme). [Guide for deploying to Cloud](https://plutonication-acnha.ondigitalocean.app/deploy) is here. I have also included [Low-level docs](https://plutonication-acnha.ondigitalocean.app/docs) for tinkerers. |  |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | Guide for running tests is in the [Readme](https://github.com/RostislavLitovkin/PlutonicationServer/#readme) |  |
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [Dockerfile](https://github.com/RostislavLitovkin/PlutonicationServer/blob/milestone-delivery/Dockerfile) |  |
-| 1a. | create_room | <ul><li>[ ] </li></ul> | [create_room](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L39) |  |
-| 1b. | pubkey | <ul><li>[ ] </li></ul> | [pubkey](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L51) |  |
-| 1c. | sign_payload | <ul><li>[ ] </li></ul> | [sign_payload](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L65) |  |
-| 1d. | sign_raw | <ul><li>[ ] </li></ul> | [sign_raw](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L77) |  |
-| 1e. | payload_signature | <ul><li>[ ] </li></ul> | [payload_signature](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L89) |  |
-| 1f. | raw_signature | <ul><li>[ ] </li></ul> | [raw_signature](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L109C1-L109C1) |  |
+| **0a.** | License | <ul><li>[x] </li></ul> | [PlutonicationServer](https://github.com/RostislavLitovkin/PlutonicationServer/blob/main/LICENSE) | MIT |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | Docs for running all codes is in the [Readme](https://github.com/RostislavLitovkin/PlutonicationServer/#readme). [Guide for deploying to Cloud](https://plutonication-acnha.ondigitalocean.app/deploy) is here. I have also included [Low-level docs](https://plutonication-acnha.ondigitalocean.app/docs) for tinkerers. | Ok. |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | Guide for running tests is in the [Readme](https://github.com/RostislavLitovkin/PlutonicationServer/#readme) | Ok. |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/RostislavLitovkin/PlutonicationServer/blob/milestone-delivery/Dockerfile) | Ok. |
+| 1a. | create_room | <ul><li>[x] </li></ul> | [create_room](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L39) | Ok. |
+| 1b. | pubkey | <ul><li>[x] </li></ul> | [pubkey](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L51) | Ok. |
+| 1c. | sign_payload | <ul><li>[x] </li></ul> | [sign_payload](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L65) | Ok. |
+| 1d. | sign_raw | <ul><li>[x] </li></ul> | [sign_raw](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L77) | Ok. |
+| 1e. | payload_signature | <ul><li>[x] </li></ul> | [payload_signature](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L89) | Ok. |
+| 1f. | raw_signature | <ul><li>[x] </li></ul> | [raw_signature](https://github.com/RostislavLitovkin/PlutonicationServer/blob/c848a88cf5f28d47542f1be0d7cc2bdee927558f/plutonication/events.py#L109C1-L109C1) | Ok. |
 
 # General Notes
+
+Overall, great documentation and everything works as expected. Looking forward to seeing the next milestone where everything should come together.
+
+## Evaluation v2
+
+Issues have been resolved, all unit and e2e tests pass now:
+
+```js
+npx playwright test
+
+Running 8 tests using 1 worker
+[chromium] › events.spec.js:77:7 › events › create_room and pubkey
+dApp connected
+Wallet connected
+[chromium] › stresstest.spec.js:6:7 › stress tests › limit_socketio
+Connected
+pong: 0
+pong: 1
+pong: 2
+pong: 3
+pong: 4
+pong: 5
+pong: 6
+pong: 7
+pong: 8
+pong: 9
+pong: 10
+pong: 11
+pong: 12
+pong: 13
+pong: 14
+pong: 15
+pong: 16
+pong: 17
+pong: 18
+pong: 19
+pong: 20
+pong: 21
+pong: 22
+pong: 23
+pong: 24
+pong: 25
+pong: 26
+pong: 27
+pong: 28
+  8 passed (8.0s)
+```
+Events tests pass:
+
+```js
+  npx playwright test events.spec.js
+
+Running 7 tests using 1 worker
+[chromium] › events.spec.js:77:7 › events › create_room and pubkey
+dApp connected
+Wallet connected
+  7 passed (7.4s)
+```
+
+## Evaluation v1
 
 Docker builds successfully:
 
