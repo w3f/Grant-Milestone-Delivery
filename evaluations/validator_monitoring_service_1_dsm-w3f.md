@@ -1,7 +1,7 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Validator_Monitoring_Service.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -14,8 +14,14 @@
 | 0c. | Testing Guide | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service#events-exporters-and-grafana-dashboard |  |
 | 0d. | Docker | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service |  |
 | 1. | Events exporter | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/exporters/events |  |
-| 2. | Telegram bot UI + support chat upgrades | <ul><li>[ ] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/bot | Some problems with the bot commands |
+| 2. | Telegram bot UI + support chat upgrades | <ul><li>[x] </li></ul>| https://github.com/p2p-org/polkadot_monitoring_service/tree/main/bot |  |
 | 3. | Create a landing page | <ul><li>[x] </li></ul>| https://maas.p2p.org/ |  |
+
+## Evaluation V4
+
+### Bot 
+
+The problems reported in Evaluation V3 are solved.
 
 ## Evaluation V3
 
