@@ -2,7 +2,7 @@
 
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dapp_wallet_integration_native_mobile_libraries.md
-- **Milestone:** 1
+- **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Accepted | Link | Notes |
@@ -20,3 +20,32 @@
 
 # General Notes
 
+Overall great work as usual! It is nice to be able to sign/send txs in iOS. The native Swift app worked wonderfully, and the pre-requisite dependencies seemed much easier to install than the Kotlin ones, from what I remember. The tests work and I am able to complete the guide.
+
+One minor note: The link to the license file is broken, if you could replace it with the new one that would be great. Thanks!
+
+```
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Transfer'
+subxt::events::events_type: DEBUG - Decoding Event 'System::ExtrinsicSuccess'
+subxt::events::events_type: DEBUG - Decoding Event 'System::ExtrinsicSuccess'
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Withdraw'
+subxt::events::events_type: DEBUG - Decoding Event 'Contracts::ContractEmitted'
+subxt::events::events_type: DEBUG - Decoding Event 'Contracts::Called'
+subxt::events::events_type: DEBUG - Decoding Event 'Contracts::StorageDepositTransferredAndHeld'
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Deposit'
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Deposit'
+subxt::events::events_type: DEBUG - Decoding Event 'TransactionPayment::TransactionFeePaid'
+subxt::events::events_type: DEBUG - Decoding Event 'System::ExtrinsicSuccess'
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Transfer'
+subxt::events::events_type: DEBUG - Decoding Event 'System::ExtrinsicSuccess'
+subxt::events::events_type: DEBUG - Decoding Event 'System::ExtrinsicSuccess'
+subxt::events::events_type: DEBUG - Decoding Event 'Balances::Withdraw'
+subxt::events::events_type: DEBUG - Decoding Event 'Contracts::ContractEmitted'
+```
+I am able to sign the tx on Rococo contracts with my test account:
+
+<img width="359" alt="signer" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/90c78a4b-8ba8-4f00-b223-b7b1473b08b0">
+
+Test messages sent on Rococo are successful:
+
+<img width="359" alt="message tx" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/f48cff9c-8d58-4a15-a6c5-416862981104">
