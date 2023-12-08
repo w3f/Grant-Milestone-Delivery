@@ -14,3 +14,318 @@
 | 1a  | Code Formatting guidelines | <ul><li>[x] </li></ul> | [Prettier configuration file ](https://github.com/NeoPower-Digital/tempora/blob/main/.prettierrc) | - |
 
 # General Notes
+
+## Evaluation v1
+
+The unit tests are running now but with warnings about conflicting node modules. It also seems to get stuck waiting for file changes:
+
+<details>
+
+<summary>Output</summary>
+
+```ts
+ubuntu@ip-172-31-31-38:~/tempora$ yarn test
+yarn run v1.22.19
+warning ../package.json: No license field
+$ vitest
+
+ DEV  v0.34.6 /home/ubuntu/tempora
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.5.1      node_modules/@polkadot/util/
+
+stderr | unknown test
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+
+stderr | unknown test
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-codec/node_modules/@polkadot/util/
+@polkadot/util-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util-crypto/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util-crypto/
+@polkadot/wasm-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto/
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-bridge/
+@polkadot/wasm-crypto-wasm has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-crypto-wasm/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto-wasm/
+@polkadot/wasm-util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-util/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-util/
+
+stderr | unknown test
+The current test runner does not support afterEach/teardown hooks. This means we won't be able to run automatic cleanup and you should be calling cleanup() manually.
+The current test runner does not support beforeAll/afterAll hooks. This means you should be setting IS_REACT_ACT_ENVIRONMENT manually.
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-codec/node_modules/@polkadot/util/
+@polkadot/util-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util-crypto/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util-crypto/
+@polkadot/wasm-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto/
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-bridge/
+@polkadot/wasm-crypto-wasm has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-crypto-wasm/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto-wasm/
+@polkadot/wasm-util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-util/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-util/
+
+stderr | unknown test
+The current test runner does not support afterEach/teardown hooks. This means we won't be able to run automatic cleanup and you should be calling cleanup() manually.
+The current test runner does not support beforeAll/afterAll hooks. This means you should be setting IS_REACT_ACT_ENVIRONMENT manually.
+
+stderr | unknown test
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.5.1      node_modules/@polkadot/util/
+
+stderr | unknown test
+The current test runner does not support afterEach/teardown hooks. This means we won't be able to run automatic cleanup and you should be calling cleanup() manually.
+The current test runner does not support beforeAll/afterAll hooks. This means you should be setting IS_REACT_ACT_ENVIRONMENT manually.
+
+stderr | unknown test
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+@polkadot/util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/api-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/rpc-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-augment/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-create/node_modules/@polkadot/util/
+        esm 12.6.1      node_modules/@polkadot/types-codec/node_modules/@polkadot/util/
+@polkadot/util-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 12.5.1      node_modules/@polkadot/util-crypto/
+        esm 12.6.1      node_modules/@polkadot/types/node_modules/@polkadot/util-crypto/
+@polkadot/wasm-crypto has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto/
+@polkadot/wasm-bridge has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto/node_modules/@polkadot/wasm-bridge/
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-bridge/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-bridge/
+@polkadot/wasm-crypto-wasm has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-crypto-init/node_modules/@polkadot/wasm-crypto-wasm/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-crypto-wasm/
+@polkadot/wasm-util has multiple versions, ensure that there is only one installed.
+Either remove and explicitly install matching versions or dedupe using your package manager.
+The following conflicting packages were found:
+        esm 7.2.2       node_modules/@polkadot/wasm-util/
+        esm 7.3.1       node_modules/@polkadot/types/node_modules/@polkadot/wasm-util/
+
+ ✓ __tests__/useProxyAccount.test.tsx (20)
+ ✓ __tests__/useProxyAccount.test.tsx (20)
+ ✓ __tests__/useSchedulePayment.test.tsx (2)
+ ✓ __tests__/useFeeEstimation.test.tsx (2)
+ ✓ __tests__/proxyAccountsHelper.test.tsx (5)
+
+ Test Files  4 passed (4)
+      Tests  29 passed (29)
+   Start at  23:51:25
+   Duration  6.67s (transform 542ms, setup 1ms, collect 9.19s, tests 181ms, environment 2.10s, prepare 466ms)
+
+
+ PASS  Waiting for file changes...
+       press h to show help, press q to quit
+```
+</details>
