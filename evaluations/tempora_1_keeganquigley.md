@@ -8,12 +8,28 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | <ul><li>[x] </li></ul> |[Apache License 2.0](https://github.com/NeoPower-Digital/tempora/blob/main/LICENSE) | - | 
-| 0b.  | User guide | <ul><li>[x] </li></ul> | [User guide on Medium](https://medium.com/@NeoPowerDigital/on-chain-payment-scheduling-in-polkadot-2ff15ed6485a) | - | 
-| 0c.  | Developer documentation and testing guide | <ul><li>[x] </li></ul> | [Developer documentation & testing guide](https://github.com/NeoPower-Digital/tempora/blob/main/README.md) | GitHub Repository README file | 
-| 1  | UI & React XCM tooling | <ul><li>[x] </li></ul> | [GitHub repository](https://github.com/NeoPower-Digital/tempora) | [Link to the dApp](https://tempora-dapp.vercel.app/) | 
-| 1a  | Code Formatting guidelines | <ul><li>[x] </li></ul> | [Prettier configuration file ](https://github.com/NeoPower-Digital/tempora/blob/main/.prettierrc) | - |
+| 0b.  | User guide | <ul><li>[x] </li></ul> | [User guide on Medium](https://medium.com/@NeoPowerDigital/on-chain-payment-scheduling-in-polkadot-2ff15ed6485a) | Great docs, thank you! | 
+| 0c.  | Developer documentation and testing guide | <ul><li>[x] </li></ul> | [Developer documentation & testing guide](https://github.com/NeoPower-Digital/tempora/blob/main/README.md) | Great work. Very detailed repo readme. | 
+| 1  | UI & React XCM tooling | <ul><li>[x] </li></ul> | [GitHub repository](https://github.com/NeoPower-Digital/tempora) | Ok. | 
+| 1a  | Code Formatting guidelines | <ul><li>[x] </li></ul> | [Prettier configuration file ](https://github.com/NeoPower-Digital/tempora/blob/main/.prettierrc) | Ok. |
 
 # General Notes
+
+Great progress so far! The Vercel app works great and has a very sleek, easy-to-use UI. I was able to make both fixed and recurring payments on the testnet.
+
+## Evaluation v2
+
+## UI
+
+I'm able to successfully set up the proxy accounts and set up recurring payments.
+
+<img width="718" alt="proxy" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/cf79f9db-6c0b-4a54-89d2-c326436070e0">
+
+The transactions are successful! Shame that you can only schedule for the top of the hour but this is due to an Oak Network restriction.
+
+<img width="718" alt="recurring" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/c705dca3-d766-4219-b9c3-336f717d6879">
+
+<img width="718" alt="recurring2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/c8561039-3c16-4676-b423-653628fc53fc">
 
 ## Evaluation v1
 
