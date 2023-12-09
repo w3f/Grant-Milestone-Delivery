@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/roloi-xcm-payment-automation.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -18,6 +18,110 @@
 Great progress so far! The Vercel app works great and has a very sleek, easy-to-use UI. I was able to make both fixed and recurring payments on the testnet.
 
 ## Evaluation v2
+
+## Tests
+
+`yarn dev` works:
+
+```ts
+yarn run v1.22.19
+warning ../package.json: No license field
+$ next dev
+- info Loaded env from /Users/keeganquigley/tempora/.env.local
+- ready started server on [::]:3000, url: http://localhost:3000
+warning ../package.json: No license field
+- event compiled client and server successfully in 94 ms (20 modules)
+- wait compiling...
+- event compiled client and server successfully in 75 ms (20 modules)
+- info Loaded env from /Users/keeganquigley/tempora/.env.local
+- info Loaded env from /Users/keeganquigley/tempora/.env.local
+- wait compiling /page (client and server)...
+(node:19483) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+- event compiled client and server successfully in 4.7s (4487 modules)
+- wait compiling...
+- event compiled successfully in 290 ms (2268 modules)
+- wait compiling /favicon.ico/route (client and server)...
+- event compiled client and server successfully in 2.9s (4514 modules)
+```
+
+`yarn build` is successful:
+
+```ts
+yarn run v1.22.19
+warning ../package.json: No license field
+$ next build
+(node:20862) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+- info Loaded env from /Users/keeganquigley/tempora/.env.local
+- info Creating an optimized production build
+- info Compiled successfully
+- info Linting and checking validity of types
+- info Collecting page data ..(node:20981) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20980) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20987) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20988) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20989) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+- info Collecting page data
+[    ] - info Generating static pages (0/5)(node:20991) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20990) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20992) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20982) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20983) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20990) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+- info Generating static pages (5/5)
+(node:20985) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20986) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20984) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20993) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+- info Finalizing page optimization
+
+Route (app)                                Size     First Load JS
+┌ ○ /                                      11.2 kB        1.16 MB
+├ ○ /favicon.ico                           0 B                0 B
+└ ○ /new-recurring-payment                 48.2 kB         1.2 MB
++ First Load JS shared by all              1.14 MB
+  ├ chunks/242-53df7710c6999964.js         3.47 kB
+  ├ chunks/503-dfa7e0cc8ba596f3.js         224 kB
+  ├ chunks/5360716d-f06d468458110bc8.js    173 kB
+  ├ chunks/596-70fc02383742deec.js         26.1 kB
+  ├ chunks/aaea2bcf-5e23fc7b93adbe96.js    101 kB
+  ├ chunks/c1265c78-55c0cf4cb8b40b0a.js    173 kB
+  ├ chunks/f4e5f4e1-777c876ab3540aae.js    23.2 kB
+  ├ chunks/fcdd03af-4f650ed25d2178d5.js    364 kB
+  ├ chunks/fd9d1056-4fc7323f2e4d7609.js    50.5 kB
+  ├ chunks/main-app-d243a5ff7dbf8eaf.js    216 B
+  └ chunks/webpack-99f421eb0759ec74.js     1.79 kB
+
+Route (pages)                              Size     First Load JS
+─ ○ /404                                   182 B          76.6 kB
++ First Load JS shared by all              76.4 kB
+  ├ chunks/framework-8883d1e9be70c3da.js   45.1 kB
+  ├ chunks/main-5d690231d58d313d.js        29.4 kB
+  ├ chunks/pages/_app-52924524f99094ab.js  195 B
+  └ chunks/webpack-99f421eb0759ec74.js     1.79 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+✨  Done in 26.36s.
+```
+`yarn lint` produces no warnings.
+
+`yarn test` works albeit with warnings; see below.
 
 ## UI
 
