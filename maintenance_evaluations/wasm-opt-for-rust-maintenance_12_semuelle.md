@@ -8,7 +8,7 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
-| 1. | Issue about using static library | <ul><li>[x] </li></ul> | https://github.com/brson/wasm-opt-rs/issues/161 | |
+| 1. | Issue about using static library | <ul><li>[x] </li></ul> | https://github.com/brson/wasm-opt-rs/issues/161 | — |
 ## General Notes
 
 - —
