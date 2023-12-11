@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/CoinFabrik_On_Ink_Integration_Tests-2.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/CoinFabrik_On_Ink_Integration_Tests_2.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
