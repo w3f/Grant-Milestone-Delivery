@@ -28,38 +28,39 @@ Summary -
 QSTN is a Web3 survey marketplace where businesses fund surveys, reward participants, and uphold user privacy through our data wallet-driven profiles.
 
 0b. Documentation - 
-* Here is a link to access the demo = https://qstnus.com 
-* Here is a folder with all relevant tutorials = https://drive.google.com/drive/folders/1sjohV-fc8JHzRMlfuYliI7MRQY1dmSRP?usp=sharing 
-* Here is the GitHub repository for the contracts = https://github.com/QSTN-US/Moonbeam-QSTN-v1
-
-Note: We removed option to generate a Polkadot.JS wallet during onboarding - instead we use their email during sign-up to generate a SAFE vault which holds their Moonbeam rewards due to the EVM compatibility
+* Here is a folder with tutorials = https://drive.google.com/drive/folders/1L9gckB-mpGmIxtoU1dUhaGa7XwmoKoq9?usp=drive_link 
+* Here is the GitHub repository = https://github.com/QSTN-US/Polkadot-QSTN-v1 
+    * ReadMe file = https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/README.md 
+    * Start file = https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/QUICK-START.md
+    * Step by step manual = https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/STEP-BY-STEP-MILESTONE.md
+    * Testing guide = https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/TESTING-GUIDE.md 
 
 0d. Docker - 
-* Here is a link to the Docker file = https://github.com/QSTN-US/Moonbeam-QSTN-v1/blob/main/qzard-moonbeam/Dockerfile 
-* ReadMe file - https://github.com/QSTN-US/Moonbeam-QSTN-v1/blob/main/README.md
+* Here is a link to the Docker file = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/docker 
 
 0e. Article - 
-* Here is the Medium article = https://medium.com/@qstnus/qstns-next-frontier-a-bold-leap-into-the-polkadot-ecosystem-with-moonbeam-9de5b7afbf4e
-* We will publish as soon as we get approval for the milestone + permission to use the Web3 Foundation logo 
+* Here is the Medium article = https://medium.com/@qstnus/qstns-next-frontier-a-bold-leap-into-the-polkadot-ecosystem-9de5b7afbf4e
+    * We will publish as soon as we get grant approval 
 
 Survey pallet 
-* Here is a demo video the business survey pallet = https://drive.google.com/file/d/177IJQIiQcVC-EJhJb3pB0pna1SBl7XlE/view?usp=drive_link 
-* Here is a demo video the user survey pallet = https://drive.google.com/file/d/1d47gOMqI_MEZ_eJ1sA1OowQ-AnNZrOSf/view?usp=drive_link 
-* Within the business experience, we allow businesses to fund surveys with tokens and NFTs on Moonbeam which survey respondents receive in their vault via SAFE
-* Within the business experience, we allow businesses to invite users to complete the survey, add and remove questions plus access gate
+* This is the main pallet and its interface = http://pallet-demo.qstnus.com/ 
+    * This is the interface which we open sourced since the other is related to our production application 
+    * This is the code related to the pallet: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-pallet/survey 
+* This is the production version and its interface =  https://polkadot.qstnus.com/ 
+    * The data wallet and ZKP mechanism is abstracted so there is no visual indication but it is in the background and codebase 
+        * There are some buttons (e.g. leaderboards, non-essential functions) which do not work but core pallet functionality exists in production version 
+    * Within the business experience, we allow businesses to fund surveys with DOT which survey respondents receive in their connected Polkadot.JS wallet 
+    * Within the business experience, we allow businesses to invite users to complete the survey, add and remove questions plus access gate
 
 Survey pallet UI 
-* Here are demos where the Moonbeam integration is shown in the business & user UI = https://drive.google.com/drive/folders/1sjohV-fc8JHzRMlfuYliI7MRQY1dmSRP?usp=drive_link 
-* Within the business experience, we allow businesses to choose Moonbeam as a funding option within the Connect Network section
-* Within the user experience, we allow users to create a vault within SAFE which is capable of storing Moonbeam tokens and NFTs issued from the survey 
-
-Note: We removed option to screenshot on-chain - instead each profile in QSTN, is a data wallet, which generates a zero knowledge proof upon survey completion, this proof acts as verification when a user tries to request rewards from a survey contract or Stripe 
+* Here is a link to the UI for the pallet = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/front-end 
 
 Substrate Chain
-* Here is a demo video where the user claims NFT media on Moonbeam = https://drive.google.com/file/d/1d47gOMqI_MEZ_eJ1sA1OowQ-AnNZrOSf/view?usp=drive_link 
-* Within the user experience, we allow users to mint NFTs as a survey reward onto Moonbeam in order to access secondary liquidity 
-
-Note: We removed option to screenshot on-chain - instead each profile in QSTN, is a data wallet, which generates a zero knowledge proof upon survey completion, this proof acts as verification when a user tries to request rewards from a survey contract or Stripe 
+* Here is the substrate node = https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fdotnode.qstnus.com#/explorer 
+    * This is the code related to the substrate node: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/substrate-node 
+* Here is the data wallet API = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api 
+    * Here is the data wallet UI = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api/BACKEND-ZKP
+* Here is the NFT pallet = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/nfts-pallet 
 
 ### Overview
 https://github.com/qstnus/Grant-Milestone-Delivery/tree/master
