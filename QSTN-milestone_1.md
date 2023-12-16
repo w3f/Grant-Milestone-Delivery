@@ -22,7 +22,7 @@ We built a revolutionary data collection platform that harnesses the power of bl
 
 Hello Polkadot,
 
-Thanks for your patience. A lot has changed on our roadmap and it took us longer than expected to complete the grant. We are excited to finally announce that QSTN has been implemented on Polkadot via Moonbeam. Below are the deliverables plus a demo link to test yourselves. Thanks and looking forward to hearing from you!
+Thanks for your patience. Below are the deliverables plus a demo link to test yourselves. Thanks and looking forward to hearing from you!
 
 Summary - 
 QSTN is a Web3 survey marketplace where businesses fund surveys, reward participants, and uphold user privacy through our data wallet-driven profiles.
