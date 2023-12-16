@@ -1,6 +1,6 @@
 # External Evaluation
 
-- **Status:** Requested_Changes
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/SpellRouter-proposal.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by niklabh,nikw3f
@@ -103,6 +103,23 @@ Getting an error while running the playground. Seems like interlay APIs has chan
 <font color="#D0CFCC">         ╵                                                                                                                                                        </font><font color="#26A269">~~~~~~~~~~~~~~~~~~~~~~~</font>
 </pre>
 
+# Playgorund(Fixed)
+
+Playground is working fine now. I have added the logs below. This is fixed after using correct yarn version as suggested by the team. https://github.com/w3f/Grant-Milestone-Delivery/pull/1081#issuecomment-1858827924
+
+<pre>font color="#26A269"><b>VITE</b></font><font color="#26A269"> v5.0.10</font>  ready in <b>477</b> ms
+
+  <font color="#26A269">➜</font>  <b>Local</b>:   <font color="#2AA1B3">http://localhost:</font><font color="#2AA1B3"><b>5173</b></font><font color="#2AA1B3">/</font>
+<font color="#AAAAAA">  </font><font color="#196C46">➜</font><font color="#AAAAAA">  </font><font color="#AAAAAA"><b>Network</b></font><font color="#AAAAAA">: use </font><b>--host</b><font color="#AAAAAA"> to expose</font>
+<font color="#196C46">  ➜</font><font color="#AAAAAA">  press </font><b>h + enter</b><font color="#AAAAAA"> to show help</font>
+</pre>
+
+
+I am able to:
+
+- Transfer from origin chain to destination chain
+- Receive and exchange on exchange chain
+- Transfer from exchange chain to destination chain
 
 
 ## Unit Tests
@@ -467,6 +484,3 @@ Amount out modified 25550830
 
 </pre>
 </unittests>
-
-
-Please fix the playground error so i can check again.
