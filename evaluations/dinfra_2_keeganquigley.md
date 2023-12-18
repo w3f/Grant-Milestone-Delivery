@@ -952,3 +952,268 @@ Done in 45.61s.
 ```
 
 </details>
+
+<details>
+
+  <summary>Docker successfully simulates life cycles</summary>
+
+```sh
+ogate_1        | [Nest] 28  - 12/14/2023, 11:47:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #2
+acs-reactor_1  | 2023-12-14 23:47:48.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:47:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #3
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-9458a226) (logid:598b25d6) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-9458a226) (logid:598b25d6) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-9458a226) (logid:598b25d6) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-9458a226) (logid:598b25d6) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-e62a1b37) (logid:967f7d68) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:48:03.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:48:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #4
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-13d3f871) (logid:ef672e0e) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-13d3f871) (logid:ef672e0e) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-13d3f871) (logid:ef672e0e) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-13d3f871) (logid:ef672e0e) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-b501de66) (logid:88a67a94) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:48:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #5
+acs-reactor_1  | 2023-12-14 23:48:18.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:48:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #6
+acs-reactor_1  | 2023-12-14 23:48:33.0 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6cb260ba) (logid:417243a0) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6cb260ba) (logid:417243a0) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6cb260ba) (logid:417243a0) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6cb260ba) (logid:417243a0) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-d1f0989c) (logid:ff73fe1e) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-1:ctx-342ef161) (logid:a1a95cf2) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-1:ctx-342ef161) (logid:a1a95cf2) free memory from /proc: 212082688
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-1:ctx-342ef161) (logid:a1a95cf2) used memory from /proc: 1963692
+ogate_1        | [Nest] 28  - 12/14/2023, 11:48:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #7
+acs-reactor_1  | 2023-12-14 23:48:48.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:48:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #8
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-743af347) (logid:85a071ab) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-743af347) (logid:85a071ab) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-743af347) (logid:85a071ab) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-743af347) (logid:85a071ab) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-534d0154) (logid:cf0fc01c) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:49:03.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:49:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #9
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-cf2b8dee) (logid:b79ef254) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-cf2b8dee) (logid:b79ef254) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-cf2b8dee) (logid:b79ef254) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-cf2b8dee) (logid:b79ef254) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-52c4b699) (logid:07532662) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:49:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #10
+acs-reactor_1  | 2023-12-14 23:49:18.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:49:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #11
+acs-reactor_1  | 2023-12-14 23:49:33.0 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-524e811b) (logid:37fb0d8d) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-524e811b) (logid:37fb0d8d) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-524e811b) (logid:37fb0d8d) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-524e811b) (logid:37fb0d8d) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-f68d7d1a) (logid:8b636bb2) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-376626c5) (logid:dbe7bd5a) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-376626c5) (logid:dbe7bd5a) free memory from /proc: 216612864
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-376626c5) (logid:dbe7bd5a) used memory from /proc: 1967632
+ogate_1        | [Nest] 28  - 12/14/2023, 11:49:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #12
+acs-reactor_1  | 2023-12-14 23:49:48.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:49:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #13
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-91756662) (logid:8c034048) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-91756662) (logid:8c034048) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-91756662) (logid:8c034048) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-91756662) (logid:8c034048) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-82ab1658) (logid:b765b396) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:50:03.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:50:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #14
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1b29df45) (logid:8eced12f) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1b29df45) (logid:8eced12f) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1b29df45) (logid:8eced12f) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1b29df45) (logid:8eced12f) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-ea7c6464) (logid:0a07fa84) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:50:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #15
+acs-reactor_1  | 2023-12-14 23:50:18.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:50:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #16
+acs-reactor_1  | 2023-12-14 23:50:33.0 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c2a01d90) (logid:1e1e9c48) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c2a01d90) (logid:1e1e9c48) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c2a01d90) (logid:1e1e9c48) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c2a01d90) (logid:1e1e9c48) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-9e36349c) (logid:512ce0f4) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-85124bf6) (logid:dad02f52) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-85124bf6) (logid:dad02f52) free memory from /proc: 325443584
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-85124bf6) (logid:dad02f52) used memory from /proc: 1973132
+ogate_1        | [Nest] 28  - 12/14/2023, 11:50:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #17
+acs-reactor_1  | 2023-12-14 23:50:48.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:50:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #18
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-a3810db1) (logid:95c141aa) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-a3810db1) (logid:95c141aa) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-a3810db1) (logid:95c141aa) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-a3810db1) (logid:95c141aa) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-b1070d32) (logid:5a9a34fb) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:51:03.0 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:51:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #19
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-21ab2064) (logid:026a8f77) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-21ab2064) (logid:026a8f77) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-21ab2064) (logid:026a8f77) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-21ab2064) (logid:026a8f77) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-7cf142ca) (logid:f4743eaa) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:51:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #20
+acs-reactor_1  | 2023-12-14 23:51:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:51:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #21
+acs-reactor_1  | 2023-12-14 23:51:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Started resource counters recalculation periodic task.
+acs-sim_1      | WARN  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Discrepancy in the resource count (original count=0 correct count = 4) for type volume for account ID 1 is fixed during resource count recalculation.
+acs-sim_1      | WARN  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Discrepency in the resource count has been detected (original count = 0 correct count = 4) for Type = volume for Domain ID = 1 is fixed during resource count recalculation.
+acs-sim_1      | WARN  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Discrepancy in the resource count (original count=0 correct count = 14) for type template for account ID 1 is fixed during resource count recalculation.
+acs-sim_1      | WARN  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Discrepency in the resource count has been detected (original count = 0 correct count = 14) for Type = template for Domain ID = 1 is fixed during resource count recalculation.
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-df2045ef) (logid:b1379685) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-df2045ef) (logid:b1379685) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-df2045ef) (logid:b1379685) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-df2045ef) (logid:b1379685) Found 0 disabled projects to cleanup
+acs-sim_1      | WARN  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-7072fee8) (logid:392acbcd) Discrepency in the resource count has been detected (original count = 0 correct count = 8589934592) for Type = secondary_storage for Domain ID = 1 is fixed during resource count recalculation.
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-1e2ea27d) (logid:147fba7a) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-1f9ded2d) (logid:6843d680) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-1f9ded2d) (logid:6843d680) free memory from /proc: 320126976
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-1f9ded2d) (logid:6843d680) used memory from /proc: 1976148
+ogate_1        | [Nest] 28  - 12/14/2023, 11:51:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #22
+acs-reactor_1  | 2023-12-14 23:51:48.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:51:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #23
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6eb38a89) (logid:ff8f640a) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6eb38a89) (logid:ff8f640a) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6eb38a89) (logid:ff8f640a) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6eb38a89) (logid:ff8f640a) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-fbfa3ad8) (logid:51ca52ba) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:52:03.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:52:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #24
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-4bbcb403) (logid:ed790e34) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-4bbcb403) (logid:ed790e34) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-4bbcb403) (logid:ed790e34) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-4bbcb403) (logid:ed790e34) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-9a740a30) (logid:64faec08) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:52:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #25
+acs-reactor_1  | 2023-12-14 23:52:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:52:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #26
+acs-reactor_1  | 2023-12-14 23:52:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c0a44d52) (logid:8d646197) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c0a44d52) (logid:8d646197) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c0a44d52) (logid:8d646197) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-c0a44d52) (logid:8d646197) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-9870f1f3) (logid:b2c198f3) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-cf5f7c2b) (logid:965b8ea2) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-cf5f7c2b) (logid:965b8ea2) free memory from /proc: 304562176
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-cf5f7c2b) (logid:965b8ea2) used memory from /proc: 1980788
+ogate_1        | [Nest] 28  - 12/14/2023, 11:52:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #27
+acs-reactor_1  | 2023-12-14 23:52:48.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:52:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #28
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-5f3c9f0d) (logid:e5915d19) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-5f3c9f0d) (logid:e5915d19) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-5f3c9f0d) (logid:e5915d19) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-5f3c9f0d) (logid:e5915d19) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-4c50f156) (logid:bdf0b681) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:53:03.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:53:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #29
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6044328e) (logid:5b2b39ec) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6044328e) (logid:5b2b39ec) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6044328e) (logid:5b2b39ec) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6044328e) (logid:5b2b39ec) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-37917423) (logid:a4cb589f) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:53:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #30
+acs-reactor_1  | 2023-12-14 23:53:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:53:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #31
+acs-reactor_1  | 2023-12-14 23:53:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0532e19e) (logid:e0c7e609) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0532e19e) (logid:e0c7e609) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0532e19e) (logid:e0c7e609) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0532e19e) (logid:e0c7e609) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-b31fdfd5) (logid:26b55eec) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-23ea6121) (logid:db2c66ed) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-23ea6121) (logid:db2c66ed) free memory from /proc: 285581312
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-23ea6121) (logid:db2c66ed) used memory from /proc: 1965832
+ogate_1        | [Nest] 28  - 12/14/2023, 11:53:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #32
+acs-reactor_1  | 2023-12-14 23:53:48.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:53:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #33
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-2b046984) (logid:827128f7) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-2b046984) (logid:827128f7) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-2b046984) (logid:827128f7) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-2b046984) (logid:827128f7) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-4a8b70e9) (logid:94718cca) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:54:03.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:54:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #34
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-f884c0f6) (logid:c4b5d90a) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-f884c0f6) (logid:c4b5d90a) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-f884c0f6) (logid:c4b5d90a) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-f884c0f6) (logid:c4b5d90a) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-5ccd1a86) (logid:397fbe3f) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:54:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #35
+acs-reactor_1  | 2023-12-14 23:54:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:54:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #36
+acs-reactor_1  | 2023-12-14 23:54:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-86c11f71) (logid:fe6464e1) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-86c11f71) (logid:fe6464e1) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-86c11f71) (logid:fe6464e1) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-86c11f71) (logid:fe6464e1) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-f7801da5) (logid:86d45d14) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-afdb883d) (logid:aeea2aca) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-afdb883d) (logid:aeea2aca) free memory from /proc: 298057728
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-2:ctx-afdb883d) (logid:aeea2aca) used memory from /proc: 1966452
+ogate_1        | [Nest] 28  - 12/14/2023, 11:54:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #37
+acs-reactor_1  | 2023-12-14 23:54:48.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:54:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #38
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1d6486c3) (logid:99e6eac9) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1d6486c3) (logid:99e6eac9) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1d6486c3) (logid:99e6eac9) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-1d6486c3) (logid:99e6eac9) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-fbd4d28b) (logid:ccafc16b) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:55:03.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:55:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #39
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-512101c2) (logid:cf1fd13a) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-512101c2) (logid:cf1fd13a) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-512101c2) (logid:cf1fd13a) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-512101c2) (logid:cf1fd13a) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-468c96ab) (logid:873adfcf) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:55:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #40
+acs-reactor_1  | 2023-12-14 23:55:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:55:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #41
+acs-reactor_1  | 2023-12-14 23:55:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-11b68636) (logid:95c0b734) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-11b68636) (logid:95c0b734) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-11b68636) (logid:95c0b734) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-11b68636) (logid:95c0b734) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-a1bfb78f) (logid:9d7104ef) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-ef348cbe) (logid:68963d2c) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-ef348cbe) (logid:68963d2c) free memory from /proc: 295723008
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-4:ctx-ef348cbe) (logid:68963d2c) used memory from /proc: 1966748
+ogate_1        | [Nest] 28  - 12/14/2023, 11:55:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #42
+acs-reactor_1  | 2023-12-14 23:55:48.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:55:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #43
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-36da467d) (logid:27fe0a5e) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-36da467d) (logid:27fe0a5e) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-36da467d) (logid:27fe0a5e) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-36da467d) (logid:27fe0a5e) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-bcc67331) (logid:8e8163da) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-reactor_1  | 2023-12-14 23:56:03.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:56:06 PM   DEBUG [DinfraParachainService] DINFRA Block: #44
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6ecd8a7d) (logid:ae579f64) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6ecd8a7d) (logid:ae579f64) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6ecd8a7d) (logid:ae579f64) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-6ecd8a7d) (logid:ae579f64) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-d2e00eb9) (logid:6fea8861) NetworkGarbageCollector uses '20' seconds for GC interval.
+ogate_1        | [Nest] 28  - 12/14/2023, 11:56:18 PM   DEBUG [DinfraParachainService] DINFRA Block: #45
+acs-reactor_1  | 2023-12-14 23:56:18.1 INFO Received DINFRA event NoEvent
+ogate_1        | [Nest] 28  - 12/14/2023, 11:56:30 PM   DEBUG [DinfraParachainService] DINFRA Block: #46
+acs-reactor_1  | 2023-12-14 23:56:33.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | INFO  [c.c.r.ResourceLimitManagerImpl] (ResourceCountChecker-1:ctx-02fa8726) (logid:6ffc743a) Started resource counters recalculation periodic task.
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0b731551) (logid:0d976562) Found 0 removed accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0b731551) (logid:0d976562) Found 0 disabled accounts to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0b731551) (logid:0d976562) Found 0 inactive domains to cleanup
+acs-sim_1      | INFO  [c.c.u.AccountManagerImpl] (AccountChecker-1:ctx-0b731551) (logid:0d976562) Found 0 disabled projects to cleanup
+acs-sim_1      | INFO  [c.c.n.r.VirtualNetworkApplianceManagerImpl] (RouterStatusMonitor-1:ctx-9a2da40b) (logid:30aee822) Found 0 running routers. Fetching, analysing and updating DB for the health checks.
+acs-sim_1      | INFO  [o.a.c.e.o.NetworkOrchestrator] (Network-Scavenger-1:ctx-2548b8d6) (logid:d98a769a) NetworkGarbageCollector uses '20' seconds for GC interval.
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-4ebf7926) (logid:fbb6e72c) system memory from /proc: 16763502592
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-4ebf7926) (logid:fbb6e72c) free memory from /proc: 278327296
+acs-sim_1      | INFO  [c.c.s.StatsCollector] (StatsCollector-5:ctx-4ebf7926) (logid:fbb6e72c) used memory from /proc: 1967408
+ogate_1        | [Nest] 28  - 12/14/2023, 11:56:42 PM   DEBUG [DinfraParachainService] DINFRA Block: #47
+acs-reactor_1  | 2023-12-14 23:56:48.1 INFO Received DINFRA event NoEvent
+acs-sim_1      | WARN  [c.c.s.StatsCollector] (StatsCollector-1:ctx-24c253ff) (logid:0c2b62be) Volume stats not implemented for this format type RAW
+acs-sim_1      | WARN  [c.c.s.StatsCollector] (StatsCollector-1:ctx-24c253ff) (logid:0c2b62be) Volume stats not implemented for this format type RAW
+acs-sim_1      | WARN  [c.c.s.StatsCollector] (StatsCollector-1:ctx-24c253ff) (logid:0c2b62be) Volume stats not implemented for this format type RAW
+ogate_1        | [Nest] 28  - 12/14/2023, 11:56:54 PM   DEBUG [DinfraParachainService] DINFRA Block: #48
+```
+</details>
