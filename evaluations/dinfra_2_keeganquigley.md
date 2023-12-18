@@ -19,6 +19,8 @@
 
 # General Notes
 
+Great work! Some tests weren't passing at first but issues were resolved. 
+
 <details>
 
   <summary>Docker builds successfully</summary>
