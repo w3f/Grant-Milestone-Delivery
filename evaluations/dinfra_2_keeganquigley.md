@@ -19,7 +19,7 @@
 
 # General Notes
 
-Great work! Some tests weren't passing at first but issues were resolved. 
+Great work! Some tests weren't passing at first but issues were resolved. I was able to spin up all Zombienet chains and try out the pallets.
 
 <details>
 
