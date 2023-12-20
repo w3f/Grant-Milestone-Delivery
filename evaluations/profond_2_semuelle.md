@@ -19,6 +19,11 @@
 ## General Notes
 
 - Deployed at https://profond.ai/
+- E2E tests aren't testing much currently
+- Code coverage could be improved
+- Analytics view doesn't seem to pick up contract creation transactions
+- Sale transactions currently failing (not part of grant)
+- Currently only supports Shibuya
 
 ### Test output
 
