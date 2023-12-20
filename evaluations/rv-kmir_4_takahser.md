@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/rv-kmir.md
 - **Milestone:** 4 
 - **Kusama Identity:** 
@@ -10,11 +10,11 @@
 |-|-|-|-|-|
 | **0a.** | License | <ul><li>[x] </li></ul>| [LICENSE](https://github.com/runtimeverification/mir-semantics/blob/ee4f434814ea255219c58a9995ee6f6d254811e7/LICENSE) | BDS-3 |
 | **0b.** | Documentation | <ul><li>[x] </li></ul>| [README](https://github.com/runtimeverification/mir-semantics/blob/ee4f434814ea255219c58a9995ee6f6d254811e7/kmir/README.md) | See [General Notes](#general-notes) |
-| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [README](https://github.com/runtimeverification/mir-semantics/tree/ee4f434814ea255219c58a9995ee6f6d254811e7#running-integration-tests-with-docker) | — |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [README](https://github.com/runtimeverification/mir-semantics/tree/ee4f434814ea255219c58a9995ee6f6d254811e7#running-integration-tests-with-docker) | Worked on Ubuntu, but not MacOS |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| [Dockerfile](https://github.com/runtimeverification/mir-semantics/blob/ee4f434814ea255219c58a9995ee6f6d254811e7/Dockerfile) | — |
 | 1. | KMIR documentation | <ul><li>[x] </li></ul>| [README](https://github.com/runtimeverification/mir-semantics/blob/ee4f434814ea255219c58a9995ee6f6d254811e7/kmir/README.md) | — |
 | 2. | **kup** integration | <ul><li>[x] </li></ul>| [runtimeverification/kup](https://github.com/runtimeverification/kup/blob/cf2ff4245ccefb64a98f752a324a807a43cf9184/src/kup/__main__.py#L60) | — |
-| 3. | Blog post | <ul><li>[ ] </li></ul>| | missing |
+| 3. | Blog post | <ul><li>[x] </li></ul>| [runtimeverification.com](https://runtimeverification.com/blog/introducing-kmir) | Good introduction |
 
 ## General Notes
 
@@ -25,7 +25,7 @@
 The machine used for this evaluation is a Thinkpad T480 with Ubuntu 22.04
 
 - K Framework installation required `sudo apt --fix-broken install ./kframework_6.1.67_amd64_ubuntu_jammy.deb`
-- requires exactly K version v6.1.66
+- KMIR requires exactly K version v6.1.66
 - `make build` and `kmir parse` example calls successful
 - integration tests output: 
   - `1926 passed, 769 skipped in 193.03s`
