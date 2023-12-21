@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Accepted
+- **Status:** In progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/fidi-dotsight-analytics.md
 - **Milestone:** 3
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -9,10 +9,10 @@
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/LICENSE) | |
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | [LINK](https://docs.fidi.tech/dotsight-library/dotsight-overview) | |
-| **0c.** | Testing | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/pipelines/pipelines.controller.spec.ts) | |
+| **0c.** | Testing | <ul><li>[ ] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight/blob/main/src/pipelines/pipelines.controller.spec.ts) | |
 | **1a.** | dApp-level signals | <ul><li>[x] </li></ul> | [LINK](https://docs.fidi.tech/dotsight-library/supported-metrics-types) | |
-| **1b.** | Online testing & deployment | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight-ui/blob/main/src/features/PipelineExecution/ui/index.tsx) |  |
-| **2a.** | Deployment validation & View status | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight-ui/blob/main/src/features/PipelineExecution/ui/index.tsx) |  |
+| **1b.** | Online testing & deployment | <ul><li>[ ] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight-ui/blob/main/src/features/PipelineExecution/ui/index.tsx) |  |
+| **2a.** | Deployment validation & View status | <ul><li>[ ] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight-ui/blob/main/src/features/PipelineExecution/ui/index.tsx) |  |
 | **2b.** | Automated and ad-hoc deployment | <ul><li>[x] </li></ul> | [Docs](https://docs.fidi.tech/dotsight-library/developer-guide)[ Data Service](https://github.com/fidi-tech/dotsight/blob/main/README.md#quick-start) [UI](https://github.com/fidi-tech/dotsight-ui)|  |
 | **2c.** | Data interface: view construction | <ul><li>[x] </li></ul> | [LINK](https://github.com/fidi-tech/dotsight-ui/blob/main/src/features/widgetTypeSelector/ui/index.tsx) |  |
 | **2d.** | Data interface: Deployment | <ul><li>[x] </li></ul> | [LINK](https://docs.fidi.tech/code-free-analytics/widgets-collection) |  |
