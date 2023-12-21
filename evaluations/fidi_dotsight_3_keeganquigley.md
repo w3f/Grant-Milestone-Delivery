@@ -19,6 +19,12 @@
 
 # General Notes
 
+I'm able to use the app and get most of the way through creating a pipeline.
+
+![fidi](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/aa09d13c-5603-43b8-9505-631b82137daf)
+
+![fidi key](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/ae9f8d22-6445-4554-b2b2-2ef8b7404c6f)
+
 ## Tests
 
 Unit tests pass with overall good coverage:
