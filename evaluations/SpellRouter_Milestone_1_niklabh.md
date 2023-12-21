@@ -17,7 +17,6 @@
 | 1.b | Integrate early version of XCM Router II | <ul><li>[x] </li> </ul>  |[PR adding XCM Router II](https://github.com/paraspell/xcm-router/pull/2), [Commit adding XCM Router II](https://github.com/paraspell/xcm-router/commit/4c4874cc49754125cc84a6b22e84b299fe7e7213)| Integrated XCM Router functionality - builder pattern looks good. |
 | 2. | Update docs to cover early XCM Router version | <ul><li>[x] </li> </ul>  |[PR adding documentation for early XCM Router version](https://github.com/paraspell/docs/pull/4)| Comprehensive guide that covers usage of early XCM Router version is well written. |
 | 3. | Create unit tests for XCM Router | <ul><li>[x] </li> </ul>  | [PR adding core unit tests for XCM Router](https://github.com/paraspell/xcm-router/pull/2), [Commit adding core unit tests for XCM Router](https://github.com/paraspell/xcm-router/commit/4c4874cc49754125cc84a6b22e84b299fe7e7213) | Unit tests for core features in XCM Router is working fine. |
-| 4. | Playground for XCM Router | <ul><li>[] </li> </ul>  | N.A. | Playground is not working. Seems like interlay APIs has changed. |
 
 # General Notes
 
