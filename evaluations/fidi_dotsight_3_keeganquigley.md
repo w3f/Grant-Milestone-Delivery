@@ -99,3 +99,73 @@ JWT_SECRET=secret-jwt
 SESSION_SECRET=some-secret
 UI_HOST=http://localhost:3001
 ```
+# UI
+
+App starts successfully:
+```ts
+npm run build
+
+> my-app@0.1.0 build
+> next build
+
+(node:9491) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Creating an optimized production build
+ ✓ Compiled successfully
+ ✓ Linting and checking validity of types
+   Collecting page data  ..(node:9533) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9532) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9540) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9544) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9542) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9543) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9541) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Collecting page data
+   Generating static pages (0/6)  [    ](node:9546) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9535) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9545) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9545) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+(node:9534) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Generating static pages (6/6)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    1.14 kB         132 kB
+├ ○ /_not-found                          885 B          81.6 kB
+├ ○ /login                               8 kB           88.7 kB
+└ λ /pipeline/[id]                       351 kB          482 kB
++ First Load JS shared by all            80.7 kB
+  ├ chunks/864-38e210505956e733.js       27.6 kB
+  ├ chunks/fd9d1056-24a81e82ede0df4d.js  51 kB
+  ├ chunks/main-app-4b29246d184fa03c.js  240 B
+  └ chunks/webpack-14ce02176bb4ae81.js   1.91 kB
+
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+```
+```ts
+npm start
+
+> my-app@0.1.0 start
+> next start -p 3001
+
+(node:9732) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ▲ Next.js 13.5.4
+  - Local:        http://localhost:3001
+
+ ✓ Ready in 108ms
+```
