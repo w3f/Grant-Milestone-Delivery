@@ -3,10 +3,12 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkadot_tests.md
-* * **Milestone Number:** 1
+* **Milestone Number:** 1
 
 **Context** (optional)
+
 We present a POC and comprehensive study on the conformance testing of Polkadot host node implementations. We delve into the importance of ensuring consistent behavior across all host implementations, the challenges involved, and the potential solutions. 
+
 The review previous efforts in this domain, providing insights into their strengths and shortcomings. Furthermore, we discuss the testing of various aspects of the Polkadot protocol, including the host API, storage, and cryptographic functionalities.
 Our work concludes with recommendations for future testing efforts, emphasizing the need for rigorous testing and strict adherence to the Polkadot specification document.
 
@@ -25,6 +27,7 @@ Our work concludes with recommendations for future testing efforts, emphasizing 
 
 
 **Additional Information**
+
 Blockchain projects are complex and critical systems. They require particular attention to specification and testing, especially when there are different implementations working on the same network.
 We have tried to come up with a solution that would facilitate the work of developers without burdening them. Polkadot might benefit from a custom testing tool, and we are looking forward to building it for the community.
  
