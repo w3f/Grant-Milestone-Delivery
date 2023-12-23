@@ -37,12 +37,14 @@ The article consist of a small description and images for each of the new featur
 
 ## Show related runtime metadata in item's detail
 Since Spec 100001: For every item there is a popup with additional information as expected. In a lot of cases this is pretty unhelpful as it is just another documentation link from the extrinsic to a pallet. The button "click to view more" doesn't forward to more information. I think this should be improved as this is a major item combined with the metadata explorer of this grant.
-![unhelpful message](https://imgur.com/a/kTy3UI8))
+<img width="438" alt="Bildschirm­foto 2023-12-23 um 19 40 57" src="https://github.com/PieWol/Grant-Milestone-Delivery/assets/75956460/48ef50d1-ff5f-4210-81e7-3da96a9c6c34">
+
 Works well for previous specs though. 
 
 ## building and testing output
 
 ``` $ npm install
+
 npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
 
 changed 409 packages, and audited 2297 packages in 16m
