@@ -7,7 +7,7 @@
 - **Status:** In Progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Calamar.md 
 - **Milestone:** 3
-- **Kusama Identity:** TODO
+- **Kusama Identity:** [HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS](https://kusama.subscan.io/account/HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS)
 - **Previously successfully merged evaluation:** None
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
