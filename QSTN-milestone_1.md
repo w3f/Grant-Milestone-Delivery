@@ -36,13 +36,13 @@ QSTN is a Web3 survey marketplace where businesses fund surveys, reward particip
     * Testing guide = https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/TESTING-GUIDE.md 
 
 0d. Docker - 
-* Here is a link to the Docker file = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/docker 
+* Here is a link to the Docker file = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/substrate-node/docker 
 
 0e. Article - 
 * Here is the Medium article = https://medium.com/@qstnus/qstns-next-frontier-a-bold-leap-into-the-polkadot-ecosystem-9de5b7afbf4e
     * We will publish as soon as we get grant approval 
 
-Survey pallet 
+2. Survey pallet 
 * This is the main pallet and its interface = http://pallet-demo.qstnus.com/ 
     * This is the interface which we open sourced since the other is related to our production application 
     * This is the code related to the pallet: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-pallet/survey 
@@ -52,15 +52,20 @@ Survey pallet
     * Within the business experience, we allow businesses to fund surveys with DOT which survey respondents receive in their connected Polkadot.JS wallet 
     * Within the business experience, we allow businesses to invite users to complete the survey, add and remove questions plus access gate
 
-Survey pallet UI 
+3. Survey pallet UI 
 * Here is a link to the UI for the pallet = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/front-end 
 
-Substrate Chain
+4. Substrate Chain
 * Here is the substrate node = https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fdotnode.qstnus.com#/explorer 
     * This is the code related to the substrate node: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/substrate-node 
-* Here is the data wallet API = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api 
-    * Here is the data wallet UI = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api/BACKEND-ZKP
-* Here is the NFT pallet = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/nfts-pallet 
+* Here is the NFT pallet = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/nfts-pallet
+
+5. ZKP Proof Generation
+Here is the data wallet API = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api
+
+6. Data Wallet
+Here is the data wallet API = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api
+Here is the data wallet UI = https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api/BACKEND-ZKP
 
 ### Overview
 https://github.com/qstnus/Grant-Milestone-Delivery/tree/master
@@ -74,16 +79,33 @@ https://github.com/qstnus/Grant-Milestone-Delivery/tree/master
 - **FTE:**  6 employees
 - **Costs:** 10,000 USD
 
+| Number | Deliverable | Link |
+| -----: | ----------- | ------------- |
+| 0a. | License | LINK: https://github.com/QSTN-US/qstn-polkadot-marketplace-v021/blob/main/LICENSE |
+| 0b. | Documentation	| LINK 1: https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/STEP-BY-STEP-MILESTONE.md & LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/QUICK-START.md	& LINK 3: https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/README.md  | 
+| 0c. | Testing Guide	| LINK: https://github.com/QSTN-US/Polkadot-QSTN-v1/blob/main/docs/TESTING-GUIDE.md 	| 
+| 0d. | Docker |	LINK: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/substrate-node/docker	|
+| 0e. | Article |	LINK: https://medium.com/@qstnus/qstns-next-frontier-a-bold-leap-into-the-polkadot-ecosystem-9de5b7afbf4e | 
+| 1. | Survey pallet |	LINK 1: http://pallet-demo.qstnus.com/ & LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-pallet/survey  |	
+| 2. | Survey pallet UI|	LINK 1: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/front-end & LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/nfts-pallet
+| 3. | Substrate chain |	LINK 1:	https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fdotnode.qstnus.com#/explorer  & LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/substrate-node & LINK 3: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/nfts-pallet |
+| 4. | Substrate chain UI |	LINK: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/qstn-substrate-node/front-end 	|
+| 5. | ZKP Proof Generation |	LINK: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api	|
+| 6. | Data Wallet |	LINK 1: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api	& LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api/BACKEND-ZKP |
+
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | 0a. | License | Open Source | We will open source the survey pallet since the other implementations are publicly available 
-| 0b. | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can generate a Polkadot.JS wallet during on boarding, connect this wallet to our web application, mint and/or transfer NFTs from our marketplace to their specified DOT wallet and save their "survey ID" on a local substrate chain as immutable proof of completion |
+| 0b. | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can generate a Polkadot.JS wallet during on boarding, connect this wallet to our web application, mint and/or transfer NFTs from our marketplace to their specified DOT wallet and save their "survey ID" on a local substrate chain as immutable proof of completion | 
 | 0c. | Testing Guide | Core functions will be fully covered by unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
 | 0d. | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
 | 0e. | Article | We will publish a Medium article that documents our transition to Polkadot and details how users of QSTN can connect their DOT wallet to our application, mint & transfer purchased media onto the DOT blockchain as well as save their survey ID on-chain on a local substrate chain. 
 | 1. | Survey pallet | We will create a Substrate module that will allow users to create a survey, invite other users to create a survey for their business, add questions (metadata), remove questions (metadata), give permission as to who can answer and list created surveys.  
 | 2. | Survey pallet UI | We will create a new UI for DOT users to be able to ask questions, receive credit and screenshot their response on-chain; these design assets will include landing pages and layouts which we will open source to the DOT community 
 | 3. | Substrate chain | The survey pallet of our custom chain will interact in such a way to allow users to connect their DOT wallet to our application, mint media on a local substrate chain as well as create surveys, invite businesses to create their own surveys, and give permissions as to who can answer a survey [1.] and then save the completed survey ID on-chain as proof of completion [1.] these transactions take place within our new UI [2.]
+| 4. | Substrate chain | The survey pallet of our custom chain will interact in such a way to allow users to connect their DOT wallet to our application, withdraw DOT and then mint media on a local substrate chain [1.] and these transactions take place within our new UI [3.] with proof recorded by our ZKP [5] after being funded by the business [2] and recorded in the data wallet [6]
+| 5. | ZKP Proof Generation | We will create an API for the Cubby data wallet to generate zero knowledge proofs upon survey completion on the Substrate chain - this ZKP will be the "receipt" to verify users are eligible to connect their wallet and withdraw rewards from a particular survey contract.
+| 6. |Data Wallet	| We will open source our data wallet which is an authorizathion layer within QSTN allowing users to interact and generate zero knowledge proofs upon survey completion on DOT - this wallet interacts with the pallets deployed by our local substrate node through our API.
 
 **Additional Information**
 > Any further comments on the milestone that you would like to share with us.
