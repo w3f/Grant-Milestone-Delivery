@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo_parachain.md
 - **Milestone:** 1
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -10,13 +10,15 @@
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a.    | License     | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/Off-Narrative-Labs/Tuxedo/blob/939b44200241db29037f87bbf1c06cfe59975d21/LICENSE) | Apache 2.0 | 
 | 0b.    | Documentation | <ul><li>[x] </li></ul> | [off-narrative-labs.github.io](https://off-narrative-labs.github.io/Tuxedo), [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/939b44200241db29037f87bbf1c06cfe59975d21/README.md) | Good documentation as usual | 
-| 0c.    | Testing     | <ul><li>[x] </li></ul> | [README](https://github.com/Off-Narrative-Labs/Tuxedo/tree/939b44200241db29037f87bbf1c06cfe59975d21#testing-and-code-quality) | — |
-| 0d.    | Docker      | <ul><li>[x] </li></ul> | [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/939b44200241db29037f87bbf1c06cfe59975d21/README.md#docker), [Off-Narrative-Labs/packages](https://github.com/orgs/Off-Narrative-Labs/packages) | We provide docker images for both the template node and the PoC wallet as well as instructions for how to test the node with them. |
-| 1.     | Tuxedo Parachain Core | <ul><li>[x] </li></ul> | [/tuxedo-parachain-core](https://github.com/Off-Narrative-Labs/Tuxedo/tree/939b44200241db29037f87bbf1c06cfe59975d21/tuxedo-parachain-core) | Extensions to `tuxedo-core` that allow the runtime to be a parachain. |
+| 0c.    | Testing     | <ul><li>[x] </li></ul> | [README](https://github.com/Off-Narrative-Labs/Tuxedo/tree/939b44200241db29037f87bbf1c06cfe59975d21#testing-and-code-quality) | Good test coverage |
+| 0d.    | Docker      | <ul><li>[x] </li></ul> | [README](https://github.com/Off-Narrative-Labs/Tuxedo/blob/939b44200241db29037f87bbf1c06cfe59975d21/README.md#docker), [Off-Narrative-Labs/packages](https://github.com/orgs/Off-Narrative-Labs/packages) | — |
+| 1.     | Tuxedo Parachain Core | <ul><li>[x] </li></ul> | [/tuxedo-parachain-core](https://github.com/Off-Narrative-Labs/Tuxedo/tree/939b44200241db29037f87bbf1c06cfe59975d21/tuxedo-parachain-core) | — |
 
 ## General Notes
 
-In addition to the agreed deliverables, the team also supplied
+
+- Good documentation, good test coverage. Everything worked out of the box.
+- In addition to the agreed deliverables, the team also supplied:
 
 
 | Number | Deliverable | Link | Notes |
