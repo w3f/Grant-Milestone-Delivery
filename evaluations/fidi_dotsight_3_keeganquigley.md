@@ -19,9 +19,11 @@
 
 # General Notes
 
+All issues were resolved. A nice UI overall, back-end and front-ends work locally and deployed. Looking forward to see it all come together in the next milestone.
+
 ## Eval v2
 
-I'm able to get through all the steps to create a pipeline.
+I'm able to get through all the steps to create a pipeline. Thanks for sending a key so that I didn't have to sign up for the platform.
 
 <img width="1287" alt="widget" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/b96b68fa-b4ca-4558-8b32-c8336797cd1b">
 
