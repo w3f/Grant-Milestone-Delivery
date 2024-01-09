@@ -231,7 +231,196 @@ Ran all test suites.
 ```
 </details>
 
+Front-end unit tests pass:
+
+<details>
+ <summary>Output</summary>
+
+ PASS  src/app/page.spec.tsx
+ PASS  src/features/mapperSelector/lib/hooks/index.spec.ts
+ PASS  src/widgets/pipelinesList/ui/index.spec.tsx
+ PASS  src/features/dataSourceSelector/lib/hooks/useDataSourceConfiguration.spec.ts
+ PASS  src/features/dataSourceSelector/lib/hooks/index.spec.ts
+ PASS  src/features/mapperSelector/lib/hooks/useRefetchSuggestions.spec.ts
+ PASS  src/features/widgetTypeSelector/lib/hooks/useOnNextStep.spec.ts
+ PASS  src/entities/pipeline/model/setPipelineDataSource.spec.ts
+ PASS  src/entities/pipelineExecutionParams/model/providers/getPipelineExecutionParams.spec.ts
+ PASS  src/features/dataSourceSelector/lib/hooks/useRefetchSuggestions.spec.ts
+ PASS  src/features/HOC/withAuth/ui/index.spec.tsx
+ PASS  src/widgets/pipelineManager/lib/fetchPipelineById.spec.ts
+ PASS  src/features/pipelineSave/lib/thunks/savePipeline.spec.ts
+ PASS  src/widgets/createPipeline/ui/index.spec.tsx
+ PASS  src/shared/lib/unit.spec.ts
+ PASS  src/shared/lib/color.spec.ts
+ PASS  src/app/pipeline/[id]/page.spec.tsx
+ PASS  src/app/layout.spec.tsx
+  ● Console
+
+    console.error
+      Warning: validateDOMNesting(...): <html> cannot appear as a child of <div>.
+          at html
+          at children (/Users/keeganquigley/dotsight-ui/src/app/layout.tsx:9:3)
+
+      15 | describe('RootLayout', () => {
+      16 |   it('renders children wrapped in the Providers', () => {
+    > 17 |     render(<RootLayout><div>My test</div></RootLayout>);
+         |           ^
+      18 |
+      19 |     const provider = screen.getByTestId('providers');
+      20 |     expect(provider).toBeInTheDocument();
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10847:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25738:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:161:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:247:10)
+      at Object.<anonymous> (src/app/layout.spec.tsx:17:11)
+
+ PASS  src/shared/ui/LineChart/index.spec.tsx
+ PASS  src/features/mainLayout/ui/index.spec.tsx
+
+Test Suites: 33 passed, 33 total
+Tests:       79 passed, 79 total
+Snapshots:   0 total
+Time:        2.628 s
+Ran all test suites.
+</details>
+
 ## Back-end
+
+## Eval v2
+
+<details>
+ <summary>Database is now populated successfully</summary>
+
+```ts
+npm start
+
+> my-app@0.1.0 start
+> next start -p 3001
+
+(node:5780) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ▲ Next.js 13.5.4
+  - Local:        http://localhost:3001
+
+ ✓ Ready in 106ms
+ ```
+
+ `npm run typeorm:run-migrations` is successful:
+
+ ```ts
+ > @fidi/dotsight@0.0.1 typeorm:run-migrations
+> npm run typeorm -- migration:run -d ./typeorm.config.ts
+
+
+> @fidi/dotsight@0.0.1 typeorm
+> ts-node ./node_modules/typeorm/cli migration:run -d ./typeorm.config.ts
+
+query: SELECT * FROM current_schema()
+query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+query: SELECT version();
+query: SELECT * FROM "information_schema"."tables" WHERE "table_schema" = 'public' AND "table_name" = 'migrations'
+query: CREATE TABLE "migrations" ("id" SERIAL NOT NULL, "timestamp" bigint NOT NULL, "name" character varying NOT NULL, CONSTRAINT "PK_8c82d7f526340ab734260ea46be" PRIMARY KEY ("id"))
+query: SELECT * FROM "migrations" "migrations" ORDER BY "id" DESC
+0 migrations are already loaded in the database.
+3 migrations were found in the source code.
+3 migrations are new migrations must be executed.
+query: START TRANSACTION
+query: CREATE TABLE "data_source" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "type" character varying NOT NULL, "config" json NOT NULL, "pipeline_id" uuid, CONSTRAINT "PK_9775f6b6312a926ed37d3af7d95" PRIMARY KEY ("id"))
+query: CREATE TABLE "mixer" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "entity" character varying NOT NULL, "config" json NOT NULL, "pipeline_id" uuid, CONSTRAINT "PK_ef02f9c669745e0e1bed69c669d" PRIMARY KEY ("id"))
+query: CREATE TABLE "middleware" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "type" character varying NOT NULL, "config" json NOT NULL, "order" integer NOT NULL, "pipeline_id" uuid, CONSTRAINT "UQ_6f7f1215920e90d902599934876" UNIQUE ("pipeline_id", "order"), CONSTRAINT "PK_aced9b1bc194d77dd07ddd4d092" PRIMARY KEY ("id"))
+query: CREATE TABLE "mapper" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "code" character varying NOT NULL, "type" character varying NOT NULL, "config" json NOT NULL, "pipeline_id" uuid, CONSTRAINT "UQ_e83bb4f6291dd30d674498bc8c2" UNIQUE ("code", "pipeline_id"), CONSTRAINT "PK_224ac6bde7daf61000eee9d3370" PRIMARY KEY ("id"))
+query: CREATE TABLE "widget" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "type" character varying NOT NULL, "config" json NOT NULL, "datashape" character varying NOT NULL, "mapper_id" uuid, "pipeline_id" uuid, CONSTRAINT "REL_521e04535f924325322571b81f" UNIQUE ("mapper_id"), CONSTRAINT "PK_feb5fda4f8d30bbe0022f4ca804" PRIMARY KEY ("id"))
+query: CREATE TABLE "pipeline" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "name" character varying NOT NULL, CONSTRAINT "PK_df8aedd50509192d995535d68cd" PRIMARY KEY ("id"))
+query: ALTER TABLE "data_source" ADD CONSTRAINT "FK_a443e2998350efc1e45a8625ada" FOREIGN KEY ("pipeline_id") REFERENCES "pipeline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "mixer" ADD CONSTRAINT "FK_6914071fbba1ee4767f12918890" FOREIGN KEY ("pipeline_id") REFERENCES "pipeline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "middleware" ADD CONSTRAINT "FK_2f23aa1eb2e6b7ebbde0c56bf9c" FOREIGN KEY ("pipeline_id") REFERENCES "pipeline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "mapper" ADD CONSTRAINT "FK_4a18b5f49958259c953fbe3c012" FOREIGN KEY ("pipeline_id") REFERENCES "pipeline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "widget" ADD CONSTRAINT "FK_521e04535f924325322571b81f3" FOREIGN KEY ("mapper_id") REFERENCES "mapper"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "widget" ADD CONSTRAINT "FK_93ee0c96034136a3183bb30bf28" FOREIGN KEY ("pipeline_id") REFERENCES "pipeline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: INSERT INTO "migrations"("timestamp", "name") VALUES ($1, $2) -- PARAMETERS: [1696959732832,"Initial1696959732832"]
+Migration Initial1696959732832 has been  executed successfully.
+query: CREATE TABLE "user" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id"))
+query: CREATE TABLE "credential" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "issuer" character varying NOT NULL, "subject_id" character varying NOT NULL, "user_id" uuid, CONSTRAINT "UQ_96f741a52e5e7dbe016cc75af19" UNIQUE ("issuer", "subject_id"), CONSTRAINT "PK_3a5169bcd3d5463cefeec78be82" PRIMARY KEY ("id"))
+query: ALTER TABLE "pipeline" ADD "createdById" uuid
+query: ALTER TABLE "pipeline" ADD CONSTRAINT "FK_eb6346819381efb488f95624872" FOREIGN KEY ("createdById") REFERENCES "user"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: ALTER TABLE "credential" ADD CONSTRAINT "FK_f462968b424cfa19b629109b6f3" FOREIGN KEY ("user_id") REFERENCES "user"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+query: INSERT INTO "migrations"("timestamp", "name") VALUES ($1, $2) -- PARAMETERS: [1701366833567,"Auth1701366833567"]
+Migration Auth1701366833567 has been  executed successfully.
+query: ALTER TABLE "pipeline" ADD "isPublic" boolean NOT NULL DEFAULT false
+query: INSERT INTO "migrations"("timestamp", "name") VALUES ($1, $2) -- PARAMETERS: [1704730284708,"Public1704730284708"]
+Migration Public1704730284708 has been  executed successfully.
+query: COMMIT
+```
+</details>
+
+<details>
+ <summary>App now builds and runs successfully</summary>
+
+```ts
+npm run start:dev
+[3:28:17 PM] Starting compilation in watch mode...
+
+[3:28:19 PM] Found 0 errors. Watching for file changes.
+
+(node:6651) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [NestFactory] Starting Nest application...
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] MixersModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] MiddlewaresModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] HttpModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] JwtModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmCoreModule dependencies initialized +66ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] MappersModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] DataSourcesModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] UsersModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] WidgetsModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] AuthModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [InstanceLoader] PipelinesModule dependencies initialized +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RoutesResolver] PipelinesController {/api/pipelines}: +18ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/execute, GET} route +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines, POST} route +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId, PATCH} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/mappers, POST} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/widgets, POST} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/widgets/:widgetId/suggestions/mappers, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/widgets/:widgetId/mappers, POST} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/suggestions/data-sources, GET} route +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/data-sources, POST} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/pipelines/:pipelineId/mappers/:mapperCode/params, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RoutesResolver] AuthControllerDev {/api/auth}: +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/google, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/google/callback, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/twitter, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/twitter/callback, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/github, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/github/callback, GET} route +0ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [RouterExplorer] Mapped {/api/auth/logout, GET} route +1ms
+[Nest] 6651  - 01/09/2024, 3:28:20 PM     LOG [NestApplication] Nest application successfully started +1ms
+```
+</details>
 
 The Docker container runs successfully:
 ```sh
@@ -260,7 +449,24 @@ docker ps
 CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS          PORTS                    NAMES
 2f6180b1d0b5   postgres:16   "docker-entrypoint.s…"   15 seconds ago   Up 14 seconds   0.0.0.0:5433->5432/tcp   dotsight-db-1
 ```
-But still getting an error when running the first command:
+Both builds run:
+
+```
+npm run dev
+
+> my-app@0.1.0 dev
+> next dev -p 3001
+
+(node:7711) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7712) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ▲ Next.js 13.5.4
+  - Local:        http://localhost:3001
+
+ ✓ Ready in 2.2s
+ ```
+~~But still getting an error when running the first command:~~
 ```ts
 npm run typeorm:run-migrations
 
@@ -302,7 +508,7 @@ Error: getaddrinfo ENOTFOUND dotsight
 Error: getaddrinfo ENOTFOUND dotsight
     at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
 ```
-My .env file looks like this:
+~~My .env file looks like this:~~
 ```
 DB_HOST=dotsight
 DB_PORT=5433
