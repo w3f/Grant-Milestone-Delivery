@@ -19,6 +19,16 @@
 
 # General Notes
 
+## Eval v2
+
+I'm able to get through all the steps to create a pipeline.
+
+<img width="1287" alt="widget" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/b96b68fa-b4ca-4558-8b32-c8336797cd1b">
+
+<img width="1287" alt="widget2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/78847ad5-309d-4d9d-8179-56fa9123efa0">
+
+## Eval v1
+
 I'm able to use the app and get most of the way through creating a pipeline.
 
 ![fidi](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/aa09d13c-5603-43b8-9505-631b82137daf)
