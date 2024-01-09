@@ -19,7 +19,7 @@
 
 # General Notes
 
-All issues were resolved. A nice UI overall, back-end and front-ends work locally and deployed. Looking forward to see it all come together in the next milestone.
+All issues were resolved. A nice UI overall, back-end and front-ends work locally and deployed. Looking forward to see it all come together in the next two milestones.
 
 ## Eval v2
 
