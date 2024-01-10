@@ -20,3 +20,63 @@
 | 6. | Data Wallet | <ul><li>[x] </li></ul> |	LINK 1: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api	& LINK 2: https://github.com/QSTN-US/Polkadot-QSTN-v1/tree/main/zkp-datawallet-api/BACKEND-ZKP |
 
 ## General Notes
+
+## Tests
+
+36 pallet unit tests pass:
+```rust
+     Running unittests src/main.rs (target/debug/deps/node_template-3f36e058f1aeb3d0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/node_template_runtime-6086f1a75e874fc1)
+
+running 1 test
+test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/pallet_survey-48178eaea42a2c27)
+
+running 36 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::create_and_fund_survey_success ... ok
+test tests::create_and_fund_survey_success_creator ... ok
+test tests::create_new_survey_fail_already_existing ... ok
+test tests::create_new_survey_success_creator_owner ... ok
+test tests::create_new_survey_success ... ok
+test tests::fund_survey_fails_funding_inferior_participants_limit ... ok
+test tests::fund_survey_fails_survey_already_funded ... ok
+test tests::fund_survey_fails_survey_not_created ... ok
+test tests::fund_survey_fails_survey_not_owner_not_creator ... ok
+test tests::fund_survey_fails_survey_not_enough_balance ... ok
+test tests::fund_survey_gives_expected_reward_amount_10000_for_1000 ... ok
+test tests::fund_survey_success ... ok
+test tests::fund_survey_success_creator_funds ... ok
+test tests::fund_survey_success_creator_owner ... ok
+test tests::register_participant_fails_max_number_participants_reached ... ok
+test tests::register_participant_fails_not_owner ... ok
+test tests::register_participant_fails_participant_already_registered ... ok
+test tests::register_participant_fails_survey_is_not_active ... ok
+test tests::register_participant_fails_survey_not_created ... ok
+test tests::register_participant_fails_survey_not_funded ... ok
+test tests::register_participant_success ... ok
+test tests::register_participant_success_creator ... ok
+test tests::register_participant_success_creator_registers ... ok
+test tests::reward_participant_fails_not_owner ... ok
+test tests::reward_participant_fails_already_rewarded ... ok
+test tests::reward_participant_fails_participant_not_registered ... ok
+test tests::reward_participant_fails_survey_not_created ... ok
+test tests::reward_participant_success ... ok
+test tests::reward_participant_success_creator ... ok
+test tests::reward_participant_fails_survey_not_funded ... ok
+test tests::reward_participant_success_creator_rewards ... ok
+test tests::set_survey_status_success ... ok
+test tests::set_survey_status_success_creator ... ok
+test tests::set_survey_status_success_creator_sets ... ok
+test tests::set_survey_status_fails_not_owner ... ok
+
+test result: ok. 36 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+```
