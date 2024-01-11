@@ -2,7 +2,7 @@
 
 - **Status:** In progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dapp_wallet_integration_native_mobile_libraries.md
-- **Milestone:** 2
+- **Milestone:** 3
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable | Link | Notes |
@@ -19,3 +19,5 @@
 | 5. | Android demo dApp | [polkachat.kotlin](https://github.com/tesseract-one/polkachat.kotlin) |  |
 
 ## General Notes
+
+App works to sign and send messages on Rococo chain.
