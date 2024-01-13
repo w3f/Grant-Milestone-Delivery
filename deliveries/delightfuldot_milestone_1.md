@@ -3,7 +3,7 @@
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** [DelightfulDOT](https://github.com/w3f/Grants-Program/blob/master/applications/delightfuldot.md)
-* **Milestone Number:** e.g. 1
+* **Milestone Number:** 1
 
 **Deliverables**
 | Number | Deliverable | Link | Notes |
