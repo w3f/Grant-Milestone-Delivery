@@ -17,3 +17,4 @@
 **Additional Information**
 - Regarding the `ability to add custom RPC APIs` as stated in Deliverable 01
   - We can now call arbitrary RPC methods to a blockchain node ([docs](https://github.com/CoongCrafts/delightfuldot?tab=readme-ov-file#execute-rpc-methods)), but the ability to define custom specs & generate types for those specs are not yet supported for now in M1, since this feature is tied & related to the feature to generate chain types & APIs for custom chain (codegen), so we plan to ship this feature in M2 along with custom runtime APIs.
+- In term of benchmarking, we've archieved a [similar performance](https://github.com/sinzii/delightfuldot-poc?tab=readme-ov-file#memory-consumption-benchmark-result) as with the PoC we had before. We've updated the benchmark scripts to use the new [`delightfuldot`](https://www.npmjs.com/package/delightfuldot) package, you can clone the repo and try it out now.
