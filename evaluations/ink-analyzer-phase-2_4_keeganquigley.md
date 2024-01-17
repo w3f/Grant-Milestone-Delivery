@@ -19,3 +19,401 @@
 | 4.      | Semantic Analyzer: Rust crate update: Diagnostics that verify that input and output types of chain extension methods implement SCALE codec traits (i.e. scale's `Encode` and `Decode` and scale-info's `TypeInfo`) as well as quick fixes and code/intent actions to implement the SCALE codec traits for the target item where necessary | <ul><li>[ ] </li></ul> | [GitHub repository](https://github.com/ink-analyzer/ink-analyzer) and the [ensure_custom_types_impl_scale_codec_traits](https://github.com/ink-analyzer/ink-analyzer/blob/analyzer-v0.8.17/crates/analyzer/src/analysis/diagnostics/extension.rs#L50-L106) utility in the [diagnostics/extension](https://github.com/ink-analyzer/ink-analyzer/blob/analyzer-v0.8.17/crates/analyzer/src/analysis/diagnostics/extension.rs) submodule.                                         | 
 
 ## General Notes
+
+Unit tests all pass, 6 were added since last milestone:
+
+<details>
+  <summary>Output</summary>
+
+```rust
+running 157 tests
+test analysis::completions::tests::argument_completions_works ... ok
+test analysis::actions::attr::tests::actions_works ... ok
+test analysis::completions::tests::macro_completions_works ... ok
+test analysis::actions::item::tests::actions_works ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::missing_impl_scale_codec_traits_fails ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::no_impl_from_status_code_fails ... ok
+test analysis::actions::item::tests::is_focused_on_item_declaration_and_body_works ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::impl_from_status_code_works ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::self_error_code_usage_fails ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::unresolvable_error_code_fails ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::no_self_error_code_usage_works ... ok
+test analysis::diagnostics::chain_extension::tests::invalid_quasi_direct_descendant_fails ... ok
+test analysis::diagnostics::chain_extension::tests::invalid_trait_items_fails ... ok
+test analysis::diagnostics::chain_extension::tests::invalid_trait_properties_fails ... ok
+test analysis::diagnostics::chain_extension::tests::missing_error_code_type_fails ... ok
+test analysis::diagnostics::chain_extension::tests::multiple_error_code_types_fails ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::resolvable_error_code_works ... ok
+test analysis::diagnostics::chain_extension::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::chain_extension::tests::non_overlapping_ids_works ... ok
+test analysis::diagnostics::chain_extension::tests::overlapping_ids_fails ... ok
+test analysis::diagnostics::chain_extension::tests::one_error_code_type_works ... ok
+test analysis::diagnostics::chain_extension::tests::valid_quasi_direct_descendant_works ... ok
+test analysis::diagnostics::chain_extension::tests::valid_trait_properties_works ... ok
+test analysis::diagnostics::constructor::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::constructor::tests::invalid_callable_fails ... ok
+test analysis::diagnostics::constructor::tests::missing_return_type_fails ... ok
+test analysis::diagnostics::chain_extension::tests::valid_trait_items_works ... ok
+test analysis::diagnostics::chain_extension::error_code::tests::impl_scale_codec_traits_works ... ok
+test analysis::diagnostics::constructor::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::constructor::tests::no_self_receiver_works ... ok
+test analysis::diagnostics::constructor::tests::self_receiver_fails ... ok
+test analysis::diagnostics::constructor::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::constructor::tests::return_type_works ... ok
+test analysis::diagnostics::constructor::tests::valid_callable_works ... ok
+test analysis::diagnostics::contract::tests::invalid_quasi_direct_descendant_fails ... ok
+test analysis::diagnostics::contract::tests::missing_constructor_fails ... ok
+test analysis::diagnostics::contract::tests::missing_message_fails ... ok
+test analysis::diagnostics::contract::tests::missing_storage_fails ... ok
+test analysis::diagnostics::contract::tests::multiple_storage_items_fails ... ok
+test analysis::diagnostics::contract::tests::multiple_wildcard_selectors_fails ... ok
+test analysis::diagnostics::contract::tests::non_impl_parent_for_callables_fails ... ok
+test analysis::diagnostics::contract::tests::non_mod_fails ... ok
+test analysis::diagnostics::contract::tests::inline_mod_works ... ok
+test analysis::diagnostics::contract::tests::non_overlapping_selectors_works ... ok
+test analysis::diagnostics::contract::tests::one_or_multiple_constructors_works ... ok
+test analysis::diagnostics::contract::tests::one_or_multiple_messages_works ... ok
+test analysis::diagnostics::contract::tests::one_or_no_wildcard_selectors_works ... ok
+test analysis::diagnostics::contract::tests::out_of_line_mod_fails ... ok
+test analysis::diagnostics::contract::tests::overlapping_selectors_fails ... ok
+test analysis::diagnostics::contract::tests::one_storage_item_works ... ok
+test analysis::diagnostics::contract::tests::root_items_not_in_root_fails ... ok
+test analysis::diagnostics::contract::tests::valid_quasi_direct_descendant_works ... ok
+test analysis::diagnostics::environment::tests::env_impl_environment_and_default_works ... ok
+test analysis::diagnostics::environment::tests::env_no_impl_environment_fails ... ok
+test analysis::diagnostics::environment::tests::resolvable_and_default_env_works ... ok
+test analysis::diagnostics::environment::tests::unresolvable_env_fails ... ok
+test analysis::diagnostics::event::tests::cfg_field_fails ... ok
+test analysis::diagnostics::event::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::event::tests::contract_parent_works ... ok
+test analysis::diagnostics::event::tests::ink_topic_field_works ... ok
+test analysis::diagnostics::event::tests::non_cfg_field_works ... ok
+test analysis::diagnostics::event::tests::non_contract_parent_fails ... ok
+test analysis::diagnostics::event::tests::non_pub_struct_fails ... ok
+test analysis::diagnostics::event::tests::non_topic_ink_field_fails ... ok
+test analysis::diagnostics::event::tests::pub_struct_works ... ok
+test analysis::diagnostics::event::tests::struct_with_generics_fails ... ok
+test analysis::diagnostics::event::tests::struct_with_no_generics_works ... ok
+test analysis::diagnostics::extension::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::extension::tests::custom_types_missing_impl_scale_codec_traits_fails ... ok
+test analysis::diagnostics::extension::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::extension::tests::invalid_fn_fails ... ok
+test analysis::diagnostics::extension::tests::no_custom_types_or_impl_scale_codec_traits_works ... ok
+test analysis::diagnostics::extension::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::extension::tests::no_self_receiver_works ... ok
+test analysis::diagnostics::extension::tests::self_receiver_fails ... ok
+test analysis::diagnostics::extension::tests::valid_fn_works ... ok
+test analysis::diagnostics::file::tests::invalid_quasi_direct_descendant_fails ... ok
+test analysis::diagnostics::file::tests::multiple_contract_definitions_fails ... ok
+test analysis::diagnostics::file::tests::no_contract_definitions_works ... ok
+test analysis::diagnostics::file::tests::one_contract_definition_works ... ok
+test analysis::diagnostics::file::tests::valid_quasi_direct_descendant_works ... ok
+test analysis::diagnostics::ink_e2e_test::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::ink_e2e_test::tests::fn_works ... ok
+test analysis::diagnostics::ink_e2e_test::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::ink_e2e_test::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::ink_e2e_test::tests::non_fn_fails ... ok
+test analysis::diagnostics::ink_impl::tests::annotated_or_contains_callables_works ... ok
+test analysis::diagnostics::ink_impl::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::ink_impl::tests::impl_parent_for_callables_works ... ok
+test analysis::diagnostics::ink_impl::tests::impl_works ... ok
+test analysis::diagnostics::ink_impl::tests::invalid_impl_properties_fails ... ok
+test analysis::diagnostics::ink_impl::tests::invalid_quasi_direct_descendant_fails ... ok
+test analysis::diagnostics::ink_impl::tests::invalid_trait_definition_impl_fails ... ok
+test analysis::diagnostics::ink_impl::tests::missing_annotation_and_no_callables_ignored ... ok
+test analysis::diagnostics::ink_impl::tests::non_impl_fails ... ok
+test analysis::diagnostics::ink_impl::tests::non_impl_parent_for_callables_fails ... ok
+test analysis::diagnostics::ink_impl::tests::valid_impl_properties_works ... ok
+test analysis::diagnostics::ink_impl::tests::valid_quasi_direct_descendant_works ... ok
+test analysis::diagnostics::ink_impl::tests::valid_trait_definition_impl_works ... ok
+test analysis::diagnostics::ink_test::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::ink_test::tests::fn_works ... ok
+test analysis::diagnostics::ink_test::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::ink_test::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::ink_test::tests::non_fn_fails ... ok
+test analysis::diagnostics::contract::tests::impl_parent_for_callables_works ... ok
+test analysis::diagnostics::message::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::message::tests::invalid_callable_fails ... ok
+test analysis::diagnostics::message::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::message::tests::non_self_ref_receiver_fails ... ok
+test analysis::diagnostics::message::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::message::tests::non_self_return_type_works ... ok
+test analysis::diagnostics::message::tests::self_return_type_fails ... ok
+test analysis::diagnostics::message::tests::self_ref_receiver_works ... ok
+test analysis::diagnostics::storage::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::storage::tests::contract_parent_works ... ok
+test analysis::diagnostics::storage::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::storage::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::storage::tests::non_contract_parent_fails ... ok
+test analysis::diagnostics::storage::tests::non_pub_struct_fails ... ok
+test analysis::diagnostics::storage::tests::pub_struct_works ... ok
+test analysis::diagnostics::storage_item::tests::adt_works ... ok
+test analysis::diagnostics::storage_item::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::storage_item::tests::ink_descendants_fails ... ok
+test analysis::diagnostics::storage_item::tests::no_ink_descendants_works ... ok
+test analysis::diagnostics::storage_item::tests::non_adt_fails ... ok
+test analysis::diagnostics::topic::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::topic::tests::non_struct_field_fails ... ok
+test analysis::diagnostics::topic::tests::struct_field_works ... ok
+test analysis::diagnostics::message::tests::valid_callable_works ... ok
+test analysis::diagnostics::trait_definition::tests::invalid_quasi_direct_descendant_fails ... ok
+test analysis::diagnostics::trait_definition::tests::invalid_trait_items_fails ... ok
+test analysis::diagnostics::trait_definition::tests::invalid_trait_properties_fails ... ok
+test analysis::diagnostics::trait_definition::tests::missing_message_fails ... ok
+test analysis::diagnostics::trait_definition::tests::multiple_messages_works ... ok
+test analysis::diagnostics::trait_definition::tests::one_message_works ... ok
+test analysis::diagnostics::trait_definition::tests::compound_diagnostic_works ... ok
+test analysis::diagnostics::trait_definition::tests::valid_quasi_direct_descendant_works ... ok
+test analysis::diagnostics::trait_definition::tests::valid_trait_properties_works ... ok
+test analysis::diagnostics::trait_definition::tests::valid_trait_items_works ... ok
+test analysis::diagnostics::utils::tests::conflicting_attributes_and_arguments_fails ... ok
+test analysis::diagnostics::utils::tests::duplicate_attributes_and_arguments_fails ... ok
+test analysis::diagnostics::utils::tests::identifiers_not_prefixed_with_ink_works ... ok
+test analysis::diagnostics::utils::tests::identifiers_prefixed_with_ink_fails ... ok
+test analysis::diagnostics::utils::tests::invalid_attribute_argument_format_and_value_type_fails ... ok
+test analysis::diagnostics::utils::tests::known_ink_attributes_works ... ok
+test analysis::diagnostics::utils::tests::no_conflicting_attributes_and_arguments_works ... ok
+test analysis::diagnostics::utils::tests::unknown_ink_attributes_fails ... ok
+test analysis::diagnostics::utils::tests::no_duplicate_attributes_and_arguments_works ... ok
+test analysis::diagnostics::utils::tests::valid_attribute_argument_format_and_value_type_works ... ok
+test analysis::inlay_hints::tests::inlay_hints_works ... ok
+test analysis::hover::tests::hover_works ... ok
+test codegen::tests::invalid_project_name_fails ... ok
+test analysis::signature_help::tests::signature_help_works ... ok
+test resolution::tests::external_crate_item_path_resolution_works ... ok
+test codegen::tests::valid_project_name_works ... ok
+test analysis::diagnostics::contract::tests::root_items_in_root_works ... ok
+test analysis::diagnostics::contract::tests::compound_diagnostic_works ... ok
+
+test result: ok. 157 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 43.50s
+
+     Running tests/actions.rs (target/debug/deps/actions-30cfd75087ad5ef6)
+
+running 1 test
+test actions_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 41.76s
+
+     Running tests/completions.rs (target/debug/deps/completions-d2f6b7a7352c9cfb)
+
+running 1 test
+test completions_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.04s
+
+     Running tests/diagnostics.rs (target/debug/deps/diagnostics-dbb823044b5944bc)
+
+running 1 test
+test diagnostics_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 46.17s
+
+     Running tests/hover.rs (target/debug/deps/hover-f8259af786a5b8e2)
+
+running 1 test
+test hover_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.43s
+
+     Running tests/inlay_hints.rs (target/debug/deps/inlay_hints-7921a62e69eb48d7)
+
+running 1 test
+test inlay_hints_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.82s
+
+     Running tests/signature_help.rs (target/debug/deps/signature_help-d8cbc0b04fbfe55c)
+
+running 1 test
+test signature_help_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.45s
+
+     Running unittests src/lib.rs (target/debug/deps/ink_analyzer_ir-a7af39ffe8cdba0d)
+
+running 39 tests
+test attrs::meta::separator::tests::cast_works ... ok
+test attrs::meta::name::tests::cast_works ... ok
+test attrs::meta::value::tests::cast_works ... ok
+test attrs::parser::tests::parse_ink_args_works ... ok
+test attrs::parser::tests::sort_ink_args_works ... ok
+test chain_extension::tests::cast_works ... ok
+test environment::tests::cast_arg_works ... ok
+test attrs::tests::cast_ink_attribute_works ... ok
+test event::tests::cast_works ... ok
+test constructor::tests::cast_works ... ok
+test ink_e2e_test::tests::cast_works ... ok
+test extension::tests::cast_works ... ok
+test ink_test::tests::cast_works ... ok
+test file::tests::parse_works ... ok
+test selector::tests::cast_arg_works ... ok
+test message::tests::cast_works ... ok
+test storage::tests::cast_works ... ok
+test storage_item::tests::cast_works ... ok
+test topic::tests::cast_works ... ok
+test trait_definition::tests::cast_works ... ok
+test tree::ast_ext::tests::parent_ast_item_works ... ok
+test selector::tests::compose_works ... ok
+test tree::item_at_offset::tests::focused_token_and_affixes_works ... ok
+test ink_impl::tests::cast_works ... ok
+test tree::item_at_offset::tests::parent_variants_works ... ok
+test tree::item_at_offset::tests::probable_and_normalized_parent_variants_works ... ok
+test tree::item_at_offset::tests::prev_and_next_token_variants_works ... ok
+test tree::utils::tests::ink_arg_by_kind_works ... ok
+test tree::utils::tests::ink_args_works ... ok
+test tree::utils::tests::ink_attrs_ancestors_works ... ok
+test tree::utils::tests::ink_attrs_closest_ancestors_works ... ok
+test tree::utils::tests::ink_attrs_closest_descendants_works ... ok
+test contract::tests::cast_works ... ok
+test tree::ast_ext::tests::resolve_item_works ... ok
+test tree::utils::tests::ink_attrs_in_scope_works ... ok
+test tree::utils::tests::ink_attrs_descendants_works ... ok
+test tree::utils::tests::ink_attrs_works ... ok
+test tree::utils::tests::ink_impl_closest_descendants_works ... ok
+test tree::utils::tests::ink_callable_closest_descendants_works ... ok
+
+test result: ok. 39 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running unittests src/lib.rs (target/debug/deps/ink_analyzer_macro-b7242eed5fc31043)
+
+running 9 tests
+test entity::tests::ast_only_works ... ok
+test entity::tests::arg_kind_entity_works ... ok
+test entity::tests::call_entity_works ... ok
+test entity::tests::descendant_fields_works ... ok
+test entity::tests::invalid_macro_args_fails ... ok
+test entity::tests::invalid_initializer_args_fails ... ok
+test entity::tests::initializer_attributes_works ... ok
+test entity::tests::no_ast_field_fails ... ok
+test entity::tests::macro_kind_entity_works ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/ink_lsp_server-97f19d7c98a2c0c1)
+
+running 23 tests
+test dispatch::handlers::notification::tests::handle_did_open_text_document_works ... ok
+test dispatch::handlers::notification::tests::handle_did_change_text_document_works ... ok
+test dispatch::handlers::notification::tests::handle_did_close_text_document_works ... ok
+test dispatch::handlers::request::tests::handle_completion_works ... ok
+test dispatch::handlers::request::tests::handle_code_action_works ... ok
+test dispatch::handlers::request::tests::handle_hover_works ... ok
+test dispatch::handlers::request::tests::handle_execute_command_new_project_works ... ok
+test dispatch::handlers::request::tests::handle_signature_help_works ... ok
+test dispatch::handlers::request::tests::handle_inlay_hint_works ... ok
+test dispatch::routers::request::tests::request_router_works ... ok
+test dispatch::routers::notification::tests::request_router_works ... ok
+test initialize::tests::server_capabilities_works ... ok
+test memory::tests::memory_works ... ok
+test translator::from_lsp::tests::offset_works ... ok
+test dispatch::tests::main_loop_and_dispatcher_works ... ok
+test initialize::tests::initialize_works ... ok
+test utils::tests::can_create_project_via_workspace_edit_works ... ok
+test translator::to_lsp::tests::position_works ... ok
+test utils::tests::position_encoding_works ... ok
+test utils::tests::code_actions_kinds_works ... ok
+test utils::tests::signature_support_works ... ok
+test utils::tests::snippet_support_works ... ok
+test dispatch::actions::tests::publish_diagnostics_works ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (target/debug/deps/ink_lsp_server-ff9be6128a2f0a89)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/actions.rs (target/debug/deps/actions-fadb399c74fe59c2)
+
+running 1 test
+test actions_works has been running for over 60 seconds
+test actions_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 261.21s
+
+     Running tests/commands.rs (target/debug/deps/commands-ec2042358ad2cef2)
+
+running 1 test
+test create_project_command_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/completions.rs (target/debug/deps/completions-e021a785290b58de)
+
+running 1 test
+test completions_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.96s
+
+     Running tests/diagnostics.rs (target/debug/deps/diagnostics-866e387e7e47109a)
+
+running 1 test
+test diagnostics_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 46.29s
+
+     Running tests/hover.rs (target/debug/deps/hover-0ae218aabc866c22)
+
+running 1 test
+test hover_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 33.19s
+
+     Running tests/inlay_hints.rs (target/debug/deps/inlay_hints-436f82a7a3724f3a)
+
+running 1 test
+test inlay_hints_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.75s
+
+     Running tests/signature_help.rs (target/debug/deps/signature_help-deafb5d4566b0b6f)
+
+running 1 test
+test signature_help_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 21.32s
+
+     Running unittests src/lib.rs (target/debug/deps/test_utils-114757a246e6fbb6)
+
+running 1 test
+test tests::offset_at_variants_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests ink-analyzer
+
+running 1 test
+test crates/analyzer/src/lib.rs - (line 7) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+
+   Doc-tests ink-analyzer-ir
+
+running 1 test
+test crates/ir/src/lib.rs - (line 7) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+   Doc-tests ink-analyzer-macro
+
+running 2 tests
+test crates/macro/src/lib.rs - entity (line 77) ... ok
+test crates/macro/src/lib.rs - (line 6) ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+
+   Doc-tests ink-lsp-server
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests test-utils
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+</details>
+
