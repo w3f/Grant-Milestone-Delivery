@@ -15,7 +15,7 @@
 > 
 > If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
-**Milestone 1 and 2**
+**Milestone 1**
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
@@ -23,12 +23,20 @@
 | 0b.  | Documentation | https://openid3.gitbook.io/openid3-docs/openid3/introduction | Documentations and project introductions | 
 | 0c.  | Testing Guide | https://docs.google.com/document/d/1DiI4KGjeBw3-y4H0ZQGd7YsnQ_XoweWkfbmV2lQD66Q/edit?usp=sharing | Declared how to run the test and how to test on UI| 
 | 0d.  | Docker | docker.io/ksdev2023/ip01 | The Docker image to run a server | 
-| 1. | SDK | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | Web JS SDK to generate proofs | 
-| 2.  | Core Protocol | https://github.com/keysafe-protocol/keysafe-app/blob/polkadot/README.md | The Key management part, including `nodeRegister` `userRegister` `userAuthentication` and `keyRecovery` functions are based on Keysafe | 
+| 1.  | Core Protocol | https://github.com/keysafe-protocol/keysafe-app/blob/polkadot/README.md | The Key management part, including `nodeRegister` `userRegister` `userAuthentication` and `keyRecovery` functions are based on Keysafe | 
+| 2.  |  TEE Implementation | https://github.com/DAuth-Network/instant-proof/tree/polka-grant | Implement TEE as a prover |
 | 3.  | Smart Contract | https://github.com/DAuth-Network/instant-proof/tree/polka-grant/contracts | The contract that register proven node | 
-| 4.  |  TEE Implementation | https://github.com/DAuth-Network/instant-proof/tree/polka-grant | Implement TEE as a prover |
-| 5.  |  Web Server | https://github.com/DAuth-Network/instant-proof | Implement a prover backend. (We have already completed the development of the ZK-based backend. This means the TEE version will be discontinued.) |
-| 6.  |  Support mainstream authentication methods | https://zk-demo.openid3.xyz/ | We supported Google, Github and Twitter in this interface | 
+| 4.  |  Web Server | https://github.com/DAuth-Network/instant-proof | Implement a prover backend. (We have already completed the development of the ZK-based backend. This means the TEE version will be discontinued.) |
+
+**Milestone 2**
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0a. | License | https://github.com/DAuth-Network/instant-proof/blob/main/LICENSE | Apache License | 
+| 0b.  | Documentation | https://openid3.gitbook.io/openid3-docs/openid3/introduction | Documentations and project introductions | 
+| 0c.  | Testing Guide | https://docs.google.com/document/d/1DiI4KGjeBw3-y4H0ZQGd7YsnQ_XoweWkfbmV2lQD66Q/edit?usp=sharing | Declared how to run the test and how to test on UI| 
+| 0d.  | Docker | docker.io/ksdev2023/ip01 | The Docker image to run a server | 
+| 1. | SDK | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | Web JS SDK to generate proofs | 
+| 2.  |  Support mainstream authentication methods | https://zk-demo.openid3.xyz/ | We supported Google, Github and Twitter in this interface | 
 
 
 **Additional Information**
