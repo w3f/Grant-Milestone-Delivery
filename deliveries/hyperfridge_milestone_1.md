@@ -24,7 +24,7 @@ MS1 uses the Risk-Zero framework to create Zero-Knowledge proofs for banking-dat
 | 1c. | Validator | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/verifier) | Covered by testing guide. |
 | 1d. | Hyperfridge Crate | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/host) | Covered by testing guide. |
 | 2. | Unit Tests | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Includes edge cases. Code coverage for unit tests of guest can not be collected due to the framework architecture (ELF, Risc V instuction set), but comprehensive tests and test data is provided. |
-| 3. | Performance Benchmark | [Benchmarks](benchmarks.md) |  |
+| 3. | Performance Benchmark | [Benchmarks ???fix link](benchmarks.md) |  |
 
 **Additional Information**
 None. 
