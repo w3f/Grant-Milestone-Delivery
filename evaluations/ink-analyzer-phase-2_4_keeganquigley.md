@@ -20,6 +20,10 @@
 
 ## General Notes
 
+Everything working as expected. Thorough code comments and great documentation. Repo is starting to gain traction with 10 stars. Great work as usual!
+
+## Tests
+
 Unit tests all pass, 6 were added since last milestone:
 
 <details>
@@ -417,3 +421,34 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```
 </details>
 
+<details>
+  <summary>Docker runs successfully</summary>
+
+```sh
+ubuntu@ip-172-31-17-145:~/ink-analyzer$ docker build -t ink-analyzer .
+[+] Building 22.9s (8/8) FINISHED                                                                                                              docker:default
+ => [internal] load .dockerignore                                                                                                                        0.1s
+ => => transferring context: 475B                                                                                                                        0.0s
+ => [internal] load build definition from Dockerfile                                                                                                     0.1s
+ => => transferring dockerfile: 244B                                                                                                                     0.0s
+ => [internal] load metadata for docker.io/library/rust:1-slim-bullseye                                                                                  1.5s
+ => [1/3] FROM docker.io/library/rust:1-slim-bullseye@sha256:9aef12d1916584a53d7be82f913173357ced74d0d9f437c037587491c6381d03                            8.8s
+ => => resolve docker.io/library/rust:1-slim-bullseye@sha256:9aef12d1916584a53d7be82f913173357ced74d0d9f437c037587491c6381d03                            0.0s
+ => => sha256:0e0969fcaa8240e1eeb53f9f5d4ddd1bf89a2c9971c9cbe455eba0e66eeefb53 31.42MB / 31.42MB                                                         0.7s
+ => => sha256:9aef12d1916584a53d7be82f913173357ced74d0d9f437c037587491c6381d03 4.85kB / 4.85kB                                                           0.0s
+ => => sha256:9dd4dcbeb459b06143275e94fe820435b9ae20fdd2fbff463a8868e95247b77d 1.06kB / 1.06kB                                                           0.0s
+ => => sha256:9213befbd899c3957de027541e6c34fc46409ce6b564c06bfb282edaba6821ee 2.67kB / 2.67kB                                                           0.0s
+ => => sha256:f72d62086ab2c03ed4a3200c56c9d4e149522c580cec6cc6e81d750302c7267b 237.21MB / 237.21MB                                                       3.2s
+ => => extracting sha256:0e0969fcaa8240e1eeb53f9f5d4ddd1bf89a2c9971c9cbe455eba0e66eeefb53                                                                2.0s
+ => => extracting sha256:f72d62086ab2c03ed4a3200c56c9d4e149522c580cec6cc6e81d750302c7267b                                                                5.3s
+ => [internal] load build context                                                                                                                        0.2s
+ => => transferring context: 3.41MB                                                                                                                      0.1s
+ => [2/3] WORKDIR /app                                                                                                                                  12.2s
+ => [3/3] COPY . .                                                                                                                                       0.2s
+ => exporting to image                                                                                                                                   0.1s
+ => => exporting layers                                                                                                                                  0.1s
+ => => writing image sha256:40a08e315ff51323cba8a8019cbac94b0b04c12377b4a971b898353d6a95e399                                                             0.0s
+ => => naming to docker.io/library/ink-analyzer                                                                                                          0.0s
+ubuntu@ip-172-31-17-145:~/ink-analyzer$ 
+```
+</details>
