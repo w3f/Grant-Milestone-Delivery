@@ -20,7 +20,7 @@
 
 ## General Notes
 
-Everything working as expected. Clean and well-organized code. Thorough comments and great documentation. Extensive diagnosit errors. Repo is starting to gain traction with 10 stars. Crates are also starting to gain traction in [monthly downloads](https://lib.rs/crates/ink-analyzer). Great work as usual!
+Everything working as expected. Clean and well-organized code. Thorough comments and great documentation. Extensive diagnosis errors. Repo is starting to gain traction with 10 stars. Crates are also starting to gain traction in [monthly downloads](https://lib.rs/crates/ink-analyzer). Great work as usual!
 
 ## Tests
 
