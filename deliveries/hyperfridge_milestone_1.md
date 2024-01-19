@@ -1,26 +1,42 @@
 # Milestone Delivery :mailbox:
 
-> ⚡ Only the GitHub account that submitted the application is allowed to submit milestones. 
-> 
-> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** In the case of a public [Grants Program](https://github.com/w3f/Grants-Program) application, please provide a link to the merged contract (the `.md` file in the [applications](https://github.com/w3f/Grants-Program/tree/master/applications) directory). In the case of a private application, please provide the name of the project. 
-* **Milestone Number:** e.g. 1
+* **Application Document:** [Hyperfridge](https://github.com/w3f/Grants-Program/blob/master/applications/hyperfridge.md)
+  
+* **Milestone Number:** 1
 
-**Context** (optional)
-> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+**Context** 
+
+MS1 uses the Risk-Zero framework to create Zero-Knowledge proofs for banking-data. The proof is used to check soundness of data provided which will later be presented to an Off-Chain-Worker and a Node. The STARK proves reserves (e.g. balance, think of Tether) or payments (a node can trigger FIAT payments or react on a FIAT payment). Milestone 2 will create the REST-APIs to deliver the proofs, Milestones 3-5 will be integration in an off-chain-worker which updates a node and finally an application. 
 
 **Deliverables**
 > Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
 > 
 > If there is anything particular about any of the deliverables we or a future reader should know, use the respective `Notes` column.
 
+
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 1. | ... |...| ...| 
 | 2.  | ... |...| ...| 
 
+| Number | Deliverable | Link | Notes/Specification |
+| -----: | ----------- | ------ | ------------- |
+| 0a. | License | [Licence](https://github.com/element36-io/hyperfridge-r0/blob/main/LICENSE) |  |
+| 0b. | Documentation | [Documentation Root](https://github.com/element36-io/hyperfridge-r0/blob/main/README.md) |  |
+| 0c. | Testing Guide | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) |  |
+| 0d. | Docker |  | See Testing Guide. |
+| 1a. | risc0 Guest Program | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/methods/guest) | See [proofing system](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/crypto.md) for a cryptographic overview.  |
+| 1b. | Generate Receipt | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Generate [receipt](https://dev.risczero.com/terminology#receipt) which proves that the computation (e.g. balance) is correct and signed by the bank. |
+| 1c. | Validator | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/verifier) | Covered by testing guide. |
+| 1d. | Hyperfridge Crate | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/host) | Covered by testing guide. |
+| 2. | Unit Tests | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Includes edge cases. Code coverage for unit tests of guest can not be collected due to the framework architecture (ELF, Risc V instuction set), but comprehensive tests and test data is provided. |
+| 3. | Performance Benchmark | [Benchmarks](benchmarks.md) |  |
+
+
+
+
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+None. 
