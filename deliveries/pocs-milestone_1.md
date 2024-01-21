@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Short Paragraph describing milestone purpose
+Code base set-up for developing contract staking consensus. Accomplished adding new storage variables for the same, tight coupled required pallets and tested end-to-end working of them.
 
 ## Deliverables
 
