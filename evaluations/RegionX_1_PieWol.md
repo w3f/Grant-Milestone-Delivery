@@ -54,7 +54,7 @@ The zombienet environment worked well given your scripts and instructions. I app
 
   <details>
     <summary>Output</summary>
-        ```zsh
+        
         running 5 tests
         test tests::mock_environment_helper_functions_work ... ok
         test tests::get_metadata_works ... ok
@@ -63,29 +63,23 @@ The zombienet environment worked well given your scripts and instructions. I app
         test tests::metadata_version_gets_updated ... ok
 
         test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-        ```
-
-    
 </details>
 
 - [x] xc-region contract e2e test
 
-  <details>
+ <details>
     <summary>Output</summary>
-    ```zsh
-    running 8 tests
-    test tests::mock_environment_helper_functions_work ... ok
-    test tests::get_metadata_works ... ok
-    test tests::init_works ... ok
-    test tests::remove_works ... ok
-    test tests::metadata_version_gets_updated ... ok
-    test xc_regions::tests::init_non_existing_region_fails ... ok
-    test xc_regions::tests::init_works ... ok
-    test xc_regions::tests::remove_works ... ok
-
-    test result: ok. 8 passed; 0 failed; 0 ignored; 0measured; 0 filtered out; finished in 13.50s
-    ```
-</details>
-
-
-
+        
+        running 8 tests
+        test tests::mock_environment_helper_functions_work ... ok
+        test tests::get_metadata_works ... ok
+        test tests::init_works ... ok
+        test tests::remove_works ... ok
+        test tests::metadata_version_gets_updated ... ok
+        test xc_regions::tests::init_non_existing_region_fails ... ok
+        test xc_regions::tests::init_works ... ok
+        test xc_regions::tests::remove_works ... ok
+        
+        test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.50s
+  </details>
+        
