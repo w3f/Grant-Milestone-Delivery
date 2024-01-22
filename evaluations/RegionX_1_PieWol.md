@@ -17,7 +17,7 @@
 | **0e.** | Article | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/@regionx/regionx-corehub-a-central-hub-for-managing-polkadot-blockspace-3f8715add25a) |  | 
 | **1.** | Mock Coretime Parachain runtime | <ul><li>[x] </li></ul> | [Coretime-Mock](https://github.com/RegionX-Labs/Coretime-Mock) | All code related to local testing is located in the Coretime-Mock directory. | 
 | **2.** | Simulated Local Network | <ul><li>[x] </li></ul> | [Coretime-Mock](https://github.com/RegionX-Labs/Coretime-Mock) | | 
-| **3.** | Coretime UI | <ul><li>[x] </li></ul> | [CoreHub](https://github.com/RegionX-Labs/CoreHub) | | 
+| **3.** | Coretime UI | <ul><li>[x] </li></ul> | [CoreHub](https://github.com/RegionX-Labs/CoreHub) | Now referred to as CoreHub | 
 | **4.** | Cross-chain Regions | <ul><li>[x] </li></ul> | [XcRegions](https://github.com/RegionX-Labs/RegionX/tree/main/contracts/xc-regions) | | 
 | **5.** | xcRegion developer documentation | <ul><li>[x] </li></ul> | [Github Docs](https://github.com/RegionX-Labs/RegionX?tab=readme-ov-file#21-cross-chain-regions) [Wiki: Cross-chain regions](https://regionx.gitbook.io/wiki/advanced/cross-chain-regions) [Wiki: Integration with xcRegions](https://regionx.gitbook.io/wiki/build/integration-with-xcregions) | |
 
@@ -33,6 +33,13 @@ All the functionality shown in the application seems to be there. I tested it wi
 
 ## CoreTime-Mock
 The zombienet environment worked well given your scripts and instructions. I appreciate your quick fixes and responses to get the initial problems resolved. 
+
+Output: 
+<img width="1180" alt="Bildschirm­foto 2024-01-22 um 13 52 26" src="https://github.com/PieWol/Grant-Milestone-Delivery/assets/75956460/9265dff7-7ceb-4a0d-b995-dfdc695a272f">
+
+CoreHub 
+<img width="1753" alt="Bildschirm­foto 2024-01-22 um 10 15 04" src="https://github.com/PieWol/Grant-Milestone-Delivery/assets/75956460/aa21b49d-dea2-499e-a193-b4916e7c8bd7">
+
 
 
 
