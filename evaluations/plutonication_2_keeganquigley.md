@@ -5,24 +5,24 @@
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
 
-| Number | Deliverable | Link | Notes |
-| ------------- | ------------- | ------------- |------------- |
-| 0a. | Licence | [Plutonication](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/LICENSE) | MIT |
-| 0b. | Documentation | Docs for running all codes is in the [Readme](https://github.com/RostislavLitovkin/Plutonication/blob/main/README.md).  |
-| 0c. | Testing and Testing guide | Guide for running tests is in the [Readme](https://github.com/RostislavLitovkin/Plutonication/blob/main/README.md). |  |
-| 0d. | Docker | [Sample React dApp Dockerfile](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/example_dapp/Dockerfile) |  |
-| 1. | PlutonicationDAppClient | [PlutonicationDAppClient.ts](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/PlutonicationDAppClient.ts) |  |
-| 1a. | initializePlutonicationDAppClient | [initializePlutonicationDAppClient](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L18C23-L18C56) |  |
-| 1b. | onReceivePubkey | [onReceivePubkey](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L20C3-L20C3) |  |
-| 1c. | signPayload | [signPayload](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L64C13-L64C24) |  |
-| 1d. | SendRawAsync | [SendRawAsync](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L77) |  |
-| 2. | PlutonicationWalletClient | [PlutonicationWalletClient](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/PlutonicationWalletClient.ts) |  |
-| 2a. | SendAddress | [SendAddress](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationWalletClient.ts#L54) |  |
-| 2b. | sendPayloadSignature | [sendPayloadSignature](https://github.com/RostislavLitovkin/Plutonication/blob/be67381fcb03f2afae20a150b1bcca2577a47e54/src/PlutonicationWalletClient.ts#L57C7-L57C7) |  |
-| 2c. | sendRawSignature | [sendRawSignature](https://github.com/RostislavLitovkin/Plutonication/blob/be67381fcb03f2afae20a150b1bcca2577a47e54/src/PlutonicationWalletClient.ts#L60C5-L60C21) |  |
-| 3. | PlutonicationModal | [PlutonicationModal](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/components/PlutonicationModal.ts) |  |
-| 4. | NPM package | [NPM package](https://www.npmjs.com/package/@plutonication/plutonication) |  |
-| 5. | Sample React dApp | [Sample React dApp](https://github.com/RostislavLitovkin/Plutonication/tree/Grant-delivery/example_dapp) |  |
+| Number | Deliverable | Accepted | Link | Notes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 0a. | Licence | <ul><li>[x] </li></ul> | [Plutonication](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/LICENSE) | MIT |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | Docs for running all codes is in the [Readme](https://github.com/RostislavLitovkin/Plutonication/blob/main/README.md).  |
+| 0c. | Testing and Testing guide | <ul><li>[x] </li></ul> | Guide for running tests is in the [Readme](https://github.com/RostislavLitovkin/Plutonication/blob/main/README.md). |  |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Sample React dApp Dockerfile](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/example_dapp/Dockerfile) |  |
+| 1. | PlutonicationDAppClient | <ul><li>[x] </li></ul> | [PlutonicationDAppClient.ts](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/PlutonicationDAppClient.ts) |  |
+| 1a. | initializePlutonicationDAppClient | <ul><li>[x] </li></ul> | [initializePlutonicationDAppClient](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L18C23-L18C56) |  |
+| 1b. | onReceivePubkey | <ul><li>[x] </li></ul> | [onReceivePubkey](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L20C3-L20C3) |  |
+| 1c. | signPayload | <ul><li>[x] </li></ul> | [signPayload](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L64C13-L64C24) |  |
+| 1d. | SendRawAsync | <ul><li>[x] </li></ul> | [SendRawAsync](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationDAppClient.ts#L77) |  |
+| 2. | PlutonicationWalletClient | <ul><li>[x] </li></ul> | [PlutonicationWalletClient](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/PlutonicationWalletClient.ts) |  |
+| 2a. | SendAddress | <ul><li>[x] </li></ul> | [SendAddress](https://github.com/RostislavLitovkin/Plutonication/blob/b2dde7b8c0b387259a459163d436e83d3c7862c4/src/PlutonicationWalletClient.ts#L54) |  |
+| 2b. | sendPayloadSignature | <ul><li>[x] </li></ul> | [sendPayloadSignature](https://github.com/RostislavLitovkin/Plutonication/blob/be67381fcb03f2afae20a150b1bcca2577a47e54/src/PlutonicationWalletClient.ts#L57C7-L57C7) |  |
+| 2c. | sendRawSignature | <ul><li>[x] </li></ul> | [sendRawSignature](https://github.com/RostislavLitovkin/Plutonication/blob/be67381fcb03f2afae20a150b1bcca2577a47e54/src/PlutonicationWalletClient.ts#L60C5-L60C21) |  |
+| 3. | PlutonicationModal | <ul><li>[x] </li></ul> | [PlutonicationModal](https://github.com/RostislavLitovkin/Plutonication/blob/Grant-delivery/src/components/PlutonicationModal.ts) |  |
+| 4. | NPM package | <ul><li>[x] </li></ul> | [NPM package](https://www.npmjs.com/package/@plutonication/plutonication) |  |
+| 5. | Sample React dApp | <ul><li>[x] </li></ul> | [Sample React dApp](https://github.com/RostislavLitovkin/Plutonication/tree/Grant-delivery/example_dapp) |  |
 
 # General Notes
 
