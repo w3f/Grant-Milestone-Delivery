@@ -59,3 +59,25 @@ No issues found.
 ^C
 ```
 </details>
+
+<details>
+  <summary>Playwright tests pass</summary>
+
+```ts
+npx playwright test
+
+Running 2 tests using 2 workers
+[chromium] › plutonication.spec.ts:33:5 › Communication between dApp and Wallet
+2024-01-22 17:04:42        API/INIT: RPC methods not decorated: alephNode_emergencyFinalize, alephNode_getBlockAuthor, alephNode_ready
+2024-01-22 17:04:42        API/INIT: aleph-node/68: Not decorating unknown runtime apis: 0x2be3f75b696ad1f6/1
+Connected to api
+Plutonication received message: Someone connected <3
+Plutonication received message: Someone connected <3
+Received message: Someone connected <3
+Wallet connected
+Receive payload
+Payload to Sign 0xac050700004769bbe59968882c1597ec1151621f0193547285125f1c1337371c013ff61f0f0080c6a47e8d03481c0400430000001100000005d5279c52c484cc80396535a316add7d47b1c5b9e0398dd1f584149341460c5d12ff783a76a5e07156d2a3ff61745b3a1f892bf6247c1b3bf0fd7ba2085eda6
+Received raw: [object Object]
+  2 passed (11.4s)
+```
+</details>
