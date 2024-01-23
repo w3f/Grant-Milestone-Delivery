@@ -81,3 +81,23 @@ Received raw: [object Object]
   2 passed (11.4s)
 ```
 </details>
+
+
+Example app starts successfully:
+```
+npm start
+Compiled successfully!
+
+You can now view example_dapp in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://10.0.0.131:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+```
