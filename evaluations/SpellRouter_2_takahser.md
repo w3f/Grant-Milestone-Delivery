@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/SpellRouter-proposal.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT XCM Router](https://github.com/paraspell/xcm-router/blob/main/LICENSE), [MIT API](https://github.com/paraspell/xcm-api/blob/main/LICENSE) ,[MIT DOCS](https://github.com/paraspell/docs/blob/main/LICENSE) | - |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [XCM Router Readme.md](https://github.com/paraspell/xcm-router/blob/main/README.md), [Official SpellRouter documentation](https://paraspell.github.io/docs/router/getting-strtd.html) | - |
-| 0c. | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [Router Testing Guide](https://github.com/paraspell/xcm-router/tree/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a#-development--testing), [API Testing Guide](https://github.com/paraspell/xcm-api/tree/1471c7d0eebf71a84f5612490ccaa3dbe8a25b61#tests) | see [Testing Feedback](#testing-feedback)|
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Router Testing Guide](https://github.com/paraspell/xcm-router/tree/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a#-development--testing), [API Testing Guide](https://github.com/paraspell/xcm-api/tree/1471c7d0eebf71a84f5612490ccaa3dbe8a25b61#tests) | see [Testing Feedback](#testing-feedback)|
 | 0e. | Create Medium article about development of latest XCM Router | <ul><li>[x] </li></ul> | [Medium Article (Draft)](https://medium.com/@dudo50/xcm-router-phase-2-innovations-and-advancement-in-state-of-the-c84beacd4727) | - |
 | 1. | Integrate automatic exchange chain selection into XCM Router | <ul><li>[x] </li></ul> | [`selectBestExchange` function](https://github.com/paraspell/xcm-router/blob/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a/src/transfer/selectBestExchange.ts#L23-L78) | - |
 | 2. | Integrate XCM Router into LightSpell XCM API | <ul><li>[x] </li></ul> | [Commit adding XCM Router into XCM API](https://github.com/paraspell/xcm-api/commit/a26e7245dfad40f9aaf1cab7c6d17d96e21ab142) | - |
@@ -2176,29 +2176,13 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [ ] playground app smoke-testing
+- [x] playground app smoke-testing
 
-  - [ ] if the balance is not sufficient the error is printed on the console, however, the web UI doesn't it
-
-    <details>
-      <summary>Output</summary>
-
-      ```
-      suppress-nextjs-warning.ts:7 2024-01-22 15:31:32        RPC-CORE: submitAndWatchExtrinsic(extrinsic: Extrinsic): ExtrinsicStatus:: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
-      console.error @ suppress-nextjs-warning.ts:7
-      Show 1 more frame
-      Show less
-      index.js:19 Uncaught (in promise) RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
-      at checkError (index.js:19:15)
-      at RpcCoder.decodeResponse (index.js:35:9)
-      at _WsProvider.__internal__onSocketMessageResult (index.js:407:51)
-      at WebSocket.__internal__onSocketMessage (index.js:396:20)
-      ```
-    </details>
+  - [x] ~~if the balance is not sufficient the error is printed on the console, however, the web UI doesn't it~~ => fixed by https://github.com/paraspell/xcm-router/pull/8
 
   - [x] if the balance is sufficient, transfers can be conducted while a variety of parameters can be chosen: origin/destination/exchange nodes, original/target token symbols, recipient address, amount, tx type, slippage
 
-  - [ ] I think it'd be useful to explain the meaning of the available [tx types](https://github.com/paraspell/xcm-router/blob/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a/src/types.ts#L22-L27)
+  - [x] ~~I think it'd be useful to explain the meaning of the available [tx types](https://github.com/paraspell/xcm-router/blob/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a/src/types.ts#L22-L27)~~ => fixed by https://github.com/paraspell/xcm-router/pull/8
 
 - [x] `@paraspell/xcm-router` npm package usage has been proven successfull in the [playground](https://github.com/paraspell/xcm-router/blob/2f2bc4e4e42d360b753557b4bf301a0a702a2c1a/playground/src/routes/HomePage.tsx#L64-L71)
 
