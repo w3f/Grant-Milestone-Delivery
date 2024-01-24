@@ -2,7 +2,7 @@
 
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/pull/2080 
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/RegionX.md
 - **Milestone:** 1
 - **Kusama Identity:** [HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS](https://kusama.subscan.io/account/HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS)
 - **Previously successfully merged evaluation:** Calamar M3
