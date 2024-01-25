@@ -16,7 +16,7 @@ Implement Ink's Dependency versioning
 | 0.b. | Documentation | https://github.com/Zeeve-App/ink-playground/blob/version_play/README.md | We will provide both inline documentation of the code and a basic tutorial that explains how a user can open and save a file |
 | 1.  | On demand version specific compilation | https://github.com/paritytech/ink-playground/pull/815 | We will add the ability to build the compiler environment if a compiler environment is not present with a specific version of Ink! |
 | 2. | Dependency Version support | https://github.com/paritytech/ink-playground/pull/815, https://github.com/paritytech/ink-playground/pull/817 | We will upgrade and maintain Ink! and cargo-contract dependencies versions up to date and have provision to have older version support |
-| 3. | Dependency Version support | https://github.com/paritytech/ink-playground/pull/815 | We will add the ability to add Playground's Ink! version support to latest version as soon as new version of Ink! is released without manual intervention |
+| 3. | Ink! Upgrades | https://github.com/paritytech/ink-playground/pull/815 | We will add the ability to add Playground's Ink! version support to latest version as soon as new version of Ink! is released without manual intervention |
 | 4. | Select Ink! version from UI | https://github.com/paritytech/ink-playground/pull/817 | We will add ability to select Ink!'s version from the IDE to compile |
 
 ## **Additional Information**
