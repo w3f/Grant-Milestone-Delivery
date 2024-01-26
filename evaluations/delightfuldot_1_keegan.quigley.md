@@ -15,3 +15,5 @@
 | 2. | Publish to npm | <ul><li>[x] </li></ul> |  - [delightfuldot](https://www.npmjs.com/package/delightfuldot) <br/> - [7 other packages](https://www.npmjs.com/search?q=%40delightfuldot) |  |
 
 # General Notes
+
+Nicely done! Good automatic handling of data formats, and functionalities. Any chance you will support light clients in the future?
