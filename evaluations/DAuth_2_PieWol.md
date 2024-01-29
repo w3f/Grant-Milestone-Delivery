@@ -139,7 +139,6 @@
 </details>
 
 ## Differences between delivery and application
-In the notes for the 2. milestone you changed the content of some deliverables in comparison to the application. Whats the reason for this? 
 
 # License
 You stated that the grant deliveries will be released under Apache 2.0 license but for the SDK no license can be found. 
