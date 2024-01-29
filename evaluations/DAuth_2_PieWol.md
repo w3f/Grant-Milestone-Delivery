@@ -11,11 +11,11 @@
 **Milestone 2**
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- |------------- | ------------- |
-| 0a. | License | <ul><li>[x] </li></ul> | https://github.com/DAuth-Network/instant-proof/blob/main/LICENSE | Apache License | 
-| 0b.  | Documentation |<ul><li>[x] </li></ul> | https://openid3.gitbook.io/openid3-docs/openid3/introduction | please clarify | 
+| 0a. | License | <ul><li>[] </li></ul> | https://github.com/DAuth-Network/instant-proof/blob/main/LICENSE | Apache License | 
+| 0b.  | Documentation |<ul><li>[] </li></ul> | https://openid3.gitbook.io/openid3-docs/openid3/introduction | please clarify | 
 | 0c.  | Testing Guide | <ul><li>[x] </li></ul> | https://docs.google.com/document/d/1DiI4KGjeBw3-y4H0ZQGd7YsnQ_XoweWkfbmV2lQD66Q/edit?usp=sharing | okay| 
 | 0d.  | Docker | <ul><li>[x] </li></ul> | docker.io/ksdev2023/ip01 | The Docker image to run a server. Works and passes unit tests | 
-| 1. | SDK | <ul><li>[x] </li></ul> | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | nice walkthrough and examples. Where are the wallet integrations? | 
+| 1. | SDK | <ul><li>[] </li></ul> | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | nice walkthrough and examples. Where are the wallet integrations? | 
 | 2.  |  Support mainstream authentication methods | <ul><li>[x] </li></ul> |  https://zk-demo.openid3.xyz/ | good, but google authorization doesn't work | 
 
 ## General Notes
