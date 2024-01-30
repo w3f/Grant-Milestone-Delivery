@@ -5,7 +5,7 @@
 ## Application & Milestone Details
 
 - **Application Document:** [Proof of Contract Stake](https://github.com/w3f/Grants-Program/tree/master/applications/PoCS.md).
-- **Milestone** : [1. Pallet Contract Update](https://github.com/w3f/Grants-Program/blob/master/applications/PoCS.md#milestone-1---pallet-contract-update)
+- **Milestone** : 1
 
 ## Purpose
 
