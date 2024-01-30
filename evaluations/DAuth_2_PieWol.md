@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** In Progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/eda237b52eed97ec9c24b38022cb971db2c49584/applications/dauth_network.md
 - **Milestone:** 2
 - **Kusama Identity:** [HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS](https://kusama.subscan.io/account/HHEEgVzcqL3kCXgsxSfJMbsTy8dxoTctuXtpY94n4s8F4pS)
@@ -11,11 +11,11 @@
 **Milestone 2**
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------------- | ------------- | ------------- |------------- | ------------- |
-| 0a. | License | <ul><li>[] </li></ul> | https://github.com/DAuth-Network/instant-proof/blob/main/LICENSE | Apache License | 
-| 0b.  | Documentation |<ul><li>[] </li></ul> | https://openid3.gitbook.io/openid3-docs/openid3/introduction | please clarify | 
+| 0a. | License | <ul><li>[x] </li></ul> | https://github.com/DAuth-Network/instant-proof/blob/main/LICENSE | Apache License | 
+| 0b.  | Documentation |<ul><li>[x] </li></ul> | https://openid3.gitbook.io/openid3-docs/openid3/introduction |  | 
 | 0c.  | Testing Guide | <ul><li>[x] </li></ul> | https://docs.google.com/document/d/1DiI4KGjeBw3-y4H0ZQGd7YsnQ_XoweWkfbmV2lQD66Q/edit?usp=sharing | okay| 
 | 0d.  | Docker | <ul><li>[x] </li></ul> | docker.io/ksdev2023/ip01 | The Docker image to run a server. Works and passes unit tests | 
-| 1. | SDK | <ul><li>[] </li></ul> | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | nice walkthrough and examples. Where are the wallet integrations? | 
+| 1. | SDK | <ul><li>[x] </li></ul> | [SDK usage](https://openid3.gitbook.io/openid3-docs/developers/decentralized-authentication-sdk) and [SDK code](https://github.com/DAuth-Network/dauth/blob/main/packages/core/README.MD) | nice walkthrough and examples. One wallet integration| 
 | 2.  |  Support mainstream authentication methods | <ul><li>[x] </li></ul> |  https://zk-demo.openid3.xyz/ | good, but google authorization doesn't work | 
 
 ## General Notes
@@ -138,19 +138,17 @@
     }
 </details>
 
-## Differences between delivery and application
+## License
+License for the SDK hast been added upon request.
 
-# License
-You stated that the grant deliveries will be released under Apache 2.0 license but for the SDK no license can be found. 
+## Documentation
+The regular documentation looks fine to me. Inline documentation received a final overhaul.
 
-# Documentation
-The regular documentation looks fine to me but in the application you stated that you will provide *inline* documentation aswell. Please provide a link in the delivery PR to the relevant code that you have created inline documentation for. 
-
-# SDK wallet integrations
+## SDK wallet integrations
 
 > Cooperation with multiple wallet providers, they will integrate DAuth in their authentication flow
 
-Was written into the application. Can you please provide proof for the multiple integrations you achieved with wallet providers?
+Only one wallet provider has integrated which seems to be inactive since end of last year.
 
 
 ## SDK
@@ -160,7 +158,7 @@ I have not tested the SDK integration tutorials or SDK itself as I don't have a 
 The web-app demo you provided has a good ui to display all elements and steps of this DAuth process. If you offer google authorization it would be good to have the appplication out of the development stage so arbitrary google accounts can be used to test it.
 
 ## Summary
-Most of the deliverables match the requirements agreed upon in the application but a few details that I missed earlier still need clarification.
+The deliverables match the requirements agreed upon in the application. One would expect more integrations but as this specification is dependant on thid parties being willing to integrate this should not hinder the milestone from being accepted.
 
 
 
