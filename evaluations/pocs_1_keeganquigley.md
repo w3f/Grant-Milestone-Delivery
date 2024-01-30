@@ -9,14 +9,14 @@
 |-------------|-------------|------------- |------------- |------------- |
 |0a.|License| <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/auguth/pocs/blob/master/LICENSE) |-|
 |0b.|Documentation| <ul><li>[x] </li></ul> | [Inline Documentation](https://auguth.github.io/pocs/target/doc/pallet_contracts/) | Looks good. |
-|0c.|Testing Guide| <ul><li>[x] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/README.md#testing) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#run-pocs-node) ||
-|0d.|Docker | <ul><li>[x] </li></ul> | [DockerImage 2.46GB compressed](https://hub.docker.com/r/jobyreuben/pocs-w3f-m1/tags) , [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile)|  |
-|0e.|Article (Repo Readme) / External Documentation| <ul><li>[x] </li></ul> | [PoCS article](https://github.com/auguth/pocs/blob/master/README.md) ||
-|1.|Delivery| <ul><li>[x] </li></ul> | [PoCS Node](https://github.com/auguth/pocs/tree/master) ||
+|0c.|Testing Guide| <ul><li>[x] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/README.md#testing) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#run-pocs-node) | Looks good. |
+|0d.|Docker | <ul><li>[x] </li></ul> | [DockerImage 2.46GB compressed](https://hub.docker.com/r/jobyreuben/pocs-w3f-m1/tags) , [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile)| Runs successfully. |
+|0e.|Article (Repo Readme) / External Documentation| <ul><li>[x] </li></ul> | [PoCS article](https://github.com/auguth/pocs/blob/master/README.md) | For last milestone, should be public-facing blog article.|
+|1.|Delivery| <ul><li>[x] </li></ul> | [PoCS Node](https://github.com/auguth/pocs/tree/master) | Looks good. |
 
 # General Notes
 
-Node runs manually with `./target/release/pocs --dev`.
+
 
 ## Docker
 
@@ -112,7 +112,19 @@ ubuntu@ip-172-31-27-78:~/pocs$ docker run --network="host" --rm e93bf8c07a34
 ```
 </details>
 
-`docker-compose up --build -d` fails:
+UPDATE: Docker Compose is working now:
+
+```sh
+ => => exporting layers                                                                                                                                 53.2s 
+ => => writing image sha256:554a8da46400b40c4ace962e1a6114d5daf891cfefb32dbfe7eb35c10580c623                                                             0.0s 
+ => => naming to docker.io/library/pocs-node                                                                                                             0.0s 
+[+] Running 3/3                                                                                                                                               
+ ✔ Network pocs_default          Created                                                                                                                 0.1s 
+ ✔ Volume "pocs_substrate-data"  Created                                                                                                                 0.0s 
+ ✔ Container pocs                Started
+```
+
+~~`docker-compose up --build -d` fails:~~
 
 ```sh
 Creating pocs ... error
@@ -1977,5 +1989,126 @@ help: consider boxing the large fields to reduce the total size of the enum
 
 warning: `pocs` (lib) generated 7 warnings (run `cargo clippy --fix --lib -p pocs` to apply 4 suggestions)
 warning: `pocs` (bin "pocs") generated 7 warnings (7 duplicates)
+```
+</details>
+
+## Node
+
+Node runs manually with `./target/release/pocs --dev`, but with the following warnings:
+
+<details>
+  <summary>Output</summary>
+
+```rust
+warning: unused imports: `CallFlags`, `ReturnCode`
+  --> pallets/contracts/src/wasm/mod.rs:31:52
+   |
+31 |     AllowDeprecatedInterface, AllowUnstableInterface, CallFlags, Environment, ReturnCode, Runtime,
+   |                                                       ^^^^^^^^^               ^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `Saturating`
+  --> pallets/contracts/src/gasstakeinfo.rs:22:11
+   |
+22 |     traits::{Saturating},
+   |              ^^^^^^^^^^
+
+warning: unused import: `Config`
+   --> pallets/contracts/src/lib.rs:130:22
+    |
+130 | use pallet_staking::{Config as StakingCon};
+    |                      ^^^^^^
+
+warning: call to `.clone()` on a reference in this situation does nothing
+  --> pallets/contracts/src/wasm/prepare.rs:83:29
+   |
+83 |             Module::new(&engine, code.clone()).map_err(|_| "Can't load the module into wasmi!")?;
+   |                                      ^^^^^^^^ help: remove this redundant call
+   |
+   = note: the type `[u8]` does not implement `Clone`, so calling `clone` on `&[u8]` copies the reference, which does not do anything and can be removed
+   = note: `#[warn(noop_method_call)]` on by default
+
+warning: unused implementer of `frame_support::traits::Imbalance` that must be used
+   --> pallets/contracts/src/migration/v10.rs:187:5
+    |
+187 |                 T::ContractCurrency::deposit_creating(&deposit_account, min_balance);
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_must_use)]` on by default
+
+warning: `pallet-contracts` (lib) generated 5 warnings (run `cargo fix --lib -p pallet-contracts` to apply 2 suggestions)
+   Compiling wasm-opt v0.112.0
+   Compiling substrate-wasm-builder v5.0.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#948fbd2f)
+   Compiling pocs-runtime v4.0.0-dev (/Users/keeganquigley/pocs/runtime)
+   Compiling rocksdb v0.21.0
+   Compiling kvdb-rocksdb v0.19.0
+   Compiling sc-client-db v0.10.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#948fbd2f)
+   Compiling sc-service v0.10.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#948fbd2f)
+   Compiling sc-storage-monitor v0.1.0 (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#948fbd2f)
+   Compiling sc-cli v0.10.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#948fbd2f)
+warning: unused imports: `EnsureRootWithSuccess`, `EnsureSignedBy`, `EnsureWithSuccess`
+  --> runtime/src/lib.rs:22:69
+   |
+22 | ...eights},EnsureRoot, EnsureRootWithSuccess, EnsureSigned, EnsureSignedBy, EnsureWithSuccess};
+   |                        ^^^^^^^^^^^^^^^^^^^^^                ^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `currency::*`
+  --> runtime/src/lib.rs:41:17
+   |
+41 | use constants::{currency::*, time::*};
+   |                 ^^^^^^^^^^^
+
+warning: use of deprecated constant `WhereSection::_w`:
+                 It is deprecated to use a `where` clause in `construct_runtime`.
+                 Please instead use `frame_system::Config` to set the `Block` type and delete this clause.
+                 It is planned to be removed in December 2023.
+
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/14437>
+   --> runtime/src/lib.rs:753:1
+    |
+753 | / construct_runtime!(
+754 | |     pub struct Runtime
+755 | |     where
+756 | |         Block = Block,
+...   |
+784 | |     }
+785 | | );
+    | |_^
+    |
+    = note: `#[warn(deprecated)]` on by default
+    = note: this warning originates in the macro `frame_support::match_and_insert` which comes from the expansion of the macro `construct_runtime` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unused variable: `call`
+   --> runtime/src/lib.rs:131:14
+    |
+131 |     fn contains(call: &RuntimeCall) -> bool {
+    |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_call`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: type alias `Migrations` is never used
+   --> runtime/src/lib.rs:819:6
+    |
+819 | type Migrations = (
+    |      ^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: warn(unused_crate_dependencies) is ignored unless specified at crate level
+  --> node/src/rpc.rs:32:9
+   |
+32 | #![warn(unused_crate_dependencies)]
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_attributes)]` on by default
+
+warning: `pocs-runtime` (lib) generated 5 warnings (run `cargo fix --lib -p pocs-runtime` to apply 3 suggestions)
+warning: `pocs` (lib) generated 1 warning
+warning: `pocs` (bin "pocs") generated 1 warning (1 duplicate)
+    Finished release [optimized] target(s) in 7m 15s
 ```
 </details>
