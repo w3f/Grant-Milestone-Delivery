@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/PoCS.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -16,7 +16,9 @@
 
 # General Notes
 
+Great work! Custom pallets all work and are well-tested. Manually tested:
 
+`instantiate_with_code()`, `update_delegate()`, `run()`. Events are correctly emitted. Looking forward to seeing the progress.
 
 ## Docker
 
