@@ -18,13 +18,13 @@ MS1 uses the Risk-Zero framework to create Zero-Knowledge proofs for banking-dat
 | 0a. | License | [Licence](https://github.com/element36-io/hyperfridge-r0/blob/main/LICENSE) |  |
 | 0b. | Documentation | [Documentation Root](https://github.com/element36-io/hyperfridge-r0/blob/main/README.md) |  |
 | 0c. | Testing Guide | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Use this as starting point to run the tests.  |
-| 0d. | Docker |  | See Testing Guide. |
-| 1a. | risc0 Guest Program | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/methods/guest) | See [proofing system](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/crypto.md) for a cryptographic overview.  |
-| 1b. | Generate Receipt | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Generate [receipt](https://dev.risczero.com/terminology#receipt) which proves that the computation (e.g. balance) is correct and signed by the bank. |
-| 1c. | Validator | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/verifier) | Covered by testing guide. |
+| 0d. | Docker |  | [Dockerhub](https://hub.docker.com/r/e36io/hyperfridge-r0/tags), see Testing Guide how to use. |
+| 1a. | risc0 Guest Program | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/methods/guest) | Covered by Testing Guide. See [proofing system](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/crypto.md) for a cryptographic overview.  |
+| 1b. | Generate Receipt | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Covered by Testing Guide. Generate [receipt](https://dev.risczero.com/terminology#receipt) which proves that the computation (e.g. balance) is correct and signed by the bank. |
+| 1c. | Validator | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/verifier) | Covered by testing guide. Validate Receipts (STARKs) via command line.|
 | 1d. | Hyperfridge Crate | [Repo](https://github.com/element36-io/hyperfridge-r0/tree/main/host) | Covered by testing guide. |
 | 2. | Unit Tests | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/main/docs/INSTRUCTIONS.md) | Includes edge cases. Code coverage for unit tests of guest can not be collected due to the framework architecture (ELF, Risc V instuction set), but comprehensive tests and test data is provided. |
-| 3. | Performance Benchmark | [Benchmarks ???fix link](benchmarks.md) |  |
+| 3. | Performance Benchmark | [Benchmarks](runtime.md) | With hardware acceleration, execution time can be reduced to 5-10 minutes. No acceleration: 1-2 hours. |
 
 **Additional Information**
 None. 
