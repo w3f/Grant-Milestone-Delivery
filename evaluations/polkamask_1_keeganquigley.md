@@ -5,7 +5,22 @@
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
+**Deliverables**
+
+| Number | Deliverable | Accepted | Link | Notes |
+| ------ | ------------- | ------------- | ------------- | ------------- |
+| 0a. | License Apache 2.0 | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/blob/main/LICENSE.APACHE2 | 
+| 0b. | Documentation | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/wiki |  |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask#running-the-repository |  | 
+| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask?tab=readme-ov-file#docker |  |
+| 0e. | Article | <ul><li>[x] </li></ul> | https://medium.com/@polkagate/polkamask-polkadot-with-metamask-0d0e5e12f2d6 | 
+| 1. | Polkagate Signer (Metamask Snap) | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/tree/main/packages/snap |  |
+| 2. | Upgraded Polkadot extension-dapp | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-js-extension/tree/master/packages/extension-dapp/src/snap |  |
+| 3. | Upgraded Polkadot-Cloud | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-cloud-library/commit/a29606260ef6ef79137b745d2c5c1336346bcb02 |  |
+
 # General Notes
+
+## Tests
 
 Unit tests passing:
 
