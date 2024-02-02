@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkamask.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -10,15 +10,27 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------ | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License Apache 2.0 | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/blob/main/LICENSE.APACHE2 | 
-| 0b. | Documentation | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/wiki |  |
-| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask#running-the-repository |  | 
-| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask?tab=readme-ov-file#docker |  |
-| 0e. | Article | <ul><li>[x] </li></ul> | https://medium.com/@polkagate/polkamask-polkadot-with-metamask-0d0e5e12f2d6 | 
-| 1. | Polkagate Signer (Metamask Snap) | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/tree/main/packages/snap |  |
-| 2. | Upgraded Polkadot extension-dapp | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-js-extension/tree/master/packages/extension-dapp/src/snap |  |
-| 3. | Upgraded Polkadot-Cloud | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-cloud-library/commit/a29606260ef6ef79137b745d2c5c1336346bcb02 |  |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/wiki | Good docs. |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask#running-the-repository | Looks good. | 
+| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask?tab=readme-ov-file#docker | Looks good. |
+| 0e. | Article | <ul><li>[x] </li></ul> | https://medium.com/@polkagate/polkamask-polkadot-with-metamask-0d0e5e12f2d6 | Looks good.
+| 1. | Polkagate Signer (Metamask Snap) | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkaMask/tree/main/packages/snap | Looks good. |
+| 2. | Upgraded Polkadot extension-dapp | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-js-extension/tree/master/packages/extension-dapp/src/snap | Looks good. |
+| 3. | Upgraded Polkadot-Cloud | <ul><li>[x] </li></ul> | https://github.com/PolkaGate/polkadot-cloud-library/commit/a29606260ef6ef79137b745d2c5c1336346bcb02 | Looks good. |
 
 # General Notes
+
+Awesome work! It's very nice to be able to use all the common extrinsics in MetaMask! I was able to update the extension metadata, transfer WND, bond and nominate, and fully unbond. Everything worked great out of the box, although I did have to disable other extensions so they weren't fighting with MetaMask for control. 
+
+Works both locally and on the test chain. Nice work in utilizing the work of Chainsafe and Polkadot Cloud.
+
+<img width="351" alt="metadata" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/d51aa85a-3ce2-4bfa-810b-0aa1c9358f61">
+
+<img width="639" alt="metamask" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/f70d1054-93aa-4bf8-9cbb-7d5da60e84e4">
+
+<img width="348" alt="bonding" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/08f22c00-4f5c-4541-9d4e-c6a5872b5538">
+
+<img width="1233" alt="bonding 2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/3714711a-be56-4d43-be5e-7cc03f80b080">
 
 ## Tests
 
