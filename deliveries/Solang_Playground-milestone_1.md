@@ -1,4 +1,4 @@
-# Solang_Playground-milestone_1 :mailbox:
+# Milestone Delivery :mailbox:
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
