@@ -148,7 +148,7 @@ The regular documentation looks fine to me. Inline documentation received a fina
 
 > Cooperation with multiple wallet providers, they will integrate DAuth in their authentication flow
 
-Only one wallet provider has integrated which seems to be inactive since end of last year.
+Only one wallet provider has integrated.
 
 
 ## SDK
@@ -158,7 +158,7 @@ I have not tested the SDK integration tutorials or SDK itself as I don't have a 
 The web-app demo you provided has a good ui to display all elements and steps of this DAuth process. If you offer google authorization it would be good to have the appplication out of the development stage so arbitrary google accounts can be used to test it.
 
 ## Summary
-The deliverables match the requirements agreed upon in the application. One would expect more integrations but as this specification is dependant on thid parties being willing to integrate this should not hinder the milestone from being accepted.
+The deliverables match the requirements agreed upon in the application. One would expect more integrations but as this specification is dependant on thid parties being willing to integrate this should not hinder the milestone from being accepted. Thanks for the final effort and improvements on the inline documentation.
 
 
 
