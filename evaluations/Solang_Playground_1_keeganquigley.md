@@ -121,3 +121,4 @@ Caused by:
 Caused by:
   Exec format error (os error 8)
 ```
+The same test fails in https://github.com/salaheldinsoliman/solang-playground-lab
