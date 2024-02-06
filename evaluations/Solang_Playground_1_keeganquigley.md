@@ -106,3 +106,18 @@ warning: `solang` (lib) generated 14 warnings (run `cargo fix --lib -p solang` t
 ```
 </details>
 
+There is a failing unit test in https://github.com/salaheldinsoliman/solang-playground:
+
+```rust
+warning: `solang` (lib) generated 14 warnings (run `cargo fix --lib -p solang` to apply 10 suggestions)
+   Compiling demo-lsp-browser v0.0.0 (/home/ubuntu/Solang-Playground/crates/browser)
+    Finished test [unoptimized + debuginfo] target(s) in 1m 46s
+     Running unittests src/lib.rs (target/wasm32-unknown-unknown/debug/deps/demo_lsp_browser-333d52d60f33eb46.wasm)
+error: test failed, to rerun pass `--lib`
+
+Caused by:
+  could not execute process `/home/ubuntu/Solang-Playground/target/wasm32-unknown-unknown/debug/deps/demo_lsp_browser-333d52d60f33eb46.wasm` (never executed)
+
+Caused by:
+  Exec format error (os error 8)
+```
