@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/WeTEE_Network.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,10 +11,10 @@
 | **0a.** | License | <ul><li>[x] </li></ul> | [Apache License 2.0](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/LICENSE)  | - |
 | **0b.** | Documentation | <ul><li>[ ] </li></ul> | [M1 docs](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/grants/milestone-1-documentation.md)  | See [Documentation Feedback](#documentation-feedback) |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Test guide](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/grants/milestone-1-test.md)  | See [Testing Feedback](#testing-feedback) |
-| 01. | Substrate module: worker | <ul><li>[ ] </li></ul> | (to be evaluated, once 0b./0d. are accepted)  | Spec: This pallet provides modules for the registration and staking of miner nodes, as well as accepting proof-of-work data and detailed file hashes and addresses from miners, and also provides withdrawal functions for miners, as well as closure (which can only be executed if all services have already stopped/migrated), and also provides channels for users to complain about miner nodes.<br /> 1. Worker cluster register <br /> 2. Worker cluster mortgage <br /> 3. Worker cluster upload proof of work data <br /> 4. Worker cluster withdrawal <br /> 5. Worker cluster stop <br /> 6. Worker cluster report |
-| 02. | Substrate module: app | <ul><li>[ ] </li></ul> | (to be evaluated, once 0b./0d. are accepted)  | Spec: This pallet provides users with the function of deploying and updating applications, as well as an interface for topping up applications. Users can prepay for the operation of the application, and miners can only unlock the fees paid by users after uploading proof of work.<br />1. TEE app create <br /> 2. TEE app update <br /> 3. TEE app set settings <br /> 4. TEE app recharge <br /> 5. TEE app stop |
-| 03. | Substrate module: task | <ul><li>[ ] </li></ul> | (to be evaluated, once 0b./0d. are accepted)  | Spec: This pallet provides users with the function of deploying and updating periodic/temporary tasks, where users can set the execution time and cycle of tasks. It also provides an interface for users to recharge their applications, allowing them to prepay for the operation of the application. Miners can only obtain revenue after uploading proof-of-work for single-task work.<br /> 1. TEE task create <br /> 2. TEE task update <br /> 3. TEE task set execute settings <br /> 4. TEE task recharge <br /> 5. TEE task stop |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [Docker run instructions](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/run-docker.md) | See [Documentation Feedback](#documentation-feedback) |
+| 01. | Substrate module: worker | <ul><li>[x] </li></ul> | [worker module](https://github.com/wetee-dao/chain/tree/34aab0564073c3b0902f33ee924523c2d1b8de6e/packages/pallets/wetee-worker) | - |
+| 02. | Substrate module: app | <ul><li>[x] </li></ul> | [app module](https://github.com/wetee-dao/chain/tree/34aab0564073c3b0902f33ee924523c2d1b8de6e/packages/pallets/wetee-app), [gnginx docker img source](https://github.com/wetee-dao/examples/tree/main/gramine-nginx), [grust-app docker img source](https://github.com/wetee-dao/examples/tree/main/gramine-rust) | - |
+| 03. | Substrate module: task | <ul><li>[x] </li></ul> | [task module](https://github.com/wetee-dao/chain/tree/34aab0564073c3b0902f33ee924523c2d1b8de6e/packages/pallets/wetee-task) | - |
 
 
 
@@ -1137,7 +1137,7 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [ ] Access running docker-orchestrated, cargo run-orchestrated or prebuilt node from polkadot.js ui doesn't succeed, although the container seemed to run on the correct port (9944).
+- [x] Access running docker-orchestrated, cargo run-orchestrated or prebuilt node from polkadot.js ui doesn't succeed, although the container seemed to run on the correct port (9944). However, the grantee was kind enough to walk me through the steps in a online meeting. They demonstrated all extrisics successfully.
 
 ### Testing Feedback
 
