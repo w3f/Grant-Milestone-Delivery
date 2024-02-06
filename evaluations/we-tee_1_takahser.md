@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [Apache License 2.0](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/LICENSE)  | - |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul> | [M1 docs](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/grants/milestone-1-documentation.md)  | See [Documentation Feedback](#documentation-feedback) |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [M1 docs](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/grants/milestone-1-documentation.md)  | See [Documentation Feedback](#documentation-feedback) |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Test guide](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/grants/milestone-1-test.md)  | See [Testing Feedback](#testing-feedback) |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [Docker run instructions](https://github.com/wetee-dao/chain/blob/0a9e6c090402b950ab2f17b502368df6118bfb7a/docs/run-docker.md) | See [Documentation Feedback](#documentation-feedback) |
 | 01. | Substrate module: worker | <ul><li>[x] </li></ul> | [worker module](https://github.com/wetee-dao/chain/tree/34aab0564073c3b0902f33ee924523c2d1b8de6e/packages/pallets/wetee-worker) | - |
