@@ -18,7 +18,86 @@
 
 # General Notes
 
+Mostly working great! Code completion works. Initializes nicely w/ rust-analyzer. Hover pop-ups work for both rust-analyzer and ink-analyzer:
+
+<img width="765" alt="test1" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/8b20595b-def0-4c06-a9a1-6898c8125f73">
+
+<img width="710" alt="test2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/7a079860-6044-48bb-aea7-d19cb311b814">
+
+For some reason I can't get the hints to display in the command palette:
+
+<img width="610" alt="palette" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/8f9d2003-3f97-43e6-aa19-21fc1f58b2dc">
+
+Correctly displays errors and inlay hints:
+
+<img width="994" alt="inlay" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/f6ad06cf-bdd8-4b2d-a521-9ad5f20228e8">
+
 # Tests
+
+Test is failing for `non-packed-tuple-struct` is this intended behavior?
+
+<details>
+  <summary>Output</summary>
+
+```rust
+   Compiling non_packed_tuple_struct v4.2.0 (/Users/keeganquigley/ink-vscode/test-fixtures/non-packed-tuple-struct)
+error[E0433]: failed to resolve: use of undeclared crate or module `ink_storage`
+ --> non-packed-tuple-struct/lib.rs:3:5
+  |
+3 | use ink_storage::{
+  |     ^^^^^^^^^^^ use of undeclared crate or module `ink_storage`
+
+error[E0432]: unresolved import `ink_primitives`
+ --> non-packed-tuple-struct/lib.rs:2:5
+  |
+2 | use ink_primitives::KeyComposer;
+  |     ^^^^^^^^^^^^^^ use of undeclared crate or module `ink_primitives`
+
+error[E0432]: unresolved import `ink_storage`
+ --> non-packed-tuple-struct/lib.rs:3:5
+  |
+3 | use ink_storage::{
+  |     ^^^^^^^^^^^ use of undeclared crate or module `ink_storage`
+
+error[E0433]: failed to resolve: use of undeclared crate or module `ink_env`
+  --> non-packed-tuple-struct/lib.rs:14:5
+   |
+14 |     ink_env::test::run_test::<ink_env::DefaultEnvironment, _>(|_| {
+   |     ^^^^^^^ use of undeclared crate or module `ink_env`
+
+error[E0599]: no method named `key` found for struct `Contract` in the current scope
+  --> non-packed-tuple-struct/lib.rs:16:29
+   |
+9  | #[ink::storage_item]
+   | -------------------- method `key` not found for this struct
+...
+16 |         assert_eq!(contract.key(), 0);
+   |                             ^^^ method not found in `Contract`
+   |
+  ::: /Users/keeganquigley/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-4.3.0/src/storage.rs:75:8
+   |
+75 |     fn key(&self) -> Key {
+   |        --- the method is available for `Contract` here
+   |
+   = help: items from traits can only be used if the trait is in scope
+help: the following trait is implemented but not in scope; perhaps add a `use` for it:
+   |
+2  + use ink::storage::traits::StorageKey;
+   |
+
+error[E0433]: failed to resolve: use of undeclared crate or module `ink_env`
+  --> non-packed-tuple-struct/lib.rs:14:31
+   |
+14 |     ink_env::test::run_test::<ink_env::DefaultEnvironment, _>(|_| {
+   |                               ^^^^^^^ use of undeclared crate or module `ink_env`
+
+Some errors have detailed explanations: E0432, E0433, E0599.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `non_packed_tuple_struct` (lib) due to 6 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `non_packed_tuple_struct` (lib test) due to 6 previous errors
+```
+</details>
 
 <details>
   <summary>135 unit tests passing</summary>
