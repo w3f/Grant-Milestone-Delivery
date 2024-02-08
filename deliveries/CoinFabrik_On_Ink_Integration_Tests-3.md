@@ -1,0 +1,68 @@
+# Milestone Delivery :mailbox:
+
+
+**The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/CoinFabrik_On_Ink_Integration_Tests_3.md
+* **Milestone Number:** 1
+
+**Context** (optional)
+
+For this milestone, we developed missing functionalities for integration tests, and corrected implementation differences when compared to end-to-end (e2e) tests, for the following functions `invoke_contract_delegate()`, `invoke_contract()`, `set_code_hash()`, `caller_is_origin()`, `code_hash()`, `own_code_hash()`, and `balance()`. We also raised an issue ([#1985](https://github.com/paritytech/ink/issues/1985)) for correcting a problem in e2e tests for function `weight_to_fee()`, which was reviewed and resolved in [PR #219](https://github.com/paritytech/substrate-contracts-node/pull/219). Furthermore, we performed ad-hoc implementations for functions `return_value()`, which was necessary for `instantiate_contract()`, and `set_balance()`.
+
+Additionally, we provide [documentation and test cases](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/test-cases) for all the 24 functions exposed for use in integration and E2E testing environments. This includes highlighting behavioral and implementation differences, as well as suggesting implementation plans for any necessary corrections. 
+
+We documented our work in a [milestone report](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf). All analysis work linked in the report can be found in our [analysis repository](https://github.com/CoinFabrik/on-ink-integration-tests).
+
+
+**Deliverables**
+
+| Number | Deliverable | Link | Notes |
+| ----- | ----------- | ------------- |------------- |
+| 0a. | License | https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/LICENSE | MIT |
+| 0b. | Documentation | https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf | We worked on the comparison report, providing documentation on the developed functions: `invoke_contract_delegate()`, `invoke_contract()`, `set_code_hash()`, `caller_is_origin()`, `code_hash()`, `own_code_hash()`, and `balance()`. Check [`Appendix 1` of the included report](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf).<br> We also contacted the ink! development team and provided a report on `weight_to_fee()`, raised as issue [#1985](https://github.com/paritytech/ink/issues/1985) in the requested repository. This was discussed with [@cmichi](https://github.com/cmichi) and after being reviewed by [@smiasojed](https://github.com/smiasojed) was resolved in pull request [PR #219](https://github.com/paritytech/substrate-contracts-node/pull/219) to substrate-contracts-node.<br> We provide additional documentation on new issues we found as we performed our fixes in section [`Other Findings` of Appendix 1]((https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf)).
+| 0c. | Testing and Testing Guide | - | We followed existing [contribution guidelines](https://github.com/paritytech/ink/blob/master/CONTRIBUTING.md) for the pull requests associated with the implementations of functions: `invoke_contract_delegate()`, `invoke_contract()`, `set_code_hash()`, `caller_is_origin()`, `code_hash()`, `own_code_hash()`, and `balance()`. For these functions, we added test cases in their target directories correspondingly. We include a testing guide on how to execute these tests in [our report](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf), on `Reference 1: Implementation Summary` of section `Execution` of the `Appendix 1`, and in the documentation of each corresponding pull request.
+| 0d. | Docker | - | Does not apply at this stage.
+| 0e. | Article | https://www.coinfabrik.com/blog/flattening-the-anvil-on-ink-integration-and-e2e-tests| We prepared a summary report and published it on our blog https://blog.coinfabrik.com/ under the name `Flattening the Anvil: On Ink! Integration and E2E Tests`.
+ **1** | Develop | [PR#1982](https://github.com/paritytech/ink/pull/1982), [PR#1988](https://github.com/paritytech/ink/pull/1988), [PR#1991](https://github.com/paritytech/ink/pull/1991)  | We provide implementations for the functions specified in this milestone: [`3-invoke_contract_delegate()`, `4-invoke_contract()`, `6-set_code_hash()`](https://github.com/paritytech/ink/pull/1988), [`8-caller_is_origin()`](https://github.com/paritytech/ink/pull/1991), [`9-code_hash()`, `10-own_code_hash()`](https://github.com/paritytech/ink/pull/1988) and [`17-balance()`](https://github.com/paritytech/ink/pull/1982). Check documentation on these developments in [our report](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf), in `Reference 1: Implementation Summary` of the section `Execution` of the `Appendix 1`.<br> For `weight_to_fee()`, we raised an issue ([#1985](https://github.com/paritytech/ink/issues/1985)) and it as was reviewed and resolved in [PR #219](https://github.com/paritytech/substrate-contracts-node/pull/219) by [@smiasojed](https://github.com/smiasojed).<br> We also provide ad-hoc developments for functions `return_value()` and `set_balance()` which we document in section `Ad-hoc developments` of the `Appendix 1` in [our report](https://github.com/CoinFabrik/on-ink-integration-tests/blob/main/assets/On-Ink-Integration-Tests-3-Milestone-Report.pdf).
+ **2** | Quality Assurance |  - | We reviewed and followed the established [contribution guidelines](https://github.com/paritytech/ink/blob/master/CONTRIBUTING.md) for the pull requests performed.
+
+
+
+**Additional Information**
+
+- How did you hear about the Grants Program? Richard Casey from Parity brought this program to our attention, and we have already successfully delivered two applications as a result.
+
+- During our inquiries for this application, we briefly consulted Sam Ruberti from the ink! Team and David Hawig from the Web3 Foundation. Their encouragement motivated us to proceed with this presentation.
+
+- Which function was developed on which PR? In the `Table 1` below we provide the PR associated with each implemented function.
+
+***Table 1: Implementing Missing Functionalities On Ink Integration Tests***
+
+| Issue Number | Function                  | Implemented Integration Tests | Implemented E2E Tests | Updated Status                                                                                                 |
+|--------------|---------------------------|-------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------|
+| 1            | default_accounts()        | Yes                           | Yes                   | Implementation Difference Corrected. [Pull request #1955](https://github.com/your-repo/pull/1955) performed.    |
+| 2            | set_contract_storage()    | Yes                           | Yes                   | Missing limitation on Integration Testing Implemented. [Pull request #1961](https://github.com/your-repo/pull/1961) performed. |
+| 3            | invoke_contract_delegate()| Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed. |
+| 4            | invoke_contract()         | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed. |
+| 5            | gas_left()                | No                            | Yes                   | Missing Function Implementation on Integration Testing. Unfeasible Implementation.<br><br>Because integration tests are performed on native code rather than WASM code, and because gas cost is based on the number of WASM instructions executed, implementing this function is impractically complex.                             |
+| 6            | set_code_hash()           | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed. |
+| 7            | instantiate_contract()    | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed.<br><br> We initially performed the Pull Request [#1963](https://github.com/paritytech/ink/pull/1963) to implement instantiate_contract() in Milestone 2, but decided to close it and perform a new Pull Request [#1988](https://github.com/your-repo/pull/1988) to include necessary implementations of other related functions,  which were developed in Milestone 3. |
+| 8            | caller_is_origin()        | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1991](https://github.com/your-repo/pull/1991) performed. |
+| 9            | code_hash()               | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed. |
+| 10           | own_code_hash()           | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1988](https://github.com/your-repo/pull/1988) performed. |
+| 11           | call_runtime()            | No                            | Yes                   | Missing Function Implementation on Integration Testing. Unfeasible Implementation.<br><br>Implementing this function is unfeasible, as it would require emulating practically the entire node to get consistent results. Testing a contract function that calls into the runtime should be done using E2E tests.                           |
+| 12           | caller()                  | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 13           | transferred_value()       | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 14           | weight_to_fee()           | Yes                           | Yes                   | Implementation Difference. Issue raised in [#1985](https://github.com/your-repo/issue/1985) and resolved in PR [#219](https://github.com/your-repo/pull/219) to substrate-contracts-node by @smiasojed. |
+| 15           | block_timestamp()         | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 16           | account_id()              | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 17           | balance()                 | Pull request with implementation performed. | Yes | Missing Function Implementation on Integration Testing Performed. [Pull request #1982](https://github.com/your-repo/pull/1982) performed. We also updated the initial balance for default accounts in [Pull request #1955](https://github.com/your-repo/pull/1955). |
+| 18           | block_number()            | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 19           | minimum_balance()         | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 20           | terminate_contract()      | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 21           | transfer()                | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 22           | hash_bytes()              | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 23           | hash_encoded()            | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+| 24           | ecdsa_recover()           | Yes                           | Yes                   | Ok. No difference observed in testing.                                                                          |
+

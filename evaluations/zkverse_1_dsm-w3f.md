@@ -1,21 +1,21 @@
 
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/zkverse.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
-- **Previously successfully merged evaluation:** N/A
+- **Evaluation by:** dsmw3f, keeganquigley
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>|https://github.com/Zkvers/substrate-zk/blob/master/LICENSE| | 
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/zk-tutorials/proof-system/groth16/theory_to_practice.md| Not fully evaluated yet  | 
-| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/|  |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/zk-tutorials/proof-system/groth16/theory_to_practice.md| PR merged. | 
+| 0c. | Testing Guide |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/| Ok. |
 | 0d.  |Docker |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/blob/master/docker-compose.yml| Works but could be improved |
-| 1.  |make groth16 compatible with substrate |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/bellman-verifier|  |
-| 2.  |adapt snarkjs and bellman |<ul><li>[x] </li></ul>| https://github.com/Zkvers/snarkjs-bellman-adapter/tree/main|  |
-| 3.  |ZKP education |<ul><li>[ ] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/zk-tutorials| Not fully evaluated yet |
+| 1.  |make groth16 compatible with substrate |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/bellman-verifier| PRs merged. |
+| 2.  |adapt snarkjs and bellman |<ul><li>[x] </li></ul>| https://github.com/Zkvers/snarkjs-bellman-adapter/tree/main| Ok. |
+| 3.  |ZKP education |<ul><li>[x] </li></ul>| https://github.com/Zkvers/substrate-zk/tree/master/zk-tutorials| Ok. |
 
 ## Evaluation V3
 
