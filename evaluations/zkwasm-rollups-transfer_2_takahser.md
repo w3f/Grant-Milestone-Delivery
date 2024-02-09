@@ -292,7 +292,7 @@ Summarizes the overall performance plus additional feedback/comments
         Updating git repository `https://github.com/KogarashiNetwork/Kogarashi`
         Updating crates.io index
     ^C     Fetch [============>            ]  54.19%, (58145/147264) resolving deltas                                                                                                                         
-    seraya@P9K6HTK4H5-w3f sample % cargo test --release
+    xxx@P9K6HTK4H5-w3f sample % cargo test --release
         Updating crates.io index
       Downloaded indexmap v2.2.1
       Downloaded futures-sink v0.3.30
@@ -577,7 +577,7 @@ Summarizes the overall performance plus additional feedback/comments
       Compiling frame-support v3.0.0 (https://github.com/KogarashiNetwork/zksubstrate?branch=v3.0.0#95f493c4)
       Compiling frame-system v3.0.0 (https://github.com/KogarashiNetwork/zksubstrate?branch=v3.0.0#95f493c4)
       Compiling pallet-nova v0.1.0 (https://github.com/KogarashiNetwork/Kogarashi?branch=master#32aec185)
-      Compiling zk-storage v3.0.0 (/Users/seraya/repos/Kogarashi/sample)
+      Compiling zk-storage v3.0.0 (/Users/xxx/repos/Kogarashi/sample)
         Finished release [optimized] target(s) in 4m 03s
         Running unittests src/lib.rs (target/release/deps/zk_storage-a20d7b9656a84f7b)
 
