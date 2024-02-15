@@ -24,6 +24,10 @@ This has come together very nicely! The app works well and I can send messages o
 
 <img width="358" alt="demo" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/046903b6-91a2-4fa7-913d-413aea703e80">
 
+Properly uses seed phrase in dev wallet:
+
+<img width="358" alt="demo2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/8edcc970-9293-42b1-83aa-fdfe87e4b319">
+
 Nice work! I hope to see devs utilize these libraries.
 
 ## Tests
