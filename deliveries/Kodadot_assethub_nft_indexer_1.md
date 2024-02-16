@@ -1,4 +1,4 @@
-# Milestone Delivery :mailbox:
+`# Milestone Delivery :mailbox:
 
 <!-- **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/milestone-deliverables-guidelines.md).** -->
 
@@ -49,7 +49,7 @@ The milestone 1 of KodaDot's Assethub indexer for non-fungible tokens contains a
 | 6c.    | NFT Royalties PAYOUT Handler         | [Pay royalty](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/nfts/payTips.ts)                                                              | -                                                                                    |
 | 7a.    | Fungible Assets Schema Creation      | [GraphQL schema asset.](https://github.com/kodadot/stick/blob/arrow-stick/schema.graphql#L156)                                                   | -                                                                                    |
 | 7b.    | Fungible Assets Force Creation       | [add system tokens](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/assets/forceToken.ts#L36)                                              | -                                                                                    |
-| 7c.    | Fungible Assets CREATE Event         | [add other tokens](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/assets/forceToken.ts#L45)             | -                                                                                    |
+| 7c.    | Fungible Assets CREATE Event         | [add assets](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/assets/create.ts)             | -                                                                                    |
 | 7d.    | Metadata Support for Fungible Assets | [add metadata](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/assets/setMetadata.ts)                                                   | -                                                                                    |
 | 7e.    | Fungible Asset Allowlist Setup       | [Allow List](https://github.com/kodadot/stick/blob/arrow-stick/src/mappings/assets/forceToken.ts#L36)                                                                       | -                                                                                    |
 | 8a.    | Data Views Development               | [GraphQL schema Token](https://github.com/kodadot/stick/blob/arrow-stick/schema.graphql#L50)                                                                 | Introduced new entity to make data views faster                                                                                    |
