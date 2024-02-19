@@ -16,17 +16,32 @@
 | 1. | PlutonicationDAppClient | <ul><li>[ ] </li></ul>| [PlutonicationDAppClient.cs](https://github.com/cisar2218/Plutonication/blob/grant-delivery/Plutonication/PlutonicationDAppClient.cs) | Not fully evaluated yet. |
 | 1a. | InitializeAsync | <ul><li>[ ] </li></ul>| [InitializeAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationDAppClient.cs#L15) | Not fully evaluated yet. |
 | 1b. | onReceivePublicKey | <ul><li>[ ] </li></ul>| [onReceivePublicKey](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationDAppClient.cs#L17C28-L17C46) | Not fully evaluated yet. |
-| 1c. | SignPayloadAsync | <ul><li>[ ] </li></ul>| [SignPayloadAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationAccount.cs#L91C44-L91C60) | Not fully evaluated yet. |
-| 1d. | SignAsync | <ul><li>[ ] </li></ul>| [SignAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationAccount.cs#L66C44-L66C53) | Not fully evaluated yet. |
+| 1c. | SignPayloadAsync | <ul><li>[x] </li></ul>| [SignPayloadAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationAccount.cs#L91C44-L91C60) |  |
+| 1d. | SignAsync | <ul><li>[x] </li></ul>| [SignAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationAccount.cs#L66C44-L66C53) |  |
 | 2. | PlutonicationWalletClient | <ul><li>[ ] </li></ul>| [PlutonicationWalletClient](https://github.com/cisar2218/Plutonication/blob/grant-delivery/Plutonication/PlutonicationWalletClient.cs) | Not fully evaluated yet. |
 | 2a. | InitializeAsync | <ul><li>[ ] </li></ul>| [InitializeAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L31C28-L31C43) | Not fully evaluated yet. |
 | 2b. | SendPublicKeyAsync | <ul><li>[ ] </li></ul>| [SendPublicKeyAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L131C35-L131C53) | Not fully evaluated yet. |
-| 2c. | SendPayloadSignatureAsync | <ul><li>[ ] </li></ul>| [SendPayloadSignatureAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L149C34-L149C59) | Not fully evaluated yet. |
-| 2d. | SendRawSignatureAsync | <ul><li>[ ] </li></ul>| [SendRawSignatureAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L167C34-L167C55) | Not fully evaluated yet. |
+| 2c. | SendPayloadSignatureAsync | <ul><li>[x] </li></ul>| [SendPayloadSignatureAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L149C34-L149C59) |  |
+| 2d. | SendRawSignatureAsync | <ul><li>[x] </li></ul>| [SendRawSignatureAsync](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/Plutonication/PlutonicationWalletClient.cs#L167C34-L167C55) | |
 | 3. | NuGet package | <ul><li>[ ] </li></ul>| [NuGet package](https://www.nuget.org/packages/Plutonication/) | Has a formatting error |
 | 4. | Sample Console dApp | <ul><li>[ ] </li></ul>| [Sample Console dApp](https://github.com/cisar2218/Plutonication/tree/grant-delivery/PlutonicationConsoleSample) | Can't scan the QR code with success. |
 | 5. | Testing moved from milestone 1 | <ul><li>[x] </li></ul>| All of the functions end-to-end tested with a sample dApp written in typescript (with Plutonication and Polkadot.js api) and a sample Wallet (PlutoWallet). Showcase video: https://youtu.be/lVVcgNs7KRk?si=r-oOhd8Nvb1m0ysQ. Guide for running: https://github.com/RostislavLitovkin/Plutonication?tab=readme-ov-file#e2e-testing-with-pluto-wallet |  |
 
+## Evaluation V2
+
+### Sample Console dApp
+
+I ran the sample code, and I received the console log below.
+
+```
+Hello, Plutonication!
+plutonication:?url=wss%3A%2F%2Fplutonication-acnha.ondigitalocean.app%2F&key=638439343593245975&name=CSharp Plutonication console test&icon=https%3A%2F%2Frostislavlitovkin.pythonanywhere.com%2Fplutowalleticonwhite
+
+The following link opens you a QR code image that can be scanned by PlutoWallet: 
+https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=plutonication:?url=wss%3A%2F%2Fplutonication-acnha.ondigitalocean.app%2F&key=638439343593245975&name=CSharp Plutonication console test&icon=https%3A%2F%2Frostislavlitovkin.pythonanywhere.com%2Fplutowalleticonwhite
+```
+
+I tried again to scan the QR code using the PlutoWallet app, but nothing happened. The 1.9 update fixed the bug reported in Evaluation V1, but using the default QR code scan of the cellphone only opened the app. So the sample code appears to be stuck in the [Line 36](https://github.com/cisar2218/Plutonication/blob/00c231cfa2fed8c8b436d7e41c8c2901f412300c/PlutonicationConsoleSample/Program.cs#L36). 
 
 ## Evaluation V1
 
