@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/zkwasm-rollups-transfer.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -11,7 +11,7 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/KogarashiNetwork/Kogarashi/blob/6cfe4cdc1d2cc232b18e04899e78d81840c65e09/LICENSE) | - |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Tutorial](https://kogarashinetwork.github.io/tutorial/nova_pallet/) | See [Documentation Feedback](#documentation-feedback) |
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Test instructions](https://github.com/KogarashiNetwork/Kogarashi/tree/master/pallet/nova#test) | See [Testing Feedback](#testing-feedback) |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | [Dockerfile](https://github.com/KogarashiNetwork/Kogarashi/blob/master/Dockerfile) | I know it's just a simple Dockerfile that runs tests, but please add instructions on how to test it. Also, it'd have been nice to have a docker setup that allows to spin up a node which uses your nova pallet. |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/KogarashiNetwork/Kogarashi/blob/master/Dockerfile) | See [Docker Feedback](#docker-feedback) |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Tutorial](https://kogarashinetwork.github.io/tutorial/nova_pallet/) | - |
 | 1. | `bn254/grumpkin` implementation | <ul><li>[x] </li></ul> | [bn254 curve](https://github.com/KogarashiNetwork/Kogarashi/tree/dc1450971ccfd35b9d337a8d9f7bc997cbe02d89/bn254), [grumpkin curve](https://github.com/KogarashiNetwork/Kogarashi/tree/dc1450971ccfd35b9d337a8d9f7bc997cbe02d89/grumpkin) | - |
 | 2. | `groth16` implementation | <ul><li>[x] </li></ul> | [groth16 zkSNARKs](https://github.com/KogarashiNetwork/Kogarashi/tree/dc1450971ccfd35b9d337a8d9f7bc997cbe02d89/groth16) | - |
@@ -279,8 +279,6 @@ Summarizes the overall performance plus additional feedback/comments
     test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
     ```
   </details>
-
-### Documentation
 
 - [x] Tests in sample app pass
   
@@ -595,3 +593,34 @@ Summarizes the overall performance plus additional feedback/comments
     test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
     ```
   </details>
+
+### Docker Feedback
+
+- [x] although the tests didn't pass on my machine (MacBook Pro, M2 Max) they passed on the grantees machine which has been [verified](https://github.com/w3f/Grant-Milestone-Delivery/pull/1092#issuecomment-1954081825) as part of a google meet; excerpt with passing tests:
+
+  <details>
+    <summary>Output</summary>
+
+    ```zsh
+    ➜  Kogarashi git:(master) dcom up
+    Starting nova ... done
+    Attaching to nova
+    nova    |     Finished release [optimized] target(s) in 0.82s
+    nova    |      Running unittests src/lib.rs (target/release/deps/zk_storage-e18c6ff412cf73a5)
+    nova    | 
+    nova    | running 3 tests
+    nova    | test tests::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+    nova    | test tests::default_sum_zero ... ok
+    nova    | test tests::sums_thing_one has been running for over 60 seconds
+    nova    | test tests::sums_thing_one ... ok
+    nova    | 
+    nova    | test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 107.26s
+    nova    | 
+    nova    |    Doc-tests zk-storage
+    nova    | 
+    nova    | running 0 tests
+    nova    | 
+    nova    | test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    nova    | 
+    nova exited with code 0
+    ```
