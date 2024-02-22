@@ -118,6 +118,7 @@ jobs:
     if: always()
     steps:
       - name: Request invoice
+        if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
         uses: thollander/actions-comment-pull-request@1.0.1
         with:
           message: >
