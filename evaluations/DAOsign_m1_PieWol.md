@@ -21,7 +21,7 @@
 ## General Notes
 One of the major goals of the grant project by the w3f is to nurture development of innovative tech thats open source and easily reusable by anybody. 
 
-In your Ink! contracts you used some code that doesn't seem to have any meaningful impact on the functionality.
+In your Ink! contracts you used some code that doesn't seem to have any meaningful impact on the functionality. 
 e.g.:
 
 ```pub fn validate_signed_proof_of_agreement(&self, data: SignedProofOfAgreement) -> bool {
