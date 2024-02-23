@@ -1,7 +1,6 @@
-
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/35dc9e121070d89397b7fb8c4c0d70e683937ab0/applications/Substrate_Move_System_Pallet_2.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -10,12 +9,32 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul>| [Link](https://github.com/eigerco/pallet-move/blob/main/LICENSE) | |
-| 0b. | Documentation | <ul><li>[ ] </li></ul>| The [main readme](https://github.com/eigerco/pallet-move/blob/main/README.md) & the [design document](https://github.com/eigerco/pallet-move/blob/main/doc/final-design.md) | Broken links |
+| 0b. | Documentation | <ul><li>[x] </li></ul>| The [main readme](https://github.com/eigerco/pallet-move/blob/main/README.md) & the [design document](https://github.com/eigerco/pallet-move/blob/main/doc/final-design.md) |  |
 | 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Testing guide](https://github.com/eigerco/pallet-move/blob/main/doc/tech_guide.md#testing) and the [tutorial](https://github.com/eigerco/pallet-move/blob/main/doc/tutorial.md) |  |
-| 0d. | Docker | <ul><li>[ ] </li></ul>| [Dockerfile](https://github.com/eigerco/pallet-move/blob/main/Dockerfile) | Missing dependency |
+| 0d. | Docker | <ul><li>[x] </li></ul>| [Dockerfile](https://github.com/eigerco/pallet-move/blob/main/Dockerfile) |  |
 | 1. | Rust crate: Substrate Move | <ul><li>[x] </li></ul>| [Substrate Move crate](https://github.com/eigerco/substrate-move) |  |
-| 2. | System Pallet: Substrate Move SP adds Move functionality | <ul><li>[ ] </li></ul>| [pallet-move](https://github.com/eigerco/pallet-move) | Problems to run cargo clippy |
+| 2. | System Pallet: Substrate Move SP adds Move functionality | <ul><li>[x] </li></ul>| [pallet-move](https://github.com/eigerco/pallet-move) | |
 | 3. | System Pallet: Substrate Move SP APIs to interact with the Move VM | <ul><li>[x] </li></ul>| [smove tool](https://github.com/eigerco/smove) |  |
+
+## Evaluation V2
+
+### Documentation
+
+The links are working now.
+
+### Pallet-move
+
+I was able to run the `cargo clippy` command. No warnings.
+
+```
+user@localhost:~/Documents/movevm/pallet-move$ cargo clippy --all-targets
+    Finished dev [unoptimized + debuginfo] target(s) in 0.56s
+
+```
+
+### Docker
+
+I was able to start the node, but I couldn't connect the `polkadot.js`. I tried to use `ws://127.0.0.1:9944` and `ws://0.0.0.0:9944`, and with wss also didn't connect. I think probably is some configuration in the container. This don't prevent the milestone approval, but It would be nice to fix. 
 
 ## Evaluation V1
 
@@ -66,7 +85,6 @@ error: items were found after the testing module
 	= help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#items_after_test_module
 	= note: `-D clippy::items-after-test-module` implied by `-D warnings`
 	= note: this error originates in the macro `frame_support::construct_runtime` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error: could not compile `pallet-move` (test "mock") due to previous error
 ```
 
@@ -118,91 +136,70 @@ Raw Storage Info
 ========
 Storage: `System::Account` (r:1 w:0)
 Proof: `System::Account` (`max_values`: None, `max_size`: Some(128), added: 2603, mode: `MaxEncodedLen`)
-
 Median Slopes Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	117.9
           	µs
-
 Reads = 1
 Writes = 0
 Recorded proof Size = 51
-
 Min Squares Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	117.9
           	µs
-
 Reads = 1
 Writes = 0
 Recorded proof Size = 51
-
 Pallet: "pallet_move", Extrinsic: "publish_module", Lowest values: [], Highest values: [], Steps: 50, Repeat: 20
 Raw Storage Info
 ========
 Storage: `MoveModule::VMStorage` (r:1 w:1)
 Proof: `MoveModule::VMStorage` (`max_values`: None, `max_size`: None, mode: `Measured`)
-
 Median Slopes Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	184.8
           	µs
-
 Reads = 1
 Writes = 1
 Recorded proof Size = 111
-
 Min Squares Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	184.8
           	µs
-
 Reads = 1
 Writes = 1
 Recorded proof Size = 111
-
 Pallet: "pallet_move", Extrinsic: "publish_module_bundle", Lowest values: [], Highest values: [], Steps: 50, Repeat: 20
 Raw Storage Info
 ========
 Storage: `MoveModule::VMStorage` (r:1 w:1)
 Proof: `MoveModule::VMStorage` (`max_values`: None, `max_size`: None, mode: `Measured`)
-
 Median Slopes Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	291.3
           	µs
-
 Reads = 1
 Writes = 1
 Recorded proof Size = 111
-
 Min Squares Analysis
 ========
 -- Extrinsic Time --
-
 Model:
 Time ~=	291.3
           	µs
-
 Reads = 1
 Writes = 1
 Recorded proof Size = 111
-
 2024-02-19 12:39:38 Starting benchmark: pallet_move::publish_module_bundle    
 Created file: "weights.rs"
 ```
