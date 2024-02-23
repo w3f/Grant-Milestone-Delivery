@@ -39,11 +39,30 @@ I wonder why you added those in the first place. If somebody really wanted to th
 I think your article currently has a very good introduction. You mention how the contract is mainly storing proofs but it's not clear to the reader how this enables the product you are creating as a whole. I see that you linked the github for technical details but I think main goal of the article is to explain to readers how you achieved your goal and which component plays what role in the context of the whole product. 
 
 ## Testing
-ink! unit tests are passing.
+ink! unit tests are partly passing. The eip tests are not.
+
+<details open>
+<summary>ink! eip unit tests</summary>
+<br>
+
+````````
+Building [=======================> ] 139/140: daosign_eip712(test)                                                                                                                                     
+error[E0119]: conflicting implementations of trait `Debug` for type `daosign_eip712::DAOsignEIP712`
+--> contracts/daosign_eip712/src/lib.rs:184:5
+|
+184 |     /// Contract Storage struct
+|     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ conflicting implementation for `daosign_eip712::DAOsignEIP712`
+185 |     #[ink(storage)]
+186 |     #[derive(Debug)]
+|              ----- first implementation here
+|
+= note: this error originates in the derive macro `::core::fmt::Debug` (in Nightly builds, run with -Z macro-backtrace for more info)
+````````
+</details>
+
 <details open>
 <summary>ink! unit tests</summary>
 <br>
-Well, you asked for it!
 
 ````````
 running 6 tests
@@ -63,3 +82,4 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ``````
 </details>
+
