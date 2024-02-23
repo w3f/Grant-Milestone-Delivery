@@ -37,3 +37,29 @@ I wonder why you added those in the first place. If somebody really wanted to th
 
 ## Article
 I think your article currently has a very good introduction. You mention how the contract is mainly storing proofs but it's not clear to the reader how this enables the product you are creating as a whole. I see that you linked the github for technical details but I think main goal of the article is to explain to readers how you achieved your goal and which component plays what role in the context of the whole product. 
+
+## Testing
+ink! unit tests are passing.
+<details open>
+<summary>ink! unit tests</summary>
+<br>
+Well, you asked for it!
+
+````````
+running 6 tests
+test daosign_app::tests::test_get_proof_of_authority ... ok
+test daosign_app::tests::test_get_proof_of_agreement ... ok
+test daosign_app::tests::test_get_proof_of_signature ... ok
+test daosign_app::tests::test_store_proof_of_authority ... ok
+test daosign_app::tests::test_store_proof_of_agreement ... ok
+test daosign_app::tests::test_store_proof_of_signature ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+   Doc-tests daosign_app
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+``````
+</details>
