@@ -24,9 +24,11 @@ One of the major goals of the grant project by the w3f is to nurture development
 In your Ink! contracts you used some code that doesn't seem to have any meaningful impact on the functionality. 
 e.g.:
 
-```pub fn validate_signed_proof_of_agreement(&self, data: SignedProofOfAgreement) -> bool {
+```
+pub fn validate_signed_proof_of_agreement(&self, data: SignedProofOfAgreement) -> bool {
             assert!(data.proof_cid.len() == IPFS_CID_LENGTH, "Invalid proof CID");
             assert!(data.message.app == "daosign", "Invalid app name");
+            }
 ```
 
 Whats the reason to setup the contracts in this way? Are you trying to make sure that no other service uses the contracts you have deployed yourself? 
