@@ -12,7 +12,7 @@
 | ------ | ----------- | :------: | ---- |----------------- |
 |0a.|License| <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/auguth/pocs/blob/master/LICENSE) | - |
 |0b.|Documentation| <ul><li>[x] </li></ul> | [Pallet Contracts](https://auguth.github.io/pocs/target/doc/pallet_contracts/) , [Pallet Staking](https://auguth.github.io/pocs/target/doc/pallet_staking/) | okay |
-|0c.|Testing and Testing Guide | <ul><li>[] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#pocs-node-set-up) | needs work |
+|0c.|Testing and Testing Guide | <ul><li>[ ] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#pocs-node-set-up) | needs work |
 |0d.|Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/master/docker-compose.yml) , [DockerImage Pull](https://github.com/auguth/pocs/blob/master/README.md#docker-pull)| docker works |
 |0e.| Article | <ul><li>[ ] </li></ul> | [PoCS README](https://github.com/auguth/pocs/blob/master/README.md)|This has to be an article already. Don't mix it with the testing guidelines.|
 |1.| Modify pallet staking for PoCS |<ul><li>[ ] </li></ul> | [PoCS Node](https://github.com/auguth/pocs/tree/master)| please provide a link directly to the changes you implemented to adjust pallet_staking to your needs|
