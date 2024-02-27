@@ -11,14 +11,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 |0a.|License| <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/auguth/pocs/blob/master/LICENSE) | - |
-|0b.|Documentation| <ul><li>[x] </li></ul> | [Pallet Contracts](https://auguth.github.io/pocs/target/doc/pallet_contracts/) , [Pallet Staking](https://auguth.github.io/pocs/target/doc/pallet_staking/) | Crate Documentation of modified `pallet_contracts` and `pallet_staking` for PoCS|
-|0c.|Testing Guide| <ul><li>[x] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#pocs-node-set-up) | `nightly-2023-12-21` required and overridden. Guide includes implementation details|
-|0d.|Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/master/docker-compose.yml) , [DockerImage Pull](https://github.com/auguth/pocs/blob/master/README.md#docker-pull)| To Build and Run using Docker `docker compose up --build -d` |
-|0e.|Repository Readme (External Documentation)| <ul><li>[x] </li></ul> | [PoCS README](https://github.com/auguth/pocs/blob/master/README.md)|In Milestone 3, External documentation will be a blog article.|
-|1.|Delivery|<ul><li>[x] </li></ul> | [PoCS Node](https://github.com/auguth/pocs/tree/master)|PoCS Node Repository - includes modified [pallet-contracts](https://github.com/auguth/pocs/tree/master/pallets/contracts) & [pallet-staking](https://github.com/auguth/pocs/tree/master/pallets/staking)|
+|0b.|Documentation| <ul><li>[x] </li></ul> | [Pallet Contracts](https://auguth.github.io/pocs/target/doc/pallet_contracts/) , [Pallet Staking](https://auguth.github.io/pocs/target/doc/pallet_staking/) | okay |
+|0c.|Testing and Testing Guide | <ul><li>[] </li></ul> | [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) , [Node Setup & Run](https://github.com/auguth/pocs/blob/master/README.md#pocs-node-set-up) | needs work |
+|0d.|Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/master/docker-compose.yml) , [DockerImage Pull](https://github.com/auguth/pocs/blob/master/README.md#docker-pull)| docker works |
+|0e.| Article | <ul><li>[ ] </li></ul> | [PoCS README](https://github.com/auguth/pocs/blob/master/README.md)|This has to be an article already. Don't mix it with the testing guidelines.|
+|1.| Modify pallet staking for PoCS |<ul><li>[ ] </li></ul> | [PoCS Node](https://github.com/auguth/pocs/tree/master)|PoCS Node Repository - includes modified [pallet-contracts](https://github.com/auguth/pocs/tree/master/pallets/contracts) & [pallet-staking](https://github.com/auguth/pocs/tree/master/pallets/staking)|
 
 ## General Notes
-TODO: fix table of deliverables
+Please fix the table of deliverables in your delivery PR.
 
 ## Testing Guide
 I think your testing guide could use a better structuring.
