@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/infimum.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,9 +9,9 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [MIT](https://github.com/rhysbalevicius/infimum/blob/aed324e94084f734d8a6110b2a41ff905349edb1/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [Guide](https://github.com/rhysbalevicius/infimum/tree/aed324e94084f734d8a6110b2a41ff905349edb1#usage) | See [Documentation Feedback](#documentation-feedback) |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [Guide](https://github.com/rhysbalevicius/infimum/tree/aed324e94084f734d8a6110b2a41ff905349edb1#usage) | See [Documentation Feedback](#documentation-feedback) |
 | 0c. | Testing | <ul><li>[x] </li></ul> | | See [Testing Feedback](#testing-feedback) |
-| 1a. | Substrate pallet | <ul><li>[ ] </li></ul> | (currently being evaluated) | Spec: Methods 1.ii.a to 1.ii.i (listed under deliverables in the project overview) without verification functionality provided by Groth16 proving system. |
+| 1a. | Substrate pallet | <ul><li>[x] </li></ul> | [infimium pallet](https://github.com/rhysbalevicius/infimum/tree/38df28bf3d699a07e79299b0eca274dcec11a984/pallet/src) | Some extrinsics were not consistent with the spec. However, [this amendment](https://github.com/w3f/Grants-Program/pull/2227) provides fixed it. |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
@@ -21,6 +21,8 @@ which was used for testing the delivery. It should also be checked if the softwa
 Note: The builds were ran on a MacBook Pro M2, MacOs 14.3
 
 ### Documentation Feedback
+
+Note: Some extrinsics have not been covered by the docs, see [this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1116#issuecomment-1956531641). This will be addressed in M2.
 
 - [x] Docker-based Build ~~currently fails~~ passes
   
