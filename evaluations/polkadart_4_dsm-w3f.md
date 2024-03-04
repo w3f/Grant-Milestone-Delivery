@@ -9,16 +9,68 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.  | License       | <ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/leonardocustodio/polkadart/blob/main/packages/sr25519/LICENSE) | |
-| 0c.  | Testing Guide | <ul><li>[ ] </li></ul>| [Example](https://github.com/leonardocustodio/polkadart/tree/main/examples) | Example isn't working. |
+| 0b.  | Documentation | <ul><li>[x] </li></ul>| | |
+| 0c.  | Testing Guide | <ul><li>[x] </li></ul>| [Example](https://github.com/leonardocustodio/polkadart/tree/main/examples) |  |
 | 0d.  | Docker        | <ul><li>[ ] </li></ul>| [Docker](https://github.com/leonardocustodio/polkadart/blob/main/docker-compose.yml) | It seems to have a memory leak problem on the tests. |
-| 4a.  | sr25519 | <ul><li>[ ] </li></ul>| [sr25519](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519) | Could you provide the explanation and the conclusion of the research? |
+| 4a.  | sr25519 | <ul><li>[x] </li></ul>| [sr25519](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519) |  |
 | 4b.  | Ecdsa/Secp256k1  | <ul><li>[x] </li></ul>| [ecdsa](https://github.com/leonardocustodio/polkadart/tree/main/packages/secp256k1_ecdsa) | | 
 | 4c.  | Sign & Verify    | <ul><li>[x] </li></ul>| [Sign&Verify](https://github.com/leonardocustodio/polkadart/blob/main/packages/sr25519/example/example.dart) |  |
 | 4e.  | Custom RPC | <ul><li>[x] </li></ul>| [RPC](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/lib/provider.dart) | |
-| 4f.  | Custom Signed Extensions | <ul><li>[ ] </li></ul>| [SignedExtension](https://github.com/leonardocustodio/polkadart/blob/main/examples/bin/extrinsic_demo.dart) | Example isn't working. |
-| 4g.  | Multisig Account | <ul><li>[ ] </li></ul>| [MultiSig](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) | Example isn't working. |
+| 4f.  | Custom Signed Extensions | <ul><li>[x] </li></ul>| [SignedExtension](https://github.com/leonardocustodio/polkadart/blob/main/examples/bin/extrinsic_demo.dart) |  |
+| 4g.  | Multisig Account | <ul><li>[ ] </li></ul>| [MultiSig](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) | Need to add the package `polkadart_cli` and the 'polkadart' section to the `pubspec.yaml`. |
 | 4h.  | Tests            | <ul><li>[ ] </li></ul>| [Tests](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519/test) | It seems to have a memory leak problem on the tests. |
 | 4i.  | Pub.dev          | <ul><li>[x] </li></ul>| [Pub](https://pub.dev/publishers/polkadart.dev/packages) | |
+
+## Evaluation V2
+
+### sr25519
+
+The explanation about Rewrite Schnorrkel in Dart to give support sr25519 is in this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1138#issuecomment-1974140579).
+
+### Custom Signed Extensions
+
+I was able to run the example.
+
+```
+user@localhost:~/Documents/polkadart/examples$ dart run bin/extrinsic_demo.dart
+Sr25519 Wallet: 5Cabw1zd5pK8CbuPFHQYX7Ac9BVSumfw5BkiNQajstFdYDJq
+Ecdsa Wallet: 5Hft7aSusEA1vFX43VZFbKmxiiujRnP7RUk87B66VVzqbpyY
+Block Number: 19816766
+Destination: 5Hft7aSusEA1vFX43VZFbKmxiiujRnP7RUk87B66VVzqbpyY
+Payload: 040400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00e503000080610f0018000000e143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e40962801858809fa1a6944bea50f2fd746695087250cc380d489b5dfd62903ac
+Signature: 9ab730aaf31339d1d938e5a6b15ff7e3f5c5fd7f81a497ce0ff1b567a712df172c8481ea537b65770a665ed5e21fdad53473a2ccfd5e6572300e7c7f7077fb86
+sr25519 wallet extrinsic: 2d02840016cd6ab0878d5078dd14fe714e87ea77e77583cec4cbb9d95f2f06db2a86df5f019ab730aaf31339d1d938e5a6b15ff7e3f5c5fd7f81a497ce0ff1b567a712df172c8481ea537b65770a665ed5e21fdad53473a2ccfd5e6572300e7c7f7077fb86e5030000040400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00
+Sr25519 extrinsic hash: 055a2bbd56aa3ec36735784ae455e242f14e26ffce668674bd6b32d9651a76a4
+Destination: 5Cabw1zd5pK8CbuPFHQYX7Ac9BVSumfw5BkiNQajstFdYDJq
+Payload: 04040016cd6ab0878d5078dd14fe714e87ea77e77583cec4cbb9d95f2f06db2a86df5f00e503000080610f0018000000e143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e40962801858809fa1a6944bea50f2fd746695087250cc380d489b5dfd62903ac
+Signature: 985c8be23b1a695af546ecea8513fe7e3b82d70a7e39873eaf71b77d3d7f53fa2d25b4e17a65e4065bb1dd286b6777564640d131960ac93958ef7afe8e3f82ec00
+Ecdsa wallet extrinsic: 31028400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e02985c8be23b1a695af546ecea8513fe7e3b82d70a7e39873eaf71b77d3d7f53fa2d25b4e17a65e4065bb1dd286b6777564640d131960ac93958ef7afe8e3f82ec00e503000004040016cd6ab0878d5078dd14fe714e87ea77e77583cec4cbb9d95f2f06db2a86df5f00
+Ecdsa extrinsic hash: a3c1c8191cc261f8c9421f5f2272a24bb3d6593e0e46d89474673c4367b3ab20
+Gas Price: 0xb576270823
+Custom Destination: Instance of 'Id'
+Custom Encoded Call: 0a0400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00
+Signed Extensions Keys: [CheckNonZeroSender, CheckSpecVersion, CheckTxVersion, CheckGenesis, CheckMortality, CheckNonce, CheckWeight, ChargeAssetTxPayment]
+sr25519 assethub address: 5Cabw1zd5pK8CbuPFHQYX7Ac9BVSumfw5BkiNQajstFdYDJq
+Nonce: 0
+Encoded Payload: 0a0400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00f50000000080610f000e00000067f9723393ef76214df0118c34bbbd3dbebc8ed46a10973a8c969d48fe7598c9ea9a9a282c52d8849085b245e52feddae4ad4dd96735e06cebdee2516ab5a222
+Signature: 706c6bbf6b0d2cfc7544d61d3cce32d97445b54e6423f05fb0a1ef9939593d7d71e050e7230531dafeebd0597af6ca0dfcfdfa8e11d6f83bc8410761dd0e0482
+custom signed extension extrinsic: 3102840016cd6ab0878d5078dd14fe714e87ea77e77583cec4cbb9d95f2f06db2a86df5f01706c6bbf6b0d2cfc7544d61d3cce32d97445b54e6423f05fb0a1ef9939593d7d71e050e7230531dafeebd0597af6ca0dfcfdfa8e11d6f83bc8410761dd0e0482f5000000000a0400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00
+Custom Signed Extension Extrinsic Hash: cea297b379c34a7911940bfa104c2a4e880713b2ab591da4b1359d0576fa914b
+```
+
+### Multisig Account
+
+I ran the example. However, I needed to add the package `polkadart_cli` and the 'polkadart' section. Could you add this to the `pubspec.yaml`?
+
+```
+user@localhost:~/Documents/polkadart/packages/polkadart$ dart run example/multisig_example.dart 
+Calling ApproveAsMulti by TeslaS2
+Calling AsMulti by TeslaS3
+```
+
+### Test
+
+I'm using a machine with the SO Debian. As shown in the image on Evaluation V1, the container used all memory and swap of the computer. I can't give higher resources to the container. I tried to use the flag `--oom-kill-disable` but my kernel doesn't support this. Could you give more information about your machine resources (RAM, CPU), your SO, and maybe a print showing the memory usage in your machine during the tests in the substrate_metadata?
 
 ## Evaluation V1
 
@@ -32,31 +84,15 @@ The example provided to sr25519 and Sign & Verify worked.
 void main() {
  final msg = utf8.encode('hello friends');
  final signingCtx = utf8.encode('example');
-
-
  final merlin.Transcript signingTranscript =
      Sr25519.newSigningContext(signingCtx, msg);
-
-
  final merlin.Transcript verifyTranscript =
      Sr25519.newSigningContext(signingCtx, msg);
-
-
  final keypair = Sr25519.generateKeyPair();
-
-
  final (priv, pub) = (keypair.secretKey, keypair.publicKey);
-
-
  final Signature sig = priv.sign(signingTranscript);
-
-
  final (ok, _) = pub.verify(sig, verifyTranscript);
-
-
  assert(ok == true);
-
-
  print(ok);
 }
 ```
@@ -64,7 +100,6 @@ void main() {
 ```
 user@localhost:~/Documents/test/demo$ dart run bin/demo.dart
 true
-
 ```
 
 ### Custom Signed Extensions
