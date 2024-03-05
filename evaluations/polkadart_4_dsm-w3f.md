@@ -17,9 +17,15 @@
 | 4c.  | Sign & Verify    | <ul><li>[x] </li></ul>| [Sign&Verify](https://github.com/leonardocustodio/polkadart/blob/main/packages/sr25519/example/example.dart) |  |
 | 4e.  | Custom RPC | <ul><li>[x] </li></ul>| [RPC](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/lib/provider.dart) | |
 | 4f.  | Custom Signed Extensions | <ul><li>[x] </li></ul>| [SignedExtension](https://github.com/leonardocustodio/polkadart/blob/main/examples/bin/extrinsic_demo.dart) |  |
-| 4g.  | Multisig Account | <ul><li>[ ] </li></ul>| [MultiSig](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) | Need to add the package `polkadart_cli` and the 'polkadart' section to the `pubspec.yaml`. |
+| 4g.  | Multisig Account | <ul><li>[x] </li></ul>| [MultiSig](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) |  |
 | 4h.  | Tests            | <ul><li>[ ] </li></ul>| [Tests](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519/test) | It seems to have a memory leak problem on the tests. |
 | 4i.  | Pub.dev          | <ul><li>[x] </li></ul>| [Pub](https://pub.dev/publishers/polkadart.dev/packages) | |
+
+## Evaluation V3
+
+### Multisig Account
+
+I ran the [example](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) using the command `dart pub get` and after that, I ran the `multisig_example.dart` as instructed in this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1138#issuecomment-1977146180). Before, I was doing like instructed in [testing guide](https://github.com/leonardocustodio/polkadart/blob/main/examples/README.md) and I needed to add the package `polkadart_cli` and the `polkadart` section. It would be nice to have the  instructions to run the multisig example in the package.
 
 ## Evaluation V2
 
@@ -60,7 +66,7 @@ Custom Signed Extension Extrinsic Hash: cea297b379c34a7911940bfa104c2a4e880713b2
 
 ### Multisig Account
 
-I ran the example. However, I needed to add the package `polkadart_cli` and the 'polkadart' section. Could you add this to the `pubspec.yaml`?
+I ran the example. However, I needed to add the package `polkadart_cli` and the `polkadart` section. Could you add this to the `pubspec.yaml`?
 
 ```
 user@localhost:~/Documents/polkadart/packages/polkadart$ dart run example/multisig_example.dart 
@@ -157,7 +163,7 @@ user@localhost:~/Documents/polkadart/packages/polkadart$ dart run polkadart_cli:
 Could not find package `polkadart_cli` or file `polkadart_cli:generate`
 ```
 
-After that, I needed to add the 'polkadart' section.
+After that, I needed to add the `polkadart` section.
 
 ```
 user@localhost:~/Documents/polkadart/packages/polkadart$ dart run polkadart_cli:generate -v
@@ -221,5 +227,3 @@ I ran again, monitoring the resources. When the substrate_metadata tests started
 ![Captura de tela de 2024-03-01 08-59-04](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/4313a5cf-65c2-483e-be8a-2fc3692b15bd)
 
 ![Captura de tela de 2024-03-01 09-00-05](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/0928dce3-9bb6-4e48-96b1-bc8efbe56a36)
-
-
