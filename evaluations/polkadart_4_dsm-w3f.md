@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Polkadart.md
 - **Milestone:** 4
 - **Kusama Identity:** Address
@@ -11,15 +11,43 @@
 | 0a.  | License       | <ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/leonardocustodio/polkadart/blob/main/packages/sr25519/LICENSE) | |
 | 0b.  | Documentation | <ul><li>[x] </li></ul>| | |
 | 0c.  | Testing Guide | <ul><li>[x] </li></ul>| [Example](https://github.com/leonardocustodio/polkadart/tree/main/examples) |  |
-| 0d.  | Docker        | <ul><li>[ ] </li></ul>| [Docker](https://github.com/leonardocustodio/polkadart/blob/main/docker-compose.yml) | It seems to have a memory leak problem on the tests. |
+| 0d.  | Docker        | <ul><li>[x] </li></ul>| [Docker](https://github.com/leonardocustodio/polkadart/blob/main/docker-compose.yml) |  |
 | 4a.  | sr25519 | <ul><li>[x] </li></ul>| [sr25519](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519) |  |
 | 4b.  | Ecdsa/Secp256k1  | <ul><li>[x] </li></ul>| [ecdsa](https://github.com/leonardocustodio/polkadart/tree/main/packages/secp256k1_ecdsa) | | 
 | 4c.  | Sign & Verify    | <ul><li>[x] </li></ul>| [Sign&Verify](https://github.com/leonardocustodio/polkadart/blob/main/packages/sr25519/example/example.dart) |  |
 | 4e.  | Custom RPC | <ul><li>[x] </li></ul>| [RPC](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/lib/provider.dart) | |
 | 4f.  | Custom Signed Extensions | <ul><li>[x] </li></ul>| [SignedExtension](https://github.com/leonardocustodio/polkadart/blob/main/examples/bin/extrinsic_demo.dart) |  |
 | 4g.  | Multisig Account | <ul><li>[x] </li></ul>| [MultiSig](https://github.com/leonardocustodio/polkadart/blob/main/packages/polkadart/example/multisig_example.dart) |  |
-| 4h.  | Tests            | <ul><li>[ ] </li></ul>| [Tests](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519/test) | It seems to have a memory leak problem on the tests. |
+| 4h.  | Tests            | <ul><li>[x] </li></ul>| [Tests](https://github.com/leonardocustodio/polkadart/tree/main/packages/sr25519/test) |  |
 | 4i.  | Pub.dev          | <ul><li>[x] </li></ul>| [Pub](https://pub.dev/publishers/polkadart.dev/packages) | |
+
+## Evaluation V4
+
+### Tests
+
+I ran the tests successfully this time without memory problems running with Docker and without Docker. I noticed the tests using Docker are running during the image build. I think it could continue to run when running the container because it is easier to see the logs. I made some changes in the Dockerfile to do this, and I didn't have memory problems.
+
+```
+FROM dart:stable
+
+RUN apt-get update
+RUN apt-get clean
+RUN apt-get install -y curl git wget unzip libglu1-mesa
+
+RUN dart pub global activate melos
+
+COPY . .
+
+ENV PATH="$PATH":"/root/.pub-cache/bin"
+
+RUN melos fetch_dependencies
+CMD ["melos", "test"]
+```
+
+The tests used close to 50% to 60% of the memory with other processes and released some memory after some time. It is working now.
+
+![image (57)](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/a5d09a45-808c-4b7d-84dc-71b0baf52caa)
+
 
 ## Evaluation V3
 
