@@ -12,7 +12,7 @@ This milestone delivers the full working CLI tool that DApp developers can use r
 
 |  Number | Deliverable                           | Link                                                                                                                                                            |
 |--------:|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **0a.** | License                               |https://www.apache.org/licenses/LICENSE-2.0|
+| **0a.** | License                               |https://github.com/philoniare/create-substrate-app/blob/master/LICENSE.md|
 | **0b.** | Documentation                         |https://www.create-substrate-app.dev/|
 | **0c.** | Testing and Testing Guide             |https://www.create-substrate-app.dev/docs/available-scripts|
 |     0e. | Article                               |https://www.philoniare.com/blog/create-substrate-app|
