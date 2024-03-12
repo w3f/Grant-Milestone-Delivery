@@ -11,65 +11,20 @@
 
 |  Number | Deliverable                           | Accepted |Link  | Evaluation Notes  |
 |--------:|---------------------------------------| :------: |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| **0a.** | License      | <ul><li>[] </li></ul> |https://www.apache.org/licenses/LICENSE-2.0| Please include the Apache 2.0 License in your own repo aswell  |
+| **0a.** | License      | <ul><li>[x] </li></ul> |https://www.apache.org/licenses/LICENSE-2.0|   |
 | **0b.** | Documentation    | <ul><li>[x] </li></ul> |https://www.create-substrate-app.dev/| nice layout and concise docs  |
-| **0c.** | Testing and Testing Guide   | <ul><li>[] </li></ul> |https://www.create-substrate-app.dev/docs/available-scripts | listed test [commands](https://www.create-substrate-app.dev/docs/available-scripts) don't work for every template. I think one needs to be ``npm test:unit`` |
-|     0e. | Article    | <ul><li>[x] </li></ul> |https://www.philoniare.com/blog/create-substrate-app| good summary. |
-|      1. | TypeScript React Front-End Template | <ul><li>[] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/react|  tests don't pass  |
-|      2. | TypeScript Vue Front-End Template   | <ul><li>[] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/vue|  readme has issues |
-|      3. | TypeScript Angular Front-End Template | <ul><li>[] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/angular| tests still don't pass. as tests are minimal should be an easy fix.  |
-|      4. | Published Global CLI command | <ul><li>[x] </li></ul> |https://www.npmjs.com/package/create-substrate-app|  very nice, could you add the license here too?  |
+| **0c.** | Testing and Testing Guide   | <ul><li>[x] </li></ul> |https://www.create-substrate-app.dev/docs/available-scripts | works  |
+|     0e. | Article    | <ul><li>[x] </li></ul> |https://www.philoniare.com/blog/create-substrate-app| good |
+|      1. | TypeScript React Front-End Template | <ul><li>[x] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/react|  works |
+|      2. | TypeScript Vue Front-End Template   | <ul><li>[x] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/vue|  works|
+|      3. | TypeScript Angular Front-End Template | <ul><li>[x] </li></ul> |https://github.com/philoniare/create-substrate-app/tree/master/packages/angular| works  |
+|      4. | Published Global CLI command | <ul><li>[x] </li></ul> |https://www.npmjs.com/package/create-substrate-app|  good |
 
 
 
 ## General Notes
-Can you please also include a feature to select accounts in case the user connects with multiple accounts to the website?
+Thank you for the quick changes, the milestone looks good to me now. All tests are passing. I see this as accepted.
 
-Also depending on the network chosen the account representation should change. Right now it seems to always display the polkadot representation.
+I appreciate that all suggestion were quickly picked up and delivered. 
 
-Overall only minor change requests. Thank you!
-
-## vue readme
-[readme](https://github.com/philoniare/create-substrate-app/tree/master/packages/vue#compile-and-hot-reload-for-development) says there is the command ``npm run dev`` but it doesn't actually exist.
-
-## angular template
-template fails ``npm run test``
-
-also the "connect wallet" button seems to not work correctly. Please give it a check. Seems like once connected accounts in the wallet are changed the website is not updating.
-
-## react template 
-In the react-template readme you try to link to the create-substrate-app repo but you link to the actual create-react-app repo.
-
-
-react app fails ``npm run test``
-<details>
-
-    create-substrate-app/re-app/node_modules/@polkadot/rpc-core/types/jsonrpc.js:1
-        ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export {};
-                                                                                        ^^^^^^
-
-        SyntaxError: Unexpected token 'export'
-
-        7 |   useState,
-        8 | } from "react";
-        >  9 | import { ApiPromise, WsProvider } from "@polkadot/api";
-            | ^
-        10 | import {
-        11 |   web3AccountsSubscribe,
-        12 |   web3Enable,
-
-        at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-        at Object.<anonymous> (node_modules/@polkadot/rpc-augment/cjs/augment/jsonrpc.js:4:1)
-        at Object.<anonymous> (node_modules/@polkadot/rpc-augment/cjs/augment/index.js:3:1)
-        at Object.<anonymous> (node_modules/@polkadot/rpc-augment/cjs/bundle.js:4:1)
-        at Object.<anonymous> (node_modules/@polkadot/rpc-augment/cjs/index.js:5:22)
-        at Object.<anonymous> (node_modules/@polkadot/api/cjs/bundle.js:5:1)
-        at Object.<anonymous> (node_modules/@polkadot/api/cjs/index.js:5:22)
-        at Object.<anonymous> (src/substrate/SubstrateContext.tsx:9:1)
-        at Object.<anonymous> (src/App.tsx:2:1)
-        at Object.<anonymous> (src/App.test.tsx:3:1)
-
-    Test Suites: 1 failed, 1 total
-    
-</details>
 
