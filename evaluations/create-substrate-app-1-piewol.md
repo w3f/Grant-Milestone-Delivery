@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/create-substrate-app.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All evaluations by PieWol
