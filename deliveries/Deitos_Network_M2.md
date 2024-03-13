@@ -19,7 +19,6 @@ Following the successful completion of the first milestone, which established th
 
 The integration of these components into the Deitos Protocol stack represents a significant advancement in the project's development. By focusing on data integrity, secure file verification, and user-friendly upload processes, the second milestone reinforces the protocol's capacity to provide a reliable and efficient decentralized storage solution. 
 
-
 ## Repository links
 
 - https://github.com/Deitos-Network/deitos-node/tree/w3f-grant-m2-delivery
@@ -27,6 +26,21 @@ The integration of these components into the Deitos Protocol stack represents a 
 - https://github.com/Deitos-Network/deitos-cli/tree/w3f-grant-m2-delivery
 - https://github.com/Deitos-Network/deitos-gate/tree/w3f-grant-m2-delivery
 - https://github.com/Deitos-Network/deitos-verifier/tree/w3f-grant-m2-delivery
+
+## Instructions and Considerations for Testing
+
+To conduct the tests, only two repositories are required: the [Deitos IP](https://github.com/Deitos-Network/deitos-ip/tree/w3f-grant-m2-delivery) for infrastructure management and the [Deitos CLI](https://github.com/Deitos-Network/deitos-cli/tree/w3f-grant-m2-delivery) for file uploads. These components are essential for interacting with the Deitos protocol and executing the file upload process. All other necessary components are included and integrated within the IP's Docker container, streamlining the setup and testing process.
+
+### Starting the Docker Image
+
+Before initiating the Docker image, please ensure that your system has at least 100 GB of free space. This precaution is to prevent the build process from failing due to insufficient disk space. Adequate free space is crucial for a smooth and uninterrupted build process, especially considering the size and complexity of the Deitos IP stack.
+
+### Slow Download Rates from Apache Repositories
+
+We have observed that some Apache repositories are experiencing slow download rates, which can extend the time required to build the entire IP stack. To mitigate this issue and enhance the build efficiency, we have streamlined the IP stack by removing unnecessary components. One such removal is the Deitos client stack, which is not required for the current testing phase. This decision allows for a more focused and expedient testing process, ensuring that the deliverables can be fully tested with only the IP stack, without the need for additional components that may complicate the setup or extend the build time unnecessarily.
+
+By following these instructions and considerations, testers can efficiently set up and conduct their tests, focusing on the core functionalities of the Deitos protocol and its integration with storage management processes.
+
 
 
 ## Deliverables of Milestone #1
