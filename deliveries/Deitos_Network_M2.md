@@ -58,7 +58,7 @@ The integration of these components into the Deitos Protocol stack represents a 
 | **0c.** | `pallet-deitos-fs` Unit Testing | https://github.com/Deitos-Network/deitos-node/tree/w3f-grant-m2-delivery/pallets/deitos-fs/src/tests
 | **0c.** | `pallet-deitos-fs` User Guide | https://github.com/Deitos-Network/deitos-node/blob/w3f-grant-m2-delivery/docs/pallet-deitos-user-guide.md (section 5)
 | **0c.** |  Deitos IP Docker User Guide | https://github.com/Deitos-Network/deitos-ip/blob/w3f-grant-m2-delivery/README.md
-| **0d.** | Deitos IP Docker User Guide | https://github.com/Deitos-Network/deitos-ip/blob/w3f-grant-m2-delivery
+| **0d.** | Deitos IP | https://github.com/Deitos-Network/deitos-ip/blob/w3f-grant-m2-delivery
 | **0e.** | Article #1 | https://forum.polkadot.network/t/deitos-network-forging-a-new-path-in-big-data-and-ai-with-blockchain-technology/4961
 | **0e.** | Article #2 | https://medium.com/@deitos.network/deitos-network-web3-foundation-grant-f267cb10e7a8
 | **2.** |   File Uploads (Client Interface)  | https://github.com/Deitos-Network/deitos-cli/tree/w3f-grant-m2-delivery
