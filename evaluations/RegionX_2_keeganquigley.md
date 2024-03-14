@@ -105,6 +105,15 @@ test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```
 </details>
 
+Backend build successfully:
+
+```rust
+   Compiling environment v0.1.0 (/home/ubuntu/RegionX/environment)
+   Compiling xc_regions v0.1.0 (/home/ubuntu/RegionX/contracts/xc_regions)
+   Compiling coretime_market v0.1.0 (/home/ubuntu/RegionX/contracts/coretime_market)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 33.96s
+```
+
 ## UI
 
 Fails to compile locally with a lot of warnings:
