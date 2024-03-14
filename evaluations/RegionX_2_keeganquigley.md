@@ -19,6 +19,26 @@
 
 # General Notes
 
+Nice work! The smart contracts and UI compile successfully locally, and I'm able to also manually test the deployed version.
+
+Launches successfully w/ Chopsticks:
+
+<details>
+  <summary>Output</summary>
+
+```ts
+> coretime-mock@1.0.0 chopsticks
+> npx @acala-network/chopsticks@latest -c ./configs/coretime-rococo.yml
+
+Need to install the following packages:
+@acala-network/chopsticks@0.9.10
+Ok to proceed? (y) y
+npm WARN deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+[22:38:30.767] INFO: Rococo Coretime RPC listening on port 8000
+    app: "chopsticks"
+```
+</details>
+
 ## Tests
 
 5 e2e tests passing.
