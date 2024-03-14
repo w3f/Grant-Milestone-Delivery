@@ -19,6 +19,92 @@
 
 # General Notes
 
+## Tests
+
+5 e2e tests passing.
+
+<details>
+  <summary>Output</summary>
+
+```rust
+   Compiling ink_e2e v4.3.0
+warning: unused import: `block_number_extension::BlockNumberProviderExtension`
+  --> contracts/coretime_market/src/lib.rs:42:6
+   |
+42 |     use block_number_extension::BlockNumberProviderExtension;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `RuntimeCall`, `UniquesCall`
+  --> contracts/xc_regions/src/lib.rs:46:26
+   |
+46 |         uniques::{ItemDetails, UniquesCall},
+   |                                ^^^^^^^^^^^
+47 |         RuntimeCall, Version,
+   |         ^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `uniques_extension::UniquesExtension`
+  --> contracts/xc_regions/src/lib.rs:49:6
+   |
+49 |     use uniques_extension::UniquesExtension;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `coretime_market` (lib test) generated 1 warning (run `cargo fix --lib -p coretime_market --tests` to apply 1 suggestion)
+warning: `xc_regions` (lib test) generated 2 warnings (run `cargo fix --lib -p xc_regions --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7m 18s
+     Running unittests src/lib.rs (target/debug/deps/block_number_extension-986bc510454016f5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/coretime_market-3436cdd136e33710)
+
+running 1 test
+test tests::calculate_region_price_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/environment-2c4903f452c4e9c2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/extension-e1f10deb98e4a958)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/primitives-68b7f3f017494e6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/uniques_extension-c038b9289a8cec60)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/xc_regions-3d9fcd45dfdfd682)
+
+running 5 tests
+test tests::mock_environment_helper_functions_work ... ok
+test tests::get_metadata_works ... ok
+test tests::init_works ... ok
+test tests::metadata_version_gets_updated ... ok
+test tests::remove_works ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+```
+</details>
+
 ## UI
 
 Fails to compile locally with a lot of warnings:
