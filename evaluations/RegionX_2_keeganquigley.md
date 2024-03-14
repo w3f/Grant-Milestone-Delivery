@@ -95,3 +95,75 @@ Type error: Type 'string | number' is not assignable to type 'string | undefined
   135 |               {tasks.map(({ name, id }, index) => (
 ```
 </details>
+
+Still getting some compile errors with the `rococo-runtime` but the script continues to move on regardless:
+
+<details>
+  <summary>Output</summary>
+
+```rust
+error: failed to run custom build command for `rococo-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/rococo)`
+
+Caused by:
+  process didn't exit successfully: `/home/ubuntu/Coretime-Mock/polkadot-sdk/target/testnet/build/rococo-runtime-0acbd0cd5eba2a60/build-script-build` (exit status: 1)
+  --- stderr
+  Cannot compile the WASM runtime: the `wasm32-unknown-unknown` target is not installed!
+  You can install it with `rustup target add wasm32-unknown-unknown` if you're using `rustup`.
+warning: build failed, waiting for other jobs to finish...
+    Building [====================>  ] 1348/1444: librocksdb-sys(build)
+    ```
+
+    ```rust
+    ubuntu@ip-172-31-25-23:~/Coretime-Mock$ ./scripts/full_init.sh
+   Compiling librocksdb-sys v0.11.0+8.1.1
+warning: constant `LOG_TARGET` is never used
+  --> substrate/frame/broker/src/lib.rs:48:7
+   |
+48 | const LOG_TARGET: &str = "runtime::broker";
+   |       ^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `pallet-broker` (lib) generated 1 warning
+   Compiling rococo-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/rococo)
+   Compiling westend-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/westend)
+   Compiling rocksdb v0.21.0
+error: failed to run custom build command for `westend-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/westend)`
+
+Caused by:
+  process didn't exit successfully: `/home/ubuntu/Coretime-Mock/polkadot-sdk/target/testnet/build/westend-runtime-6135d12f406a8599/build-script-build` (exit status: 1)
+  --- stderr
+  Cannot compile the WASM runtime: the `wasm32-unknown-unknown` target is not installed!
+  You can install it with `rustup target add wasm32-unknown-unknown` if you're using `rustup`.
+warning: build failed, waiting for other jobs to finish...
+error: failed to run custom build command for `rococo-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/rococo)`
+
+Caused by:
+  process didn't exit successfully: `/home/ubuntu/Coretime-Mock/polkadot-sdk/target/testnet/build/rococo-runtime-7614c5d5c33dce7b/build-script-build` (exit status: 1)
+  --- stderr
+  Cannot compile the WASM runtime: the `wasm32-unknown-unknown` target is not installed!
+  You can install it with `rustup target add wasm32-unknown-unknown` if you're using `rustup`.
+   Compiling librocksdb-sys v0.11.0+8.1.1
+warning: constant `LOG_TARGET` is never used
+  --> substrate/frame/broker/src/lib.rs:48:7
+   |
+48 | const LOG_TARGET: &str = "runtime::broker";
+   |       ^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `pallet-broker` (lib) generated 1 warning
+   Compiling rococo-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/rococo)
+   Compiling collectives-westend-runtime v3.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/cumulus/parachains/runtimes/collectives/collectives-westend)
+   Compiling people-westend-runtime v0.1.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/cumulus/parachains/runtimes/people/people-westend)
+error: failed to run custom build command for `rococo-runtime v7.0.0 (/home/ubuntu/Coretime-Mock/polkadot-sdk/polkadot/runtime/rococo)`
+
+Caused by:
+  process didn't exit successfully: `/home/ubuntu/Coretime-Mock/polkadot-sdk/target/testnet/build/rococo-runtime-0acbd0cd5eba2a60/build-script-build` (exit status: 1)
+  --- stderr
+  Cannot compile the WASM runtime: the `wasm32-unknown-unknown` target is not installed!
+  You can install it with `rustup target add wasm32-unknown-unknown` if you're using `rustup`.
+warning: build failed, waiting for other jobs to finish...
+    Building [====================>  ] 1321/1444: collectives-westend-runtime(build.rs), people-westend-runtime(build.rs)             
+```
+</details>
