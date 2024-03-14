@@ -124,6 +124,29 @@ test tests::calculate_region_price_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+Contract builds successfully.
+
+<details>
+  <summary>Output</summary>
+
+```rust
+   Compiling metadata-gen v0.1.0 (/private/var/folders/6_/b7tdvp0d6h779ktj0h92w5km0000gn/T/cargo-contract_B0bpKF/contracts/coretime_market/.ink/metadata_gen)
+    Finished `release` profile [optimized] target(s) in 1m 06s
+     Running `/Users/keeganquigley/RegionX/target/ink/coretime_market/release/metadata-gen`
+ [4/4] Generating bundle
+
+Original wasm size: 52.0K, Optimized: 20.6K
+
+The contract was built in RELEASE mode.
+
+Your contract artifacts are ready. You can find them in:
+/Users/keeganquigley/RegionX/target/ink/coretime_market
+
+  - coretime_market.contract (code + metadata)
+  - coretime_market.wasm (the contract's code)
+  - coretime_market.json (the contract's metadata)
+```
+</details>
 
 `xc_regions` 5 unit tests passing:
 
@@ -137,6 +160,30 @@ test tests::get_metadata_works ... ok
 test tests::init_works ... ok
 test tests::metadata_version_gets_updated ... ok
 test tests::remove_works ... ok
+```
+</details>
+
+Contract builds successfully.
+
+<details>
+  <summary>Output</summary>
+
+```rust
+   Compiling metadata-gen v0.1.0 (/private/var/folders/6_/b7tdvp0d6h779ktj0h92w5km0000gn/T/cargo-contract_Qqlsna/contracts/xc_regions/.ink/metadata_gen)
+    Finished `release` profile [optimized] target(s) in 1m 05s
+     Running `/Users/keeganquigley/RegionX/target/ink/xc_regions/release/metadata-gen`
+ [4/4] Generating bundle
+
+Original wasm size: 51.1K, Optimized: 17.2K
+
+The contract was built in RELEASE mode.
+
+Your contract artifacts are ready. You can find them in:
+/Users/keeganquigley/RegionX/target/ink/xc_regions
+
+  - xc_regions.contract (code + metadata)
+  - xc_regions.wasm (the contract's code)
+  - xc_regions.json (the contract's metadata)
 ```
 </details>
 
