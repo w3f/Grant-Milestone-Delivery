@@ -114,6 +114,32 @@ Backend build successfully:
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 33.96s
 ```
 
+## Contracts
+
+`coretime_market` 1 unit test passes:
+
+```rust
+running 1 test
+test tests::calculate_region_price_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+`xc_regions` 5 unit tests passing:
+
+<details>
+  <summary>Output</summary>
+
+  ```rust
+  running 5 tests
+test tests::mock_environment_helper_functions_work ... ok
+test tests::get_metadata_works ... ok
+test tests::init_works ... ok
+test tests::metadata_version_gets_updated ... ok
+test tests::remove_works ... ok
+```
+</details>
+
 ## UI
 
 Fails to compile locally with a lot of warnings:
