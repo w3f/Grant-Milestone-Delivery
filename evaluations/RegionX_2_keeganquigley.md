@@ -189,7 +189,33 @@ Your contract artifacts are ready. You can find them in:
 
 ## UI
 
-Fails to compile locally with a lot of warnings:
+Builds and runs successfully on Mac:
+
+<details>
+  <summary>Output</summary>
+
+```js
+npm start
+
+> start
+> next start
+
+- ready started server on [::]:3000, url: http://localhost:3000
+Error: ENOENT: no such file or directory, open '/Users/keeganquigley/CoreHub/.next/BUILD_ID'
+    at async open (node:internal/fs/promises:633:25)
+    at async Object.readFile (node:internal/fs/promises:1242:14)
+    at async setupFsCheck (/Users/keeganquigley/CoreHub/node_modules/next/dist/server/lib/router-utils/filesystem.js:141:19)
+    at async initialize (/Users/keeganquigley/CoreHub/node_modules/next/dist/server/lib/router-server.js:55:23)
+    at async Server.<anonymous> (/Users/keeganquigley/CoreHub/node_modules/next/dist/server/lib/start-server.js:178:36) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/keeganquigley/CoreHub/.next/BUILD_ID'
+}
+```
+</details>
+
+Fails to compile locally on Ubuntu with a lot of warnings:
 
 <details>
   <summary>Output</summary>
