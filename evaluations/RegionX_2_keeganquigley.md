@@ -1,25 +1,37 @@
 # Evaluation
 
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/RegionX.md
 - **Milestone:** 2
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [CoreHub](https://github.com/RegionX-Labs/CoreHub/blob/master/LICENSE) [RegionX contracts](https://github.com/RegionX-Labs/RegionX/blob/main/LICENSE) | GPLV3 License | 
-| **0b.**  | Documentation | <ul><li>[x] </li></ul> | [White Paper](https://github.com/RegionX-Labs/Docs/blob/main/RegionX-Core.pdf) [Wiki](https://regionx.gitbook.io/wiki) |  | 
-| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Simulated Environment](https://github.com/RegionX-Labs/Coretime-Mock) [Contract Tests](https://github.com/RegionX-Labs/RegionX?tab=readme-ov-file#3-develop) [Local frontend testing](https://github.com/RegionX-Labs/CoreHub?tab=readme-ov-file#set-up-development-environment) |  | 
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [Frontend Docker](https://github.com/RegionX-Labs/CoreHub?tab=readme-ov-file#run-with-docker) |  | 
-| **0e.** | Article | <ul><li>[ ] </li></ul> | [Medium Article](https://medium.com/@regionx/the-regionx-coretime-market-17c713cad755) |  | 
-| **1.** | Cross-chain Transfer UI | <ul><li>[ ] </li></ul> | [Code](https://github.com/RegionX-Labs/CoreHub/tree/master/src/pages/transfer) |  | 
-| **2.** | Coretime Market Dashboard UI | <ul><li>[ ] </li></ul> | [Code](https://github.com/RegionX-Labs/CoreHub/blob/master/src/pages/market/marketplace.tsx)  | | 
-| **3.** | Coretime Market contract | <ul><li>[ ] </li></ul> | [Code](https://github.com/RegionX-Labs/RegionX/tree/main/contracts/coretime_market), [e2e-tests](https://github.com/RegionX-Labs/RegionX/tree/main/tests) |  | 
-| **4.** | Coretime Market developer documentation | <ul><li>[ ] </li></ul> | [Wiki: Integration with the market](https://regionx.gitbook.io/wiki/build/integration-with-the-coretime-market) |  | 
+| **0b.**  | Documentation | <ul><li>[x] </li></ul> | [White Paper](https://github.com/RegionX-Labs/Docs/blob/main/RegionX-Core.pdf) [Wiki](https://regionx.gitbook.io/wiki) | Great docs! | 
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Simulated Environment](https://github.com/RegionX-Labs/Coretime-Mock) [Contract Tests](https://github.com/RegionX-Labs/RegionX?tab=readme-ov-file#3-develop) [Local frontend testing](https://github.com/RegionX-Labs/CoreHub?tab=readme-ov-file#set-up-development-environment) | Easy-to-follow guide | 
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Frontend Docker](https://github.com/RegionX-Labs/CoreHub?tab=readme-ov-file#run-with-docker) | Works. | 
+| **0e.** | Article | <ul><li>[x] </li></ul> | [Medium Article](https://medium.com/@regionx/the-regionx-coretime-market-17c713cad755) | Good. | 
+| **1.** | Cross-chain Transfer UI | <ul><li>[x] </li></ul> | [Code](https://github.com/RegionX-Labs/CoreHub/tree/master/src/pages/transfer) | Good. | 
+| **2.** | Coretime Market Dashboard UI | <ul><li>[x] </li></ul> | [Code](https://github.com/RegionX-Labs/CoreHub/blob/master/src/pages/market/marketplace.tsx)  | Good. | 
+| **3.** | Coretime Market contract | <ul><li>[x] </li></ul> | [Code](https://github.com/RegionX-Labs/RegionX/tree/main/contracts/coretime_market), [e2e-tests](https://github.com/RegionX-Labs/RegionX/tree/main/tests) | Good. | 
+| **4.** | Coretime Market developer documentation | <ul><li>[x] </li></ul> | [Wiki: Integration with the market](https://regionx.gitbook.io/wiki/build/integration-with-the-coretime-market) | Good. | 
 
 # General Notes
 
-Nice work! The smart contracts and UI compile successfully locally, and I'm able to also manually test the deployed version.
+Nice work! The smart contracts and UI compile successfully locally, and I'm able to also manually test the deployed version. Website works great and I can purchase cores, transfer, partition, interlace, assign, sell, and unlist successfully. I was also able to make cross-chain transfers of coretime between the relay chain, contracts chain, and coretime chain.
+
+<img width="1140" alt="core" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/5e285aa2-abda-4a28-a367-fd2b8c800443">
+
+<img width="1064" alt="core 2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/4d51f8df-9bbd-4852-b5a1-2fa87cc2df74">
+
+<img width="699" alt="core 3" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/082c8cf4-d869-47c6-9d84-816cab79411a">
+
+<img width="699" alt="core 4" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/c059b1e3-d570-47de-b90a-d4f8157350f0">
+
+<img width="699" alt="core 5" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/ef14a96e-b0ff-4e83-a64f-f4e534994638">
+
+<img width="1006" alt="core 6" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/33fc25ab-2477-43db-afca-7e08ab762a4b">
 
 Launches successfully w/ Chopsticks:
 
@@ -381,3 +393,5 @@ warning: build failed, waiting for other jobs to finish...
     Building [====================>  ] 1321/1444: collectives-westend-runtime(build.rs), people-westend-runtime(build.rs)             
 ```
 </details>
+
+A couple minor UI issues to improve: Everytime I switch tabs or hit refresh I have to reconnect wallet. Also it is hard to adjust the indicator in some cases to for example set the partition for 5 minutes.
