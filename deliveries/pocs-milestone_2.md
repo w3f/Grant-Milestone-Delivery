@@ -13,18 +13,19 @@ The goal is to integrate `pallet-staking` with modified `pallet-contracts`, ensu
 
 |Number|Deliverable|Link|Notes|
 |-------------|-------------|------------- |------------- |
-|0a.|License| [Apache 2.0](https://github.com/auguth/pocs/blob/w3f_milestone_2/LICENSE) |-|
+|0a.|License| [Apache 2.0](https://github.com/auguth/pocs/blob/master/LICENSE) |-|
 |0b.|Documentation| [Pallet Contracts](https://auguth.github.io/pocs/target/doc/pallet_contracts/), [Pallet Staking](https://auguth.github.io/pocs/target/doc/pallet_staking/) | Crate Documentation of modified `pallet_contracts` and `pallet_staking` for PoCS|
-|0c.|Testing Guide| [Testing guide](https://github.com/auguth/pocs/blob/w3f_milestone_2/TESTING-GUIDE.md) |-|
-|0d.|Docker | [Dockerfile](https://github.com/auguth/pocs/blob/w3f_milestone_2/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/w3f_milestone_2/docker-compose.yml) , [DockerImage](https://github.com/auguth/pocs/blob/w3f_milestone_2/README.md#docker-pull)| `docker compose up --build -d` |
+|0c.|Testing Guide| [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) |-|
+|0d.|Docker | [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/master/docker-compose.yml)| `docker compose up --build -d` |
 |0e.|Article|[PoCS x NPoS](https://medium.com/@auguthresearch/pocs-x-npos-d164688223fc)|-|
-|1.|Modify pallet staking for PoCS|[PoCS x NPoS (Milestone 2 - Core) PR#29](https://github.com/auguth/pocs/pull/29)|-|
+|1.|Modify pallet staking for PoCS|[PR#29 (PoCS x NPoS)](https://github.com/auguth/pocs/pull/29) &  [Issue#41 (Minimum Staking Requirement)](https://github.com/auguth/pocs/issues/41)|-|
 
 **Additional Information**
 
 Upcoming Final **Milestone 3** will include these deliverables,
 1. Multi Node Test
-2. Yellow Paper (Security Report Included)
-3. Sample PoCS ink! Contract (Verifying Contract's Delegate and Stake Score)
-4. PoCS Blog Article
-5. PoCS Tutorial Video
+2. Yellow Paper
+3. Follow up Report (Further modifications to `pallet-staking`)
+4. Sample PoCS ink! Contract (Verifying Contract's Delegate and Stake Score)
+5. PoCS Blog Article
+6. PoCS Tutorial Video
