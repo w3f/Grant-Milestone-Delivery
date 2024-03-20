@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/si-front-end-template.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -8,14 +8,57 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| **0a.** | License | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/LICENSE) | Is the license correct? |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) |   It doesn't have instructions to run the Docker |
-| **0c.** | Docker | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) | It doesn't have instructions, and I had problems to run.  |
-| 1. | Menu Header | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/AccountSelector.tsx) | I have an doubt. |
-| 2. | Footer | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/App.tsx) | The design of the Template Module could be better.  |
+| **0a.** | License | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/LICENSE) |  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) |  |
+| **0c.** | Docker | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) |  |
+| 1. | Menu Header | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/AccountSelector.tsx) |  |
+| 2. | Footer | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/App.tsx) |  |
 | 3. | Polkadot Extension| <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/substrate-lib/SubstrateContext.tsx) |   |
-| 4. | Light/Dark Mode| <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/theme/theme.ts) | The toggle could have an icon. |
+| 4. | Light/Dark Mode| <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/theme/theme.ts) |  |
 | 5. | Typescript Migration | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/tsconfig.json) |   |
+
+## Evaluation V2
+
+### License
+
+According to this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1145#issuecomment-2006948660), the license is unlicensed for having the same license as the original version of the software.
+
+### Docker
+
+Docker is now working without problems.
+
+```
+user@localhost:~/Documents/substrate-front-end-template$ docker run a2495a179757
+(node:25) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:25) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view substrate-front-end-template in the browser.
+
+  Local:        	http://localhost:8000/substrate-front-end-template
+  On Your Network:  http://172.17.0.2:8000/substrate-front-end-template
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+```
+
+### Menu Header
+
+The menu icons that represents the menu and notification were removed. No icon to indicate the light/dark mode functionality was added, but this it is a small improvement for the user interface.
+
+### Footer
+
+Some space was added between the Pallet Interactor Buttons and the Template Module.
 
 ## Evaluation V1
 
@@ -58,15 +101,11 @@ user@localhost:~/Documents/substrate-front-end-template$ docker build .
  => exporting to image                                                                                                                                               	25.2s
  => => exporting layers                                                                                                                                              	25.2s
  => => writing image sha256:df0323f7e5c524e232a94b831b9cf1e9bc66ec65d2aef55c925cb7e599572fb2                                                                          	0.0s
-
 user@localhost:~/Documents/substrate-front-end-template$ docker images
 REPOSITORY   TAG   	IMAGE ID   	CREATED          	SIZE                                                                                                           	 
 <none>   	<none>	df0323f7e5c5   About a minute ago   1.72GB
-
-
 user@localhost:~/Documents/substrate-front-end-template$ docker run df0323f7e5c5
 Usage Error: Couldn't find the node_modules state file - running an install might help (findPackageLocation)
-
 $ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] <scriptName> …
 ```
 
@@ -83,4 +122,3 @@ I have a question about the icons on the header. The two icons notification and 
 The design of the Template Module could be better. I think it could have more space between the Pallet Interactor Buttons and the Template Module, and the Template Module could be more organized.
 
 ![pasted image 0 (25)](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/8ee0132d-3f02-41ce-8e4c-144eea3c36f7)
-
