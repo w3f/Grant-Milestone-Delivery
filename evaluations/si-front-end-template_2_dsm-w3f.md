@@ -74,7 +74,7 @@ I discovered another problem. When I use an unexpected input like the print belo
 
 The correct link to the Article is missing. The article is a text explaining your project for potential users. Usually grantees publish articles at [Medium](https://medium.com/).
 
-## Evaluation V1![Captura de tela de 2024-03-20 09-42-43](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/0b2f1487-a79e-402b-bf91-45f6e25a626b)
+![Captura de tela de 2024-03-20 09-42-43](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/0b2f1487-a79e-402b-bf91-45f6e25a626b)
 
 ![Screenshot 2024-03-20 at 09-43-53 Substrate Front End Template](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/4379e6f2-1e84-48d2-9811-f84cc38eabf1)
 
