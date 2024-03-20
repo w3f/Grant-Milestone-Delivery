@@ -8,19 +8,81 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| **0a.** | License | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/LICENSE) |  Is the license correct? |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) |  It doesn't have instructions to run the Docker |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Sample Tests](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/cypress/e2e/Integration-Tests/sample-tests.cy.js) | See below. |
-| **0d.** | Docker | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) | It doesn't have instructions, and I had problems to run. |
+| **0a.** | License | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/LICENSE) |  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) |   |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Sample Tests](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/cypress/e2e/Integration-Tests/sample-tests.cy.js) |  |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) |  |
 | 0e. | Article | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) | Could you provide the correct link? |
 | 1. | Cards Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/BlockNumber.tsx) |   |
 | 2. | Table Module | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) | The copy icon doesn't align correctly. |
 | 3. | Transfer Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Transfer.tsx) |   |
 | 4. | Upgrade Runtime Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Upgrade.tsx) |   |
-| 5. | Pallet Interactor | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Interactor.tsx)| The buttons aren't interactable.  |
+| 5. | Pallet Interactor | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Interactor.tsx)| The buttons aren't interactable in some cases.  |
 | 6. | Event Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Events.tsx) |  |
 
+## Evaluation V2
+
+### License
+
+According to this [comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1145#issuecomment-2006948660), the license is unlicensed for having the same license as the original software.
+
+### Docker
+
+Docker is now working without problems.
+
+```
+user@localhost:~/Documents/substrate-front-end-template$ docker run a2495a179757
+(node:25) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:25) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view substrate-front-end-template in the browser.
+
+  Local:        	http://localhost:8000/substrate-front-end-template
+  On Your Network:  http://172.17.0.2:8000/substrate-front-end-template
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+```
+
+### Testing
+
+The cypress tests now have a better practice for selecting the elements after this [commit](https://github.com/stojanov-igor/substrate-front-end-template/commit/b08888c8fb618e0c9685d4da5e9c367c7999e74b). I understand it as only a sample and not to test all functionalities.
+
+### Table module
+
+Regarding the alignment problem, I was using Firefox but it occurs on Chrome too. I could notice this in some addresses. If you use the [substrate node template](https://github.com/substrate-developer-hub/substrate-node-template) you should observe it on the alice_stash. It is a small problem, and I don't see it as critical for the approval of this milestone like the problems below. 
+
+### Pallet Interactor
+
+I tested this again, this time on Chrome, and I noticed the field accepts only numbers. If I use only numbers, the button becomes available. Using Firefox, I can use characters on the field, but the button doesn't become available only if I use numbers.
+
+I discovered another problem. When I use an unexpected input like the print below, the page receives a runtime error. In the Original, it wouldn't show this error but would show "sending..." until others submit.
+
+
+### Article
+
+The correct link to the Article is missing. The article is a text explaining your project for potential users. Usually grantees publish articles at [Medium](https://medium.com/).
+
+## Evaluation V1![Captura de tela de 2024-03-20 09-42-43](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/0b2f1487-a79e-402b-bf91-45f6e25a626b)
+
+![Screenshot 2024-03-20 at 09-43-53 Substrate Front End Template](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/4379e6f2-1e84-48d2-9811-f84cc38eabf1)
+
+
+
 ## Evaluation V1
+
+
 
 ### License
 
@@ -36,9 +98,7 @@ I tried to run the command `yarn test` to run the test `renders without crashing
 user@localhost:~/Documents/substrate-front-end-template$ yarn test
 FAIL src/__tests__/App.tsx
   ● Test suite failed to run
-
 	ENOENT: no such file or directory, open 'node:test'
-
   	3 | // See: https://github.com/polkadot-js/api/issues/3430
   	4 |
 	> 5 | import { describe, it } from 'node:test'
@@ -46,14 +106,12 @@ FAIL src/__tests__/App.tsx
   	6 |
   	7 | // import React from 'react';
   	8 | // import ReactDOM from 'react-dom';
-
   	at Runtime.readFile (node_modules/jest-runtime/build/index.js:2421:21)
   	at Object.<anonymous> (src/__tests__/App.tsx:5:1)
   	at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
   	at runJest (node_modules/@jest/core/build/runJest.js:404:19)
   	at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
   	at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
 Test Suites: 1 failed, 1 total
 Tests:   	0 total
 Snapshots:   0 total
@@ -97,15 +155,11 @@ user@localhost:~/Documents/substrate-front-end-template$ docker build .
  => exporting to image                                                                                                                                               	25.2s
  => => exporting layers                                                                                                                                              	25.2s
  => => writing image sha256:df0323f7e5c524e232a94b831b9cf1e9bc66ec65d2aef55c925cb7e599572fb2                                                                          	0.0s
-
 user@localhost:~/Documents/substrate-front-end-template$ docker images
 REPOSITORY   TAG   	IMAGE ID   	CREATED          	SIZE                                                                                                           	 
 <none>   	<none>	df0323f7e5c5   About a minute ago   1.72GB
-
-
 user@localhost:~/Documents/substrate-front-end-template$ docker run df0323f7e5c5
 Usage Error: Couldn't find the node_modules state file - running an install might help (findPackageLocation)
-
 $ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] <scriptName> …
 ```
 
