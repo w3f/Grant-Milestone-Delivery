@@ -15,13 +15,19 @@
 | 0d.    | Docker                    |<ul><li>[] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/Dockerfile            | Docker file builds. Not all tests are passing. See further notes.                      |
 | 1.     | Xcm V3 support            |<ul><li>[x] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/VersionedXcm.go#L5 | same fields as in the [rust docs](https://docs.rs/staging-xcm/latest/staging_xcm/v3/enum.Instruction.html) |
 | 2.     | Bridge Tracing support    |<ul><li>[] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/tracker/ethereum.go   |                         |
-| 3.     | Send bridge message       |<ul><li>[] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/tx.go#L145         |                         |
-| 4.     | Cli support               |<ul><li>[] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/cmd/main.go           |                         |
+| 3.     | Send bridge message       |<ul><li>[x] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/tx/tx.go#L145         |                         |
+| 4.     | Cli support               |<ul><li>[x] </li></ul> | https://github.com/gmajor-encrypt/xcm-tools/blob/main/cmd/main.go           |                         |
+
+## General Notes
+Please provide more inline documentation. E.g. the [TrackBridgeMessageOptions](https://github.com/gmajor-encrypt/xcm-tools/blob/73a254b79aba5b734189219689d910a682801185/tracker/ethereum.go#L12) is basically without documentation.
 
 ## Readme
-In the table of the readme ``Describe`` should be changed to ``Description``-
+In the table of the readme ``Describe`` should be changed to ``Description``, shouldn't it?
+
 ## Testing
-It seems like the testing is not consistent between trying to run tests via the given command natively and the testing inside the dockerfile. The dockerfile seems to run a lot more tests. Why is there such a difference? The testing guide section within the readme could use some additional description and explaining. Simply listing commands works for experienced developers, still very general information e.g. in which directory to run the commands would be helpful.
+It seems like the testing is not consistent between trying to run tests via the given command natively and the testing inside the dockerfile. The dockerfile seems to run a lot more tests. Why is there such a difference? The testing guide section within the readme could use some additional description and explaining. Simply listing commands works for experienced developers, still very general information e.g. in which directory to run the commands would be helpful. Info on which outcome to expect for successful testing would be nice too.
+
+The BridgeTracking testing needs some more work to make sure that the expected values are actually returned. Right now it looks like you are only testing for the function to not return an error. see [here](https://github.com/gmajor-encrypt/xcm-tools/blob/73a254b79aba5b734189219689d910a682801185/tracker/tracker_test.go#L31C6-L31C28).
 
 ## Dockerfile
 The dockerfile builds. The tests are not all passing. The output regarding failed tests are in the details below.
