@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Deitos_Network.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -26,6 +26,8 @@
 | **4.** |  Data Integrity Protocol | <ul><li>[x] </li></ul> | https://github.com/Deitos-Network/deitos-node/tree/w3f-grant-m2-delivery/pallets/deitos-fs/lib.rs
 
 # General Notes
+
+Great work! Was able to manually test the pallet functions and I was able to complete the user guide. Nice guides and inline docs. Articles are well written. `deitos-ip`, `deitos-node`, `deitos-client` all work as expected. Cooperates nicely alongside Hadoop, Jupyter, and Llama 2.
 
 Docker builds successfully on Ubuntu:
 
