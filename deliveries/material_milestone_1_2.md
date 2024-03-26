@@ -34,7 +34,7 @@ This project aims to enhance the user experience of the [substrate-front-end-tem
 | **0b.** | Documentation | [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) | .. |
 | **0c.** | Testing and Testing Guide | [Sample Tests](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/cypress/e2e/Integration-Tests/sample-tests.cy.js) | [Test Guide](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md#running-tests-in-cypress) |
 | **0d.** | Docker | [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) | .. |
-| 0e. | Article | [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) | .. |
+| 0e. | Article | [Link](https://medium.com/@igorstojanov/substrate-template-with-material-design-typescript-629465de6540) | .. |
 | 1. | Cards Module | [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/BlockNumber.tsx) | .. |
 | 2. | Table Module| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) | .. |
 | 3. | Transfer Module | [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Transfer.tsx) | .. |
