@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/si-front-end-template.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -14,11 +14,21 @@
 | **0d.** | Docker | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) |  |
 | 0e. | Article | <ul><li>[x] </li></ul>| [Link](https://medium.com/@igorstojanov/substrate-template-with-material-design-typescript-629465de6540) |  |
 | 1. | Cards Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/BlockNumber.tsx) |   |
-| 2. | Table Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) | The copy icon doesn't align correctly. |
+| 2. | Table Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) |  |
 | 3. | Transfer Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Transfer.tsx) |   |
 | 4. | Upgrade Runtime Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Upgrade.tsx) |   |
-| 5. | Pallet Interactor | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Interactor.tsx)| The buttons aren't interactable in some cases.  |
+| 5. | Pallet Interactor | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Interactor.tsx)|   |
 | 6. | Event Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Events.tsx) |  |
+
+## Evaluation V4
+
+### Pallet Interaction
+
+I tested it again and it works as expected.
+
+![image](https://github.com/dsm-w3f/Grant-Milestone-Delivery/assets/112647953/ceccfaec-9d26-4e48-9720-c529dd520e41)
+
+The project has some minor problems related to the user interface, like the problem related to the copy icon alignment for the address. They don't affect the usability of the template, but it would be nice if someone polishes the interface in the future.
 
 ## Evaluation V3
 
