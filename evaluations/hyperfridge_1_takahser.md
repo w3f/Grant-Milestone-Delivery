@@ -11,7 +11,7 @@
 | 0a. | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/LICENSE) | - |
 | 0b. | Documentation | <ul><li>[ ] </li></ul> | [README](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/README.md) | Inline comments look mostly good to me, although adding more comprehensive inline comments to the functions in `host/src/main.rs` and `methods/guest/src/main.rs` might make sense. |
 | 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/docs/INSTRUCTIONS.md) | See [Testing Feedback](#testing-feedback) |
-| 0d. | Docker | <ul><li>[ ] </li></ul> | [Dockerfile](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/Dockerfile) | See [Docker Feedback](#docker-feedback) |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/Dockerfile) | See [Docker Feedback](#docker-feedback) |
 | 1a. | risc0 Guest Program | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Code (circuit) to generate the proof, later used by the proving system. Secret input of [Guest Program](https://dev.risczero.com/terminology#guest-program): Ebics envelope as XML and Z53/Camt53 file(s) as ZIP binary - see XML examples above. The Public input is: Public Certificate of the Bank or name of bank, bank account number, balance and date. The [journal](https://dev.risczero.com/terminology#journal) will contain balance, currency, timestamp in the ebics-envelope, timestamp of the proof, client-account-number, Bank-ID and sequence number of the bank-statement. The circuit will check the hash of the (zipped) Z53 documents and compares it with the data given in the ebicsRequest. It checks the signature of the Ebics request and the signed hash of the ZIP file using crypto standards X002 and E002. "X002" refers to RSA signature key with a key length of 2048 bits, "E002" defines RSA algorithm for encryption using  ECB (Electronic Codebook) and PKCS#1 v1.5 padding.|
 | 1b. | Generate Receipt | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Generate [receipt](https://dev.risczero.com/terminology#receipt) which proves that the computation (e.g. balance) is correct and signed by the bank.  |
 | 1c. | Validator | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Code to validate the receipt. |
@@ -234,21 +234,160 @@ Summarizes the overall performance plus additional feedback/comments
 
 ### Docker Feedback
 
-- [] Docker image doesn't seem to exist (at least for arm64 architectures; I'm using a Macbook Pro M2)
+- [x] Docker image can be pulled from the registry ~~doesn't seem to exist (at least for arm64 architectures; I'm using a Macbook Pro M2)~~
   
   <details>
     <summary>Output</summary>
 
     ```zsh
     % docker pull e36io/hyperfridge-r0:latest
-
     latest: Pulling from e36io/hyperfridge-r0
-    no matching manifest for linux/arm64/v8 in the manifest list entries
+    8a1e25ce7c4f: Pull complete 
+    5bddf183218c: Pull complete 
+    bd8552e74a9d: Pull complete 
+    974962928483: Pull complete 
+    da3f1affd165: Pull complete 
+    82a599aff527: Pull complete 
+    fef82fc2d60a: Pull complete 
+    d92112b2e5f1: Pull complete 
+    ec331e29b49a: Pull complete 
+    355cff6739e3: Pull complete 
+    4f4fb700ef54: Pull complete 
+    Digest: sha256:d1976721ff9e00abb11cbba597c26677b337d0a868c4df3744422a3fe7d9c895
+    Status: Downloaded newer image for e36io/hyperfridge-r0:latest
+    docker.io/e36io/hyperfridge-r0:latest
+
+    What's Next?
+      View a summary of image vulnerabilities and recommendations → docker scout quickview e36io/hyperfridge-r0:latest
     ```
   </details>
 
-- [] Building the dockerimage manually fails as well
-  
+- [x] Docker image can be pulled from the registry (macos version)
+
+  <details>
+    <summary>Output</summary>
+
+    ```zsh
+    % docker pull e36io/hyperfridge-r0:macos-latest       
+    macos-latest: Pulling from e36io/hyperfridge-r0
+    59f5764b1f6d: Pull complete 
+    37dfb9e70f7a: Pull complete 
+    5cdaeb1da99d: Pull complete 
+    102ca4f92e50: Pull complete 
+    e2acac3b3e9f: Pull complete 
+    effce3959f3e: Pull complete 
+    25551f8c8b74: Pull complete 
+    3013f3ac45a2: Pull complete 
+    620009823c12: Pull complete 
+    effb984f1c57: Pull complete 
+    6a8df3721225: Pull complete 
+    4f4fb700ef54: Pull complete 
+    Digest: sha256:167dbcf67a044234b7ac71b693633dcf50a1860440d4b424454678d9e8b439ca
+    Status: Downloaded newer image for e36io/hyperfridge-r0:macos-latest
+    docker.io/e36io/hyperfridge-r0:macos-latest
+
+    What's Next?
+      1. Sign in to your Docker account → docker login
+      2. View a summary of image vulnerabilities and recommendations → docker scout quickview e36io/hyperfridge-r0:macos-latest
+    ```
+  </details>
+
+- [x] Docker image can be tagged and integration tests run, however, it "will not generate valid, secure proofs"
+
+  <details>
+    <summary>Output</summary>
+    ```zsh
+    % docker tag  e36io/hyperfridge-r0:macos-latest fridge
+    % docker run --env RISC0_DEV_MODE=true  fridge host test
+    WARNING: proving in dev mode. This will not generate valid, secure proofs.
+    WARNING: Proving in dev mode does not generate a valid receipt. Receipts generated from this process are invalid and should never be used in production.
+    Commitment {
+        hostinfo: "host:main",
+        iban: "CH4308307000289537312",
+        pub_bank_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvizgj/ppKl2zYD4mxsjs\no+4ji+wx9AMQFpKrdQ9AHFQL347BYicn0zvnnoDAwL5D012Z1EYJ+Zz1GIt83li4\nbBS7qnT9q0htl6x8pVszXyi7vA9qOWWICmp6jp/zO+nVWKEIkDekKW0uBwbXMsA3\nh+7yAPJapUwLNAmG2GsXQp1HWOKZkTFdDBG7nJJ5scc0AiwRjB2btvvNQnG+BGz4\n7a3i290J91Fjbgr+0BC2vhi3dHjDDDFw3y/+8Icjapi7UPhX9HDNum5lQzwvYECj\n3KsG7P7V2c3GRQdMA6t4kSub/d9AGpI5bRp4Iz+LaEWDFm4yN0YMK5sl9An8YPPg\ncwIDAQAB\n-----END PUBLIC KEY-----\n",
+        pub_witness_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAngnoLec3QWzHkgGW7Uj2\ni2yFp86KDuKrFUus6pXHJmCnZILTAOiKzNCAB5qIDBwa9h50/OTZ6pv1X5mgVM2S\nPNKvZoUrfOU6Jg5m1b3GkyLj/3AfdS+nJbjUXFlyMWIi5c26WvvW2FsqsEoehAGF\nQpurZV6QKWSKEk16TKoI2kcD8sEAUb5TVwx+7D5kz8ZgUX0g/KqM+o2kUxBiSKdS\n1p9CDEhwWWe0MR0ja4Eh6+pFyIIjVsrybB9ufBuuBC31redFGZ4nBX43xts5Do6Z\n63U1lX15gNiJtVxldBfKm9o2ofPMxdPu3KXEg7f3Zm2n9eA1FxUKurwac7a31V8d\nLwIDAQAB\n-----END PUBLIC KEY-----\n",
+        pub_client_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlbtES+ljC3udEneaTyf\nXmLv4l4hwuXSEfCIYUfVZiDHzdeGK8wJ2gRSucBsxrr2NESdHuIrEPmDhWHnE4D6\nJy61WuL8QWVuiBTZFtSCgRIyeI9ojNTqq0vmO7Wj1Y9FYdIZ/iN8h9xOcuuQkja7\n2oTuM/aqGlycTbJSoioBkv5UbbcDz4MZ0Si9RAW3D+4IWePfKieTEeT3HYnBBChL\nS4pC1si44xz9vqJcj7zAOlpgaJ+vEhL3f/e4qYrb23R9KBY4Ui6UA1exMmWPbMs7\nni4bs93yyiNtpQlQ9sOV6HoPooKPHIufk/jlFdOIhB4m1XtErHIGSRp7Bt2NtFab\nHQIDAQAB\n-----END PUBLIC KEY-----\n",
+        stmts: [
+            Stmt {
+                elctrnc_seq_nb: "247",
+                fr_dt_tm: "2023-11-29T00:00:00",
+                to_dt_tm: "2023-11-29T00:00:00",
+                amt: "31709.14",
+                ccy: "CHF",
+                cd: "OPBD",
+            },
+            Stmt {
+                elctrnc_seq_nb: "248",
+                fr_dt_tm: "2023-11-30T00:00:00",
+                to_dt_tm: "2023-11-30T00:00:00",
+                amt: "31709.09",
+                ccy: "CHF",
+                cd: "OPBD",
+            },
+        ],
+    }%
+    ```
+  </details>
+
+- [x] A STARK receipt can be created
+
+  <details>
+    <summary>Output</summary>
+
+    ```zsh
+    % docker run --env RISC0_DEV_MODE=true  fridge host prove-camt53 \
+        --request=../data/test/test.xml --bankkey ../data/pub_bank.pem \
+        --clientkey ../data/client.pem --witnesskey ../data/pub_witness.pem \
+        --clientiban CH4308307000289537312
+    WARNING: proving in dev mode. This will not generate valid, secure proofs.
+    WARNING: Proving in dev mode does not generate a valid receipt. Receipts generated from this process are invalid and should never be used in production.
+    Commitment {
+        hostinfo: "host:main",
+        iban: "CH4308307000289537312",
+        pub_bank_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvizgj/ppKl2zYD4mxsjs\no+4ji+wx9AMQFpKrdQ9AHFQL347BYicn0zvnnoDAwL5D012Z1EYJ+Zz1GIt83li4\nbBS7qnT9q0htl6x8pVszXyi7vA9qOWWICmp6jp/zO+nVWKEIkDekKW0uBwbXMsA3\nh+7yAPJapUwLNAmG2GsXQp1HWOKZkTFdDBG7nJJ5scc0AiwRjB2btvvNQnG+BGz4\n7a3i290J91Fjbgr+0BC2vhi3dHjDDDFw3y/+8Icjapi7UPhX9HDNum5lQzwvYECj\n3KsG7P7V2c3GRQdMA6t4kSub/d9AGpI5bRp4Iz+LaEWDFm4yN0YMK5sl9An8YPPg\ncwIDAQAB\n-----END PUBLIC KEY-----\n",
+        pub_witness_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAngnoLec3QWzHkgGW7Uj2\ni2yFp86KDuKrFUus6pXHJmCnZILTAOiKzNCAB5qIDBwa9h50/OTZ6pv1X5mgVM2S\nPNKvZoUrfOU6Jg5m1b3GkyLj/3AfdS+nJbjUXFlyMWIi5c26WvvW2FsqsEoehAGF\nQpurZV6QKWSKEk16TKoI2kcD8sEAUb5TVwx+7D5kz8ZgUX0g/KqM+o2kUxBiSKdS\n1p9CDEhwWWe0MR0ja4Eh6+pFyIIjVsrybB9ufBuuBC31redFGZ4nBX43xts5Do6Z\n63U1lX15gNiJtVxldBfKm9o2ofPMxdPu3KXEg7f3Zm2n9eA1FxUKurwac7a31V8d\nLwIDAQAB\n-----END PUBLIC KEY-----\n",
+        pub_client_pem: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlbtES+ljC3udEneaTyf\nXmLv4l4hwuXSEfCIYUfVZiDHzdeGK8wJ2gRSucBsxrr2NESdHuIrEPmDhWHnE4D6\nJy61WuL8QWVuiBTZFtSCgRIyeI9ojNTqq0vmO7Wj1Y9FYdIZ/iN8h9xOcuuQkja7\n2oTuM/aqGlycTbJSoioBkv5UbbcDz4MZ0Si9RAW3D+4IWePfKieTEeT3HYnBBChL\nS4pC1si44xz9vqJcj7zAOlpgaJ+vEhL3f/e4qYrb23R9KBY4Ui6UA1exMmWPbMs7\nni4bs93yyiNtpQlQ9sOV6HoPooKPHIufk/jlFdOIhB4m1XtErHIGSRp7Bt2NtFab\nHQIDAQAB\n-----END PUBLIC KEY-----\n",
+        stmts: [
+            Stmt {
+                elctrnc_seq_nb: "247",
+                fr_dt_tm: "2023-11-29T00:00:00",
+                to_dt_tm: "2023-11-29T00:00:00",
+                amt: "31709.14",
+                ccy: "CHF",
+                cd: "OPBD",
+            },
+            Stmt {
+                elctrnc_seq_nb: "248",
+                fr_dt_tm: "2023-11-30T00:00:00",
+                to_dt_tm: "2023-11-30T00:00:00",
+                amt: "31709.09",
+                ccy: "CHF",
+                cd: "OPBD",
+            },
+        ],
+    }%      
+    ```
+  </details>
+
+- [x] Proof can be verified
+
+  <details>
+    <summary>Output</summary>
+
+    ```zsh
+    % imageid=$(docker run fridge cat /app/IMAGE_ID.hex)
+
+    % proof=/data/test/test.xml-Receipt-$imageid-latest.json
+
+    % docker run --env RISC0_DEV_MODE=true  fridge verifier verify --imageid-hex=$imageid --proof-json=$proof
+
+    verify e2d6e7645e1586f1c639a5d3913374669caa013519655d35dc8bf2c93e507cc0 Some("/data/test/test.xml-Receipt-e2d6e7645e1586f1c639a5d3913374669caa013519655d35dc8bf2c93e507cc0-latest.json")
+    Ok(Commitment { hostinfo: "host:main", iban: "CH4308307000289537312", stmts: [Stmt { elctrnc_seq_nb: "247", fr_dt_tm: "2023-11-29T00:00:00", to_dt_tm: "2023-11-29T00:00:00", amt: "31709.14", ccy: "CHF", cd: "OPBD" }, Stmt { elctrnc_seq_nb: "248", fr_dt_tm: "2023-11-30T00:00:00", to_dt_tm: "2023-11-30T00:00:00", amt: "31709.09", ccy: "CHF", cd: "OPBD" }] })
+    ```
+  </details>
+
+- [x] Building the dockerimage manually fails as well. However, given the fact that it can be pulled from the registry, I'm fine with accepting this limitation. For more context, see [this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1125#issuecomment-1999053344).
+
   <details>
     <summary>Output</summary>
 
@@ -319,4 +458,3 @@ Summarizes the overall performance plus additional feedback/comments
     ERROR: failed to solve: process "/bin/sh -c cargo install cargo-binstall" did not complete successfully: exit code: 101
     ```
   </details>
-
