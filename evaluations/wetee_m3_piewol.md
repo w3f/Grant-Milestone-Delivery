@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/WeTEE_Network.md
 - **Milestone:** 3
 - **Previously successfully merged evaluation:** All evaluations by PieWol
@@ -12,7 +12,7 @@
 |  Number | Deliverable                                | Accepted | Link                                           | Evaluation Notes    |
 | ------: | ------------------------------------------ |  ----- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **0a.** | License   |<ul><li>[x] </li></ul>| [Apache 2.0](https://github.com/wetee-dao/worker/blob/main/LICENSE)  | Apache License 2.0  |
-| **0b.** | Documentation     |<ul><li>[] </li></ul>| [Milestone 3 Documentation](https://github.com/wetee-dao/chain/blob/main/docs/grants/milestone-3-documentation.md)   |  works for a single demo run for grant purposes but what about providing a demo for actual users / tee providers? See further notes  |
+| **0b.** | Documentation     |<ul><li>[x] </li></ul>| [Milestone 3 Documentation](https://github.com/wetee-dao/chain/blob/main/docs/grants/milestone-3-documentation.md)   |  thanks for the latest updates |
 | **0c.** | Testing and Testing Guide                  |<ul><li>[x] </li></ul>| [Test guide link](https://github.com/wetee-dao/chain/blob/main/docs/grants/milestone-3-test.md)  | a hint for path updating after golang install would be nice.
 | **0d.** | Docker                                     |<ul><li>[x] </li></ul>| [DockerFile](https://github.com/wetee-dao/worker/blob/main/Dockerfile)             |  works |
 | **0e.** | Article                                    |<ul><li>[x] </li></ul>| [Medium article](https://medium.com/@yeuyefengxu/wetee-forw3f-grants-485b5c10073f)                     | looks good   |
@@ -20,11 +20,8 @@
 |     02. | Worker log as proof of work                |<ul><li>[x] </li></ul>| [1.Log get](https://github.com/wetee-dao/worker/blob/main/mint/pod.go)<br/>[2.Log Hash](https://github.com/wetee-dao/worker/blob/main/mint/proof/log.go)<br/>[3.Log query](https://github.com/wetee-dao/worker/blob/main/graph/proof.resolvers.go)<br/>[4.Upload log hash](https://github.com/wetee-dao/worker/blob/main/mint/proof/proof.go)                                    |verified via demo run |
 |     03. | Worker monitoring as proof of work         |<ul><li>[x] </li></ul>| [1.Monitoring get](https://github.com/wetee-dao/worker/blob/main/mint/pod.go)<br/>[2.Monitoring Hash](https://github.com/wetee-dao/worker/blob/main/mint/proof/monitoring.go)<br/>[3.Monitoring query](https://github.com/wetee-dao/worker/blob/main/graph/proof.resolvers.go)<br/>[4.Upload monitoring hash](https://github.com/wetee-dao/worker/blob/main/mint/proof/proof.go) | verified via demo run  |
 
-
-## local setup / documentation
-Given that it's absolutely crucial to have a machine with SGX enabled I would advise you to do the check with ``cpuid | grep SGX`` at the start with a simple explanation which output to expect.
-
-Once I chose the correct VM it worked fine. Additionally to the setup tutorial there should be a tutorial on how to restart the services after a reboot or similar. Especially as simply restarting k3s doesn't seem to work. Please give it a check and extend documentation. This request for changes is based on the assumption that eventually you want to cover the whole lifecycle of your product in the documentation which I imagine also include the shut-down and restart of TEE providers. So definitely feel free to reply in a github post before introducing changes to confirm that this makes sense or how I possibly misunderstood your plans.
+## General notes
+Thanks for incorporating requested changes.
 
 ## testing output following testing guide
 <details>
