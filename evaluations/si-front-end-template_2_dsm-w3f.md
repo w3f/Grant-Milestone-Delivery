@@ -12,13 +12,21 @@
 | **0b.** | Documentation | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) |   |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Sample Tests](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/cypress/e2e/Integration-Tests/sample-tests.cy.js) |  |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/Dockerfile) |  |
-| 0e. | Article | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/README.md) | Could you provide the correct link? |
+| 0e. | Article | <ul><li>[x] </li></ul>| [Link](https://medium.com/@igorstojanov/substrate-template-with-material-design-typescript-629465de6540) |  |
 | 1. | Cards Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/BlockNumber.tsx) |   |
-| 2. | Table Module | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) | The copy icon doesn't align correctly. |
+| 2. | Table Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Balances.tsx) | The copy icon doesn't align correctly. |
 | 3. | Transfer Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Transfer.tsx) |   |
 | 4. | Upgrade Runtime Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Upgrade.tsx) |   |
 | 5. | Pallet Interactor | <ul><li>[ ] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Interactor.tsx)| The buttons aren't interactable in some cases.  |
 | 6. | Event Module | <ul><li>[x] </li></ul>| [Link](https://github.com/stojanov-igor/substrate-front-end-template/blob/material-design-update/src/Events.tsx) |  |
+
+## Evaluation V3
+
+### Pallet Interactor
+
+I tested again, and I didn't have the runtime error. However, I still can't do a balance transfer using the pallet because the field in the UI only accept numbers, so I can't insert the account address. I changed the HTML on my browser to remove this limitation, and it worked as expected. 
+
+The copy icon doesn't align correctly is a minor issue and I can accept the milestone this way, but please fix the the bug mentioned above, it should't be difficult to fix. 
 
 ## Evaluation V2
 
@@ -36,17 +44,12 @@ user@localhost:~/Documents/substrate-front-end-template$ docker run a2495a179757
 (Use `node --trace-deprecation ...` to show where the warning was created)
 (node:25) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
-
 Compiled successfully!
-
 You can now view substrate-front-end-template in the browser.
-
   Local:        	http://localhost:8000/substrate-front-end-template
   On Your Network:  http://172.17.0.2:8000/substrate-front-end-template
-
 Note that the development build is not optimized.
 To create a production build, use yarn build.
-
 webpack compiled successfully
 No issues found.
 Compiling...
@@ -61,7 +64,7 @@ The cypress tests now have a better practice for selecting the elements after th
 
 ### Table module
 
-Regarding the alignment problem, I was using Firefox but it occurs on Chrome too. I could notice this in some addresses. If you use the [substrate node template](https://github.com/substrate-developer-hub/substrate-node-template) you should observe it on the alice_stash. It is a small problem, and I don't see it as critical for the approval of this milestone like the problems below. 
+Regarding the alignment problem, I was using Firefox but it occurs on Chrome too. I could notice this in some addresses. If you use the [substrate node template](https://github.com/substrate-developer-hub/substrate-node-template) you should observe it on the alice_stash. It is a small problem, and I don't see it as critical for the approval of this milestone like the problems below.
 
 ### Pallet Interactor
 
