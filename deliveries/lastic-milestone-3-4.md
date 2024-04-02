@@ -7,10 +7,10 @@
 > It is crucial to follow the [official milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md) closely. Do not remove any sections marked as mandatory or outlined with bold letters or headlines. Optional advisory comments, like this one, can be removed for clarity.
 
 * **Application Document:** [lastic.md](https://github.com/w3f/Grants-Program/blob/master/applications/Lastic.md)
-* **Milestone Number:** 1
+* **Milestone Number:** 3 and 4
 
 ### Context (Optional)
-Lastic's milestone 3 aims to enhance the functionality and user experience of the Coretime Chain indexing process through Subsquid, along with providing basic visualization capabilities.
+Lastic's milestones 3 and 4 aims to enhance the functionality and user experience of the Coretime Chain indexing process through Subsquid, along with providing basic visualization capabilities.
 
 ### Deliverables
 This section lists all deliverables for Milestone 1, as outlined in the original application. Each deliverable includes a link to its implementation, with additional notes provided where applicable.
@@ -210,7 +210,6 @@ List and visualization of all connected parachains, parathreads, and registered 
 
 #### 3-3b Appendix
 Sidebar and its corresponding folded state:
-
 <img width="200" alt="Screenshot 2024-03-29 at 12 32 06" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/00341e7f-ba68-41cd-991c-957b451c7848">
 <img width="80" alt="Screenshot 2024-03-29 at 12 32 56" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/37b78662-5402-4edc-a5e2-96cd14f1d1d5">
 
