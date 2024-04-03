@@ -182,38 +182,37 @@ Price per core on Rococo over time. Real time graph can be viewed [here: test.la
 
 #### 2-1a Appendix
 Visualization of Aucton Prices over time (Subscan API)
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/fb9768b3-039a-4d12-9153-24eb01e6baf1)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/ea8ad7b2-ef0c-478a-b263-beb435bc5947)
 
 #### 2-1b Appendix
 Visualization of the current status and timeline of ongoing sales of coretime
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/6692665b-5037-47a8-800c-c4f98f2f4733)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/e5efb3fe-2efb-47fc-acb6-6a520fbad5af)
 
 #### 2-1c Appendix
 List and visualization of all connected parachains, parathreads, and registered PARA IDs.
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/355040b4-778c-40f7-860f-f95ea5048c70)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/b6fffa26-cee6-4548-a683-a51dea896628)
 
 #### 2-1d Appendix
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/232982ce-d0d1-467f-af6a-7f9a33ba04a7)
+<img width="500" alt="Screenshot 2024-03-29 at 12 32 06" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/232982ce-d0d1-467f-af6a-7f9a33ba04a7">
 
 #### 2-2a Appendix
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/23475a87-3bb1-4ad8-a5aa-e055e4377047)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/fc5acba3-c580-4980-baa3-dcd9c9d0f7ad)
 
 #### 2-2b Appendix
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/d497f744-10b4-4b4c-899c-6d6da59b3940)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/37ed97cb-d9c7-4458-a0d7-58fb9e68f0a4)
 
 #### 2-2c Appendix
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/f71418ba-9f7c-4021-ba56-b4520dd898b1)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/d661d7b8-248a-4c31-9cf5-0dd7e4d7d2d0)
 
 #### 3-3a Appendix
-<img width="1242" alt="Screenshot 2024-03-29 at 12 44 48" src="img/image-6.png">
-![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/b94781be-ddc4-4e3b-958e-010a6b3c1486)
+![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/75a9dfd5-d3eb-4605-b9ba-59cb989d2525)
 
 #### 3-3b Appendix
 Sidebar and its corresponding folded state:
+
 <img width="200" alt="Screenshot 2024-03-29 at 12 32 06" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/00341e7f-ba68-41cd-991c-957b451c7848">
 <img width="80" alt="Screenshot 2024-03-29 at 12 32 56" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/37b78662-5402-4edc-a5e2-96cd14f1d1d5">
 
 #### 3-3c Appendix
-<img width="710" alt="Screenshot 2024-03-29 at 12 45 52" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/071e9de7-4d0a-4325-90dd-c37d9e4e5163">
-
+<img width="710" alt="Screenshot 2024-03-29 at 12 45 52" src="https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/bdd45f53-e47e-469a-9769-b9c1b8eba742">
 
