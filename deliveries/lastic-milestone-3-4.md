@@ -13,9 +13,9 @@
 Lastic's milestones 3 and 4 aims to enhance the functionality and user experience of the Coretime Chain indexing process through Subsquid, along with providing basic visualization capabilities.
 
 ### Deliverables
-This section lists all deliverables for Milestone 1, as outlined in the original application. Each deliverable includes a link to its implementation, with additional notes provided where applicable.
+This section lists all deliverables for Milestone 3 and 4, as outlined in the original application. Each deliverable includes a link to its implementation, with additional notes provided where applicable.
 
-### Milestone 1: Indexing Coretime Chain with Subsquid - Functioning Indexer and Basic Visualization
+### Milestone 3: Indexing Coretime Chain with Subsquid - Functioning Indexer and Basic Visualization
 
 This milestone focuses on establishing a robust infrastructure for indexing the Coretime Chain using Subsquid, along with the initial steps towards visualizing Coretime data. Each deliverable is detailed below, complete with relevant links to implementations and additional notes for clarity.
 
@@ -24,7 +24,7 @@ This milestone focuses on establishing a robust infrastructure for indexing the 
 | **0a.**  | License                                          | [LICENSE](https://github.com/LasticXYZ/LasticUI/blob/main/LICENSE)                                      | The project is licensed under GPLv3, ensuring open-source accessibility and compliance.                   |
 | **0b.**  | Documentation                                    | [README.md](https://github.com/LasticXYZ/LasticUI/blob/main/README.md) and [docs.lastic.xyz](https://docs.lastic.xyz/) | Provides extensive documentation in README and dedicated docs site, facilitating user understanding. |
 | **0d.**  | Error Logging                                    | [Lastic UI/issues](https://github.com/LasticXYZ/LasticUI/issues)                                        | Errors are thoroughly documented as issues on GitHub, set for future resolution.                          |
-| **0d.**  | Article Publishing                               | [Article link](https://blog.lastic.xyz/revolutionizing-blockchain-interactivity-unveiling-lastics-groundbreaking-developments-042225bb0b72) | Discusses Lastic's latest breakthroughs, enhancing blockchain interaction.                           |
+| **0d.**  | Article Publishing                               | [Article link](https://blog.lastic.xyz/revolutionizing-blockchain-interactivity-unveiling-lastics-groundbreaking-developments-042225bb0b72) | Discusses Lastic's latest breakthroughs, enhancing blockchain interaction.    |
 | **0e.**  | Dockerfile                                       | [GitHub for Subsquid](https://github.com/LasticXYZ/subsquid)                                            | Simplifies indexer deployment through a Dockerfile setup, promoting ease of use.                          |
 | **1.**   | A Functioning Indexer                            | [Subsquid GraphQL](https://squid.subsquid.io/rococo-coretime/v/v1/graphql)                              | Offers a GraphQl endpoint for seamless access to indexed data.                                            |
 | **1a.**  | Setup and Configuration of Subsquid with Rococo  | [Subsquid GraphQL Endpoint](https://squid.subsquid.io/rococo-coretime/v/v1/graphql)                     | Details the successful deployment of the indexer on Rococo, showcasing setup and indexing efforts.        |
@@ -158,7 +158,7 @@ The frontend is successfully retrieving the indexed data. An example of this can
 Price per core on Rococo over time. Real time graph can be viewed [here: test.lastic.xyz/bulkcore1](https://test.lastic.xyz/bulkcore1])
 ![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/c98b0a94-2a92-460e-b322-bb32f97c7680)
 
-### Milestone 2 - Visualizations + Added Interactivity
+### Milestone 4 - Visualizations + Added Interactivity
 
 | Number | Deliverable                                | Link                                                                                                                   | Notes                                                                                                  |
 |--------|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
