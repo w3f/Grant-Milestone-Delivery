@@ -6,7 +6,7 @@
 **Mandatory Guidelines:**
 > It is crucial to follow the [official milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md) closely. Do not remove any sections marked as mandatory or outlined with bold letters or headlines. Optional advisory comments, like this one, can be removed for clarity.
 
-* **Application Document:** [lastic.md](https://github.com/w3f/Grants-Program/blob/master/applications/Lastic.md)
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/lastic-grant3.md
 * **Milestone Number:** 3 and 4
 
 ### Context (Optional)
