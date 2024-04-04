@@ -20,6 +20,28 @@
 
 # General Notes
 
+Containers set up nicely:
+
+```sh
+docker ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED          STATUS          PORTS                           NAMES
+9a07074e4e6c   grafana/grafana:latest                                   "/run.sh"                46 seconds ago   Up 41 seconds   0.0.0.0:3000->3000/tcp          polkadot_monitoring_service-grafana-1
+7d0198ae2382   polkadot_monitoring_service-validators_cache             "python3 update_cach…"   46 seconds ago   Up 41 seconds                                   polkadot_monitoring_service-validators_cache-1
+70d53146be3e   prom/alertmanager:latest                                 "/bin/alertmanager -…"   46 seconds ago   Up 44 seconds   0.0.0.0:9093->9093/tcp          polkadot_monitoring_service-alertmanager-1
+bdf6d607eae0   polkadot_monitoring_service-polkadot_finality_exporter   "python3 app.py"         46 seconds ago   Up 43 seconds                                   polkadot_monitoring_service-polkadot_finality_exporter-1
+96c8a4f9cede   polkadot_monitoring_service-polkadot_events_exporter     "/app/events-exporter"   46 seconds ago   Up 44 seconds                                   polkadot_monitoring_service-polkadot_events_exporter-1
+57030346aed0   polkadot_monitoring_service-kusama_events_exporter       "/app/events-exporter"   46 seconds ago   Up 43 seconds                                   polkadot_monitoring_service-kusama_events_exporter-1
+2b0e329903f8   postgres:13                                              "docker-entrypoint.s…"   46 seconds ago   Up 44 seconds   0.0.0.0:5432->5432/tcp          polkadot_monitoring_service-postgres-1
+54a598a146f2   prom/prometheus:latest                                   "/bin/prometheus --c…"   46 seconds ago   Up 43 seconds   0.0.0.0:9090->9090/tcp          polkadot_monitoring_service-prometheus-1
+236a5d814a45   polkadot_monitoring_service-kusama_common_exporter       "python3 app.py"         46 seconds ago   Up 43 seconds                                   polkadot_monitoring_service-kusama_common_exporter-1
+3b3184a2e268   redis:latest                                             "docker-entrypoint.s…"   46 seconds ago   Up 44 seconds   0.0.0.0:6379->6379/tcp          polkadot_monitoring_service-redis-1
+04b84ba045db   dpage/pgadmin4                                           "/entrypoint.sh"         46 seconds ago   Up 44 seconds   443/tcp, 0.0.0.0:5050->80/tcp   polkadot_monitoring_service-pgadmin-1
+ed94433dfa0a   polkadot_monitoring_service-bot                          "python3 ./"             46 seconds ago   Up 43 seconds   0.0.0.0:8080->8080/tcp          polkadot_monitoring_service-bot-1
+a713cbfaa8ba   polkadot_monitoring_service-polkadot_common_exporter     "python3 app.py"         46 seconds ago   Up 44 seconds                                   polkadot_monitoring_service-polkadot_common_exporter-1
+2294221eadcf   polkadot_monitoring_service-github_release_exporter      "python3 app.py"         46 seconds ago   Up 43 seconds                                   polkadot_monitoring_service-github_release_exporter-1
+f0e1a0c861ed   polkadot_monitoring_service-kusama_finality_exporter     "python3 app.py"         46 seconds ago   Up 44 seconds
+```
+
 Services properly stop & start.
 ```ts
 github_release_exporter_1     | 2024-04-02 09:37:24 INFO: 172.18.0.9 - - [02/Apr/2024 21:37:24] "GET /metrics HTTP/1.1" 200 -
@@ -100,3 +122,105 @@ ubuntu@ip-172-31-26-193:~/polkadot_monitoring_service/exporters/common$ docker b
  => => exporting layers                                                                                                                             0.0s
  => => writing image sha256:3757779ab896e6c766b0eb252205aad3777ccce1e8e36f2a86df4260f9c86a85
 ```
+Works w/ Grafana on Polkadot, Kusama, Astar, Shiden, Acala, Karura, Moonbeam, Moonriver.
+
+<details>
+ <summary>Output</summary>
+ 
+```py
+gadmin-1                     | pgAdmin 4 - Application Initialisation
+pgadmin-1                     | ======================================
+pgadmin-1                     |
+moonbeam_exporter-1           | 2024-04-04 06:59:50 INFO: Processing block 5873160
+moonbeam_exporter-1           | 2024-04-04 06:59:50 INFO: Collator 0x002ad15f48168f2b40083cc704833b91f278e2e6 has just constructed block 5873160
+pgadmin-1                     | postfix/postlog: starting the Postfix mail system
+shiden_exporter-1             | 2024-04-04 06:59:54 INFO: Processing block 6254577
+polkadot_finality_exporter-1  | 2024-04-04 06:59:54 INFO: Round 2960 has processed. Prevotes: 296. Precommits:  0
+polkadot_finality_exporter-1  | 2024-04-04 06:59:54 INFO: Round 2962 has processed. Prevotes: 297. Precommits:  193
+polkadot_finality_exporter-1  | 2024-04-04 06:59:54 INFO: Round 2963 has processed. Prevotes: 297. Precommits:  178
+acala_exporter-1              | 2024-04-04 06:59:55 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:55] "GET /metrics HTTP/1.1" 200 -
+pgadmin-1                     | [2024-04-04 18:59:56 +0000] [1] [INFO] Starting gunicorn 20.1.0
+pgadmin-1                     | [2024-04-04 18:59:56 +0000] [1] [INFO] Listening at: http://[::]:80 (1)
+pgadmin-1                     | [2024-04-04 18:59:56 +0000] [1] [INFO] Using worker: gthread
+pgadmin-1                     | [2024-04-04 18:59:56 +0000] [117] [INFO] Booting worker with pid: 117
+grafana-1                     | logger=provisioning.dashboard type=file name="a unique provider name" t=2024-04-04T18:59:57.124290004Z level=warn msg="Not saving new dashboard due to restricted database access" provisioner="a unique provider name" file=/etc/grafana/provisioning/dashboards/manta.json folderId=0
+astar_exporter-1              | 2024-04-04 06:59:57 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:57] "GET /metrics HTTP/1.1" 200 -
+shiden_exporter-1             | 2024-04-04 06:59:57 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:57] "GET /metrics HTTP/1.1" 200 -
+moonriver_exporter-1          | 2024-04-04 06:59:58 INFO: Processing block 6480606
+astar_exporter-1              | 2024-04-04 06:59:58 INFO: Processing block 5885887
+polkadot_common_exporter-1    | 2024-04-04 06:59:58 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:58] "GET /metrics HTTP/1.1" 200 -
+moonriver_exporter-1          | 2024-04-04 06:59:58 INFO: Collator 0x6e31b30b8fd37a47941907686b80b46d2d747bbd has just constructed block 6480606
+kusama_finality_exporter-1    | 2024-04-04 06:59:58 INFO: Round 455 has processed. Prevotes: 969. Precommits:  2
+karura_exporter-1             | 2024-04-04 06:59:58 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:58] "GET /metrics HTTP/1.1" 200 -
+kusama_finality_exporter-1    | 2024-04-04 06:59:58 INFO: Round 456 has processed. Prevotes: 328. Precommits:  2
+kusama_finality_exporter-1    | 2024-04-04 06:59:59 INFO: Round 458 has processed. Prevotes: 975. Precommits:  2
+kusama_finality_exporter-1    | 2024-04-04 06:59:59 INFO: Round 459 has processed. Prevotes: 975. Precommits:  2
+moonbeam_exporter-1           | 2024-04-04 06:59:59 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:59] "GET /metrics HTTP/1.1" 200 -
+kusama_finality_exporter-1    | 2024-04-04 06:59:59 INFO: 172.24.0.13 - - [04/Apr/2024 18:59:59] "GET /metrics HTTP/1.1" 200 -
+moonbeam_exporter-1           | 2024-04-04 07:00:01 INFO: Processing block 5873161
+moonbeam_exporter-1           | 2024-04-04 07:00:02 INFO: Collator 0x5d6d1a59fd3e6cf325faccbea4d1265b15d34acb has just constructed block 5873161
+shiden_exporter-1             | 2024-04-04 07:00:05 INFO: Collator bKjjDERBmcQMmpyxepykZJRMJDnbdCjWBQs8LJvGEbjKSME has just constructed block 6254577
+polkadot_finality_exporter-1  | 2024-04-04 07:00:06 INFO: Round 2964 has processed. Prevotes: 296. Precommits:  0
+polkadot_finality_exporter-1  | 2024-04-04 07:00:06 INFO: Round 2965 has processed. Prevotes: 296. Precommits:  0
+polkadot_finality_exporter-1  | 2024-04-04 07:00:06 INFO: Round 2966 has processed. Prevotes: 297. Precommits:  96
+grafana-1                     | logger=provisioning.dashboard type=file name="a unique provider name" t=2024-04-04T19:00:07.129430426Z level=warn msg="Not saving new dashboard due to restricted database access" provisioner="a unique provider name" file=/etc/grafana/provisioning/dashboards/manta.json folderId=0
+kusama_common_exporter-1      | 2024-04-04 07:00:07 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:07] "GET /metrics HTTP/1.1" 200 -
+shiden_exporter-1             | 2024-04-04 07:00:09 INFO: Processing block 6254578
+kusama_finality_exporter-1    | 2024-04-04 07:00:13 INFO: Round 460 has processed. Prevotes: 973. Precommits:  105
+kusama_finality_exporter-1    | 2024-04-04 07:00:13 INFO: Round 461 has processed. Prevotes: 974. Precommits:  240
+polkadot_finality_exporter-1  | 2024-04-04 07:00:13 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:13] "GET /metrics HTTP/1.1" 200 -
+kusama_finality_exporter-1    | 2024-04-04 07:00:13 INFO: Round 462 has processed. Prevotes: 973. Precommits:  2
+kusama_finality_exporter-1    | 2024-04-04 07:00:13 INFO: Round 463 has processed. Prevotes: 972. Precommits:  2
+astar_exporter-1              | 2024-04-04 07:00:13 INFO: Collator XBFG36u1VwfunFERSjDAywJGsG86atqccCukQ33jsVQYCJD has just constructed block 5885887
+moonriver_exporter-1          | 2024-04-04 07:00:14 INFO: Processing block 6480607
+moonriver_exporter-1          | 2024-04-04 07:00:14 INFO: Collator 0x7234af900afaca291b551b0386b962dd9d571434 has just constructed block 6480607
+moonriver_exporter-1          | 2024-04-04 07:00:14 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:14] "GET /metrics HTTP/1.1" 200 -
+moonbeam_exporter-1           | 2024-04-04 07:00:16 INFO: Processing block 5873162
+moonbeam_exporter-1           | 2024-04-04 07:00:16 INFO: Collator 0x834e4e90718673cbc3508a29877b20c5c2ba2417 has just constructed block 5873162
+grafana-1                     | logger=provisioning.dashboard t=2024-04-04T19:00:17.106091708Z level=warn msg="the same UID is used more than once" orgId=1 uid=a3546873-0ef7-4ff6-97a8-c2875878762e times=2 providers="[a unique provider name]"
+grafana-1                     | logger=provisioning.dashboard t=2024-04-04T19:00:17.106972125Z level=warn msg="dashboards provisioning provider has no database write permissions because of duplicates" provider="a unique provider name" orgId=1
+github_release_exporter-1     | 2024-04-04 07:00:17 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:17] "GET /metrics HTTP/1.1" 200 -
+grafana-1                     | logger=provisioning.dashboard type=file name="a unique provider name" t=2024-04-04T19:00:17.119104041Z level=warn msg="Not saving new dashboard due to restricted database access" provisioner="a unique provider name" file=/etc/grafana/provisioning/dashboards/manta.json folderId=0
+astar_exporter-1              | 2024-04-04 07:00:17 INFO: Processing block 5885889
+polkadot_finality_exporter-1  | 2024-04-04 07:00:17 INFO: Round 2967 has processed. Prevotes: 296. Precommits:  0
+polkadot_finality_exporter-1  | 2024-04-04 07:00:17 INFO: Round 2968 has processed. Prevotes: 297. Precommits:  0
+polkadot_finality_exporter-1  | 2024-04-04 07:00:17 INFO: Round 2969 has processed. Prevotes: 297. Precommits:  0
+astar_exporter-1              | 2024-04-04 07:00:18 INFO: Collator WDa63eyRCLi9TPe4ePtuJUqg32S2aqfaw7NnbLD33WnRJMu has just constructed block 5885889
+shiden_exporter-1             | 2024-04-04 07:00:21 INFO: Collator aRgPWGYew35zUyEdo3tKEZUVo4zuPJWxStSWf5kXqXNWqes has just constructed block 6254578
+shiden_exporter-1             | 2024-04-04 07:00:25 INFO: Processing block 6254580
+acala_exporter-1              | 2024-04-04 07:00:25 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:25] "GET /metrics HTTP/1.1" 200 -
+shiden_exporter-1             | 2024-04-04 07:00:25 INFO: Collator WDa63eyRCLi9TPe4ePtuJUqg32S2aqfaw7NnbLD33WnRJMu has just constructed block 6254580
+moonriver_exporter-1          | 2024-04-04 07:00:26 INFO: Processing block 6480608
+moonriver_exporter-1          | 2024-04-04 07:00:26 INFO: Collator 0x4828e3d2a1c4b0a90a2a125b9d53204efaf876a5 has just constructed block 6480608
+moonbeam_exporter-1           | 2024-04-04 07:00:27 INFO: Processing block 5873163
+grafana-1                     | logger=provisioning.dashboard type=file name="a unique provider name" t=2024-04-04T19:00:27.185081754Z level=warn msg="Not saving new dashboard due to restricted database access" provisioner="a unique provider name" file=/etc/grafana/provisioning/dashboards/manta.json folderId=0
+astar_exporter-1              | 2024-04-04 07:00:27 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:27] "GET /metrics HTTP/1.1" 200 -
+moonbeam_exporter-1           | 2024-04-04 07:00:27 INFO: Collator 0xa345728816d83533a24bf1d980009f3b01cec2fe has just constructed block 5873163
+shiden_exporter-1             | 2024-04-04 07:00:27 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:27] "GET /metrics HTTP/1.1" 200 -
+polkadot_common_exporter-1    | 2024-04-04 07:00:28 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:28] "GET /metrics HTTP/1.1" 200 -
+karura_exporter-1             | 2024-04-04 07:00:28 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:28] "GET /metrics HTTP/1.1" 200 -
+kusama_finality_exporter-1    | 2024-04-04 07:00:29 INFO: Round 464 has processed. Prevotes: 957. Precommits:  2
+kusama_finality_exporter-1    | 2024-04-04 07:00:29 INFO: Round 465 has processed. Prevotes: 969. Precommits:  232
+kusama_finality_exporter-1    | 2024-04-04 07:00:29 INFO: Round 466 has processed. Prevotes: 970. Precommits:  2
+kusama_finality_exporter-1    | 2024-04-04 07:00:29 INFO: Round 467 has processed. Prevotes: 970. Precommits:  2
+moonbeam_exporter-1           | 2024-04-04 07:00:29 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:29] "GET /metrics HTTP/1.1" 200 -
+kusama_finality_exporter-1    | 2024-04-04 07:00:29 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:29] "GET /metrics HTTP/1.1" 200 -
+polkadot_finality_exporter-1  | 2024-04-04 07:00:30 INFO: Round 2970 has processed. Prevotes: 297. Precommits:  190
+polkadot_finality_exporter-1  | 2024-04-04 07:00:30 INFO: Round 2971 has processed. Prevotes: 296. Precommits:  198
+polkadot_events_exporter-1    | time="2024-04-04T19:00:35Z" level=info msg="exporters average events rate 138/min" func="main.(*HeadReader).Read.func1" file="/build/cmd/events-exporter/reader.go:264"
+kusama_events_exporter-1      | time="2024-04-04T19:00:35Z" level=info msg="exporters average events rate 163/min" func="main.(*HeadReader).Read.func1" file="/build/cmd/events-exporter/reader.go:264"
+grafana-1                     | logger=provisioning.dashboard type=file name="a unique provider name" t=2024-04-04T19:00:37.120252093Z level=warn msg="Not saving new dashboard due to restricted database access" provisioner="a unique provider name" file=/etc/grafana/provisioning/dashboards/manta.json folderId=0
+kusama_common_exporter-1      | 2024-04-04 07:00:37 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:37] "GET /metrics HTTP/1.1" 200 -
+astar_exporter-1              | 2024-04-04 07:00:38 INFO: Processing block 5885891
+moonriver_exporter-1          | 2024-04-04 07:00:39 INFO: Processing block 6480609
+moonriver_exporter-1          | 2024-04-04 07:00:39 INFO: Collator 0x2bcb75e8590f945596e44a94c6b9ba327745117a has just constructed block 6480609
+astar_exporter-1              | 2024-04-04 07:00:39 INFO: Collator YvWEPYi6BRqpLeKQRQP1XZoWc6JM3LoZDCXgMNgtswXULvb has just constructed block 5885891
+grafana-1                     | logger=infra.usagestats t=2024-04-04T19:00:41.813195845Z level=info msg="Usage stats are ready to report"
+polkadot_finality_exporter-1  | 2024-04-04 07:00:43 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:43] "GET /metrics HTTP/1.1" 200 -
+shiden_exporter-1             | 2024-04-04 07:00:43 INFO: Processing block 6254581
+shiden_exporter-1             | 2024-04-04 07:00:44 INFO: Collator X7akruMgRDexYc4oCrfky25ksVyEArKDRa9jFDiaaJt5dWh has just constructed block 6254581
+moonriver_exporter-1          | 2024-04-04 07:00:44 INFO: 172.24.0.13 - - [04/Apr/2024 19:00:44] "GET /metrics HTTP/1.1" 200 -
+moonbeam_exporter-1           | 2024-04-04 07:00:45 INFO: Processing block 5873164
+moonbeam_exporter-1           | 2024-04-04 07:00:45 INFO: Collator 0x0fc18c08667dc0c026659ad11a73920bd5d5eeac has just constructed block 5873164
+```
+</details>
