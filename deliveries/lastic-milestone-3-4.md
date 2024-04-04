@@ -158,7 +158,7 @@ The frontend is successfully retrieving the indexed data. An example of this can
 Price per core on Rococo over time. Real time graph can be viewed [here: test.lastic.xyz/bulkcore1](https://test.lastic.xyz/bulkcore1])
 ![image](https://github.com/LasticXYZ/Grant-Milestone-Delivery/assets/30662672/c98b0a94-2a92-460e-b322-bb32f97c7680)
 
-### Milestone 4 - Visualizations + Added Interactivity
+### Milestone 2 - Visualizations + Added Interactivity
 
 | Number | Deliverable                                | Link                                                                                                                   | Notes                                                                                                  |
 |--------|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
