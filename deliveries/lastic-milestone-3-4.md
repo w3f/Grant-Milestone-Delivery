@@ -15,7 +15,7 @@ Lastic's milestones 3 and 4 aims to enhance the functionality and user experienc
 ### Deliverables
 This section lists all deliverables for Milestone 3 and 4, as outlined in the original application. Each deliverable includes a link to its implementation, with additional notes provided where applicable.
 
-### Milestone 3: Indexing Coretime Chain with Subsquid - Functioning Indexer and Basic Visualization
+### Milestone 1: Indexing Coretime Chain with Subsquid - Functioning Indexer and Basic Visualization
 
 This milestone focuses on establishing a robust infrastructure for indexing the Coretime Chain using Subsquid, along with the initial steps towards visualizing Coretime data. Each deliverable is detailed below, complete with relevant links to implementations and additional notes for clarity.
 
