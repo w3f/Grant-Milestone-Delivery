@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 0a. | License | <ul><li>[x] </li></ul> | Apache 2.0 |  |  | 
 | 0b. | Documentation | <ul><li>[x] </li></ul> | We will provide a tutorial page that explains how a user can set up monitoring for selected validators. We show how our functionality works and give reasoning and explanations for all metrics that are shown to the user. |  |  |
-| 0c. | Testing Guide | <ul><li>[x] </li></ul> | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. | https://github.com/p2p-org/polkadot_monitoring_service |  |
+| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. | https://github.com/p2p-org/polkadot_monitoring_service |  |
 | 0d. | Docker | <ul><li>[x] </li></ul> | We will provide a Dockerfile(s) that can be used to self-host the telegram bot and check the functionality. |  |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | We will publish an article that explains the user flow of our system and promotes using monitoring for validators operators. | https://p2p.org/economy/validator-monitoring-service-user-guide/ | A user guide that covers all functionality of the Grafana dashboard and telegram bot |
 | 1. | Telegram bot adding alerting based on events | <ul><li>[x] </li></ul> | We will introduce a feature that allows users to subscribe to specific events. This means users can opt to receive Telegram notifications when their chosen validators receive rewards, are elected into the active set, and more. | Tg bot is made for self-hosted version (just follow the steps in repo and create your own tg bot) or by using our  bot: @p2pvalidator_monitoring_bot | The alerting subscription is added to the tg bot, and the alerting system is fully functional based on on-chain events exporters for all networks. |
@@ -19,6 +19,16 @@
 | 4. | Auto-remove instances | <ul><li>[x] </li></ul> | We will develop a system that identifies and removes inactive Grafana instances. | Single instance solution made | Done; the system is automated and does not create a separate Grafana instance for each user. It simplifies the deployment and management of back-end infrastructure |
 
 # General Notes
+
+Nice work! I'm able to run the bot locally and on production version. Grafana dashboards working and look nice. I can subscribe and unsubscribe the the bot successfully.
+
+![grafana](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/350c4732-f688-46b2-ad12-5b4deddaebac)
+
+I'm able to connect to the telegram bot using API token and chatID.
+
+NOTE: Minor fix required - subscriptions is spelled wrong in both python module and form.
+
+<img width="437" alt="bot" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/d39faa1e-1ccd-4ce7-a5ac-0504499b089e">
 
 Containers set up nicely:
 
