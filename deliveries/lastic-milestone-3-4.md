@@ -7,7 +7,7 @@
 > It is crucial to follow the [official milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md) closely. Do not remove any sections marked as mandatory or outlined with bold letters or headlines. Optional advisory comments, like this one, can be removed for clarity.
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/lastic-grant3.md
-* **Milestone Number:** 3 and 4
+* **Milestone Number:** 1 and 2
 
 ### Context (Optional)
 Lastic's milestones 3 and 4 aims to enhance the functionality and user experience of the Coretime Chain indexing process through Subsquid, along with providing basic visualization capabilities.
