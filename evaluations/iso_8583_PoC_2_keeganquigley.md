@@ -137,4 +137,10 @@ For more information about this error, try `rustc --explain E0063`.
 warning: `pallet-iso-8583` (lib test) generated 1 warning
 error: could not compile `pallet-iso-8583` (lib test) due to 1 previous error; 1 warning emitted
 ```
+One error about Linux when trying to run Docker file on MacOS:
 
+```sh
+docker run -it -p 9944:9944 iso8583-chain --dev --tmp --unsafe-rpc-external --rpc-cors=all --rpc-methods=unsafe -loffchain-worker
+
+rosetta error: failed to open elf at /lib64/ld-linux-x86-64.so.2
+```
