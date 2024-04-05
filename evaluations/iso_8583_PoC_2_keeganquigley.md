@@ -18,3 +18,27 @@
 | 5. | Makefile | <ul><li>[x] </li></ul> | [docker-compose](https://github.com/subclone/payment-processor/blob/main/docker-compose.yaml) [Makefile](https://github.com/subclone/payment-processor/blob/main/pcidss/Makefile) |  |
 
 # General Notes
+
+One test failing:
+```rust
+    Checking pallet-transaction-payment-rpc v4.0.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#40e33957)
+warning: unused import: `SignMessage`
+  --> pallets/iso-8583/src/lib.rs:18:46
+   |
+18 |     offchain::{ForAll, SendUnsignedTransaction, SignMessage, SignedPayload, Signer},
+   |                                                 ^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+    Checking frame-benchmarking-cli v4.0.0-dev (https://github.com/paritytech/substrate.git?branch=polkadot-v1.0.0#40e33957)
+error[E0063]: missing field `payment_processor_url` in initializer of `pallet::GenesisConfig<mock::Test>`
+   --> pallets/iso-8583/src/mock.rs:167:3
+    |
+167 |         crate::GenesisConfig::<Test> {
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ missing `payment_processor_url`
+
+For more information about this error, try `rustc --explain E0063`.
+warning: `pallet-iso-8583` (lib test) generated 1 warning
+error: could not compile `pallet-iso-8583` (lib test) due to 1 previous error; 1 warning emitted
+```
+
