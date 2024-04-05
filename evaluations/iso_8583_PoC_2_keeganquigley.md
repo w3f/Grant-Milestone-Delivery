@@ -21,6 +21,34 @@
 
 I'm able to successfully run payment processer and the ISO-8583 chain in tandem.
 
+Chain runs locally and in Docker:
+
+```sh
+docker run -it -p 9944:9944 kingleard/iso8583-chain --dev --tmp --unsafe-rpc-external --rpc-cors=all --rpc-methods=unsafe -loffchain-worker
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+2024-04-05 21:58:07.480  INFO main sc_cli::runner: Substrate Node
+2024-04-05 21:58:07.485  INFO main sc_cli::runner: ✌️  version 0.0.1-3c27d5df4f1
+2024-04-05 21:58:07.485  INFO main sc_cli::runner: ❤️  by Dastanbek Samatov <dastanbeksamatov@gmail.com>, 2017-2024
+2024-04-05 21:58:07.485  INFO main sc_cli::runner: 📋 Chain specification: Development
+2024-04-05 21:58:07.485  INFO main sc_cli::runner: 🏷  Node name: forgetful-stream-1295
+2024-04-05 21:58:07.486  INFO main sc_cli::runner: 👤 Role: AUTHORITY
+2024-04-05 21:58:07.486  INFO main sc_cli::runner: 💾 Database: RocksDb at /tmp/substrateYLZVUp/chains/dev/db/full
+2024-04-05 21:58:08.599  INFO main sc_service::client::client: 🔨 Initializing Genesis block/state (state: 0xb328…9ceb, header-hash: 0x94cb…180e)
+2024-04-05 21:58:08.629  INFO main grandpa: 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.
+2024-04-05 21:58:09.046  WARN main sc_service::config: Using default protocol ID "sup" because none is configured in the chain specs
+2024-04-05 21:58:09.059  INFO main sub-libp2p: 🏷  Local node identity is: 12D3KooWAjxuBYd1awu2PZpFsnhciHcYE9Qx5GBLmBEjHbyrKK44
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Operating system: linux
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 CPU architecture: x86_64
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Target environment: gnu
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Memory: 7846MB
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Kernel: 6.5.11-linuxkit
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Linux distribution: Debian GNU/Linux 11 (bullseye)
+2024-04-05 21:58:09.110  INFO main sc_sysinfo: 💻 Virtual machine: no
+2024-04-05 21:58:09.110  INFO main sc_service::builder: 📦 Highest known block at #0
+2024-04-05 21:58:09.116  INFO tokio-runtime-worker substrate_prometheus_endpoint: 〽️ Prometheus exporter started at 127.0.0.1:9615
+2024-04-05 21:58:09.127  INFO                 main sc_rpc_server: Running JSON-RPC server: addr=0.0.0.0:9944, allowed origins=["*"]
+```
+
 18 unit tests now passing:
 
 ```rust
