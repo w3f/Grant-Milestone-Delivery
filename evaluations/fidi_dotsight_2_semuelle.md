@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/fidi-dotsight-analytics.md
 - **Milestone:** 2
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,16 +9,14 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0. | Apache License 2.0 | <ul><li>[x] </li></ul> | [fidi-tech/dotsight](https://github.com/fidi-tech/dotsight/blob/c5aa6c5b043693be3829a542bd38474a292a76f3/LICENSE), [fidi-tech/dotsight-ui](https://github.com/fidi-tech/dotsight-ui/blob/3e9f8efdeb15d0c80f0caff112e9a7a2df09f7f9/LICENSE) | Apache License 2.0 |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul> | [docs.fidi.tech](https://docs.fidi.tech/fidi-overview/fidi-analytics-portal) | We will provide documentation on every supported metrics class and an educational tutorial explaining the typical way to interpret the data, navigate the developer UI, specify the required metadata, deploy a data interface configuration, and select the desired dashboard. |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [docs.fidi.tech](https://docs.fidi.tech/fidi-overview/fidi-analytics-portal) | — |
 | **0c.** | Testing | <ul><li>[x] </li></ul> | [fidi-tech/dotsight-ui](https://github.com/search?q=repo%3Afidi-tech%2Fdotsight-ui+spec.tsx&type=code), [fidi-tech/dotsight](https://github.com/search?q=repo%3Afidi-tech%2Fdotsight%20spec.ts&type=code) | See output below |
-| **1a.** | dApp-level signals: collator metrics | <ul><li>[ ] </li></ul> | link | We will generalize prior work from Milestone 1 to span collator/nominator activity and make metrics such as uptime, block production rate, block processing time, rank/nominator rank, name, and value locked available in the views. For 1a-2a, the respective GraphQL squid query and GiantSquid's code are also in scope; the UI components will be written in React + Typescript, and the backend code in Typescript + Nest + PGSQL.|
-| **1b.** | dApp-level signals: user activity | <ul><li>[ ] </li></ul> | link | Additionally, the dApp-specific user activity metrics will be surfaced, e.g., UAW, net new wallets,  historical transactions, volume, and balance per dApp. Respective squid query and GS code are also in scope. |
-| **2a.** | Network-level signals | <ul><li>[ ] </li></ul> | link | We will generalize prior work from Milestone 1 to span L1-level metrics and activity made available in the developer UI, e.g., UAW per network, number of new wallets, adoption rates, unstaked tokens currently in wallets, tokens in circulation, and tokens staked or locked. Respective squid query and GS code are also in scope. |
+| **1a.** | dApp-level signals: collator metrics | <ul><li>[x] </li></ul> | [fidi-tech/dotsight](https://github.com/fidi-tech/dotsight/blob/c5aa6c5b043693be3829a542bd38474a292a76f3/src/data-sources/collection/dapp-radar/dapp.datasource.ts) | Daily Transactions, Volume, and Uniques |
+| **1b.** | dApp-level signals: user activity | <ul><li>[ ] </li></ul> | link | Monthly Active, Monthly Uniques, and Monthly Transactions |
+| **2a.** | Network-level signals | <ul><li>[x] </li></ul> | [fidi-tech/dotsight](https://github.com/fidi-tech/dotsight/blob/c5aa6c5b043693be3829a542bd38474a292a76f3/src/data-sources/collection/chainlink/token.datasource.ts#L194) | Monthly Active, Monthly Unique, Monthly Transactions, and Governance metrics |
 
 
 ## General Notes
-
-- Documentation doesn't seem up to spec
 
 
 ### `npm run test:cov` output
