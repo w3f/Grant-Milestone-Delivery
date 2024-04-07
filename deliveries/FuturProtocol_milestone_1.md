@@ -3,7 +3,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [Futur Protocol](https://github.com/RELAI-Network/Grants-Program/blob/fd99d75e580c84560d8099cb404d4b10b48295b4/applications/FuturFusion.md)
+* **Application Document:** [Futur Protocol](https://github.com/w3f/Grants-Program/blob/master/applications/FuturFusion.md)
 * **Milestone Number:** 1
 
 **Deliverables**
