@@ -9,15 +9,15 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/LICENSE) | - |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [README](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/README.md) | Inline comments look mostly good to me, although adding more comprehensive inline comments to the functions in `host/src/main.rs` and `methods/guest/src/main.rs` might make sense. |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/docs/INSTRUCTIONS.md) | See [Testing Feedback](#testing-feedback) |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/README.md) | Inline comments look mostly good to me. ~~, although adding more comprehensive inline comments to the functions in `host/src/main.rs` and `methods/guest/src/main.rs` might make sense.~~ => added |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/docs/INSTRUCTIONS.md) | See [Testing Feedback](#testing-feedback) |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/element36-io/hyperfridge-r0/blob/651815e00be9f8d82d0d8df94bf908a37b9cfe7e/Dockerfile) | See [Docker Feedback](#docker-feedback) |
-| 1a. | risc0 Guest Program | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Code (circuit) to generate the proof, later used by the proving system. Secret input of [Guest Program](https://dev.risczero.com/terminology#guest-program): Ebics envelope as XML and Z53/Camt53 file(s) as ZIP binary - see XML examples above. The Public input is: Public Certificate of the Bank or name of bank, bank account number, balance and date. The [journal](https://dev.risczero.com/terminology#journal) will contain balance, currency, timestamp in the ebics-envelope, timestamp of the proof, client-account-number, Bank-ID and sequence number of the bank-statement. The circuit will check the hash of the (zipped) Z53 documents and compares it with the data given in the ebicsRequest. It checks the signature of the Ebics request and the signed hash of the ZIP file using crypto standards X002 and E002. "X002" refers to RSA signature key with a key length of 2048 bits, "E002" defines RSA algorithm for encryption using  ECB (Electronic Codebook) and PKCS#1 v1.5 padding.|
-| 1b. | Generate Receipt | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Generate [receipt](https://dev.risczero.com/terminology#receipt) which proves that the computation (e.g. balance) is correct and signed by the bank.  |
-| 1c. | Validator | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Code to validate the receipt. |
-| 1d. | Hyperfridge Crate | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: The crate to create and validate recipes (ZKPs), wrapping the functionality.  |
-| 2. | Unit Tests | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: We will add unit tests and test data for creating and validating proofs which includes edge cases like wrong balance claims or faulty signature of the bank. |
-| 3. | Performance Benchmark | <ul><li>[ ] </li></ul> | (to be evaluated, once 0c., 0d. are fixed) | Spec: Present a table with performance metrics, so that hyperfride proofing times can be interpolated with data from [risc-zero](https://dev.risczero.com/datasheet.pdf). |
+| 1a. | risc0 Guest Program | <ul><li>[x] </li></ul> | [risc0 Guest Program](https://github.com/element36-io/hyperfridge-r0/tree/9803622bf7c2a04f539489684547a06d6cf18dab/methods/guest) | - |
+| 1b. | Generate Receipt | <ul><li>[x] </li></ul> | [receipt generation](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/verifier/src/main.rs#L119-L120) | - |
+| 1c. | Validator | <ul><li>[x] </li></ul> | [verier](https://github.com/element36-io/hyperfridge-r0/tree/9803622bf7c2a04f539489684547a06d6cf18dab/verifier) | - |
+| 1d. | Hyperfridge Crate | <ul><li>[ ] </li></ul> | - | Didn't find any published hyperfridge crate on https://crates.io/ |
+| 2. | Unit Tests | <ul><li>[x] </li></ul> | see [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/docs/INSTRUCTIONS.md) | - |
+| 3. | Performance Benchmark | <ul><li>[x] </li></ul> | [Performance measurements](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/docs/runtime.md) | - |
 
 Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
@@ -27,6 +27,14 @@ which was used for testing the delivery. It should also be checked if the softwa
 Summarizes the overall performance plus additional feedback/comments
 
 ### Testing Feedback
+
+Note: the host tests and tests with a new ebics response both fail, due to hardware limitations.
+
+[Quote](https://github.com/w3f/Grant-Milestone-Delivery/pull/1125#issuecomment-2024496487) from the grantee:
+
+> Apart from measurements, we we learned that you can not run it with normal gaming hardware acceleration on e.g. Geforce 4070 8GB due to lack of memory
+
+Since the Dockertests pass, I've decided to accept the delivery anyway.
 
 - [x] Tests pass, when run natively
   
@@ -95,7 +103,7 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [] Host tests fail
+- [] Host tests fail on Macbbook Pro M2.
   
   <details>
     <summary>Output</summary>
@@ -159,7 +167,7 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [] Running the tests with a new ebics response fails
+- [] Running the tests with a new ebics response fails on Macbook Pro M2
 
   <details>
     <summary>Output</summary>
@@ -292,7 +300,7 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [x] Docker image can be tagged and integration tests run, however, it "will not generate valid, secure proofs"
+- [x] Docker image can be tagged and integration tests run, however, it "will not generate valid, secure proofs". The grantee justified this circumstance by being a feature of risc0, helping to skip the computationally expensive part of creating the STARK, see [this comment](https://github.com/w3f/Grant-Milestone-Delivery/pull/1125#issuecomment-2024496487).
 
   <details>
     <summary>Output</summary>
