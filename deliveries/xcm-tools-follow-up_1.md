@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**
 
-* **Application Document:** [xcm-tools-follow-up](https://github.com/gmajor-encrypt/Grants-Program/blob/master/applications/xcm-tools-follow-up.md)
+* **Application Document:** [xcm-tools-follow-up](https://github.com/w3f/Grants-Program/blob/master/applications/xcm-tools-follow-up.md)
 * **Milestone Number:** 1
 
 | Number | Deliverable               | Link                                                                        | Notes                   |
