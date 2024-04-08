@@ -12,7 +12,7 @@ jobs:
       steps:
         - name: Get filenames of any deliveries being added
           id: files
-          uses: Ana06/get-changed-files@v2.0.0
+          uses: Ana06/get-changed-files@v2.3.0
           with:
             format: 'json'
             filter: |
