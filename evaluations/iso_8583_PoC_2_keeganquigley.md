@@ -14,8 +14,8 @@
 | 1. | Substrate Chain | <ul><li>[x] </li></ul> | [Substrate Chain](https://github.com/subclone/iso8583-chain) | Good. |
 | 2. | Offchain Worker | <ul><li>[x] </li></ul> | [Offchain Worker](https://github.com/subclone/iso8583-chain/blob/main/pallets/iso-8583/src/lib.rs#L472) |Good. |
 | 3. | ERC-20R Pallet | <ul><li>[x] </li></ul> | [ERC-20R Pallet](https://github.com/subclone/iso8583-chain/tree/main/pallets/iso-8583) | Good. |
-| 4. | Integration tests | <ul><li>[x] </li></ul> | [Oracle Integration Tests](https://github.com/subclone/payment-processor/tree/main/pcidss/e2e-tests) [Integration tests](https://github.com/subclone/iso8583-chain) |  |
-| 5. | Makefile | <ul><li>[x] </li></ul> | [docker-compose](https://github.com/subclone/payment-processor/blob/main/docker-compose.yaml) [Makefile](https://github.com/subclone/payment-processor/blob/main/pcidss/Makefile) |  |
+| 4. | Integration tests | <ul><li>[x] </li></ul> | [Oracle Integration Tests](https://github.com/subclone/payment-processor/tree/main/pcidss/e2e-tests) [Integration tests](https://github.com/subclone/iso8583-chain) | Good. |
+| 5. | Makefile | <ul><li>[x] </li></ul> | [docker-compose](https://github.com/subclone/payment-processor/blob/main/docker-compose.yaml) [Makefile](https://github.com/subclone/payment-processor/blob/main/pcidss/Makefile) | Good. |
 
 # General Notes
 
