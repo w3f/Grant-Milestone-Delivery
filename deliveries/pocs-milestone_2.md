@@ -18,14 +18,4 @@ The goal is to integrate `pallet-staking` with modified `pallet-contracts`, ensu
 |0c.|Testing Guide| [Testing guide](https://github.com/auguth/pocs/blob/master/TESTING-GUIDE.md) |-|
 |0d.|Docker | [Dockerfile](https://github.com/auguth/pocs/blob/master/Dockerfile) , [Docker Compose](https://github.com/auguth/pocs/blob/master/docker-compose.yml)| `docker compose up --build -d` |
 |0e.|Article|[PoCS x NPoS](https://medium.com/@auguthresearch/pocs-x-npos-d164688223fc)|-|
-|1.|Modify pallet staking for PoCS|[PR#29 (PoCS x NPoS)](https://github.com/auguth/pocs/pull/29) &  [Issue#41 (Minimum Staking Requirement)](https://github.com/auguth/pocs/issues/41)|-|
-
-**Additional Information**
-
-Upcoming Final **Milestone 3** will include these deliverables,
-1. Multi Node Test
-2. Yellow Paper
-3. Follow up Report (Further modifications to `pallet-staking`)
-4. Sample PoCS ink! Contract (Verifying Contract's Delegate and Stake Score)
-5. PoCS Blog Article
-6. PoCS Tutorial Video
+|1.|Modify pallet staking for PoCS|[PR#29 (PoCS x NPoS)](https://github.com/auguth/pocs/pull/29) , [Issue#41 (Minimum Staking Requirement)](https://github.com/auguth/pocs/issues/41) , [Issue#45 (Runtime Benchmarks Fix)](https://github.com/auguth/pocs/issues/45)|-|
