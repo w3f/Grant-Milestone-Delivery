@@ -114,12 +114,11 @@ jobs:
 
   request-invoice:
     runs-on: ubuntu-latest
-    needs: check-needs-badge
     if: always()
     steps:
       - name: Request invoice
         if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
-        uses: thollander/actions-comment-pull-request@2.5.0
+        uses: thollander/actions-comment-pull-request@v2.5.0
         with:
           message: >
             :coin: Please fill out the [invoice form](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform?usp=pp_url&entry.1070766548=${{github.event.pull_request.html_url}}) in order to initiate the payment process. Thank you! 
