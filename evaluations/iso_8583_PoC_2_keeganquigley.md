@@ -19,7 +19,16 @@
 
 # General Notes
 
-I'm able to successfully run payment processer and the ISO-8583 chain in tandem.
+I'm able to successfully run payment processer and the ISO-8583 chain in tandem. Front-end works to simulate both card and crypto txs. This is a very interesting PoC that shows how it is possible to use substrate for integrating with ISO-8583 message formats. Basically the main problem that needs to be resolved now is how to revert txs.
+
+Grantee fixed resolved all issues, see PR.
+
+![alice](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/21207281-9b77-43cf-bc26-6ccb07e56e13)
+
+Offchain-workers properly supply balance and other data.
+
+![Screenshot 2024-04-09 at 10 37 06 AM](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/dcd09842-0814-4397-b17c-f8fb39ef4793)
+
 
 Chain runs locally and in Docker:
 
@@ -165,7 +174,7 @@ For more information about this error, try `rustc --explain E0063`.
 warning: `pallet-iso-8583` (lib test) generated 1 warning
 error: could not compile `pallet-iso-8583` (lib test) due to 1 previous error; 1 warning emitted
 ```
-One error about Linux when trying to run Docker file on MacOS:
+~~One error about Linux when trying to run Docker file on MacOS:~~
 
 ```sh
 docker run -it -p 9944:9944 iso8583-chain --dev --tmp --unsafe-rpc-external --rpc-cors=all --rpc-methods=unsafe -loffchain-worker
