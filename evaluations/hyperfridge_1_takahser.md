@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Approved
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/hyperfridge.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
