@@ -21,17 +21,44 @@
 
 # General Notes
 
-5 unit tests passing:
+11 unit tests passing:
 
 ```rust
+warning: `futur-assets-reg` (lib) generated 2 warnings
+   Compiling relai-network-runtime v4.0.0-dev (/home/ubuntu/relai-network/runtime)
+warning: `futur-assets-reg` (lib test) generated 2 warnings (2 duplicates)
+   Compiling relai-network v4.0.0-dev (/home/ubuntu/relai-network/node)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 50.25s
+     Running unittests src/lib.rs (target/debug/deps/futur_assets_reg-f95b237109e689e4)
+
 running 5 tests
 test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
 test tests::submit_asset_works ... ok
-test tests::pub_unpub_asset_works ... ok
-test tests::buy_asset_works ... ok
 test tests::update_asset_works ... ok
+test tests::buy_asset_works ... ok
+test tests::pub_unpub_asset_works ... ok
 
-test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/lib.rs (target/debug/deps/futur_creators_reg-01a66a544616f9a0)
+
+running 4 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::set_registration_fees_works ... ok
+test tests::register_developer_works ... ok
+test tests::unregister_developer_works ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src/lib.rs (target/debug/deps/nft-724c03744dc6c45d)
+
+running 2 tests
+test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::it_works_for_default_value ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/lib.rs (target/debug/deps/relai_network-2123ea4549b0eb53)
 ```
 
 Consider fixing cargo clippy warnings:
