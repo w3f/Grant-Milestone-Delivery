@@ -15,7 +15,7 @@
 | 1a. | risc0 Guest Program | <ul><li>[x] </li></ul> | [risc0 Guest Program](https://github.com/element36-io/hyperfridge-r0/tree/9803622bf7c2a04f539489684547a06d6cf18dab/methods/guest) | - |
 | 1b. | Generate Receipt | <ul><li>[x] </li></ul> | [receipt generation](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/verifier/src/main.rs#L119-L120) | - |
 | 1c. | Validator | <ul><li>[x] </li></ul> | [verier](https://github.com/element36-io/hyperfridge-r0/tree/9803622bf7c2a04f539489684547a06d6cf18dab/verifier) | - |
-| 1d. | Hyperfridge Crate | <ul><li>[ ] </li></ul> | - | Didn't find any published hyperfridge crate on https://crates.io/ |
+| 1d. | Hyperfridge Crate | <ul><li>[x] </li></ul> | [fridge-r0-verifier crate](https://crates.io/crates/fridge-r0-verifier) | - |
 | 2. | Unit Tests | <ul><li>[x] </li></ul> | see [Testing Guide](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/docs/INSTRUCTIONS.md) | - |
 | 3. | Performance Benchmark | <ul><li>[x] </li></ul> | [Performance measurements](https://github.com/element36-io/hyperfridge-r0/blob/9803622bf7c2a04f539489684547a06d6cf18dab/docs/runtime.md) | - |
 
