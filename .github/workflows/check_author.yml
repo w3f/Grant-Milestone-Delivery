@@ -29,7 +29,7 @@ jobs:
         filename: ${{ fromJson(needs.get-delivery-files.outputs.filenames) }}
  
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
