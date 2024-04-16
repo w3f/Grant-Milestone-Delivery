@@ -182,3 +182,14 @@ warning: empty doc comment
 warning: `futur-creators-reg` (lib) generated 3 warnings
 ```
 </details>
+
+`futur-console-react` runs both locally and prod version:
+
+```ts
+  VITE v4.5.2  ready in 699 ms
+
+  ➜  Local:   http://localhost:3030/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+[ESLint] Found 0 error and 0 warning
+```
