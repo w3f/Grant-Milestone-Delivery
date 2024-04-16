@@ -1,25 +1,26 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/FuturFusion.md
 - **Milestone:** 1
-- **Previously successfully merged evaluation:** N/A
 
 | Number | Deliverable | Link | Accepted | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | [Apache 2.0](https://github.com/RELAI-Network/relai-network/blob/main/LICENSE) | <ul><li>[x] </li></ul> |  	Apache License 2.0 | 
-| 0b. | Documentation | [Substrate Documentation](https://github.com/RELAI-Network/relai-network) | <ul><li>[x] </li></ul> |  | 
-| 0c. | Testing and Testing Guide | [Relai Network Pallets](https://github.com/RELAI-Network/relai-network/blob/main/README.md#testing)| <ul><li>[x] </li></ul> |  | 
-| 0d. | Articles |[Futur Protocol Stack](https://blog.relai.network/futur-protocol-stack)<br/> [Futur Console Account Creation](https://blog.relai.network/futur-console-account-creation-relai-network-devnet)<br/> [Futur Console Book Publishing](https://blog.relai.network/futur-console-book-publication-relai-network-devnet) <br/> [Futur Console App/Game Publishing](https://blog.relai.network/futur-console-appgame-creation-relai-network-devnet)<br/> [Futur Store App Guide](https://blog.relai.network/futur-store-app-devnet-relai-network)| <ul><li>[x] </li></ul> |  |
-| 1 | Futur Store Mobile app |[Futur Store mobile app](https://github.com/RELAI-Network/futurstore-app)| <ul><li>[x] </li></ul> | |
-| 2 | Futur Protocol Runtime modules |[Futur-Asset-Reg and Futur-Creators-Reg](https://github.com/RELAI-Network/relai-network/tree/main/pallets)| <ul><li>[x] </li></ul> | |
-| 3 | SAST/DAST module |[Mobsf](https://mobsf.github.io/docs)| <ul><li>[x] </li></ul> | |   
-| 4 | Futur Console |[Futur Console](https://github.com/RELAI-Network/futur-console-react)| <ul><li>[x] </li></ul> | |   
-| 5 | Backend Server|[Cloud Functions](https://github.com/RELAI-Network/relai-fn)| <ul><li>[x] </li></ul> | | 
-| 6 | Storage Layer|`IPFS via Crust` and `Firebase Storage`| <ul><li>[x] </li></ul> |  | 
-| 7 | Kaggu|[Kaggu Ebook Reader](https://github.com/RELAI-Network/kaggu)| <ul><li>[x] </li></ul> |  | 
+| 0b. | Documentation | [Substrate Documentation](https://github.com/RELAI-Network/relai-network) | <ul><li>[x] </li></ul> | Thorough docs. | 
+| 0c. | Testing and Testing Guide | [Relai Network Pallets](https://github.com/RELAI-Network/relai-network/blob/main/README.md#testing)| <ul><li>[x] </li></ul> | Good. | 
+| 0d. | Articles |[Futur Protocol Stack](https://blog.relai.network/futur-protocol-stack)<br/> [Futur Console Account Creation](https://blog.relai.network/futur-console-account-creation-relai-network-devnet)<br/> [Futur Console Book Publishing](https://blog.relai.network/futur-console-book-publication-relai-network-devnet) <br/> [Futur Console App/Game Publishing](https://blog.relai.network/futur-console-appgame-creation-relai-network-devnet)<br/> [Futur Store App Guide](https://blog.relai.network/futur-store-app-devnet-relai-network)| <ul><li>[x] </li></ul> | Good. |
+| 1 | Futur Store Mobile app |[Futur Store mobile app](https://github.com/RELAI-Network/futurstore-app)| <ul><li>[x] </li></ul> | Good. |
+| 2 | Futur Protocol Runtime modules |[Futur-Asset-Reg and Futur-Creators-Reg](https://github.com/RELAI-Network/relai-network/tree/main/pallets)| <ul><li>[x] </li></ul> | Good. |
+| 3 | SAST/DAST module |[Mobsf](https://mobsf.github.io/docs)| <ul><li>[x] </li></ul> | Good. |   
+| 4 | Futur Console |[Futur Console](https://github.com/RELAI-Network/futur-console-react)| <ul><li>[x] </li></ul> | Good. |   
+| 5 | Backend Server|[Cloud Functions](https://github.com/RELAI-Network/relai-fn)| <ul><li>[x] </li></ul> | Good. | 
+| 6 | Storage Layer|`IPFS via Crust` and `Firebase Storage`| <ul><li>[x] </li></ul> | Good. | 
+| 7 | Kaggu|[Kaggu Ebook Reader](https://github.com/RELAI-Network/kaggu)| <ul><li>[x] </li></ul> | Good. | 
 
 # General Notes
+
+Overall nice app, though more tests could be added and would be nice to see some error handling improvements. Also some UI glitches. Also would be nice to eventually see everything cleaned up and combined under a monorepo.
 
 ## Backend
 
@@ -185,6 +186,8 @@ warning: `futur-creators-reg` (lib) generated 3 warnings
 ```
 </details>
 
+I'm able to request tokens with `curl "https://faucet-tskg7nm5aa-uc.a.run.app?requester=your_substrate_wallet_address"`
+
 ## Front-end UI
 
 `futur-console-react` runs both locally and prod version:
@@ -197,4 +200,13 @@ warning: `futur-creators-reg` (lib) generated 3 warnings
   ➜  press h to show help
 [ESLint] Found 0 error and 0 warning
 ```
+App works and I am able to create a listing.
+
+<img width="1409" alt="relai 2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/64d7ebad-61a5-4463-bb26-8dcb5a108cf1">
+
 Cosmetic note: "Install Polkadot" seems a little confusing, I think this button could be relabled to something like "Install Polkadot-JS extension". Talisman button looks good.
+
+Also some minor spelling errors:
+
+<img width="589" alt="spelling" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/2ec04d73-9034-4757-ba90-f5d0e0260ad9">
+
