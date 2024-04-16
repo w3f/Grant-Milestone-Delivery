@@ -21,6 +21,8 @@
 
 # General Notes
 
+## Backend
+
 11 unit tests passing:
 
 ```rust
@@ -183,6 +185,8 @@ warning: `futur-creators-reg` (lib) generated 3 warnings
 ```
 </details>
 
+## Front-end UI
+
 `futur-console-react` runs both locally and prod version:
 
 ```ts
@@ -193,3 +197,4 @@ warning: `futur-creators-reg` (lib) generated 3 warnings
   ➜  press h to show help
 [ESLint] Found 0 error and 0 warning
 ```
+Cosmetic note: "Install Polkadot" seems a little confusing, I think this button could be relabled to something like "Install Polkadot-JS extension". Talisman button looks good.
