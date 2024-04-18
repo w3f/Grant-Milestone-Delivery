@@ -15,6 +15,10 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
+| 0a. | License | https://github.com/tokenguardio/dashboard-creator-client/blob/dev/LICENSE |  |
+| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-client/blob/dev/README.md |  |
+| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-client/tree/dev/src/tests |  |
+| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-client/blob/dev/Dockerfile |  |
 | 1. | Metrics Visualisation |https://github.com/tokenguardio/dashboard-creator-client| | 
 | 2. | Dashboard layout |https://github.com/tokenguardio/dashboard-creator-client| | 
 | 3. | * Metric catalogue | https://github.com/tokenguardio/dashboard-creator-client| Tokenguard team added an additional visual metric catalogue to the milestone delivery as it was required to make the tool fully-functional standalone. |
@@ -28,5 +32,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
+| 0a. | License | https://github.com/tokenguardio/dashboard-creator-server/blob/dev/LICENSE |  |
+| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-server/blob/dev/README.md |  |
+| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-server/tree/dev/src/components |  |
+| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-server/blob/dev/Dockerfile |  |
 | 1. | API Reading Mechanism |https://github.com/tokenguardio/dashboard-creator-server| | 
 | 3. | Report & estimation |https://github.com/tokenguardio/dashboard-creator-server| This delivery was limited only to a feature / changelog overview. Discussion with W3F team made it clear that next steps should be made through Decentralised Futures grant. Cost estimation for future features is obsolete in this grant. | 
