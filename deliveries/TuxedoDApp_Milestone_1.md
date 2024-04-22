@@ -2,8 +2,8 @@
 
 **The [invoice form :pencil:](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform) has been filled out correctly for this milestone and the delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/TuxedoDapp.md
-* **Milestone Number:** 1 
+* **Application Document:** <https://github.com/w3f/Grants-Program/blob/master/applications/TuxedoDapp.md>
+* **Milestone Number:** 1
 
 **Context**
 
@@ -12,7 +12,6 @@ Unlike traditional account-based systems, UTXO-based systems treat each transact
 Our goal is to showcase the potential of Polkadot using the UTXO paradigm for the end user, leveraging Tuxedo.
 
 **Deliverables**
-
 
 | Number | Deliverable | Link | Notes |
 | -----: | ----------- | ------------- | ------------- |
@@ -27,4 +26,7 @@ Our goal is to showcase the potential of Polkadot using the UTXO paradigm for th
 
 **Additional Information**
 
-Following the suggestion of Joshua Orndorff, author of Tuxedo, we focused on the integration of something existing instead of building from scratch a redundant solution. The effort was not trivial because Talisman doesn't support UTXO. However, to be sure about how the front end of the Dapp was supposed to work, we had to build extra features on the Tuxedo CLI-wallet. That effort was outside the scope of the grant, but we preferred to invest extra time and resources in this direction as well, to deeply understand and test the Tuxedo code. 
+Following the suggestion of Joshua Orndorff, author of Tuxedo, we focused on integrating something existing instead of building a redundant solution from scratch. The effort was not trivial because Talisman doesn't support UTXO. However, to be sure how the front end of the Dapp was supposed to work, we had to build extra features on the Tuxedo CLI wallet. That effort was outside the scope of the grant, but we preferred to invest the extra time and resources in this direction, to understand and test the Tuxedo code deeply. Other than the out-of-scope implementation of CLI-wallet for Kitties/Tradable kitties, we also worked on :
+
+1. Mint_coin: <https://github.com/Off-Narrative-Labs/Tuxedo/commit/80e7b5720a384907cef89e091034fff3fe0f2b7f>
+2. Metadata analysis and design/experiments: <https://github.com/Off-Narrative-Labs/Tuxedo/issues/30#issuecomment-1920539885>
