@@ -17,10 +17,10 @@ Our goal is to showcase the potential of Polkadot using the UTXO paradigm for th
 | -----: | ----------- | ------------- | ------------- |
 | **0a.** | License | [License file](https://github.com/mlabs-haskell/TuxedoDapp?tab=Apache-2.0-1-ov-file#readme) | Apache 2.0, as recommended |
 | **0b.** | Documentation | [Wiki](https://github.com/mlabs-haskell/TuxedoDapp/wiki) | Info about APIs spreadsheet, Build and run the project, DApp specification, Frontend development libs, Game design, Talisman wallet, Wireframes |
-| **0c.** | Testing and Testing Guide | link to readme? how to do so? | Tests are run in CI and instructions for running them locally are in the readme.|
-| **0d.** | Article | Link to video and [GitHub project management tool](https://github.com/orgs/mlabs-haskell/projects/57/views/1) | This video shows how to use the Talismat wallet which we integrated |
-| **0e.** | Docker | ? | anything about it? |
-| **0f.** | Web-based wallet, CLI wallet and core | [DApp repo](https://github.com/mlabs-haskell/TuxedoDapp) , [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo) | We integrated the well-known web-based wallet Talisman which was not compatible with Tuxedo nor the UTXO model |
+| **0c.** | Testing and Testing Guide | [CLI-Wallet test](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wardrobe/kitties/src/tests.rs) , [Tuxedo Template Wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wallet/README.md) | We included our tests done for the CLI-Wallet, they can be executed using the Tuxedo documentation in the README |
+| **0d.** | Article | [Demo wallet integration](https://www.loom.com/share/e1270ecea79a4689aff5732e8acfae14), [GitHub project management tool](https://github.com/orgs/mlabs-haskell/projects/57/views/1) | This video shows how to use the Talisman wallet which we integrated. The GitHub PM tool tracked the amount of work done across different developers |
+| **0e.** | Docker | [webservice-wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/webservice-wallet/Dockerfile) | For the Web wallet integration docker is not needed, however, we included the one used for the webservice |
+| **0f.** | Frontend, CLI wallet and core | [main DApp repo](https://github.com/mlabs-haskell/TuxedoDapp) , [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo) | We integrated the well-known web-based wallet Talisman which was not compatible with Tuxedo nor the UTXO model |
 
 ##
 
