@@ -45,7 +45,6 @@ jobs:
           pr_author: ${{ github.event.pull_request.user.login }}
         with: 
           script: |
-            try {
               const app_commits = await github.rest.repos.listCommits({
                 owner: 'w3f',
                 repo: 'Grants-Program',
@@ -57,4 +56,3 @@ jobs:
               if (!app_authors.includes(process.env.pr_author)) {
                 core.setFailed('PR author does not match any application author.');
               }
-            }
