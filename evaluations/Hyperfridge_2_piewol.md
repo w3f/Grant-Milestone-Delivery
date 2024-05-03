@@ -2,7 +2,7 @@
 
 
 - **Status:** in progress
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/DAOsign.md
+- **Application Document:** [Hyperfridge](https://github.com/w3f/Grants-Program/blob/master/applications/hyperfridge.md)
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by PieWol
 
