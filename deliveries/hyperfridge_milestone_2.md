@@ -29,7 +29,7 @@ provide trustless fiat rails to Polkadot asset hub.
 
 | Number | Deliverable | Specification | Assets |
 | ----- | ----------- | ------------- | ------ |
-| 0a. | License | Apache 2.0  | [Link to Licence](https://github.com/element36-io/ebics-java-client?tab=LGPL-2.1-1-ov-file) |
+| 0a. | License | Apache 2.0  | [Link to Licence](https://github.com/element36-io/ebics-java-service?tab=Apache-2.0-1-ov-file) |
 | 0b. | Documentation | We will provide both inline documentation of the code and a basic tutorial that explains how a user can start the backend and send test transactions, which will show how the new functionality works.| [Link to Documentation Root](https://github.com/element36-io/ebics-java-service?tab=readme-ov-file) |
 | 0c. | Testing Guide | Adapt unit tests of core functions and test data to ensure functionality and robustness of the overall system (bridge and proofs). In the guide, we will describe how to run these tests.  | See [Testing Guide](https://github.com/element36-io/ebics-java-service/blob/hyperfridge/docs/TEST.md#clone-repo-and-run-unit-tests).|
 | 0d. | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |[Testing Guide: "Run with Docker"](https://github.com/element36-io/ebics-java-service/blob/hyperfridge/docs/TEST.md#run-and-test-with-docker), got to "Run and test with Docker". |
