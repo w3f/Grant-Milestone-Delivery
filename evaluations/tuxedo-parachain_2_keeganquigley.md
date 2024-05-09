@@ -16,7 +16,7 @@
 
 # General Notes
 
-Docker runs successfully:
+Dev chain runs successfully. Docker runs successfully:
 
 ```sh
 CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS          PORTS     NAMES
