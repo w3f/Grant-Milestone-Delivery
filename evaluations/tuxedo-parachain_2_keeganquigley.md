@@ -2,7 +2,7 @@
 
 - **Status:** In progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/tuxedo_parachain.md
-- **Milestone:** 1
+- **Milestone:** 2
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
