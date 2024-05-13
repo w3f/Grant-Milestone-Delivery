@@ -1,19 +1,98 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_Playground.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
 | Number | Deliverable              | Accepted | Link                                                                                                                                                    | Notes                                                                                                                                                                                                                                                                                                                                                                |
 | ------ | ------------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.     | Solang Playground Client | <ul><li>[ ] </li> |
+| 0a.     | License | <ul><li>[x] </li> |
+| 0b.     | Docs | <ul><li>[x] </li> | | Okay
+| 0c.     | Testing Guide | <ul><li>[x] </li> | | Okay
+| 0d.     | Article | <ul><li>[x] </li> | | - 
+| 0e.     | Solang Playground Client | <ul><li>[x] </li> | | Works as expected.
 
 # General Notes
 
+Grantee resolved all issues. Builds and runs successfully. Web editor works w/ debugging:
+
+![web editor works](https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/58844d72-76ea-4197-981a-c26a33ccc50d)
+
+```rust
+ubuntu@ip-172-31-26-210:~/solang-playground$ cargo make run
+[cargo-make] INFO - cargo make 0.37.9
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: run
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: run
+[cargo-make] INFO - Build Done in 0.62 seconds.
+```
+
 ## Tests
 
-Compiles successfully but with a lot of warnings:
+Unit tests now passing for all crates. Some errors still occurring in `Solang` dir but these are related to the tower-lsp deps. Okay docs but inline code comments could be better.
+
+<details>
+  <summary>Output</summary>
+
+```rust
+   Compiling tower-lsp v0.20.0
+error[E0405]: cannot find trait `Decoder` in this scope
+   --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/codec.rs:165:27
+    |
+165 | impl<T: DeserializeOwned> Decoder for LanguageServerCodec<T> {
+    |                           ^^^^^^^ not found in this scope
+
+error[E0405]: cannot find trait `AsyncRead` in this scope
+  --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/transport.rs:61:8
+   |
+61 |     I: AsyncRead + Unpin,
+   |        ^^^^^^^^^ not found in this scope
+   |
+help: consider importing this trait
+   |
+13 + use futures::AsyncRead;
+   |
+
+error[E0405]: cannot find trait `AsyncWrite` in this scope
+  --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/transport.rs:62:8
+   |
+62 |     O: AsyncWrite,
+   |        ^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this trait
+   |
+13 + use futures::AsyncWrite;
+   |
+
+error[E0433]: failed to resolve: use of undeclared type `FramedRead`
+   --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/transport.rs:113:32
+    |
+113 |         let mut framed_stdin = FramedRead::new(self.stdin, LanguageServerCodec::default());
+    |                                ^^^^^^^^^^ use of undeclared type `FramedRead`
+
+error[E0433]: failed to resolve: use of undeclared type `FramedWrite`
+   --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/transport.rs:114:29
+    |
+114 |         let framed_stdout = FramedWrite::new(self.stdout, LanguageServerCodec::default());
+    |                             ^^^^^^^^^^^ use of undeclared type `FramedWrite`
+
+error[E0425]: cannot find function `to_jsonrpc_error` in this scope
+   --> /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-lsp-0.20.0/src/transport.rs:152:66
+    |
+152 |                         let res = Response::from_error(Id::Null, to_jsonrpc_error(err));
+    |                                                                  ^^^^^^^^^^^^^^^^ not found in this scope
+
+Some errors have detailed explanations: E0405, E0425, E0433.
+For more information about an error, try `rustc --explain E0405`.
+error: could not compile `tower-lsp` (lib) due to 6 previous errors
+```
+</details>
+
+~~Compiles successfully but with a lot of warnings:~~
 
 <details>
   <summary>Output:</summary>
