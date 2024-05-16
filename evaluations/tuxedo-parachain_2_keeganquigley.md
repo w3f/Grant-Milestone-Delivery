@@ -67,7 +67,7 @@ Options:
 ```
 </details>
 
-Balance comes back as 0 instead of 100, and warning about MacoOS:
+~~Balance comes back as 0 instead of 100, and warning about MacoOS:~~ UPDATE: Issue resolved.
 
 <details>
   <summary>Output</summary>
