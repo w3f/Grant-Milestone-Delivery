@@ -72,14 +72,15 @@ Options:
 <details>
   <summary>Output</summary>
 
-```
-WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
-[2024-05-09T15:19:59Z INFO  tuxedo_template_wallet::sync] Initializing fresh sync from genesis 0x3a16225d2acfce0a9524a029f139c1eb0d0377ddacc253efdba0e8074b151093
-[2024-05-09T15:19:59Z INFO  tuxedo_template_wallet] Number of blocks in the db: 0
-[2024-05-09T15:19:59Z INFO  tuxedo_template_wallet] Wallet database synchronized with node to height 102
+```rust
+ubuntu@ip-172-31-22-134:~$ docker run --network host ghcr.io/off-narrative-labs/tuxedo-wallet:main --dev show-balance
+[2024-05-20T22:20:17Z INFO  tuxedo_template_wallet::sync] Initializing fresh sync from genesis 0x3a16225d2acfce0a9524a029f139c1eb0d0377ddacc253efdba0e8074b151093
+[2024-05-20T22:20:17Z INFO  tuxedo_template_wallet] Number of blocks in the db: 0
 Balance Summary
+0xd2bf…df67: 100
 --------------------
-total      : 0
+total      : 100
+[2024-05-20T22:20:17Z INFO  tuxedo_template_wallet] Wallet database synchronized with node to height 28
 ```
 </details>
 
