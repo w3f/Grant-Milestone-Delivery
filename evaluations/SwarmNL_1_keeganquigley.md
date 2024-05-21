@@ -1,5 +1,96 @@
 # General Notes
 
+## Demos
+
+`Echo_server` works with 1 warning:
+```rust
+warning: type `EchoServer` is more private than the item `setup_node`
+  --> src/main.rs:31:1
+   |
+31 | pub async fn setup_node(ports: (Port, Port)) -> Core<EchoServer> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ function `setup_node` is reachable at visibility `pub`
+   |
+note: but type `EchoServer` is only usable at visibility `pub(crate)`
+  --> src/main.rs:14:1
+   |
+14 | struct EchoServer;
+   | ^^^^^^^^^^^^^^^^^
+   = note: `#[warn(private_interfaces)]` on by default
+
+warning: `echo_server` (bin "echo_server") generated 1 warning
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 20s
+     Running `target/debug/echo_server`
+Welcome to the Echo-Server SwarmNl example.
+Type into the terminal and watch it get echoed back to you.
+Enter your input (Ctrl+D to end):
+52ten
+--> 52ten
+```
+
+Node panics successfully after timeout:
+```rust
+We're listening on the /ip4/172.17.0.1/udp/49606/quic-v1
+[1] >>>> Writing file location to DHT: config_file
+thread 'main' panicked at src/main.rs:195:43:
+called `Result::unwrap()` on an `Err` value: KadStoreRecordError([99, 111, 110, 102, 105, 103, 95, 102, 105, 108, 101])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+
+`file_sharing_app` works succesfully:
+
+```rust
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/127.0.0.1/tcp/49666
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/172.31.30.147/tcp/49666
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/172.17.0.1/tcp/49666
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/127.0.0.1/udp/49606/quic-v1
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/172.31.30.147/udp/49606/quic-v1
+Peer id: 12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu
+We're listening on the /ip4/172.17.0.1/udp/49606/quic-v1
+Connection established with peer: PeerId("12D3KooWS8jmLE1Fbh82FER3kZ4iNQWy5aq8BZ7WgqD7ZpHmDaVs")
+[1] >>>> Writing file location to DHT: config_file
+Record successfully written to DHT. Key: [99, 111, 110, 102, 105, 103, 95, 102, 105, 108, 101]
+Received incoming RPC: [[98, 111, 111, 116, 115, 116, 114, 97, 112, 95, 99, 111, 110, 102, 105, 103, 46, 105, 110, 105]]
+File read successfully: bootstrap_config.ini
+```
+```rust
+[2] >>>> File read from DHT: bootstrap_config.ini
+[2] >>>> A fetch request has been sent to peer: PeerId("12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu")
+[2] >>>> Here is the file delivered from the remote peer:
+
+; Copyright (c) 2024 Algorealm
+; A typical template showing the various configurations for bootstraping a node
+
+; If this section is missing, the default ports will be used upon node setup
+[ports]
+; TCP/IP port to listen on
+tcp=3000
+; UDP port to listen on
+udp=4000
+
+; This section is for the node's identity and cryptographic keypair
+; If this section is missing, a Ed25519 keypair will be generated upon node setup
+[auth]
+; Type of keypair to generate for node identity and message auth e.g RSA, EDSA, Ed25519
+crypto=Ed25519
+; The protobuf serialized format of the node's cryptographic keypair
+protobuf_keypair=[]
+
+[bootstrap]
+; The boostrap nodes to connect to immediately after start up
+boot_nodes=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq:/ip4/x.x.x.x/tcp/1509, QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt:/ip4/x.x.x.x/tcp/1509]
+
+[blacklist]
+; The list of blacklisted peers we don't want to have anything to do with
+blacklist=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq, QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt]
+```
+
+## Testing
+
 Node behavior tests pass:
 ```rust
 running 5 tests
