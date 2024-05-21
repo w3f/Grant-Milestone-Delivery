@@ -89,6 +89,53 @@ boot_nodes=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq:/ip4/x.x.x.x/tc
 blacklist=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq, QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt]
 ```
 
+`simple_test` works successfully:
+
+```rust
+[[Node 1]] >> Peer PeerId("12D3KooWJvEyRcFnhwyRuMSt6nLVs1fnv8gHULRRNBJoBCkqbPYx") just joined the mesh network for topic: game_group
+[[Node 1]] >> incoming data from peer -> guess: 10
+[[Node 1]] >> Node (1) score: 0
+[[Node 1]] >> incoming data from peer -> guess: 2
+[[Node 1]] >> Node (1) score: 1
+[[Node 1]] >> incoming data from peer -> guess: 8
+[[Node 1]] >> Node (1) score: 2
+[[Node 1]] >> incoming data from peer -> guess: 8
+[[Node 1]] >> Node (1) score: 2
+[[Node 1]] >> incoming data from peer -> guess: 3
+[[Node 1]] >> Node (1) score: 3
+[[Node 1]] >> incoming data from peer -> guess: 6
+[[Node 1]] >> Node (1) score: 3
+[[Node 1]] >> incoming data from peer -> guess: 1
+[[Node 1]] >> Node (1) score: 3
+[[Node 1]] >> incoming data from peer -> guess: 5
+[[Node 1]] >> Node (1) score: 4
+[[Node 1]] >> incoming data from peer -> guess: 2
+[[Node 1]] >> Congratulations! Node 1 is the winner.
+[[Node 1]] >> incoming data from peer -> guess: 10
+ubuntu@ip-172-31-30-147:~/SwarmNL/tutorials/simple_game$
+```
+```rust
+[[Node 2]] >> Peer PeerId("12D3KooWCHqiBVTsUDy4ZtcV2Ds7rxt2HGuaT5dHTKskw68Y8AWu") just joined the mesh network for topic: game_group
+[[Node 2]] >> incoming data from peer -> guess: 5
+[[Node 2]] >> Node (2) score: 0
+[[Node 2]] >> Message dropped, remote guess: 19
+[[Node 2]] >> Message dropped, remote guess: 15
+[[Node 2]] >> incoming data from peer -> guess: 4
+[[Node 2]] >> Node (2) score: 1
+[[Node 2]] >> Message dropped, remote guess: 14
+[[Node 2]] >> incoming data from peer -> guess: 6
+[[Node 2]] >> Node (2) score: 1
+[[Node 2]] >> incoming data from peer -> guess: 1
+[[Node 2]] >> Node (2) score: 2
+[[Node 2]] >> Message dropped, remote guess: 20
+[[Node 2]] >> Message dropped, remote guess: 13
+[[Node 2]] >> incoming data from peer -> guess: 10
+[[Node 2]] >> Node (2) score: 2
+[[Node 2]] >> incoming data from peer -> win: 10
+[[Node 2]] >> Game Over! Node 1 is the winner.
+ubuntu@ip-172-31-30-147:~/SwarmNL/tutorials/simple_game$
+```
+
 ## Testing
 
 Node behavior tests pass:
