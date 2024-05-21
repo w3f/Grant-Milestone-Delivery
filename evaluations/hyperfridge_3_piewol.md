@@ -23,6 +23,30 @@
 ## unit tests
 <details>
 <summary> unit test output </summary>
-todo
-```
+
+    running 15 tests
+    test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+    test tests::should_fail_to_update_api_url_non_sudo ... ok
+    test tests::set_risc0_image_id ... ok
+    test tests::process_statements_is_permissioned ... ok
+    May 21 15:22:28.274 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    May 21 15:22:28.274 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    May 21 15:22:28.274 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    test tests::test_iban_mapping ... ok
+    test utils::test_unpeg_request ... ok
+    test tests::should_make_http_call_and_parse ... ok
+    May 21 15:22:28.331 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    May 21 15:22:28.331 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    May 21 15:22:28.331 ERROR runtime::timestamp: `pallet_timestamp::UnixTime::now` is called at genesis, invalid value returned: 0    
+    test tests::test_burn_request ... ok
+    test tests::test_queue_empty_statement ... ok
+    test tests::test_queue_invalid_transactions ... ok
+    test tests::test_queue_incoming_transactions ... ok
+    test tests::test_queue_outgoing_transactions ... ok
+    test tests::test_queue_multiple_statements_outgoing ... ok
+    test tests::test_queue_multiple_statements ... ok
+    test tests::test_verify_queued_statements_works ... ok
+
+    test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.42s 
+
 </details>
