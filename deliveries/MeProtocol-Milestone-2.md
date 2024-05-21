@@ -5,7 +5,7 @@
 * **Application Document:** [MeProtocol Application Document](https://github.com/w3f/Grants-Program/blob/master/applications/MeProtocol.md)
 * **Milestone Number:** 2
 
-**Context** (optional)
+**Context**
 The Me Protocol is a purpose-built exchange infrastructure for blockchain-based rewards. It provides the fundamental technology for the creation of a frictionless, limitless, and decentralised rewards ecosystem for all companies, large or small, to participate.
 
 **Deliverables**
