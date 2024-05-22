@@ -15,6 +15,8 @@
 
 # General Notes
 
+Everything worked out of the box. Very clean code with great inline comments, great documentation & testing, good coverage, and the example demos are very helpful to see how everything works. Nice work!
+
 ## Demos
 
 For all tutorials, Docker complains about not having a Cargo.lock file when run independently of cargo:
