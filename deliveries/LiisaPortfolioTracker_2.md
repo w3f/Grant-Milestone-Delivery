@@ -16,7 +16,6 @@
 | 0b.    | Documentation             |  [README](https://github.com/LiisaNFT/PolkadotNFTPortfolioTracker/blob/30be68d4894d9f09262296e2986f18eb11a6f2c4/README.md) | ... |
 | 0c.    | Testing Guide             |  [README](https://github.com/LiisaNFT/PolkadotNFTPortfolioTracker/blob/19a8574c491af2a682226618a204a30dbd1f5497/README.md#getting-started) | ... |
 | 0d.    | Docker |  [Dockerfile](https://github.com/LiisaNFT/PolkadotNFTPortfolioTracker/blob/30be68d4894d9f09262296e2986f18eb11a6f2c4/multichain-indexer/Dockerfile)| ...|
-
 | 0e.    | Article |  (https://medium.com/@liisanft/introducing-liisas-multi-chain-portfolio-tracker-on-polkadot-5aeaaa334d88)| ...|
 | 1a. | Bubble.io wallet plugins |  (https://bubble.io/contributor/1556362159556x895666664689713800)| ...|
 | 1b. | Wallet address transmission |  [app](https://github.com/LiisaNFT/PolkadotNFTPortfolioTracker/blob/main/frontend/src/App.js)| ...|
