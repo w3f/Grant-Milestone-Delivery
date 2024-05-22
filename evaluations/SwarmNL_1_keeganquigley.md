@@ -17,6 +17,41 @@
 
 ## Demos
 
+For all tutorials, Docker complains about not having a Cargo.lock file when run independently of cargo:
+
+<details>
+  <summary>Error Output</summary>
+
+```
+ubuntu@ip-172-31-26-100:~/SwarmNL/tutorials/echo_server$ docker build -t echo-server .
+[+] Building 1.2s (7/9)                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 382B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/rust:latest                                                                                      0.7s
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => CACHED [1/5] FROM docker.io/library/rust:latest@sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5                         0.0s
+ => [internal] load build context                                                                                                                   0.4s
+ => => transferring context: 6.40kB                                                                                                                 0.4s
+ => [2/5] WORKDIR /usr/src/swarmnl-echo-server                                                                                                      0.0s
+ => ERROR [3/5] COPY Cargo.toml Cargo.lock ./                                                                                                       0.0s
+------
+ > [3/5] COPY Cargo.toml Cargo.lock ./:
+------
+Dockerfile:8
+--------------------
+   6 |     
+   7 |     # Copy the Cargo.toml and Cargo.lock files to leverage Docker cache
+   8 | >>> COPY Cargo.toml Cargo.lock ./
+   9 |     COPY . .
+  10 |     
+--------------------
+ERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref 4b785416-72dd-423f-8121-7cae594f4729::t7ulpy81tww0dom36u49v40xf: "/Cargo.lock": not found
+```
+</details>
+
+I have to compile the tutorial first and then it will run successfully. Perhaps this could be optimized.
+
 `Echo_server` works with 1 warning:
 ```rust
 warning: type `EchoServer` is more private than the item `setup_node`
@@ -49,6 +84,27 @@ We're listening on the /ip4/172.17.0.1/udp/49606/quic-v1
 thread 'main' panicked at src/main.rs:195:43:
 called `Result::unwrap()` on an `Err` value: KadStoreRecordError([99, 111, 110, 102, 105, 103, 95, 102, 105, 108, 101])
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+
+Docker builds and runs successfully:
+```ts
+[+] Building 131.0s (10/10) FINISHED                                                                                                      docker:default
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 382B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/rust:latest                                                                                      0.4s
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [1/5] FROM docker.io/library/rust:latest@sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5                                0.0s
+ => [internal] load build context                                                                                                                   8.8s
+ => => transferring context: 1.39GB                                                                                                                 8.8s
+ => CACHED [2/5] WORKDIR /usr/src/swarmnl-echo-server                                                                                               0.0s
+ => [3/5] COPY Cargo.toml Cargo.lock ./                                                                                                            10.0s
+ => [4/5] COPY . .                                                                                                                                 11.8s
+ => [5/5] RUN cargo build                                                                                                                          89.2s
+ => exporting to image                                                                                                                             10.6s 
+ => => exporting layers                                                                                                                            10.6s 
+ => => writing image sha256:a225b1faefbb38d0e886e2084a5eba96e26738ecf977b0460f2a476c3cb979ce                                                        0.0s 
+ => => naming to docker.io/library/echo-server
 ```
 
 `file_sharing_app` works succesfully:
@@ -104,6 +160,28 @@ boot_nodes=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq:/ip4/x.x.x.x/tc
 blacklist=[12D3KooWGfbL6ZNGWqS11MoptH2A7DB1DG6u85FhXBUPXPVkVVRq, QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt]
 ```
 
+Docker builds and runs successfully:
+```ts
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 470B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/rust:latest                                                                                      0.6s
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [1/7] FROM docker.io/library/rust:latest@sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5                                0.0s
+ => [internal] load build context                                                                                                                   0.2s
+ => => transferring context: 333.69kB                                                                                                               0.1s
+ => CACHED [2/7] WORKDIR /usr/src/swarmnl-file-sharing-demo                                                                                         0.0s
+ => CACHED [3/7] COPY Cargo.toml Cargo.lock ./                                                                                                      0.0s
+ => CACHED [4/7] COPY . .                                                                                                                           0.0s
+ => CACHED [5/7] RUN cargo build --release                                                                                                          0.0s
+ => CACHED [6/7] COPY run_both_nodes.sh .                                                                                                           0.0s
+ => CACHED [7/7] RUN chmod +x run_both_nodes.sh                                                                                                     0.0s
+ => exporting to image                                                                                                                              0.0s
+ => => exporting layers                                                                                                                             0.0s
+ => => writing image sha256:61785ca3ef7e44ddae1180e43cf97b1060e3723fd8695e25ac0f5ac44757bdf6                                                        0.0s
+ => => naming to docker.io/library/file-sharing-demo 
+```
+
 `simple_test` works successfully:
 
 ```rust
@@ -149,6 +227,41 @@ ubuntu@ip-172-31-30-147:~/SwarmNL/tutorials/simple_game$
 [[Node 2]] >> incoming data from peer -> win: 10
 [[Node 2]] >> Game Over! Node 1 is the winner.
 ubuntu@ip-172-31-30-147:~/SwarmNL/tutorials/simple_game$
+```
+Runs on Docker as well:
+```sh
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 469B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/rust:latest                                                                                      0.7s
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [1/7] FROM docker.io/library/rust:latest@sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5                               29.9s
+ => => resolve docker.io/library/rust:latest@sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5                                0.0s
+ => => sha256:c6cf28de8a067787ee0d08f8b01d7f1566a508b56f6e549687b41dfd375f12c7 49.58MB / 49.58MB                                                    2.0s
+ => => sha256:5907e96b0293eb53bcc8f09b4883d71449808af289862950ede9a0e3cca44ff5 7.75kB / 7.75kB                                                      0.0s
+ => => sha256:653bd24b9a8f9800c67df55fea5637a97152153fd744a4ef78dd41f7ddc40144 1.94kB / 1.94kB                                                      0.0s
+ => => sha256:79cde1389f0f961fd6d2b324077ecb41b6f68b8db483f698581cb36465f64da5 4.33kB / 4.33kB                                                      0.0s
+ => => sha256:891494355808bdd3db5552f0d3723fd0fa826675f774853796fafa221d850d42 24.05MB / 24.05MB                                                    2.6s
+ => => sha256:6582c62583ef22717db8d306b1d6a0c288089ff607d9c0d2d81c4f8973cbfee3 64.14MB / 64.14MB                                                    4.0s
+ => => extracting sha256:c6cf28de8a067787ee0d08f8b01d7f1566a508b56f6e549687b41dfd375f12c7                                                           4.2s
+ => => sha256:63d588af17b3d24f31c833a1afc581f37c1459eafeaad3061d75e81455638b7d 177.59MB / 177.59MB                                                  7.9s
+ => => sha256:bf2c3e352f3d2eed4eda4feeed44a1022a881058df20ac0584db70c138b041e2 211.21MB / 211.21MB                                                 12.5s
+ => => extracting sha256:891494355808bdd3db5552f0d3723fd0fa826675f774853796fafa221d850d42                                                           1.0s
+ => => extracting sha256:6582c62583ef22717db8d306b1d6a0c288089ff607d9c0d2d81c4f8973cbfee3                                                           4.2s
+ => => extracting sha256:bf2c3e352f3d2eed4eda4feeed44a1022a881058df20ac0584db70c138b041e2                                                           7.3s
+ => => extracting sha256:63d588af17b3d24f31c833a1afc581f37c1459eafeaad3061d75e81455638b7d                                                           3.4s
+ => [internal] load build context                                                                                                                  15.4s
+ => => transferring context: 1.73GB                                                                                                                14.8s
+ => [2/7] WORKDIR /usr/src/swarmnl-simple-game-demo                                                                                                38.4s
+ => [3/7] COPY Cargo.toml Cargo.lock ./                                                                                                             0.1s
+ => [4/7] COPY . .                                                                                                                                 26.9s
+ => [5/7] RUN cargo build --release                                                                                                               129.3s
+ => [6/7] COPY run_both_nodes.sh .                                                                                                                  0.1s 
+ => [7/7] RUN chmod +x run_both_nodes.sh                                                                                                            0.3s 
+ => exporting to image                                                                                                                              8.9s 
+ => => exporting layers                                                                                                                             8.8s
+ => => writing image sha256:f615c7fc10c656dd44ce738ed1a4d165bebd5bedf3da816cc2d17124471d537e                                                        0.0s
+ => => naming to docker.io/library/simple-game-demo
 ```
 
 ## Testing
