@@ -1,17 +1,17 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/swarm-nl.md
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Notes |
 | -----: | ----------- | ------------- | ------------- | ------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [Apache 2.0](https://github.com/algorealmInc/SwarmNL/blob/main/LICENSE) | |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | [Rust docs](https://algorealminc.github.io/SwarmNL/swarm_nl/index.html), [Examples and tutorials of demo apps](https://github.com/algorealmInc/SwarmNL/tree/main/tutorials) and [Generic examples of how to integrate SwarmNl](https://algorealminc.github.io/SwarmNL/swarm_nl/index.html#features-and-examples) |  |
-| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Testing guide](https://algorealminc.github.io/SwarmNL/swarm_nl/testing_guide/index.html) |  |
-| **0d.** | Docker files | <ul><li>[ ] </li></ul> | [Echo server Docker file](https://github.com/algorealmInc/SwarmNL/blob/main/tutorials/echo_server/Dockerfile), [File sharing app Docker file](https://github.com/algorealmInc/SwarmNL/blob/main/tutorials/file_sharing_app/Dockerfile) and [Simple game demo](https://github.com/algorealmInc/SwarmNL/tree/main/tutorials/simple_game) |  |
-| 1. | SwarmNL configuration module | <ul><li>[ ] </li></ul> | [Setup module](https://github.com/algorealmInc/SwarmNL/blob/main/swarm_nl/src/setup.rs) |  |
-| 2. | Gossipsub | <ul><li>[ ] </li></ul> | [Core module](https://github.com/algorealmInc/SwarmNL/blob/main/swarm_nl/src/core/mod.rs) |  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [Rust docs](https://algorealminc.github.io/SwarmNL/swarm_nl/index.html), [Examples and tutorials of demo apps](https://github.com/algorealmInc/SwarmNL/tree/main/tutorials) and [Generic examples of how to integrate SwarmNl](https://algorealminc.github.io/SwarmNL/swarm_nl/index.html#features-and-examples) | Great docs. |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Testing guide](https://algorealminc.github.io/SwarmNL/swarm_nl/testing_guide/index.html) | Very clean & thorough testing guides. |
+| **0d.** | Docker files | <ul><li>[x] </li></ul> | [Echo server Docker file](https://github.com/algorealmInc/SwarmNL/blob/main/tutorials/echo_server/Dockerfile), [File sharing app Docker file](https://github.com/algorealmInc/SwarmNL/blob/main/tutorials/file_sharing_app/Dockerfile) and [Simple game demo](https://github.com/algorealmInc/SwarmNL/tree/main/tutorials/simple_game) | Works, see notes. |
+| 1. | SwarmNL configuration module | <ul><li>[x] </li></ul> | [Setup module](https://github.com/algorealmInc/SwarmNL/blob/main/swarm_nl/src/setup.rs) | Works |
+| 2. | Gossipsub | <ul><li>[x] </li></ul> | [Core module](https://github.com/algorealmInc/SwarmNL/blob/main/swarm_nl/src/core/mod.rs) | Works |
 
 # General Notes
 
