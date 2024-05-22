@@ -14,7 +14,29 @@
 | *0d.* | Docker | <ul><li>[x] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1/.docker / https://github.com/inkscopexyz/inkscope-fuzzer/blob/v0.0.1/book/src/installation.md#using-inkscope-fuzzer-with-docker |  |
 | *0e.* | Article | <ul><li>[x] </li></ul>| https://blog.inkscope.xyz/inkscope-ink-fuzzer | |
 | 1. | Mutation Engine | <ul><li>[ ] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 | Couldn't run some examples |
-| 2. | Fuzzer | <ul><li>[ ] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 | Couldn't run some examples. It should generate a file with the results? |
+| 2. | Fuzzer | <ul><li>[ ] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 | Couldn't run some examples. I didn't fully understand the output file. |
+
+## Evaluation V2
+
+### Output file
+
+I was able to generate the output fine. However, I didn't fully understand the file. I think it could be more human-readable or have a tutorial teaching how to debug and reproduce the error using the output file. The output generated was similar to the [example](https://github.com/inkscopexyz/inkscope-fuzzer/tree/da5f097e151e64cdc4b00ce652016225b1241389?tab=readme-ov-file#-how-to-run-the-fuzzer) on the readme.
+
+### Manual Test
+
+The changes fixed the building problem. However, I'm having trouble running the inkscope-fuzzer on the coinfabrik contracts from the `assert-violation` and `iterators-over-indexing` cases. In both examples, I received the error below.
+
+```
+user@localhost:~/Documents/w3f/inkscope-fuzzer/test-contracts/coinfabrik-test-contracts/assert-violation/remediated-example$ inkscope-fuzzer target/ink/assert_violation.contract
+Starting campaign...
+Seed: 0
+Properties found: 0
+Max iterations: 1000
+Fail fast: false
+thread 'main' panicked at src/engine.rs:1025:66:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
 
 ## Evaluation V1
 
