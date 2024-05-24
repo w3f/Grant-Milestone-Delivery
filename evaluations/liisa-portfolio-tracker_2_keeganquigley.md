@@ -46,6 +46,10 @@ src/components/Collections/CollectionItem.js
 webpack compiled with 1 warning
 ```
 
+<img width="1433" alt="liisa1" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/500d7a8c-dcdd-4f02-a406-99b9c4450a6f">
+
+<img width="1433" alt="liisa2" src="https://github.com/w3f/Grant-Milestone-Delivery/assets/35080151/15fb7dff-e263-4d57-8bd0-7ffd7f55c3ae">
+
 ## Backend
 
 Docker image builds successfully:
