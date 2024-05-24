@@ -17,14 +17,11 @@
 | 3. | Unit Tests | <ul><li>[x] </li></ul> | [Unit Tests](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/tests.rs)| all passing|
 
 ## General Notes
-Sadly the following the testing guide I'm currently running into an error. Please check the remaining notes and try to provide me with a fix. Thanks!
+I appreciate it that you are including specific links to the tools used within your testing guide. E.g. the polkadot-js link which is already specific to the local chain aswell as the api site for ebics-service.
 
-In the documentation you are describing "You can run the development node with temporary storage:[...]" but the commands that follow are the exact same as in the previous code snippet. So I assume one snippet contains wrong commands for launching the node. Please give this a check. It would also be good if you were to split up the docker tutorial section to not alternate between mac and linux commands. Seperating those in individual code snippets would be helpful. 
 
 ## Testing Guide
-Would be nice to add the hint that when pasting the imageID into polkadot.js you need to add a "0x" in front.
-
-It should also be noted that the account you are inserting with the rpc call and the account used afterwards to submit the extrinsic to set the imageID is not the same account. Using both the regular "Alice" account and the other "Alice" account used in your documentation are getting the "BadOrigin" error when trying to submit the extrinsic for the ``setRisc0ImageId``. 
+Thanks for the updates so far. Sadly I'm getting stuck at the point where I try to mint stablecoins on Alice's account. 
 
 
 
