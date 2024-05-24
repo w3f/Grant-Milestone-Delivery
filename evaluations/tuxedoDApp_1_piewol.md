@@ -16,8 +16,9 @@
 
 
 ## General Notes
-
 Great job with the Talisman integration. I think this is a must have for a Tuxedo dApp to be adopted by users of the ecosystem.
+
+Why was it necessary to have the webservice and the dApp as two distinct entities? Couldn't the webservice have been included in the dApp so that I need less entities for a fully functioning product? Looking forward to your thoughts on this. I'm asking out of interest and this is not a request for you to change it. Thanks :)
 
 ## Testing
 In your dApp readme you are listing a bunch of npm commands but not ``npm install`` which should be the first command to even allow the others to run. 
@@ -56,6 +57,10 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 npm ERR! 
 ```
 
+Also the tests of the webservice are partly failing on the ``main`` branch
+```
+test result: FAILED. 8 passed; 22 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.32s
+```
 
 ## Documentation 
 The API documentation is currently in an excel spreadsheet which makes for a very cluttered look. Not that this is your fault but excel doesn't seem to be a great tool for API documentation and management. I recently saw grantees deliver api related documentation with ``SwaggerHub``. I recommend you check this out. Please let me know if this tool doesn't suit your project. 
