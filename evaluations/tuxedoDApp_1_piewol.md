@@ -8,49 +8,53 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [License file](https://github.com/mlabs-haskell/TuxedoDapp?tab=Apache-2.0-1-ov-file#readme)  | Apache 2.0 |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul> |[Wiki](https://github.com/mlabs-haskell/TuxedoDapp/wiki) | See notes |
+| **0b.** | Documentation | <ul><li>[ ] </li></ul> |[README](https://github.com/mlabs-haskell/TuxedoDapp/blob/master/README.md), [Demo wallet integration](https://www.loom.com/share/e1270ecea79a4689aff5732e8acfae14), [CLI-wallet - Demo part 1/3](https://youtu.be/Mom3BV_HozY), [CLI-wallet - Demo  part 2/3](https://youtu.be/GfyiBW1XFW0), [CLI-wallet - Demo part 3/3](https://youtu.be/1T2oE0bfaCQ), [APIs spreadsheet](https://github.com/mlabs-haskell/TuxedoDapp/wiki/APIs-spreadsheet), [Build and run the project](https://github.com/mlabs-haskell/TuxedoDapp/wiki/Build-and-run-the-project), [Frontend development libs](https://github.com/mlabs-haskell/TuxedoDapp/wiki/Frontend-development-libs), [Game design](https://github.com/mlabs-haskell/TuxedoDapp/wiki/Game-design),  [Wireframes](https://github.com/mlabs-haskell/TuxedoDapp/wiki/Wireframes), [GitHub project management tool](https://github.com/orgs/mlabs-haskell/projects/57/views/1)| See notes |
 | **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [CLI-Wallet test](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wardrobe/kitties/src/tests.rs) , [Tuxedo Template Wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wallet/README.md) | — |
-| **0d.** | Article | <ul><li>[ ] </li></ul> | [Demo wallet integration](https://www.loom.com/share/e1270ecea79a4689aff5732e8acfae14), [GitHub project management tool](https://github.com/orgs/mlabs-haskell/projects/57/views/1)  |  See notes  |
+| **0d.** | Article | <ul><li>[ ] </li></ul> | [Tuxedo DApp specification](https://docs.google.com/document/d/1dHsb_k3Xo5f4yFx802sMe22z6NYq3FeZc9l4bB0exMk/edit), [Talisman integration design](https://docs.google.com/presentation/d/1vsfJ5TYPXcvF4vmY7fHfM25lcNmZdjh6YfUyyoOzVAw/edit) |  |
 | **0e.** | Docker | <ul><li>[ ] </li></ul> | [webservice-wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/webservice-wallet/Dockerfile)  | See notes |
-| **0f.** | Frontend, CLI wallet and core | <ul><li>[ ] </li></ul> | [main DApp repo](https://github.com/mlabs-haskell/TuxedoDapp) , [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo)  | please put up amendment PR to keep deliverables consistent. See general notes! |
+| **0f.** | Frontend, CLI wallet and core | <ul><li>[ ] </li></ul> | [main DApp repo](https://github.com/mlabs-haskell/TuxedoDapp), [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo)  |  |
 
 
 ## General Notes
 
 Great job with the Talisman integration. I think this is a must have for a Tuxedo dApp to be adopted by users of the ecosystem.
 
-I see that you have deviated in the ``0f`` deliverable from the one in your application. Is it correct that you have, instead of creating your own web-based wallet, integrated Talisman to be usable for Tuxedo and your dApp? If so, please put up an amendment PR to your original application and clarify these points. I think it is a good change to make Talisman work. Just make sure that you keep your deliverables from your application and your actual milestone delivery in check. So please put up an amendment PR that states that there is no self-made web-based wallet. 
+## Testing
+In your dApp readme you are listing a bunch of npm commands but not ``npm install`` which should be the first command to even allow the others to run. 
 
-Please adjust some links of this milestone to better fit the original application and its specifications for the deliverables. Right now the wallet readme isn't even mentioned in the documentation deliverable. Even though I think this is the key documentation for this milestone.
-
-
+When running ``npm install`` I get the following error. Which node version would I need to use so that this works?
+```
+npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @talisman-connect/ui@1.1.1
+npm ERR! Found: react@18.2.0
+npm ERR! node_modules/react
+npm ERR!   react@"^18.2.0" from the root project
+npm ERR!   peer react@">=18" from @chakra-ui/accordion@2.3.1
+npm ERR!   node_modules/@chakra-ui/accordion
+npm ERR!     @chakra-ui/accordion@"2.3.1" from @chakra-ui/react@2.8.2
+npm ERR!     node_modules/@chakra-ui/react
+npm ERR!       @chakra-ui/react@"^2.8.2" from the root project
+npm ERR!   99 more (@chakra-ui/alert, @chakra-ui/avatar, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer react@"17.0.2" from @talisman-connect/ui@1.1.1
+npm ERR! node_modules/@talisman-connect/ui
+npm ERR!   @talisman-connect/ui@"^1.1.1" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: react@17.0.2
+npm ERR! node_modules/react
+npm ERR!   peer react@"17.0.2" from @talisman-connect/ui@1.1.1
+npm ERR!   node_modules/@talisman-connect/ui
+npm ERR!     @talisman-connect/ui@"^1.1.1" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+```
 
 
 ## Documentation 
-The demo for showcasing the Talisman wallet compatibility seems cut short. In the readme only a 4 second clip is visible.
-
-Furthermore this was is specification of the documentation deliverable in your application:
-
-"We will provide [...] a basic tutorial that explains how a user can use the web wallet app for Tuxedo (Private key configuration, local URI to be used to connect to blockchain) and send test transactions, tuxedo balance, which will show how the new functionality works."
-
-Is this all covered by the readme within the wallet directory?
-
-
-## Article
-
-"We will publish an article/workshop that explains how to use the web-based wallet which can be used to configure the user's private key and also get the information from the tuxedo based blockchain, how to do the transactions based on UTXO instead of account-based blockchain."
-
-Was listed as the specification for this deliverable. Yet in the milestone delivery you are linking to a little showcase video that walks through a offer creation and buying process. No info on private key configuration or how information from the chain is retrieved. It's just a video of a frontend usage.
-
-Is there no written article at all? This is usually a deliverable aimed at providing content for the community of this ecosystem to be made aware of your project and give them an easy to understand introduction. Your kanban-style github issue history is not really hitting the spot for this deliverable.
-
-Especially interesting could be a written article that covers your changes to Talisman to be Tuxedo compatible on a high level.
-
-## Docker
-In the docker delivery you gave the following description:
-
- "For the Web wallet integration docker is not needed, however, we included the one used for the webservice"
-
- This confuses me a lot. Is the "web wallet integration" the Talisman integration? If so please just call it Talisman integration. I think this is far less confusing. Furthermore what exactly are you referring to by "webservice"? Is this supposed to be your dApp?
-
-Is this dockerfile shipped so that I can test the CLI wallet within the container? Or is there some other purpose to it?
