@@ -19,6 +19,35 @@
 
 # General Notes
 
+## Frontend
+
+Frontend compiles successfully:
+
+```ts
+Compiled with warnings.
+
+[eslint]
+src/App.js
+  Line 37:13:  'unsubscribe' is assigned a value but never used  no-unused-vars
+
+src/components/Collections/CollectionItem.js
+  Line 13:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src/App.js
+  Line 37:13:  'unsubscribe' is assigned a value but never used  no-unused-vars
+
+src/components/Collections/CollectionItem.js
+  Line 13:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+webpack compiled with 1 warning
+```
+
+## Backend
+
 Docker image builds successfully:
 
 ```ts
