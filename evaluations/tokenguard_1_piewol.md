@@ -15,7 +15,7 @@
 | 0b  | Documentation |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/README.md |good|
 | 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/TESTING| great testing guide |
 | 0d | Dockerfile |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/Dockerfile | works |
-| 1 | Metrics Visualization |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ | |
+| 1 | Metrics Visualization |<ul><li>[] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ | Looks like there is only bar and linechart available. How can I configure a pie chart? |
 | 2 | Dashboard Layout |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ |  |
 | 3 | Metric Catalogue |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ | thanks for making this testable |
 
