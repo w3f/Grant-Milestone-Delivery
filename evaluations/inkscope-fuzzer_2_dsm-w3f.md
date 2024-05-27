@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/inkscope-fuzzer.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -13,8 +13,84 @@
 | *0c.* | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1/src/tests / https://github.com/inkscopexyz/inkscope-fuzzer/blob/v0.0.1/README.md#%EF%B8%8F-testing | |
 | *0d.* | Docker | <ul><li>[x] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1/.docker / https://github.com/inkscopexyz/inkscope-fuzzer/blob/v0.0.1/book/src/installation.md#using-inkscope-fuzzer-with-docker |  |
 | *0e.* | Article | <ul><li>[x] </li></ul>| https://blog.inkscope.xyz/inkscope-ink-fuzzer | |
-| 1. | Mutation Engine | <ul><li>[ ] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 | Couldn't run some examples |
-| 2. | Fuzzer | <ul><li>[ ] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 | Couldn't run some examples. I didn't fully understand the output file. |
+| 1. | Mutation Engine | <ul><li>[x] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 |  |
+| 2. | Fuzzer | <ul><li>[x] </li></ul>| https://github.com/inkscopexyz/inkscope-fuzzer/tree/v0.0.1 |  |
+
+## Evaluation V3
+
+### Documentation
+
+The instructions on [inkscopexyz.github.io](https://inkscopexyz.github.io/inkscope-fuzzer/overview.html) need to be updated to reflect the command changes.
+
+### Output File
+
+Now the output file can generate more readable text when fuzzing a contract. Here are two examples and the example on the [readme](https://github.com/inkscopexyz/inkscope-fuzzer/blob/9d4a388d5c021251556fa7344cf4e6e948c3c0ac/README.md)
+
+```
+user@localhost:~/Documents/w3f/inkscope-fuzzer/test-contracts/coinfabrik-test-contracts/zero-or-test-address/vulnerable-example$ inkscope-fuzzer ./target/ink/zerocheck.contract execute ./results/my_failed_traces.json
+Executing contract: "./target/ink/zerocheck.contract"
+Using input: "./results/my_failed_traces.json"
+Executing failed trace 0
+  Message0: new()
+  Message1: modify_admin(Literal("5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM"))
+  Property: inkscope_zero_check()
+
+
+
+user@localhost:~/Documents/w3f/inkscope-fuzzer/test-contracts/constructor-panics$  inkscope-fuzzer ./target/ink/constructor_panics.contract execute ./results/my_failed_traces.json
+Executing contract: "./target/ink/constructor_panics.contract"
+Using input: "./results/my_failed_traces.json"
+Executing failed trace 0
+  Message0: default()
+Last message in trace has Trapped
+
+Executing failed trace 1
+  Message0: new(Bool(false))
+Last message in trace has Trapped
+
+
+user@localhost:~/Documents/w3f/inkscope-fuzzer/test-contracts/ityfuzz$ inkscope-fuzzer  ./target/ink/ityfuzz.contract execute ./results/my_failed_traces.json 
+Executing contract: "./target/ink/ityfuzz.contract"
+Using input: "./results/my_failed_traces.json"
+Executing failed trace 0
+  Message0: default()
+  Message1: incr(UInt(0))
+  Message2: incr(UInt(0))
+  Message3: decr(UInt(340282366920938463463374607431768211455))
+  Message4: incr(UInt(1))
+  Message5: incr(UInt(2))
+  Message6: incr(UInt(1))
+  Message7: incr(UInt(2))
+  Message8: incr(UInt(0))
+  Message9: incr(UInt(0))
+  Message10: incr(UInt(1))
+  Message11: incr(UInt(0))
+  Message12: incr(UInt(1))
+  Message13: incr(UInt(1))
+  Message14: incr(UInt(2))
+  Message15: incr(UInt(0))
+  Message16: incr(UInt(1))
+  Message17: incr(UInt(1))
+  Message18: buggy()
+  Property: inkscope_bug()
+```
+
+### Manual Test
+
+This time, I could fuzz the `assert-violation` and `iterators-over-indexing` contracts. However, they don't find a property because the contracts don't have any.
+
+```
+user@localhost:~/Documents/w3f/inkscope-fuzzer/test-contracts/coinfabrik-test-contracts/iterators-over-indexing/vulnerable-example$ inkscope-fuzzer ./target/ink/iterators_over_indexing.contract  fuzz --config ./../../../../example-config.yaml
+Starting campaign...
+Seed: 0
+Properties found: 0
+Max iterations: 1000
+Fail fast: false
+❗️....................................................................................................
+Campaign status: Optimizing
+Campaign finished
+Elapsed time: 29.633505404s
+```
 
 ## Evaluation V2
 
