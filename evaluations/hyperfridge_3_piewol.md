@@ -9,11 +9,11 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ----- | ----------- | ------ | ------------- | ------ |
 | 0a. | License | <ul><li>[x] </li></ul> |  [Link to License](https://github.com/element36-io/ocw-ebics/blob/main/LICENSE) | Apache 2.0
-| 0b. | Documentation | <ul><li>[] </li></ul> | [Link to Documentation Root](https://github.com/element36-io/ocw-ebics/blob/main/README.md) | See general notes |
-| 0c. | Testing Guide | <ul><li>[] </li></ul> | See [Testing Guide](https://github.com/element36-io/ocw-ebics/blob/main/INSTRUCTIONS.md)| Doesn't work |
-| 0d. | Docker | <ul><li>[] </li></ul> | [Docker](https://hub.docker.com/r/e36io/ebics-ocw/tags), see main README how to use | |
-| 1. | Integrate Receipt | <ul><li>[] </li></ul> |  [Repo](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/lib.rs#L1041)| |
-| 2. | fiat-ramp pallet | <ul><li>[] </li></ul> |  [Pallet](https://github.com/element36-io/ocw-ebics/tree/main/pallets/fiat-ramps) | |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [Link to Documentation Root](https://github.com/element36-io/ocw-ebics/blob/main/README.md) | works |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | See [Testing Guide](https://github.com/element36-io/ocw-ebics/blob/main/INSTRUCTIONS.md)| works |
+| 0d. | Docker | <ul><li>[x] </li></ul> | [Docker](https://hub.docker.com/r/e36io/ebics-ocw/tags), see main README how to use | works |
+| 1. | Integrate Receipt | <ul><li>[x] </li></ul> |  [Repo](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/lib.rs#L1041)| |
+| 2. | fiat-ramp pallet | <ul><li>[] </li></ul> |  [Pallet](https://github.com/element36-io/ocw-ebics/tree/main/pallets/fiat-ramps) | What is the balance storage item used for? See notes. |
 | 3. | Unit Tests | <ul><li>[x] </li></ul> | [Unit Tests](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/tests.rs)| all passing|
 
 ## General Notes
@@ -21,7 +21,31 @@ I appreciate it that you are including specific links to the tools used within y
 
 
 ## Testing Guide
-Thanks for the updates so far. Sadly I'm getting stuck at the point where I try to mint stablecoins on Alice's account. 
+Thanks for the updates so far. It works now with the remote API. Previously when trying to use the local api it threw this error:
+```
+{
+  "timestamp": "2024-05-27T08:29:04.875+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "",
+  "path": "/ebics/api-v1/createOrder"
+}
+```
+
+Within the testing guide you are mixing the IBANs between minting and burning tokens from ALICE. I wonder why that is the case?
+
+First ``CH1230116000289537320`` then in the unpeg process ``CH1230116000289537312`` is used.
+
+Furthermore when trying to query the funds from chain state for Alice's IBAN after the mint event succeeded the balances for this IBAN remain 0 even though the event visible in the exlorer tab states that the mint to this IBAN was successful. The actual token balances are changing as expected though. Just within the fiat-ramps pallet the storage to keep track of the balance doesn't seem to be changed.
+
+```
+{
+  iban: CH2108307000289537320
+  balance: 0
+  lastUpdated: 1,716,797,490,005
+}
+```
+
 
 
 
