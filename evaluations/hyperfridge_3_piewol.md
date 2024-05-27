@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** [Hyperfridge](https://github.com/w3f/Grants-Program/blob/master/applications/hyperfridge.md)
 - **Milestone:** 3
 - **Previously successfully merged evaluation:** All by PieWol
@@ -13,11 +13,13 @@
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | See [Testing Guide](https://github.com/element36-io/ocw-ebics/blob/main/INSTRUCTIONS.md)| works |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Docker](https://hub.docker.com/r/e36io/ebics-ocw/tags), see main README how to use | works |
 | 1. | Integrate Receipt | <ul><li>[x] </li></ul> |  [Repo](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/lib.rs#L1041)| |
-| 2. | fiat-ramp pallet | <ul><li>[] </li></ul> |  [Pallet](https://github.com/element36-io/ocw-ebics/tree/main/pallets/fiat-ramps) | What is the balance storage item used for? See notes. |
+| 2. | fiat-ramp pallet | <ul><li>[x] </li></ul> |  [Pallet](https://github.com/element36-io/ocw-ebics/tree/main/pallets/fiat-ramps) | |
 | 3. | Unit Tests | <ul><li>[x] </li></ul> | [Unit Tests](https://github.com/element36-io/ocw-ebics/blob/main/pallets/fiat-ramps/src/tests.rs)| all passing|
 
 ## General Notes
 I appreciate it that you are including specific links to the tools used within your testing guide. E.g. the polkadot-js link which is already specific to the local chain aswell as the api site for ebics-service.
+
+The chain also works with the provided docker file. 
 
 
 ## Testing Guide
