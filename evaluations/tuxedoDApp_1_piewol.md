@@ -26,6 +26,7 @@ There should be a dedicated testing guide to provide a walkthrough to test all o
 In your dApp readme you are listing a bunch of npm commands but not ``npm install`` which should be the first command to even allow the others to run. 
 
 When running ``npm install`` I get the following error. Which node version would I need to use so that this works?
+Its buildable with node 17 but fails with node 18. The one test that exists is failing on node 17. Please fix.
 ```
 npm install
 npm ERR! code ERESOLVE
