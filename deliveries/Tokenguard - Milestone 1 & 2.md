@@ -15,13 +15,13 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/LICENSE |  |
-| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/README.md |  |
-| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/TESTING |  |
-| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/Dockerfile |  |
-| 1. | Metrics Visualisation |https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/| | 
-| 2. | Dashboard layout |https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/| | 
-| 3. | * Metric catalogue | https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/| Tokenguard team added an additional visual metric catalogue to the milestone delivery as it was required to make the tool fully-functional standalone. |
+| 0a. | License | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/LICENSE |  |
+| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/README.md |  |
+| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/TESTING |  |
+| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/Dockerfile |  |
+| 1. | Metrics Visualisation |https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/| | 
+| 2. | Dashboard layout |https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/| | 
+| 3. | * Metric catalogue | https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/| Tokenguard team added an additional visual metric catalogue to the milestone delivery as it was required to make the tool fully-functional standalone. |
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Tokenguard.md
 * **Milestone Number:** 2
