@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Tokenguard.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All evaluations by PieWol
@@ -11,13 +11,13 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
-| 0a | License |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/LICENSE | ok |
-| 0b  | Documentation |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/README.md |good|
-| 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/TESTING| great testing guide |
-| 0d | Dockerfile |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.3/Dockerfile | works |
-| 1 | Metrics Visualization |<ul><li>[] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ | Looks like there is only bar and linechart available. How can I configure a pie chart? |
-| 2 | Dashboard Layout |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ |  |
-| 3 | Metric Catalogue |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.3/ | thanks for making this testable |
+| 0a | License |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/LICENSE | ok |
+| 0b  | Documentation |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/README.md |good|
+| 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/TESTING| great testing guide |
+| 0d | Dockerfile |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/Dockerfile | works |
+| 1 | Metrics Visualization |<ul><li>[] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | all visualization types work |
+| 2 | Dashboard Layout |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | ok |
+| 3 | Metric Catalogue |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | thanks for making this testable |
 
 
 ## General notes
