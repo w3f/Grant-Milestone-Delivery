@@ -15,7 +15,7 @@
 | 0b  | Documentation |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/README.md |good|
 | 0c | Testing and Testing Guide |<ul><li>[x] </li></ul>|https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/TESTING| great testing guide |
 | 0d | Dockerfile |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/blob/v2.0.4/Dockerfile | works |
-| 1 | Metrics Visualization |<ul><li>[] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | all visualization types work |
+| 1 | Metrics Visualization |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | all visualization types work |
 | 2 | Dashboard Layout |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | ok |
 | 3 | Metric Catalogue |<ul><li>[x] </li></ul>| https://github.com/tokenguardio/dashboard-creator-client/tree/v2.0.4/ | thanks for making this testable |
 
