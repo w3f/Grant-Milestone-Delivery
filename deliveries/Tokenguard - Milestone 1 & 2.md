@@ -32,9 +32,9 @@
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| 0a. | License | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.3/LICENSE |  |
-| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.3/README.md |  |
-| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.3/src/components |  |
-| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.3/Dockerfile |  |
-| 1. | API Reading Mechanism | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.3 | | 
-| 3. | Report & estimation | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.3 | This delivery was limited only to a feature / changelog overview. Discussion with W3F team made it clear that next steps should be made through Decentralised Futures grant. Cost estimation for future features is obsolete in this grant. | 
+| 0a. | License | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.5/LICENSE |  |
+| 0b. | Documentation | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.5/README.md |  |
+| 0c. | Testing and Testing Guide | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.5/src/components |  |
+| 0d.| Docker | https://github.com/tokenguardio/dashboard-creator-server/blob/v2.0.5/Dockerfile |  |
+| 1. | API Reading Mechanism | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.5 | | 
+| 3. | Report & estimation | https://github.com/tokenguardio/dashboard-creator-server/tree/v2.0.5 | This delivery was limited only to a feature / changelog overview. Discussion with W3F team made it clear that next steps should be made through Decentralised Futures grant. Cost estimation for future features is obsolete in this grant. | 
