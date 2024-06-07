@@ -23,4 +23,4 @@
 | 2b. | Dynamic Dashboard Values |  |[functions](https://github.com/LiisaNFT/PolkadotNFTPortfolioTracker/tree/main/multichain-indexer/src/functions)| ...|
 
 **Additional Information**
-> We pretend to maintain the code and keep doing improvements on it even after the conclusion of this grant. 
+> We plan to maintain the code and keep doing improvements on it even after the conclusion of this grant. 
