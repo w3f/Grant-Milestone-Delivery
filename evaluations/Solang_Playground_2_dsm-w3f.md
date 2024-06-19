@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_Playground.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -9,10 +9,33 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | *0a.* | License | <ul><li>[x] </li></ul>| | |
-| *0b.* | Documentation | <ul><li>[ ] </li></ul>|  | Missing some instructions |
+| *0b.* | Documentation | <ul><li>[x] </li></ul>|  | |
 | *0c.* | Testing and Testing Guide | <ul><li>[x] </li></ul>|  | |
-| *0d.* | Docker | <ul><li>[ ] </li></ul>|  | Missing instructions to run the container, couldn't run sucessfully |
+| *0d.* | Docker | <ul><li>[x] </li></ul>|  | |
 | 1. | Initial skeleton | <ul><li>[x] </li></ul>| -Repo: https://github.com/hyperledger-labs/solang-playground <br> -Demo: https://drive.google.com/file/d/1NmuBdEieE54ojBB_axXifcLNctv-KSWW/view <br> -amd64 docker image: https://hub.docker.com/repository/docker/tareknaser360/solang-playground-amd64/general .<br> hosted editor (for easier testing purposes): http://labs.hyperledger.org/solang-playground/ |  |
+
+## Evaluation V3
+
+### Docker
+
+The instructions to run the Docker container were added to the Documentation. I was able to run the docker without problems.
+
+```
+user@localhost:~/Documents/w3f/solang-playground$ cargo make docker-run
+[cargo-make] INFO - cargo make 0.37.12
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: docker-run
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: docker-run
+543cdcf65b86b171ee4989ce951a77ae0e2392a3f5a73c265f975bed9293d60c
+[cargo-make] INFO - Build Done in 1.41 seconds.
+
+user@localhost:~/Documents/w3f/solang-playground$ docker ps
+CONTAINER ID   IMAGE               COMMAND         CREATED         STATUS         PORTS                                               NAMES
+543cdcf65b86   solang-playground   "on-start.sh"   6 seconds ago   Up 5 seconds   22/tcp, 0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   playground
+```
 
 ## Evaluation V2
 
@@ -46,25 +69,18 @@ The instructions to run the tests were added. Before, we ran using the command `
 
 ```
 [cargo-make] INFO - Running Task: test-backend
-
      Running tests/server_tests.rs (target/debug/deps/server_tests-431164c904b3e777)
-
 running 1 test
 test tests::language_server_workflow ... ok
-
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
-
 [cargo-make] INFO - Running Task: test-app
-
 > monaco-lsp-streams@0.0.0 test
 > jest
-
  PASS  tests/api.test.ts (9.872 s)
   Ensuring the server serves the built frontend
     ✓ Verifying a successful response upon making a request (32 ms)
   Ensuring the server’s compile endpoint is operational
     ✓ Verifying a successful compile request (8226 ms)
-
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total
 Snapshots:   0 total
