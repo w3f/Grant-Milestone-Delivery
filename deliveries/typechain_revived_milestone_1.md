@@ -45,6 +45,33 @@ pnpm test
 Command pnpm start-typechain will process the contracts in `artifacts` folder (a `vester` contract is provided as an example (contains some logic, events, simple & complex types etc) - [source](https://github.com/Pendzl/pendzl/blob/main/examples/vester/lib.rs) ).
 
 **Outside of the repo testing**
+Version published on NPM corresponding to this milestone is `0.2.0` for all packages:
+
+- [Typechain Polkadot](https://www.npmjs.com/package/@c-forge/typechain-polkadot)
+
+```bash
+npm i --save @c-forge/typechain-polkadot@0.2.0
+```
+
+- [Typechain Compiler](https://www.npmjs.com/package/@c-forge/typechain-compiler)
+
+```bash
+npm i --save @c-forge/typechain-compiler@0.2.0
+```
+
+- [Typechain Types](https://www.npmjs.com/package/@c-forge/typechain-types)
+
+```bash
+npm i --save @c-forge/typechain-types@0.2.0
+```
+
+- [Typechain Parser](https://www.npmjs.com/package/@c-forge/typechain-polkadot-parser)
+
+```bash
+npm i --save @c-forge/typechain-polkadot-parser@0.2.0
+```
+
+**Outside of the repo testing - Example Usage**
 To test the library outside of the repo, install/run packages as CLI - follow README.md docs for detailed info. For example, to use compiler:
 
 ```bash
