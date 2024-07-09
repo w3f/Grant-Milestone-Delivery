@@ -9,17 +9,24 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [Me-Protocol/rusty-protocol-v0.1](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/31179935aa1c4e32b635ecb1b669786c21d95f91/license.md), [Me-Protocol/Rusty-Protocol-Backend-Portal](https://github.com/Me-Protocol/Rusty-Protocol-Backend-Portal/blob/d8e36d64df2b8fc11e598357afae04151ac00a89/license.md) | GPLv3 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [README](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/README.md) | Overview of contracts. Tutorial ("that explains how a user, brand or third party application can interact with our protocol for the various specified use cases") missing. |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [testing_guide.md](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/de9f23122f5b58598f90a33a39967b4b8478c1be/testing_guide.md) | Guide fixed on request. Unit tests incomplete. |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/README.md), [video tutorial](https://drive.google.com/file/d/1k8Pay8NJBkGyeZtZD2_BWxChR66AG0WX/edit) | Overview of contracts. Tutorial provided on request. |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [testing_guide.md](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/de9f23122f5b58598f90a33a39967b4b8478c1be/testing_guide.md) | Guide fixed on request. |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/Dockerfile) | — |
-| 0e. | Article | <ul><li>[ ] </li></ul> | [drive.google.com](https://drive.google.com/file/d/1sHMD_ZAZE8laRbTjFTAkWKcSXmEIWnFB/view?usp=sharing) | Same as M1. Also: [video](https://www.loom.com/share/8ec3df74fb414049a7e1f10a7f2aa7b5)
+| 0e. | Article | <ul><li>[x] </li></ul> | [drive.google.com](https://drive.google.com/file/d/1sHMD_ZAZE8laRbTjFTAkWKcSXmEIWnFB/view?usp=sharing) | Provided on request. Also: [video](https://www.loom.com/share/8ec3df74fb414049a7e1f10a7f2aa7b5)
 | 1. | Build out the Protocol Access Component | <ul><li>[x] </li></ul> | [modules/services/services](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/services/services) | — |
-| 2. | Build out the lens component | <ul><li>[ ] </li></ul> | link | Linked deliverable does not match description | 
-| 3. | Building out the Governance Component | <ul><li>[ ] </li></ul> | [modules/peripherals/governance](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/governance), [modules/peripherals/votes](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/votes) | No tests | 
+| 2. | Build out the lens component | <ul><li>[x] </li></ul> | [modules/services/oracle](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/e5140207b600c0f8f44ca8d28ffbca326e21ea44/contracts/modules/services/oracle) | Partly obsolete due to (lack of) changes in OpenBrush | 
+| 3. | Building out the Governance Component | <ul><li>[ ] </li></ul> | [modules/peripherals/governance](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/governance), [modules/peripherals/votes](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/votes) | — | 
 | 4. | Build out the Backend Service Components for the Me App | <ul><li>[x] </li></ul> | [Me-Protocol/Rusty-Protocol-Backend-Portal](https://github.com/Me-Protocol/Rusty-Protocol-Backend-Portal/tree/d8e36d64df2b8fc11e598357afae04151ac00a89) | — |
 
 
 ## General Notes
+
+### Jul 2, 2024
+
+- All issues with documentation fixed.
+- Waiting for input on issue with tests.
+
+### May 30, 2024
 
 - Documentation incomplete (tutorial missing)
 - No updates to lite paper. I suggest a separate, public article for this milestone and an update to the lite paper for M3. 
