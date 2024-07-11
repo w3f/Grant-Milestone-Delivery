@@ -7,7 +7,7 @@
 
 **Context**
 This milestone focuses on crucial updates to the Typechain-Polkadot project to enhance its functionality and compatibility with the latest ink! 5, remove unnecessary complexities, and improve the overall development experience. These updates are essential for maintaining the reliability and usability of the Typechain-Polkadot library and its associated tools.
-Current state is available here https://github.com/C-Forge/typechain-polkadot/tree/91d3dbfd4b3147eac105576e33d2667bffd13f2f
+Current state is available here https://github.com/C-Forge/typechain-polkadot/tree/main
 
 **Deliverables**
 
