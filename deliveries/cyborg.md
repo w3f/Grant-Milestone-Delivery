@@ -5,7 +5,9 @@
 * **Application Document:** [PR 2261](https://github.com/w3f/Grants-Program/pull/2261)
 
 **Context**
-##Task Verification System
+
+## Task Verification System
+
 A task verification system that verifies off-chain compute task results on-chain using parallel execution and hash equations. This forms the base infrastructure for our enterprise-ready product for machine learning training.
 
 **Deliverables** 
