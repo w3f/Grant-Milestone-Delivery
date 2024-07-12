@@ -14,8 +14,8 @@ A task verification system that verifies off-chain compute task results on-chain
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
-| **0a.** | License | GPLv3 |
-| **0b.** | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how users can (for example) deploy docker images using our interface. |
+| **0a.** | [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE) | GPLv3 |
+| **0b.** | [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how users can (for example) deploy docker images using our interface. |
 | **0c.** | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
 | **0d.** | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
 | 1. | Working Demo | We will provide video documentation to help developers understand the process of deploying containered tasks.|
