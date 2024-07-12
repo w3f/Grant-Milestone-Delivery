@@ -5,11 +5,11 @@
 * **Application Document:** [PR 2261](https://github.com/w3f/Grants-Program/pull/2261)
 
 **Context**
-> A task verification system that verifies off-chain compute task results on-chain using parallel execution and hash equations. This forms the base infrastructure for our enterprise-ready product for machine learning training.
+##Task Verification System
+A task verification system that verifies off-chain compute task results on-chain using parallel execution and hash equations. This forms the base infrastructure for our enterprise-ready product for machine learning training.
 
-**Deliverables** Task Verification System
-> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work.
-> 
+**Deliverables** 
+
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | **0a.** | License | GPLv3 |
