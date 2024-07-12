@@ -22,7 +22,7 @@ A task verification system that verifies off-chain compute task results on-chain
 | 2. | Task Examples | We will provide example containers and data sets to help programmers understand and execute batch processes. Currently we provide Examples for Docker, Bash, Terraform etc.. |
 | 3. | Substrate Module: Verification | This pallet will be responsible for assign the task to a secondary cluster for result verification. Once verifed the accepted result will be added to the block. |
 | 4. | Substrate Module: Edge Connect| This pallet will posses the logic for schedluing tasks to a specific cluster that matches the required specifications|
-| 5. | Worker K8S Operator | The k8s worker acts as a trusted controller. It securely stores deployment states, including manifests and defined secrets. Based on the manifests, the Worker uses remote attestation to authenticate the task exceution process.. |
+| 5. | Worker K3S Operator | The k3s worker acts as a trusted controller. It securely stores deployment states, including manifests and defined secrets. Based on the manifests, the Worker uses remote attestation to authenticate the task exceution process.. |
 | 6. | Worker logs | The execution logs of the deployed container to serve as a proof of work. |
 
 **Additional Information**
