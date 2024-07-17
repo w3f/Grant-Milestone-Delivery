@@ -24,6 +24,3 @@ A task verification system that verifies off-chain compute task results on-chain
 | 4. | [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect)| This pallet will posses the logic for schedluing tasks to a specific cluster that matches the required specifications|
 | 5. | [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) | The k3s worker acts as a trusted controller. It securely stores deployment states, including manifests and defined secrets. Based on the manifests, the Worker uses remote attestation to authenticate the task exceution process.. |
 | 6. | Worker logs | The execution logs of the deployed container to serve as a proof of work. |
-
-**Additional Information**
-> Any further comments on the milestone that you would like to share with us.
