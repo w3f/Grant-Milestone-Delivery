@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [PR 2261](https://github.com/w3f/Grants-Program/pull/2261)
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Cyborg.md
 
 **Context**
 
