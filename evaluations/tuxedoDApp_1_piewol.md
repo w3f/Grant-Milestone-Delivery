@@ -23,6 +23,36 @@ Thanks for providing the testing guide.
 webservice tests: 
 ``test result: ok. 30 passed``
 
+node tests failing:
+
+```
+failures:
+    service_handlers::block_handler::block_service_handler::tests::test_get_block_block_number_not_present_fail
+    service_handlers::block_handler::block_service_handler::tests::test_get_block_success
+    service_handlers::block_handler::block_service_handler::tests::test_get_genesis_block_success
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_breed_kitty
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_buy_kitty
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_create_kitty
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_create_kitty_fail_due_unknown_public_key
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_create_kitty_success
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_delist_kitty_from_sale
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_all_kitty_list
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_all_td_kitty_list
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_kitty_by_dna
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_owned_kitty_list
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_owned_td_kitty_list
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_td_kitty_by_dna
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_get_txn_and_inpututxolist_for_list_kitty_for_sale_success
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_list_kitty_for_sale
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_name_update
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_td_name_update
+    service_handlers::kitty_handler::kitty_service_handler::tests::test_td_price_update
+    service_handlers::money_handler::money_servicehandler::tests::test_get_all_coins
+    service_handlers::money_handler::money_servicehandler::tests::test_owned_coins
+
+test result: FAILED. 8 passed; 22 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.14s
+```
+
 
 
 ## Documentation 
