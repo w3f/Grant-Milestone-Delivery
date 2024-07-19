@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/MeProtocol.md
 - **Milestone:** 2
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,17 +9,187 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [Me-Protocol/rusty-protocol-v0.1](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/31179935aa1c4e32b635ecb1b669786c21d95f91/license.md), [Me-Protocol/Rusty-Protocol-Backend-Portal](https://github.com/Me-Protocol/Rusty-Protocol-Backend-Portal/blob/d8e36d64df2b8fc11e598357afae04151ac00a89/license.md) | GPLv3 |
-| 0b. | Documentation | <ul><li>[ ] </li></ul> | [README](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/README.md) | Overview of contracts. Tutorial ("that explains how a user, brand or third party application can interact with our protocol for the various specified use cases") missing. |
-| 0c. | Testing Guide | <ul><li>[ ] </li></ul> | [testing_guide.md](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/de9f23122f5b58598f90a33a39967b4b8478c1be/testing_guide.md) | Guide fixed on request. Unit tests incomplete. |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/README.md), [video tutorial](https://drive.google.com/file/d/1k8Pay8NJBkGyeZtZD2_BWxChR66AG0WX/edit) | Overview of contracts. Tutorial provided on request. |
+| 0c. | Testing Guide | <ul><li>[x] </li></ul> | [testing_guide.md](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/de9f23122f5b58598f90a33a39967b4b8478c1be/testing_guide.md) | Issues with contracts-node v0.41.0, but no issues with 0.35.0. Guide fixed on request. |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/Me-Protocol/rusty-protocol-v0.1/blob/7a68f619195704b679c66496ed0647e787d1ea05/Dockerfile) | — |
-| 0e. | Article | <ul><li>[ ] </li></ul> | [drive.google.com](https://drive.google.com/file/d/1sHMD_ZAZE8laRbTjFTAkWKcSXmEIWnFB/view?usp=sharing) | Same as M1. Also: [video](https://www.loom.com/share/8ec3df74fb414049a7e1f10a7f2aa7b5)
+| 0e. | Article | <ul><li>[x] </li></ul> | [drive.google.com](https://drive.google.com/file/d/1sHMD_ZAZE8laRbTjFTAkWKcSXmEIWnFB/view?usp=sharing) | Provided on request. Also: [video](https://www.loom.com/share/8ec3df74fb414049a7e1f10a7f2aa7b5)
 | 1. | Build out the Protocol Access Component | <ul><li>[x] </li></ul> | [modules/services/services](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/services/services) | — |
-| 2. | Build out the lens component | <ul><li>[ ] </li></ul> | link | Linked deliverable does not match description | 
-| 3. | Building out the Governance Component | <ul><li>[ ] </li></ul> | [modules/peripherals/governance](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/governance), [modules/peripherals/votes](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/votes) | No tests | 
+| 2. | Build out the lens component | <ul><li>[x] </li></ul> | [modules/services/oracle](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/e5140207b600c0f8f44ca8d28ffbca326e21ea44/contracts/modules/services/oracle) | Partly obsolete due to (lack of) changes in OpenBrush | 
+| 3. | Building out the Governance Component | <ul><li>[x] </li></ul> | [modules/peripherals/governance](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/governance), [modules/peripherals/votes](https://github.com/Me-Protocol/rusty-protocol-v0.1/tree/7a68f619195704b679c66496ed0647e787d1ea05/contracts/modules/peripherals/votes) | — | 
 | 4. | Build out the Backend Service Components for the Me App | <ul><li>[x] </li></ul> | [Me-Protocol/Rusty-Protocol-Backend-Portal](https://github.com/Me-Protocol/Rusty-Protocol-Backend-Portal/tree/d8e36d64df2b8fc11e598357afae04151ac00a89) | — |
 
 
 ## General Notes
+
+### Jul 12, 2024
+
+- Test issues fixed
+
+#### `npx mocha` output
+
+```sh 
+> npx mocha --require @babel/register --require ts-node/register --recursive ./tests --extension \".ts\" --exit --timeout 20000
+
+
+  Bounty Test
+    recordDepositedBountyRewards
+balance of bounty 100
+      ✔ Should successfully record bounty amount (474ms)
+balance of bounty 0
+      ✔ Should fail because your are trying to record an amount you didn't deposit (236ms)
+    withdrawBountyRewards
+balance of bounty before withdrawal 9900
+      ✔ Should successfully withdraw from bounty pool (350ms)
+      ✔ Should fail because caller is not a me-protocol admin (286ms)
+      ✔ Should fail because caller is trying to withdraw out of range (271ms)
+    setBountyTriggerLimit
+balance of bounty 100
+      ✔ Should successfully set bounty_reward trigger limit (269ms)
+balance of bounty 100
+      ✔ Should fail because caller is not protocol (285ms)
+
+  governance Test
+    ✔ Ensure the proposal threshold is correct (476ms)
+    ✔ Ensure that voting delay is correct (399ms)
+    ✔ Ensurethat voting period is correct (384ms)
+    ✔ Ensure that quorum numerator is set correct  (394ms)
+    ✔ Should be able to create a proposal (432ms)
+    ✔ Should reject if proposalhas been already created (450ms)
+    ✔ should reject if proposal does not exist (412ms)
+    ✔ should reject if voting has not started (407ms)
+
+  Pool Test
+1260018
+    ✔ should start open rewards with correct R value and Signer (915ms)
+pool balance 1000,1000
+    ✔ should return the exact balances of me and reward in a pool (1182ms)
+All brands [ '0x1f2a35404b561b263114', '0x0b202b22384c5762631e' ]
+    ✔ Should total brands added to the protocol (1039ms)
+
+  Payment Test
+    ✔ Should be able to deposit into the contract (308ms)
+    ✔ Should reject if user doesnt create me allowance for contract (267ms)
+    ✔ Should reject if user without funds in contract try to withdraw (368ms)
+    ✔ User should be able to withdraw funds (479ms)
+    ✔ User balance in contract should reduce after paying for service (504ms)
+    ✔ User without funds in contract should not be able to pay for services (502ms)
+    ✔ Should reject if user try to pay above his funds in contract (459ms)
+    ✔ Should reject if none admin calls the protocolWithdrawMe (364ms)
+    ✔ Should admin should be able to withdraw me paid for services  (447ms)
+    ✔ Should reject if admin try to withdraw higher than services paid for (433ms)
+
+  Pool Test
+The res true
+    ✔ should start open rewards with correct R value and Signer (595ms)
+    ✔ should pause open rewards with correct Signer and State (668ms)
+    ✔ should resume open rewards with correct Signer and State (714ms)
+    ✔ should provide open rewards state (657ms)
+position [ { u128: ReturnNumber { rawNumber: <BN: 1> } } ]
+output 1
+result for first index 100
+    ✔ should record added liquidity (657ms)
+    ✔ should record added liqudity to the same position (869ms)
+    ✔ should withdraw the liqudity provided (746ms)
+true
+    ✔ should add_open_rewards_manager (737ms)
+Check if still the mananger false
+    ✔ should remove_open_rewards_manager (644ms)
+    ✔ should get the liquidity ratios in the pool (540ms)
+    ✔ should get the addresses of the pool initiator and the tokens in the pool (453ms)
+    ✔ should get the state of the pool (602ms)
+    ✔ should get the configuration of the pool (541ms)
+    ✔ Should initiate outgoing conversation (665ms)
+
+  Pool inititiator Test
+    ✔ Should reject when called by unauthourized account  (354ms)
+48
+    ✔ Should be able to create a new  (364ms)
+
+  Reward Test
+    ✔ mints initial rewards (118ms)
+    ✔ only brand can mint type a (138ms)
+    ✔ only brand can mint type b (146ms)
+    ✔ brand can burn (179ms)
+
+  reward inititiator Test
+    ✔ Should be able to create a new  (203ms)
+    ✔ Should reject when called by none admin  (210ms)
+    ✔ Should store the new contract address successfully  (199ms)
+[
+  '5E4eBG9t3z1P7x9kaw8yey3xPrXGM1zwQMKnJkYbWSsvhxe9',
+  '5FQyMaLq7gFx1imKyRwiSqBRa36PkfYSQ1FF8DknvddkBSAS'
+]
+    ✔ Should return the array of all newly created rewards  (246ms)
+
+  Service Test
+    Test for Admin Serivces
+      ✔ Test to update treasury address (858ms)
+      ✔ Test to update protocol configuration (600ms)
+      ✔ Test to ensure only adim can update protocol configuration (546ms)
+      ✔ Test to update protocol record (583ms)
+      ✔ Test to ensure only adimin can update protocol record (576ms)
+      ✔ Test to register a new brand (588ms)
+      ✔ Test to ensure only onboarding manager can register a new brand (566ms)
+    Test for Customer Services
+      ✔ Should reject if admin try to withdraw higher than services paid for (509ms)
+    Test for Brand Services
+      ✔ Should create rewards (567ms)
+      ✔ Should update brand details correctly (560ms)
+      ✔ Should update brand config correctly (551ms)
+      ✔ Should start and activate pool (680ms)
+      ✔ Should revert for pool zero address (708ms)
+      ✔ Should revert for wrong pool address (690ms)
+      ✔ Should pause pool (753ms)
+      ✔ Should revert for pool zero address (747ms)
+      ✔ Should revert for wrong pool address to pause pool (764ms)
+      ✔ Should resume pool again (793ms)
+      ✔ Should not resume pool again if already activated (734ms)
+      ✔ Resume pool should fail for wrong address (696ms)
+Treasury balance is : <BN: 64>
+      ✔ Should top up treasury (679ms)
+      ✔ Should fail if protocol records are not set (930ms)
+      ✔ Should rejected if zero value deposit (674ms)
+      ✔ Should rejected if allowance not created for deposit (577ms)
+      ✔ Should wthdraw from treasury after deposit (768ms)
+      ✔ Withdrawal should be rejected from treasury without deposit (737ms)
+      ✔ Should be rejectd for zero value for  wthdrawal from treasury after deposit (683ms)
+      ✔ Should be rejectd for wrong  brand for  wthdrawal from treasury after deposit (684ms)
+
+  Treasury Test
+    recordDepositedRewardAndOrMe
+me balance is 100, reward balance is 100
+      ✔ Should successfully deposit tokens to the treasury (425ms)
+me balance is 0, reward balance is 0
+      ✔ Should fail because you are trying to deposit zero tokens (341ms)
+      ✔ Should fail because you are trying to record less me tokens than deposited (373ms)
+      ✔ Should fail because you are trying to record less reward tokens than deposited (359ms)
+    recordDepositedCai
+      ✔ Should successfully call the recordDepositedCai to record tokens deposited into the treasury (317ms)
+      ✔ Should fail because you are trying to record zero me tokens (306ms)
+      ✔ Should fail because you are trying to record less me tokens than deposited (312ms)
+    withdrawRewardAndOrMe
+me balance is 100, reward balance is 100
+      ✔ Should successfully withdraw tokens from the treasury after depositing (430ms)
+      ✔ Should fail because you are trying to withdraw zero tokens (395ms)
+      ✔ Should fail because you are trying to withdraw more me tokens than deposited (428ms)
+      ✔ Should fail because you are trying to withdraw less reward tokens than deposited (445ms)
+      ✔ Should fail because caller is not allowed to make this call (not admin) (457ms)
+    payForSomeCosts
+      ✔ Should successfully deposit tokens and pay for some cost (something) (467ms)
+      ✔ Should fail because you are trying to deposit zero me tokens (427ms)
+      ✔ Should fail because you are trying to pay more me tokens than the deposited (427ms)
+      ✔ Should fail because you are not an admin (451ms)
+
+
+  96 passing (49s)
+```
+
+### Jul 2, 2024
+
+- All issues with documentation fixed.
+- Waiting for input on issue with tests.
+
+### May 30, 2024
 
 - Documentation incomplete (tutorial missing)
 - No updates to lite paper. I suggest a separate, public article for this milestone and an update to the lite paper for M3. 
