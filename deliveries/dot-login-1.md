@@ -13,8 +13,6 @@ Please note that this delivery complies to the [amended contract](https://github
 
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
-| Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
 | 0a. | License | https://github.com/singkeo/dot-login-substrate-node/blob/main/LICENSE | |
 | 0b. | Documentation | https://github.com/singkeo/dot-login/blob/main/README.md | |
 | 0c. | Testing Guide | https://github.com/singkeo/dot-login/blob/main/README.md | |
