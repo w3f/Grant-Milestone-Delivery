@@ -27,6 +27,8 @@ dca693f9a95cb5c850ad0ef9bc2bd93919ee360ef155bb0d3741834badb226c5`
 
 Also directly from GH with `docker pull ghcr.io/subcoin-project/subcoin:v0.1.0`
 
+Subcoin node executable correctly located at `target/production/subcoin`
+
 ## Tests
 
 Unit tests all passing:
