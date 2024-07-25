@@ -35,6 +35,8 @@ Subcoin node executable correctly located at `target/production/subcoin`
 
 ## Tests
 
+CI tests are successful: https://github.com/subcoin-project/subcoin/actions/workflows/ci.yml
+
 Unit tests all passing:
 
 ```rust
