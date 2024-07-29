@@ -31,7 +31,7 @@ and delivers the following:
 
 | Number | Deliverable                                   | Link                                                                                                                                | Notes                          |
 | ------ | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| 0a.    | Licensing                                     | [LICENCE](https://github.com/kodadot/stick/blob/main/LICENCE)                                                                       | MIT                            |
+| 0a.    | Licensing                                     | [LICENSE](https://github.com/kodadot/stick/blob/main/LICENSE)                                                                       | MIT                            |
 | 0b.    | Documentation                                 | [an explicit README file to guide the project setup and execution](https://github.com/kodadot/stick/blob/feat/swap-it-up/README.md) | -                              |
 | 0c.    | Test Guidelines                               | [Testing](https://github.com/kodadot/stick/tree/feat/swap-it-up/tests)                                                              | -                              |
 | 0d.    | Docker Integration                            | [Docker Compose](https://github.com/kodadot/stick/blob/feat/swap-it-up/docker-compose.yml)                                          | needs to run as docker compose |
