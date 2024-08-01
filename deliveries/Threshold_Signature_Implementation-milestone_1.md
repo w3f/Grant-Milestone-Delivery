@@ -19,4 +19,5 @@
 | **1.b** | Pull Request of a SimplPedPop implementation merged into Schnorrkel repository | [Pull Request](https://github.com/w3f/schnorrkel/pull/106) | | 
 
 **Additional Information**
+
 The pull requests of deliverables **1.a** and **1.b** will be merged in [this](https://github.com/w3f/schnorrkel/pull/110) as stated [here](https://github.com/w3f/Grants-Program/pull/2250#issuecomment-2258694872).
