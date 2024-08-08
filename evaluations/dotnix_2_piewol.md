@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/dotnix.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by PieWol
@@ -9,15 +9,16 @@
 | ------ | ----------- | :------: | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/LICENSE) | MIT |
 | **0b.** | Documentation | <ul><li>[x] </li></ul> | [README](https://github.com/sporyon/dotnix-core/blob/9a0cc3705e10da23fb2743b1a2f76fd8f2c4c3c4/README.md) | — |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [/checks](https://github.com/sporyon/dotnix-core/tree/470096931e56374ebc3fcc0af821dd774ef44d10/checks) | Testing guide looks fine but doesn't work atm. |
-| **0d.** | Docker | <ul><li>[ ] </li></ul> | [docker.nix](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/docker.nix) | following the instructions doesn't work |
-| 1. | Audit Trail | <ul><li>[ ] </li></ul> | [trail](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/pkgs/list-dependencies.nix) | doesn't work within docker |
-| 2 | CLI Tool Development | <ul><li>[ ] </li></ul> | [CLI](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/nixosModules/polkadot-validator.nix) | — |
-| 2a. | Functions| <ul><li>[ ] </li></ul> | [polkadot-validator.nix](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/nixosModules/polkadot-validator.nix) | — |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [/checks](https://github.com/sporyon/dotnix-core/tree/470096931e56374ebc3fcc0af821dd774ef44d10/checks) | Testing guide works well |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [docker.nix](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/docker.nix) | works |
+| 1. | Audit Trail | <ul><li>[x] </li></ul> | [trail](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/pkgs/list-dependencies.nix) | node keys can be set and the validator starts up |
+| 2 | CLI Tool Development | <ul><li>[x] </li></ul> | [CLI](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/nixosModules/polkadot-validator.nix) | all commands are working |
+| 2a. | Functions| <ul><li>[x] </li></ul> | [polkadot-validator.nix](https://github.com/sporyon/dotnix-core/blob/470096931e56374ebc3fcc0af821dd774ef44d10/nixosModules/polkadot-validator.nix) | ok |
 
 
 ## General Notes
-sadly the validator doesn't seem to work when trying to run it in Docker.
+The validator runs fine in Docker. Also visible in the westend telemetry. Sorry for the delay on my side. Some failures were caused by a faulty ubuntu image.
+
 <details>
 
 ```
@@ -39,19 +40,19 @@ The shortened error output after running
 $ journalctl -n 1000 -f -u polkadot-validator.service
 ```
 
-```Jul 30 23:10:27 dfc0bf67828a systemd[1]: Started Polkadot Validator.
-Jul 30 23:10:27 dfc0bf67828a polkadot[528]: Error:
-Jul 30 23:10:27 dfc0bf67828a polkadot[528]:    0: Starting an authorithy without network key in /run/credentials/polkadot-validator.service/node_key.
+```[root@bc3024fea3c8:~]# polkadot key generate-node-key | polkadot-validator --set-node-key
+12D3KooWPihimSqbZkEV89YmWnnv8sKEWk68Z1nqRyZsE4jfksmi
+
+[root@bc3024fea3c8:~]# systemctl status polkadot-validator.service
+● polkadot-validator.service - Polkadot Validator
+     Loaded: loaded (/etc/systemd/system/polkadot-validator.service; linked; pr>
+     Active: active (running) since Thu 2024-08-08 08:02:21 UTC; 15min ago
 ```
 </details>
 
 ## Audit Trail
 
-somehow the given command is not recognized in the docker instance. Did I do something wrong setting up the docker instance?
-
-```[root@dfc0bf67828a:~]#  list-dependencies --runtime PATH
--bash: list-dependencies: command not found
-```
+works, command can be used within docker. It's annoying to search for the right path but I assume there is nothing you can do about it.
 
 ## Testing
 All tests are finishing
