@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_Playground.md
 - **Milestone:** 3
 - **Kusama Identity:** Address
@@ -12,8 +12,10 @@
 | **0b.** | Documentation | <ul><li>[x] </li></ul>| https://github.com/hyperledger-labs/solang-playground/blob/main/docs/interact_with_contracts_on_chain.md |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| https://github.com/hyperledger-labs/solang-playground/blob/main/README.md#testing |
 | **0d.** | Docker | <ul><li>[x] </li></ul>| https://github.com/hyperledger-labs/solang-playground/blob/main/README.md#docker |
-| 1. | Solang Playground with `interact` functionality | <ul><li>[ ] </li></ul>| -Repo: https://github.com/hyperledger-labs/solang-playground <br> -Demo: https://drive.google.com/file/d/1LL6LuPbAvg8r_hCWeWop2Gl_tvgy_KpI/view?usp=sharing <br> -amd64 docker image: https://hub.docker.com/repository/docker/salaheldin18/solang-playground-amd64 .<br> You can find a link to the hosted editor in the repo's readme | Shouldn't the deploy and interaction function be on the IDE for this milestone? |
+| 1. | Solang Playground with `interact` functionality | <ul><li>[x] </li></ul>| -Repo: https://github.com/hyperledger-labs/solang-playground <br> -Demo: https://drive.google.com/file/d/1LL6LuPbAvg8r_hCWeWop2Gl_tvgy_KpI/view?usp=sharing <br> -amd64 docker image: https://hub.docker.com/repository/docker/salaheldin18/solang-playground-amd64 .<br> You can find a link to the hosted editor in the repo's readme |  |
+## Evaluation V2
 
+The grantee answered our question [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1204#issuecomment-2263452176). The UI for interacting with the contract will be delivered in the next milestone.
 
 ## Evaluation V1
 
