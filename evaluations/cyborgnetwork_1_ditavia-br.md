@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE)  | |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | We haven't fully evaluated this yet, some comments in the evaluation. |
+| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | Missing the instruction to use the Docker image. |
 | **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/INSTRUCTIONS.md) | We couldn't set up the system to test.|
 | **0d.** | Docker | <ul><li>[ ] </li></ul>| [Docker](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6) | Missing the instruction to use the Docker image. |
 | 1. | Working Demo | <ul><li>[x] </li></ul>| [Working Demo](https://drive.google.com/file/d/1cBpTbd4xRPdUz4_RgGIU7axy9Cb4MjD2/view?usp=sharing) |  |
@@ -18,6 +18,80 @@
 | 4. | Substrate Module: Edge Connect | <ul><li>[ ] </li></ul>| [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect) | Not fully evaluated yet. |
 | 5. | Worker K3S Operator | <ul><li>[ ] </li></ul>| [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) | Not fully evaluated yet. |
 | 6. | Worker logs | <ul><li>[ ] </li></ul> |  | Not fully evaluated yet. |
+
+## Evaluation V2
+
+### Documentation
+
+The testing guide improved, adding more details on how to set up the system and use the pallets. We tested the pallets, but we had some problems with the K3s. 
+
+### Pallets
+
+We tested the pallets `workerCluster` and `taskManagement`.
+
+Image showing the cluster registration and the creation of the task schedule.
+
+![unnamed](https://github.com/user-attachments/assets/94f30282-98a8-4c46-bd5f-9342ba8d875f)
+
+Task submitted as completed:
+
+![unnamed(1)](https://github.com/user-attachments/assets/95ece585-91c1-4eca-9d2e-b2b83c19a311)
+
+The chain state showing the task completed:
+
+![unnamed(2)](https://github.com/user-attachments/assets/2a1745da-05c2-42f9-a831-4b554865290a)
+
+### K3s
+
+We had some trouble to set up the K3s system. We ran the script `MasterSetup.sh` to run the cluster on port 3000, and we ran the script `WorkerSetup.sh` in another machine, but when we tried to verify the master node and the worker node running, we didn't get the expected results. 
+
+```
+ditavia@localhost:~/Documents/w3f/cyborg/Worker$ kubectl get nodes
+E0809 08:39:30.875318   26883 memcache.go:265] couldn't get current server API group list: Get "https://127.0.0.1:6443/api?timeout=32s": dial tcp 127.0.0.1:6443: connect: connection refused
+E0809 08:39:30.875666   26883 memcache.go:265] couldn't get current server API group list: Get "https://127.0.0.1:6443/api?timeout=32s": dial tcp 127.0.0.1:6443: connect: connection refused
+E0809 08:39:30.877826   26883 memcache.go:265] couldn't get current server API group list: Get "https://127.0.0.1:6443/api?timeout=32s": dial tcp 127.0.0.1:6443: connect: connection refused
+E0809 08:39:30.878412   26883 memcache.go:265] couldn't get current server API group list: Get "https://127.0.0.1:6443/api?timeout=32s": dial tcp 127.0.0.1:6443: connect: connection refused
+E0809 08:39:30.880141   26883 memcache.go:265] couldn't get current server API group list: Get "https://127.0.0.1:6443/api?timeout=32s": dial tcp 127.0.0.1:6443: connect: connection refused
+The connection to the server 127.0.0.1:6443 was refused - did you specify the right host or port?
+```
+
+We also tried to specify the host and port to verify, pointing to the process running on port 3000:
+
+```
+ditavia@localhost:~/Documents/w3f/cyborg/Worker$ kubectl get nodes -s 192.168.0.35:3000
+E0809 08:42:13.336275   28738 memcache.go:265] couldn't get current server API group list: the server could not find the requested resource
+E0809 08:42:13.339509   28738 memcache.go:265] couldn't get current server API group list: the server could not find the requested resource
+E0809 08:42:13.342129   28738 memcache.go:265] couldn't get current server API group list: the server could not find the requested resource
+E0809 08:42:13.345192   28738 memcache.go:265] couldn't get current server API group list: the server could not find the requested resource
+E0809 08:42:13.348266   28738 memcache.go:265] couldn't get current server API group list: the server could not find the requested resource
+Error from server (NotFound): the server could not find the requested resource
+```
+
+### Frontend
+
+The front end on the branch `parachain-updates` has some problems:
+
+![unnamed(3)](https://github.com/user-attachments/assets/aa20fe24-0b6e-491d-93de-0c27cd88a768)
+
+
+We returned to the `main` branch to check this problem. It only occurs when using the `parachain-updates` branch. We didn't get this problem again when we changed back to the branch `parachain-updates`. We could replicate this problem by cloning the repository again.
+
+We tried to test using the hosted chain. We registered the public IP:
+
+![unnamed(4)](https://github.com/user-attachments/assets/48140fff-2947-4983-afc2-3fa77404e7ff)
+
+ 
+Uploaded the `hello-world` example, but the dashboard showed an error for that task:
+
+![unnamed(5)](https://github.com/user-attachments/assets/c0656f99-5676-4f9b-96fd-be734bc7d7ae)
+
+We checked the events on the chain to confirm if the chain got the task:
+
+![unnamed(6)](https://github.com/user-attachments/assets/a9f7b090-a53c-4ed9-9f8e-edcacf1103b0)
+
+We checked on the Chain state of this task:
+
+![unnamed(7)](https://github.com/user-attachments/assets/46211f5d-7d7d-454f-b266-5ba2d6ceedd9)
 
 
 ## Evaluation V1
@@ -75,7 +149,6 @@ We executed the tests on the [parachain repository](https://github.com/Cyborg-Ne
 
 ```
      Running unittests src/lib.rs (target/debug/deps/cyborg_runtime-aaf857bb1aae1125)
-
 running 6 tests
 test weights::rocksdb_weights::constants::test_db_weights::sane ... ok
 test weights::extrinsic_weights::constants::test_weights::sane ... ok
@@ -83,11 +156,8 @@ test weights::paritydb_weights::constants::test_db_weights::sane ... ok
 test weights::block_weights::constants::test_weights::sane ... ok
 test test_genesis_config_builds ... ok
 test __construct_runtime_integrity_test::runtime_integrity_tests ... ok
-
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
-
      Running unittests src/lib.rs (target/debug/deps/orml_oracle-da8d838859985862)
-
 running 13 tests
 test mock::test_genesis_config_builds ... ok
 test tests::should_return_none_for_non_exist_key ... ok
@@ -102,11 +172,8 @@ test tests::should_combined_data ... ok
 test tests::should_clear_data_for_removed_members ... ok
 test tests::get_all_values_should_work ... ok
 test tests::values_are_updated_on_feed ... ok
-
 test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
      Running unittests src/lib.rs (target/debug/deps/orml_traits-d9adbe25f1987f82)
-
 running 15 tests
 test data_provider::tests::median_value_data_provider_works ... ok
 test get_by_key::tests::get_by_key_should_work ... ok
@@ -123,11 +190,8 @@ test parameters::tests::test_define_parameters_key_convert ... ok
 test price::test::get_price_should_work ... ok
 test price::test::price_is_zero_should_not_panic ... ok
 test price::test::price_is_none_should_not_panic ... ok
-
 test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
      Running unittests src/lib.rs (target/debug/deps/orml_utilities-c0ee81cba68f2125)
-
 running 11 tests
 test ordered_set::tests::clear ... ok
 test ordered_set::tests::contains ... ok
@@ -140,11 +204,8 @@ test tests::storage_transaction_basic_commit ... ok
 test tests::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
 test tests::simulate_execution_works ... ok
 test tests::storage_transaction_basic_rollback ... ok
-
 test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
      Running unittests src/lib.rs (target/debug/deps/pallet_edge_connect-9a8663a843d5d5c2)
-
 running 8 tests
 test tests::it_works_for_registering_domain ... ok
 test mock::test_genesis_config_builds ... ok
@@ -154,11 +215,8 @@ test tests::it_works_for_registering_ip ... ok
 test tests::it_works_for_removing_worker ... ok
 test tests::it_fails_for_registering_without_ip_or_domain ... ok
 test tests::it_fails_for_registering_duplicate_worker ... ok
-
 test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
      Running unittests src/lib.rs (target/debug/deps/pallet_task_management-747199f1906b9b62)
-
 running 9 tests
 test mock::test_genesis_config_builds ... ok
 test tests::it_fails_when_no_workers_are_available ... ok
@@ -169,28 +227,18 @@ test tests::it_assigns_resolver_when_dispute_in_verification_and_resolves_task .
 test tests::it_works_when_verifying_task ... ok
 test tests::it_fails_when_submit_completed_task_with_invalid_owner ... ok
 test tests::it_reassigns_task_when_resolver_fails_to_resolve ... ok
-
 test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
-
    Doc-tests cyborg-runtime
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
    Doc-tests orml-oracle
-
 running 0 tests
-
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
    Doc-tests orml-traits
-
 running 3 tests
 test orml/traits/src/get_by_key.rs - get_by_key::parameter_type_with_key (line 12) ... ignored
 test orml/traits/src/parameters.rs - parameters::define_parameters (line 117) ... ok
 test orml/traits/src/parameters.rs - parameters::define_aggregrated_parameters (line 288) ... ok
-
 test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.22s
 ```
 
@@ -214,12 +262,10 @@ We ran the command `npm run eslint:check` for the repository [cyborg-connect](ht
   10:17  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                                                                                                 jsx-a11y/alt-text
   14:13  warning  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
   15:17  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                                                                                                 jsx-a11y/alt-text
-
 /home/ditavia/Documents/w3f/cyborg-connect/src/cyborg/layouts/SideBar.js
   28:25  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                                                                                                 jsx-a11y/alt-text
   50:25  warning  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
   51:29  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                                                                                                 jsx-a11y/alt-text
-
 ✖ 20 problems (0 errors, 20 warnings)
 ```
 
@@ -233,7 +279,6 @@ warning: length comparison to zero
     |                                 ^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!workers.is_empty()`
     |
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
-
 warning: dereferencing a tuple pattern where every element takes a reference
    --> pallets/task-management/src/lib.rs:343:16
     |
@@ -246,7 +291,6 @@ help: try removing the `&` and `ref` parts
 343 -                         .filter(|&(_, ref worker)| worker.status == WorkerStatusType::Inactive // change Inactive to Active with oracle 
 343 +                         .filter(|(_, worker)| worker.status == WorkerStatusType::Inactive // change Inactive to Active with oracle 
     |
-
 warning: length comparison to zero
    --> pallets/task-management/src/lib.rs:349:15
     |
@@ -254,8 +298,8 @@ warning: length comparison to zero
     |                                 ^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!workers.is_empty()`
     |
     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
-
 warning: `pallet-task-management` (lib) generated 8 warnings (run `cargo clippy --fix --lib -p pallet-task-management` to apply 8 suggestions)
 ```
 
 The fix of these warnings isn't mandatory but would be nice to have.
+Footer
