@@ -3,6 +3,7 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Cyborg.md
+* Milestone Number: 1
 
 **Context**
 
