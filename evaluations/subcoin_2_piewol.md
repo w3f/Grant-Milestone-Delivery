@@ -173,7 +173,7 @@ ubuntu@ip-172-31-30-101:~/subcoin$ sudo docker build .
 
 ## Docker
 
-Sadly I can't figure out how to start the node in docker. If I try to use `docker run <image_id> run` I get the following error.
+Sadly I can't figure out how to start the node in docker. If I try to use `docker run <image_id> run` I get the following error. Any idea how I can make it work?
 
 ````
 root@ip-172-31-30-101:/home/ubuntu/subcoin# docker run 53fbb385df41 run
