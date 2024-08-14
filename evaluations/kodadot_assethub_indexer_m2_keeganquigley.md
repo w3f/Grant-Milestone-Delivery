@@ -354,6 +354,8 @@ Hosted version works as well https://squid.subsquid.io/speck/graphql
 
 ## Testing
 
+Docker runs successfully. Tests could use more coverage.
+
 6 unit tests passing:
 
 ```ts
