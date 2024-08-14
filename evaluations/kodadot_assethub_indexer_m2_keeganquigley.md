@@ -352,6 +352,8 @@ Grantee kept a detailed log here https://github.com/kodadot/stick/pull/294
 
 Hosted version works as well https://squid.subsquid.io/speck/graphql
 
+Token Schema works w/ GraphQL. CRUD handler works.
+
 ## Testing
 
 Docker runs successfully. Tests could use more coverage.
