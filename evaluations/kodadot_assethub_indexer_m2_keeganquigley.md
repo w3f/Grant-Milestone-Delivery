@@ -356,7 +356,7 @@ Token Schema works w/ GraphQL. CRUD handler works.
 
 ## Testing
 
-Docker runs successfully. Tests could use more coverage.
+Docker runs successfully. Tests could use more coverage. Team mentioned that Subsquid needs to write more internal unit tests for `database` usage but are currently blocked waiting for [Gateway 2.0](https://docs.subsquid.io/subsquid-network/participate/gateway/). Deliverables don't specify writing unit tests for downstream deps so I will go ahead and pass it.
 
 6 unit tests passing:
 
