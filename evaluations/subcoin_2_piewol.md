@@ -1,16 +1,16 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Subcoin.md
 - **Milestone:** 2
 
 | Number | Deliverable    | Accepted | Link | Notes |
 | -- | --  | ---    | --- | --- |
-| 0a.    | License                 | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/LICENSE |  --  |
+| 0a.    | License                 | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/LICENSE |  ok  |
 | 0b.    | Documentation           | <ul><li>[x] </li></ul> | Each module has its own docs. The rendered inline rustdoc is deployed at https://subcoin-project.github.io/subcoin/.  | thanks for extending |
 | 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/tree/subcoin-milestone-2?tab=readme-ov-file#run-tests |  works  |
-| 0d.    | Docker                  | <ul><li>[ ] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/Dockerfile The docker image is available at https://github.com/subcoin-project/subcoin/pkgs/container/subcoin/249545041?tag=v0.2.0  |  builds. see notes. |
-| 1.     | Block Verification	       | <ul><li>[x] </li></ul> | 	https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/sc-consensus-nakamoto/src/verification.rs |  how comes that there are no tests? Is this directly from ``rust-bitcoin``? |
+| 0d.    | Docker                  | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/Dockerfile The docker image is available at https://github.com/subcoin-project/subcoin/pkgs/container/subcoin/249545041?tag=v0.2.0  |  works |
+| 1.     | Block Verification	       | <ul><li>[x] </li></ul> | 	https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/sc-consensus-nakamoto/src/verification.rs |  ok |
 | 2.     | `bitcoin-network`       | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/subcoin-network/src/lib.rs | works, gets peers and imports blocks  |
 
 # General Notes
@@ -134,7 +134,7 @@ All tests are passing.
 </details>
 
 ## Docker
-Image is building. 
+Image is building and running a container works as well. Specifically running the container as root solved initial issues. The node is running fine within Docker using the following command `docker run --user root subv2 run`.
 
 <details>
 
@@ -166,24 +166,32 @@ ubuntu@ip-172-31-30-101:~/subcoin$ sudo docker build .
  => => writing image sha256:9037f7d697a3625c15bc64fd85433e07bc5ebf0aebe98  0.0s
  ````
 
+ ````
+root@ip-172-31-30-101:/home/ubuntu/subcoin# docker run --user root subv2 run
+2024-08-18 14:49:23 Subcoin Node    
+2024-08-18 14:49:23 ✌️  version 0.1.0-b35da7ae2a4    
+2024-08-18 14:49:23 ❤️  by xuliuchengxlc@gmail.com, 2024-2024    
+2024-08-18 14:49:23 📋 Chain specification: Bitcoin    
+2024-08-18 14:49:23 🏷  Node name: lacking-harbor-7709    
+2024-08-18 14:49:23 👤 Role: FULL    
+2024-08-18 14:49:23 💾 Database: ParityDb at /root/.local/share/subcoin/chains/mainnet/paritydb/full    
+2024-08-18 14:49:23 🔨 Initializing Genesis block/state (state: 0xf5c9…79d3, header-hash: 0x9f00…6b6c)    
+2024-08-18 14:49:25 🏁 CPU score: 693.98 MiBs    
+2024-08-18 14:49:25 🏁 Memory score: 10.05 GiBs    
+2024-08-18 14:49:25 🏁 Disk score (seq. writes): 212.38 MiBs    
+2024-08-18 14:49:25 🏁 Disk score (rand. writes): 93.89 MiBs    
+2024-08-18 14:49:25 📦 Highest known block at #0
+2024-08-18 14:49:25 Running JSON-RPC server: addr=127.0.0.1:9944, allowed origins=[]    
+2024-08-18 14:49:25 🔊 Listening on 127.0.0.1:8333
+2024-08-18 14:49:30 ⚙️  Syncing, target=#857354 (6 peers), best: #0 (0000…8ce26f,0x9f00…6b6c), finalized #0 (0000…8ce26f,0x9f00…6b6c), ⬇ 36.2kiB/s ⬆ 0.4kiB/s
+2024-08-18 14:49:35 ⚙️  Syncing  0.0 bps, target=#857354 (6 peers), best: #0 (0000…8ce26f,0x9f00…6b6c), finalized #0 (0000…8ce26f,0x9f00…6b6c), ⬇ 0 ⬆ 0
+2024-08-18 14:49:40 ⚙️  Syncing  0.0 bps, target=#857354 (7 peers), best: #0 (0000…8ce26f,0x9f00…6b6c), finalized #0 (0000…8ce26f,0x9f00…6b6c), ⬇ 67 B/s ⬆ 53  
+
+````
+
 </details>
 
-## Docker
 
-The dockerfile in the delivery release didn't seem to work. The node didn't start. With your specified hash `b35da7a` I still get the error, that the disk access is causing issues. 
-
-````
-root@ip-172-31-30-101:/home/ubuntu/subcoin# docker run subv2 run
-Error: Service(Client(Backend("IO Error: Permission denied (os error 13)")))
-2024-08-18 12:38:25 Subcoin Node    
-2024-08-18 12:38:25 ✌️  version 0.1.0-b35da7ae2a4    
-2024-08-18 12:38:25 ❤️  by xuliuchengxlc@gmail.com, 2024-2024    
-2024-08-18 12:38:25 📋 Chain specification: Bitcoin    
-2024-08-18 12:38:25 🏷  Node name: standing-end-0195    
-2024-08-18 12:38:25 👤 Role: FULL    
-2024-08-18 12:38:25 💾 Database: ParityDb at /nonexistent/.local/share/subcoin/chains/mainnet/paritydb/full    
-
-````
 
 
 
