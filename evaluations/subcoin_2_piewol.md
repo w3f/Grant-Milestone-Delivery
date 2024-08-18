@@ -7,25 +7,22 @@
 | Number | Deliverable    | Accepted | Link | Notes |
 | -- | --  | ---    | --- | --- |
 | 0a.    | License                 | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/LICENSE |  --  |
-| 0b.    | Documentation           | <ul><li>[ ] </li></ul> | Each module has its own docs. The rendered inline rustdoc is deployed at https://subcoin-project.github.io/subcoin/.  | some elements e.g. structs are still without inline doc |
-| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/tree/subcoin-milestone-2?tab=readme-ov-file#run-tests |  see general notes  |
+| 0b.    | Documentation           | <ul><li>[x] </li></ul> | Each module has its own docs. The rendered inline rustdoc is deployed at https://subcoin-project.github.io/subcoin/.  | thanks for extending |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/tree/subcoin-milestone-2?tab=readme-ov-file#run-tests |  works  |
 | 0d.    | Docker                  | <ul><li>[ ] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/Dockerfile The docker image is available at https://github.com/subcoin-project/subcoin/pkgs/container/subcoin/249545041?tag=v0.2.0  |  builds. see notes. |
-| 1.     | Block Verification	       | <ul><li>[ ] </li></ul> | 	https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/sc-consensus-nakamoto/src/verification.rs |  how comes that there are no tests? Is this directly from ``rust-bitcoin``? |
+| 1.     | Block Verification	       | <ul><li>[x] </li></ul> | 	https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/sc-consensus-nakamoto/src/verification.rs |  how comes that there are no tests? Is this directly from ``rust-bitcoin``? |
 | 2.     | `bitcoin-network`       | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-2/crates/subcoin-network/src/lib.rs | works, gets peers and imports blocks  |
 
 # General Notes
-
-
-In ``pallet-bitcoin`` you use the error message "txid must be encoded correctly; qed" both for encoding and decoding operations. I think it would be great it these error messages were unique for both operations. Furthermore it looks like the result type in the trait is used for a reason as the writer can emit errors. Whats the reason you put an `.expect()` here allowing for a panic? Basically, why are you sure that it will never happen? 
-
-Are you planning to introduce more tests to vital modules? ``pallet-bitcoin`` currently only has one test to check on encoding. Unit tests should cover the logic you have implemented.
+ 
+I'm glad to hear that you are planning to further extend the testing of the node and runtime. Looking forward to it.
 
 ## Documentation
 
-Some elements e.g. structs are still without inline doc. It would be great if this could be completed.
+Initially a few items were missing documentation. Thanks for adding docs on those.
 
 ## Tests
-All tests are passing. Some modules are without tests.
+All tests are passing.
 
 
 
@@ -173,18 +170,19 @@ ubuntu@ip-172-31-30-101:~/subcoin$ sudo docker build .
 
 ## Docker
 
-Sadly I can't figure out how to start the node in docker. If I try to use `docker run <image_id> run` I get the following error. Any idea how I can make it work?
+The dockerfile in the delivery release didn't seem to work. The node didn't start. With your specified hash `b35da7a` I still get the error, that the disk access is causing issues. 
 
 ````
-root@ip-172-31-30-101:/home/ubuntu/subcoin# docker run 53fbb385df41 run
+root@ip-172-31-30-101:/home/ubuntu/subcoin# docker run subv2 run
 Error: Service(Client(Backend("IO Error: Permission denied (os error 13)")))
-2024-08-12 12:35:07 Subcoin Node    
-2024-08-12 12:35:07 ✌️  version 0.1.0-e6379c5efc5d1e16f98ad6524f3fcb3e218c4908    
-2024-08-12 12:35:07 ❤️  by xuliuchengxlc@gmail.com, 2024-2024    
-2024-08-12 12:35:07 📋 Chain specification: Bitcoin    
-2024-08-12 12:35:07 🏷  Node name: joyous-side-1016    
-2024-08-12 12:35:07 👤 Role: FULL    
-2024-08-12 12:35:07 💾 Database: ParityDb at /nonexistent/.local/share/subcoin/chains/mainnet/paritydb/full  
+2024-08-18 12:38:25 Subcoin Node    
+2024-08-18 12:38:25 ✌️  version 0.1.0-b35da7ae2a4    
+2024-08-18 12:38:25 ❤️  by xuliuchengxlc@gmail.com, 2024-2024    
+2024-08-18 12:38:25 📋 Chain specification: Bitcoin    
+2024-08-18 12:38:25 🏷  Node name: standing-end-0195    
+2024-08-18 12:38:25 👤 Role: FULL    
+2024-08-18 12:38:25 💾 Database: ParityDb at /nonexistent/.local/share/subcoin/chains/mainnet/paritydb/full    
+
 ````
 
 
