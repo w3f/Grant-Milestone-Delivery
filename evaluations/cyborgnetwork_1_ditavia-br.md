@@ -9,15 +9,99 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE)  | |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | Missing the instruction to use the Docker image. |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/INSTRUCTIONS.md) | We couldn't set up the system to test.|
-| **0d.** | Docker | <ul><li>[ ] </li></ul>| [Docker](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6) | Missing the instruction to use the Docker image. |
+| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | The system is complex, and we couldn't put the system to work reading the testing guide. |
+| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/INSTRUCTIONS.md) | We couldn't set up the system to test. |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| [Docker](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6) | The instructions to use the Docker image would be appreciated if added, but it has instructions to run using the Zumbienet. It is a complex system to set up using Docker. |
 | 1. | Working Demo | <ul><li>[x] </li></ul>| [Working Demo](https://drive.google.com/file/d/1cBpTbd4xRPdUz4_RgGIU7axy9Cb4MjD2/view?usp=sharing) |  |
 | 2. | Task Examples | <ul><li>[ ] </li></ul>| [Task Examples](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/README.md#task-examples) | Not fully evaluated yet. |
-| 3. | Substrate Module: Verification | <ul><li>[ ] </li></ul>| [Substrate Module: Verification](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/task-management) |  Not fully evaluated yet. |
-| 4. | Substrate Module: Edge Connect | <ul><li>[ ] </li></ul>| [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect) | Not fully evaluated yet. |
-| 5. | Worker K3S Operator | <ul><li>[ ] </li></ul>| [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) | Not fully evaluated yet. |
+| 3. | Substrate Module: Verification | <ul><li>[x] </li></ul>| [Substrate Module: Verification](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/task-management) |  |
+| 4. | Substrate Module: Edge Connect | <ul><li>[ ] </li></ul>| [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect) | We couldn't use this pallet on the chains |
+| 5. | Worker K3S Operator | <ul><li>[ ] </li></ul>| [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) | Can this be tested without the front end? |
 | 6. | Worker logs | <ul><li>[ ] </li></ul> |  | Not fully evaluated yet. |
+
+## Evaluation V3
+
+### Testing
+
+We set up the master-node and the worker-node using the Azura Virtual Machine as recomended. 
+
+
+
+Master-node VM
+
+![image (61)](https://github.com/user-attachments/assets/129aaa66-f9ee-40e4-85d4-8e6b7a1d3f83)
+
+
+
+
+Worker-node VM
+
+![image (62)](https://github.com/user-attachments/assets/cc8b0eae-9b74-4001-a9d9-0229af00ec50)
+
+
+
+
+This time, the node was showing corret:
+
+```
+ditavia@cyborg1:~/cyborg/Worker$ kubectl get nodes
+NAME        	STATUS   ROLES              	AGE   VERSION
+k3s-master-01   Ready	control-plane,master   21h   v1.30.3+k3s1
+worker-one  	Ready	<none>             	31s   v1.30.3+k3s1
+```
+
+We send the request
+
+```
+curl -X POST http://172.174.200.217:3000/deploy \
+-H "Content-Type: application/json" \
+-d '{"imageUrl": "hello-world"}'
+```
+
+Received the response:
+
+```
+{"message":"Deployment dynamic-deployment-0em6ht and Service created","nodePort":"31086"}
+```
+
+Master-node Log:
+
+```
+stdout: deployment.apps/dynamic-deployment-0em6ht created
+service/dynamic-deployment-0em6ht-service created
+
+stderr: 
+```
+
+We notice the pallet edge-connect isn't available in any of the three chains on the extrinsics.
+
+So we have done this on the [hosted chain](https://polkadot.js.org/apps/?rpc=wss://fraa-flashbox-3239-rpc.a.stagenet.tanssi.network#/extrinsics). I registered the node. The image shows the node registered.
+
+
+![image (63)](https://github.com/user-attachments/assets/b10fb5b9-fa8b-49af-bc54-d3319a07d6c0)
+
+
+We tested different versions of the front on the branch main, parachain-update (it was indicated to use this branch before, but now the guide doesn't specify a branch to test), and the hosted version. We used the hosted node because the local node hasn't finished the deployment. We need to test it locally to ensure the functionality. The hosted node registered the task but didn't return anything about the task on the logs like on the second evaluation.
+
+Image showing the console log when we tried to use the local node.
+
+![image (65)](https://github.com/user-attachments/assets/30727b45-9e56-4b62-8223-357a5bd11446)
+
+Image showing one of the task registrations done using the front end.
+
+![image (66)](https://github.com/user-attachments/assets/2e927482-89c2-4e28-b7b2-b719ce947018)
+
+Image showing the front end.
+
+![image (67)](https://github.com/user-attachments/assets/bd6f2511-ce3b-4c4b-b4c9-8cf14dbe10d9)
+
+
+Image showing the console log on the front end (parachain-update). There seems to be some connection problem with the worker. No additional logs were generated on the Master-node or the frontend terminal. Using the branch main I received a similar log.
+
+![image (68)](https://github.com/user-attachments/assets/dec56b10-94eb-4277-bd8c-ac901b544f30)
+
+
+We also noticed some instructions on the guide saying to use one function of the pallet, but the print uses another.
 
 ## Evaluation V2
 
@@ -80,7 +164,7 @@ We tried to test using the hosted chain. We registered the public IP:
 
 ![unnamed(4)](https://github.com/user-attachments/assets/48140fff-2947-4983-afc2-3fa77404e7ff)
 
- 
+
 Uploaded the `hello-world` example, but the dashboard showed an error for that task:
 
 ![unnamed(5)](https://github.com/user-attachments/assets/c0656f99-5676-4f9b-96fd-be734bc7d7ae)
