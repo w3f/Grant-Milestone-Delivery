@@ -3,7 +3,6 @@
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-tools-follow-up-2.md
 - **Milestone:** 2
-- **Previously successfully merged evaluation:** PieWol
 
 | Number |  Deliverable   | Accepted | Link                                                                        | Evaluation Notes                   |
 |--------|---------|--------|-----------------------------------------------------------------------------|-------------------------|
