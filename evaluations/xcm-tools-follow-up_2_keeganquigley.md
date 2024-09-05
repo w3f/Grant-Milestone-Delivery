@@ -17,20 +17,29 @@
 
 # General Notes
 
-Thanks for the nice work as usual. The CLI commands all work and I am able to run the examples, but the success message isn't matching the send type in some instances.
+Thanks for the nice work as usual. 
+
+~~The CLI commands all work and I am able to run the examples, but the success message isn't matching the send type in some instances.~~
+
+EDIT: Issue is resolved and success messages are all correct now:
 
 ```go
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ # UMP
 ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send UMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-asset-hub-rpc.polkadot.io
-2024/09/04 21:11:58 send UMP message success, tx hash: 0xd3038ed4bc125c03784c4a77ab9d0497a2168f5375e31608b247e3b5ccf67d6d
-ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send DMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-rpc.polkadot.io --paraId 1000
-2024/09/04 21:12:29 send HRMP message success, tx hash: 0xf6771dd80a50024416546ecafa1cc81c4b567216db183aa57f487d03f5a40e65
-ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send HRMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-asset-hub-rpc.polkadot.io --paraId 2087
-2024/09/04 21:13:00 send HRMP message success, tx hash: 0xe9ad33318b4f84a325ea0fca1e8953738b082dc5c8cb91f63378ea86e14f2f48
-ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send EthBridge --dest 0x6EB228b7ab726b8B44892e8e273ACF3dcC9C0492 --amount 10  --keyring 0xc0417c253312107d808921fb1dd3b740b64e99794dca74bcc550179f7c42a255 --endpoint wss://rococo-asset-hub-rpc.polkadot.io --contract 0xfff9976782d46cc05630d1f6ebab18b2324d6b14 --chainId 11155111
-2024/09/04 21:13:15 send HRMP message success, tx hash: 0x75074a7f7f085ce0fe1c838b8a68334cd28a45fbccaa8b8cf04d8c781e908f15
-ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send S2SBridge --paraId 1000 --destChain westend --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xc0417c253312107d808921fb1dd3b740b64e99794dca74bcc550179f7c42a255 --endpoint wss://rococo-asset-hub-rpc.polkadot.io
 
-2024/09/04 21:13:35 send HRMP message success, tx hash: 0xba7067912e3a6a23afb2f550d1dc971fab5a1bbbc8bcc10076379f699243087a
+2024/09/05 22:08:22 send UMP message success, tx hash: 0xb29b244f0de3dc8e34cff6174bcd29dfe78785abfe0dd24d2c4beff404dbdc09
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ # DMP
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send DMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-rpc.polkadot.io --paraId 1000
+2024/09/05 22:08:33 send DMP message success, tx hash: 0x374db4e34f2ce1f3fe6545e78b76827356f7d99951f7bace31a86160a9214671
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ # HRMP
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send HRMP --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --endpoint wss://rococo-asset-hub-rpc.polkadot.io --paraId 2087
+2024/09/05 22:08:45 send HRMP message success, tx hash: 0xfa8a598eb99a339132d83d61b545c74e68df08d986593da5abb6fd4fc6c8a14c
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ # Send bridge message(polkadot to ethereum)
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send EthBridge --dest 0x6EB228b7ab726b8B44892e8e273ACF3dcC9C0492 --amount 10  --keyring 0xc0417c253312107d808921fb1dd3b740b64e99794dca74bcc550179f7c42a255 --endpoint wss://rococo-asset-hub-rpc.polkadot.io --contract 0xfff9976782d46cc05630d1f6ebab18b2324d6b14 --chainId 11155111
+2024/09/05 22:08:56 send EthBridge message success, tx hash: 0x5d02ea5a6dd897675133028f9927d723016ee871e80fdca8e3f15efb0a14b322
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ # Send S2S message(polkadot to kusama)
+ubuntu@ip-172-31-22-192:~/xcm-tools/cmd$ go run . send S2SBridge --paraId 1000 --destChain westend --dest 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d --amount 10 --keyring 0xc0417c253312107d808921fb1dd3b740b64e99794dca74bcc550179f7c42a255 --endpoint wss://rococo-asset-hub-rpc.polkadot.io
+2024/09/05 22:09:07 send S2SBridge message success, tx hash: 0x4df506aa3f85208855fceb910e83758b6e62d450457c96b703d1d245bc95ef8d
 ```
 
 Help screen works:
