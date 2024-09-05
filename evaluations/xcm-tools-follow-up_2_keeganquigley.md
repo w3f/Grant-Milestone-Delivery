@@ -17,7 +17,7 @@
 
 # General Notes
 
-Thanks for the nice work as usual. 
+Thanks for the nice work as usual. Everything works as expected and the CLI tool is easy to use.
 
 ~~The CLI commands all work and I am able to run the examples, but the success message isn't matching the send type in some instances.~~
 
