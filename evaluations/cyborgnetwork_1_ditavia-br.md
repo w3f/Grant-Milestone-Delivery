@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Cyborg.md
 - **Milestone:** 1
 - **Kusama Identity:** Address
@@ -9,15 +9,73 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul>| [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE)  | |
-| **0b.** | Documentation | <ul><li>[ ] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | The system is complex, and we couldn't put the system to work reading the testing guide. |
-| **0c.** | Testing and Testing Guide | <ul><li>[ ] </li></ul>| [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/INSTRUCTIONS.md) | We couldn't set up the system to test. |
-| **0d.** | Docker | <ul><li>[x] </li></ul>| [Docker](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6) | The instructions to use the Docker image would be appreciated if added, but it has instructions to run using the Zumbienet. It is a complex system to set up using Docker. |
+| **0b.** | Documentation | <ul><li>[x] </li></ul>| [Documentation](https://docs.google.com/document/d/1p5JJ1K6iTV20h4qU1s38e-lRKMvXN6j2MsjITLswqEQ/edit#heading=h.mm3nklvp0xtd) | Needs minor changes. |
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul>| [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/INSTRUCTIONS.md) |  |
+| **0d.** | Docker | <ul><li>[x] </li></ul>| [Docker](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6) |  |
 | 1. | Working Demo | <ul><li>[x] </li></ul>| [Working Demo](https://drive.google.com/file/d/1cBpTbd4xRPdUz4_RgGIU7axy9Cb4MjD2/view?usp=sharing) |  |
-| 2. | Task Examples | <ul><li>[ ] </li></ul>| [Task Examples](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/README.md#task-examples) | Not fully evaluated yet. |
+| 2. | Task Examples | <ul><li>[x] </li></ul>| [Task Examples](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/README.md#task-examples) |  |
 | 3. | Substrate Module: Verification | <ul><li>[x] </li></ul>| [Substrate Module: Verification](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/task-management) |  |
-| 4. | Substrate Module: Edge Connect | <ul><li>[ ] </li></ul>| [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect) | We couldn't use this pallet on the chains |
-| 5. | Worker K3S Operator | <ul><li>[ ] </li></ul>| [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) | Can this be tested without the front end? |
-| 6. | Worker logs | <ul><li>[ ] </li></ul> |  | Not fully evaluated yet. |
+| 4. | Substrate Module: Edge Connect | <ul><li>[x] </li></ul>| [Substrate Module: Edge Connect](https://github.com/Cyborg-Network/cyborg-parachain/tree/9685a55711b2e1ec63fdbc6603965e7b3784f8d6/pallets/edge-connect) |  |
+| 5. | Worker K3S Operator | <ul><li>[x] </li></ul>| [Worker K3S Operator](https://github.com/Cyborg-Network/Worker) |  |
+| 6. | Worker logs | <ul><li>[x] </li></ul> |  |  |
+
+## Evaluation V4
+
+### Testing 
+
+We tested the hosted version. We needed to enable Insecure content on the browser to work.
+
+
+![unnamed(1)](https://github.com/user-attachments/assets/25a55f91-f6cf-4e27-b635-27de2f31b23d)
+
+
+![unnamed(2)](https://github.com/user-attachments/assets/cddc9067-4d58-43fb-8043-993a73e823c5)
+
+
+We registered the worker without a problem, but we weren't able to assign the task to the worker because the system was assigning it to another one. However, we viewed the worker was connected with the system because it generated some logs.
+
+![unnamed(3)](https://github.com/user-attachments/assets/4354aac9-52af-49e8-bd7d-bbf823e5ccba)
+
+
+![unnamed(4)](https://github.com/user-attachments/assets/1e261bfb-bbab-4281-9eba-bb7d41983fa5)
+
+
+We also tried to test hosting all on the same network. We didn't have a Mac to use the UTM to create virtual machines. Instead, we used Azure to host three machines.
+
+- Parachain and Frontend.
+- K3s Master node.
+- K3s Worker node.
+
+We were able to use it like on the hosted version.
+
+Hello-world example:
+
+![unnamed(5)](https://github.com/user-attachments/assets/f93fe41a-77b6-45c3-92b2-43fcacf28fdd)
+
+
+![unnamed(6)](https://github.com/user-attachments/assets/d48e1528-c997-4811-b5a7-24e318e36cc9)
+
+
+Sum example:
+
+![unnamed(7)](https://github.com/user-attachments/assets/a95802ca-7f85-42ed-b2d0-18e66fa992fd)
+
+
+![unnamed(8)](https://github.com/user-attachments/assets/33202c30-087e-4d8a-8580-058ab8555c83)
+
+
+
+### Documentation
+
+The documentation needs minor changes. We don't think it is necessary to hold the project because of that.
+
+- Some instructions on the [INSTRUCTIONS.md](https://github.com/Cyborg-Network/cyborg-parachain/blob/6ba9720eb4f4d8c187282be53abdc077512a8a95/INSTRUCTIONS.md) have the command to change the branch to `updated-parachain` the master branch is more updated now and it works fine.
+
+- On "Option C: Fully Local Setup with UTM and Local Parachain" change the instructions to start the Master Node to the pm2 commands. We checked it, and it didn't work if you use the `MasterSetup.sh`
+
+- Add the image Docker image URL to the [worker-logs example](https://github.com/Cyborg-Network/cyborg-parachain/blob/6ba9720eb4f4d8c187282be53abdc077512a8a95/INSTRUCTIONS.md#worker-logs).
+
+- On the [instructions to install the Cyborg-connect](https://github.com/Cyborg-Network/cyborg-connect/tree/f5d5c3430f828f91dcdb118cd6f3cc4c819c05d2?tab=readme-ov-file#installation) is missing the "clone" on the git clone command.
 
 ## Evaluation V3
 
@@ -69,7 +127,6 @@ Master-node Log:
 ```
 stdout: deployment.apps/dynamic-deployment-0em6ht created
 service/dynamic-deployment-0em6ht-service created
-
 stderr: 
 ```
 
