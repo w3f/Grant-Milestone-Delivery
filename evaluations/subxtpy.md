@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Subcoin.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subxt-python.md
 - **Milestone:** 1
 
 **Deliverables**
@@ -21,7 +21,7 @@
 
 # General Notes
 
-Grantee resolved all issues, and the tool runs successfully when a local node is running. 
+Grantee resolved all issues, and the tool runs successfully when a local node is running. I was also able to complete all examples in the guide, and everything worked manually as well. Nice work!
 
 ## Tests
 
