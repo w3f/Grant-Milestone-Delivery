@@ -11,10 +11,10 @@
 | 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/tree/subcoin-milestone-3?tab=readme-ov-file#run-tests |  all passing  |
 | 0d.    | Docker                  | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/Dockerfile The docker image is available at https://github.com/subcoin-project/subcoin/pkgs/container/subcoin/263310548?tag=v0.3.0   | builds and runs  |
 | 1.     | Article	       | <ul><li>[x] </li></ul> | 	https://liuchengxu.notion.site/Subcoin-A-Step-Toward-Decentralized-Fast-Sync-for-Bitcoin-68762427a4484d73906a91602d789be9 | well written, thanks! |
-| 2.     | Bitcoin Transaction Broadcasting  | <ul><li>[ ] </li></ul> |  https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/docs/src/test_bitcoin_transaction_broadcasting.md |  |
+| 2.     | Fast Sync | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/docs/src/test_fast_sync.md | works exactly as described in the guide. nice. |
 
 # General Notes
- 
+ With the feedback from the last milestone it was easy to evaluate this one. Guide and article were well written.
 
 ## Documentation
 
@@ -111,6 +111,60 @@ All tests are passing.
         Running unittests src/lib.rs (target/debug/deps/subcoin_test_service-6f82fe824c6b894c)
 
     
+</details>
+
+## Fast sync
+
+<details>
+
+        2024-09-11 08:58:16.803  INFO main sc_rpc_server: Running JSON-RPC server: addr=127.0.0.1:38005, allowed origins=["http://localhost:*", "http://127.0.0.1:*", "https://localhost:*", "https://127.0.0.1:*", "https://polkadot.js.org"]    
+    2024-09-11 08:58:16.803  INFO tokio-runtime-worker subcoin_network: Subcoin block sync is disabled until Substrate fast sync is complete
+    2024-09-11 08:58:16.803  INFO tokio-runtime-worker subcoin_network: 🔊 Listening on 127.0.0.1:8333
+    2024-09-11 08:58:16.805  INFO tokio-runtime-worker libp2p_mdns::behaviour: discovered: 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP /ip4/172.31.21.95/tcp/30333/ws    
+    2024-09-11 08:58:16.806  INFO tokio-runtime-worker libp2p_mdns::behaviour: discovered: 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP /ip4/172.17.0.1/tcp/30333/ws    
+    2024-09-11 08:58:17.246 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=142.132.135.164:8333 local_addr=172.31.21.95:37440 direction=Outbound connect_latency=6
+    2024-09-11 08:58:17.250 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=51.77.152.20:8333 local_addr=172.31.21.95:58968 direction=Outbound connect_latency=10
+    2024-09-11 08:58:17.251 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=84.146.196.78:8333 local_addr=172.31.21.95:44932 direction=Outbound connect_latency=12
+    2024-09-11 08:58:17.254 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=2.233.91.176:8333 local_addr=172.31.21.95:34500 direction=Outbound connect_latency=14
+    2024-09-11 08:58:17.256 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 142.132.135.164:8333 version=70016 user_agent="/Satoshi:26.0.0/" start_height=860856
+    2024-09-11 08:58:17.256 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=142.132.135.164:8333 direction=Outbound
+    2024-09-11 08:58:17.266 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=193.86.97.61:8333 local_addr=172.31.21.95:35286 direction=Outbound connect_latency=27
+    2024-09-11 08:58:17.266 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 84.146.196.78:8333 version=70016 user_agent="/Satoshi:27.1.0/" start_height=860856
+    2024-09-11 08:58:17.266 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=84.146.196.78:8333 direction=Outbound
+    2024-09-11 08:58:17.268 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 51.77.152.20:8333 version=70015 user_agent="/Satoshi:0.18.1/" start_height=860856
+    2024-09-11 08:58:17.268 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=51.77.152.20:8333 direction=Outbound
+    2024-09-11 08:58:17.280 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Added 628 addresses from 142.132.135.164:8333
+    2024-09-11 08:58:17.292 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 193.86.97.61:8333 version=70016 user_agent="/Satoshi:26.0.0/" start_height=860856
+    2024-09-11 08:58:17.293 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=193.86.97.61:8333 direction=Outbound
+    2024-09-11 08:58:17.315 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=84.71.214.189:8333 local_addr=172.31.21.95:40778 direction=Outbound connect_latency=75
+    2024-09-11 08:58:17.333 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=203.11.72.76:8333 local_addr=172.31.21.95:42796 direction=Outbound connect_latency=93
+    2024-09-11 08:58:17.335 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Added 640 addresses from 84.146.196.78:8333
+    2024-09-11 08:58:17.374 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Added 494 addresses from 193.86.97.61:8333
+    2024-09-11 08:58:17.399 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 84.71.214.189:8333 version=70016 user_agent="/Satoshi:25.0.0/" start_height=860856
+    2024-09-11 08:58:17.399 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=84.71.214.189:8333 direction=Outbound
+    2024-09-11 08:58:17.425 DEBUG tokio-runtime-worker subcoin_network::connection: New connection peer_addr=34.101.229.34:8333 local_addr=172.31.21.95:44024 direction=Outbound connect_latency=185
+    2024-09-11 08:58:17.484 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Added 268 addresses from 84.71.214.189:8333
+    2024-09-11 08:58:17.601 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 💔 Disconnecting peer reason=PeerShutdown peer_id=84.146.196.78:8333
+    2024-09-11 08:58:17.745 DEBUG tokio-runtime-worker sync: Substream opened for 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP, handshake [1, 190, 65, 0, 0, 191, 75, 204, 200, 174, 84, 26, 223, 124, 81, 208, 205, 235, 181, 158, 217, 148, 124, 157, 80, 101, 126, 93, 162, 148, 113, 166, 51, 209, 120, 136, 201, 195, 236, 93, 130, 40, 167, 5, 49, 98, 170, 146, 255, 34, 235, 117, 124, 231, 48, 171, 21, 142, 103, 79, 251, 249, 131, 196, 122, 165, 232, 82, 204]    
+    2024-09-11 08:58:17.745 DEBUG tokio-runtime-worker sync: New peer 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP with best hash 0xbf4b…88c9 (16830).    
+    2024-09-11 08:58:17.745 DEBUG tokio-runtime-worker sync: Connected 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP    
+    2024-09-11 08:58:18.672  INFO tokio-runtime-worker subcoin_service::finalizer: ✅ Successfully finalized block #7400,0x46d2…7a53
+    2024-09-11 08:58:18.782 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 34.101.229.34:8333 version=70015 user_agent="/Satoshi:0.20.1/" start_height=860856
+    2024-09-11 08:58:18.782 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=34.101.229.34:8333 direction=Outbound
+    2024-09-11 08:58:18.843  INFO tokio-runtime-worker subcoin_service::finalizer: ✅ Successfully finalized block #16824,0xaad8…a292
+    2024-09-11 08:58:18.844 DEBUG tokio-runtime-worker sync: Starting state sync for #16824 (0xaad8…a292)    
+    2024-09-11 08:58:18.889 DEBUG tokio-runtime-worker subcoin_network::peer_manager: Received version from 203.11.72.76:8333 version=70016 user_agent="/Satoshi:27.1.0/" start_height=860856
+    2024-09-11 08:58:18.889 DEBUG tokio-runtime-worker subcoin_network::peer_manager: 🤝 Completed handshake peer=203.11.72.76:8333 direction=Outbound
+    2024-09-11 08:58:18.943 DEBUG tokio-runtime-worker sync: Importing state data from 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP with 1 keys, 0 proof nodes.    
+    2024-09-11 08:58:18.943 DEBUG tokio-runtime-worker sync: Importing state from Some(be89f1f86dcd96a26d6c3308a396e3812149f4e1bd7e9f4e1c267e017c117d87c362f1c9298d79cd3f7663dd3e6fb490d261c73b6a461e6ec802948d70c0b4cb00000000) to Some(26aa394eea5630e07c48ae0c9558cef702a5c1b19ab7a04f536c519aca4983ac)    
+    2024-09-11 08:58:18.976 DEBUG tokio-runtime-worker sync: Importing state data from 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP with 1 keys, 0 proof nodes.    
+    2024-09-11 08:58:18.976 DEBUG tokio-runtime-worker sync: Importing state from Some(be89f1f86dcd96a26d6c3308a396e3814e7b9012096b41c4eb3aaf947f6ea429) to Some(be89f1f86dcd96a26d6c3308a396e3812149f4e1bd7e9f4e1c267e017c117d87c3635ca87d17d3162430ead8c6dc10c48752c2f3d9d099086ce7312547467be700000000)    
+    2024-09-11 08:58:18.976 DEBUG tokio-runtime-worker sync: State download is complete. Import is queued    
+    2024-09-11 08:58:19.140  INFO tokio-runtime-worker sync: State sync is complete (1 MiB), restarting block sync.    
+    2024-09-11 08:58:19.140 DEBUG tokio-runtime-worker sync: Starting from finalized state #16824    
+    2024-09-11 08:58:19.140 DEBUG tokio-runtime-worker sync: Restarted with 16824 (0xaad8…a292)    
+    2024-09-11 08:58:19.140 DEBUG tokio-runtime-worker sync: New peer 12D3KooWSGDsbNRjwzsakY93L4sg6YiQrEg7geNTpXRaqfaUkLyP with known best hash 0xbf4b…88c9 (16830).    
+
 </details>
 
 ## Docker
