@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Subcoin.md
 - **Milestone:** 3
 
@@ -12,9 +12,10 @@
 | 0d.    | Docker                  | <ul><li>[x] </li></ul> | https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/Dockerfile The docker image is available at https://github.com/subcoin-project/subcoin/pkgs/container/subcoin/263310548?tag=v0.3.0   | builds and runs  |
 | 1.     | Article	       | <ul><li>[x] </li></ul> | 	https://liuchengxu.notion.site/Subcoin-A-Step-Toward-Decentralized-Fast-Sync-for-Bitcoin-68762427a4484d73906a91602d789be9 | well written, thanks! |
 | 2.     | Fast Sync | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/docs/src/test_fast_sync.md | works exactly as described in the guide. nice. |
+| 3.     | Bitcoin Transaction Broadcasting | <ul><li>[x] </li></ul> |  https://github.com/subcoin-project/subcoin/blob/subcoin-milestone-3/docs/src/test_bitcoin_transaction_broadcasting.md  | ok |
 
 # General Notes
- With the feedback from the last milestone it was easy to evaluate this one. Guide and article were well written.
+ With the feedback from the last milestone it was easy to evaluate this one. Guide and article are well written.
 
 ## Documentation
 
