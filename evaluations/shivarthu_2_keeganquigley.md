@@ -1,5 +1,196 @@
 # General Notes
 
+Benchmarking tests are failing:
+
+<details>
+  <summary>Output</summary>
+
+```rust
+error[E0599]: no variant or associated item named `new_call_variant_do_something` found for enum `pallet::Call` in the current scope
+  --> custom-pallets/sortition-sum-game/src/benchmarking.rs:10:1
+   |
+10 | #[benchmarks]
+   | ^^^^^^^^^^^^^ variant or associated item not found in `Call<T>`
+   |
+  ::: custom-pallets/sortition-sum-game/src/lib.rs:32:1
+   |
+32 | pub mod pallet {
+   | --- variant or associated item `new_call_variant_do_something` not found for this enum
+   |
+   = note: this error originates in the attribute macro `benchmarks` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0433]: failed to resolve: use of undeclared type `Something`
+  --> custom-pallets/sortition-sum-game/src/benchmarking.rs:21:14
+   |
+21 |         assert_eq!(Something::<T>::get(), Some(value));
+   |                    ^^^^^^^^^ use of undeclared type `Something`
+
+error[E0433]: failed to resolve: use of undeclared type `Something`
+  --> custom-pallets/sortition-sum-game/src/benchmarking.rs:26:3
+   |
+26 |         Something::<T>::put(100u32);
+   |         ^^^^^^^^^ use of undeclared type `Something`
+
+error[E0599]: no variant or associated item named `new_call_variant_cause_error` found for enum `pallet::Call` in the current scope
+  --> custom-pallets/sortition-sum-game/src/benchmarking.rs:10:1
+   |
+10 | #[benchmarks]
+   | ^^^^^^^^^^^^^ variant or associated item not found in `Call<T>`
+   |
+  ::: custom-pallets/sortition-sum-game/src/lib.rs:32:1
+   |
+32 | pub mod pallet {
+   | --- variant or associated item `new_call_variant_cause_error` not found for this enum
+   |
+   = note: this error originates in the attribute macro `benchmarks` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0433]: failed to resolve: use of undeclared type `Something`
+  --> custom-pallets/sortition-sum-game/src/benchmarking.rs:31:14
+   |
+31 |         assert_eq!(Something::<T>::get(), Some(101u32));
+   |                    ^^^^^^^^^ use of undeclared type `Something`
+
+Some errors have detailed explanations: E0433, E0599.
+For more information about an error, try `rustc --explain E0433`.
+error: could not compile `pallet-sortition-sum-game` (lib) due to 7 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: failed to run custom build command for `node-template-runtime v0.0.0 (/home/ubuntu/shivarthu/runtime)`
+
+Caused by:
+  process didn't exit successfully: `/home/ubuntu/shivarthu/target/debug/build/node-template-runtime-d16dcaae1a46c1b2/build-script-build` (exit status: 1)
+  --- stdout
+  Information that should be included in a bug report.
+  Executing build command: env -u CARGO_ENCODED_RUSTFLAGS -u RUSTC CARGO_TARGET_DIR="/home/ubuntu/shivarthu/target/debug/wbuild/node-template-runtime/target" RUSTC_BOOTSTRAP="1" RUSTFLAGS="-C target-cpu=mvp -C target-feature=-sign-ext -C link-arg=--export-table -Clink-arg=--export=__heap_base -C link-arg=--import-memory  --cfg substrate_runtime " SKIP_WASM_BUILD="" "/home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo" "rustc" "--target=wasm32-unknown-unknown" "--manifest-path=/home/ubuntu/shivarthu/target/debug/wbuild/node-template-runtime/Cargo.toml" "--color=always" "--profile" "release" "-Z" "build-std"
+  Using rustc version: rustc 1.81.0 (eeb90cda1 2024-09-04)
+
+
+  --- stderr
+       Locking 1 package to latest compatible version
+        Adding node-template-runtime-blob v1.0.0 (/home/ubuntu/shivarthu/target/debug/wbuild/node-template-runtime)
+     Compiling sp-runtime v31.0.1 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling node-template-runtime v0.0.0 (/home/ubuntu/shivarthu/runtime)
+     Compiling sp-version v29.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-staking v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-timestamp v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-consensus-slots v0.32.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-api v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-genesis-builder v0.7.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-session v27.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-consensus-grandpa v13.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-consensus-aura v0.32.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling frame-support v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-offchain v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling frame-system-rpc-runtime-api v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-block-builder v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling sp-transaction-pool v26.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling frame-system v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling trait-sortition-sum-game v0.1.0 (/home/ubuntu/shivarthu/traits/trait-sortition-sum-game)
+     Compiling trait-schelling-game-shared v0.1.0 (/home/ubuntu/shivarthu/traits/trait-schelling-game-shared)
+     Compiling trait-shared-storage v0.1.0 (/home/ubuntu/shivarthu/traits/trait-shared-storage)
+     Compiling trait-departments v0.1.0 (/home/ubuntu/shivarthu/traits/trait-departments)
+     Compiling project-tips-runtime-api v0.1.0 (/home/ubuntu/shivarthu/custom-pallets/project-tips/project-tips-runtime-api)
+     Compiling department-funding-runtime-api v0.1.0 (/home/ubuntu/shivarthu/custom-pallets/department-funding/department-funding-runtime-api)
+  warning: unused import: `sp_std::prelude::*`
+   --> /home/ubuntu/shivarthu/custom-pallets/project-tips/project-tips-runtime-api/src/lib.rs:6:5
+    |
+  6 | use sp_std::prelude::*;
+    |     ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+  warning: unused import: `sp_std::prelude::*`
+   --> /home/ubuntu/shivarthu/custom-pallets/department-funding/department-funding-runtime-api/src/lib.rs:6:5
+    |
+  6 | use sp_std::prelude::*;
+    |     ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+  warning: `project-tips-runtime-api` (lib) generated 1 warning (run `cargo fix --lib -p project-tips-runtime-api` to apply 1 suggestion)
+     Compiling profile-validation-runtime-api v0.1.0 (/home/ubuntu/shivarthu/custom-pallets/profile-validation/profile-validation-runtime-api)
+  warning: `department-funding-runtime-api` (lib) generated 1 warning (run `cargo fix --lib -p department-funding-runtime-api` to apply 1 suggestion)
+     Compiling positive-externality-runtime-api v0.1.0 (/home/ubuntu/shivarthu/custom-pallets/positive-externality/positive-externality-runtime-api)
+  warning: unused import: `sp_std::prelude::*`
+   --> /home/ubuntu/shivarthu/custom-pallets/positive-externality/positive-externality-runtime-api/src/lib.rs:6:5
+    |
+  6 | use sp_std::prelude::*;
+    |     ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+  warning: `positive-externality-runtime-api` (lib) generated 1 warning (run `cargo fix --lib -p positive-externality-runtime-api` to apply 1 suggestion)
+     Compiling frame-benchmarking v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-authorship v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-transaction-payment v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling frame-executive v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-insecure-randomness-collective-flip v16.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-transaction-payment-rpc-runtime-api v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-timestamp v27.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-balances v28.0.0 (https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0#3c3d6fce)
+     Compiling pallet-sortition-sum-game v4.0.0-dev (/home/ubuntu/shivarthu/custom-pallets/sortition-sum-game)
+  error[E0599]: no variant or associated item named `new_call_variant_do_something` found for enum `pallet::Call` in the current scope
+    --> /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/benchmarking.rs:10:1
+     |
+  10 |   #[benchmarks]
+     |   ^^^^^^^^^^^^^ variant or associated item not found in `Call<T>`
+     |
+    ::: /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/lib.rs:32:1
+     |
+  32 | / pub mod pallet {
+  33 | |     use super::*;
+  34 | |
+  35 | |     #[pallet::pallet]
+  ...  |
+  70 | |     }
+  71 | | }
+     | |_- variant or associated item `new_call_variant_do_something` not found for this enum
+     |
+     = note: this error originates in the attribute macro `benchmarks` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+  error[E0433]: failed to resolve: use of undeclared type `Something`
+    --> /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/benchmarking.rs:21:14
+     |
+  21 |         assert_eq!(Something::<T>::get(), Some(value));
+     |                    ^^^^^^^^^ use of undeclared type `Something`
+
+  error[E0433]: failed to resolve: use of undeclared type `Something`
+    --> /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/benchmarking.rs:26:3
+     |
+  26 |         Something::<T>::put(100u32);
+     |         ^^^^^^^^^ use of undeclared type `Something`
+
+  error[E0599]: no variant or associated item named `new_call_variant_cause_error` found for enum `pallet::Call` in the current scope
+    --> /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/benchmarking.rs:10:1
+     |
+  10 |   #[benchmarks]
+     |   ^^^^^^^^^^^^^ variant or associated item not found in `Call<T>`
+     |
+    ::: /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/lib.rs:32:1
+     |
+  32 | / pub mod pallet {
+  33 | |     use super::*;
+  34 | |
+  35 | |     #[pallet::pallet]
+  ...  |
+  70 | |     }
+  71 | | }
+     | |_- variant or associated item `new_call_variant_cause_error` not found for this enum
+     |
+     = note: this error originates in the attribute macro `benchmarks` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+  error[E0433]: failed to resolve: use of undeclared type `Something`
+    --> /home/ubuntu/shivarthu/custom-pallets/sortition-sum-game/src/benchmarking.rs:31:14
+     |
+  31 |         assert_eq!(Something::<T>::get(), Some(101u32));
+     |                    ^^^^^^^^^ use of undeclared type `Something`
+
+  Some errors have detailed explanations: E0433, E0599.
+  For more information about an error, try `rustc --explain E0433`.
+  error: could not compile `pallet-sortition-sum-game` (lib) due to 5 previous errors
+  warning: build failed, waiting for other jobs to finish...
+```
+</details>
+
 There are a ton of warnings when running cargo clippy:
 
 <details>
