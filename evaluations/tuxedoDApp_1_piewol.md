@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** accepted
 - **Application Document:** [tuxedoDapp](https://github.com/w3f/Grants-Program/blob/master/applications/TuxedoDapp.md)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by PieWol
@@ -12,7 +12,7 @@
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [CLI-Wallet test](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wardrobe/kitties/src/tests.rs) , [Tuxedo Template Wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/wallet/README.md) | see additional notes |
 | **0d.** | Article | <ul><li>[x] </li></ul> | [Tuxedo DApp specification](https://docs.google.com/document/d/1dHsb_k3Xo5f4yFx802sMe22z6NYq3FeZc9l4bB0exMk/edit), [Talisman integration design](https://docs.google.com/presentation/d/1vsfJ5TYPXcvF4vmY7fHfM25lcNmZdjh6YfUyyoOzVAw/edit) | ok |
 | **0e.** | Docker | <ul><li>[x] </li></ul> | [webservice-wallet](https://github.com/mlabs-haskell/Tuxedo/blob/webservice-redeemer-gen-debug-with-lks/webservice-wallet/Dockerfile)  | works |
-| **0f.** | Frontend, CLI wallet and core | <ul><li>[ ] </li></ul> | [main DApp repo](https://github.com/mlabs-haskell/TuxedoDapp), [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo)  | see notes, frontend shows already purchased kitties still as "for sale". |
+| **0f.** | Frontend, CLI wallet and core | <ul><li>[x] </li></ul> | [main DApp repo](https://github.com/mlabs-haskell/TuxedoDapp), [CLI Wallet and core repo](https://github.com/mlabs-haskell/Tuxedo)  | see notes, frontend shows already purchased kitties still as "for sale". |
 
 
 ## General Notes
@@ -23,7 +23,7 @@ Thanks for providing the testing guide.
 3. Listing a Kitty for purchase works
 4. Purchasing a kitty works
 
-There is one issue in the frontend as it shows Kitties that already have been bought still as "for sale" so the UI support you in creating a TX to buy this even though it has just been bought and is actually no longer for sale. These transactions fail and it doesn't change the owner again.
+There is one issue in the frontend as it shows Kitties that already have been bought still as "for sale" so the UI support you in creating a TX to buy this even though it has just been bought and is actually no longer for sale. These transactions fail and it doesn't change the owner again. This is actually part of milestone 2 and thus this milestone is accepted.
 
 
 
