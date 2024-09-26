@@ -13,3 +13,5 @@
 
 # General Notes
 
+The article is well-written and outlines several viable solutions, with the [simple ISO pallet](https://hackmd.io/@pifragile/BkQKiNJqA#Simple-ISO-pallet) and [pure client](https://hackmd.io/@pifragile/BkQKiNJqA#Pure-client) standing out as perhaps the most practical options. I agree that either of these could also be valuable from a marketing perspective. Great job!
+
