@@ -1,7 +1,7 @@
 # Evaluation
 
 - **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ISO20022.md
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ISO20022-Implementation-POC.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
 
