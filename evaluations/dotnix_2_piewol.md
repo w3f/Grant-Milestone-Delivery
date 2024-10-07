@@ -31,23 +31,6 @@ The validator runs fine in Docker. Also visible in the westend telemetry. Sorry 
          IP: 1.0K in, 780B out
         CPU: 45ms
 ```
-turns out that there seems to be an issue with setting the node key. Even after running
-```
-$ polkadot key generate-node-key | polkadot-validator --set-node-key
-```
-The shortened error output after running 
-```
-$ journalctl -n 1000 -f -u polkadot-validator.service
-```
-
-```[root@bc3024fea3c8:~]# polkadot key generate-node-key | polkadot-validator --set-node-key
-12D3KooWPihimSqbZkEV89YmWnnv8sKEWk68Z1nqRyZsE4jfksmi
-
-[root@bc3024fea3c8:~]# systemctl status polkadot-validator.service
-● polkadot-validator.service - Polkadot Validator
-     Loaded: loaded (/etc/systemd/system/polkadot-validator.service; linked; pr>
-     Active: active (running) since Thu 2024-08-08 08:02:21 UTC; 15min ago
-```
 </details>
 
 ## Audit Trail
