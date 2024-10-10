@@ -21,7 +21,7 @@ developer awareness around the usability of the project. The project has been re
 | **0c.** | Testing and Testing Guide | [Tests folder](https://github.com/philoniare/subxtpy/tree/main/tests)                                              |
 |     0e. | Article                   | [Streaming Support Article](https://www.philoniare.com/blog/real-time-subxtpy)                                     |
 |      1. | Subscription API          | [Source Code](https://github.com/philoniare/subxtpy/blob/442dfafa6164d3a01da7fdb58fc018930a936a00/src/lib.rs#L597) |
-|      2. | Streaming Support         | [Source Code](https://github.com/philoniare/subxtpy/blob/442dfafa6164d3a01da7fdb58fc018930a936a00/src/lib.rs#L597) |
+|      2. | Streaming Support         | [Source Code](https://github.com/philoniare/subxtpy/blob/442dfafa6164d3a01da7fdb58fc018930a936a00/src/lib.rs#L425) |
 |      3. | Documentation Website     | [github.io/subxtpy](https://philoniare.github.io/subxtpy/)                                                         |
 |      4. | Example Scripts           | [Sample Python Scripts](https://github.com/philoniare/subxtpy/tree/main/tests)                                     |
 |      5. | Integration Guides        | [Flask example](https://github.com/philoniare/subxtpy-flask-example)                                                                                                                                                                                                
