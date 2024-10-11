@@ -12,10 +12,10 @@
 | 0c. |  Testing Guide | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu-client-tests <br/> https://github.com/reaudito/shivarthu/blob/main/README.md  |  |
 | 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/blob/main/Containerfile |  | 
 | 0e. | Article | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/blob/main/docs/Shivarthu.md |  |
-|  1. | Substrate module: Peer review system | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/tree/main/custom-pallets/departments <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/department-funding | |
-| 2. | Substrate module: Fund allocation | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/tree/main/custom-pallets/positive-externality <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/project-tips <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/department-funding| |
-| 3. | User interface | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu-client <br/> https://github.com/reaudito/shivarthu-client-tests  | |
-| 4. | Search Engine | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu_offchain_computing|  |
+|  1. | Substrate module: Peer review system | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/tree/main/custom-pallets/departments <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/department-funding | Works as expected |
+| 2. | Substrate module: Fund allocation | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu/tree/main/custom-pallets/positive-externality <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/project-tips <br/> https://github.com/reaudito/shivarthu/tree/main/custom-pallets/department-funding| Works as expected |
+| 3. | User interface | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu-client <br/> https://github.com/reaudito/shivarthu-client-tests  | Works as expected |
+| 4. | Search Engine | <ul><li>[x] </li></ul> | https://github.com/reaudito/shivarthu_offchain_computing | Works as expected |
 
 # General Notes
 
