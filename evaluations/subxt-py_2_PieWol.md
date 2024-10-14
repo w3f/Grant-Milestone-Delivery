@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subxt-python.md
 - **Milestone:** 2
 
@@ -14,26 +14,17 @@
 | 0e. | Article                   | <ul><li>[x] </li></ul> | [Article](https://www.philoniare.com/blog/real-time-subxtpy)                             | nice
 | 1. | Subscription API              | <ul><li>[x] </li></ul> | [Source Code](https://github.com/philoniare/subxtpy/blob/442dfafa6164d3a01da7fdb58fc018930a936a00/src/lib.rs#L597)           | 
 | 2. | Streaming Support              | <ul><li>[x] </li></ul> | [Source Code](https://github.com/philoniare/subxtpy/blob/442dfafa6164d3a01da7fdb58fc018930a936a00/src/lib.rs#L597)      |
-| 3. | Documentation Website         | <ul><li>[ ] </li></ul> | [github.io/subxtpy](https://philoniare.github.io/subxtpy/)       | check notes
+| 3. | Documentation Website         | <ul><li>[x] </li></ul> | [github.io/subxtpy](https://philoniare.github.io/subxtpy/)       | nice update
 | 4. | Example Scripts   | <ul><li>[x] </li></ul> | [Sample Python Scripts](https://github.com/philoniare/subxtpy/tree/main/tests) | ok
-| 5. | Integration Guides               | <ul><li>[ ] </li></ul> | [Flask example](https://github.com/philoniare/subxtpy-flask-example)       | 
+| 5. | Integration Guides               | <ul><li>[x] </li></ul> | [Flask example](https://github.com/philoniare/subxtpy-flask-example)       | 
 | 6. | Published pypi package      | <ul><li>[x] </li></ul> | [pypi](https://pypi.org/project/subxtpy/) | nice 
 
 # General Notes
-
-
-## Documentation
-The documentation under this link https://philoniare.github.io/subxtpy/ is not that convenient to read.
-I'm surprised that the code blocks you are trying to create with "```" are not visually different from the remaining text. This even works better in markdown. I would love it if this could be improved. I'm not familiar with Sphinx but having looked at a few examples I think there are some formatting issues with the current site. 
+Thanks for the latest changes to the documentation. Everything looks good.
 
 ## Build
-builds, but on top of the details in the readme the build process needs ``pip install patchelf``
+builds
 
-See here 
-```
- Warning: Failed to set rpath for /home/ubuntu/subxtpy/target/debug/libsubxtpy.so: Failed to execute 'patchelf', did you install it? Hint: Try `pip install maturin[patchelf]` (or just `pip install patchelf`)
-```
-once done, succesfully builds.
 ````
 (.venv) ubuntu@ip-172-31-18-251:~/subxtpy$ maturin develop
 ⚠️  Warning: You specified maturin ==1.5.1 in pyproject.toml under `build-system.requires`, but the current maturin version is 1.7.4
