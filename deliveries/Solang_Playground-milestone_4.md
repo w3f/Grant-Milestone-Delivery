@@ -6,7 +6,7 @@
 - **Milestone Number:** 4
 
 **Context**
-This milestone involves 
+This milestone involves improving the UI of Solang Playground. This also includes some UX improvements; adding a console to view the output of compilation.
 
 **Deliverables**
 | Number | Deliverable | Link | Notes |
