@@ -54,7 +54,7 @@ CONTAINER ID   IMAGE      COMMAND   CREATED          STATUS          PORTS     N
 ```
 No unit tests as the milestone was mostly documentation based.
 
-Types generate successfully with `dart run polkadart_cli:generate -v`:
+Classes generate successfully with `dart run polkadart_cli:generate -v`:
 
 <details>
  <summary>Output</summary>
