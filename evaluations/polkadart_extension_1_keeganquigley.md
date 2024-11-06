@@ -1,9 +1,23 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkadart_extension.md
 - **Milestone:** 1
 - **Evaluation by:** keeganquigley
+
+| Number | Deliverable | Accepted | Link | Notes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 0a. | License | <ul><li>[x] </li></ul> | https://github.com/polkadart/docs/blob/main/LICENSE | | 
+| 0b.  | Documentation | <ul><li>[x] </li></ul> | https://polkadart.dev | Very robust docs, nice job!| 
+| 1a.  | API docs | <ul><li>[x] </li></ul> | https://polkadart.dev/api/overview | Great docs| 
+| 1c.  | API examples | <ul><li>[x] </li></ul> | https://polkadart.dev/api/state/#sample-usage | Examples work as expected. | 
+| 2a.  | Metadata docs | <ul><li>[x] </li></ul> | https://polkadart.dev/metadata/overview | Good| 
+| 2b.  | Metadata examples | <ul><li>[x] </li></ul> | https://polkadart.dev/metadata/overview/#example-stateapi | Examples work as expected. | 
+| 3a.  | Keyring docs | <ul><li>[x] </li></ul> | https://polkadart.dev/keyring-signer/overview | Good | 
+| 3b.  | Keyring examples | <ul><li>[x] </li></ul> | https://polkadart.dev/keyring-signer/keypair | Examples work as expected. | 
+| 1d.  | API faq | <ul><li>[x] </li></ul> | http://polkadart.dev/guides/listen-blocks | Good | 
+| 2c.  | Metadata faq | <ul><li>[x] </li></ul> | https://polkadart.dev/guides/read-storage | Good | 
+| 3c.  | Keyring faq | <ul><li>[x] </li></ul> | http://localhost:4321/guides/make-transfer | Good | 
 
 # General Notes
 
