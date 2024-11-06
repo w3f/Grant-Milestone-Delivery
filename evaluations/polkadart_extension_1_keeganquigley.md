@@ -52,3 +52,5 @@ ubuntu@ip-172-31-24-52:~/polkadart$ docker ps
 CONTAINER ID   IMAGE      COMMAND   CREATED          STATUS          PORTS     NAMES
 50eae4761fbb   my-image   "bash"    47 seconds ago   Up 47 seconds             sharp_babbage
 ```
+
+
