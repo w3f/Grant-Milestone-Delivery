@@ -1093,3 +1093,40 @@ assethub.dart
 ```
 </details>
 
+Extrinsic demo works, properly gives insufficient balance error:
+
+```dart
+ubuntu@ip-172-31-24-52:~/polkadart/examples$ dart run bin/extrinsic_demo.dart
+Sr25519 Wallet: 5Cabw1zd5pK8CbuPFHQYX7Ac9BVSumfw5BkiNQajstFdYDJq
+Ecdsa Wallet: 5Hft7aSusEA1vFX43VZFbKmxiiujRnP7RUk87B66VVzqbpyY
+Block Number: 23335484
+Destination: 5Hft7aSusEA1vFX43VZFbKmxiiujRnP7RUk87B66VVzqbpyY
+Payload: 040400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00c503000000c2800f001a000000e143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e35cee4199a76e537f17ad1451473b71dcfc055f721cc9a13bff88415884fce7900
+Signature: 04cfb3a783d27e29ef96358396a4760938618b9972b52130f647ab209cf8027ff69ac0378976b048967d914e52737cd8415c02ec36ac1fe8d22b9e94ef0db284
+sr25519 wallet extrinsic: 3102840016cd6ab0878d5078dd14fe714e87ea77e77583cec4cbb9d95f2f06db2a86df5f0104cfb3a783d27e29ef96358396a4760938618b9972b52130f647ab209cf8027ff69ac0378976b048967d914e52737cd8415c02ec36ac1fe8d22b9e94ef0db284c503000000040400f80148e326bf3826758422b95c9806105ba5f82dbb210abafb1b2e8e249e620e00
+Unhandled exception:
+Exception: {code: 1010, message: Invalid Transaction, data: Inability to pay some fees (e.g. account balance too low)}
+#0      AuthorApi.submitExtrinsic (package:polkadart/apis/author.dart:17:7)
+<asynchronous suspension>
+#1      main (file:///home/ubuntu/polkadart/examples/bin/extrinsic_demo.dart:112:22)
+<asynchronous suspension>
+```
+Get account info works:
+<details>
+ <summary>Output</summary>
+
+```dart
+First 10 account storage keys: (0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900001c2ed146255b0bed7891676f22e9047ff8ec5bf639dd08672157cff3c675aec4ec17276036689e07b405a05b4449, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900002233d8a3dd7c3bcea0c38ec1e4421d3073024a77ed24474b4c13f8949e9e2a63725be5a6ff10b04c136a25d488c3, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900002ed3d34f8412441bdb1db5d4a9dfbc74238ff6bdc1b5e59208c688812cde864a815776980edd8ed2965115e01615, ..., 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da9000069eb42781aa99b0695f2166d6a382eabfbaabc9302400e24924da229bfdf57e9ea5f26dc4657b8eac7be066bd506, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900007098e9333ac03decdd85800a888868caf96152aaa206c709b238499142c8b818bb2951169736e08286976840b7ca)
+First 10 account pubKeys: (0x00001c2ed146255b0bed7891676f22e9047ff8ec5bf639dd08672157cff3c675, 0x00002233d8a3dd7c3bcea0c38ec1e4421d3073024a77ed24474b4c13f8949e9e, 0x00002ed3d34f8412441bdb1db5d4a9dfbc74238ff6bdc1b5e59208c688812cde, ..., 0x000069eb42781aa99b0695f2166d6a382eabfbaabc9302400e24924da229bfdf, 0x00007098e9333ac03decdd85800a888868caf96152aaa206c709b238499142c8)
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+```
+</details>
