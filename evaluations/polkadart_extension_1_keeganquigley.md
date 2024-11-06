@@ -21,6 +21,8 @@
 
 # General Notes
 
+Nice work guys! Amazing docs. Good code comments. Hopefully this will help attract some Dart devs to the ecosystem! Looking forward to the next code-based delivery.
+
 Docker builds successfully:
 ```sh
 ubuntu@ip-172-31-24-52:~/polkadart$ docker build -t my-image .
