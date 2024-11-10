@@ -1,0 +1,50 @@
+
+# Milestone Delivery :mailbox:
+
+
+**The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/myriad_social.md
+
+
+
+* **Milestone Number:** 2 
+
+**Context** (optional)
+> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+## Summary of Deliverables for Myriad Social's Polkadot Grant
+
+### 0a. License
+Our project is released under the GPL 3.0 License, ensuring it's open-source and fostering a community-driven approach.
+
+### 0b. Documentation
+We've included a comprehensive [documentation](https://github.com/myriadsocial/myriad-web/blob/main/docs/milestone-3-documentation.md) in the README file on our GitHub repo. This serves as a guide for the entire project.
+
+### 0c. Testing and Testing Guide
+We've prepared a [Testing Guide](https://github.com/myriadsocial/myriad-web/blob/main/docs/milestone-3-testing-guide.md). This guide, also found in the README, outlines how to test the project using Docker. 
+
+### 0d. Docker
+For ease of testing, we have a [Dockerfile](https://github.com/myriadsocial/myriad-infrastructure/blob/main/linux/Dockerfile) ready to make the setup as smooth as possible. This Dockerfile has been updated to reflect the changes in this Milestone 3.
+
+
+**Deliverables**
+> Please provide a list of all deliverables of the milestone extracted from the initial application and a link to the deliverable itself. Ideally, all links inside the below table should include a commit hash, which will be used for testing. If you don't provide a commit hash, we will work off the default branch of your repository. Thus, if you plan on continuing work after delivery, we suggest you create a separate branch for either the delivery or your continuing work. 
+> 
+> If there is anything particular about any deliverables we or a future reader should know, use the respective `Notes` column.
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0.  | Deployment of Myriad Social on Paseo Network | https://polkadot.js.org/apps/?rpc=wss://ws-rpc.paseo.myriad.social/websocket/#/explorer | Myriad Social is now part of the Paseo network as a Parachain with ParaID 4005. This integration brings new features and better connectivity to everyone using Myriad. We've completed the token migration from Octopus Testnet to Myriad Paseo! All user funds have been safely moved through our automated airdrop process. This migration ensures that all user balances are preserved, tokens are now active on Paseo Network, and no action is needed from users - funds are already transferred | 
+| 1.  | New UI (Front-end), Polkadot Setup, Connection, and User Guide | https://github.com/myriadsocial/myriad-web | We have revamped the Polkadot wallet integration process to make it more user-friendly. A step-by-step guide with interactive tooltips now assists you through every stage of connecting your Polkadot wallet. ![Connect to Myriad on Paseo](https://github.com/myriadsocial/myriad-web/raw/main/docs/select-wallet.png "Connect to Myriad on Paseo")![Wallet sign-in](https://github.com/myriadsocial/myriad-web/raw/main/docs/wallet-sign-in.png "Wallet sign-in") These wallet improvements make it easier for everyone to use Web3 features. With clearer steps and helpful guides, connecting your wallet is now simpler and safer. | 
+| 2.  | Simplified Transaction Flow for Tipping and Exclusive Content | https://github.com/myriadsocial/myriad-web | We have streamlined the transaction processes for tipping creators and accessing exclusive content, ensuring a smoother experience. ![Send Tip](https://github.com/myriadsocial/myriad-web/raw/main/docs/step-send-tip.png "Send Tip") ![Send MYRIAr](https://github.com/myriadsocial/myriad-web/raw/main/docs/send-tip-myriar.png "Send MYRIAr") The new Tipping Enhancements bring a more seamless and transparent experience for users. With a unified interface, the tipping window is now consolidated and easy to navigate, simplifying the process. Quick access buttons allow users to tip creators directly from their posts without the need for extra navigation, making support instant and effortless. Moreover, transparent fees ensure that any transaction costs are clearly displayed before confirming a tip, fostering trust and clarity in every transaction. | 
+| 3.  | Simplified Timeline Discovery and First Step Guide for New Users | https://github.com/myriadsocial/myriad-web | ![Timeline Discovery](https://github.com/myriadsocial/myriad-web/raw/main/docs/timeline-discovery.png "Timeline Discovery") Discovering new timelines and managing your own is now more intuitive thanks to a revamped layout and enhanced search capabilities, allowing users to discover new timeline based on tags user want to see or dont want to see. ![Exclusive Timeline](https://github.com/myriadsocial/myriad-web/raw/main/docs/create-exclusive-timeline.png "Exclusive Timeline") We have introduced the Exclusive Timeline feature, which allows you to mark specific timeline content as exclusive. When a timeline is marked as exclusive, it will be clearly indicated with an exclusive label, helping differentiate it from regular timelines in the listing. |
+| 4.  | B2B Features: Multi-User Management System | https://github.com/myriadsocial/myriad-web | We have implemented comprehensive B2B features that enable organizations to manage multiple users, timelines, and content metrics efficiently through a single interface. This enterprise-grade functionality provides organizations with powerful tools for team collaboration and content management. ![Multi User Login](https://github.com/myriadsocial/myriad-web/raw/main/docs/multi-user.png "Multi User Login") The new account sharing system introduces a secure way to manage multiple user access using Personal Access Tokens, One-Time Token Display, and Seamless Authentication. With these new B2B features, teams and businesses can now better manage their Myriad Social presence. Whether you're handling multiple accounts, working with a team, or tracking content performance, these tools make it simple. |
+| 5.  | Mobile Wallet Integration with Nova Wallet | https://www.youtube.com/watch?v=6PtEhR9-K50 | Myriad Social now supports mobile wallet integration with Nova Wallet. Previously, mobile users were limited to connecting via NEAR Wallet, but with this update, you can now connect your Polkadot wallet seamlessly on mobile devices. ![Multi User Login](https://camo.githubusercontent.com/e49259a3869a59b49acdff2ea2ce8778af594f5a7a82a731f7d3e6cb967b9338/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f365074456852392d4b35302f302e6a7067 "Multi User Login") |
+| 6.  | Backend Improvements and Algorithm Enhancements | https://www.youtube.com/watch?v=D0Km7_Buclo | We have significantly enhanced our backend infrastructure and algorithms to improve content discovery, platform performance, and user experience. ![Improved Backend](https://github.com/myriadsocial/myriad-web/raw/main/docs/Filtering%20cut%20off12.png "Improved Backend") Users can now seamlessly import and embed YouTube content with native playback support, automatic metadata extraction, and optimized performance, while our refined content ranking algorithm focuses on the most recent 12 months of data to ensure fresh content, phasing out historical posts while still maintaining archive access. Enhanced ranking factors now include post engagement metrics, timeline trends, hashtag usage, user interactions, and content quality signals. |
+| 7.  | Performance Optimization and Enhancement | https://github.com/myriadsocial/myriad-web | We have implemented significant performance improvements to enhance the user experience and reduce resource consumption. These optimizations focus on reducing payload sizes, implementing modern compression techniques, and optimizing network requests. ![Transfer Size](https://github.com/myriadsocial/myriad-web/raw/main/docs/image-1.png "Transfer Size") We have successfully cut the total transfer size by more than 50%, reducing it from 24.3 MB to 10.4 MB. On another note, the platform now utilizes Brotli compression, a modern compression algorithm that offers better compression ratios compared to traditional methods like gzip. We've also achieved a significant improvement in Fetch/XHR payload efficiency through Brotli compression, reducing the overhead to just 7% of its previous size. Next, through careful analysis and optimization of our JavaScript bundles, combined with Brotli compression, we've achieved a 14% reduction in JavaScript payload size, bringing it down to 325kb. Our latest updates have made Myriad Social faster and more efficient. Pages load quicker, use less data, and work better on all devices. Using new compression technology and better code, we've cut loading times in half while using less bandwidth. |
+| 8.  | Self-Hosting Capabilities | https://github.com/myriadsocial/myriad-infrastructure | Myriad Social can now be self-hosted, giving users complete control over their social media infrastructure. Detailed [documentation and resources](https://github.com/myriadsocial/myriad-infrastructure/blob/main/linux/README.md) are available to help you begin your self-hosting journey. |
+
+**Additional Information**
+We are excited to share this delivery document with you to confirm the successful completion of all deliverable items from our initial application. We apologise that this deliverable is overdue due to several technical challenges and an unexpected product update that required a migration to Paseo.
+
+We are excited for you to experience these new features and improvements. Your feedback is invaluable to us, so please do not hesitate to share your thoughts and suggestions.
