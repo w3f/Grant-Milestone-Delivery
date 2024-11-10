@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Get filenames of any deliveries being added
         id: files
-        uses: Ana06/get-changed-files@v2.0.0
+        uses: Ana06/get-changed-files@v2.3.0
         with:
           format: 'json'
           filter: |
@@ -60,7 +60,7 @@ jobs:
       matrix:
         filename: ${{ fromJson(needs.get-delivery-files.outputs.filenames) }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -88,7 +88,7 @@ jobs:
           echo "::set-output name=date::$(date -d "$delivery_date" +%d/%m/%Y)"
   
       - name: Write data to sheet
-        uses: jroehl/gsheet.action@v1.1.1
+        uses: jroehl/gsheet.action@v2.1.1
         with:
           spreadsheetId: ${{ secrets.SPREADSHEET_ID }}
           commands: |
@@ -103,7 +103,7 @@ jobs:
                     "${{ steps.parse-delivery.outputs.milestone_number }}",
                     "",
                     "Not Yet",
-                    "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
+                    "=INDEX(Legal!$X$2:$X,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ github.event.pull_request.html_url }}",
                     "",
                     "${{ steps.date.outputs.date }}",

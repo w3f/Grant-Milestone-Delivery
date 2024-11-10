@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Get filenames of any deliveries being added
         id: files
-        uses: Ana06/get-changed-files@v2.0.0
+        uses: Ana06/get-changed-files@v2.3.0
         with:
           format: 'json'
           filter: |
@@ -24,9 +24,9 @@ jobs:
     needs: get-delivery-files
     if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
     outputs:
-      needs_badge: ${{ steps.badge-check.outputs.check }} 
-      needs_last_milestone_comment: ${{ steps.last-milestone.outputs.check }}
-      request_invoice: ${{ github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]' }}
+      needs_badge: ${{ steps.badge-check.outputs.check && github.event.pull_request.merged == true }} 
+      needs_last_milestone_comment: ${{ steps.last-milestone.outputs.check && github.event.pull_request.merged == true }}
+      request_invoice: ${{ github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]' && github.event.pull_request.merged == true }}
     strategy:
       max-parallel: 1
       fail-fast: false
@@ -34,7 +34,7 @@ jobs:
         filename: ${{ fromJson(needs.get-delivery-files.outputs.filenames) }}
  
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -58,12 +58,12 @@ jobs:
         # A matrix strategy overwrites outputs, meaning `needs_badge` will be `true` if atleast one of the files matches the following condition.
         # This way, there'll only be max 1 comment left per PR
         if: steps.parse-delivery.outputs.milestone_number == 1 && steps.parse-grant.outputs.level != 1
-        run: echo "::set-output name=check::true"
+        run: echo "check=true" >> $GITHUB_OUTPUT
       
       - name: Check if this PR needs a "last milestone" comment
         id: last-milestone
         if: ${{ !steps.parse-delivery.is_maintenance && steps.parse-delivery.outputs.milestone_number == steps.parse-grant.outputs.total_milestones }}
-        run: echo "::set-output name=check::true"
+        run: echo "check=true" >> $GITHUB_OUTPUT
 
   comment-badge:
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
     if: needs.check-needs-badge.outputs.needs_badge
     steps:
       - name: Leave badge comment if applicable
-        uses: thollander/actions-comment-pull-request@1.0.1
+        uses: thollander/actions-comment-pull-request@v2.5.0
         with:
           message: >
             Congratulations on completing the first milestone of this grant!
@@ -97,8 +97,8 @@ jobs:
     if: always()
     steps:
       - name: Last milestone comment
-        if: needs.check-needs-badge.outputs.needs_last_milestone_comment
-        uses: thollander/actions-comment-pull-request@1.0.2
+        if: needs.check-needs-badge.outputs.needs_last_milestone_comment 
+        uses: thollander/actions-comment-pull-request@v2.5.0
         with:
           message: > 
             We noticed that this is the last milestone of your project. Congratulations on completing your grant! 🎊<br/>
@@ -114,13 +114,12 @@ jobs:
 
   request-invoice:
     runs-on: ubuntu-latest
-    needs: check-needs-badge
     if: always()
     steps:
       - name: Request invoice
-        uses: thollander/actions-comment-pull-request@1.0.1
+        if: github.event.pull_request.merged == true && needs.get-delivery-files.outputs.filenames != '[]'
+        uses: thollander/actions-comment-pull-request@v2.5.0
         with:
           message: >
             :coin: Please fill out the [invoice form](https://docs.google.com/forms/d/e/1FAIpQLSfmNYaoCgrxyhzgoKQ0ynQvnNRoTmgApz9NrMp-hd8mhIiO0A/viewform?usp=pp_url&entry.1070766548=${{github.event.pull_request.html_url}}) in order to initiate the payment process. Thank you! 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
