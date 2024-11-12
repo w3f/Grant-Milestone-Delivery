@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** accept
+- **Status:** accepted
 - **Application Document:** [P2P State Channels](https://github.com/w3f/Grants-Program/blob/master/applications/P2PStateChannels.md)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by PieWol
