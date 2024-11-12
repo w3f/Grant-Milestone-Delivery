@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accept
 - **Application Document:** [P2P State Channels](https://github.com/w3f/Grants-Program/blob/master/applications/P2PStateChannels.md)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by PieWol
@@ -18,7 +18,8 @@
 
 
 ## General Notes
-Looks good, all tests are passing and all deliverables have been achieved. Thanks!
+Looks good, all tests are passing and all deliverables have been achieved. Thanks! A lot of files could use some more expressive inline documentation. I'm hopeful that this will be improved in the future. 
+I'd love to see a PVM integration.  
 
 ## tests
 all tests passing
