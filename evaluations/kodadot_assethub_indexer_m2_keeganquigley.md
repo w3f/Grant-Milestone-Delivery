@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/kodadot_assethub_nft_m2.md
 - **Milestone:** 2
 
@@ -352,7 +352,11 @@ Grantee kept a detailed log here https://github.com/kodadot/stick/pull/294
 
 Hosted version works as well https://squid.subsquid.io/speck/graphql
 
+Token Schema works w/ GraphQL. CRUD handler works.
+
 ## Testing
+
+Docker runs successfully. Tests could use more coverage. Team mentioned that Subsquid needs to write more internal unit tests for `database` usage but are currently blocked waiting for [Gateway 2.0](https://docs.subsquid.io/subsquid-network/participate/gateway/). Deliverables don't specify writing unit tests for downstream deps so I will go ahead and pass it, but consider adding more tests.
 
 6 unit tests passing:
 
