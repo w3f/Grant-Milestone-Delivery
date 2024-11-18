@@ -300,3 +300,5 @@ Zombienet config builds successfully:
 │ ChainSpec Path               │ /tmp/zombie-c073a78a250791e5e822688b3e077f52_-1-taKrL64zwcAH/1001-rococo-local.json
 ```
 </details>
+
+Some unit tests currently failing.
