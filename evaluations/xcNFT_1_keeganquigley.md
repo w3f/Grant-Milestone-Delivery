@@ -1,7 +1,7 @@
 # Evaluation
 
-- **Status:** Accepted
-- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcm-tools-follow-up-2.md
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcNFT.md
 - **Milestone:** 1
 
 **Deliverables**
