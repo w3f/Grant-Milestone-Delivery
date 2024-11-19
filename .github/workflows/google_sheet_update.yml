@@ -103,7 +103,7 @@ jobs:
                     "${{ steps.parse-delivery.outputs.milestone_number }}",
                     "",
                     "Not Yet",
-                    "=INDEX(Legal!$W$2:$W,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
+                    "=INDEX(Legal!$X$2:$X,MATCH(INDIRECT(CONCATENATE(\"B\", TEXT(ROW(), \"#\"))),Legal!$D$2:$D,0))",
                     "${{ github.event.pull_request.html_url }}",
                     "",
                     "${{ steps.date.outputs.date }}",
