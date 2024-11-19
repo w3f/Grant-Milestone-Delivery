@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/xcNFT.md
 - **Milestone:** 1
 
@@ -301,73 +301,185 @@ Zombienet config builds successfully:
 ```
 </details>
 
-Some unit tests currently failing in `cargo test --package pallet-parachain-xcnft --lib -- tests --nocapture`:
+~~Some unit tests currently failing.~~
+
+UPDATE: `cargo test --package pallet-parachain-xcnft --lib -- tests --nocapture` works now with warnings:
 
 <details>
   <summary>Output</summary>
 
 ```rust
-running 51 tests
+warning: type `proposal_time_in_blocks_parameter` should have an upper camel case name
+   --> templates/parachain/pallets/xcnft/src/mock.rs:131:12
+    |
+131 |     pub const proposal_time_in_blocks_parameter: u32 = 10;
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `ProposalTimeInBlocksParameter`
+    |
+    = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: type `max_owners_parameter` should have an upper camel case name
+   --> templates/parachain/pallets/xcnft/src/mock.rs:132:12
+    |
+132 |     pub const max_owners_parameter: u32 = 1000000;
+    |               ^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `MaxOwnersParameter`
+
+warning: type `max_votes` should have an upper camel case name
+   --> templates/parachain/pallets/xcnft/src/mock.rs:133:12
+    |
+133 |     pub const max_votes: u32 = 1000000;
+    |               ^^^^^^^^^ help: convert the identifier to upper camel case: `MaxVotes`
+
+warning: unused imports: `BuildStorage` and `ConstU64`
+  --> templates/parachain/pallets/xcnft/src/tests/testpara.rs:35:11
+   |
+35 |     traits::{ConstU64, IdentityLookup, Verify},
+   |              ^^^^^^^^
+36 |     AccountId32, BuildStorage, MultiSignature,
+   |                  ^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: type `proposal_time_in_blocks_parameter` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testpara.rs:81:12
+   |
+81 |     pub const proposal_time_in_blocks_parameter: u32 = 10;
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `ProposalTimeInBlocksParameter`
+
+warning: type `max_owners_parameter` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testpara.rs:82:12
+   |
+82 |     pub const max_owners_parameter: u32 = 1000000;
+   |               ^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `MaxOwnersParameter`
+
+warning: type `max_votes` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testpara.rs:83:12
+   |
+83 |     pub const max_votes: u32 = 1000000;
+   |               ^^^^^^^^^ help: convert the identifier to upper camel case: `MaxVotes`
+
+warning: unused imports: `AsPrefixedGeneralIndex`, `ConvertedConcreteId`, `NoChecking`, and `NonFungiblesAdapter`
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay/xcm_config/asset_transactor.rs:21:2
+   |
+21 |     AsPrefixedGeneralIndex, ConvertedConcreteId, FungibleAdapter, IsConcrete, NoChecking,
+   |     ^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^                               ^^^^^^^^^^
+22 |     NonFungiblesAdapter,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `xcm_executor::traits::JustTry`
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay/xcm_config/asset_transactor.rs:24:5
+   |
+24 | use xcm_executor::traits::JustTry;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `AsEnsureOriginWithArg`
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay.rs:25:3
+   |
+25 |         AsEnsureOriginWithArg, ConstU128, Everything, Nothing, ProcessMessage, ProcessMessageError,
+   |         ^^^^^^^^^^^^^^^^^^^^^
+
+warning: type `proposal_time_in_blocks_parameter` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay.rs:83:12
+   |
+83 |     pub const proposal_time_in_blocks_parameter: u32 = 10;
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `ProposalTimeInBlocksParameter`
+
+warning: type `max_owners_parameter` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay.rs:84:12
+   |
+84 |     pub const max_owners_parameter: u32 = 1000000;
+   |               ^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `MaxOwnersParameter`
+
+warning: type `max_votes` should have an upper camel case name
+  --> templates/parachain/pallets/xcnft/src/tests/testrelay.rs:85:12
+   |
+85 |     pub const max_votes: u32 = 1000000;
+   |               ^^^^^^^^^ help: convert the identifier to upper camel case: `MaxVotes`
+
+warning: unused import: `crate::tests::testpara::XcNFT`
+ --> templates/parachain/pallets/xcnft/src/tests.rs:9:5
+  |
+9 | use crate::tests::testpara::XcNFT;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Event::Destroyed`
+  --> templates/parachain/pallets/xcnft/src/tests.rs:12:60
+   |
+12 | use pallet_nfts::{CollectionConfigFor, CollectionSettings, Event::Destroyed, MintSettings};
+   |                                                            ^^^^^^^^^^^^^^^^
+
+warning: unused import: `traits::Bounded`
+  --> templates/parachain/pallets/xcnft/src/tests.rs:13:18
+   |
+13 | use sp_runtime::{traits::Bounded, AccountId32, BoundedVec, BuildStorage};
+   |                  ^^^^^^^^^^^^^^^
+
+warning: unused imports: `NFTs` and `RuntimeOrigin`
+  --> templates/parachain/pallets/xcnft/src/tests.rs:95:18
+   |
+95 |     use testrelay::{NFTs, Runtime, RuntimeOrigin, System};
+   |                     ^^^^           ^^^^^^^^^^^^^
+
+warning: `pallet-parachain-xcnft` (lib test) generated 17 warnings (run `cargo fix --lib -p pallet-parachain-xcnft --tests` to apply 8 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 57s
+     Running unittests src/lib.rs (target/debug/deps/pallet_parachain_xcnft-db352bb2e21993f9)
+
+running 50 tests
 test mock::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
-test tests::parse_collection_same_owner_successful ... ok
-test tests::parse_collection_diff_nft_owners_successful ... ok
-test tests::testpara::test_genesis_config_builds ... ok
 test tests::testpara::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
-test tests::testrelay::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
+test tests::parse_collection_diff_nft_owners_successful ... ok
+test tests::parse_collection_same_owner_successful ... ok
+test tests::testpara::test_genesis_config_builds ... ok
 test tests::testrelay::test_genesis_config_builds ... ok
+test tests::testrelay::__construct_runtime_integrity_test::runtime_integrity_tests ... ok
 test tests::try_claiming_nft_no_collection ... ok
-test tests::try_claiming_nft_not_owner ... ok
 test tests::try_claiming_nft_no_collection_origin ... ok
 test tests::initiate_proposal_successfuly ... ok
-test tests::try_claiming_nft_wrong_origin_collection ... ok
+test tests::try_claiming_nft_not_owner ... ok
 test tests::try_claiming_nft_wrong_nft ... ok
-test tests::try_claiming_nft_success ... ok
-test tests::try_collection_burn_success ... ok
+test tests::try_claiming_nft_wrong_origin_collection ... ok
 test tests::try_collection_metadata_success ... ok
+test tests::try_collection_burn_success ... ok
 test tests::try_collection_owner_send_success ... ok
-test tests::try_initiating_proposal_collection_doesnt_exist ... ok
-test tests::try_initiating_proposal_doesnt_exist ... ok
+test tests::try_claiming_nft_success ... ok
 test tests::try_collection_parse_empty_successful ... ok
+test tests::try_initiating_proposal_doesnt_exist ... ok
+test tests::try_initiating_proposal_collection_doesnt_exist ... ok
 test tests::try_initiating_proposal_that_did_not_pass ... ok
-test tests::try_nft_burn_successful ... ok
-test tests::try_initiating_proposal_no_collection_owner ... ok
 test tests::try_nft_owner_successful ... ok
+test tests::try_initiating_proposal_no_collection_owner ... ok
+test tests::try_nft_burn_successful ... ok
 test tests::try_nft_metadata_successful ... ok
-test tests::try_parse_collection_burn_successful ... ok
-2024-11-19T00:20:27.004359Z ERROR runtime::system: Logic error: Unexpected underflow in reducing consumer    
-test tests::try_parse_collection_owner_successful ... ok
 test tests::try_parse_collection_metadata_successful ... ok
-test tests::try_parse_nft_burn_successful ... ok
+test tests::try_parse_collection_burn_successful ... ok
 test tests::try_parse_nft_metadata_successful ... ok
 test tests::try_parse_nft_owner_successful ... ok
+test tests::try_parse_nft_burn_successful ... ok
+test tests::try_parse_nft_transfer_no_collection ... ok
 test tests::try_parse_nft_transfer_already_received ... ok
 test tests::try_parse_nft_transfer_not_collection_owner ... ok
-test tests::try_parse_nft_transfer_not_existing_nft ... ok
-test tests::try_parse_nft_transfer_no_collection ... ok
 test tests::try_parse_nft_transfer_successful ... ok
+test tests::try_parse_nft_transfer_not_existing_nft ... ok
 test tests::try_parse_nft_transfer_return_to_origin ... ok
 test tests::try_sending_collection_different_owners_success ... ok
-test tests::try_sending_nft_no_collection ... ok
 test tests::try_sending_collection_that_user_doesnt_own ... ok
-test tests::try_sending_nft_no_nft ... ok
 test tests::try_sending_collection_empty_success ... ok
-test tests::try_sending_collection_same_owner_success ... ok
+test tests::try_sending_nft_no_collection ... ok
 test tests::try_sending_nft_not_nft_owner ... ok
+test tests::try_sending_collection_same_owner_success ... ok
 test tests::try_sending_nft_successful ... ok
-test tests::try_voting_on_proposal_again_same_vote ... ok
-test tests::try_voting_on_proposal_did_not_pass ... ok
-test tests::try_voting_on_proposal_expired ... ok
+test tests::try_sending_nft_no_nft ... ok
 test tests::try_voting_on_non_existing_proposal ... ok
+test tests::try_voting_on_proposal_again_same_vote ... ok
+test tests::try_voting_on_proposal_expired ... ok
+test tests::try_voting_on_proposal_did_not_pass ... ok
 test tests::try_voting_on_proposal_when_no_owner ... ok
 test tests::vote_on_proposal_successfuly ... ok
 
-test result: ok. 51 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.02s
-
-ubuntu@ip-172-31-28-48:~/polkadot-sdk$ cargo test --package pallet-parachain-xcnft-two --lib -- tests --nocapture
+test result: ok. 50 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.03s
 ```
 </details>
 
-`cargo test --package pallet-parachain-xcnft-two --lib -- tests --nocapture` works:
+`cargo test --package pallet-parachain-xcnft-two --lib -- tests --nocapture` works with warnings:
 
 <details>
   <summary>Output</summary>
