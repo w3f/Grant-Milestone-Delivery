@@ -1,3 +1,18 @@
+# Evaluation
+
+
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/DAOsign.md
+- **Milestone:** 3
+
+| Number | Deliverable | Accepted | Link | Notes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/DAOsign/relayer/blob/main/LICENSE) | Apache 2.0 |
+| 0b. | Documentation                   | <ul><li>[x] </li></ul> | [Readme](https://github.com/DAOsign/relayer/blob/main/README.md) |  |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |         https://github.com/DAOsign/relayer/blob/main/README.md#testing |         |
+| 0d.    | Docker                    | <ul><li>[x] </li></ul> |   https://github.com/DAOsign/relayer?tab=readme-ov-file#with-docker    | 
+| 1. | Gas Relayer             | <ul><li>[x] </li></ul> |[Github Repo](https://github.com/DAOsign/relayer)    |  |
+
 # General Notes
 
 After copying the example .env file the tests are currently failing with a lot of errors:
