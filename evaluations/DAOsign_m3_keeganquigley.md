@@ -15,6 +15,8 @@
 
 # General Notes
 
+The test is failing with errors but it's due to the .env setup.
+
 After copying the example .env file the tests are currently failing with a lot of errors:
 
 <details>
@@ -1026,3 +1028,38 @@ Snapshots:   0 total
 Time:        5.57 s, estimated 6 s
 ```
 </details>
+
+## Docker
+
+I am able to build the Docker image but when I try to run it with `docker run --env-file .env daosign-relayer` I get the following error:
+
+```sh
+ubuntu@ip-172-31-21-129:~/relayer$ docker run --env-file .env daosign-relayer
+yarn run v1.22.22
+$ NODE_ENV=production npm exec node ./dist/index.js
+1
+/app/node_modules/ethers/lib.commonjs/utils/errors.js:149
+        throw makeError(message, code, info);
+        ^
+
+TypeError: invalid BytesLike value (argument="value", value="0x<Ethereum private key>", code=INVALID_ARGUMENT, version=6.13.4)
+    at makeError (/app/node_modules/ethers/lib.commonjs/utils/errors.js:122:21)
+    at assert (/app/node_modules/ethers/lib.commonjs/utils/errors.js:149:15)
+    at assertArgument (/app/node_modules/ethers/lib.commonjs/utils/errors.js:161:5)
+    at _getBytes (/app/node_modules/ethers/lib.commonjs/utils/data.js:27:36)
+    at getBytes (/app/node_modules/ethers/lib.commonjs/utils/data.js:37:12)
+    at dataLength (/app/node_modules/ethers/lib.commonjs/utils/data.js:108:12)
+    at new SigningKey (/app/node_modules/ethers/lib.commonjs/crypto/signing-key.js:22:66)
+    at new Wallet (/app/node_modules/ethers/lib.commonjs/wallet/wallet.js:33:56)
+    at new EthereumProofProvider (/app/dist/services/proof_provider/ethereum.js:29:24)
+    at Object.<anonymous> (/app/dist/controllers/proof.js:24:5) {
+  code: 'INVALID_ARGUMENT',
+  argument: 'value',
+  value: '0x<Ethereum private key>',
+  shortMessage: 'invalid BytesLike value'
+}
+
+Node.js v18.20.5
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
