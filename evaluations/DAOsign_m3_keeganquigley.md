@@ -1063,3 +1063,247 @@ Node.js v18.20.5
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
+
+## Tests
+
+Unit tests are now all passing:
+
+```rust
+ubuntu@ip-172-31-27-130:~/relayer$ yarn test
+yarn run v1.22.22
+warning ../package.json: No license field
+$ jest test
+ PASS  src/__tests__/utils.ts
+ PASS  src/__tests__/queueService.ts (5.701 s)
+  ● Console
+
+    console.log
+      2024-11-27 21:22:59:2259 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: auth1 proof have no processed authority proof. Skipping.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: sig1 proof have no processed signatures proof. Skipping.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: auth1 proof have no processed authority proof. Skipping.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: auth1 proof have no processed authority proof. Skipping.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: Tried to process proof with empty account 8 Skipping.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unlocked ETHEREUM accounts found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 1 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: No unprocessed ETHEREUM proofs found. Skipping ETHEREUM queue processing
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: ETHEREUM queue processor started
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 2 ETHEREUM unlocked accounts found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: 2 ETHEREUM unprocessed proofs found.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2024-11-27 21:23:00:230 info: Processed 2 ETHEREUM proofs.
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+ PASS  src/__tests__/proofService.ts (5.77 s)
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+
+Test Suites: 3 passed, 3 total
+Tests:       28 passed, 28 total
+Snapshots:   0 total
+Time:        6.509 s
+Ran all test suites matching /test/i.
+Done in 7.05s.
+```
