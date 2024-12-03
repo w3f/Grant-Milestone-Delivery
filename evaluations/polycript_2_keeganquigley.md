@@ -4,7 +4,7 @@
 - **Application Document:** 
 - **Milestone:** 2
 
-**Deliverables for Milestones 2 and 3**
+**Deliverables for Milestones 2**
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 2.0a. | Copyright and Licenses | https://github.com/perun-network/polkadot-wallet-grant/wiki | The PDF is located on the linked GitHub Wiki page. The license is specified on the PDF. | 
