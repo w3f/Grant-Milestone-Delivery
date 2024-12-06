@@ -15,9 +15,9 @@
 
 # General Notes
 
-The test is failing with errors but it's due to the .env setup.
+~~The test is failing with errors but it's due to the .env setup.~~
 
-After copying the example .env file the tests are currently failing with a lot of errors:
+~~After copying the example .env file the tests are currently failing with a lot of errors:~~
 
 <details>
   <summary>Output</summary>
@@ -1029,44 +1029,138 @@ Time:        5.57 s, estimated 6 s
 ```
 </details>
 
+UPDATE: issues fixed.
+
 ## Docker
 
-I am able to build the Docker image but when I try to run it with `docker run --env-file .env daosign-relayer` I get the following error:
+UPDATE: I am now able to successfully build the Docker file:
+
+<details>
+  <summary>Output</summary>
 
 ```sh
-ubuntu@ip-172-31-21-129:~/relayer$ docker run --env-file .env daosign-relayer
-yarn run v1.22.22
-$ NODE_ENV=production npm exec node ./dist/index.js
-1
-/app/node_modules/ethers/lib.commonjs/utils/errors.js:149
-        throw makeError(message, code, info);
-        ^
-
-TypeError: invalid BytesLike value (argument="value", value="0x<Ethereum private key>", code=INVALID_ARGUMENT, version=6.13.4)
-    at makeError (/app/node_modules/ethers/lib.commonjs/utils/errors.js:122:21)
-    at assert (/app/node_modules/ethers/lib.commonjs/utils/errors.js:149:15)
-    at assertArgument (/app/node_modules/ethers/lib.commonjs/utils/errors.js:161:5)
-    at _getBytes (/app/node_modules/ethers/lib.commonjs/utils/data.js:27:36)
-    at getBytes (/app/node_modules/ethers/lib.commonjs/utils/data.js:37:12)
-    at dataLength (/app/node_modules/ethers/lib.commonjs/utils/data.js:108:12)
-    at new SigningKey (/app/node_modules/ethers/lib.commonjs/crypto/signing-key.js:22:66)
-    at new Wallet (/app/node_modules/ethers/lib.commonjs/wallet/wallet.js:33:56)
-    at new EthereumProofProvider (/app/dist/services/proof_provider/ethereum.js:29:24)
-    at Object.<anonymous> (/app/dist/controllers/proof.js:24:5) {
-  code: 'INVALID_ARGUMENT',
-  argument: 'value',
-  value: '0x<Ethereum private key>',
-  shortMessage: 'invalid BytesLike value'
-}
-
-Node.js v18.20.5
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+keegan@keegan-VMware-Virtual-Platform:~/relayer$ sudo docker-compose up --build
+[sudo] password for keegan: 
+[+] Building 134.2s (14/14) FINISHED                                                                                                                docker:default
+ => [relayer internal] load build definition from local.Dockerfile                                                                                            0.0s
+ => => transferring dockerfile: 300B                                                                                                                          0.0s
+ => [relayer internal] load metadata for docker.io/library/node:18                                                                                            1.6s
+ => [relayer internal] load .dockerignore                                                                                                                     0.1s
+ => => transferring context: 2B                                                                                                                               0.0s
+ => [relayer 1/9] FROM docker.io/library/node:18@sha256:b675228120948dcf40837b4d9c779fd855749eb4625c074b348dd714433f1cbd                                     37.0s
+ => => resolve docker.io/library/node:18@sha256:b675228120948dcf40837b4d9c779fd855749eb4625c074b348dd714433f1cbd                                              0.0s
+ => => sha256:b675228120948dcf40837b4d9c779fd855749eb4625c074b348dd714433f1cbd 6.41kB / 6.41kB                                                                0.0s
+ => => sha256:9371b74049cb4bb6422e1f25c93f564ce9524a647fc951a35f0945efe3e96d4d 2.49kB / 2.49kB                                                                0.0s
+ => => sha256:b2da2cb649e9f22d68ecc32c89d6833e6dc1705f0162c3f8a64df5772a470884 6.39kB / 6.39kB                                                                0.0s
+ => => sha256:fdf894e782a221820acf469d425b802be26aedb5e5d26ea80a650ff6a974d488 48.50MB / 48.50MB                                                              3.0s
+ => => sha256:5bd71677db44bb63b94de61b6f1f95d5540b4ba2d6a8a6bc4d19f422b25e0c2b 23.87MB / 23.87MB                                                              2.3s
+ => => sha256:551df7f94f9c131f2fec0e8063142411365f0a1c88b935b9fac22be91af227e0 64.39MB / 64.39MB                                                              9.5s
+ => => sha256:ce82e98d553dd62ca6a12bebfe83992ae9f9ae2748275e74b66a68cc094f868b 211.31MB / 211.31MB                                                           14.1s
+ => => sha256:6399a464889d3eae2913051cb98c35d0b6bfa20ec77d6b3a04617d4a298a2a56 3.32kB / 3.32kB                                                                3.2s
+ => => extracting sha256:fdf894e782a221820acf469d425b802be26aedb5e5d26ea80a650ff6a974d488                                                                     8.4s
+ => => sha256:a3c94c84d15dfc1c2c202acca56d7327f541d62c10f9bc1dfb013a618aebd5f1 45.70MB / 45.70MB                                                              9.6s
+ => => sha256:2cd8c50fd8ca9ed98f596afc5d92d00b4492b7b069d2d339a6ed8682fc568961 1.25MB / 1.25MB                                                                9.8s
+ => => sha256:247468edfd9afcf43bf96caab52a1d979edd5eb13afcaf570c1513f4a35fa43f 446B / 446B                                                                    9.8s
+ => => extracting sha256:5bd71677db44bb63b94de61b6f1f95d5540b4ba2d6a8a6bc4d19f422b25e0c2b                                                                     1.7s
+ => => extracting sha256:551df7f94f9c131f2fec0e8063142411365f0a1c88b935b9fac22be91af227e0                                                                     5.0s
+ => => extracting sha256:ce82e98d553dd62ca6a12bebfe83992ae9f9ae2748275e74b66a68cc094f868b                                                                     9.3s
+ => => extracting sha256:6399a464889d3eae2913051cb98c35d0b6bfa20ec77d6b3a04617d4a298a2a56                                                                     0.0s
+ => => extracting sha256:a3c94c84d15dfc1c2c202acca56d7327f541d62c10f9bc1dfb013a618aebd5f1                                                                     6.3s
+ => => extracting sha256:2cd8c50fd8ca9ed98f596afc5d92d00b4492b7b069d2d339a6ed8682fc568961                                                                     0.1s
+ => => extracting sha256:247468edfd9afcf43bf96caab52a1d979edd5eb13afcaf570c1513f4a35fa43f                                                                     0.0s
+ => [relayer internal] load build context                                                                                                                     4.2s
+ => => transferring context: 3.21MB                                                                                                                           3.7s
+ => [relayer 2/9] WORKDIR /app                                                                                                                                2.7s
+ => [relayer 3/9] RUN npm install -g typescript ts-node ethers@latest                                                                                         7.3s
+ => [relayer 4/9] COPY package.json ./                                                                                                                        0.0s 
+ => [relayer 5/9] COPY yarn.lock ./                                                                                                                           0.0s
+ => [relayer 6/9] COPY tsconfig.json ./                                                                                                                       0.0s
+ => [relayer 7/9] RUN yarn                                                                                                                                   37.0s
+ => [relayer 8/9] COPY . .                                                                                                                                   23.2s
+ => [relayer 9/9] RUN yarn build                                                                                                                              4.6s
+ => [relayer] exporting to image                                                                                                                             20.6s
+ => => exporting layers                                                                                                                                      20.6s
+ => => writing image sha256:c51ca5cf0cbacb38269888877d7d469db5e4d5ecb98bc4ccb90c66470800f819                                                                  0.0s
+ => => naming to docker.io/library/relayer-relayer                                                                                                            0.0s
+[+] Running 2/2
+ ✔ Container postgres  Recreated                                                                                                                              0.4s 
+ ✔ Container relayer   Recreated                                                                                                                              0.1s 
+Attaching to postgres, relayer
+postgres  | 
+postgres  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres  | 
+postgres  | 
+postgres  | 2024-12-03 23:36:13.923 UTC [1] LOG:  starting PostgreSQL 17.2 (Debian 17.2-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+postgres  | 2024-12-03 23:36:13.972 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres  | 2024-12-03 23:36:13.972 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres  | 2024-12-03 23:36:13.974 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres  | 2024-12-03 23:36:13.998 UTC [27] LOG:  database system was shut down at 2024-12-03 23:36:12 UTC
+postgres  | 2024-12-03 23:36:14.021 UTC [1] LOG:  database system is ready to accept connections
+relayer   | yarn run v1.22.22
+relayer   | $ npm exec node ./dist/index.js
+relayer   | Server is running at http://localhost:8000
+relayer   | Data Source has been initialized!
+relayer   | 2024-12-03 23:36:16:3616 info: Update transaction statuses
+relayer   | 2024-12-03 23:36:16:3616 info: Update transaction statuses
+relayer   | 2024-12-03 23:36:16:3616 info: Update transaction statuses
+relayer   | 2024-12-03 23:36:16:3616 info: Update transaction statuses
+relayer   | 2024-12-03 23:36:16:3616 info: Update transaction statuses
+relayer   | 2024-12-03 23:36:16:3616 info: SUI queue processor started
+relayer   | 2024-12-03 23:36:16:3616 info: ETHEREUM queue processor started
+relayer   | 2024-12-03 23:36:16:3616 info: OASIS queue processor started
+relayer   | 2024-12-03 23:36:16:3616 info: POLKADOT queue processor started
+relayer   | 2024-12-03 23:36:16:3616 info: NEAR queue processor started
+relayer   | 2024-12-03 23:36:16:3616 info: Found 0 SUI pending transactions
+relayer   | 2024-12-03 23:36:16:3616 info: 0 SUI proofs status checked
+relayer   | 2024-12-03 23:36:16:3616 info: Found 0 ETHEREUM pending transactions
+relayer   | 2024-12-03 23:36:16:3616 info: 0 ETHEREUM proofs status checked
+relayer   | 2024-12-03 23:36:16:3616 info: No unlocked ETHEREUM accounts found. Skipping ETHEREUM queue processing
+relayer   | 2024-12-03 23:36:16:3616 info: No unlocked NEAR accounts found. Skipping NEAR queue processing
+relayer   | 2024-12-03 23:36:16:3616 info: No unlocked SUI accounts found. Skipping SUI queue processing
+relayer   | 2024-12-03 23:36:16:3616 info: Found 0 NEAR pending transactions
+relayer   | 2024-12-03 23:36:16:3616 info: 0 NEAR proofs status checked
+relayer   | 2024-12-03 23:36:16:3616 info: Found 0 POLKADOT pending transactions
+relayer   | 2024-12-03 23:36:16:3616 info: 0 POLKADOT proofs status checked
+relayer   | 2024-12-03 23:36:16:3616 info: Found 0 OASIS pending transactions
+relayer   | 2024-12-03 23:36:16:3616 info: 0 OASIS proofs status checked
+relayer   | 2024-12-03 23:36:16:3616 info: No unlocked POLKADOT accounts found. Skipping POLKADOT queue processing
+relayer   | 2024-12-03 23:36:16:3616 info: No unlocked OASIS accounts found. Skipping OASIS queue processing
+relayer   | 2024-12-03 23:37:00:370 info: Update transaction statuses
+relayer   | 2024-12-03 23:37:00:370 info: OASIS queue processor started
+relayer   | 2024-12-03 23:37:00:370 info: Update transaction statuses
+relayer   | 2024-12-03 23:37:00:370 info: Update transaction statuses
+relayer   | 2024-12-03 23:37:00:370 info: Update transaction statuses
+relayer   | 2024-12-03 23:37:00:370 info: Update transaction statuses
+relayer   | 2024-12-03 23:37:00:370 info: SUI queue processor started
+relayer   | 2024-12-03 23:37:00:370 info: ETHEREUM queue processor started
+relayer   | 2024-12-03 23:37:00:370 info: POLKADOT queue processor started
+relayer   | 2024-12-03 23:37:00:370 info: NEAR queue processor started
+relayer   | 2024-12-03 23:37:00:370 info: No unlocked OASIS accounts found. Skipping OASIS queue processing
+relayer   | 2024-12-03 23:37:00:370 info: Found 0 SUI pending transactions
+relayer   | 2024-12-03 23:37:00:370 info: 0 SUI proofs status checked
+relayer   | 2024-12-03 23:37:00:370 info: Found 0 NEAR pending transactions
+relayer   | 2024-12-03 23:37:00:370 info: 0 NEAR proofs status checked
+relayer   | 2024-12-03 23:37:00:370 info: Found 0 ETHEREUM pending transactions
+relayer   | 2024-12-03 23:37:00:370 info: 0 ETHEREUM proofs status checked
+relayer   | 2024-12-03 23:37:00:370 info: Found 0 OASIS pending transactions
+relayer   | 2024-12-03 23:37:00:370 info: 0 OASIS proofs status checked
+relayer   | 2024-12-03 23:37:00:370 info: Found 0 POLKADOT pending transactions
+relayer   | 2024-12-03 23:37:00:370 info: 0 POLKADOT proofs status checked
+relayer   | 2024-12-03 23:37:00:370 info: No unlocked SUI accounts found. Skipping SUI queue processing
+relayer   | 2024-12-03 23:37:00:370 info: No unlocked NEAR accounts found. Skipping NEAR queue processing
+relayer   | 2024-12-03 23:37:00:370 info: No unlocked POLKADOT accounts found. Skipping POLKADOT queue processing
+relayer   | 2024-12-03 23:37:00:370 info: No unlocked ETHEREUM accounts found. Skipping ETHEREUM queue processing
 ```
+</details>
+
+~~I am able to build the Docker image but when I try to run it with `docker run --env-file .env daosign-relayer` I get the following error:~~
 
 ## Tests
 
 Unit tests are now all passing:
+
+<details>
+  <summary>Output</summary>
 
 ```rust
 ubuntu@ip-172-31-27-130:~/relayer$ yarn test
@@ -1307,3 +1401,5 @@ Time:        6.509 s
 Ran all test suites matching /test/i.
 Done in 7.05s.
 ```
+</details>
+
