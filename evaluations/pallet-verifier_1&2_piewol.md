@@ -18,6 +18,11 @@
 
 
 ## General Notes
+Good job! Everthing works as described in the readme and testing guide.
+The documentation is well written and the inline docs are nice and detailed. Your article is also a good read.
+I'm really happy with the high quality of your delivery. 
+Thanks!
+
 A dockerfile was not a deliverable for this grant.
 
 
