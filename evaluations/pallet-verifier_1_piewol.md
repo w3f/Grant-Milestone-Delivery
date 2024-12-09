@@ -1,17 +1,18 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** [pallet verifier](https://github.com/w3f/Grants-Program/blob/master/applications/pallet-verifier.md)
-- **Milestone:** 1
+- **Milestone:** 1 & 2
 - **Previously successfully merged evaluation:** All by PieWol
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | **0a.** | License | <ul><li>[x] </li></ul> | [MIT](https://github.com/davidsemakula/pallet-verifier/blob/master/LICENSE-MIT) or [Apache 2.0](https://github.com/davidsemakula/pallet-verifier/blob/master/LICENSE-APACHE)| Dual-licensed|
-| **0b.** | Documentation | <ul><li>[x] </li></ul> |[README](https://github.com/davidsemakula/pallet-verifier/blob/master/README.md) and [Architecture](https://github.com/davidsemakula/pallet-verifier/blob/master/ARCHITECTURE.md) | very nice  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> |[README](https://github.com/davidsemakula/pallet-verifier/blob/master/README.md) and [Architecture](https://github.com/davidsemakula/pallet-verifier/blob/master/ARCHITECTURE.md) | very nice, good inline docs! |
 | **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> |[Testing guide](https://github.com/davidsemakula/pallet-verifier/blob/master/TESTING.md) | good |
 | **0e.** | Article | <ul><li>[x] </li></ul> | [Article](https://davidsemakula.com/blog/introducing-pallet-verifier)    | nice one! |
-| **1** | Rust binary crate | <ul><li>[ ] </li></ul> |[custom rustc driver](https://github.com/davidsemakula/pallet-verifier/blob/master/src/driver.rs), [custom cargo subcommand](https://github.com/davidsemakula/pallet-verifier/blob/master/src/main.rs), [MIRAI integration](https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/verifier.rs) ([see also](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L144-L168)) and [automatic tractable entry point generation](https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/entry_points.rs) ([see also](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L124-L142)) | [GitHub repository](https://github.com/davidsemakula/pallet-verifier)  |
+| **1** | Rust binary crate [m1]| <ul><li>[x] </li></ul> |[custom rustc driver](https://github.com/davidsemakula/pallet-verifier/blob/master/src/driver.rs), [custom cargo subcommand](https://github.com/davidsemakula/pallet-verifier/blob/master/src/main.rs), [MIRAI integration](https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/verifier.rs) ([see also](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L144-L168)) and [automatic tractable entry point generation](https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/entry_points.rs) ([see also](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L124-L142)) | nice  |
+ | **1** | Rust binary crate [m2]| <ul><li>[x] </li></ul> |[adding the `mirai-annotations` crate as a dependency to FRAME pallets without editing `Cargo.toml`](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/main.rs#L259-L273) (see also [this](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L196-L254), [this](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/main.rs#L180-L223) and [this](https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/cli_utils.rs#L128-L138)), [adding MIRAI annotations to MIR, and more specifically to support automatically adding annotations for verifying that integer `as` conversions don't overflow/underflow nor lose precision](https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/int_cast_overflow.rs)| works |
 
 
 
@@ -20,6 +21,8 @@
 A dockerfile was not a deliverable for this grant.
 
 
+## Testing on non Polkadot-SDK pallets
+Thanks for fixing the issue about dev-dependencies. Nice one.
 
 
 ## Tests
