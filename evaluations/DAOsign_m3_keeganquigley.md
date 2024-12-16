@@ -1,7 +1,7 @@
 # Evaluation
 
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/DAOsign.md
 - **Milestone:** 3
 
@@ -9,11 +9,15 @@
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/DAOsign/relayer/blob/main/LICENSE) | Apache 2.0 |
 | 0b. | Documentation                   | <ul><li>[x] </li></ul> | [Readme](https://github.com/DAOsign/relayer/blob/main/README.md) |  |
-| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |         https://github.com/DAOsign/relayer/blob/main/README.md#testing |         |
-| 0d.    | Docker                    | <ul><li>[x] </li></ul> |   https://github.com/DAOsign/relayer?tab=readme-ov-file#with-docker    | 
-| 1. | Gas Relayer             | <ul><li>[x] </li></ul> |[Github Repo](https://github.com/DAOsign/relayer)    |  |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> |         https://github.com/DAOsign/relayer/blob/main/README.md#testing | Ok        |
+| 0d.    | Docker                    | <ul><li>[x] </li></ul> |   https://github.com/DAOsign/relayer?tab=readme-ov-file#with-docker    | Ok
+| 1. | Gas Relayer             | <ul><li>[x] </li></ul> |[Github Repo](https://github.com/DAOsign/relayer)    | Ok |
 
 # General Notes
+
+I'm willing to pass it since the deliverable requirements were technically met. Docker-compose now works to spin up the relayer.
+
+## Tests
 
 ~~The test is failing with errors but it's due to the .env setup.~~
 
