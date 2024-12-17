@@ -750,3 +750,434 @@ test-1         | test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 f
 test-1         | 
 test-1 exited with code 0
 ```
+Cargo clippy results in numerous warnings. Consider fixes for next milestone:
+
+<details>
+   <summary>Output</summary>
+
+```rust
+Checking pallet-infimum v4.0.0-dev (/home/ubuntu/infimum/pallet)
+warning: unnecessary `>= y + 1` or `x - 1 >=`
+   --> src/poll/provider.rs:203:16
+    |
+203 |             if current_batch_index >= self.state.registrations.count + 1 { return None; }
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: change it to: `current_batch_index > self.state.registrations.count`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#int_plus_one
+    = note: `#[warn(clippy::int_plus_one)]` on by default
+
+warning: module has the same name as its containing module
+ --> src/poll/mod.rs:3:1
+  |
+3 | pub mod poll;
+  | ^^^^^^^^^^^^^
+  |
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#module_inception
+  = note: `#[warn(clippy::module_inception)]` on by default
+
+warning: this `let...else` may be rewritten with the `?` operator
+  --> src/poll/provider.rs:84:9
+   |
+84 |         let Some(outcome) = outcome else { return None; };
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let outcome = outcome?;`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+   = note: `#[warn(clippy::question_mark)]` on by default
+
+warning: this `let...else` may be rewritten with the `?` operator
+  --> src/poll/provider.rs:85:9
+   |
+85 |         let Some(mut hasher) = Poseidon::<Fr>::new_circom(2).ok() else { return None; };
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let mut hasher = Poseidon::<Fr>::new_circom(2).ok()?;`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+  --> src/poll/provider.rs:93:13
+   |
+93 |             let Some(tally_result) = outcome.tally_results.get(option_index) else { return None; };
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let tally_result = outcome.tally_results.get(option_index)?;`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+  --> src/poll/provider.rs:94:13
+   |
+94 |             let Some(tally_path) = outcome.tally_result_proofs.get(option_index) else { return None; };
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let tally_path = outcome.tally_result_proofs.get(option_index)?;`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:98:13
+    |
+98  | /             let Some(root) = compute_merkle_root_from_path(
+99  | |                 self.config.vote_option_tree_depth,
+100 | |                 option_index as u32,
+101 | |                 tally_result_bytes,
+102 | |                 tally_path.clone()
+103 | |             ) else { return None; };
+    | |____________________________________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+help: replace it with
+    |
+98  ~             let root = compute_merkle_root_from_path(
+99  +                 self.config.vote_option_tree_depth,
+100 +                 option_index as u32,
+101 +                 tally_result_bytes,
+102 +                 tally_path.clone()
+103 +             )?;
+    |
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:108:13
+    |
+108 |             let Some(hash) = hasher.hash(&inputs).ok() else { return None; };
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let hash = hasher.hash(&inputs).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: calls to `push` immediately after creation
+   --> src/poll/provider.rs:105:13
+    |
+105 | /             let mut inputs: vec::Vec<Fr> = vec::Vec::<Fr>::new();
+106 | |             inputs.push(Fr::from_be_bytes_mod_order(&root));
+107 | |             inputs.push(Fr::from_be_bytes_mod_order(&outcome.tally_result_salt));
+    | |_________________________________________________________________________________^ help: consider using the `vec![]` macro: `let inputs: vec::Vec<Fr> = vec![..];`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#vec_init_then_push
+    = note: `#[warn(clippy::vec_init_then_push)]` on by default
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:113:13
+    |
+113 |             let Some(hash) = hasher.hash(&inputs).ok() else { return None; };
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let hash = hasher.hash(&inputs).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: calls to `push` immediately after creation
+   --> src/poll/provider.rs:110:13
+    |
+110 | /             let mut inputs: vec::Vec<Fr> = vec::Vec::<Fr>::new();
+111 | |             inputs.push(Fr::from_be_bytes_mod_order(&hash.into_bigint().to_bytes_be()));
+112 | |             inputs.push(Fr::from_be_bytes_mod_order(&outcome.spent_votes_hash));
+    | |________________________________________________________________________________^ help: consider using the `vec![]` macro: `let inputs: vec::Vec<Fr> = vec![..];`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#vec_init_then_push
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:129:9
+    |
+129 |         let Some(hash) = hasher.hash(&inputs).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let hash = hasher.hash(&inputs).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: calls to `push` immediately after creation
+   --> src/poll/provider.rs:126:9
+    |
+126 | /         let mut inputs: vec::Vec<Fr> = vec::Vec::<Fr>::new();
+127 | |         inputs.push(Fr::from_be_bytes_mod_order(&outcome.total_spent));
+128 | |         inputs.push(Fr::from_be_bytes_mod_order(&outcome.total_spent_salt));
+    | |____________________________________________________________________________^ help: consider using the `vec![]` macro: `let inputs: vec::Vec<Fr> = vec![..];`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#vec_init_then_push
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:134:9
+    |
+134 |         let Some(hash) = hasher.hash(&inputs).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let hash = hasher.hash(&inputs).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: calls to `push` immediately after creation
+   --> src/poll/provider.rs:131:9
+    |
+131 | /         let mut inputs: vec::Vec<Fr> = vec::Vec::<Fr>::new();
+132 | |         inputs.push(Fr::from_be_bytes_mod_order(&outcome.new_results_commitment));
+133 | |         inputs.push(Fr::from_be_bytes_mod_order(&hash.into_bigint().to_bytes_be()));
+    | |____________________________________________________________________________________^ help: consider using the `vec![]` macro: `let inputs: vec::Vec<Fr> = vec![..];`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#vec_init_then_push
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:166:13
+    |
+166 |             let Some(mut hasher) = Poseidon::<Fr>::new_circom(2).ok() else { return None; };
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let mut hasher = Poseidon::<Fr>::new_circom(2).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: using `clone` on type `PublicKey` which implements the `Copy` trait
+   --> src/poll/provider.rs:167:33
+    |
+167 |             let coord_pub_key = coordinator.public_key.clone();
+    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try removing the `clone` call: `coordinator.public_key`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+    = note: `#[warn(clippy::clone_on_copy)]` on by default
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:172:13
+    |
+172 |             let Some(coord_pub_key_hash) = hasher.hash(&coord_pub_key_fr).ok() else { return None; };
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let coord_pub_key_hash = hasher.hash(&coord_pub_key_fr).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:173:13
+    |
+173 |             let Some(root_bytes) = self.state.interactions.root else { return None; };
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let root_bytes = self.state.interactions.root?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:404:5
+    |
+404 |     let Some(mut hasher) = Poseidon::<Fr>::new_circom(VOTE_TREE_ARITY as usize).ok() else { return None; };
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let mut hasher = Poseidon::<Fr>::new_circom(VOTE_TREE_ARITY as usize).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/poll/provider.rs:425:9
+    |
+425 |         let Some(result) = hasher.hash(&inputs).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let result = hasher.hash(&inputs).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: binary comparison to literal `Option::None`
+   --> src/poll/state.rs:182:12
+    |
+182 |         if self.root != None { Err(MerkleTreeError::TreeAlreadyFull)? }
+    |            ^^^^^^^^^^^^^^^^^ help: use `Option::is_some()` instead: `self.root.is_some()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#partialeq_to_none
+    = note: `#[warn(clippy::partialeq_to_none)]` on by default
+
+warning: binary comparison to literal `Option::None`
+   --> src/poll/state.rs:236:12
+    |
+236 |         if self.root != None { Err(MerkleTreeError::TreeAlreadyMerged)? }
+    |            ^^^^^^^^^^^^^^^^^ help: use `Option::is_some()` instead: `self.root.is_some()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#partialeq_to_none
+
+warning: this loop could be written as a `while let` loop
+   --> src/poll/state.rs:240:9
+    |
+240 | /         loop
+241 | |         {
+242 | |             let last = match self.hashes.last()
+243 | |             {
+...   |
+270 | |             self.hashes.push((depth + 1, hash));
+271 | |         }
+    | |_________^ help: try: `while let Some(&last) = self.hashes.last() { .. }`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#while_let_loop
+    = note: `#[warn(clippy::while_let_loop)]` on by default
+
+warning: unneeded `return` statement
+  --> src/poll/zeroes.rs:83:20
+   |
+83 |     if arity == 2 {return BINARY_ZEROES;}
+   |                    ^^^^^^^^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+   = note: `#[warn(clippy::needless_return)]` on by default
+help: remove `return`
+   |
+83 -     if arity == 2 {return BINARY_ZEROES;}
+83 +     if arity == 2 {BINARY_ZEROES}
+   |
+
+warning: unneeded `return` statement
+  --> src/poll/zeroes.rs:84:11
+   |
+84 |     else {return QUINARY_ZEROES;}
+   |           ^^^^^^^^^^^^^^^^^^^^^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return
+help: remove `return`
+   |
+84 -     else {return QUINARY_ZEROES;}
+84 +     else {QUINARY_ZEROES}
+   |
+
+warning: using `clone` on type `PublicKey` which implements the `Copy` trait
+   --> src/lib.rs:347:29
+    |
+347 |             coordinator.public_key = public_key.clone();
+    |                                      ^^^^^^^^^^^^^^^^^^ help: try removing the `clone` call: `public_key`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+
+warning: this function has too many arguments (9/7)
+   --> src/lib.rs:35:1
+    |
+35  |   #[frame_support::pallet]
+    |   ^-----------------------
+    |   |
+    |  _in this procedural macro expansion
+    | |
+36  | | pub mod pallet 
+37  | | {
+38  | |     use super::*;
+...   |
+382 | |             vote_options: vec::Vec<u128>
+383 | |         ) -> DispatchResult
+    | |___________________________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments
+    = note: `#[warn(clippy::too_many_arguments)]` on by default
+    = note: this warning originates in the attribute macro `frame_support::pallet` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:433:23
+    |
+433 |             Polls::<T>::insert(&index, Poll {
+    |                                ^^^^^^ help: change this to: `index`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+    = note: `#[warn(clippy::needless_borrows_for_generic_args)]` on by default
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:509:24
+    |
+509 |                 Polls::<T>::insert(&poll_id, poll.clone());
+    |                                    ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:538:24
+    |
+538 |                 Polls::<T>::insert(&poll_id, poll.clone());
+    |                                    ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: length comparison to zero
+   --> src/lib.rs:588:12
+    |
+588 |             ensure!(batches.len() > 0 || outcome.is_some(), Error::<T>::MalformedInput);
+    |                     ^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!batches.is_empty()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
+    = note: `#[warn(clippy::len_zero)]` on by default
+
+warning: length comparison to zero
+   --> src/lib.rs:611:7
+    |
+611 |             if batches.len() > 0
+    |                ^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!batches.is_empty()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:689:37
+    |
+689 |             let Some(poll) = Polls::<T>::get(&poll_id) else { Err(<Error::<T>>::PollDoesNotExist)? };
+    |                                              ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:712:5
+    |
+712 |                 &poll_id, 
+    |                 ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:750:37
+    |
+750 |             let Some(poll) = Polls::<T>::get(&poll_id) else { Err(<Error::<T>>::PollDoesNotExist)? };
+    |                                              ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: the borrowed expression implements the required traits
+   --> src/lib.rs:768:5
+    |
+768 |                 &poll_id, 
+    |                 ^^^^^^^^ help: change this to: `poll_id`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:788:3
+    |
+788 |         let Some(alpha_g1) = G1Affine::deserialize_uncompressed(&*vkey.alpha_g1).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let alpha_g1 = G1Affine::deserialize_uncompressed(&*vkey.alpha_g1).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:789:3
+    |
+789 |         let Some(beta_g2) = G2Affine::deserialize_uncompressed(&*vkey.beta_g2).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let beta_g2 = G2Affine::deserialize_uncompressed(&*vkey.beta_g2).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:790:3
+    |
+790 |         let Some(gamma_g2) = G2Affine::deserialize_uncompressed(&*vkey.gamma_g2).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let gamma_g2 = G2Affine::deserialize_uncompressed(&*vkey.gamma_g2).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:791:3
+    |
+791 |         let Some(delta_g2) = G2Affine::deserialize_uncompressed(&*vkey.delta_g2).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let delta_g2 = G2Affine::deserialize_uncompressed(&*vkey.delta_g2).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:808:6
+    |
+808 |         let Some(a) = G1Affine::deserialize_uncompressed(&*proof_data.pi_a).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let a = G1Affine::deserialize_uncompressed(&*proof_data.pi_a).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:809:6
+    |
+809 |         let Some(b) = G2Affine::deserialize_uncompressed(&*proof_data.pi_b).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let b = G2Affine::deserialize_uncompressed(&*proof_data.pi_b).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this `let...else` may be rewritten with the `?` operator
+   --> src/lib.rs:810:6
+    |
+810 |         let Some(c) = G1Affine::deserialize_uncompressed(&*proof_data.pi_c).ok() else { return None; };
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: replace it with: `let c = G1Affine::deserialize_uncompressed(&*proof_data.pi_c).ok()?;`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark
+
+warning: this function has too many arguments (8/7)
+   --> src/lib.rs:263:12
+    |
+263 |     #[pallet::call]
+    |               ^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments
+
+warning: `pallet-infimum` (lib) generated 45 warnings (run `cargo clippy --fix --lib -p pallet-infimum` to apply 16 suggestions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 12s
+```
+</details>
