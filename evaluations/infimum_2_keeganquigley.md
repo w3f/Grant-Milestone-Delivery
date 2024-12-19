@@ -17,9 +17,28 @@
 
 # General Notes
 
-Really nice work, was able to manually test the pallets.
+Really nice work, was able to manually test the pallets. Node runs successfully and npm tests pass.
+
+Ports open as expected:
+
+![ports](https://github.com/user-attachments/assets/49cc18d4-c1e6-4be7-832b-a2ab8b5cea95)
 
 ## Testing
+
+npm test passes:
+
+```ts
+ PASS  __tests__/e2e.test.ts (146.669 s)
+  End to end tests
+    Only user 1 votes
+      ✓ Should produce the correct outcome index (132083 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        146.734 s
+Ran all test suites.
+```
 
 All unit tests passing:
 
