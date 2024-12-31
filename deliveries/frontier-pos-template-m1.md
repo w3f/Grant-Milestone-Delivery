@@ -19,7 +19,7 @@ Additionally, with our support, the testnet for [SuperEx](https://www.superex.co
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License| https://github.com/ChainSupport/frontier-pos-template?tab=readme-ov-file#license| |
 | 0b. | Documentation| https://github.com/ChainSupport/frontier-pos-template/blob/main/README.md | |
-| 0c. | Testing and Testing Guide | https://github.com/ChainSupport/frontier-pos-template/blob/main/docs/test.md | |
+| 0c. | Testing and Testing Guide | https://github.com/ChainSupport/frontier-pos-template/blob/main/docs/tutorial.md#run-testnet-node | |
 | 0d. | Docker | https://github.com/ChainSupport/frontier-pos-template/tree/main/docker | | 
 | 1. | Client | https://github.com/ChainSupport/frontier-pos-template/tree/main/node/cli | | 
 | 2. | crate: babe-consensus-data-provider | https://github.com/ChainSupport/frontier-pos-template/blob/main/client/babe-consensus-data-provider/src/lib.rs | Provide unit tests|
