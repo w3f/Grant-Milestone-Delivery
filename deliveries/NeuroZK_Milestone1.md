@@ -7,9 +7,9 @@
 
 **Context**
 
-## Task Verification System
+## Cyborg Oracle Implementation
 
-A task verification system that verifies off-chain compute task results on-chain using parallel execution and hash equations. This forms the base infrastructure for our enterprise-ready product for machine learning training.
+An [ORML](https://github.com/open-web3-stack/open-runtime-module-library) based custom oracle for private and secure data exchange within the cyborg parachain.
 
 **Deliverables** 
 
