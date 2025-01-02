@@ -20,7 +20,7 @@ An [ORML](https://github.com/open-web3-stack/open-runtime-module-library) based 
 | **0c.** | [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/testing-doc-update/Local%20Testing.md) | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
 | **0d.** | Docker | We will provide a Dockerfile(s) that can be used to deploy a local cyborg parachain and test the features of this delivery. |
 | 1. | Working Demo | We will provide video documentation to help developers understand the process of testing the Orcale implementation.|
-| 2. | Substrate Module: Oracle | This pallet will be responsible for establishing communication and regulating the use of an oracle. |
-| 3. | Front end App: Cyborg Connect | Updated UI with features to display Task verification and result information from Oracle |
-| 4. | Cyborg Oracle | An ORML based oracle implementation to seamless exchange data packets between cyborg parachain and connected offchain clusters|
+| 2. | [Substrate Module: Status Aggregator](https://github.com/Cyborg-Network/cyborg-parachain/tree/testing-doc-update/pallets/status-aggregator)  | This pallet will be responsible for establishing communication and regulating the use of an oracle. |
+| 3. | [Front end App: Cyborg Connect](https://github.com/Cyborg-Network/cyborg-connect) | Updated UI with features to display Task verification and result information from Oracle |
+| 4. | [Cyborg Oracle](https://github.com/Cyborg-Network/cyborg-parachain/tree/master/runtime) | An ORML based oracle implementation to seamless exchange data packets between cyborg parachain and connected offchain clusters|
 
