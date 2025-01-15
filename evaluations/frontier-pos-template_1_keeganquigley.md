@@ -117,3 +117,8 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 || 
 1.05% coverage, 10/953 lines covered
 ```
+Cargo clippy returns compile errors:
+
+```rust
+Checking fc-cli v1.0.0-dev (https://github.com/ChainSupport/frontier.git?branch=release-polkadot-v1.13.0#de644003) error[E0425]: cannot find function `run` in crate `node_cli`   --> node/cli/bin/main.rs:27:15    | 27 |     node_cli::run()    |               ^^^ not found in `node_cli`    | help: consider importing one of these items    | 23 + use crate::cumulus_client_consensus_aura::collators::basic::run;    | 23 + use crate::cumulus_client_consensus_aura::collators::lookahead::run;    | 23 + use crate::polkadot_cli::run;    | 23 + use crate::sc_mixnet::run;    |      and 1 other candidate help: if you import `run`, refer to it directly    | 27 -     node_cli::run() 27 +     run()    | For more information about this error, try `rustc --explain E0425`. error: could not compile `staging-node-cli` (bin "substrate") due to 1 previous error
+```
