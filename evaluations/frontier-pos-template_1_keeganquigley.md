@@ -83,3 +83,37 @@ warning: `kitchensink-mainnet-runtime` (lib) generated 2 warnings
 client_loop: send disconnect: Broken pipe47/2250: kitchensink-testnet-runtime
 ```
 </details>
+
+## Tests
+
+Only one unit test, very low coverage:
+
+```rust
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10m 18s
+2025-01-15T19:09:49.030243Z  INFO cargo_tarpaulin::process_handling::linux: Launching test
+2025-01-15T19:09:49.030287Z  INFO cargo_tarpaulin::process_handling: running /home/ubuntu/frontier-pos-template/target/debug/deps/babe_consensus_data_provider-1f34ada6eb019ebc
+
+running 1 test
+test test::make_vrf_signature_should_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+2025-01-15T19:09:58.364068Z  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| client/babe-consensus-data-provider/src/lib.rs: 10/67
+|| node/cli/src/benchmarking.rs: 0/34
+|| node/cli/src/chain_spec/mainnet.rs: 0/2
+|| node/cli/src/chain_spec/testnet.rs: 0/2
+|| node/cli/src/eth.rs: 0/42
+|| node/cli/src/service.rs: 0/434
+|| node/inspect/src/command.rs: 0/14
+|| node/inspect/src/lib.rs: 0/78
+|| node/rpc/src/eth.rs: 0/77
+|| node/rpc/src/lib.rs: 0/79
+|| runtime/mainnet/src/lib.rs: 0/40
+|| runtime/mainnet/src/precompiles.rs: 0/22
+|| runtime/testnet/src/lib.rs: 0/40
+|| runtime/testnet/src/precompiles.rs: 0/22
+|| 
+1.05% coverage, 10/953 lines covered
+```
