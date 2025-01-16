@@ -86,6 +86,61 @@ client_loop: send disconnect: Broken pipe47/2250: kitchensink-testnet-runtime
 
 ## Tests
 
+Tarpaulin coverage for `babe-consensus-data-provider`:
+```rust
+Finished `test` profile [unoptimized + debuginfo] target(s) in 12m 15s
+2025-01-16T21:32:55.768695Z  INFO cargo_tarpaulin::process_handling::linux: Launching test
+2025-01-16T21:32:55.769415Z  INFO cargo_tarpaulin::process_handling: running /home/ubuntu/frontier-pos-template/target/debug/deps/babe_consensus_data_provider-1f34ada6eb019ebc
+
+running 1 test
+test test::make_vrf_signature_should_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+2025-01-16T21:33:06.770727Z  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| client/babe-consensus-data-provider/src/lib.rs: 10/67 +0.00%
+|| node/cli/src/benchmarking.rs: 0/34 +0.00%
+|| node/cli/src/chain_spec/mainnet.rs: 0/2 +0.00%
+|| node/cli/src/chain_spec/testnet.rs: 0/2 +0.00%
+|| node/cli/src/eth.rs: 0/42 +0.00%
+|| node/cli/src/service.rs: 0/434 +0.00%
+|| node/inspect/src/command.rs: 0/14 +0.00%
+|| node/inspect/src/lib.rs: 0/78 +0.00%
+|| node/rpc/src/eth.rs: 0/77 +0.00%
+|| node/rpc/src/lib.rs: 0/79 +0.00%
+|| runtime/mainnet/src/lib.rs: 0/40 +0.00%
+|| runtime/mainnet/src/precompiles.rs: 0/22 +0.00%
+|| runtime/testnet/src/lib.rs: 0/40 +0.00%
+|| runtime/testnet/src/precompiles.rs: 0/22 +0.00%
+|| 
+1.05% coverage, 10/953 lines covered, +0.00% change in coverage
+```
+Tarpaulin coverage for `ecdsa-keyring`:
+```rust
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.45s
+
+2025-01-16T21:36:45.106545Z  INFO cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| client/babe-consensus-data-provider/src/lib.rs: 0/44 -14.93%
+|| client/ecdsa-keyring/src/lib.rs: 47/71
+|| node/cli/src/benchmarking.rs: 0/34 +0.00%
+|| node/cli/src/chain_spec/mainnet.rs: 0/2 +0.00%
+|| node/cli/src/chain_spec/testnet.rs: 0/2 +0.00%
+|| node/cli/src/eth.rs: 0/42 +0.00%
+|| node/cli/src/service.rs: 0/434 +0.00%
+|| node/inspect/src/command.rs: 0/14 +0.00%
+|| node/inspect/src/lib.rs: 0/78 +0.00%
+|| node/rpc/src/eth.rs: 0/77 +0.00%
+|| node/rpc/src/lib.rs: 0/79 +0.00%
+|| runtime/mainnet/src/lib.rs: 0/40 +0.00%
+|| runtime/mainnet/src/precompiles.rs: 0/22 +0.00%
+|| runtime/testnet/src/lib.rs: 0/40 +0.00%
+|| runtime/testnet/src/precompiles.rs: 0/22 +0.00%
+|| 
+4.70% coverage, 47/1001 lines covered, +3.65% change in coverage
+```
+
 Unit test for `babe-consensus-data-provider`:
 ```rust
      Running unittests src/lib.rs (target/debug/deps/babe_consensus_data_provider-1f34ada6eb019ebc)
