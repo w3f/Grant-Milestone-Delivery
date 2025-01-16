@@ -84,6 +84,23 @@ client_loop: send disconnect: Broken pipe47/2250: kitchensink-testnet-runtime
 ```
 </details>
 
+Docker Compose now works to run both nodes:
+```rust
+60abbaee033ab406266bb177a276, previously 0xe69dc86852a3052106978fbc1a53880b271641d9077d02eec816f91f4a074780.    
+alice_1       | 2025-01-16 22:17:21 🏆 Imported #94 (0xa1c2…edcf → 0x339a…a276)    
+bob_1         | 2025-01-16 22:17:21 🏆 Imported #94 (0xa1c2…edcf → 0x339a…a276)    
+bob_1         | 2025-01-16 22:17:21 💤 Idle (1 peers), best: #94 (0x339a…a276), finalized #91 (0x3eec…beb6), ⬇ 0.8kiB/s ⬆ 0.5kiB/s    
+alice_1       | 2025-01-16 22:17:21 💤 Idle (1 peers), best: #94 (0x339a…a276), finalized #91 (0x3eec…beb6), ⬇ 0.5kiB/s ⬆ 0.8kiB/s    
+alice_1       | 2025-01-16 22:17:24 🙌 Starting consensus session on top of parent 0x339a942e228e960a69ad0bde6097a7b85bee60abbaee033ab406266bb177a276    
+alice_1       | 2025-01-16 22:17:24 🎁 Prepared block for proposing at 95 (2 ms) [hash: 0xbef826e4cbda184879aebf305712893122f0858cf5cf23e00dbd0a5c411366e5; parent_hash: 0x339a…a276; extrinsics (1): [0x3151…da17]    
+alice_1       | 2025-01-16 22:17:24 🔖 Pre-sealed block for proposal at 95. Hash now 0x59f43cd2eb9b68132867a27a17a3c4cd110c6473608bce5839498357c9de823c, previously 0xbef826e4cbda184879aebf305712893122f0858cf5cf23e00dbd0a5c411366e5.    
+alice_1       | 2025-01-16 22:17:24 🏆 Imported #95 (0x339a…a276 → 0x59f4…823c)    
+bob_1         | 2025-01-16 22:17:24 🏆 Imported #95 (0x339a…a276 → 0x59f4…823c)    
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping frontier-pos-template_bob_1        ... done
+Stopping frontier-pos-template_alice_1      ... done
+```
+
 ## Tests
 
 Tarpaulin coverage for `babe-consensus-data-provider`:
