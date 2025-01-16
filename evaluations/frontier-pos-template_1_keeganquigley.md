@@ -122,3 +122,49 @@ Cargo clippy returns compile errors:
 ```rust
 Checking fc-cli v1.0.0-dev (https://github.com/ChainSupport/frontier.git?branch=release-polkadot-v1.13.0#de644003) error[E0425]: cannot find function `run` in crate `node_cli`   --> node/cli/bin/main.rs:27:15    | 27 |     node_cli::run()    |               ^^^ not found in `node_cli`    | help: consider importing one of these items    | 23 + use crate::cumulus_client_consensus_aura::collators::basic::run;    | 23 + use crate::cumulus_client_consensus_aura::collators::lookahead::run;    | 23 + use crate::polkadot_cli::run;    | 23 + use crate::sc_mixnet::run;    |      and 1 other candidate help: if you import `run`, refer to it directly    | 27 -     node_cli::run() 27 +     run()    | For more information about this error, try `rustc --explain E0425`. error: could not compile `staging-node-cli` (bin "substrate") due to 1 previous error
 ```
+Cargo clippy works for testnet features:
+
+```rust
+cargo clippy --features testnet
+⚡ Found 3 strongly connected components which includes at least one cycle each
+cycle(001) ∈ α: DisputeCoordinator ~~{"DisputeDistributionMessage"}~~> DisputeDistribution ~~{"DisputeCoordinatorMessage"}~~>  *
+cycle(002) ∈ β: CandidateBacking ~~{"CollatorProtocolMessage"}~~> CollatorProtocol ~~{"CandidateBackingMessage"}~~>  *
+cycle(003) ∈ γ: NetworkBridgeRx ~~{"GossipSupportMessage"}~~> GossipSupport ~~{"NetworkBridgeRxMessage"}~~>  *
+   Compiling staging-node-cli v3.0.0-dev (/home/ubuntu/frontier-pos-template/node/cli)
+    Checking kitchensink-testnet-runtime v3.0.0-dev (/home/ubuntu/frontier-pos-template/runtime/testnet)
+    Checking kitchensink-mainnet-runtime v3.0.0-dev (/home/ubuntu/frontier-pos-template/runtime/mainnet)
+warning: using `clone` on type `AccountId20` which implements the `Copy` trait
+   --> node/cli/src/benchmarking.rs:120:23
+    |
+120 |                 dest: self.dest.clone().into(),
+    |                       ^^^^^^^^^^^^^^^^^ help: try removing the `clone` call: `self.dest`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+    = note: `-W clippy::clone-on-copy` implied by `-W clippy::complexity`
+    = help: to override `-W clippy::complexity` add `#[allow(clippy::clone_on_copy)]`
+
+warning: `staging-node-cli` (lib) generated 1 warning (run `cargo clippy --fix --lib -p staging-node-cli` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 12s
+```
+Cargo clippy also works for mainnet features:
+
+```rust
+cargo clippy --features mainnet
+⚡ Found 3 strongly connected components which includes at least one cycle each
+cycle(001) ∈ α: DisputeCoordinator ~~{"DisputeDistributionMessage"}~~> DisputeDistribution ~~{"DisputeCoordinatorMessage"}~~>  *
+cycle(002) ∈ β: CandidateBacking ~~{"CollatorProtocolMessage"}~~> CollatorProtocol ~~{"CandidateBackingMessage"}~~>  *
+cycle(003) ∈ γ: NetworkBridgeRx ~~{"GossipSupportMessage"}~~> GossipSupport ~~{"NetworkBridgeRxMessage"}~~>  *
+   Compiling staging-node-cli v3.0.0-dev (/home/ubuntu/frontier-pos-template/node/cli)
+warning: using `clone` on type `AccountId20` which implements the `Copy` trait
+   --> node/cli/src/benchmarking.rs:120:23
+    |
+120 |                 dest: self.dest.clone().into(),
+    |                       ^^^^^^^^^^^^^^^^^ help: try removing the `clone` call: `self.dest`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy
+    = note: `-W clippy::clone-on-copy` implied by `-W clippy::complexity`
+    = help: to override `-W clippy::complexity` add `#[allow(clippy::clone_on_copy)]`
+
+warning: `staging-node-cli` (lib) generated 1 warning (run `cargo clippy --fix --lib -p staging-node-cli` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 41.69s
+```
