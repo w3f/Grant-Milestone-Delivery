@@ -86,37 +86,38 @@ client_loop: send disconnect: Broken pipe47/2250: kitchensink-testnet-runtime
 
 ## Tests
 
-Only one unit test, very low coverage:
-
+Unit test for `babe-consensus-data-provider`:
 ```rust
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 10m 18s
-2025-01-15T19:09:49.030243Z  INFO cargo_tarpaulin::process_handling::linux: Launching test
-2025-01-15T19:09:49.030287Z  INFO cargo_tarpaulin::process_handling: running /home/ubuntu/frontier-pos-template/target/debug/deps/babe_consensus_data_provider-1f34ada6eb019ebc
+     Running unittests src/lib.rs (target/debug/deps/babe_consensus_data_provider-1f34ada6eb019ebc)
 
 running 1 test
+new_randomness: [184, 41, 121, 36, 127, 195, 163, 68, 130, 182, 200, 76, 132, 19, 73, 163, 157, 157, 252, 66, 121, 55, 45, 99, 141, 249, 29, 240, 145, 53, 178, 68]
 test test::make_vrf_signature_should_works ... ok
 
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
 
-2025-01-15T19:09:58.364068Z  INFO cargo_tarpaulin::report: Coverage Results:
-|| Tested/Total Lines:
-|| client/babe-consensus-data-provider/src/lib.rs: 10/67
-|| node/cli/src/benchmarking.rs: 0/34
-|| node/cli/src/chain_spec/mainnet.rs: 0/2
-|| node/cli/src/chain_spec/testnet.rs: 0/2
-|| node/cli/src/eth.rs: 0/42
-|| node/cli/src/service.rs: 0/434
-|| node/inspect/src/command.rs: 0/14
-|| node/inspect/src/lib.rs: 0/78
-|| node/rpc/src/eth.rs: 0/77
-|| node/rpc/src/lib.rs: 0/79
-|| runtime/mainnet/src/lib.rs: 0/40
-|| runtime/mainnet/src/precompiles.rs: 0/22
-|| runtime/testnet/src/lib.rs: 0/40
-|| runtime/testnet/src/precompiles.rs: 0/22
-|| 
-1.05% coverage, 10/953 lines covered
+   Doc-tests babe_consensus_data_provider
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
+Unit test for `ecdsa-keyring`:
+```rust
+     Running unittests src/lib.rs (target/debug/deps/ecdsa_keyring-c4d4b39fc7d7be02)
+
+running 1 test
+test test::test ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.64s
+
+   Doc-tests ecdsa_keyring
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
 Cargo clippy returns compile errors:
 
 ```rust
