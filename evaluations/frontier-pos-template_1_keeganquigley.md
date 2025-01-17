@@ -1,22 +1,24 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/frontier-pos-template.md
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License| <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template?tab=readme-ov-file#license| |
-| 0b. | Documentation| <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/README.md | |
-| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/docs/tutorial.md#run-testnet-node | |
-| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/tree/main/docker | | 
-| 1. | Client | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/tree/main/node/cli | | 
-| 2. | crate: babe-consensus-data-provider | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/client/babe-consensus-data-provider/src/lib.rs | |
-| 3. | crate: ecdsa-keyring | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/client/ecdsa-keyring/src/lib.rs | |
-| 4. | Friendly code structure | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template | |
-| 5. | Substrate chain | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template, https://github.com/superexchain/scs-chain | |
+| 0b. | Documentation| <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/README.md | Works |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/docs/tutorial.md#run-testnet-node | Works |
+| 0d. | Docker | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/tree/main/docker | Works | 
+| 1. | Client | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/tree/main/node/cli | Works | 
+| 2. | crate: babe-consensus-data-provider | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/client/babe-consensus-data-provider/src/lib.rs | Works |
+| 3. | crate: ecdsa-keyring | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template/blob/main/client/ecdsa-keyring/src/lib.rs | Works |
+| 4. | Friendly code structure | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template | Works |
+| 5. | Substrate chain | <ul><li>[x] </li></ul> | https://github.com/ChainSupport/frontier-pos-template, https://github.com/superexchain/scs-chain | Works |
 
 # General Notes
+
+All tests working now. I was able to run the node and manually add local network to MetaMask. I was able to transfer UNIT balance. I was also able to use Remix to deploy & run txs w/ MetaMask. Pretty cool!
 
 Node compiles w/ warnings:
 
