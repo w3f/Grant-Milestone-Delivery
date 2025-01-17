@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accept
 - **Application Document:** [polkadot-runtime-releaser](https://github.com/w3f/Grants-Program/blob/master/applications/polkadot-runtime-releaser.md)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by PieWol
