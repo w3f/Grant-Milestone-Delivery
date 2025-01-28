@@ -11,6 +11,21 @@ In this milestone, we are delivering the foundational component of the NFT as an
 
 **Deliverables**
 
+Repository overview - Here are the three repositories related to our project:
+
+1. NFTAA W3F Proposal Documents
+   Repository containing all materials related to the W3F proposal for NFTAA.  
+   [GitHub Link: polkadot-nftaa-proposal](https://github.com/decenzio/polkadot-nftaa-proposal)
+
+2. Pallet Source Code  
+   The core implementation of the NFTAA pallet.  
+   [GitHub Link: nftaa](https://github.com/decenzio/nftaa)
+
+3. Custom Polkadot-SDK Fork  
+   A customized fork of the Polkadot SDK. Development is happening in the `dev` branch.  
+   [GitHub Link: polkadot-sdk](https://github.com/decenzio/polkadot-sdk)
+
+
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License |[MIT NFTAA general repo](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/LICENSE), [MIT NFTAA pallet src repo](https://github.com/decenzio/nftaa/blob/main/LICENSE)| MIT | 
