@@ -9,7 +9,15 @@
 
 ## Cyborg Worker Node Implementation
 
-An [ORML](https://github.com/open-web3-stack/open-runtime-module-library) based custom oracle for private and secure data exchange within the cyborg parachain.
+Cyborg Worker Node defintion and configuration to enable compute providers to directly download executable and deploy worker nodes without clustering
+
+## System Pallets
+
+System Pallets for Cyborg parachain (Payments and Inventory)
+
+## Provide Compute feature
+
+UI updates for Worker Nodes (Currently marked coming soon)
 
 **Deliverables** 
 
