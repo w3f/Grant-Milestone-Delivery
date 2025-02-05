@@ -7,18 +7,20 @@
 | Number | Deliverable | Accepted | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | <ul><li>[x] </li></ul> |[MIT NFTAA general repo](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/LICENSE), [MIT NFTAA pallet src repo](https://github.com/decenzio/nftaa/blob/main/LICENSE)| MIT | 
-| 0b.  | Documentation | <ul><li>[x] </li></ul> |[How to run?](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#how-to-run), [NFTAA doc](https://github.com/decenzio/nftaa/blob/main/README.md)|  | 
-| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> |[Testing guide in readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#testing), [Unit tests file](https://github.com/decenzio/nftaa/blob/main/src/tests.rs)|  | 
-| 0d. | Docker | <ul><li>[x] </li></ul> |[Docker file](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/Dockerfile), [Docker guid in this readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#docker)|  | 
-|      1. | nftaa_pallet                                 | <ul><li>[x] </li></ul> | Initial version of the nftaa_pallet |  |
-|     1a. | reimplement functionalities from pallet_nfts | <ul><li>[x] </li></ul> | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) |  |
-|     1b. | nftaa address                                | <ul><li>[x] </li></ul> | pub fn create, pub fn mint, pub fn transfer, fn generate_nfta_address in [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) |  |
-|     1c. | nftaa attributes                      | <ul><li>[x] </li></ul> | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) |  |
-|     1d. | nftaa act as proxy                                 | <ul><li>[x] </li></ul> | pub fn proxy_call in [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) |  |
-|     1e. | find owned assets                             | <ul><li>[x] </li></ul> | The default blockchain explorer can be used for this purpose |  |
-|     1f. | find NFTAAs for account and owner              | <ul><li>[x] </li></ul> | It is possible to query storage to Find NFTs for an address using Polkadot.js API |  |
+| 0b.  | Documentation | <ul><li>[x] </li></ul> |[How to run?](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#how-to-run), [NFTAA doc](https://github.com/decenzio/nftaa/blob/main/README.md)| Works | 
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> |[Testing guide in readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#testing), [Unit tests file](https://github.com/decenzio/nftaa/blob/main/src/tests.rs)| Works | 
+| 0d. | Docker | <ul><li>[x] </li></ul> |[Docker file](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/Dockerfile), [Docker guid in this readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#docker)| Works | 
+|      1. | nftaa_pallet                                 | <ul><li>[x] </li></ul> | Initial version of the nftaa_pallet | Works |
+|     1a. | reimplement functionalities from pallet_nfts | <ul><li>[x] </li></ul> | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) | Works |
+|     1b. | nftaa address                                | <ul><li>[x] </li></ul> | pub fn create, pub fn mint, pub fn transfer, fn generate_nfta_address in [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) | All functions work |
+|     1c. | nftaa attributes                      | <ul><li>[x] </li></ul> | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) | Works |
+|     1d. | nftaa act as proxy                                 | <ul><li>[x] </li></ul> | pub fn proxy_call in [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs) | Works |
+|     1e. | find owned assets                             | <ul><li>[x] </li></ul> | The default blockchain explorer can be used for this purpose | Works |
+|     1f. | find NFTAAs for account and owner              | <ul><li>[x] </li></ul> | It is possible to query storage to Find NFTs for an address using Polkadot.js API | Works |
 
 # General Notes
+
+Nicely written Rust code, good documentation and inline comments. I was able to manually test all the pallet functions. Areas of improvement for next milestone would be better test coverage and file organization.
 
 Zombienet Docker config runs successfully:
 
