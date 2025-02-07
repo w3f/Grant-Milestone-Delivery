@@ -26,4 +26,4 @@
 **Additional Information**
 > The deliverables in this milestones essentially did the work of setting up the architecture and data flow of the builder.
 > A bunch of work for the second milestone was also covered by setting up the UI design, branding, copy and UI development of the project during this milestone. 
-> The new website is still under works, but you can find a preview which can be found here [Demo](https://relaycode.vercel.app) and [Code](https://github.com/itsyogesh/relaycode/tree/feature/homepage]
+> The new website is still under works, but you can find a preview which can be found here [Demo](https://relaycode.vercel.app) and [Code](https://github.com/itsyogesh/relaycode/tree/feature/homepage)
