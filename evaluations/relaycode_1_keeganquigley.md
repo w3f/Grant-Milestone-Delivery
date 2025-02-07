@@ -46,3 +46,36 @@ https://nextjs.org/telemetry
 
 
 ## Testing
+
+Docker is currently failing:
+
+```ts
+44.47 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+56.11 Failed to compile.
+56.11 
+56.11 ./components/params/types.ts:5:30
+56.11 Type error: Cannot find module '@polkadot/types/interfaces' or its corresponding type declarations.
+56.11 
+56.11   3 | import type { DedotClient } from "dedot";
+56.11   4 | import { PolkadotApi } from "@dedot/chaintypes";
+56.11 > 5 | import { PortableType } from "@polkadot/types/interfaces";
+56.11     |                              ^
+56.11   6 |
+56.11   7 | export interface ParamInputProps {
+56.11   8 |   name: string;
+56.23 error Command failed with exit code 1.
+56.23 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+------
+Dockerfile:32
+--------------------
+  31 |     
+  32 | >>> RUN \
+  33 | >>>     if [ -f yarn.lock ]; then yarn run build; \
+  34 | >>>     elif [ -f package-lock.json ]; then npm run build; \
+  35 | >>>     elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
+  36 | >>>     else echo "Lockfile not found." && exit 1; \
+  37 | >>>     fi
+  38 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c if [ -f yarn.lock ]; then yarn run build;     elif [ -f package-lock.json ]; then npm run build;     elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build;     else echo \"Lockfile not found.\" && exit 1;     fi" did not complete successfully: exit code: 1
+```
