@@ -18,7 +18,7 @@
 | 3.     | Parameter Input Fields | <ul><li>[x] </li></ul> | [Parameter Inputs](https://github.com/itsyogesh/relaycode/blob/master/components/params) | |
 | 4.     | Encoding and Decoding | <ul><li>[x] </li></ul> | [Encoding/Decoding Logic](https://github.com/itsyogesh/relaycode/blob/master/builder/page.tsx) |  |
 | 5.     | Information Pane | <ul><li>[x] </li></ul> | [Information Display](https://github.com/itsyogesh/relaycode/blob/master/components/information-pane.tsx) |  |
-| 6.     | Demo Deployment | <ul><li>[x] </li></ul> | [Demo Site](https://relaycode.org/) | Deploy MVP version of Relaycode to a cloud platform for demonstration purposes. |
+| 6.     | Demo Deployment | <ul><li>[x] </li></ul> | [Demo Site](https://relaycode.org/) |  |
 
 # General Notes
 
