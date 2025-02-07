@@ -22,4 +22,27 @@
 
 # General Notes
 
+Website runs successfully:
+
+```ts
+@keeganquigley ➜ /workspaces/relaycode (master) $ npm run dev
+
+> relaycode@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.16
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1619ms
+```
+<img width="1367" alt="relaycode" src="https://github.com/user-attachments/assets/6c681976-d488-438f-b663-7483d030dec3" />
+
+
 ## Testing
