@@ -47,6 +47,29 @@ https://nextjs.org/telemetry
 
 ## Testing
 
+Three unit tests pass successfully:
+
+```ts
+npm test
+
+> relaycode@0.1.0 test
+> jest
+
+(node:4372) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ PASS  __tests__/input-map.test.ts
+  findComponent
+    ✓ should return the correct component for exact type matches (4 ms)
+    ✓ should return the number component for known type categories (1 ms)
+    ✓ should default to the text component for unknown types (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.821 s
+Ran all test suites.
+```
+
 ~~Docker is currently failing:~~
 
 Docker now builds and runs successfully:
