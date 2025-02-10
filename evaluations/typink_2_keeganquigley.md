@@ -138,6 +138,7 @@ mkdir: cannot create directory ‘test’: File exists
     at async Task.run (file:///home/ubuntu/.npm/_npx/ee0b8ab848e051d2/node_modules/listr2/dist/index.js:2058:11)
 🚨 Sorry, exiting...
 ```
+</details>
 
 UPDATE: I am now able to create contracts using the CLI:
 ```ts
@@ -162,7 +163,6 @@ ubuntu@ip-172-31-23-44:~$ npx create-typink@latest
     $ cd new_app_maybe
     $ yarn start
 ```
-</details>
 
 PSP22:
 ```ts
