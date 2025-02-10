@@ -16,7 +16,7 @@
 
 # General Notes
 
-Getting an error when trying to build a test greeter contract:
+~~Getting an error when trying to build a test greeter contract:~~
 
 <details>
   <summary>Output</summary>
@@ -106,7 +106,7 @@ $ yarn install [--json] [--immutable] [--immutable-cache] [--refresh-lockfile] [
 ```
 </details>
 
-I get a different error when trying the psp22 contract:
+~~I get a different error when trying the psp22 contract:~~
 
 <details>
   <summary>Output</summary>
@@ -138,6 +138,64 @@ mkdir: cannot create directory ‘test’: File exists
     at async Task.run (file:///home/ubuntu/.npm/_npx/ee0b8ab848e051d2/node_modules/listr2/dist/index.js:2058:11)
 🚨 Sorry, exiting...
 ```
+
+UPDATE: I am now able to create contracts using the CLI:
+```ts
+ubuntu@ip-172-31-23-44:~$ npx create-typink@latest
+
+░█▀▀░█▀▄░█▀▀░█▀█░▀█▀░█▀▀░░░░░▀█▀░█░█░█▀█░▀█▀░█▀█░█░█
+░█░░░█▀▄░█▀▀░█▀█░░█░░█▀▀░▄▄▄░░█░░░█░░█▀▀░░█░░█░█░█▀▄
+░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀░░░░░░▀░░░▀░░▀░░░▀▀▀░▀░▀░▀░▀
+
+✔ Your project name: new_app_maybe
+✔ What example contract do you want to use? greeter
+✔ What wallet connector do you want to use? Default
+✔ What networks do you want to connect? Pop Testnet
+✔ 📁 Create project directory /home/ubuntu/new_app_maybe
+✔ 🚀 Creating a new Typink app in new_app_maybe
+✔ 📦 Installing dependencies with yarn, this could take a while
+✔ 🧹 Formatting the code with Prettier
+✔ 🚨 Create the very first Git commit
+
+🎉 Your project is ready!
+➡️ To get started:
+    $ cd new_app_maybe
+    $ yarn start
+```
 </details>
+
+PSP22:
+```ts
+ubuntu@ip-172-31-23-44:~$ npx create-typink@latest
+
+░█▀▀░█▀▄░█▀▀░█▀█░▀█▀░█▀▀░░░░░▀█▀░█░█░█▀█░▀█▀░█▀█░█░█
+░█░░░█▀▄░█▀▀░█▀█░░█░░█▀▀░▄▄▄░░█░░░█░░█▀▀░░█░░█░█░█▀▄
+░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀░░░░░░▀░░░▀░░▀░░░▀▀▀░▀░▀░▀░▀
+
+✔ Your project name: new_psp22
+✔ What example contract do you want to use? psp22
+✔ What wallet connector do you want to use? Default
+✔ What networks do you want to connect? Pop Testnet
+✔ 📁 Create project directory /home/ubuntu/new_psp22
+✔ 🚀 Creating a new Typink app in new_psp22
+✔ 📦 Installing dependencies with yarn, this could take a while
+✔ 🧹 Formatting the code with Prettier
+✔ 🚨 Create the very first Git commit
+
+🎉 Your project is ready!
+➡️ To get started:
+    $ cd new_psp22
+    $ yarn start
+```
+```ts
+ubuntu@ip-172-31-23-44:~/new_psp22$ yarn start
+The CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.
+
+  VITE v5.4.14  ready in 779 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
 
 ## Testing
