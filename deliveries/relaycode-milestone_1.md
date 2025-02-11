@@ -15,12 +15,12 @@
 | 0a.    | License     | [License](https://github.com/itsyogesh/relaycode/blob/master/LICENSE.md) | Apache 2.0 license for Relaycode. |
 | 0b.    | Documentation | [Documentation](https://github.com/itsyogesh/relaycode/tree/master/docs) | Basic documentation including inline code docs and a simple tutorial explaining how to use the MVP version of Relaycode. |
 | 0c.    | Testing and Testing Guide | [Testing Guide](https://github.com/itsyogesh/relaycode/tree/master/__tests__) | Unit tests covering core encoding and decoding functions, with a basic testing guide provided in the repository. |
-| 0d.    | Docker      | [Dockerfile](https://github.com/itsyogesh/relaycode/blob/master/Dockerfile) | Dockerfile to easily run the MVP version of Relaycode. |
+| 0d.    | Docker      | [Dockerfile](https://github.com/itsyogesh/relaycode/tree/master/Dockerfile) | Dockerfile to easily run the MVP version of Relaycode. |
 | 1.     | Basic UI Implementation | [UI Code](https://github.com/itsyogesh/relaycode/tree/master/app/) [Demo]([Demo Site](https://relaycode.org/builder) | Implement basic split-view interface using React, Tailwind CSS, and shadcn/ui components. |
 | 2.     | Pallet and Function Selection | [Pallets Dropdown](https://github.com/itsyogesh/relaycode/blob/master/components/builder/combobox.tsx) | Implement dropdown menus for selecting pallets and their respective functions. |
-| 3.     | Parameter Input Fields | [Parameter Inputs](https://github.com/itsyogesh/relaycode/blob/master/components/params) | Create dynamic input fields for extrinsic parameters based on selected function. |
-| 4.     | Encoding and Decoding | [Encoding/Decoding Logic](https://github.com/itsyogesh/relaycode/blob/master/builder/page.tsx) | Implement real-time encoding and decoding of extrinsic data using dedot. |
-| 5.     | Information Pane | [Information Display](https://github.com/itsyogesh/relaycode/blob/master/components/information-pane.tsx) | Display encoded call data and call hash in the information pane. |
+| 3.     | Parameter Input Fields | [Parameter Inputs](https://github.com/itsyogesh/relaycode/tree/master/components/params) | Create dynamic input fields for extrinsic parameters based on selected function. |
+| 4.     | Encoding and Decoding | [Encoding/Decoding Logic](https://github.com/itsyogesh/relaycode/blob/master/app/builder/page.tsx) | Implement real-time encoding and decoding of extrinsic data using dedot. |
+| 5.     | Information Pane | [Information Display](https://github.com/itsyogesh/relaycode/blob/master/components/builder/information-pane.tsx) | Display encoded call data and call hash in the information pane. |
 | 6.     | Demo Deployment | [Demo Site](https://relaycode.org/) | Deploy MVP version of Relaycode to a cloud platform for demonstration purposes. |
 
 **Additional Information**
