@@ -13,7 +13,11 @@ Cyborg Worker Node defintion and configuration to enable compute providers to di
 
 ## System Pallets
 
-System Pallets for Cyborg parachain (Payments and Inventory)
+### 1. Payments
+A pallet that interacts with the system's currency system to manage balances and transfers, ensuring that users pay for the compute hours and that the service provider, compute providers are properly compensated.
+
+### 2. Inventory
+
 
 ## Provide Compute feature
 
