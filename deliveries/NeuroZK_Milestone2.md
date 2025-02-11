@@ -9,19 +9,8 @@
 
 ## Cyborg Worker Node Implementation
 
-Cyborg Worker Node defintion and configuration to enable compute providers to directly download executable and deploy worker nodes without clustering
+Cyborg Worker Node defintion and configuration to enable compute providers to directly download executables and deploy worker nodes without clustering. Its an Application that manages and executes tasks that were assigned to it via Cyborg Connect (UI) and the Cyborg Parachain.
 
-## System Pallets
-
-### 1. Payments
-A pallet that interacts with the system's currency system to manage balances and transfers, ensuring that users pay for the compute hours and that the service provider, compute providers are properly compensated.
-
-### 2. Inventory
-
-
-## Provide Compute feature
-
-UI updates for Worker Nodes (Currently marked coming soon)
 
 **Deliverables** 
 
