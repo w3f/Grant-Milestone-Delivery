@@ -7,13 +7,12 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
-| 0a. | License |<ul><li>[x] </li></ul> | | Apache 2.0 | 
-| 0b.  | Documentation |<ul><li>[x] </li></ul> || detailed documentation. very nice. | 
+| 0a. | License |<ul><li>[x] </li></ul> | [license file](https://github.com/tcdt-lab/bcdns/blob/master/LICENSE) | Apache 2.0 | 
+| 0b.  | Documentation |<ul><li>[x] </li></ul> | [Readme](https://github.com/tcdt-lab/bcdns/blob/master/README.md)| detailed documentation. very nice. | 
 | 0c.  | Testing guide | <ul><li>[x] </li></ul> | [Tests](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/rootdns/src/tests.rs), [Tests](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/tld/src/tests.rs)   | unit tests all passing | 
-| 0d.  | Docker | <ul><li>[ ] </li></ul> | [Docker](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/Dockerfile) | builds, but doesn't start. | 
-| 1 | pallet-root-dns |<ul><li>[x] </li></ul> | [Link](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/rootdns/src/lib.rs) |manage the state of the root network | 
-| 2 | pallet-tld |<ul><li>[ ] </li></ul> |[Link](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/tld/src/lib.rs)
-|  |
+| 0d.  | Docker | <ul><li>[ ] </li></ul> | [Docker](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/Dockerfile) | not producing blocks. | 
+| 1 | pallet-root-dns |<ul><li>[x] </li></ul> | [Link](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/rootdns/src/lib.rs) | ok, see feedback | 
+| 2 | pallet-tld |<ul><li>[ ] </li></ul> | [Link](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/pallets/tld/src/lib.rs) | see feedback |
 
 
 
@@ -32,19 +31,16 @@ Currently it's possible to register empty chain specs. Did you think about const
 
 ## pallet-tld
 
+I think it's really inconvenient having to scroll to the top of the file everytime you wonder about what the documentation for a certain line of code looks like. I think it would be great if the inline docs would actually be close to the lines of the code which they document. The documentation itself looks clean though. How about you add some additional inline docs just as it's being done in the rootDNS pallet? 
+
+Just like in rootDNS pallet I suggest to switch to bounded data structures instead of using regular vectors.
+
 ## Docker
-The docker image builds successfully but simply starting it results in an error about the database creation. Please check it out.
-````
-/bcdns/polkadot-sdk-solochain-template$ sudo docker run bcdns
-Error: Service(Client(Backend("Failed to create RocksDB directory: `Os { code: 13, kind: PermissionDenied, message: \"Permission denied\" }`.")))
-2025-02-10 11:17:32 Substrate Node    
-2025-02-10 11:17:32 ✌️  version 0.1.0-unknown    
-2025-02-10 11:17:32 ❤️  by Parity Technologies <admin@parity.io>, 2017-2025    
-2025-02-10 11:17:32 📋 Chain specification: Local Testnet    
-2025-02-10 11:17:32 🏷  Node name: cute-jellyfish-1951    
-2025-02-10 11:17:32 👤 Role: FULL    
-2025-02-10 11:17:32 💾 Database: RocksDb at /polkadot/.local/share/node-template/chains/local_testnet/db/full  
-````
+The docker image builds and runs successfully. Thanks for the quick fix. Sadly the chain is not producing blocks if you simply use:
+
+``sudo docker run "image-name"``
+
+
 
 
 ## Tests
