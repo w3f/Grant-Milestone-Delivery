@@ -1,20 +1,26 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/typink.md
 - **Milestone:** 2
 
 | Number | Deliverable | Accepted | Links | Notes |
 | -----: | ----------- | ----- | ------ | ------ |
 | **0a.** | License | <ul><li>[x] </li></ul> | [MIT](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/LICENSE) | |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | - [README](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/README.md) <br />- [Demo](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/examples/demo) (https://typink-demo.netlify.app/) <br />- [Demo SubConnect](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/examples/demo-subconnect) (https://typink-subconnect.netlify.app/) | |
-| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Install & setup typink project](https://github.com/dedotdev/typink/tree/w3f-delivery-m2?tab=readme-ov-file#getting-started) |  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | - [README](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/README.md) <br />- [Demo](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/examples/demo) (https://typink-demo.netlify.app/) <br />- [Demo SubConnect](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/examples/demo-subconnect) (https://typink-subconnect.netlify.app/) | Very robust docs|
+| **0c.** | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Install & setup typink project](https://github.com/dedotdev/typink/tree/w3f-delivery-m2?tab=readme-ov-file#getting-started) | Good coverage |
 | **0d.** | Article | <ul><li>[x] </li></ul> | [Introducing Typink](https://docs.dedot.dev/typink/introducing-typink) | |
-| 1. | Helpers & Utilities | <ul><li>[x] </li></ul> | Delivered [Helpers & Utilities](https://grants.web3.foundation/applications/typink#helpers--utilities) including: <br/> - [formatBalance](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/typink/src/utils/formatBalance.ts) <br /> - [Human-readable error messages](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/typink/src/utils/errors.ts) <br /> - [List of ink!-contracts supported networks](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/typink/src/networks) <br /> - [txToaster](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/create-typink/src/templates/default/ui/src/utils/txToaster.tsx): Transaction notification & progress updates  |  |
-| 2. | CLI & boilerplate template project | <ul><li>[x] </li></ul> | Delivered [CLI & template project](https://grants.web3.foundation/applications/typink#cli--boilerplatestarter-project-template) including: <br/> - [create-typink](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/create-typink) cli package ([npm package](https://www.npmjs.com/package/create-typink)) <br /> - [Template project](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/create-typink/src/templates/default) |  |
-| 3. | Example dapp | <ul><li>[x] </li></ul> | - Tutorial: [Develop ink! dApp using Typink](https://docs.dedot.dev/help-and-faq/tutorials/develop-ink-dapp-using-typink) <br /> - [Sample dapp - PSP22 Transfer](https://psp22-transfer.netlify.app/) ([Github Repo](https://github.com/sinzii/psp22-transfer))  |   |
+| 1. | Helpers & Utilities | <ul><li>[x] </li></ul> | Delivered [Helpers & Utilities](https://grants.web3.foundation/applications/typink#helpers--utilities) including: <br/> - [formatBalance](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/typink/src/utils/formatBalance.ts) <br /> - [Human-readable error messages](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/typink/src/utils/errors.ts) <br /> - [List of ink!-contracts supported networks](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/typink/src/networks) <br /> - [txToaster](https://github.com/dedotdev/typink/blob/w3f-delivery-m2/packages/create-typink/src/templates/default/ui/src/utils/txToaster.tsx): Transaction notification & progress updates  | Works |
+| 2. | CLI & boilerplate template project | <ul><li>[x] </li></ul> | Delivered [CLI & template project](https://grants.web3.foundation/applications/typink#cli--boilerplatestarter-project-template) including: <br/> - [create-typink](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/create-typink) cli package ([npm package](https://www.npmjs.com/package/create-typink)) <br /> - [Template project](https://github.com/dedotdev/typink/tree/w3f-delivery-m2/packages/create-typink/src/templates/default) | Works |
+| 3. | Example dapp | <ul><li>[x] </li></ul> | - Tutorial: [Develop ink! dApp using Typink](https://docs.dedot.dev/help-and-faq/tutorials/develop-ink-dapp-using-typink) <br /> - [Sample dapp - PSP22 Transfer](https://psp22-transfer.netlify.app/) ([Github Repo](https://github.com/sinzii/psp22-transfer))  | Works |
 
 # General Notes
+
+Excellent work as usual! Wonderful documentation & tutorials. I was able to make it through the tutorial to deploy smart contracts locally using the CLI tool, and see it on the UI. I was also able to use the demo app to interact with contracts on the POP chain, such as update the message on the Greeter contract, as well as mint assets with the PSP22 contract.
+
+![typink](https://github.com/user-attachments/assets/f813e72c-3dd7-4dd9-8a51-d2cb5484f417)
+
+![typink2](https://github.com/user-attachments/assets/e170ef0e-2764-455a-8095-b72b81b0e081)
 
 ~~Getting an error when trying to build a test greeter contract:~~
 
