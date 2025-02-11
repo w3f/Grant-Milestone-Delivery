@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/Solang_Playground.md
 - **Milestone:** 4
 - **Kusama Identity:** Address
@@ -111,7 +111,7 @@ Summarizes the overall performance plus additional feedback/comments
     ```
   </details>
 
-- [] Tests: currently there are failing tests
+- [x] Tests: ~~currently there are failing tests~~ => fixed and demonstrated via video call, output [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1215#issuecomment-2595020883)
   
   <details>
     <summary>Output</summary>
@@ -308,7 +308,7 @@ Summarizes the overall performance plus additional feedback/comments
   </details>
 
 
-- [] Docker: Run fails
+- [x] Docker: ~~Run fails~~ => fixed and demonstrated via video call, output [here](https://github.com/w3f/Grant-Milestone-Delivery/pull/1215#issuecomment-2595020883)
   
   <details>
     <summary>Output</summary>
