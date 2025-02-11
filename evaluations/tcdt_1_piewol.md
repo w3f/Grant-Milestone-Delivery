@@ -40,6 +40,20 @@ The docker image builds and runs successfully. Thanks for the quick fix. Sadly t
 
 ``sudo docker run "image-name"``
 
+Despite a 6 second block target no blocks are produced.
+
+````
+2025-02-11 14:44:56 Running JSON-RPC server: addr=127.0.0.1:9944,[::1]:9944    
+2025-02-11 14:45:01 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:06 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:11 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:16 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:21 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:26 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:31 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0    
+2025-02-11 14:45:36 💤 Idle (0 peers), best: #0 (0xa045…6723), finalized #0 (0xa045…6723), ⬇ 0 ⬆ 0   
+````
+
 
 
 
