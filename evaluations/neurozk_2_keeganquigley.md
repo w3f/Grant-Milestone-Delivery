@@ -6,7 +6,7 @@
 
 | Number | Deliverable | Accepted | Specification | Notes |
 | -----: | ----------- | ------------- | ------------- | ------------- |
-| **0a.** | [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE) | <ul><li>[x] </li></ul> | GPLv3 |
+| **0a.** | [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE) | <ul><li>[x] </li></ul> | GPLv3 | 
 | **0b.** | [Documentation](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/Local%20Testing%20NeuroZK_Milestone2.md) | <ul><li>[x] </li></ul> | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how users can launch a cyborg worker node using their local local machine|
 | **0c.** | [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/Local%20Testing%20NeuroZK_Milestone2.md) | <ul><li>[x] </li></ul> | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
 | **0d.** | [Docker](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/Dockerfile) | <ul><li>[x] </li></ul> | We will provide a Dockerfile(s) that can be used to run a cyborg worker node locally. |
@@ -18,7 +18,7 @@
 
 # General Notes
 
-I was able to get through the guide to test the worker node.
+I was able to get through the guide to test the worker node and the inventory and payment pallets. Zombienet config works. Thanks for the video as well.
 
 Docker works using `docker build -t cyborg-worker-node:local .` w/ 1 warning:
 
