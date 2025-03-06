@@ -15,7 +15,7 @@
 | 1. | Feature: Nom Pool Validator Selection | <ul><li>[x] </li></ul>| showcased in report  | ok |
 | 2. | Feature: Staking Stash Validator Selection | <ul><li>[ ] </li></ul>| - | see general feedback  |
 | 3. | Feature: Staking Pure Proxy Validator Selection | <ul><li>[x] </li></ul>| tested with multisig | ok |  
-| 4. | extra feature: Identity Integration | <ul><li>[x] </li></ul>| | Integrating the new people chain | ok
+| 4. | extra feature: Identity Integration | <ul><li>[x] </li></ul>| | Integrating the new people chain | ok |
 
 
 ## General Notes
