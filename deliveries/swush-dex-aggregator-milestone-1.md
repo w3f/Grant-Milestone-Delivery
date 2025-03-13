@@ -31,4 +31,4 @@ This milestone is Initial Proof of Concept which sets up foundation with functio
 
 
 **Additional Information**
-> Any further comments on the milestone that you would like to share with us.
+All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
