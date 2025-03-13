@@ -24,8 +24,8 @@ This milestone is Initial Proof of Concept which sets up foundation with functio
 | **0e.** | Article | | Our progress is published at the Documentation section above
 | **1.** | **Basic Functional UI (Responsive Design)** |[UI root component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/app/page.tsx) | Complete UI can be viewed at http://localhost:3000/
 | **2.** | **Wallet Integration** | [Wallet UI component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/components/swap/WalletButton.tsx)| Wallet support for major ecosystem wallets like Talisman, Polkadot.js, Subwallet, etc. and the user can view the asset balance in the UI if wallet is connected
-| **3.** | **Asset APIs** | [Asset API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L24-L55)| API to fetch assets and their metadata 
-| **4.** | **Asset Pair Rates APIs** | [Asset Pair Rates API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L57-L113)| API to fetch asset pair rates 
+| **3.** | **Asset APIs** | [Asset API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L24-L55)| API to fetch assets and their metadata from hydradx and Polkadot asset hub
+| **4.** | **Asset Pair Rates APIs** | [Asset Pair Rates API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L57-L113)| API to fetch asset pair rates from hydradx and Polkadot asset hub
 | **5.** | **Basic Notification System** | | Can be viewed in the UI, right now implemented when user connects and disconnects to the wallet
 | **6.** | **User Profiles** | | Can be viewed in the UI, user can set slippage preferences
 
