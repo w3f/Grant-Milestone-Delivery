@@ -31,4 +31,7 @@ This milestone is Initial Proof of Concept which sets up foundation with functio
 
 
 **Additional Information**
+
 All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
+
+A demo for UI can be viewed [here](https://www.loom.com/share/3dd0f5b4bb2040fa871b8b5a469c4e3a?sid=115150bb-f80b-4c76-b922-c461891564ce).
