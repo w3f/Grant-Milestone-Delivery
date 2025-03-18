@@ -11,7 +11,7 @@
 |Number|Deliverable|Link|Notes|
 |-------------|-------------|------------- |------------- |
 |0a.|License| [MIT License](https://github.com/auguth/pocs/blob/w3f_milestone_3/ink-contracts/LICENSE) |ink! Contracts LICENSE|
-|0b.|Documentation| [Inline Documentation](hhttps://github.com/auguth/pocs/tree/w3f_milestone_3/ink-contracts) | All ink! contracts and chain extensions contain inline code documentation|
+|0b.|Documentation| [Inline Documentation](https://github.com/auguth/pocs/tree/w3f_milestone_3/ink-contracts) | All ink! contracts and chain extensions contain inline code documentation|
 |0c.|Testing Guide| [Testing guide](https://github.com/auguth/pocs/blob/w3f_milestone_3/ink-contracts/README.md) |Contracts Testing Guide |
 |0d.|Docker | [Dockerfile](https://github.com/auguth/pocs/blob/w3f_milestone_3/solo-substrate-chain/Dockerfile) | `docker compose up --build -d` |
 |0e.|Article|[Medium-Article](https://medium.com/@auguthresearch/proof-of-contract-stake-pocs-v0-1-experimental-0ed7f009b6dc), [PoCS-Litepaper](https://github.com/auguth/pocs/tree/w3f_milestone_3/litepaper/pocs-litepaper.pdf)|-|
