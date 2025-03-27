@@ -379,6 +379,32 @@ api_1  | SDK initialized successfully
 ```
 </details>
 
+Tear down build works:
+```ts
+docker-compose down
+Removing swush-app_web_1 ... done
+Removing swush-app_api_1 ... done
+Removing network swush-app_default
+```
+`pnpm dev` successfully builds and launches UI on port 3000
+
+```ts
+packages/api dev: Xyk [7Hhnk53koe...] balance subscribed
+packages/api dev: Xyk [7HpVPprYhS...] balance subscribed
+packages/api dev: Xyk [7LGagyCQkt...] balance subscribed
+packages/api dev: Xyk [7MuHVrRFZ6...] balance subscribed
+packages/api dev: Xyk pools(134) ✅
+packages/api dev: Xyk subs(153) ✅
+packages/api dev: Stableswap [7JP6TvcH5x...] balance subscribed
+packages/api dev: Stableswap [7MaKPwwnqN...] balance subscribed
+packages/api dev: Stableswap [7LVGEVLFXp...] balance subscribed
+packages/api dev: Stableswap pools(3) ✅
+packages/api dev: Stableswap subs(9) ✅
+packages/api dev: Cache initialized for merged_assets
+packages/api dev: AssetService initialized successfully
+packages/api dev: SDK initialized successfully
+```
+
 ## Testing
 
 Unit tests all passing:
