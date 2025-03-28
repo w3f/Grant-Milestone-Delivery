@@ -1,3 +1,23 @@
+# Evaluation
+
+- **Status:** In progress
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/swush-dex-aggregator.md
+- **Milestone:** 1
+
+| Number | Deliverable | Accepted | Link | Notes |
+| --- | --- | --- | --- | --- |
+| **0a.** | License | <ul><li>[x] </li></ul> | | AGPLv3  |
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | 
+| **0c.** | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) |  |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
+| **0e.** | Article | <ul><li>[x] </li></ul> | | 
+| **1.** | **Basic Functional UI (Responsive Design)** | <ul><li>[x] </li></ul> |[UI root component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/app/page.tsx) | Complete UI can be viewed at http://localhost:3000/
+| **2.** | **Wallet Integration** | <ul><li>[x] </li></ul> | [Wallet UI component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/components/swap/WalletButton.tsx)| 
+| **3.** | **Asset APIs** | <ul><li>[x] </li></ul> | [Asset API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L24-L55)| 
+| **4.** | **Asset Pair Rates APIs** | <ul><li>[x] </li></ul> | [Asset Pair Rates API](https://github.com/swush-labs/swush-app/blob/dev/packages/api/src/routes/assets.ts#L57-L113)| 
+| **5.** | **Basic Notification System** | <ul><li>[x] </li></ul> | | 
+| **6.** | **User Profiles** | <ul><li>[x] </li></ul> | | 
+
 # General Notes
 
 deps install w/ warnings:
