@@ -18,7 +18,7 @@ This milestone is Initial Proof of Concept which sets up foundation with functio
 | Number | Deliverable | Link | Notes |
 | --- | --- | --- | --- |
 | **0a.** | License | AGPLv3  |
-| **0b.** | Documentation | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | 
+| **0b.** | Documentation | [High Level Documentation](https://github.com/swush-labs/swush-app/blob/dev/docs/api/HIGH_LEVEL_DESIGN.md) | 
 | **0c.** | Testing Guide | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Steps to setup locally and run lint and unit tests |
 | **0d.** | Docker | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
 | **0e.** | Article | | Our progress is published at the Documentation section above
