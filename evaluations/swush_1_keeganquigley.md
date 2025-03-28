@@ -1,13 +1,13 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/swush-dex-aggregator.md
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Notes |
 | --- | --- | --- | --- | --- |
 | **0a.** | License | <ul><li>[x] </li></ul> | | AGPLv3  |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | 404 error
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | UPDATE: Fixed
 | **0c.** | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Works |
 | **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | Works
 | **0e.** | Article | <ul><li>[x] </li></ul> | | 
