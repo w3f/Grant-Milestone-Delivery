@@ -1,15 +1,15 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** in progress
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/swush-dex-aggregator.md
 - **Milestone:** 1
 
 | Number | Deliverable | Accepted | Link | Notes |
 | --- | --- | --- | --- | --- |
 | **0a.** | License | <ul><li>[x] </li></ul> | | AGPLv3  |
-| **0b.** | Documentation | <ul><li>[x] </li></ul> | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | 
-| **0c.** | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) |  |
-| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
+| **0b.** | Documentation | <ul><li>[x] </li></ul> | [High Level Documentation](https://github.com/swush-network/swush-dex-aggregator/blob/main/docs/high-level-documentation.md) | 404 error
+| **0c.** | Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Works |
+| **0d.** | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | Works
 | **0e.** | Article | <ul><li>[x] </li></ul> | | 
 | **1.** | **Basic Functional UI (Responsive Design)** | <ul><li>[x] </li></ul> |[UI root component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/app/page.tsx) | Complete UI can be viewed at http://localhost:3000/
 | **2.** | **Wallet Integration** | <ul><li>[x] </li></ul> | [Wallet UI component](https://github.com/swush-labs/swush-app/blob/dev/apps/web/src/components/swap/WalletButton.tsx)| 
@@ -442,3 +442,26 @@ Unit tests all passing:
 │ Ran all test suites.
 └─ Done in 24s
 ```
+Linting works now:
+```ts
+pnpm lint
+
+> swush-me@0.1.0 lint /home/ubuntu/swush-app
+> pnpm -r lint
+
+packages/api                             |  WARN  The field "pnpm.overrides" was found in /home/ubuntu/swush-app/packages/api/package.json. This will not take effect. You should configure "pnpm.overrides" at the root of the workspace instead.
+Scope: 2 of 3 workspace projects
+apps/web lint$ next lint
+│ ✔ No ESLint warnings or errors
+└─ Done in 4.1s
+packages/api lint$ eslint services --ext .ts
+└─ Done in 3.4s
+```
+## UI
+
+So far UI is smooth and works very nicely. I'm also able to set the slippage:
+
+![test deployment ui](https://github.com/user-attachments/assets/91e1d42e-a9ea-4aef-86a9-4507f8512c4e)
+
+![ui 2](https://github.com/user-attachments/assets/ee7d1780-2591-4fe4-b533-cf9b96c3a4a8)
+
