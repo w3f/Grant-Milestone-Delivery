@@ -1345,6 +1345,37 @@ kusama.dart
 ```
 </details>
 
+demo.dart successfully connects to the chain and runs a query:
+```dart
+{
+  specName: polkadot,
+  implName: parity-polkadot,
+  authoringVersion: 0,
+  specVersion: 1004001,
+  implVersion: 0,
+  apis: [...],
+  transactionVersion: 26,
+  stateVersion: 1
+}
+```
+
+I'm able to see the first 10 account storage keys and their corresponding account info.
+```dart
+First 10 account storage keys: (0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900000a008e9025a48fdc3b13d8cc8c4871f40d8fd44220ddbb0cd51715b46071c3a1337cf85edba112484bb944ec8ce6, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900001c2ed146255b0bed7891676f22e9047ff8ec5bf639dd08672157cff3c675aec4ec17276036689e07b405a05b4449, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900002ed3d34f8412441bdb1db5d4a9dfbc74238ff6bdc1b5e59208c688812cde864a815776980edd8ed2965115e01615, ..., 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da900005dd7497447073471631b316467b5db065775048fea576b139736ebe87bff3ba288002a33aa2a91c85b32bff5fa76, 0x26aa394eea5630e07c48ae0c9558cef7b99d880ec681799c0cf30e8886371da9000069eb42781aa99b0695f2166d6a382eabfbaabc9302400e24924da229bfdf57e9ea5f26dc4657b8eac7be066bd506)
+First 10 account pubKeys: (0x00000a008e9025a48fdc3b13d8cc8c4871f40d8fd44220ddbb0cd51715b46071, 0x00001c2ed146255b0bed7891676f22e9047ff8ec5bf639dd08672157cff3c675, 0x00002ed3d34f8412441bdb1db5d4a9dfbc74238ff6bdc1b5e59208c688812cde, ..., 0x00005dd7497447073471631b316467b5db065775048fea576b139736ebe87bff, 0x000069eb42781aa99b0695f2166d6a382eabfbaabc9302400e24924da229bfdf)
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
+```
+Very thorough [extrinsics](https://polkadart.dev/metadata/extrinsics/) docs.
+
 ## Testing
 
 I'm able to install all deps in the pubspec.yaml file:
