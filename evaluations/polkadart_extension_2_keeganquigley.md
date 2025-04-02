@@ -2,26 +2,26 @@
 
 - **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkadart_extension.md
-- **Milestone:** 1
+- **Milestone:** 2
 - **Evaluation by:** keeganquigley
 
 | Number | Deliverable        | Accepted | Link | Notes |
 |:------:|--------------------|-------------------------------------------------------------------------------------------------------------------| -------------------- | -------------------- |
-|  0a.   | License            | <ul><li>[x] </li></ul> | https://github.com/leonardocustodio/polkadart/blob/main/packages/ink_abi/LICENSE                                  |
+|  0a.   | License            | <ul><li>[x] </li></ul> | https://github.com/leonardocustodio/polkadart/blob/main/packages/ink_abi/LICENSE                                  | 
 |        |                    | <ul><li>[x] </li></ul> |  https://github.com/leonardocustodio/polkadart/blob/main/packages/ink_cli/LICENSE                                  |
-|  0b.   | Documentation      | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/overview/                                                                               |
-|  0c.   | Examples           | <ul><li>[x] </li></ul> | https://polkadart.dev/guides/contracts-interaction/                                                               | 
-|  0b.   | Test               | <ul><li>[x] </li></ul> | https://github.com/leonardocustodio/polkadart/blob/main/packages/ink_abi/test/erc_20_v5_test.dart                 |
-|  1a.   | Offline Signer     | <ul><li>[x] </li></ul> | https://pub.dev/documentation/substrate_metadata/latest/metadata_merkleize/                                       |
-|  1b.   | ABI                | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_abi/latest/ink_abi/                                                             |
-|  1c.   | Deploy contract    | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_abi/latest/ink_abi/                                                             |
-|  2d.   | Read contract      | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_cli/latest/ink_cli/                                                             |
-|  3e.   | Write contract     | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_cli/latest/ink_cli/                                                             |
+|  0b.   | Documentation      | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/overview/                                                                               | Very nice robust documentation
+|  0c.   | Examples           | <ul><li>[x] </li></ul> | https://polkadart.dev/guides/contracts-interaction/                                                               | All work.
+|  0b.   | Test               | <ul><li>[x] </li></ul> | https://github.com/leonardocustodio/polkadart/blob/main/packages/ink_abi/test/erc_20_v5_test.dart                 | Unit tests passing
+|  1a.   | Offline Signer     | <ul><li>[x] </li></ul> | https://pub.dev/documentation/substrate_metadata/latest/metadata_merkleize/                                       | Works
+|  1b.   | ABI                | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_abi/latest/ink_abi/                                                             | Works
+|  1c.   | Deploy contract    | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_abi/latest/ink_abi/                                                             | Works
+|  2d.   | Read contract      | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_cli/latest/ink_cli/                                                             | Works
+|  3e.   | Write contract     | <ul><li>[x] </li></ul> | https://pub.dev/documentation/ink_cli/latest/ink_cli/                                                             | Works
 |  4a.   | Pub.dev            | <ul><li>[x] </li></ul> | https://pub.dev/packages/ink_cli                                                                                  |
 |        |                    | <ul><li>[x] </li></ul> | https://pub.dev/packages/ink_abi                                                                                  |
-|  5a.   | Document Signer    | <ul><li>[x] </li></ul> | https://polkadart.dev/guides/use-metadata-hash/                                                                   |
-|  6a.   | Document Contracts | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/ink_abi/                                                                                |
-|  7a.   | Examples Contracts | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/ink_cli/#deploying-contracts                                                            |
+|  5a.   | Document Signer    | <ul><li>[x] </li></ul> | https://polkadart.dev/guides/use-metadata-hash/                                                                   | Works
+|  6a.   | Document Contracts | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/ink_abi/                                                                                | Works
+|  7a.   | Examples Contracts | <ul><li>[x] </li></ul> | https://polkadart.dev/ink/ink_cli/#deploying-contracts                                                            | Works
 |        |                    |  | https://polkadart.dev/ink/ink_cli/#contract-interaction                                                           |
 |        |                    |  | https://polkadart.dev/guides/contracts-interaction/#create-a-contract-object-from-the-returned-contract---address |
 
@@ -1374,7 +1374,7 @@ AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free:
 AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
 AccountInfo: {nonce: 0, consumers: 0, providers: 0, sufficients: 0, data: {free: 0, reserved: 0, frozen: 0, flags: 170141183460469231731687303715884105728}}
 ```
-Very thorough [extrinsics](https://polkadart.dev/metadata/extrinsics/) docs.
+Very thorough [extrinsics](https://polkadart.dev/metadata/extrinsics/) docs. I'm able to connect to the API and use Keyring % Signer. For ink! I'm also able to generate contract classes, as well as deploy and interact with the example contracts. Pretty cool!
 
 ## Testing
 
