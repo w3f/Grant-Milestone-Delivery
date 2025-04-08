@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/PoCS.md
 - **Milestone:** 3
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -9,7 +9,7 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | :------: | ---- |----------------- |
 | 0a.    | License                   | <ul><li>[x] </li></ul> | [LICENSE](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/ink-contracts/LICENSE) | MIT license   |
-| 0b.    | Documentation             | <ul><li>[ ] </li></ul> | [testing-report.md](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/testing-report.md) | Very thorough inline docs. |
+| 0b.    | Documentation             | <ul><li>[x] </li></ul> | [testing-report.md](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/testing-report.md) | Very thorough inline docs. |
 | 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | [README](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/README.md#usage) | Some tests failing due to [documented breaking changes](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/testing-report.md#breaking-changes) |
 | 0d.    | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/solo-substrate-chain/Dockerfile) | —  
 | 0e.    | Article | <ul><li>[x] </li></ul> | [litepaper/](https://github.com/auguth/pocs/blob/7da11661f01269d2cc3220e50f037e3c8b2b702f/litepaper/pocs-litepaper.pdf), [medium.com](https://medium.com/@auguthresearch/proof-of-contract-stake-pocs-v0-1-experimental-0ed7f009b6dc) | — |  
