@@ -58,3 +58,31 @@ Furthermore, we have begun consulting with our advisors on how to bring our proj
 At [Web3 Amsterdam](https://web3amsterdam.com), we connected with [Reef](https://docs.reef.io/) and are currently in ongoing discussions with them.
 
 Also worth noting, our team member Romi had the opportunity to present the NFTAA project at the [Polkadot Meetup in Bratislava](https://lu.ma/o3fjdib9).
+
+#### Zombienet Docker issue
+1. Issue
+_We can successfully build and run our parachain locally without any errors._
+However, when attempting to run the same setup in a Docker container using Zombienet, it consistently fails. The error typically involves missing runtime imports (e.g., `_RNvCs6s5TXQrOxQg_7___rustc17rust_begin_unwind`).
+
+2. What we tried
+- Changing rust versions: we replaced `rust:lts` with specific version tags and tested multiple Rust versions
+- Changing zombienet versions: we attempted different Zombienet releases and configurations
+- Testing on different operating systems: windows, macOS
+- Architecture variations: tried both `amd64` and `arm64` builds in Docker
+- Rolling Back dependencies: we reverted to older Dockerfile dependencies to see if it would restore functionality
+- Using precompiled binaries: instead of building the Polkadot relay node from source, we tried a precompiled version
+- Seeking Help from the Community:
+   - We opened a [Zombienet GitHub Issue (#2010)](https://github.com/paritytech/zombienet/issues/2010).
+   - We asked for help in the Polkadot developer support telegram.
+   - We posted questions in the Kusama watercooler chat on matrix.
+
+Despite all these efforts, the Docker-based approach continues to fail with the same runtime error.
+
+**3. Conclusion**  
+All evidence points to a deeper dependency conflict in Docker that does not arise when running Zombienet locally on the host machine. 
+Notably, an identical Docker image previously worked in our first deliverables, suggesting that something external has changed. 
+Running Zombienet natively (i.e., outside of Docker) currently works without issues, reinforcing the idea that the problem is confined to Docker-based execution.
+
+For now, due to unresolved dependency and runtime conflicts, we are putting our Docker approach on hold. 
+We will continue monitoring upstream developments and any updates to Zombienet and its dependencies. 
+Once those external issues are resolved, we will revisit running Zombienet in Docker.
