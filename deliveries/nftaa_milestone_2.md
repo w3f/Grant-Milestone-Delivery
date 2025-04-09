@@ -28,7 +28,7 @@ Repository overview - Here are the three repositories related to our project:
    [GitHub link: polkadot-sdk](https://github.com/decenzio/polkadot-sdk)
 
 4. Stick - indexer <br>
-   A fork of Kodadot indexer with the addition of our own events to work with our nftaa palett. <br>
+   A fork of Kodadot indexer with the addition of our own events to work with our nftaa pallet. <br>
    [Github link: stick](https://github.com/decenzio/stick)
 
 | Number | Deliverable                                                                                                                | Link                                                                                                                                                                                                  | Notes                                                                                                               |
@@ -38,13 +38,12 @@ Repository overview - Here are the three repositories related to our project:
 | 0c.    | Testing and Testing Guide                                                                                                  | [Testing guide in readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#testing), [Unit tests file](https://github.com/decenzio/nftaa/blob/main/src/tests.rs)               | Testing guide mentioned in readme & core unit tests                                                                 | 
 | 0d.    | Docker                                                                                                                     | [Docker file](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/Dockerfile), [Docker guid in this readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#docker) | Docker file provided to test the functionality of the solution                                                      | 
 | 2.     | adding the remaining functionalities from pallet_nfts                                                                      | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs)                                                                                                                                      | Integration with the Substrate nfts pallet (for now all functions)                                                  |
-| 2a.    | nftaa check (we will add functionalities to read and check if NFTAA exists for a given account)                            | [stick](https://github.com/decenzio/stick)                                                                                                                                                            | The default blockchain explorer can be used for this purpose or via our new GraphQL service (stick)                 |
+| 2a.    | nftaa check (we will add functionalities to read and check if NFTAA exists for a given account)                            | [stick](https://github.com/decenzio/stick), [How to run our indexer](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#indexer)                                                                                                                                | The default blockchain explorer can be used for this purpose or via our new GraphQL service (stick)                 |
 | 2b.    | nftaa collections (we will add functionalities to read existing collections and manage NFTAAs if they are in a collection) |                                                                                                                                                                                                       | This can be done as standard thanks to full compatibility with the nfts palett                                      |
 
 **Additional Information**
 
-Every aspect of the project outlined in the proposal was implemented as specified.  
-However, we would like to acknowledge that some components work a bit differently than we originally envisioned.
+We would like to acknowledge that some components work a bit differently than we originally envisioned.
 
 Initially, we planned for all sub-search functions related to ownership information to be handled directly at the pallet level. 
 During implementation, we realized this approach was not practical. 
@@ -60,14 +59,16 @@ At [Web3 Amsterdam](https://web3amsterdam.com), we connected with [Reef](https:/
 Also worth noting, our team member Romi had the opportunity to present the NFTAA project at the [Polkadot Meetup in Bratislava](https://lu.ma/o3fjdib9).
 
 #### Zombienet Docker issue
-1. Issue
-_We can successfully build and run our parachain locally without any errors._
+
+1. Issue: <br>
+_We can successfully build and run our parachain locally without any errors._ <br>
 However, when attempting to run the same setup in a Docker container using Zombienet, it consistently fails. The error typically involves missing runtime imports (e.g., `_RNvCs6s5TXQrOxQg_7___rustc17rust_begin_unwind`).
 
-2. What we tried
+
+2. What we tried: <br>
 - Changing rust versions: we replaced `rust:lts` with specific version tags and tested multiple Rust versions
 - Changing zombienet versions: we attempted different Zombienet releases and configurations
-- Testing on different operating systems: windows, macOS
+- Testing on different operating systems: windows, macOS (because of various docker engines in the background)
 - Architecture variations: tried both `amd64` and `arm64` builds in Docker
 - Rolling Back dependencies: we reverted to older Dockerfile dependencies to see if it would restore functionality
 - Using precompiled binaries: instead of building the Polkadot relay node from source, we tried a precompiled version
@@ -75,10 +76,12 @@ However, when attempting to run the same setup in a Docker container using Zombi
    - We opened a [Zombienet GitHub Issue (#2010)](https://github.com/paritytech/zombienet/issues/2010).
    - We asked for help in the Polkadot developer support telegram.
    - We posted questions in the Kusama watercooler chat on matrix.
+  
+   <br>
 
-Despite all these efforts, the Docker-based approach continues to fail with the same runtime error.
+   Despite all these efforts, the Docker-based approach continues to fail with the same runtime error.
 
-**3. Conclusion**  
+3. Conclusion: <br>
 All evidence points to a deeper dependency conflict in Docker that does not arise when running Zombienet locally on the host machine. 
 Notably, an identical Docker image previously worked in our first deliverables, suggesting that something external has changed. 
 Running Zombienet natively (i.e., outside of Docker) currently works without issues, reinforcing the idea that the problem is confined to Docker-based execution.
