@@ -15,8 +15,7 @@
 | 2 | Domain Registration Protocol|<ul><li>[ ] </li></ul> | [link](https://github.com/tcdt-lab/bcdns/blob/master/README.md#domain-registration-protocol) |  |
 | 3 | Domain Revocation Protocol|<ul><li>[ ] </li></ul> | [link](https://github.com/tcdt-lab/bcdns/blob/master/README.md#domain-revocation-protocol) |  |
 | 4 | Domain Transfer Protocol|<ul><li>[ ] </li></ul> | [link](https://github.com/tcdt-lab/bcdns/blob/master/README.md#domain-transfer-protocol) |  |
-| 5 |  bcdns-adapter-node |<ul><li>[ ] </li></ul> | a NodeJS library that can be imported to quickly start a light node, connect to the
-BCDNS architecture, and resolve a given domain. [Link](https://github.com/tcdt-lab/bcdns/blob/master/dns_client) |  |
+| 5 |  bcdns-adapter-node |<ul><li>[ ] </li></ul> | [Link](https://github.com/tcdt-lab/bcdns/blob/master/dns_client) |  |
 | 6 | bcdns-adapter-golang |<ul><li>[ ] </li></ul> | [Link](https://github.com/tcdt-lab/bcdns/blob/master/dns_client_golang)|  |
 
 
