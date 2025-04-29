@@ -1,5 +1,17 @@
 # General Notes
 
+Docker compose up works for stick indexer:
+```sh
+docker compose up -d
+[+] Running 4/4
+ ✔ Container subsquid_db        Healthy                                                                               5.7s 
+ ✔ Container stick-migrator-1   Exited                                                                                7.4s 
+ ✔ Container stick-processor-1  Started                                                                               7.7s 
+ ✔ Container stick-api-1        Started
+```
+
+## Testing
+
 Unit tests passing:
 ```rust
 running 8 tests
