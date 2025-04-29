@@ -9,6 +9,26 @@ docker compose up -d
  ✔ Container stick-processor-1  Started                                                                               7.7s 
  ✔ Container stick-api-1        Started
 ```
+Successfully builds:
+```ts
+npm run build
+node --require=dotenv/config lib/processor.js
+┌──────────────────┬──────────────────────────────────────────────────────────────┐
+│     (index)      │                            Values                            │
+├──────────────────┼──────────────────────────────────────────────────────────────┤
+│      CHAIN       │                         'substrate'                          │
+│   ARCHIVE_URL    │ 'https://v2.archive.subsquid.io/network/asset-hub-substrate' │
+│     NODE_URL     │               'ws://host.docker.internal:9920'               │
+│  STARTING_BLOCK  │                              60                              │
+│ COLLECTION_OFFER │                              ''                              │
+│ UNIQUES_ENABLED  │                            false                             │
+│   disabledRPC    │                            false                             │
+│   environment    │                         'production'                         │
+└──────────────────┴──────────────────────────────────────────────────────────────┘
+18:33:20 INFO  squid:log PROCESSING ~~ SUBSTRATE ~~ EVENTS
+18:33:20 INFO  sqd:processor processing blocks from 60
+18:33:20 INFO  sqd:processor using chain RPC data source
+```
 
 ## Testing
 
