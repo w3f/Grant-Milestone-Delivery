@@ -20,29 +20,15 @@
 
 
 ## General Notes
-First of all, thank you for the updates. Looks like there is now a straight forward guide to deploy a node and test your delivery properly. Sadly there are issues with the current unit tests.
+First of all, thank you for the updates. Looks like there is now a straight forward guide to deploy a node and test your delivery properly. 
 
 
 ## Testing
-sadly testing with the following commands doesn't succeed. Since you state "The tests are designed to verify the functionality of the DNS client without requiring a connection to the actual blockchain network." I assume that the tests should pass. 
+All node.js dns client unit tests are passing
+
 ```
-cd dns_client
-npm install
-npm run build
-npm test
+Test Suites: 3 passed, 3 total
+Tests:       21 passed, 21 total
 ```
-```
-All files          |   66.16 |    76.59 |      64 |   66.16 |                   
- dns_client        |   43.25 |    58.82 |   33.33 |   43.25 |                   
-  util.js          |   43.25 |    58.82 |   33.33 |   43.25 | ...41-154,157-178 
- dns_client/dns    |   97.86 |    86.66 |     100 |   97.86 |                   
-  ..._connector.js |   96.11 |    76.47 |     100 |   96.11 | 77-78,92-93       
-  resolver.js      |     100 |      100 |     100 |     100 |                   
- ...lient/polkadot |    6.45 |      100 |       0 |    6.45 |                   
-  connector.js     |    6.45 |      100 |       0 |    6.45 | 3-31              
--------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 2 passed, 3 total
-Tests:       4 failed, 17 passed, 21 total
-Snapshots:   0 total
-Time:        1.904 s, estimated 2 s
-```
+
+golang client unit tests are also all passing
