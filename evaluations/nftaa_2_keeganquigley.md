@@ -48,6 +48,38 @@ node --require=dotenv/config lib/processor.js
 
 ## Testing
 
+Unit tests passing for indexer:
+
+```ts
+> @kodadot1/stick@0.2.0 test
+> vitest run
+
+
+ RUN  v2.1.2 /home/ubuntu/stick
+
+stdout | tests/index.test.ts
+┌──────────────────┬──────────────────────────────────────────────────────────────┐
+│ (index)          │ Values                                                       │
+├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ CHAIN            │ 'substrate'                                                  │
+│ ARCHIVE_URL      │ 'https://v2.archive.subsquid.io/network/asset-hub-substrate' │
+│ NODE_URL         │ 'ws://host.docker.internal:9920'                             │
+│ STARTING_BLOCK   │ 60                                                           │
+│ COLLECTION_OFFER │ ''                                                           │
+│ UNIQUES_ENABLED  │ false                                                        │
+│ disabledRPC      │ false                                                        │
+│ environment      │ 'production'                                                 │
+└──────────────────┴──────────────────────────────────────────────────────────────┘
+
+ ✓ tests/index.test.ts (6)
+ ✓ tests/misc.test.ts (3)
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  16:12:31
+   Duration  1.18s (transform 88ms, setup 0ms, collect 730ms, tests 26ms, environment 0ms, prepare 152ms)
+```
+
 Unit tests passing:
 ```rust
 running 8 tests
@@ -68,7 +100,7 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
-Indexer runs but gives an error:
+Indexer runs:
 <details>
   <summary>Output</summary>
 
