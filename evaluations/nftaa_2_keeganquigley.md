@@ -1,4 +1,86 @@
+# Evaluation
+
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/nftaa.md
+- **Milestone:** 2
+
+| Number | Deliverable                                                                                                                | Accepted                                                                                                                                                                                              | Link                                                                                                                | Notes
+|--------|----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------
+| 0a.    | License                                                                                                                    | <ul><li>[x] </li></ul>                                                                                                                                                                                | [MIT NFTAA general repo](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/LICENSE), [MIT NFTAA pallet src repo](https://github.com/decenzio/nftaa/blob/main/LICENSE)                                                                                                                 | 
+| 0b.    | Documentation                                                                                                              | <ul><li>[x] </li></ul>                                                                                                                                                                                | [How to run?](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#how-to-run), [NFTAA doc](https://github.com/decenzio/nftaa/blob/main/README.md)                                                                                                                    | Good
+| 0c.    | Testing and Testing Guide                                                                                                  | <ul><li>[x] </li></ul>                                                                                                                                                                                | [Testing guide in readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#testing), [Unit tests file](https://github.com/decenzio/nftaa/blob/main/src/tests.rs)                                                                                                                    | Good
+| 0d.    | Docker                                                                                                                     | <ul><li>[x] </li></ul>                                                                                                                                                                                | [Docker file](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/Dockerfile), [Docker guid in this readme](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#docker)                                                                                                                    | 
+| 2.     | adding the remaining functionalities from pallet_nfts                                                                      | <ul><li>[x] </li></ul>                                                                                                                                                                                | [lib.rs](https://github.com/decenzio/nftaa/blob/main/src/lib.rs                                                                                                                    | 
+| 2a.    | nftaa check (we will add functionalities to read and check if NFTAA exists for a given account)                            | <ul><li>[x] </li></ul>                                                                                                                                                                                | [stick](https://github.com/decenzio/stick), [How to run our indexer](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#indexer)                                                                                                                    | Custom indexer works.
+| 2b.    | nftaa collections (we will add functionalities to read existing collections and manage NFTAAs if they are in a collection) | <ul><li>[x] </li></ul>                                                                                                                                                                                                      | 
+
 # General Notes
+
+All functionalities are now working. Team was quick to resolve issues. Custom indexer works.
+
+Docker compose up works for stick indexer:
+```sh
+docker compose up -d
+[+] Running 4/4
+ ✔ Container subsquid_db        Healthy                                                                               5.7s 
+ ✔ Container stick-migrator-1   Exited                                                                                7.4s 
+ ✔ Container stick-processor-1  Started                                                                               7.7s 
+ ✔ Container stick-api-1        Started
+```
+Successfully builds:
+```ts
+npm run build
+node --require=dotenv/config lib/processor.js
+┌──────────────────┬──────────────────────────────────────────────────────────────┐
+│     (index)      │                            Values                            │
+├──────────────────┼──────────────────────────────────────────────────────────────┤
+│      CHAIN       │                         'substrate'                          │
+│   ARCHIVE_URL    │ 'https://v2.archive.subsquid.io/network/asset-hub-substrate' │
+│     NODE_URL     │               'ws://host.docker.internal:9920'               │
+│  STARTING_BLOCK  │                              60                              │
+│ COLLECTION_OFFER │                              ''                              │
+│ UNIQUES_ENABLED  │                            false                             │
+│   disabledRPC    │                            false                             │
+│   environment    │                         'production'                         │
+└──────────────────┴──────────────────────────────────────────────────────────────┘
+18:33:20 INFO  squid:log PROCESSING ~~ SUBSTRATE ~~ EVENTS
+18:33:20 INFO  sqd:processor processing blocks from 60
+18:33:20 INFO  sqd:processor using chain RPC data source
+```
+
+## Testing
+
+Unit tests passing for indexer:
+
+```ts
+> @kodadot1/stick@0.2.0 test
+> vitest run
+
+
+ RUN  v2.1.2 /home/ubuntu/stick
+
+stdout | tests/index.test.ts
+┌──────────────────┬──────────────────────────────────────────────────────────────┐
+│ (index)          │ Values                                                       │
+├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ CHAIN            │ 'substrate'                                                  │
+│ ARCHIVE_URL      │ 'https://v2.archive.subsquid.io/network/asset-hub-substrate' │
+│ NODE_URL         │ 'ws://host.docker.internal:9920'                             │
+│ STARTING_BLOCK   │ 60                                                           │
+│ COLLECTION_OFFER │ ''                                                           │
+│ UNIQUES_ENABLED  │ false                                                        │
+│ disabledRPC      │ false                                                        │
+│ environment      │ 'production'                                                 │
+└──────────────────┴──────────────────────────────────────────────────────────────┘
+
+ ✓ tests/index.test.ts (6)
+ ✓ tests/misc.test.ts (3)
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  16:12:31
+   Duration  1.18s (transform 88ms, setup 0ms, collect 730ms, tests 26ms, environment 0ms, prepare 152ms)
+```
 
 Unit tests passing:
 ```rust
@@ -20,7 +102,7 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
-Indexer runs but gives an error:
+Indexer runs:
 <details>
   <summary>Output</summary>
 
