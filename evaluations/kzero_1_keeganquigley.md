@@ -19,6 +19,8 @@
 
 # General Notes
 
+I'm now able to generate the witness, generate the proof, and verify it.
+
 ~~I'm able to compile the circuits w/ some warnings:~~
 
 UPDATE: Team fixed warnings.
@@ -44,3 +46,50 @@ Written successfully: ./zkLogin_js/zkLogin.wasm
 Everything went okay
 ```
 </details>
+
+## Testing
+
+`npm test` still fails:
+
+```ts
+npm test
+
+> test
+> mocha -r esbuild-register test/**/*.test.ts --timeout 100000 --exit
+
+
+ Exception during run: Error [ERR_INTERNAL_ASSERTION]: Cannot require() ES Module /home/ubuntu/kzero-circuit/node_modules/chai/chai.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /home/ubuntu/kzero-circuit/test/zkLogin.test.ts)
+This is caused by either a bug in Node.js or incorrect usage of Node.js internals.
+Please open an issue with this stack trace at https://github.com/nodejs/node/issues
+
+    at assert.fail (node:internal/assert:17:9)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:383:16)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1565:24)
+    at Module._compile (node:internal/modules/cjs/loader:1716:5)
+    at node:internal/modules/cjs/loader:1899:10
+    at Object.newLoader (/home/ubuntu/kzero-circuit/node_modules/esbuild-register/dist/node.js:2262:9)
+    at extensions..js (/home/ubuntu/kzero-circuit/node_modules/esbuild-register/dist/node.js:4833:24)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Module._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1491:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/home/ubuntu/kzero-circuit/test/zkLogin.test.ts:2:24)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (/home/ubuntu/kzero-circuit/node_modules/esbuild-register/dist/node.js:2258:26)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.newLoader [as .ts] (/home/ubuntu/kzero-circuit/node_modules/esbuild-register/dist/node.js:2262:9)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Module._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1491:12)
+    at require (node:internal/modules/helpers:135:16)
+    at exports.requireOrImport (/home/ubuntu/kzero-circuit/node_modules/mocha/lib/nodejs/esm-utils.js:53:16)
+    at async exports.loadFilesAsync (/home/ubuntu/kzero-circuit/node_modules/mocha/lib/nodejs/esm-utils.js:100:20)
+    at async singleRun (/home/ubuntu/kzero-circuit/node_modules/mocha/lib/cli/run-helpers.js:162:3)
+    at async exports.handler (/home/ubuntu/kzero-circuit/node_modules/mocha/lib/cli/run.js:375:5) {
+  code: 'ERR_INTERNAL_ASSERTION'
+}
+```
