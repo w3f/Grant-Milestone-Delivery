@@ -1,3 +1,22 @@
+# Evaluation
+
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/KZero.md
+- **Milestone:** 1
+
+| Number | Deliverable               | Accepted | Specification                                                | Notes |
+| ------ | ------------------------- | ------------------------- | ------------------------- | ------------------------------------------------------------ |
+| 0a.    | License                   | <ul><li>[x] </li></ul> | GPLv3                                                        |
+| 0b.    | Documentation             | <ul><li>[x] </li></ul> | We will provide technical documentation for the code, as well as deployment and testing guides, explaining key function calls and how users can start and test our ZKP-related server, which will demonstrate how it works. |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+| 0d.    | Docker                    | <ul><li>[x] </li></ul> | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
+| 1      | Kzero Circuit Code        | <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-circuit|
+| 2      | Kzero Circuit Guide        | <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-circuit|
+| 3      | Kzero Circuit Testing cases | <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-circuit/tree/dev/test|
+| 4      | ZKP Witness & Proof Generation Guide | <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-grant-docs/blob/main/kzero-zkp-service-guide.md  |
+| 5      | All-in-One ZKP Witness & Proof Generation Service| <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-service |
+| 6      | ZKP Service Testing Doc| <ul><li>[x] </li></ul> | https://github.com/kzero-xyz/kzero-grant-docs/blob/main/kzero-common-package-test.md |
+
 # General Notes
 
 ~~I'm able to compile the circuits w/ some warnings:~~
