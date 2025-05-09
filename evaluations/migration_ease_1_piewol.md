@@ -10,7 +10,7 @@
 | 0a. | License |<ul><li>[x] </li></ul> | [license file](https://github.com/Zondax/polkadot-web-migration?tab=Apache-2.0-1-ov-file#readme) | Apache 2.0 | 
 | 0b.  | Documentation |<ul><li>[x] </li></ul> | [Readme](https://github.com/Zondax/polkadot-web-migration?tab=readme-ov-file)| solid documentation | 
 | 0c.  | Tests & Testing guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/Zondax/polkadot-web-migration?tab=readme-ov-file), [Tests](https://github.com/Zondax/polkadot-web-migration/tree/main/state/__tests__), [e2e](https://github.com/Zondax/polkadot-web-migration/tree/main/e2e), [Tests](https://github.com/Zondax/polkadot-web-migration/tree/main/lib/__tests__)   | | 
-| 0d.  | Docker | <ul><li>[ ] </li></ul> | [Docker](https://github.com/tcdt-lab/bcdns/blob/master/polkadot-sdk-solochain-template/Dockerfile) | to test | 
+| 0d.  | Docker | <ul><li>[ ] </li></ul> | [Docker](https://github.com/Zondax/polkadot-web-migration/blob/main/dockerfile) | builds| 
 | 0e.  | Article | <ul><li>[x] </li></ul> | [Article](https://zondax.ch/blog/the-polkadot-ledger-migration-assistant) | ok | 
 | 1 | PoC code |<ul><li>[ ] </li></ul> | [General Structure](https://github.com/Zondax/polkadot-web-migration) |  | 
 | 2 | Code |<ul><li>[ ] </li></ul> | [Connect to Ledger](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/lib/ledger/ledgerService.ts#L108) |  |
