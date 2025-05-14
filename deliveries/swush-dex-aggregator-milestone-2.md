@@ -1,0 +1,45 @@
+# Milestone Delivery :mailbox:
+
+> ⚡ Only the GitHub account that submitted the application is allowed to submit milestones. 
+> 
+> Don't remove any of the mandatory parts presented in bold letters or as headlines! Lines starting with `>`, such as this one, can be removed.
+
+**The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
+
+* **Application Document:** [Swush Dex Aggregator](https://github.com/w3f/Grants-Program/blob/master/applications/swush-dex-aggregator.md)
+* **Milestone Number:** 2
+
+**Context** (optional)
+This is final milestone with full functionality of the application.
+
+**Deliverables**
+ 
+
+| Number | Deliverable | Link | Notes |
+| --- | --- | --- | --- |
+| **0a.** | License | AGPLv3  | 
+| **0b.** | Documentation | [High Level Documentation](https://github.com/swush-labs/swush-app/blob/dev/docs/api/HIGH_LEVEL_DESIGN.md) | 
+| **0c.** | Testing Guide | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Steps to setup locally and run lint and unit tests |
+| **0d.** | Docker | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
+| **0e.** | Article | | Our progress is published at the Documentation section above
+| 1. | **Cross-Chain (XCM) APIs** | [XCM APIs and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/components/swap/hooks/useAssetConversionSwap.ts) | XCM APIs to transfer and swap assets in a single transaction to and from Polkadot Asset Hub and Hydradx
+| 2. | **Asset Balance** | [Balance API and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/lib/api.ts#L119) | Balance API to fetch asset balance for different asset types like Native and Foreign Assets from Polkadot Asset Hub 
+| 3. | **Slippage Control and Protection** | [Slippage Protection](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/components/swap/hooks/useAssetConversionSwap.ts#L181-L243) | Slippage control can be viewed in the UI, and for protection we are using dry_run API to simulate the transaction and show the estimated output asset price. If slippage is higher than configured, user can cancel the transaction. If transaction fails at XCM stage due to slippage, user will be notified of transaction failure.
+| 4. | **Real-time Fee Updates** | Preview in UI | Swap rates are updated in output asset price, transaction and xcm fees are pre calculated and shown in UI.
+| 5. | **Asset Pair Swap** | [Swap API and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/components/swap/hooks/useAssetConversionSwap.ts) | Swap different asset pairs from Hydradx and Polkadot Asset Hub
+| 6. | **Optimized Routing** | [Best route selection API](https://github.com/swush-labs/swush-app/blob/dev-v2/packages/api/src/routes/assets.ts#L24-L55) |  Best swap route is selected from multiple routes based on output asset price and slippage tolerance. Currently not including XCM fees as the fees need to be further optimized and fees will come down in upcoming polkadot upgrades.
+| 7. | **Chopsticks simulation** | [Chopsticks config](https://github.com/swush-labs/swush-app/tree/dev-v2/apps/web/chopsticks/config) | Final transaction is simulated with dry_run API before execution and submitted on Asset Hub with configured chopsticks config. Asset Hub and Hydradx are configured with chopsticks config for cross chain transactions.
+| 8 | **User Transaction History** | [Supabase API](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/services/swapHistoryService.ts) | Transaction history is stored in Postgres database hosted on Supabase
+
+
+**Additional Information**
+
+All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
+
+A demo for UI can be viewed [here](https://www.loom.com/share/3dd0f5b4bb2040fa871b8b5a469c4e3a?sid=115150bb-f80b-4c76-b922-c461891564ce).
+
+
+**TODO**    
+
+- Flow diagram for the application
+- Reiterate the high level design for the application
