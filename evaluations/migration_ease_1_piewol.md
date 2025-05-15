@@ -10,24 +10,43 @@
 | 0a. | License |<ul><li>[x] </li></ul> | [license file](https://github.com/Zondax/polkadot-web-migration?tab=Apache-2.0-1-ov-file#readme) | Apache 2.0 | 
 | 0b.  | Documentation |<ul><li>[x] </li></ul> | [Readme](https://github.com/Zondax/polkadot-web-migration?tab=readme-ov-file)| solid documentation | 
 | 0c.  | Tests & Testing guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/Zondax/polkadot-web-migration?tab=readme-ov-file), [Tests](https://github.com/Zondax/polkadot-web-migration/tree/main/state/__tests__), [e2e](https://github.com/Zondax/polkadot-web-migration/tree/main/e2e), [Tests](https://github.com/Zondax/polkadot-web-migration/tree/main/lib/__tests__)   | | 
-| 0d.  | Docker | <ul><li>[ ] </li></ul> | [Docker](https://github.com/Zondax/polkadot-web-migration/blob/main/dockerfile) | builds| 
+| 0d.  | Docker | <ul><li>[x] </li></ul> | [Docker](https://github.com/Zondax/polkadot-web-migration/blob/main/dockerfile) | builds and runs | 
 | 0e.  | Article | <ul><li>[x] </li></ul> | [Article](https://zondax.ch/blog/the-polkadot-ledger-migration-assistant) | ok | 
-| 1 | PoC code |<ul><li>[ ] </li></ul> | [General Structure](https://github.com/Zondax/polkadot-web-migration) |  | 
-| 2 | Code |<ul><li>[ ] </li></ul> | [Connect to Ledger](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/lib/ledger/ledgerService.ts#L108) |  |
-| 2 | Code |<ul><li>[ ] </li></ul> | [Scan and View Accounts](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L493) |  |
+| 1 | PoC code |<ul><li>[x] </li></ul> | [General Structure](https://github.com/Zondax/polkadot-web-migration) | looks good  | 
+| 2 | Code |<ul><li>[x] </li></ul> | [Connect to Ledger](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/lib/ledger/ledgerService.ts#L108) | works |
+| 2 | Code |<ul><li>[ ] </li></ul> | [Scan and View Accounts](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L493) | see notes  |
 | 2 | Code |<ul><li>[ ] </li></ul> | [Balance Overview](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L563) |  |
 | 2 | Code |<ul><li>[ ] </li></ul> | [Transfer and Account Management](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L746) |  |
 
 
 
 ## General Notes
+Once a device has been connected it seems impossible to go back to the connection tab. It would be nice to verify which device is currently connected. 
 
+Even though the ledger I tested with has an Ajuna account with some funds on it, it wasn't detected as ready for migration. See here for full account [overview](https://portfolio.subscan.io/account/5GmcaNA7zUK7zYiF7FdcQQEsKNrQA8eSSXh9Rss7JGedVsho).
 
+Is there maybe a minimum balance that needs to be met?
 
-## Feedback
+Same issue for some dust on Kusama AH.
+
+Otherwise everything was smooth. Migration app available in LedgerLive also fits on the old gen of nano s. 
 
 
 ## Docker
+
+builds and runs
+
+````
+> polkadot-migration@0.0.1 start /app
+> next start
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3000
+   - Network:      http://172.17.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 637ms
+````
 
 
 ## Tests
