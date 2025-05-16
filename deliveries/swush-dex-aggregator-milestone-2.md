@@ -36,12 +36,8 @@ This is final milestone with full functionality of the application.
 
 All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
 
-**TODO**: add demo video using loom
+**TODO**: 
 
-A demo for UI can be viewed [here](https://www.loom.com/share/3dd0f5b4bb2040fa871b8b5a469c4e3a?sid=115150bb-f80b-4c76-b922-c461891564ce).
-
-
-**TODO**    
-
-- Flow diagram for the application
-- Reiterate the high level design for the application
+- add demo video using loom
+- flow diagram for the application
+- iterate the high level design for the application
