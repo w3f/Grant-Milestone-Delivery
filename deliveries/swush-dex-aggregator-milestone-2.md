@@ -12,13 +12,16 @@
 **Context** (optional)
 This is final milestone with full functionality of the application.
 
+Github repo of code: https://github.com/swush-labs/swush-app
+
+
 **Deliverables**
  
 
 | Number | Deliverable | Link | Notes |
 | --- | --- | --- | --- |
 | **0a.** | License | AGPLv3  | 
-| **0b.** | Documentation | [High Level Documentation](https://github.com/swush-labs/swush-app/blob/dev/docs/api/HIGH_LEVEL_DESIGN.md) | 
+| **0b.** | Documentation | [High Level Documentation](https://github.com/swush-labs/swush-app/blob/dev-v2/docs/api/HIGH_LEVEL_DESIGN.md) | 
 | **0c.** | Testing Guide | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Steps to setup locally and run lint and unit tests. |
 | **0d.** | Docker | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
 | **0e.** | Article | | Our progress is published at the Documentation section above.
