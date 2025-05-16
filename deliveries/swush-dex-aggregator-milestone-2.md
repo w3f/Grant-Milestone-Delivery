@@ -14,6 +14,10 @@ This is final milestone with full functionality of the application.
 
 Github repo of code: https://github.com/swush-labs/swush-app
 
+**TODO**: 
+- functional flow
+- high level design(already in proposal)
+
 
 **Deliverables**
  
@@ -31,7 +35,7 @@ Github repo of code: https://github.com/swush-labs/swush-app
 | 4. | **Real-time Fee Updates** | Preview in UI | Swap rates are updated in output asset price, transaction and xcm fees are pre calculated and added as subtotal and shown at the field "Max Transaction Fee" in the UI.
 | 5. | **Asset Pair Swap** | [Swap API and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/components/swap/hooks/useAssetConversionSwap.ts) | Swap different asset pairs from Hydradx and Polkadot Asset Hub. Hydradx supports limited asset pairs like DOT, USDC, USDT for now.
 | 6. | **Optimized Routing** | [Best route selection API](https://github.com/swush-labs/swush-app/blob/dev-v2/packages/api/src/routes/assets.ts#L24-L55) |  Best swap route is selected from multiple routes based on output asset price and slippage tolerance. Currently not including XCM fees as the fees need to be further optimized and fees will come down in upcoming polkadot upgrades.
-| 7. | **Chopsticks simulation** | [Chopsticks config](https://github.com/swush-labs/swush-app/tree/dev-v2/apps/web/chopsticks/config) | Final transaction is simulated with dry_run API before execution and submitted on chopsticks simulated Asset Hub. Asset Hub and Hydradx are configured with chopsticks config for cross chain transactions.
+| 7. | **Chopsticks simulation** | [Chopsticks config](https://github.com/swush-labs/swush-app/tree/dev-v2/packages/chopsticks/config) | Final transaction is simulated with dry_run API before execution and submitted on chopsticks simulated Asset Hub. Asset Hub and Hydradx are configured with chopsticks config for cross chain transactions.
 | 8 | **User Transaction History** | [Supabase API](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/services/swapHistoryService.ts) | Transaction history is stored in Postgres database hosted on Supabase.
 
 
@@ -42,5 +46,4 @@ All of the deliverables above can be viewed in UI at http://localhost:3000/ comp
 **TODO**: 
 
 - add demo video using loom
-- flow diagram for the application
-- iterate the high level design for the application
+- current functionality and future scope
