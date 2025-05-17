@@ -14,12 +14,9 @@ This is final milestone with full functionality of the application.
 
 Github repo of code: https://github.com/swush-labs/swush-app
 
-**TODO**: 
-- functional flow
-- high level design(already in proposal)
-
-
-**Deliverables**
+#### Pre-requisites before functional testing:
+- setup local wallet "Alice" with Polkadot.js extension following steps
+ [here](https://github.com/swush-labs/swush-app/blob/dev-v2/docs/get-started/test-wallet-setup.md)
  
 
 | Number | Deliverable | Link | Notes |
@@ -44,6 +41,5 @@ Github repo of code: https://github.com/swush-labs/swush-app
 All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
 
 **TODO**: 
-
 - add demo video using loom
 - current functionality and future scope
