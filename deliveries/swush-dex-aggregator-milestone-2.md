@@ -43,10 +43,11 @@ All of the deliverables above can be viewed in UI at http://localhost:3000/ comp
 
 
 Hydradx limitations: 
-- Hydradx supports limited asset pairs like DOT, USDC, USDT for now as it only supports omnipool now. I raised a feature request to add support for more asset pairs [here](https://github.com/galacticcouncil/hydration-node/issues/1073). Also with upcoming XCM v5 upgrade, we will be able to add more asset pairs.
+- Hydradx supports limited omnipool asset pairs like DOT, USDC, USDT for cross chain swap with XCM in a single call. I raised a feature request to add support for more asset pairs [here](https://github.com/galacticcouncil/hydration-node/issues/1073). Also with upcoming XCM v5 upgrade, we will be able to add more asset pairs.
+- NOTE: asset pairs apart from DOT, USDC, USDT are supported for swaps, but it will take multiple XCM calls to transfer and swap assets which we are avoiding as it will increase the fees and complexity and bad UX.
 
 Future scope: </br>
 - Add support for more asset pairs.
-- Optimize fees for cross chain swap and transaction. Currently fees are high due to XCM, which is 0.266 DOT which should be reduced in upcoming XCM upgrades.
+- Optimize fees for cross chain swap and transaction. Currently fees are high for cross chain swap Asset Hub to Hydradx due to XCM, which is 0.266 DOT which should be reduced in upcoming XCM upgrades.
 - Add more parachain support like Moonbeam, with XCM v5 upgrade it will provide a good UX for users. XCM v5 lets user to send assets and perform transactions on parachains in a single call as compared to XCM v4 where two separate calls are required.
 - Add cross chain asset swap/transfer beyong Polkadot like Ethereum L2s and L1s like Solana, Sui.
