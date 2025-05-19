@@ -10,7 +10,8 @@
 * **Milestone Number:** 2
 
 **Context** (optional)
-This is final milestone with full functionality of the application.
+This is final milestone with full functionality of the application. User now can swap assets between
+ Asset Hub and Hydradx and vice versa with slippage control and protection and final transaction is simulated using chopsticks. 
 
 Github repo of code: https://github.com/swush-labs/swush-app
 
@@ -40,6 +41,4 @@ Github repo of code: https://github.com/swush-labs/swush-app
 
 All of the deliverables above can be viewed in UI at http://localhost:3000/ complementing the APIs implemented.
 
-**TODO**: 
-- add demo video using loom
-- current functionality and future scope
+
