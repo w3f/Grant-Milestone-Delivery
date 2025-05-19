@@ -25,7 +25,7 @@ Github repo of code: https://github.com/swush-labs/swush-app
 | **0a.** | License | AGPLv3  | 
 | **0b.** | Documentation | [High Level Documentation](https://github.com/swush-labs/swush-app/blob/dev-v2/docs/api/HIGH_LEVEL_DESIGN.md) | 
 | **0c.** | Testing Guide | [Testing Guide](https://github.com/swush-labs/swush-app?tab=readme-ov-file#getting-started) | Steps to setup locally and run lint and unit tests. |
-| **0d.** | Docker | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
+| **0d.** | Docker | [Dockerfile](https://github.com/swush-labs/swush-app/blob/dev-v2/docker-compose.yml) and [steps to run](https://github.com/swush-labs/swush-app?tab=readme-ov-file#docker-development-environment) | 
 | **0e.** | Article | | Our progress is published at the Documentation section above.
 | 1. | **Cross-Chain (XCM) APIs** | [XCM APIs and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/components/swap/hooks/useAssetConversionSwap.ts) | XCM APIs to transfer and swap assets in a single transaction from Asset Hub to Hydradx and back to Asset Hub.
 | 2. | **Asset Balance** | [Balance API and UI Integration](https://github.com/swush-labs/swush-app/blob/dev-v2/apps/web/src/lib/api.ts#L119) | Balance API to fetch user owned assets balance for different asset types like Native and Foreign Assets on Asset Hub.
