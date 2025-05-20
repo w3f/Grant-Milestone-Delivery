@@ -43,6 +43,7 @@ All of the deliverables above can be viewed in UI at http://localhost:3000/ comp
 
 **Demo video** is available [here](https://www.loom.com/share/236be7c600874b34ad1205e5bdd4c7b8?sid=c2a43645-234a-4e0e-98c3-f763f9cb89bf).
 
+**Note**: Cross chain asset swap via Hydradx takes some time(2-3 minutes), initially after starting the app due to chopsticks block building and XCM transaction processing.
 
 Hydradx limitations: 
 - Hydradx supports limited omnipool asset pairs like DOT, USDC, USDT for cross chain swap with XCM in a single call. I raised a feature request to add support for more asset pairs [here](https://github.com/galacticcouncil/hydration-node/issues/1073). Also with upcoming XCM v5 upgrade, we will be able to add more asset pairs.
