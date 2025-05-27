@@ -22,6 +22,8 @@
 
 # General Notes
 
+Great work guys! App has sleek UI and is easy to use. I'm assuming you'll add block explorer links to the tx once its running on testnet.
+
 `pnpm i` builds packages successfully. Web, API, and Chopsticks services all start successfully on their specified ports:
 
 ![Screenshot 2025-05-27 at 4 14 37 PM](https://github.com/user-attachments/assets/f3e2f3d6-8217-4430-bca4-5e95b2b656fa)
