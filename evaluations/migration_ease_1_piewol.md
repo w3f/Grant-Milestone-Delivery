@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** accepted
 - **Application Document:** [w3f/Grants-Program#2437](https://github.com/w3f/Grants-Program/pull/2437)
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by PieWol
@@ -14,22 +14,19 @@
 | 0e.  | Article | <ul><li>[x] </li></ul> | [Article](https://zondax.ch/blog/the-polkadot-ledger-migration-assistant) | ok | 
 | 1 | PoC code |<ul><li>[x] </li></ul> | [General Structure](https://github.com/Zondax/polkadot-web-migration) | looks good  | 
 | 2 | Code |<ul><li>[x] </li></ul> | [Connect to Ledger](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/lib/ledger/ledgerService.ts#L108) | works |
-| 2 | Code |<ul><li>[ ] </li></ul> | [Scan and View Accounts](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L493) | see notes  |
-| 2 | Code |<ul><li>[ ] </li></ul> | [Balance Overview](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L563) |  |
-| 2 | Code |<ul><li>[ ] </li></ul> | [Transfer and Account Management](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L746) |  |
+| 2 | Code |<ul><li>[x] </li></ul> | [Scan and View Accounts](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L493) | works |
+| 2 | Code |<ul><li>[x] </li></ul> | [Balance Overview](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L563) | works |
+| 2 | Code |<ul><li>[x] </li></ul> | [Transfer and Account Management](https://github.com/Zondax/polkadot-web-migration/blob/dd6538974904f7825f6c009acbffb106e160e839/state/ledger.ts#L746) | ok  |
 
 
 
 ## General Notes
-Once a device has been connected it seems impossible to go back to the connection tab. It would be nice to verify which device is currently connected. 
+Everything was smooth. Migration app available in LedgerLive also fits on the old gen of nano s. 
+Thanks for the demo call to show off all current features.
 
-Even though the ledger I tested with has an Ajuna account with some funds on it, it wasn't detected as ready for migration. See here for full account [overview](https://portfolio.subscan.io/account/5GmcaNA7zUK7zYiF7FdcQQEsKNrQA8eSSXh9Rss7JGedVsho).
+I still think it would be nice to include an option to display all addresses that have been checked during the process. This would allow the user to better understand what's going on. E.g. a custom derivation path would result in the account not being found even though the user might expect it. 
 
-Is there maybe a minimum balance that needs to be met?
-
-Same issue for some dust on Kusama AH.
-
-Otherwise everything was smooth. Migration app available in LedgerLive also fits on the old gen of nano s. 
+This way a user can easily check for such a discrepancy. Probably reduces the support workload in the future.
 
 
 ## Docker
