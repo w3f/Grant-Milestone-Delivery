@@ -1,3 +1,15 @@
+Milestone Delivery 📫
+The delivery is according to the official milestone delivery guidelines.
+
+Application Document: https://github.com/w3f/Grants-Program/blob/master/applications/NeuroZK.md
+Milestone Number: 3
+
+Context
+
+NeuroZK Implementation
+The NeuroZK implementation to verify the integrity of AI models executed in third party servers, using a SNARK based ZKML verification system on a substrate blockchain.
+
+
 #### **Deliverables:**
 
 | Number | Deliverable | Specification |
