@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/relaycode.md
 - **Milestone:** 1
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -16,11 +16,13 @@
 | 1.     | Basic UI Implementation | <ul><li>[x] </li></ul> | [UI Code](https://github.com/itsyogesh/relaycode/tree/master/app/) [Demo]([Demo Site](https://relaycode.org/builder) | Good |
 | 2.     | Pallet and Function Selection | <ul><li>[x] </li></ul> | [Pallets Dropdown](https://github.com/itsyogesh/relaycode/blob/master/components/builder/combobox.tsx) | Good |
 | 3.     | Parameter Input Fields | <ul><li>[x] </li></ul> | [Parameter Inputs](https://github.com/itsyogesh/relaycode/blob/master/components/params) | Good |
-| 4.     | Encoding and Decoding | <ul><li>[x] </li></ul> | [Encoding/Decoding Logic](https://github.com/itsyogesh/relaycode/blob/master/builder/page.tsx) | 404 error |
-| 5.     | Information Pane | <ul><li>[x] </li></ul> | [Information Display](https://github.com/itsyogesh/relaycode/blob/master/components/information-pane.tsx) | 404 error |
+| 4.     | Encoding and Decoding | <ul><li>[x] </li></ul> | [Encoding/Decoding Logic](https://github.com/itsyogesh/relaycode/blob/master/builder/page.tsx) | ~~404 error~~ Fixed. |
+| 5.     | Information Pane | <ul><li>[x] </li></ul> | [Information Display](https://github.com/itsyogesh/relaycode/blob/master/components/information-pane.tsx) | ~~404 error~~ Fixed. |
 | 6.     | Demo Deployment | <ul><li>[x] </li></ul> | [Demo Site](https://relaycode.org/) | Works as expected |
 
 # General Notes
+
+App works nicely. For next milestone, would be great to see more extensive documentation and test coverage. Right now the docs still point to the old hackathon ones.
 
 Website runs successfully:
 
