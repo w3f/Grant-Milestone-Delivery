@@ -15,12 +15,12 @@ The NeuroZK implementation to verify the integrity of AI models executed in thir
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
-| **0a.** | License | GPLv3 |
-| **0b.** | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how users can (for example) deploy apps using yaml files through our interface |
-| **0c.** | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
-| **0d.** | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
+| **0a.** | [License](https://github.com/Cyborg-Network/cyborg-parachain/blob/master/LICENSE) | GPLv3 |
+| **0b.** | [Documentation](https://github.com/Cyborg-Network/cyborg-parachain/blob/nzk-oracle/Local%20Testing%20NeuroZK_Milestone3.md) | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how users can (for example) deploy apps using yaml files through our interface |
+| **0c.** | [Testing and Testing Guide](https://github.com/Cyborg-Network/cyborg-parachain/blob/nzk-oracle/Local%20Testing%20NeuroZK_Milestone3.md) | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+| **0d.** |[Docker](https://github.com/Cyborg-Network/cyborg-connect/blob/main/Dockerfile) | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
 | **0e.** | Article | We will publish a medium blog explaining the vision of NueroZK, current features and future plans |
-| 1. | Testing suite | We will provide a testing facility to examine the working of ZK verification tool with the Cyborg parachain.|
-| 2. | Substrate Module: ZK verifier | This pallet will be responsible for verifying and confirming proofs emitted by the offchain ZK worker through the cyborg oracle. |
-| 3. | Cyborg ZK worker | A feature to the Cyborg worker node to posses specific instructions about ZK proof generation for a specific executed AI algorithm|
-| 4. | Substrate module: Worker Rewards | A custom pallet that holds the logic of assigning rewards to commited worker nodes for executing user tasks |
+| 1. | [Testing suite](https://github.com/Cyborg-Network/cyborg-parachain/blob/nzk-oracle/pallets/neuro-zk/src/tests.rs) | We will provide a testing facility to examine the working of ZK verification tool with the Cyborg parachain.|
+| 2. | [Substrate Module: ZK verifier](https://github.com/Cyborg-Network/cyborg-parachain/tree/nzk-oracle/pallets/neuro-zk) | This pallet will be responsible for verifying and confirming proofs emitted by the offchain ZK worker through the cyborg oracle. |
+| 3. | [Cyborg ZK worker](https://github.com/Cyborg-Network/Cyborg-miner/tree/neuro-zk-runtime) | A feature to the Cyborg worker node to posses specific instructions about ZK proof generation for a specific executed AI algorithm|
+| 4. | [Substrate module: Worker Rewards](https://github.com/Cyborg-Network/cyborg-parachain/tree/nzk-oracle/pallets/payment) | A custom pallet that holds the logic of assigning rewards to commited worker nodes for executing user tasks |
