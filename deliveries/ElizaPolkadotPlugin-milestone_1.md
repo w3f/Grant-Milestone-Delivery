@@ -3,7 +3,7 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** https://github.com/mikirov/Grants-Program/blob/master/applications/ElizaPluginPolkadot.md
-* **Milestone Number:** e.g. 1
+* **Milestone Number:** 1
 
 **Context** (optional)
 1. Implementation of a Wallet Provider for ElizaOS, with actions to create, load, eject a wallet, utilizing encrypted file backups and in-memory storage for fast switching.
