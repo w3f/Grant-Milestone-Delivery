@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ledgerUpgrade.md
 - **Milestone:** 1
 
@@ -17,4 +17,4 @@
 
 # General Notes
 
-All works out of the box. I am able to test it on my device in Ledger Live.
+All works out of the box. I was able to update my device in Ledger Live using the updated Polkadot app.
