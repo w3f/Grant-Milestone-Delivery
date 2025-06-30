@@ -24,13 +24,11 @@
 
 **Usage instructions:**
 
-1. Clone the ElizaOS monorepo: https://github.com/elizaOS/eliza
-2. Inside packages, clone the polkadot-plugin repo: https://github.com/Esscrypt/plugin-polkadot
-3. Inside the characters folder, link the plugin. example character file: https://gist.github.com/mikirov/74ec0c51255050562b2bdd63ccfc36fb
-4. Inside agent folder, add `"@elizaos/plugin-polkadot": "workspace:*"` to the dependencies section in package.json
-5. Follow install and build instructions: `pnpm install --no-frozen-lockfile && pnpm build`
-6. Start WEB UI: `pnpm start:client`
-7. Start Agent: `pnpm start --characters="characters/dobby.character.json"`
-8. (Optional) set .env with **POLKADOT_PRIVATE_KEY** and **POLKADOT_RPC_URL**
+1. Follow the ElizaOS quickstart instructions here: https://eliza.how/docs/quickstart
+2. Add the following dependancy in your newly created agent's package.json: `"@esscrypt/plugin-polkadot": "github:Esscrypt/plugin-polkadot"`
+3. Add the following line to the end of the plugins array in src/character.ts: `'@esscrypt/plugin-polkadot'`
+4. Run: `bun install`
+5. Start Agent: `bun run dev` 
+6. (Optional) Set root .env with **POLKADOT_PRIVATE_KEY** and **POLKADOT_RPC_URL**
 > Note: When starting the Agent, if **POLKADOT_PRIVATE_KEY** is not set, an error will pop up, but the agent will still run and expect a wallet to get created by the user
-9. Go to [http://localhost:5173/](http://localhost:5173/) and interact with the agent.
+7. Go to [http://localhost:3000/](http://localhost:3000/) and interact with the agent.
