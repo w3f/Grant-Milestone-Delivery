@@ -14,7 +14,7 @@
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LICENSE](https://github.com/Esscrypt/plugin-polkadot/blob/main/LICENSE) | Apache 2.0 |
-| 0b. | Documentation | [Setup Tutorial](https://github.com/Esscrypt/plugin-polkadot/blob/main/README.md#getting-started)<br> | Inline code documentation and comprehensive setup tutorial with step-by-step ElizaOS integration |
+| 0b. | Documentation | [Setup Tutorial](https://github.com/Esscrypt/plugin-polkadot/blob/main/README.md#step-by-step-usage)<br> | Inline code documentation and comprehensive setup tutorial with step-by-step ElizaOS integration |
 | 0c. | Testing and Testing Guide | • [Tests](https://github.com/Esscrypt/plugin-polkadot/tree/main/src/tests)<br>• [Instructions](https://github.com/Esscrypt/plugin-polkadot/blob/main/README.md#testing) | Comprehensive unit tests covering core functions with testing instructions |
 | 1. | Wallet Integration | https://github.com/Esscrypt/plugin-polkadot | Encrypted files get created on file system with the mnemonics, and in-memory caching is used to switch between wallets on the fly| 
 | 2.  | On-Chain Data Feed Module | https://github.com/Esscrypt/plugin-polkadot | We are utilizing the same provider for 2 and 3 with usage actions | 
