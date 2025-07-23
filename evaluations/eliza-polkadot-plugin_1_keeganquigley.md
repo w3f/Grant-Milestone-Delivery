@@ -1,3 +1,19 @@
+# Evaluation
+
+- **Status:** Accepted
+- **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ElizaPluginPolkadot.md
+- **Milestone:** 1
+- **Previously successfully merged evaluation:** All by keeganquigley
+
+| Number | Deliverable | Link | Notes |
+| ------------- | ------------- | ------------- |------------- |
+| 0a. | License | [LICENSE](https://github.com/Esscrypt/plugin-polkadot/blob/main/LICENSE) | Apache 2.0 |
+| 0b. | Documentation | [Setup Tutorial](https://github.com/Esscrypt/plugin-polkadot/blob/main/README.md#step-by-step-usage)<br> | Good |
+| 0c. | Testing and Testing Guide | • [Tests](https://github.com/Esscrypt/plugin-polkadot/tree/main/src/tests)<br>• [Instructions](https://github.com/Esscrypt/plugin-polkadot/blob/main/README.md#testing) | Good |
+| 1. | Wallet Integration | https://github.com/Esscrypt/plugin-polkadot | Good |
+| 2.  | On-Chain Data Feed Module | https://github.com/Esscrypt/plugin-polkadot | Good | 
+| 3.  | Governance Query Module | https://github.com/Esscrypt/plugin-polkadot| Good | 
+
 # General Notes
 
 Launches successfully:
@@ -98,3 +114,4 @@ dist/.vite/manifest.json          0.19 kB │ gzip:  0.14 kB
 Cached:    0 cached, 14 total
   Time:    1m28.37s
 ```
+Unit tests passing successfully.
