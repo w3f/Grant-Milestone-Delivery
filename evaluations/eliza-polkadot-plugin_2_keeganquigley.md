@@ -452,3 +452,22 @@ Cached:    1 cached, 14 total
   Time:    1m14.605s
 ```
 </details>
+
+pnpm run builds:
+```ts
+pnpm run build
+
+> @elizaos/plugin-polkadot@1.0.12 build /home/ubuntu/eliza/packages/plugin-polkadot
+> tsup
+
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.3.5
+CLI Using tsup config: /home/ubuntu/eliza/packages/plugin-polkadot/tsup.config.ts
+CLI Target: esnext
+CLI Cleaning output folder
+ESM Build start
+ESM dist/index.js     146.92 KB
+ESM dist/index.js.map 292.16 KB
+ESM ⚡️ Build success in 63ms
+```
