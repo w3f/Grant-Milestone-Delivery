@@ -546,3 +546,10 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
 </details>
+
+## UI
+
+The nzk dash also looks nice.
+
+<img width="1884" height="862" alt="nzk dash" src="https://github.com/user-attachments/assets/5125c8e5-10d7-41b0-9502-3a8981e0e798" />
+
