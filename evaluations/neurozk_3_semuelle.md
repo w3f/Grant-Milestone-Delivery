@@ -23,7 +23,7 @@
 
 Grantee resolved issues with the branches. Everything works now under `nzk-grant` branch. Thanks for the very helpful tutorial video!
 
-The app works successfully in starting up the alice and bob relay chains using ZombieNet, then builds the workers cyborg-miner-gatekeeper using Docker. After which you can use polkadot.js to test out the oracle and add members, use the payment and nzk pallet, etc. Nice work!
+The app works successfully in starting up the alice and bob relay chains using ZombieNet, then builds the workers cyborg-miner-gatekeeper using Docker. After which you can use polkadot.js to test out the oracle and add members, use the payment and nzk pallet, etc. I can also submit and verify proofs. Nice work!
 
 ## Testing
 
