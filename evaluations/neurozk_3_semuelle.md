@@ -27,7 +27,7 @@ The app works successfully in starting up the alice and bob relay chains using Z
 
 ## Testing
 
-Tests passing:
+Tests now passing:
 
 <details>
   <summary>Output</summary>
