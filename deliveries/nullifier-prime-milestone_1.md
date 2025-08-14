@@ -23,8 +23,8 @@ Primary code branches for this milestone:
 | 0d. | Docker | [Dockerfile](https://github.com/NP-Eng/frontier/blob/f2af5fd64315dab1fea7c1074c6403943ada4cf9/Dockerfile), [Docker instructions](https://github.com/NP-Eng/frontier/blob/0b6c6842177251dce730bf77420a3b8c7522b150/README-Docker.md)| |
 | 1. | Merkle tree implementation | [Merkle trees backend](https://github.com/NP-Eng/evm/blob/m1/src/backend/merkle_tree.rs) | |
 | 2. | Shield transaction type | [EVM](https://github.com/NP-Eng/evm/blob/m1/src/backend/mod.rs#L57) | |
-| 3. | Block header modification | ? | |
+| 3. | Block header modification | - | No change to the block header. The Merkle tree holding the shielding pool is stored in the state so it is represented in the block header as part of the state root hash |
 | 4. | Modified EVM engine (SputnikVM) | [EVM — v0.x](https://github.com/NP-Eng/evm/tree/v0.x) | |
 | 5. | Benchmarks | [EVM](https://github.com/rust-ethereum/evm/blob/414aecf69988ec320c4ae66c7c57b30dc0fab2f3/benches/loop.rs) | |
-| 6. | Node template | ? | |
+| 6. | Node template | - | No change to the node template. The "shielding" functionality follows the normal transaction templates  |
 | 7. | Tests | [Frontier — Shielding tests](https://github.com/NP-Eng/frontier/blob/m1/examples/test-shielding.js) | |
