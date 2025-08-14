@@ -7,7 +7,7 @@
 
 **Context**
 
-Milestone 1 focuses on implementing core protocol-level data structures and transaction types to enable privacy primitives within an EVM-compatible Substrate chain. Concretely, we introduce Merkle trees for deposit commitments, define a new Shield transaction type, extend block headers with a commitment root, and integrate these with a fork of the EVM execution engine (SputnikVM). We also provide a node template and baseline benchmarks for the primitive data types.
+Milestone 1 focuses on implementing core protocol-level data structures and transaction types to enable privacy primitives within an EVM-compatible Substrate chain. Concretely, we introduce Merkle trees for deposit commitments, define a new Shield transaction type and integrate these with a fork of the EVM execution engine (SputnikVM). We also provide a node template
 
 Primary code branches for this milestone:
 
