@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/ElizaPluginPolkadot.md
 - **Milestone:** 2
 - **Previously successfully merged evaluation:** All by keeganquigley
@@ -472,7 +472,9 @@ ESM dist/index.js.map 292.16 KB
 ESM ⚡️ Build success in 63ms
 ```
 ## Testing
-I'm getting errors in the tests even though I did fill the secrets in polkadot.character.json
+~~I'm getting errors in the tests even though I did fill the secrets in polkadot.character.json~~
+
+UPDATE: Team resolved all issues.
 
 <details>
   <summary>Output</summary>
