@@ -18,6 +18,18 @@
 
 ## General Notes
 
+### Demo
+
+- They organized an interactive demo (via video call), including:
+    - [x] keypair generation, and giving the pub key the permission to do calls to google's jwk endpoint
+    - [x] minimal ui allows for signing up via google, and receiving the JWT (though it didn't work on the first attempt)
+    - [x] sending DOT to address works
+    - [x] generating a zk proof works (proofs that the ephemeral key is authenticated to access the on-chain account that relates to the jwt received from google, without leaking any confidential details)
+    - [x] transfer using `zkLogin.submitZkloginUnsigned` (note: eph. key has an expiration, so the right to control the account related to the jwt is timely limited)
+ 
+Notably, some of these features are out of scope for M2, and instead part of M4 (e.g. the ui-related parts)
+Overall, everything works well.
+
 ### Testing Feedback
 
 Some of the tests and build logs include warnings. Additionally, the pallet benchmark build failed.
