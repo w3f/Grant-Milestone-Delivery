@@ -9,16 +9,18 @@
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a.    | License                   | <ul><li>[x] </li></ul> | [GPLv3](https://github.com/kzero-xyz/kzero/blob/a837bce3cc791d296715a7264b1400b8210b5f31/LICENSE) | OK |
-| 0b.    | Documentation             | <ul><li>[ ] </li></ul> | [pallet docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md), [kzero primitive docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md) | Extensive docs |
-| 0c.    | Testing and Testing Guide | <ul><li>[ ] </li></ul> | [pallet test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#running-the-tests), [kzero primitive test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#running-the-tests) | See [Testing Feedback](#testing-feedback) |
-| 0d.    | Docker                    | <ul><li>[ ] </li></ul> | - |N/A |
+| 0b.    | Documentation             | <ul><li>[x] </li></ul> | [pallet docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md), [kzero primitive docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md) | Extensive docs |
+| 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | [pallet test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#running-the-tests), [kzero primitive test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#running-the-tests) | See [Testing Feedback](#testing-feedback) |
+| 0d.    | Docker                    | <ul><li>[ ] </li></ul> | - | N/A |
 | 1      | kzero-runtime             | <ul><li>[x] </li></ul> | [repo](https://github.com/kzero-xyz/kzero) | OK                                             |
-| 2      | Tests                     | <ul><li>[ ] </li></ul> | [pallet tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#testing), [kzero primitive tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#testing) | See [Testing Feedback](#testing-feedback)                |
+| 2      | Tests                     | <ul><li>[x] </li></ul> | [pallet tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#testing), [kzero primitive tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#testing) | See [Testing Feedback](#testing-feedback)                |
 | 3      | docs                      | <ul><li>[x] </li></ul> | [docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-integration-guide.md) | A tutorial for how to integrate Kzero into a substrate-based blockchain (testing outside scope) |
 
 ## General Notes
 
-### Demo
+### Testing Feedback
+
+#### Demo
 
 - They organized an interactive demo (via video call), including:
     - [x] keypair generation, and giving the pub key the permission to do calls to google's jwk endpoint
@@ -30,7 +32,7 @@
 Notably, some of these features are out of scope for M2, and instead part of M4 (e.g. the ui-related parts)
 Overall, everything works well.
 
-### Testing Feedback
+#### Testruns, Builds, Benchmarks, etc.
 
 Some of the tests and build logs include warnings. Additionally, the pallet benchmark build failed.
 
@@ -96,142 +98,193 @@ Some of the tests and build logs include warnings. Additionally, the pallet benc
     ```
   </details>
 
-
-
-- [ ] Pallet benchmark build fails
+- [x] Pallet benchmark build passes with some warnings
   
   <details>
     <summary>Output</summary>
 
     ```zsh
     % cargo build --package node-template --release --features "primitive-zklogin/testing runtime-benchmarks"
-    warning: /Users/seraya/repos/kzero/tests/tool/Cargo.toml: unused manifest key: dependencies.scale-codec.package
-    warning: /Users/seraya/repos/kzero/runtime/Cargo.toml: unused manifest key: dependencies.scale-codec.package
-      Compiling proc-macro2 v1.0.91
+    warning: /Users/xxx/repos/kzero/tests/tool/Cargo.toml: unused manifest key: dependencies.scale-codec.package
+    warning: /Users/xxx/repos/kzero/runtime/Cargo.toml: unused manifest key: dependencies.scale-codec.package
+      Compiling openssl v0.10.68
+    
+      (...)
+
+      warning: unused import: `RawOrigin`
+        --> frame/zklogin/src/lib.rs:58:9
+        |
+      58 |         RawOrigin,
+        |         ^^^^^^^^^
+        |
+        = note: `#[warn(unused_imports)]` on by default
+
+      Compiling kvdb-rocksdb v0.19.0
+      Compiling sc-client-db v0.44.0 (https://github.com/paritytech/polkadot-sdk?branch=stable2407#92be93c7)
+        warning: `pallet-zklogin` (lib) generated 1 warning (run `cargo fix --lib -p pallet-zklogin` to apply 1 suggestion)
+      Compiling str0m v0.5.1
       
       (...)
       
-      Compiling pallet-zklogin v0.1.0 (/Users/seraya/repos/kzero/frame/zklogin)
-    error[E0432]: unresolved import `frame_benchmarking`
-    --> frame/zklogin/src/benchmarking.rs:4:5
-      |
-    4 | use frame_benchmarking::benchmarks;
-      |     ^^^^^^^^^^^^^^^^^^ use of undeclared crate or module `frame_benchmarking`
+      Compiling frame-benchmarking-cli v42.0.1 (https://github.com/paritytech/polkadot-sdk?branch=stable2407#92be93c7)
+        Finished `release` profile [optimized] target(s) in 2m 23s
+    ```
+  </details>
 
-    warning: unused import: `super::*`
-    --> frame/zklogin/src/benchmarking.rs:2:5
-      |
-    2 | use super::*;
-      |     ^^^^^^^^
-      |
-      = note: `#[warn(unused_imports)]` on by default
+- [x] Benchmark generation passes.
 
-    warning: unused imports: `RawOrigin` and `pallet_prelude::BlockNumberFor`
-    --> frame/zklogin/src/benchmarking.rs:5:20
-      |
-    5 | use frame_system::{pallet_prelude::BlockNumberFor, RawOrigin};
-      |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^
+  <details>
+    <summary>Output</summary>
 
-    warning: unused imports: `SignaturePayloadExt` and `TryIntoEphPubKey`
-    --> frame/zklogin/src/benchmarking.rs:6:33
-      |
-    6 | use primitive_zklogin::traits::{SignaturePayloadExt, TryIntoEphPubKey};
-      |                                 ^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^
+    ```zsh
+    % ./target/release/node-template benchmark pallet \
+    --chain dev \
+    --pallet pallet_zklogin \
+    --extrinsic '*' \
+    --steps 50 \
+    --repeat 20 \
+    --output frame/zklogin/src/newWeight.rs
+    # --output frame/zklogin/src/weights.rs
+    2025-08-18 18:36:57 Using the chain spec instead of the runtime to generate the genesis state is deprecated. Please remove the `--chain`/`--dev`/`--local` argument, point `--runtime` to your runtime blob and set `--genesis-builder=runtime`. This warning may become a hard error any time after December 2024.    
+    2025-08-18 18:36:57 Loading WASM from genesis state    
+    2025-08-18 18:36:57 [  0 % ] Starting benchmark: pallet_zklogin::submit_jwks_unsigned    
+    2025-08-18 18:37:02 [  0 % ] Running  benchmark: pallet_zklogin::submit_jwks_unsigned(1 args) 41/50 1/1    
+    2025-08-18 18:37:04 [ 33 % ] Starting benchmark: pallet_zklogin::update_keys    
+    2025-08-18 18:37:08 [ 33 % ] Running  benchmark: pallet_zklogin::update_keys(1 args) 28/50 1/1    
+    2025-08-18 18:37:13 [ 33 % ] Running  benchmark: pallet_zklogin::update_keys(1 args) 42/50 1/1    
+    2025-08-18 18:37:17 [ 66 % ] Starting benchmark: pallet_zklogin::set_jwk    
+    Pallet: "pallet_zklogin", Extrinsic: "submit_jwks_unsigned", Lowest values: [], Highest values: [], Steps: 50, Repeat: 20
+    Raw Storage Info
+    ========
+    Storage: `ZkLogin::Jwks` (r:0 w:10)
+    Proof: `ZkLogin::Jwks` (`max_values`: None, `max_size`: None, mode: `Measured`)
 
-    warning: unused import: `sp_core::ed25519`
-    --> frame/zklogin/src/benchmarking.rs:7:5
-      |
-    7 | use sp_core::ed25519;
-      |     ^^^^^^^^^^^^^^^^
+    Median Slopes Analysis
+    ========
+    -- Extrinsic Time --
 
-    warning: unused import: `sp_io::crypto::ed25519_generate`
-    --> frame/zklogin/src/benchmarking.rs:8:5
-      |
-    8 | use sp_io::crypto::ed25519_generate;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Model:
+    Time ~=      4.2
+        + c     11.8
+                  µs
 
-    warning: unused import: `sp_runtime::traits::Dispatchable`
-    --> frame/zklogin/src/benchmarking.rs:9:5
-      |
-    9 | use sp_runtime::traits::Dispatchable;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Reads = 0 + (0 * c)
+    Writes = 0 + (1 * c)
+    Recorded proof Size = 42 + (0 * c)
 
-    warning: unused import: `frame_support::pallet_prelude::ValidateUnsigned`
-      --> frame/zklogin/src/benchmarking.rs:10:5
-      |
-    10 | use frame_support::pallet_prelude::ValidateUnsigned;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Min Squares Analysis
+    ========
+    -- Extrinsic Time --
 
-    warning: unused import: `frame_support::assert_ok`
-      --> frame/zklogin/src/benchmarking.rs:11:5
-      |
-    11 | use frame_support::assert_ok;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^
+    Data points distribution:
+        c   mean µs  sigma µs       %
+        0      3.28     0.448   13.6%
+        1     17.34     0.651    3.7%
+        2     28.26     0.912    3.2%
+        3     38.48     1.117    2.9%
+        4     49.78     1.446    2.9%
+        5     64.44     1.971    3.0%
+        6     76.44     2.499    3.2%
+        7      86.1       2.7    3.1%
+        8     100.3     3.614    3.6%
+        9     110.3     3.252    2.9%
+      10     125.2     5.249    4.1%
 
-    warning: unused import: `sp_runtime::generic::UncheckedExtrinsic`
-      --> frame/zklogin/src/benchmarking.rs:13:5
-      |
-    13 | use sp_runtime::generic::UncheckedExtrinsic;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Quality and confidence:
+    param     error
+    c         0.038
 
-    warning: unused import: `hex`
-      --> frame/zklogin/src/benchmarking.rs:14:5
-      |
-    14 | use hex;
-      |     ^^^
+    Model:
+    Time ~=    3.854
+        + c    11.92
+                  µs
 
-    warning: unused import: `frame_support::traits::Currency`
-      --> frame/zklogin/src/benchmarking.rs:15:5
-      |
-    15 | use frame_support::traits::Currency;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Reads = 0 + (0 * c)
+    Writes = 0 + (1 * c)
+    Recorded proof Size = 28 + (2 * c)
 
-    warning: unused import: `pallet_balances::Pallet as BalancesPallet`
-      --> frame/zklogin/src/benchmarking.rs:16:5
-      |
-    16 | use pallet_balances::Pallet as BalancesPallet;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Pallet: "pallet_zklogin", Extrinsic: "update_keys", Lowest values: [], Highest values: [], Steps: 50, Repeat: 20
+    Raw Storage Info
+    ========
+    Storage: `ZkLogin::Keys` (r:1 w:1)
+    Proof: `ZkLogin::Keys` (`max_values`: Some(1), `max_size`: None, mode: `Measured`)
 
-    warning: unused import: `crate::Pallet as ZKLogin`
-      --> frame/zklogin/src/benchmarking.rs:17:5
-      |
-    17 | use crate::Pallet as ZKLogin;
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^
+    Median Slopes Analysis
+    ========
+    -- Extrinsic Time --
 
-    warning: unused imports: `BenchmarkJwks` and `BenchmarkKeys`
-      --> frame/zklogin/src/benchmarking.rs:20:29
-      |
-    20 | use crate::benchmark_data::{BenchmarkJwks, BenchmarkKeys};
-      |                             ^^^^^^^^^^^^^  ^^^^^^^^^^^^^
+    Model:
+    Time ~=     10.8
+        + c      0.4
+                  µs
 
-    warning: unused imports: `BigNumber`, `Claim`, `ZkLoginInputs`, `ZkLoginProof`, `ZkMaterialV1`, and `ZkMaterial`
-    --> frame/zklogin/src/benchmark_data.rs:3:43
-      |
-    3 | use primitive_zklogin::{Jwk, JwkProvider, ZkMaterial, ZkMaterialV1, ZkLoginInputs, ZkLoginProof, Claim, BigNumber};
-      |                                           ^^^^^^^^^^  ^^^^^^^^^^^^  ^^^^^^^^^^^^^  ^^^^^^^^^^^^  ^^^^^  ^^^^^^^^^
+    Reads = 1 + (0 * c)
+    Writes = 1 + (0 * c)
+    Recorded proof Size = 42 + (0 * c)
 
-    warning: unused import: `U256`
-    --> frame/zklogin/src/benchmark_data.rs:4:15
-      |
-    4 | use sp_core::{U256, ed25519};
-      |               ^^^^
+    Min Squares Analysis
+    ========
+    -- Extrinsic Time --
 
-    warning: unused import: `hex`
-    --> frame/zklogin/src/benchmark_data.rs:8:5
-      |
-    8 | use hex;
-      |     ^^^
+    Data points distribution:
+        c   mean µs  sigma µs       %
+        0       9.4     0.489    5.2%
+        1     11.16     0.856    7.6%
+        2        12     0.721    6.0%
+        3     14.16     0.945    6.6%
+        4     11.74     0.715    6.0%
+        5     12.14      1.51   12.4%
+        6     13.36     1.533   11.4%
+        7     14.36     1.109    7.7%
+        8     14.66     1.159    7.9%
+        9      13.9     0.994    7.1%
+      10      13.2     0.979    7.4%
 
-    warning: unused import: `RawOrigin`
-      --> frame/zklogin/src/lib.rs:58:9
-      |
-    58 |         RawOrigin,
-      |         ^^^^^^^^^
+    Quality and confidence:
+    param     error
+    c         0.021
 
-    For more information about this error, try `rustc --explain E0432`.
-    warning: `pallet-zklogin` (lib) generated 18 warnings
-    error: could not compile `pallet-zklogin` (lib) due to 1 previous error; 18 warnings emitted
-    warning: build failed, waiting for other jobs to finish...
+    Model:
+    Time ~=     10.7
+        + c    0.436
+                  µs
+
+    Reads = 1 + (0 * c)
+    Writes = 1 + (0 * c)
+    Recorded proof Size = 42 + (0 * c)
+
+    Pallet: "pallet_zklogin", Extrinsic: "set_jwk", Lowest values: [], Highest values: [], Steps: 50, Repeat: 20
+    Raw Storage Info
+    ========
+    Storage: `ZkLogin::Jwks` (r:0 w:1)
+    Proof: `ZkLogin::Jwks` (`max_values`: None, `max_size`: None, mode: `Measured`)
+
+    Median Slopes Analysis
+    ========
+    -- Extrinsic Time --
+
+    Model:
+    Time ~=       15
+                  µs
+
+    Reads = 0
+    Writes = 1
+    Recorded proof Size = 0
+
+    Min Squares Analysis
+    ========
+    -- Extrinsic Time --
+
+    Model:
+    Time ~=       15
+                  µs
+
+    Reads = 0
+    Writes = 1
+    Recorded proof Size = 0
+
+    Created file: "frame/zklogin/src/newWeight.rs"
+    zsh: command not found: #
     ```
   </details>
 
@@ -243,8 +296,8 @@ Some of the tests and build logs include warnings. Additionally, the pallet benc
     ```zsh
     % cargo test -p primitive-zklogin --features testing
 
-    warning: /Users/seraya/repos/kzero/tests/tool/Cargo.toml: unused manifest key: dependencies.scale-codec.package
-    warning: /Users/seraya/repos/kzero/runtime/Cargo.toml: unused manifest key: dependencies.scale-codec.package
+    warning: /Users/xxx/repos/kzero/tests/tool/Cargo.toml: unused manifest key: dependencies.scale-codec.package
+    warning: /Users/xxx/repos/kzero/runtime/Cargo.toml: unused manifest key: dependencies.scale-codec.package
       Compiling libc v0.2.169
       Compiling scale-info v2.11.6
       Compiling hash-db v0.16.0
@@ -271,7 +324,7 @@ Some of the tests and build logs include warnings. Additionally, the pallet benc
       Compiling sp-io v38.0.1 (https://github.com/paritytech/polkadot-sdk?branch=stable2407#92be93c7)
       Compiling sp-application-crypto v38.0.0 (https://github.com/paritytech/polkadot-sdk?branch=stable2407#92be93c7)
       Compiling sp-runtime v39.0.3 (https://github.com/paritytech/polkadot-sdk?branch=stable2407#92be93c7)
-      Compiling primitive-zklogin v0.1.0 (/Users/seraya/repos/kzero/primitives/zklogin)
+      Compiling primitive-zklogin v0.1.0 (/Users/xxx/repos/kzero/primitives/zklogin)
     warning: unused imports: `ExtrinsicExt` and `SignaturePayloadExt`
     --> primitives/zklogin/src/tests.rs:8:21
       |
