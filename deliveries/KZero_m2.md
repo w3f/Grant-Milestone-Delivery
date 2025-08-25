@@ -22,6 +22,7 @@ Number	Deliverable	Specification
 | 1      | kzero-runtime             | https://github.com/kzero-xyz/kzero                                             |
 | 2      | Tests                     | https://github.com/kzero-xyz/kzero-grant-docs/blob/main/kzero-pallet-zklogin.md#testing  <br>https://github.com/kzero-xyz/kzero-grant-docs/blob/main/kzero-primitive-zklogin.md#testing              |
 | 3      | docs                      | https://github.com/kzero-xyz/kzero-grant-docs/blob/main/kzero-integration-guide.md |
+| 4      | docker                  | https://github.com/kzero-xyz/kzero-grant-docs/blob/main/m2-docker-tutorial.md |
 
 ## Additional Information
 ### Techical Docs
