@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/KZero.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -11,7 +11,7 @@
 | 0a.    | License                   | <ul><li>[x] </li></ul> | [GPLv3](https://github.com/kzero-xyz/kzero/blob/a837bce3cc791d296715a7264b1400b8210b5f31/LICENSE) | OK |
 | 0b.    | Documentation             | <ul><li>[x] </li></ul> | [pallet docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md), [kzero primitive docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md) | Extensive docs |
 | 0c.    | Testing and Testing Guide | <ul><li>[x] </li></ul> | [pallet test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#running-the-tests), [kzero primitive test instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#running-the-tests) | See [Testing Feedback](#testing-feedback) |
-| 0d.    | Docker                    | <ul><li>[ ] </li></ul> | - | N/A |
+| 0d.    | Docker                    | <ul><li>[x] </li></ul> | [Instructions](https://github.com/kzero-xyz/kzero-grant-docs/blob/3f2d770218c93da310f20e731e17fb4f5763fbf4/m2-docker-tutorial.md) | OK |
 | 1      | kzero-runtime             | <ul><li>[x] </li></ul> | [repo](https://github.com/kzero-xyz/kzero) | OK                                             |
 | 2      | Tests                     | <ul><li>[x] </li></ul> | [pallet tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-pallet-zklogin.md#testing), [kzero primitive tests](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-primitive-zklogin.md#testing) | See [Testing Feedback](#testing-feedback)                |
 | 3      | docs                      | <ul><li>[x] </li></ul> | [docs](https://github.com/kzero-xyz/kzero-grant-docs/blob/fe35c7bf7fafb05b2cc19ac4390ae63e7a900645/kzero-integration-guide.md) | A tutorial for how to integrate Kzero into a substrate-based blockchain (testing outside scope) |
