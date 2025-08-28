@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [Nullifier Prime](https://github.com/NP-Eng/Grants-Program/blob/90c5079c9f84b436991d215f9429682eda2cc659/applications/np-compliant_and_programmable_privacy.md)
+* **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/np-compliant_and_programmable_privacy.md
 * **Milestone Number:** 1
 
 **Context**
