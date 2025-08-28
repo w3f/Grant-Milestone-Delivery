@@ -21,6 +21,6 @@ defined policies, providing an additional layer of security beyond traditional d
 | 0a. | License | https://github.com/sporyon/dotnix-core/blob/main/LICENSE |
 | 0b. | Documentation | https://github.com/sporyon/dotnix-core/blob/main/README.md |
 | 0c. | Testing and Testing Guide | https://github.com/sporyon/dotnix-core/tree/main/checks | 
-| 0d. | Docker | https://github.com/sporyon/dotnix-core/blob/main/docker.nix |
+| 0d. | Docker | https://github.com/sporyon/dotnix-core/blob/main/example.nix |
 | 1. | SELinux | https://github.com/sporyon/dotnix-core/tree/main/pkgs/selinux |
-| 2. | Usability | | 
+| 2. | Usability | https://github.com/sporyon/dotnix-core/commit/ddff867f8a6c4aa80778abd06f5312d5181adce3 | 
