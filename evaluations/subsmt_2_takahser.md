@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/subsmt.md
 - **Milestone:** 2
 - **Kusama Identity:** Address
@@ -10,7 +10,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | **0a.** | License                        | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/LICENSE | Apache 2.0 |
 | **0b.** | Documentation                  | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/README.md | See [Testing Feedback](#testing-feedback) |
-| **0c.** | Testing and Testing Guide      | <ul><li>[ ] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/docs/test-guide-m2.md | See [Testing Feedback](#testing-feedback), [General Notes](#general-notes) |
+| **0c.** | Testing and Testing Guide      | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/docs/test-guide-m2.md | See [Testing Feedback](#testing-feedback), [General Notes](#general-notes) |
 | **0d.** | Docker                         | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/README.md#docker | See [Docker Feedback](#docker-feedback) |
 | **0e.** | Article                        | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/docs/about%20subsmt.md | Ok |
 |      1. | rust crate: smt-paritydb-store | <ul><li>[x] </li></ul> | https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/backend/src/parity/parity_db.rs, https://github.com/farcloud-labs/subsmt/blob/3cde7d625490393b9be33accc375608d50a211a4/backend/src/parity/parity_store.rs | Ok |
@@ -21,6 +21,12 @@ Ideally all links inside the above table should include the commit hash,
 which was used for testing the delivery. It should also be checked if the software is published under the correct open-source license.
 
 ## General Notes
+
+### May 22, 2025
+
+Issues raised fixed on request.
+
+### May 5, 2025
 
 Most deliverables worked out-of-the-box. However, the coverage report threw an error, a dep seems to be missing here. Also, the smoke test failed: The POST /update call would timeout when sent with the suggested request body:
 

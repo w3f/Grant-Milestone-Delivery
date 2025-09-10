@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/distributed_cryptography_for_polkadot_wallets.md
 - **Milestone:** 2
 

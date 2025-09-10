@@ -28,8 +28,8 @@ The milestone delivery process is part of the [W3F Grants Program](https://githu
    1. [Evaluators](https://grants.web3.foundation/docs/Introduction/team#w3f-grants-committee) can (and usually do) issue comments and request changes on the pull request. Their feedback needs to be resolved before your milestone is accepted.
    2. Grants Evaluators will merge your pull request to accept the delivery.
 3. **Milestone Payment:**
-   1. After the milestone is approved and the pull request merged, fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89).
-   1. The [operations team](https://grants.web3.foundation/docs/Introduction/team#w3f-operations-team) receives a notification once the invoice is submitted. Payments are usually processed within 14 days.
+   1. After the milestone is approved and the pull request merged, fill out the [invoice form](https://forms.gle/LSRr7PCjBpEbKGh89). Please follow the instructions and requirements as laid out in the form as well as our [Terms & Conditions](https://grants.web3.foundation/docs/Support%20Docs/T&Cs#7--terms-of-grant-giving).
+   1. The [operations team](https://grants.web3.foundation/docs/Introduction/team#w3f-operations-team) receives a notification once the invoice is submitted.
    2. Payment is made to the bank account and/or Polkadot AssetHub address specified in the initial application.
 
 Grant applications can be [amended](https://grants.web3.foundation/docs/Process/changes) at any time. However, this _necessitates a reevaluation by the committee_. If your application has been accepted and, during development, you find that your project significantly deviates from the original specification, please open a new pull request that modifies the existing application.
