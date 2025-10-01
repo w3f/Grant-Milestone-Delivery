@@ -1,0 +1,35 @@
+# Milestone Delivery :mailbox:
+
+**The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**
+
+* **Application Document:** [nftaa.md](https://github.com/w3f/Grants-Program/blob/master/applications/nftaa.md)
+* **Milestone Number:** 3
+
+**Context** (optional)
+
+In this milestone, we completed the final phase of NFTAA development, creating a comprehensive ecosystem that demonstrates the full potential of NFT-as-an-Account technology. 
+We built a presentation website (nftaa.xyz), developed a working marketplace integration with KodaDot, deployed testing infrastructure including a custom indexer, and created extensive documentation. 
+The project now showcases how NFTs can function as fully-featured accounts capable of owning assets, executing transactions, staking, and interacting with the broader Polkadot ecosystem. 
+
+**Deliverables**
+
+| Number | Deliverable                 | Link                                                                                                                                                                                                                                                                                                                                                                 | Notes                                                                                                              |
+|--------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| 0a.    | License                     | [pallet](https://github.com/decenzio/pallet-nftaa/blob/main/LICENSE), [indexer](https://github.com/decenzio/stick/blob/main/LICENSE), [Kodadot](https://github.com/decenzio/nft-gallery/blob/main/LICENSE), [Testing repo](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/LICENSE)                                                                    | MIT                                                                                                                | 
+| 0b.    | Documentation               | [nftaa-website](https://nftaa.xyz/), [Pallet wiki](https://deepwiki.com/decenzio/pallet-nftaa), [Testing guide](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#how-to-run)                                                                                                                                                                  | Complete documentation ecosystem with website, technical docs, and research papers                                 | 
+| 0c.    | Testing and Testing Guide   | [Video showcase](https://drive.proton.me/urls/Y9TA9JGMYW#9hulGiaT2SYL),   [Testing guide](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#testing), [Unit tests](https://github.com/decenzio/pallet-nftaa/blob/main/src/tests.rs), [Live devnet testing](https://koda.nftaa.xyz/)                                                            | Video devnet showcase, Comprehensive testing including unit tests, integration guide, and live marketplace testing | 
+| 0d.    | Docker                      | [Dockerfile](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/Dockerfile), [Docker setup guide](https://github.com/decenzio/polkadot-nftaa-proposal/blob/main/README.md#docker)                                                                                                                                                                         | Containerized solution for easy deployment and testing                                                             | 
+| 0e.    | Article                     | [Medium article](https://decenzio.medium.com/nft-as-an-account-on-polkadot-nftaa-bf03f4693d0d)                                                                                                                                                                                                                                                                       | Overview article,                                                                                                  |
+| 3a.    | Web app integration         | [Live devnet fork of marketplace and proxy call integrafe w NFTAA integration](https://koda.nftaa.xyz/) - [repo](https://github.com/decenzio/nft-gallery), [Custom indexer (stick)](https://indexer.nftaa.xyz/graphql) - [repo](https://github.com/decenzio/stick), [Live devnet (node)](https://node.nftaa.xyz/) - [repo](https://github.com/decenzio/polkadot-sdk) | Full-featured marketplace integration with NFTAA support, live testing environment                                 |
+| 3b.    | Marketplace app integration | [Live devnet fork of marketplace and proxy call integrafe w NFTAA integration](https://koda.nftaa.xyz/) - [repo](https://github.com/decenzio/nft-gallery), [Custom indexer (stick)](https://indexer.nftaa.xyz/graphql) - [repo](https://github.com/decenzio/stick)                                                                                                   | Complete marketplace functionality enabling NFT account creation, asset management, and trading                    |
+
+**Additional Information**
+
+In this milestone, we successfully overcame the technical challenges of integrating NFTAA into a dev/test marketplace environment. The main complexity arose from adapting KodaDot's architecture to support local Substrate node testing, requiring significant modifications to enable seamless NFTAA functionality. 
+We established a complete testing infrastructure including a live devnet node (node.nftaa.xyz), custom GraphQL indexer (indexer.nftaa.xyz), and fully functional marketplace (koda.nftaa.xyz) where users can experience NFTAA technology firsthand.
+
+When solving technical issues, we received valuable support from our ecosystem advisors and the [community](https://github.com/kodadot/nft-gallery/issues/11599).
+
+We also create informative website [nftaa.xyz](https://nftaa.xyz/) to improve whole NFTAA experience and selling point.
+
+Looking ahead, our roadmap includes upstreaming the pallet-nftaa into the official Polkadot SDK, with plans to initiate community discussions on the Polkadot forum as the first step in this process. The technology is now ready for broader ecosystem adoption and integration into other parachains seeking advanced NFT functionality.
