@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** Changes requested
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/multichain_identity_indexer.md
 - **Milestone:** 1
 
@@ -8,7 +8,7 @@
 | ------ | ----------- | -------- | ---- |----------------- |
 | 0a. | License |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/main/LICENSE | MIT license present. |
 | 0b. | Documentation |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/README.md | README explains setup, commands, and routes. |
-| 0c. | Testing and Testing Guide |<ul><li>[ ] </li></ul>| https://github.com/vikiival/identics/tree/feat/identics-m1/tests | REST suite now seeds known fixtures and asserts positive payloads for most endpoints. Still missing coverage for `/judgement-requests/registrar/:id` and pending usernames; add positive-sample assertions (or seeds) before marking complete. |
+| 0c. | Testing and Testing Guide |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/tree/feat/identics-m1/tests | Grantee supplied REST test suite for all endpoints. We verified GraphQL paths manually via playground; no automated GraphQL tests shipped upstream. |
 | 0d. | Docker |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/docker-compose.yml | Stack builds and starts. |
 | 0e. | Article / workshop |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/wiki/Querying-data-via-GraphQL | Wiki available; consider adding more end-to-end REST examples. |
 | 1a. | Identity Registration Schema |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/schema.graphql#L1 | Schema present. |
@@ -36,11 +36,11 @@
 | 6i. | accountByUsername |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L455 | Lookup by seeded username returns the expected account. |
 | 6j. | usernameListByAuthority |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L498 | Using fixture authority returns multiple usernames ending with the expected suffix. |
 | 6k. | usernameListBySuffix |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L558 | 200, list returned non-empty data for "dot". |
-| 6l. | pendingUsernamesByAccount |<ul><li>[ ] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L600 | Endpoint still returns zero results for provided account; add seeded pending username to exercise positive case. |
+| 6l. | pendingUsernamesByAccount |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L600 | REST test covers seeded queued username; GraphQL equivalent checked manually. |
 | 6m. | identityListByField |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L645 | 200, list returned non-empty data for "name". |
 | 6n. | superAccountBySubAccount |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L710 | Fixture sub-account resolves to super identity; test asserts linkage. |
 | 6o. | identityEventsByAccount |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L753 | Events list populated for seeded identity; tests require non-zero count. |
-| 6p. | judgementRequestsByRegistrar |<ul><li>[ ] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L802 | Endpoint responds but still empty (no FeePaid identities); please seed or document a registrar with pending requests. |
+| 6p. | judgementRequestsByRegistrar |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L802 | Fixture `vikiival.dot` (FeePaid) keeps endpoint non-empty; REST test fixed to accept numeric `registrar` field. |
 | 6q. | authorityListByAllocation |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L854 | Implemented; `/authorities/allocation?minAllocation=5` returns authorities and tests enforce allocation filter. |
 | 6r. | identityListByVerificationStatus |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L884 | 200, list returned non-empty data for "verified". |
 | 6s. | identityHistoryByAccount |<ul><li>[x] </li></ul>| https://github.com/vikiival/identics/blob/feat/identics-m1/src/api.ts#L970 | History endpoint now returns seeded events; test checks identity match. |
@@ -63,20 +63,19 @@
 - /account/username/:username → 200, success=true, account resolved
 - /usernames/authority/:authority → 200, success=true, list[50]
 - /usernames/suffix/:suffix → 200, success=true, list[50]
-- /usernames/pending/:account → 200, success=true, list[0]
+- /usernames/pending/:account → 200, success=true, list[>0] (REST test)
 - /registrars → 200, success=true, list[5]
 - /registrars/statistics → 200, success=true, aggregates returned
 - /events/:account → 200, success=true, list[>0]
-- /judgement-requests/registrar/:registrarId → 200, success=true, list[0]
-- /authorities/allocation → 500 (not implemented)
+- /judgement-requests/registrar/:registrarId → 200, success=true, list[>0] (REST test)
+- /authorities/allocation → 200, success=true, filtered list
 - /history/:account → 200, success=true, list[>0]
 
 ## Requested changes
 
-1. Provide positive sample data (or seeds) for `/usernames/pending/:account` so tests can assert non-empty payloads when pending usernames exist.
-2. Populate `/judgement-requests/registrar/:id` with at least one FeePaid identity and extend the test suite to cover it.
-3. Consider adding explicit tests for the GraphQL helpers or documenting manual verification steps, though the REST coverage now looks solid.
+ All deliverables verified. Provided REST tests pass after adjusting registrar assertion; GraphQL queries confirmed manually through the wiki instructions.
 
 ## General notes
 
-- The project structure, schema, handlers, and majority of routes are in place and functioning. Remaining gaps are limited to pending-user and judgement-request data availability.
+- The project structure, schema, handlers, and REST tests are in place and functioning. GraphQL queries were exercised manually following the provided wiki.
+- Docker-based setup works; fixture seeding now includes queued usernames and FeePaid identities for reviewer reproducibility.
