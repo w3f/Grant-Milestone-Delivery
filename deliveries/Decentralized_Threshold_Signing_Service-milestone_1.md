@@ -16,3 +16,7 @@
 | **0c.** | Testing and Testing Guide | [Test and Testing Guide](https://github.com/Fiono11/decentralized_threshold_signing_service?tab=readme-ov-file#build-and-testing) |
 | **0d.** | Docker | [Docker](https://github.com/Fiono11/decentralized_threshold_signing_service/blob/main/Dockerfile) |
 | **1.a** | Peer Discovery via Blockchain Address | [Milestone 1](https://github.com/Fiono11/decentralized_threshold_signing_service/) |
+
+**Additional Information**
+
+None
