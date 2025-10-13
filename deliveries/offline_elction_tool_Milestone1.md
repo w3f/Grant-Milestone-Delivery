@@ -5,7 +5,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **PR Link:** https://github.com/w3f/Grants-Program/pull/2623
+* **Application Document:** https://github.com/Ipsa11/Grants-Program/blob/master/applications/OfflineElectionTool.md
 * **Milestone Number:** 1
 
 **Deliverables**
