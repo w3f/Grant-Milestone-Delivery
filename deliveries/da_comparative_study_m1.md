@@ -18,10 +18,10 @@ This milestone delivers the foundational research and methodology for the compar
 | 0b. | Documentation | [README.md](https://github.com/Chainscore/DA-Research/blob/main/README.md) | The main README provides an overview of the project. |
 | 0c. | Methodology | [paper-latex/sections/methodology.tex](https://github.com/Chainscore/DA-Research/blob/main/paper-latex/sections/methodology.tex) | The methodology for the comparative study is detailed in this document. |
 | 0d. | Infrastructure | [Dockerfile](https://github.com/Chainscore/DA-Research/blob/main/Dockerfile) | The Dockerfile sets up the research environment with all necessary dependencies including LaTeX, Python, and required packages for data analysis. |
-| 0e. | Article / Report (partial) | [paper-latex/](https://github.com/Chainscore/DA-Research/tree/main/paper-latex) | The introduction, background, and methodology sections of the final report are in the `paper-latex` directory. |
+| 0e. | Article / Report (partial) | [paper-latex/](https://github.com/Chainscore/DA-Research/tree/main/paper-latex)  [latest-release](https://github.com/Chainscore/DA-Research/releases)| The introduction, background, and methodology sections of the final report are in the `paper-latex` directory. |
 | 1. | Comprehensive Literature Review | [paper-latex/references.bib](https://github.com/Chainscore/DA-Research/blob/main/paper-latex/references.bib) | The literature review is part of the paper in the `paper-latex` directory, with references in `references.bib`. |
 | 2. | Benchmark Metrics & Criteria Definition | [paper-latex/sections/methodology.tex](https://github.com/Chainscore/DA-Research/blob/main/paper-latex/sections/methodology.tex) | The benchmark metrics and criteria are defined in the methodology document. |
-| 3. | Experiment Environment Setup Plan | [paper-latex/sections/methodology.tex](https://github.com/Chainscore/DA-Research/blob/main/paper-latex/sections/methodology.tex) [README.md](https://github.com/Chainscore/DA-Research/blob/main/README.md) | The plan for setting up the experiment environment is included in the methodology document. |
+| 3. | Experiment Environment Setup Plan | [paper-latex/sections/methodology.tex](https://github.com/Chainscore/DA-Research/blob/main/paper-latex/sections/methodology.tex) [README.md](https://github.com/Chainscore/DA-Research/blob/main/README.md)| The plan for setting up the experiment environment is included in the methodology document. |
 
 **Additional Information**
 
