@@ -20,8 +20,8 @@ This delivery enables DApp developers to integrate multi-wallet support with min
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License | [LICENSE](https://github.com/Luno-lab/LunoKit/blob/main/LICENSE) | MIT |
-| 0b. | Documentation | [docs.lunolab.xyz](https://docs.lunolab.xyz/) | Complete online documentation including installation guide, quick start, API reference, and integration examples |
-| 0c. | Testing Guide | [Test Guide](https://app.codecov.io/gh/Luno-lab/LunoKit/tree/main/packages%2Fcore) | Core functionality covered by Vitest unit tests for connectors, utility functions, and configuration system |
+| 0b. | Documentation | [Docs](https://github.com/Luno-lab/lkdoc) | Complete online documentation including installation guide, quick start, API reference, and integration examples |
+| 0c. | Testing Guide | [Test Guide](https://docs.lunolab.xyz/getting-started/testing.html) | Core functionality covered by Vitest unit tests for connectors, utility functions, and configuration system |
 | 0d. | Build System | [monorepo structure](https://github.com/Luno-lab/LunoKit) | Complete monorepo build with tsup, supporting ESM and CJS outputs |
 | 0e. | Package Management | [package.json](https://github.com/Luno-lab/LunoKit/blob/main/package.json) | pnpm workspace with Changesets for version management and NPM publishing |
 | 1. | Core Module: @luno-kit/core | [@luno-kit/core](https://github.com/Luno-lab/LunoKit/tree/main/packages/core) | Core connector abstraction, configuration system, chain definitions, and storage system |
