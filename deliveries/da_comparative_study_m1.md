@@ -28,4 +28,4 @@ This milestone delivers the foundational research and methodology for the compar
 While Milestone 1 was focused on research and planning, initial work on the data collection tools for Avail, Espresso, and Polkadot has already begun. You can find the early-stage code in the `protocol` directory.
 
 
-The milestone delivery has also been shared  in group/channel : Benchmarking Blockchain Data Availability: Polkadot ELVES vs Modular DA Layers | Grant Application for feedback and transparency.
+The milestone delivery has been shared with W3F researchers for feedback on our Matrix group chat.
