@@ -19,12 +19,12 @@ Primary code branches for this milestone:
 | Number | Deliverable | Link | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | 0a. | License | [Frontier — LICENSE](https://github.com/NP-Eng/frontier/blob/master/LICENSE-APACHE2) · [EVM — LICENSE](https://github.com/NP-Eng/evm/blob/v0.x/LICENSE) | |
-| 0b. & 0c. | Documentation and testing guide | [Frontier — SHIELDING_POOL.md](https://github.com/NP-Eng/frontier/blob/m1/docs/SHIELDING_POOL.md), [Frontier — SHIELDING_INTEGRATION.md](https://github.com/NP-Eng/frontier/blob/m1/docs/SHIELDING_INTEGRATION.md) |  |
-| 0d. | Docker | [Dockerfile](https://github.com/NP-Eng/frontier/blob/f2af5fd64315dab1fea7c1074c6403943ada4cf9/Dockerfile), [Docker instructions](https://github.com/NP-Eng/frontier/blob/0b6c6842177251dce730bf77420a3b8c7522b150/README-Docker.md)| |
-| 1. | Merkle tree implementation | [Merkle trees backend](https://github.com/NP-Eng/evm/blob/m1/src/backend/merkle_tree.rs) | |
-| 2. | Shield transaction type | [EVM](https://github.com/NP-Eng/evm/blob/m1/src/backend/mod.rs#L57) | |
+| 0b. & 0c. | Documentation and testing guide | [Frontier — SHIELDING_POOL.md](https://github.com/NP-Eng/frontier/blob/Add-shielding/docs/SHIELDING_POOL.md), [Frontier — SHIELDING_INTEGRATION.md](https://github.com/NP-Eng/frontier/blob/Add-shielding/docs/SHIELDING_INTEGRATION.md) |  |
+| 0d. | Docker | [Dockerfile](https://github.com/NP-Eng/frontier/blob/Add-shielding/Dockerfile), [Docker instructions](https://github.com/NP-Eng/frontier/blob/Add-shielding/README-Docker.md)| |
+| 1. | Merkle tree implementation | [Merkle trees backend](https://github.com/NP-Eng/evm/blob/Add-shielding/src/backend/merkle_tree.rs) | |
+| 2. | Shield transaction type | [EVM](https://github.com/NP-Eng/evm/blob/Add-shielding/src/backend/mod.rs#L57) | |
 | 3. | Block header modification | - | No change to the block header. The Merkle tree holding the shielding pool is stored in the state so it is represented in the block header as part of the state root hash |
 | 4. | Modified EVM engine (SputnikVM) | [EVM — v0.x](https://github.com/NP-Eng/evm/tree/v0.x) | |
 | 5. | Benchmarks | [EVM](https://github.com/rust-ethereum/evm/blob/414aecf69988ec320c4ae66c7c57b30dc0fab2f3/benches/loop.rs) | |
 | 6. | Node template | - | No change to the node template. The "shielding" functionality follows the normal transaction templates  |
-| 7. | Tests | [Frontier — Shielding tests](https://github.com/NP-Eng/frontier/blob/m1/examples/test-shielding.js) | |
+| 7. | Tests | [Frontier — Shielding tests](https://github.com/NP-Eng/frontier/blob/Add-shielding/examples/test-shielding.js) | |
