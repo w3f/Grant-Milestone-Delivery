@@ -6,10 +6,10 @@
 
 | Number | Deliverable | Accepted | Link | Evaluation Notes |
 | ------ | ----------- | -------- | ---- | ---------------- |
-| 0a. | License | [x] | `pallet-balances-formal-verification/LICENSE` | MIT license present in the repository root, matching the application scope. |
-| 0b. | Documentation | [x] | `pallet-balances-formal-verification/preparation/` | Documentation folder includes the milestone summary, methodology, trait-to-Wasm mapping, and contextual materials as promised; clarified coverage expectations and confirmed completeness. |
-| 0c. | Reproducibility | [x] | `pallet-balances-formal-verification/balances_contract/` | Ink! port (`lib.rs`), annotated Wasm (`balances_contract.wat`), and conformance tests are provided; `cargo test` (135 tests) and the reproducibility workflow succeed in the grantee’s reference Linux environment. On macOS the bit-exact check still fails, but the team documented the nondeterministic ordering issue and supplied a justification we accept for this milestone. |
-| 0d. | Final Research Article | [x] | `pallet-balances-formal-verification/preparation/preparing-polkadot-pallet-balances-for-formal-verification.md` | Comprehensive article with reproducibility guide, annotated Wasm insights, trait coverage, and future roadmap fulfilling the agreed scope. |
+| 0a. | License | <ul><li>[x] </li></ul> | `pallet-balances-formal-verification/LICENSE` | MIT license present in the repository root, matching the application scope. |
+| 0b. | Documentation | <ul><li>[x] </li></ul> | `pallet-balances-formal-verification/preparation/` | Documentation folder includes the milestone summary, methodology, trait-to-Wasm mapping, and contextual materials as promised; clarified coverage expectations and confirmed completeness. |
+| 0c. | Reproducibility | <ul><li>[x] </li></ul> | `pallet-balances-formal-verification/balances_contract/` | Ink! port (`lib.rs`), annotated Wasm (`balances_contract.wat`), and conformance tests are provided; `cargo test` (135 tests) and the reproducibility workflow succeed in the grantee’s reference Linux environment. On macOS the bit-exact check still fails, but the team documented the nondeterministic ordering issue and supplied a justification we accept for this milestone. |
+| 0d. | Final Research Article | <ul><li>[x] </li></ul> | `pallet-balances-formal-verification/preparation/preparing-polkadot-pallet-balances-for-formal-verification.md` | Comprehensive article with reproducibility guide, annotated Wasm insights, trait coverage, and future roadmap fulfilling the agreed scope. |
 
 **Additional notes**
 - `cargo test` was executed inside `balances_contract` to confirm the expanded conformance suite (`cargo test`, 135 tests, all passing).
