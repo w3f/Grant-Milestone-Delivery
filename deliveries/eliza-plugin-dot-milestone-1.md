@@ -23,7 +23,7 @@
 | 0b.  | Documentation |[polkadot asset hub agent](https://github.com/ChainSupport/eliza/blob/main/README.md), [eliza-plugin-dot](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/README.md), [eliza-dot-aes](https://github.com/ChainSupport/eliza-dot-aes/blob/main/README.md)| ...| 
 |0c. | Testing Guide | [eliza-dot-aes test guide](https://github.com/ChainSupport/eliza-plugin-dot/blob/m1/docs/test-guide.md), [eliza-plugin-dot test guide](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/docs/test-guide.md)| |
 |0d. | docker | [polkadot asset hub agent test guide](https://github.com/ChainSupport/eliza?tab=readme-ov-file#2-run-with-docker)| | 
-| 0e. | Article| [Eliza‐Plugin‐Polkadot‐AssetHub wiki](https://github.com/ChainSupport/eliza-plugin-dot/wiki/Eliza%E2%80%90Plugin%E2%80%90Polkadot%E2%80%90AssetHub)| | 
+| 0e. | Article| [Eliza‐Plugin‐Polkadot‐AssetHub wiki](https://github.com/ChainSupport/eliza-plugin-dot/wiki/Let-AI-Truly-Embrace-Polkadot:-eliza%E2%80%90polkadot%E2%80%90assethub,-a-ElizaOS-plugin)| | 
 | 1. |  Plugin-dot Package | [eliza-plugin-dot](https://github.com/ChainSupport/eliza-plugin-dot/tree/m1) [polkadot asset hub agent](https://github.com/ChainSupport/eliza.git)| The agent is an example of how a plugin is used in a production environment. |
 | 2. | sr25519-AES Package | [sr25519-aes](https://github.com/ChainSupport/eliza-dot-aes/tree/main/packages/sr25519-aes)| |
 | 3. | ed25519-AES Package | [ed25519-aes](https://github.com/ChainSupport/eliza-dot-aes/tree/main/packages/ed25519-aes)| | 
