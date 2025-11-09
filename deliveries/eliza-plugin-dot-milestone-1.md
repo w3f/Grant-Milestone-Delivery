@@ -21,7 +21,7 @@
 | ------------- | ------------- | ------------- |------------- |
 | 0a. | License |[eliza-plugin-dot](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/LICENSE), [eliza-dot-aes](https://github.com/ChainSupport/eliza-dot-aes/blob/main/LICENSE), [polkadot asset hub agent](https://github.com/ChainSupport/eliza/blob/main/LICENSE)| ...| 
 | 0b.  | Documentation |[polkadot asset hub agent](https://github.com/ChainSupport/eliza/blob/main/README.md), [eliza-plugin-dot](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/README.md), [eliza-dot-aes](https://github.com/ChainSupport/eliza-dot-aes/blob/main/README.md)| ...| 
-|0c. | Testing Guide | [eliza-dot-aes test guide](https://github.com/ChainSupport/eliza-dot-aes/blob/main/docs/test-guide.md), [eliza-plugin-dot test guide](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/docs/test-guide.md)| |
+|0c. | Testing Guide | [eliza-dot-aes test guide](https://github.com/ChainSupport/eliza-plugin-dot/blob/m1/docs/test-guide.md), [eliza-plugin-dot test guide](https://github.com/ChainSupport/eliza-plugin-dot/blob/main/docs/test-guide.md)| |
 |0d. | docker | [polkadot asset hub agent test guide](https://github.com/ChainSupport/eliza?tab=readme-ov-file#2-run-with-docker)| | 
 | 0e. | Article| | | 
 | 1. |  Plugin-dot Package | [eliza-plugin-dot](https://github.com/ChainSupport/eliza-plugin-dot/tree/m1) [polkadot asset hub agent](https://github.com/ChainSupport/eliza.git)| The agent is an example of how a plugin is used in a production environment. |
