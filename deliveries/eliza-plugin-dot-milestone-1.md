@@ -24,7 +24,7 @@
 |0c. | Testing Guide | https://github.com/ChainSupport/eliza-dot-aes/blob/main/docs/test-guide.md, https://github.com/ChainSupport/eliza-plugin-dot/blob/main/docs/test-guide.md| |
 |0d. | docker | https://github.com/ChainSupport/eliza?tab=readme-ov-file#2-run-with-docker| | 
 | 0e. | Article| | | 
-| 1. |  Plugin-dot Package | https://github.com/ChainSupport/eliza-plugin-dot| |
+| 1. |  Plugin-dot Package | hhttps://github.com/ChainSupport/eliza-plugin-dot/tree/m1| branch: m1|
 | 2. | sr25519-AES Package | https://github.com/ChainSupport/eliza-dot-aes/tree/main/packages/sr25519-aes| |
 | 3. | ed25519-AES Package | https://github.com/ChainSupport/eliza-dot-aes/tree/main/packages/ed25519-aes| | 
 | 4. | ECDSA-AES Package | https://github.com/ChainSupport/eliza-dot-aes/tree/main/packages/ecdsa-aes| | 
