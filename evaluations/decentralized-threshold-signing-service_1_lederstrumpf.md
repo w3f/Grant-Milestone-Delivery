@@ -16,6 +16,7 @@
 
 Focused & clean delivery, considering the PoC purpose of M1. Grantee responsive to feedback and handled it well.
 Delivery initial lacked proof of possession for authenticated address registering with relayer & mutual authentication of peers, but grantee addressed this requested change quickly & satisfactorily.
+
 Still had some reliability issues with the relayer connection, but delayed this to milestone 2, which grantee has already opened PR for.
 
 Likewise, I reckon the [relay's peer id](https://github.com/Fiono11/decentralized_threshold_signing_service/blob/8f735e2365364c0d2fd253c3127f755dc1d09ac1/index.js#L591) should still be authenticated with a proof of possession, but likewise delaying this to milestone 2 - grantee already has created the plumbing for this, so it's a simple addition.
