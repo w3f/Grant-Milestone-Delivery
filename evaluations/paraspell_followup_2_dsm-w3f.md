@@ -24,7 +24,7 @@ After considering the balance constraints explained [here](https://github.com/w3
 
 ## Evaluation V2
 
-Using UI-V1 most of the examples provided for manual testing worked well. However, in the transaction from Parachain to Relay Chain the the events were not emitted and seems that the values were not transferred. The application shows a msg that the transaction was successful. Could you assist with that? 
+Using UI-V1 most of the examples provided for manual testing worked well. However, in the transaction from Parachain to Relay Chain the events were not emitted and seems that the values were not transferred. The application shows a msg that the transaction was successful. Could you assist with that? 
 
 ![image](https://user-images.githubusercontent.com/112647953/216679088-15ac65c0-e18a-431d-9e4d-70f01ad9aa11.png)
 

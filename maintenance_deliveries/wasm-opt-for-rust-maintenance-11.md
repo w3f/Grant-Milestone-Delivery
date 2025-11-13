@@ -12,7 +12,7 @@
 This is a project to maintain Rust bindings to Binaryen's wasm-opt tool.
 
 We fixed the big regression related to DWARF passes by adding an optional "dwarf" feature to the crate, and published 0.114.2.
-We upgraded to binaryen 116 and and published 0.116.0.
+We upgraded to binaryen 116 and published 0.116.0.
 
 
 **Deliverables**
