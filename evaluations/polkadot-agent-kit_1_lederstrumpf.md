@@ -1,13 +1,13 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:**  https://github.com/w3f/Grants-Program/pull/2549
 - **Milestone:** 1
 
 | Number | Deliverable  | Accepted               | Link | Evaluation Notes |
 |--------|--------------|------------------------|------|------------------|
 | 0a.    | License | <ul><li>[x] </li></ul> | [license repo](https://github.com/openguild-labs/polkadot-agent-kit/tree/d80885c1036731424f2a18807223174ccbea9544/LICENSE), [license docs](https://github.com/elasticlabs-org/polkadot-agent-kit-docs/tree/d0099159268f32964302c3a4bfd2896047f65d0f/LICENSE)  | MIT              |
-| 0b.    | Documentation Page + Quickstart tutorial. | <ul><li>[ ] </li></ul> | [Docs](https://cocdap.github.io/agent-docs/), [Quickstart Tutorial](https://cocdap.github.io/agent-docs/quickstart.html)  | Instructions for client integration still severely outdated, last updated in July & no longer functional: https://github.com/elasticlabs-org/polkadot-agent-kit-docs/commit/a97343d1ce49f19260f0ec8bbffdaf2eb5c86383 |
+| 0b.    | Documentation Page + Quickstart tutorial. | <ul><li>[x] </li></ul> | [Docs](https://cocdap.github.io/agent-docs/), [Quickstart Tutorial](https://cocdap.github.io/agent-docs/quickstart.html)  | Instructions updated to latest version. Quickstart tutorial not sufficient in scope, but delayed to M2. |
 | 0c.    |  Unit tests + E2E tests guide + CI pipeline | <ul><li>[x] </li></ul> | [Unit, E2E & integration test instructions](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/88a843a4556ac815857afdf6cb09e9504913df18/README.md?plain=1#L52-L59), [CI pipeline](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/88a843a4556ac815857afdf6cb09e9504913df18/.github/workflows/ci.yaml#L47-L49) | E2E tests added to the [CI pipeline](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/aba3953f4f45f385b4617af348e1fc2df7d88f22/.github/workflows/ci.yaml#L47-L52) after request, integration tests not due to purported cost of running these in CI. |
 | 1a.    | Migrate from raw XCM implementation to use ParaSpell as the underlying XCM library | <ul><li>[x] </li></ul> | [ParaSpell migration PR](https://github.com/elasticlabs-org/polkadot-agent-kit/pull/60)  |  |
 | 1b.    | Support multi-hop asset transferring via XCM between parachains (reserve transfers) and parachain to relaychain (teleport). | <ul><li>[x] </li></ul> | See eval notes for followup on prior issues. | 1.: Integration tests now constrained by outcome: https://github.com/elasticlabs-org/polkadot-agent-kit/pull/93. 2. parachain->parachain tests added in https://github.com/elasticlabs-org/polkadot-agent-kit/pull/85. 3. still need up-to-date instructions for testing [client integration](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/88a843a4556ac815857afdf6cb09e9504913df18/packages/sdk/README.md?plain=1#L21-L54) before approving; see 0b. |
@@ -16,4 +16,4 @@
 
 ## General Notes
 
-See extensive discussion on https://github.com/w3f/Grants-Program/pull/2549.
+See extensive discussion on https://github.com/w3f/Grants-Program/pull/2549. This evaluation required multiple rounds of requested changes, but the team eventually brought the delivery to a satisfactory state. The only exception here is the scope of the quickstart tutorial - deferred this to subsequent milestone evaluation.
