@@ -14,7 +14,7 @@
   - Agentic DeFi Tools: Bifrost (1b.): [Documentation](https://cocdap.github.io/agent-docs/tools/bifrost-tool.html) - [Source Code](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/main/packages/core/src/bifrost/mintVdot.ts)
   - Agentic DeFi Tools: Relaychain Nomination Pools (1c.): [Documentation](https://cocdap.github.io/agent-docs/tools/nomination-staking-tool.html) - [Source Code](https://github.com/elasticlabs-org/polkadot-agent-kit/tree/main/packages/core/src/pallets/nomination-pools)
   - Host a Model Context Protocol (MCP) server (2a.): [Documentation](https://cocdap.github.io/agent-docs/examples/mcp-server.html) - [Source Code](https://github.com/elasticlabs-org/polkadot-agent-kit/tree/main/examples/mcp-server)
-  - Convertible to Lanchain tools (2c.):
+  - Convertible to Langchain tools (2c.): [Source Code](https://github.com/elasticlabs-org/polkadot-agent-kit/blob/main/packages/sdk/src/langchain.ts#L18)
 
 **Deliverables**
 
