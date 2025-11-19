@@ -2,7 +2,7 @@
 
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
-* **Application Document:** [w3f/Grants-Program#2437](https://github.com/w3f/Grants-Program/pull/2437)
+* **Application Document:** [MigrationEase.md](https://github.com/w3f/Grants-Program/blob/master/applications/MigrationEase.md)
 * **Milestone Number:** 2
 
 **Context**
