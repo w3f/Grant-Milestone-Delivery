@@ -7,7 +7,7 @@
 **The delivery is according to the official [milestone delivery guidelines](https://github.com/w3f/Grants-Program/blob/master/docs/Support%20Docs/milestone-deliverables-guidelines.md).**  
 
 * **Application Document:** [https://github.com/w3f/Grants-Program/blob/master/applications/eliza-plugin-dot.md](https://github.com/w3f/Grants-Program/blob/master/applications/eliza-plugin-dot.md)
-* **Milestone Number:** e.g. 1
+* **Milestone Number:** 1
 
 **Context** (optional)
 > Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
