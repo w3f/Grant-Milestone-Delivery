@@ -15,7 +15,7 @@
 | **0b.** | Documentation | [Documentation](https://github.com/Fiono11/decentralized_threshold_signing_service/blob/simplpedpop/README.md) |
 | **0c.** | Testing and Testing Guide | [Test and Testing Guide](https://github.com/Fiono11/decentralized_threshold_signing_service/blob/simplpedpop/README.md#build-and-testing) |
 | **0d.** | Docker | [Docker](https://github.com/Fiono11/decentralized_threshold_signing_service/blob/simplpedpop/Dockerfile) |
-| **1.a** | Distributed Key Generation | Two browsers exchange messages and successfully produce a shared threshold public key using the Olaf DKG protocol compiled to WASM. | [Milestone 2](https://github.com/Fiono11/decentralized_threshold_signing_service/tree/simplpedpop) |
+| **1.a** | Distributed Key Generation | [Milestone 2](https://github.com/Fiono11/decentralized_threshold_signing_service/tree/simplpedpop) |
 
 **Additional Information**
 
