@@ -5,6 +5,16 @@
 * **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/offline-election-tool.md
 * **Milestone Number:** 1
 
+**Deliveries Checklist:**
+
+- [x] The [milestone-delivery-template.md](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/deliveries/milestone-delivery-template.md) has been copied and updated.
+- [x] This pull request is being made by the same account as the accepted application.
+- [x] I have disclosed any and all sources of reused code in the submitted repositories and have done my due diligence to meet its license requirements.
+- [x] In case of acceptance, invoices must be submitted and payments will be transferred to the Polkadot AssetHub and/or fiat account provided in the application.
+- [x] The delivery is according to the [Guidelines for Milestone Deliverables](https://grants.web3.foundation/docs/Support%20Docs/milestone-deliverables-guidelines).
+
+Link to the application pull request: https://github.com/w3f/Grants-Program/pull/2715
+
 **Context**
 
 Milestone 1 delivers the core offline election simulation engine with accurate prediction capabilities, support for both phragmén and phragmms algorithms, comprehensive historical validation suite achieving >95% accuracy, and Docker support for containerized deployment.
