@@ -80,4 +80,4 @@ We also have Matrix/Element channels for real-time discussions on Web3 and Polka
 
 ## :information_source: License <!-- omit in toc -->
 
-[Apache License 2.0](LICENSE) © Web3 Foundation
+[Apache License 2.0](LICENSE) © Web3 Foundation 
