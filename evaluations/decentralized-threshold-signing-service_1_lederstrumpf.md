@@ -37,6 +37,17 @@ Peer ID: 12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn
 Listening on: /ip4/127.0.0.1/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn, /ip4/172.31.22.182/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn, /ip6/::1/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn
 Protocols: KV storage, KV query, Proof of Possession, Connection Challenge, Connection Permission ready
 ```
+Docker compose works:
+```
+WARN[0127] Found orphan containers ([decentralized_threshold_signing_service-test-run-0ed1f691a86f]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] Running 6/6
+ ✔ client-a                Built                                                                                      0.0s 
+ ✔ client-b                Built                                                                                      0.0s 
+ ✔ relay-server            Built                                                                                      0.0s 
+ ✔ Container relay-server  Started                                                                                    0.4s 
+ ✔ Container client-b      Started                                                                                    0.7s 
+ ✔ Container client-a      Started
+```
 
 All tests passing:
 
