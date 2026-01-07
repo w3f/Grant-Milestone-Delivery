@@ -24,6 +24,20 @@ Likewise, I reckon the [relay's peer id](https://github.com/Fiono11/decentralize
 
 ## Testing
 
+Relay successfully starts:
+
+```ts
+npm run relay
+
+> relay-server-and-client@1.0.0 relay
+> node relay.js
+
+Relay server started:
+Peer ID: 12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn
+Listening on: /ip4/127.0.0.1/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn, /ip4/172.31.22.182/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn, /ip6/::1/tcp/8080/ws/p2p/12D3KooWAWN7MuqoNvFdoVKuSDG3HJvQA1txQzu5ujri49nhm2hn
+Protocols: KV storage, KV query, Proof of Possession, Connection Challenge, Connection Permission ready
+```
+
 All tests passing:
 
 <details>
