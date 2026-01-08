@@ -169,3 +169,8 @@ To open last HTML report run:
 
   npx playwright show-report
 ```
+## UI
+
+<img width="1188" height="421" alt="threshold" src="https://github.com/user-attachments/assets/99a8bebf-4229-4c0a-befb-a2de8783073d" />
+
+<img width="1183" height="286" alt="threshold2" src="https://github.com/user-attachments/assets/200f52a3-8245-4520-b9fa-cf06df1eb122" />
