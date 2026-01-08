@@ -14,7 +14,7 @@
 
 # General Notes
 
-Grantee added more unit tests and a cloud deployment upon request for easier testing. The instances are able to communicate with each other successfully. All working as expected.
+Grantee added more unit tests and a cloud deployment upon request for easier testing. The instances are able to communicate with each other successfully. Also deployed to Paseo. All working as expected.
 
 ## Testing
 
