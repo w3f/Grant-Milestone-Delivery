@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/polkadot_agent_kit.md
 - **Milestone:** 3
 
@@ -10,7 +10,7 @@
 | 0b. | Documentation | <ul><li>[x] </li></ul> | `https://cocdap.github.io/agent-docs/` | Docs match delivered features; flows verified after fixes. |
 | 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | `packages/sdk/tests`, `docs/` | Automated tests working |
 | 1. | Playground App | <ul><li>[x] </li></ul> | `apps/playground` | Playground runs locally and executes transfers. |
-| 2. | Replit Examples | <ul><li>[ ] </li></ul> |  | Replit example not working. |
+| 2. | Replit Examples | <ul><li>[x] </li></ul> |  | Replit example working. |
 
 **Tests executed**
 - `pnpm install`
@@ -28,7 +28,10 @@
 - Playground now works locally after chain-name normalization and funding; signed tx flows execute.
 
 **Additional remarks**
-- Replit example remains non-functional; needs concrete project/config to accept deliverable. See the image below:
-<img width="1779" height="979" alt="Screenshot 2026-01-12 at 14 44 03" src="https://github.com/user-attachments/assets/94363b65-2811-4db6-89dd-02378c6313dd" />
+- Replit example working.
+
+  <img width="1494" height="909" alt="Screenshot 2026-01-15 at 16 38 48" src="https://github.com/user-attachments/assets/76e6e3ea-c151-4061-9ebf-f33f73faacc4" />
+
+<img width="1498" height="897" alt="Screenshot 2026-01-15 at 16 42 49" src="https://github.com/user-attachments/assets/c17a0c75-94a8-41b7-88da-cdc0dfb78860" />
 
 
