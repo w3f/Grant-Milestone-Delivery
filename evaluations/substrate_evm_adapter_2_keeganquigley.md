@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** in progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/substrate-evm-adapter.md
 - **Milestone:** 2
 
@@ -18,7 +18,12 @@
 
 # General Notes
 
-Docker Compose file fixed upon request.
+Docker Compose file fixed upon request. I was able to have Claude create a Python script to start the local node, start the Subeth adapter, and test the connection. I could:
+
+- Sign an Eth tx
+- Send it to balances pallet via the EVM adapter
+- Show the tx hash and confirmation
+- Display before/after balances
 
 ## Testing
 
