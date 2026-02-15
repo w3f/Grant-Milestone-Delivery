@@ -1,0 +1,24 @@
+# Milestone Delivery :mailbox:
+
+* **Application Document:** [https://github.com/w3f/Grants-Program/pull/2575]
+* **Milestone Number:** 1
+
+
+**Context** 
+Milestone 1 focuses on the development of the Core Simulation Engine for TxSim. This includes the initial backend logic required to simulate transactions on Moonbeam (EVM) and Astar (WASM). 
+We have also implemented the first version of our fee estimation module to help users understand weight-based costs before they sign transactions. This foundation allows for future risk detection and SDK integration.
+> Please provide a short paragraph or two connecting the deliverables in this milestone and describing their purpose.
+
+**Deliverables**
+
+| Number | Deliverable | Link | Notes |
+|--------|-------------|------|-------|
+| 0a. | License | [MIT License](https://github.com/EmmanuelEklipse/TxSim/blob/main/LICENSE) | MIT License |
+| 0b. | Documentation | [Documentation](https://github.com/EmmanuelEklipse/TxSim/blob/main/README.md) | Includes inline docs and a user guide for the engine. |
+| 0c. | Testing and Guide | [Tests](https://github.com/EmmanuelEklipse/TxSim/tree/main/backend/src/__tests__) | Core functions covered by unit tests (≥80% coverage). |
+| 0d. | Docker | [Dockerfile](https://github.com/EmmanuelEklipse/TxSim/blob/main/backend/docker/Dockerfile) | Dockerfile for quick testing and deployment. |
+| 1. | Simulation Engine | [Engine Code](https://github.com/EmmanuelEklipse/TxSim/blob/main/backend/src/services/simulator.ts) | Initial engine targeting Moonbeam and Astar. |
+| 2. | Fee Estimation Module | [Fee Module](https://github.com/EmmanuelEklipse/TxSim/blob/main/backend/src/utils/gas-calculator.ts) | Implementation of fee estimation logic. |
+
+**Additional Information**
+> The team has successfully established the architectural hooks needed for Milestone 2 (Fee Optimization). We have verified the connection to Moonbeam and Astar RPC nodes to ensure simulation accuracy.
