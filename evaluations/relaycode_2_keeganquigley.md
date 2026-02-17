@@ -9,7 +9,7 @@
 |--------|-------------|------|-------|-------|
 | 0a. | License | <ul><li>[x] </li></ul> | [LICENSE.md](https://github.com/itsyogesh/relaycode/blob/master/LICENSE.md) | Apache 2.0 license |
 | 0b. | Documentation | <ul><li>[x] </li></ul> | [Documentation](https://github.com/itsyogesh/relaycode/tree/master/docs) |  |
-| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/itsyogesh/relaycode/blob/master/docs/testing-guide.md) / [Tests](https://github.com/itsyogesh/relaycode/tree/master/__tests__) | ] |
+| 0c. | Testing and Testing Guide | <ul><li>[x] </li></ul> | [Testing Guide](https://github.com/itsyogesh/relaycode/blob/master/docs/testing-guide.md) / [Tests](https://github.com/itsyogesh/relaycode/tree/master/__tests__) |  |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/itsyogesh/relaycode/blob/master/Dockerfile) |  |
 | 0e. | Article | <ul><li>[x] </li></ul> | [Medium Article Draft](https://github.com/itsyogesh/relaycode/blob/master/docs/medium-article.md) |  |
 | 1. | UI Refinement | <ul><li>[x] </li></ul> | [Builder](https://github.com/itsyogesh/relaycode/tree/master/components/builder) / [Site Pages](https://github.com/itsyogesh/relaycode/tree/master/app) / [Demo](https://relaycode.org/builder) |  |
