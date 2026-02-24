@@ -20,15 +20,16 @@
 | 2. | Elligator2 Hash-to-Curve | [Implementation](https://github.com/Esscrypt/bandersnatch-vrf/blob/main/src/crypto/elligator2.ts) | RFC 9380 compliant Elligator2 implementation for Bandersnatch curve, supporting both random oracle (RO) and non-uniform (NU) variants |
 | 3. | IETF VRF Implementation | [Implementation](https://github.com/Esscrypt/bandersnatch-vrf/blob/main/src/prover/ietf.ts) | Full RFC 9381 ECVRF implementation with Bandersnatch_XMD:SHA-512_ELL2_RO_ suite, proper DST handling, and test vector validation |
 | 4. | Pedersen VRF Implementation | [Implementation](https://github.com/Esscrypt/bandersnatch-vrf/blob/main/src/prover/pedersen.ts) | Complete Pedersen VRF implementation extending IETF patterns, optimized for Bandersnatch characteristics, with comprehensive test coverage |
-| 5. | Ring VRF Implementation | [Implementation](https://github.com/Esscrypt/bandersnatch-vrf/blob/main/src/prover/ring-kzg-wasm.ts) | Full W3F Ring Proof implementation with KZG polynomial commitments, ring signature generation/verification, and privacy-preserving validator selection |
+| 5. | Ring VRF Implementation | [Implementation](https://github.com/Esscrypt/bandersnatch-vrf/blob/main/src/prover/ring-kzg.ts) | Full W3F Ring Proof implementation with KZG polynomial commitments, ring signature generation/verification, and privacy-preserving validator selection |
 | 6. | Cryptographic Infrastructure | [Utilities](https://github.com/Esscrypt/bandersnatch-vrf/tree/main/src/utils) | RFC 8032 nonce generation, point processing utilities, VRF output validation, and comprehensive error handling with edge case coverage |
-| 7. | Core Package Distribution | [NPM Package](https://www.npmjs.com/package/@pbnjam/bandersnatch) | NPM package publication, TypeScript declarations, browser compatibility, and cross-platform testing |
+| 7. | Performance Optimization | [Implementation]([https://www.npmjs.com/package/@pbnjam/bandersnatch](https://github.com/Esscrypt/bandersnatch/blob/main/src/glv.ts)) [Benchmark](https://github.com/Esscrypt/bandersnatch/blob/main/README.md#glv-endomorphism) |GLV endomorphism implementation, performance benchmarks, optimization analysis, and comparison with reference implementations |
+| 8. | Core Package Distribution | [NPM Package](https://www.npmjs.com/package/@pbnjam/bandersnatch) | NPM package publication, TypeScript declarations, browser compatibility, and cross-platform testing |
 **Additional Information**
 
 **Usage instructions:**
 - [README bandersnatch](https://github.com/Esscrypt/bandersnatch/tree/main)
 - [README bandersnatch-vrf](https://github.com/Esscrypt/bandersnatch-vrf/tree/main)
-1 `bun add @pbnjam/bandersnatch@0.7.2-rc2`
-2.`bun add @pbnjam/bandersnatch-vrf@0.7.2-rc9`
+1 `bun add @pbnjam/bandersnatch@0.7.2-rc3`
+2.`bun add @pbnjam/bandersnatch-vrf@0.7.2-rc13`
 
 
