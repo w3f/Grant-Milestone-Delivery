@@ -1,6 +1,6 @@
 # Evaluation
 
-- **Status:** In Progress
+- **Status:** Accepted
 - **Application Document:** https://github.com/w3f/Grants-Program/blob/master/applications/hyperfridge.md
 - **Milestone:** 5
 - **Kusama Identity:** [ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA](https://polkascan.io/pre/kusama/account/ESxS4A7GHMLzve4Mbc9t27RpXtVTnV3LtcMTtcnD26jcUHA)
@@ -13,14 +13,12 @@
 | 0c. | Testing Guide | <ul><li>[x] </li></ul> | [README](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/README.md) | see output below |
 | 0d. | Docker | <ul><li>[x] </li></ul> | [Dockerfile](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/Dockerfile) | — |
 | 0e. | Article | <ul><li>[x] </li></ul> | [medium.com](https://medium.com/@dastanbeksamatov/hyperfridge-bridging-traditional-banking-with-web3-using-zero-knowledge-proofs-0ce65f33085f) | "Bridging Traditional Banking with Web3 using Zero-Knowledge Proofs" |
-| 1a. | Buy me a coffee dApp | <ul><li>[ ] </li></ul> | [/ebics-demo](https://github.com/element36-io/ocw-ebics/tree/2d36c1ffdc30aa63c0370c67d77687510d20c85b/ebics-demo) | Same as in our first grant, but with ZKPs: DApp where users can accept donations in stablecoin or via bank transfer, making receipts available for self-validation. This will consist of a frontend app in React which serves as an interface for interacting with the chain. Users will be able to link their on-chain `AccountId` to their bank account details (IBAN, balance, etc.), withdraw on-chain balance to their bank account and transfer funds in the bank account via on-chain extrinsic. |
-| 1b. | Proof-Download | <ul><li>[ ] </li></ul> | [/ebics-demo](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/ebics-demo/src/ProofDownload.js) | UI will provide Proof data and instructions, so that anyone can check the proofs offline by themselves, without UI. |
-| 2. | Docker-Compose: node & Dapp | <ul><li>[ ] </li></ul> | [docker-compose-test.yml](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/docker-compose-test.yml) | We will add the Dapp to the docker-compose file of previous Milestones to demonstrate the full functionality of our chain, the ocw, including a proxy for the FIAT Rest Interface.  |
+| 1a. | Buy me a coffee dApp | <ul><li>[x] </li></ul> | [/ebics-demo](https://github.com/element36-io/ocw-ebics/tree/2d36c1ffdc30aa63c0370c67d77687510d20c85b/ebics-demo) | — |
+| 1b. | Proof-Download | <ul><li>[x] </li></ul> | [/ebics-demo](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/ebics-demo/src/ProofDownload.js) | — |
+| 2. | Docker-Compose: node & Dapp | <ul><li>[x] </li></ul> | [docker-compose-test.yml](https://github.com/element36-io/ocw-ebics/blob/2d36c1ffdc30aa63c0370c67d77687510d20c85b/docker-compose-test.yml) | — |
 
 
 ## General Notes
-
-- —
 
 ### `cargo test` output
 
